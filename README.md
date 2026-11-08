@@ -17,10 +17,6 @@ scripts/fetch_prebuilts.sh      # rclone, busybox, zstd, nsenter -> app/src/main
 ./gradlew :app:assembleDebug
 ```
 
-The prebuilts are pinned and checksum-verified, and are not committed to git. SDK levels and the NDK version are set in `gradle.properties`.
-
-For a signed release, copy `keystore.properties.example` to `keystore.properties`, or export the `DFTB_*` variables. CI takes them from the repo secrets.
-
 ## Credits
 
 Thanks to the projects that do the heavy lifting:
