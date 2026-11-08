@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">Tableau de bord</string>
+    <string name="shell_nav_profiles">Profils</string>
+    <string name="shell_nav_restore">Restauration</string>
+    <string name="shell_nav_destinations">Destinations</string>
+    <string name="shell_nav_settings">Paramètres</string>
+    <string name="shell_back">Retour</string>
+    <string name="shell_more_options">Plus d\'options</string>
+    <string name="shell_state_on">Activé</string>
+    <string name="shell_state_off">Désactivé</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s attend que vous confirmiez son installation.</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="one">%1$s et %2$d autre application attendent que vous confirmiez leur installation.</item>
+        <item quantity="other">%1$s et %2$d autres applications attendent que vous confirmiez leur installation.</item>
+    </plurals>
+    <string name="shell_install_review">Examiner</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">Tableau de bord</string>
+    <string name="shell_open_job_monitor">Ouvrir le moniteur de tâches</string>
+    <string name="shell_menu_system_info">Infos système</string>
+    <string name="shell_menu_discovery">Découverte</string>
+    <string name="shell_menu_schedules">Planifications</string>
+    <string name="shell_menu_licenses">Licences open source</string>
+
+    <string name="shell_section_active_jobs">En cours</string>
+    <string name="shell_section_profiles">Profils de sauvegarde</string>
+    <string name="shell_section_upcoming">Prochaines exécutions planifiées</string>
+    <string name="shell_section_destinations">État des destinations</string>
+
+    <string name="shell_action_new_profile">Nouveau profil</string>
+    <string name="shell_action_create_profile">Créer un profil</string>
+    <string name="shell_action_restore">Restaurer</string>
+    <string name="shell_action_add_destination">Ajouter une destination</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">Aucun profil de sauvegarde</string>
+    <string name="shell_profiles_empty_body">Un profil indique quoi sauvegarder, où l\'envoyer et quand l\'exécuter. Créez-en un pour faire votre première sauvegarde.</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="one">Afficher %1$d profil de plus</item>
+        <item quantity="other">Afficher %1$d profils de plus</item>
+    </plurals>
+    <string name="shell_profiles_manage">Gérer les profils</string>
+    <string name="shell_profile_destination">Vers %1$s</string>
+    <string name="shell_profile_destination_missing">Sa destination a été supprimée</string>
+    <string name="shell_profile_no_destination">Aucune destination sélectionnée</string>
+    <string name="shell_profile_disabled">Désactivé</string>
+    <string name="shell_profile_next">Prochaine : %1$s</string>
+    <string name="shell_back_up_now">Sauvegarder maintenant</string>
+    <string name="shell_running">En cours…</string>
+    <string name="shell_needs_passphrase">Phrase secrète requise</string>
+    <string name="shell_set_destination">Choisir une destination</string>
+    <string name="shell_open_profile">Ouvrir le profil</string>
+    <string name="shell_open_profiles">Aller aux profils</string>
+
+    <string name="shell_status_never">Jamais sauvegardé</string>
+    <string name="shell_status_running">En cours</string>
+    <string name="shell_status_success">Réussie</string>
+    <string name="shell_status_warnings">Terminée avec des avertissements</string>
+    <string name="shell_status_failed">Échec</string>
+    <string name="shell_status_cancelled">Annulée</string>
+    <string name="shell_status_interrupted">Interrompue</string>
+
+    <string name="shell_backup_queued">Sauvegarde de %1$s mise en file d\'attente. Elle démarre dès que sa condition réseau est remplie.</string>
+    <string name="shell_resume_queued">La sauvegarde de %1$s reprendra là où elle s\'est arrêtée.</string>
+    <string name="shell_queue_failed">Impossible de mettre en file d\'attente la sauvegarde de %1$s. Réessayez.</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">Aucune sauvegarde n\'est planifiée. Ajoutez une planification à un profil pour l\'exécuter automatiquement.</string>
+    <string name="shell_upcoming_at">%1$s (%2$s)</string>
+    <string name="shell_upcoming_expected">Prévue %1$s · pas encore en file d\'attente</string>
+    <string name="shell_upcoming_retry">Nouvelle tentative %1$s (essai %2$d)</string>
+    <string name="shell_upcoming_queued">En file d\'attente, en attente de ses conditions</string>
+    <string name="shell_upcoming_see_schedules">Voir les planifications</string>
+    <string name="shell_constraints">Requis : %1$s</string>
+    <string name="shell_constraint_unmetered">réseau non facturé à l\'usage</string>
+    <string name="shell_constraint_network">réseau</string>
+    <string name="shell_constraint_charging">en charge</string>
+    <string name="shell_constraint_idle">appareil inactif</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">Aucune destination. Ajoutez-en une pour que vos sauvegardes aient un endroit où aller.</string>
+    <string name="shell_destinations_manage">Gérer les destinations</string>
+    <string name="shell_destination_verified">Vérifiée %1$s</string>
+    <string name="shell_destination_never_verified">Jamais vérifiée. Lancez un test de connexion pour voir son espace libre.</string>
+    <string name="shell_destination_stale">Dernière vérification %1$s. Testez-la de nouveau pour connaître l\'espace libre actuel.</string>
+    <string name="shell_destination_space">%1$s libres sur %2$s</string>
+    <string name="shell_destination_space_free">%1$s libres</string>
+    <string name="shell_destination_space_unknown">Capacité inconnue</string>
+    <string name="shell_destination_low_space">Espace faible</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">L\'accès %1$s n\'est pas disponible</string>
+    <string name="shell_warn_elevation_root_body">Le root n\'est pas accordé à DFTB actuellement. Les données d\'applications, les partitions et les autres éléments privilégiés ne peuvent être ni sauvegardés ni restaurés tant qu\'il ne l\'est pas.</string>
+    <string name="shell_warn_elevation_shizuku_body">Le service Shizuku n\'est pas en cours d\'exécution ou DFTB a perdu son autorisation. Démarrez Shizuku (il s\'arrête à chaque redémarrage) pour sauvegarder les données d\'applications.</string>
+    <string name="shell_warn_check_again">Vérifier à nouveau</string>
+    <string name="shell_warn_open_settings">Changer de mode</string>
+    <string name="shell_warn_notifications_title">Les notifications sont désactivées</string>
+    <string name="shell_warn_notifications_body">Vous ne verrez ni la progression des sauvegardes, ni les échecs, ni les demandes de phrase secrète tant que DFTB est fermé.</string>
+    <string name="shell_warn_allow">Autoriser</string>
+    <string name="shell_warn_passphrase_title">%1$s attend sa phrase secrète</string>
+    <string name="shell_warn_passphrase_body">Ce profil chiffre avec une phrase secrète qui n\'est jamais enregistrée ; sa sauvegarde interrompue ne peut donc pas reprendre d\'elle-même. Lancez-la depuis Profils et saisissez la phrase secrète lorsqu\'elle est demandée.</string>
+    <string name="shell_warn_interrupted_title">La sauvegarde de %1$s a été interrompue</string>
+    <string name="shell_warn_interrupted_resumable">Elle peut reprendre là où elle s\'est arrêtée au lieu de recommencer.</string>
+    <string name="shell_warn_interrupted_stale">Elle ne peut plus être reprise : %1$s. La prochaine exécution démarrera une nouvelle sauvegarde.</string>
+    <string name="shell_skip_too_old">elle s\'est arrêtée il y a plus de deux jours</string>
+    <string name="shell_skip_destination_missing">sa destination a été supprimée</string>
+    <string name="shell_skip_profile_disabled">le profil est désactivé</string>
+    <string name="shell_skip_other">sa progression enregistrée est inutilisable</string>
+    <string name="shell_warn_resume">Reprendre</string>
+    <string name="shell_warn_job_interrupted_title">%1$s interrompu</string>
+    <string name="shell_warn_restore_interrupted_body">Les restaurations ne reprennent jamais d\'elles-mêmes. Les éléments restaurés avant l\'interruption restent en place ; relancez la restauration depuis Restauration quand vous serez prêt.</string>
+    <string name="shell_warn_job_interrupted_body">Cette tâche ne reprend pas d\'elle-même. Relancez-la quand vous serez prêt.</string>
+    <string name="shell_warn_failed_title">La dernière sauvegarde de %1$s a échoué</string>
+    <string name="shell_warn_failed_no_details">Aucun détail n\'a été enregistré.</string>
+    <string name="shell_warn_retry">Réessayer</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">Annulation…</string>
+    <string name="shell_job_progress_bytes">%1$s sur %2$s</string>
+    <string name="shell_job_progress_items">%1$d sur %2$d éléments</string>
+    <string name="shell_job_items_done">%1$d éléments traités</string>
+    <string name="shell_job_rate">%1$s/s</string>
+    <string name="shell_job_eta">%1$s restantes</string>
+    <string name="shell_job_eta_unknown">Estimation du temps restant…</string>
+    <string name="shell_job_elapsed">écoulé : %1$s</string>
+    <string name="shell_job_current_item">En cours : %1$s</string>
+    <string name="shell_duration_days">%1$d j %2$d h</string>
+    <string name="shell_duration_hours">%1$d h %2$d min</string>
+    <string name="shell_duration_minutes">%1$d min %2$d s</string>
+    <string name="shell_duration_seconds">%1$d s</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">Moniteur de tâches</string>
+    <string name="shell_monitor_title_all">Toutes les tâches</string>
+    <string name="shell_monitor_no_jobs">Aucune tâche en cours. Les dernières lignes du journal de l\'application s\'affichent toujours ci-dessous.</string>
+    <string name="shell_monitor_job_gone">Cette tâche n\'est plus en cours et aucun enregistrement la concernant n\'a été trouvé.</string>
+    <string name="shell_monitor_finished">Terminée %1$s</string>
+    <string name="shell_monitor_cancel">Annuler</string>
+    <string name="shell_monitor_filter_job">Afficher le journal de cette tâche</string>
+
+    <string name="shell_record_started">Début</string>
+    <string name="shell_record_finished">Fin</string>
+    <string name="shell_record_duration">Durée</string>
+    <string name="shell_record_processed">Données traitées</string>
+    <string name="shell_record_items">Éléments</string>
+    <string name="shell_record_stored">Stockées sur la destination</string>
+    <string name="shell_record_average_rate">Vitesse moyenne</string>
+
+    <string name="shell_cancel_backup_title">Annuler cette sauvegarde ?</string>
+    <string name="shell_cancel_backup_body">La sauvegarde de %1$s s\'arrête maintenant et est enregistrée comme annulée. Les éléments déjà écrits restent sur la destination sous forme de sauvegarde incomplète ; la prochaine exécution en démarrera une nouvelle.</string>
+    <string name="shell_cancel_restore_title">Annuler cette restauration ?</string>
+    <string name="shell_cancel_restore_body">La restauration de %1$s s\'arrête maintenant. Les éléments déjà restaurés restent sur l\'appareil tels quels ; les éléments restants ne sont pas restaurés. Vous pourrez relancer la restauration plus tard.</string>
+    <string name="shell_cancel_job_title">Annuler cette tâche ?</string>
+    <string name="shell_cancel_job_body">%1$s s\'arrête maintenant et est enregistré comme annulé. Il ne reprend pas de lui-même.</string>
+    <string name="shell_cancel_confirm">Annuler la tâche</string>
+    <string name="shell_cancel_keep">Laisser en cours</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">Journal</string>
+    <string name="shell_terminal_follow">Suivre les nouvelles lignes du journal</string>
+    <string name="shell_terminal_jump">Aller à la dernière ligne</string>
+    <string name="shell_terminal_copy">Copier le journal</string>
+    <string name="shell_terminal_copied">Journal copié</string>
+    <string name="shell_terminal_share">Partager le journal</string>
+    <string name="shell_terminal_share_subject">Journal DFTB : %1$s</string>
+    <string name="shell_terminal_share_failed">Aucune application ne peut recevoir le journal.</string>
+    <string name="shell_terminal_empty">Aucune ligne de journal pour l\'instant.</string>
+    <string name="shell_terminal_filter_job">Cette tâche</string>
+    <string name="shell_terminal_filter_all">Toutes les lignes</string>
+    <string name="shell_terminal_level_debug">Débogage</string>
+    <string name="shell_terminal_level_info">Infos</string>
+    <string name="shell_terminal_level_warn">Avertissements</string>
+    <string name="shell_log_header_job">Tâche %1$s (%2$s)</string>
+    <string name="shell_log_header_all">Toutes les tâches</string>
+
+    <string name="shell_progress_working">En cours</string>
+    <string name="shell_loading">Chargement</string>
+    <string name="shell_monitor_job_selected">Sélectionné</string>
+    <string name="shell_warn_severity_error">Erreur</string>
+    <string name="shell_warn_severity_caution">Avertissement</string>
+    <string name="shell_warn_severity_info">Information</string>
+</resources>

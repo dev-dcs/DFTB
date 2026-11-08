@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">Ρυθμίσεις</string>
+    <string name="settings_back">Πίσω</string>
+    <string name="settings_cancel">Ακύρωση</string>
+    <string name="settings_ok">OK</string>
+    <string name="settings_retry">Επανάληψη</string>
+    <string name="settings_dismiss">Παράβλεψη</string>
+    <string name="settings_save_failed">Δεν ήταν δυνατή η αποθήκευση της ρύθμισης. Δοκιμάστε ξανά.</string>
+    <string name="settings_unknown_section">Αυτή η σελίδα ρυθμίσεων (\"%1$s\") δεν υπάρχει. Επιστρέψτε και επιλέξτε μια ενότητα από τη λίστα.</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">Γενικά</string>
+    <string name="settings_category_backup">Αντίγραφα ασφαλείας</string>
+    <string name="settings_category_security">Απόρρητο και ασφάλεια</string>
+    <string name="settings_category_system">Σύστημα</string>
+    <string name="settings_category_about">Πληροφορίες</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">Γλώσσα</string>
+    <string name="settings_language_summary">Γλώσσα εφαρμογής</string>
+    <string name="settings_appearance_title">Εμφάνιση</string>
+    <string name="settings_appearance_summary">Θέμα και χρώματα</string>
+    <string name="settings_mode_title">Λειτουργία εκτέλεσης</string>
+    <string name="settings_mode_summary">Τυπική, Shizuku, root ή συνοδευτική μονάδα</string>
+    <string name="settings_defaults_title">Προεπιλογές αντιγράφων ασφαλείας</string>
+    <string name="settings_defaults_summary">Μορφή, συμπίεση, άθροισμα ελέγχου και προορισμός για νέα προφίλ</string>
+    <string name="settings_security_title">Ασφάλεια</string>
+    <string name="settings_security_summary">Κλειδιά κρυπτογράφησης, κλειδιά κεντρικών υπολογιστών SSH, απομακρυσμένες θέσεις rclone</string>
+    <string name="settings_notifications_title">Ειδοποιήσεις</string>
+    <string name="settings_notifications_summary">Άδεια και κανάλια ειδοποιήσεων</string>
+    <string name="settings_storage_title">Αποθήκευση και καταγραφές</string>
+    <string name="settings_storage_summary">Προσωρινά αρχεία και εξαγωγή διαγνωστικής καταγραφής</string>
+    <string name="settings_about_title">Πληροφορίες</string>
+    <string name="settings_about_summary">Έκδοση, άδειες και πηγαίος κώδικας</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">Τρέχουσα γλώσσα</string>
+    <string name="settings_language_current">%1$s (%2$s)</string>
+    <string name="settings_language_rtl_active">Η διάταξη από δεξιά προς αριστερά είναι ενεργή για αυτή τη γλώσσα.</string>
+    <string name="settings_language_scope_note">Εφαρμόζεται άμεσα σε όλες τις οθόνες και στις ειδοποιήσεις, χωρίς επανεκκίνηση της εφαρμογής.</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">Το Σύστημα ακολουθεί τη ρύθμιση σκούρου θέματος της συσκευής.</string>
+    <string name="settings_appearance_color_title">Χρώματα</string>
+    <string name="settings_appearance_dynamic_hint">Χρησιμοποιεί χρώματα από την ταπετσαρία σας αντί για την παλέτα του DFTB.</string>
+    <string name="settings_appearance_preview_title">Προεπισκόπηση</string>
+    <string name="settings_appearance_preview_subtitle">Πώς φαίνεται η εφαρμογή με αυτές τις ρυθμίσεις σε φωτεινό και σκούρο θέμα.</string>
+    <string name="settings_appearance_preview_button">Δημιουργία αντιγράφου τώρα</string>
+    <string name="settings_appearance_preview_in_use">Σε χρήση</string>
+    <string name="settings_appearance_preview_cd">Προεπισκόπηση θέματος %1$s</string>
+    <string name="settings_appearance_preview_active_cd">Προεπισκόπηση θέματος %1$s, σε χρήση αυτή τη στιγμή</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">Δεν έχει ρυθμιστεί</string>
+    <string name="settings_mode_current_title">Τρέχουσα λειτουργία</string>
+    <string name="settings_mode_current_badge">Τρέχουσα λειτουργία</string>
+    <string name="settings_mode_selected_cd">Επιλέχθηκε για έλεγχο</string>
+    <string name="settings_mode_pick_hint">Επιλέξτε μια λειτουργία για να ελεγχθεί η συσκευή για αυτήν. Η αλλαγή είναι δυνατή μόνο όταν περάσουν οι απαιτούμενοι έλεγχοι.</string>
+    <string name="settings_mode_jobs_running_title">Μια εργασία βρίσκεται σε εξέλιξη</string>
+    <string name="settings_mode_jobs_running_body">Η λειτουργία εκτέλεσης δεν μπορεί να αλλάξει όσο εκτελείται αντίγραφο ασφαλείας ή επαναφορά, επειδή η εργασία που τρέχει θα έχανε την πρόσβαση στις εντολές που χρησιμοποιεί. Περιμένετε να ολοκληρωθεί ή ακυρώστε την πρώτα.</string>
+    <string name="settings_mode_readiness">%1$s: %2$s</string>
+    <string name="settings_mode_switch_to">Αλλαγή σε %1$s</string>
+    <string name="settings_mode_reason_same">Αυτή είναι η τρέχουσα λειτουργία.</string>
+    <string name="settings_mode_reason_no_diagnostics">Αναμονή για την ολοκλήρωση των ελέγχων αυτής της λειτουργίας.</string>
+    <string name="settings_mode_reason_unavailable">Ένας απαιτούμενος έλεγχος απέτυχε, επομένως αυτή η λειτουργία δεν μπορεί να χρησιμοποιηθεί ακόμη. Διορθώστε τα παραπάνω στοιχεία και εκτελέστε ξανά τους ελέγχους.</string>
+    <string name="settings_mode_blocked_jobs">Μη διαθέσιμο όσο εκτελείται αντίγραφο ασφαλείας ή επαναφορά.</string>
+    <string name="settings_mode_confirm_title">Αλλαγή σε %1$s;</string>
+    <string name="settings_mode_confirm_message">Το DFTB θα αλλάξει από %1$s σε %2$s. Αυτά είναι όσα αλλάζουν:</string>
+    <string name="settings_mode_confirm_action">Αλλαγή λειτουργίας</string>
+    <string name="settings_mode_changed">Η λειτουργία εκτέλεσης άλλαξε σε %1$s.</string>
+    <string name="settings_mode_effect_immediate">Τα νέα αντίγραφα ασφαλείας, οι επαναφορές και οι προγραμματισμένες εκτελέσεις χρησιμοποιούν από εδώ και πέρα τη νέα λειτουργία. Τα προφίλ, οι προορισμοί και τα υπάρχοντα αντίγραφά σας δεν αλλάζουν.</string>
+    <string name="settings_mode_effect_loses_partitions">Οι εικόνες κατατμήσεων, τα αντίγραφα τύπου TWRP και οι επαναφορές κατατμήσεων απαιτούν root και δεν θα εκτελούνται πλέον.</string>
+    <string name="settings_mode_effect_loses_app_data">Τα ιδιωτικά δεδομένα εφαρμογών και οι φάκελοι Android/data δεν μπορούν πλέον να διαβαστούν ή να επαναφερθούν· τα προφίλ που τα περιλαμβάνουν θα παραλείπουν ή θα αποτυγχάνουν σε αυτά τα στοιχεία.</string>
+    <string name="settings_mode_effect_needs_shizuku">Το Shizuku πρέπει να εκτελείται σε κάθε αντίγραφο ασφαλείας. Σταματά μετά από κάθε επανεκκίνηση εκτός αν ξεκινήσει ξανά, και τα προγραμματισμένα αντίγραφα αποτυγχάνουν όσο δεν εκτελείται.</string>
+    <string name="settings_mode_effect_root_prompts">Ο διαχειριστής root θα σας ζητήσει να δώσετε στο DFTB πρόσβαση υπερχρήστη. Επιτρέψτε την μόνιμα ώστε τα προγραμματισμένα αντίγραφα να εκτελούνται χωρίς επίβλεψη.</string>
+    <string name="settings_mode_effect_module_needed">Η συνοδευτική μονάδα πρέπει να παραμένει εγκατεστημένη και ενεργή στον διαχειριστή root για τα εργαλεία συστήματος και την υπηρεσία εκκίνησης.</string>
+    <string name="settings_mode_effect_module_left">Η συνοδευτική μονάδα παραμένει εγκατεστημένη μέχρι να την αφαιρέσετε από τον διαχειριστή root. Το DFTB σταματά να αντιγράφει σε αυτήν το αρχείο καταγραφής συνέχισης μετά από επανεκκίνηση.</string>
+    <string name="settings_mode_effect_degraded">Ορισμένοι έλεγχοι αυτής της λειτουργίας εμφάνισαν προειδοποίηση ή απέτυχαν. Οι λειτουργίες που εξαρτώνται από αυτούς μπορεί να μην λειτουργούν μέχρι να διορθωθούν.</string>
+    <string name="settings_mode_shizuku_title">Πρόσβαση Shizuku</string>
+    <string name="settings_mode_shizuku_subtitle">Ζητήστε από το Shizuku να εξουσιοδοτήσει το DFTB. Η υπηρεσία Shizuku πρέπει να εκτελείται.</string>
+    <string name="settings_mode_shizuku_granted">Η πρόσβαση Shizuku παραχωρήθηκε.</string>
+    <string name="settings_mode_discovery_title">Ανακάλυψη</string>
+    <string name="settings_mode_discovery_subtitle">Δείτε ποιες κατατμήσεις, εφαρμογές και φακέλους μπορεί να προσεγγίσει αυτή η λειτουργία σε αυτή τη συσκευή.</string>
+    <string name="settings_mode_discovery_open">Άνοιγμα Ανακάλυψης</string>
+    <string name="settings_mode_module_tools_note">Το rclone και το BusyBox δεν περιλαμβάνονται ακόμη σε αυτή την έκδοση, επομένως μια μονάδα που δημιουργείται τώρα περιέχει μόνο τα εργαλεία που διαθέτει η έκδοση αυτής της συσκευής. Το αποτέλεσμα απαριθμεί ακριβώς τι συμπεριλήφθηκε και τι λείπει.</string>
+    <string name="settings_mode_module_saved_as">Αποθηκεύτηκε ως %1$s</string>
+    <string name="settings_mode_module_build_failed">Δεν ήταν δυνατή η δημιουργία αρχείου μονάδας. Οι τεχνικές λεπτομέρειες παρακάτω εξηγούν τον λόγο.</string>
+    <string name="settings_mode_module_write_failed">Δεν ήταν δυνατή η εγγραφή της μονάδας στην επιλεγμένη θέση. Επιλέξτε άλλον φάκελο και δοκιμάστε ξανά.</string>
+    <string name="settings_mode_module_details">Τεχνικές λεπτομέρειες</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">Τα νέα προφίλ αντιγράφων ασφαλείας ξεκινούν με αυτές τις ρυθμίσεις. Τα υπάρχοντα προφίλ διατηρούν τις δικές τους.</string>
+    <string name="settings_defaults_issues_title">Ορισμένες προεπιλογές δεν είναι πλέον έγκυρες</string>
+    <string name="settings_defaults_issue_format">Η αποθηκευμένη μορφή δεν είναι μορφή αρχειοθήκης και δεν μπορεί να είναι προεπιλογή προφίλ.</string>
+    <string name="settings_defaults_issue_level">Το αποθηκευμένο επίπεδο συμπίεσης βρίσκεται εκτός του εύρους της επιλεγμένης μορφής.</string>
+    <string name="settings_defaults_issue_destination">Ο προεπιλεγμένος προορισμός διαγράφηκε. Τα νέα προφίλ θα ζητούν προορισμό μέχρι να επιλέξετε άλλον.</string>
+    <string name="settings_defaults_repair">Αυτόματη διόρθωση</string>
+    <string name="settings_defaults_repaired">Οι προεπιλογές διορθώθηκαν.</string>
+    <string name="settings_defaults_extension">Επέκταση αρχείου: %1$s</string>
+    <string name="settings_defaults_7z_staging">Το 7z δημιουργεί ολόκληρη την αρχειοθήκη σε τοπικό προσωρινό χώρο πριν από τη μεταφόρτωση, επομένως αυτή η συσκευή χρειάζεται ελεύθερο χώρο για ολόκληρη την αρχειοθήκη.</string>
+    <string name="settings_defaults_level_not_applicable">Το %1$s δεν συμπιέζει, επομένως δεν υπάρχει επίπεδο για επιλογή.</string>
+    <string name="settings_defaults_level_range">Επιτρεπόμενα επίπεδα για αυτή τη μορφή: %1$d έως %2$d</string>
+    <string name="settings_defaults_checksum_hint">Χρησιμοποιείται για την επαλήθευση κάθε αντικειμένου μετά την εγγραφή και πριν από την επαναφορά.</string>
+    <string name="settings_defaults_destination_title">Προεπιλεγμένος προορισμός</string>
+    <string name="settings_defaults_destination_subtitle">Πού στέλνουν τα νέα προφίλ τα αντίγραφά τους, εκτός αν επιλέξετε διαφορετικά.</string>
+    <string name="settings_defaults_destination_ask">Ερώτηση κάθε φορά</string>
+    <string name="settings_defaults_destination_ask_hint">Κάθε νέο προφίλ ζητά προορισμό.</string>
+    <string name="settings_defaults_destination_none">Δεν έχουν ρυθμιστεί ακόμη προορισμοί. Προσθέστε έναν από την οθόνη Προορισμοί.</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">Κλειδιά κρυπτογράφησης</string>
+    <string name="settings_security_keys_subtitle">Τυχαία κλειδιά που αποθηκεύονται στο ασφαλές θησαυροφυλάκιο αυτής της συσκευής. Δεν φεύγουν ποτέ από τη συσκευή και δεν περιλαμβάνονται σε κανένα αντίγραφο ασφαλείας.</string>
+    <string name="settings_security_keys_empty">Δεν είναι αποθηκευμένα κλειδιά κρυπτογράφησης.</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="one">%1$d κλειδί</item>
+        <item quantity="other">%1$d κλειδιά</item>
+    </plurals>
+    <string name="settings_security_key_created">Δημιουργήθηκε %1$s</string>
+    <string name="settings_security_key_unused">Δεν χρησιμοποιείται από κανένα προφίλ</string>
+    <string name="settings_security_key_used_by">Χρησιμοποιείται από: %1$s</string>
+    <string name="settings_security_key_delete_cd">Διαγραφή κλειδιού</string>
+    <string name="settings_security_key_delete_blocked_cd">Διαγραφή κλειδιού (μη διαθέσιμη όσο το χρησιμοποιεί κάποιο προφίλ)</string>
+    <string name="settings_security_key_delete_title">Διαγραφή αυτού του κλειδιού κρυπτογράφησης;</string>
+    <string name="settings_security_key_delete_message">Το κλειδί %1$s θα διαγραφεί οριστικά από το θησαυροφυλάκιο.</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">Κάθε αντίγραφο ασφαλείας που έχει κρυπτογραφηθεί με αυτό το κλειδί καθίσταται οριστικά μη ανακτήσιμο, σε κάθε προορισμό.</string>
+    <string name="settings_security_key_delete_consequence_no_copy">Δεν υπάρχει άλλο αντίγραφο: το κλειδί υπάρχει μόνο στο θησαυροφυλάκιο αυτής της συσκευής και κανείς, ούτε οι προγραμματιστές του DFTB, δεν μπορεί να το δημιουργήσει ξανά.</string>
+    <string name="settings_security_key_delete_consequence_restore">Η επαναφορά ή η επαλήθευση αυτών των αντιγράφων θα αποτυγχάνει από εδώ και πέρα.</string>
+    <string name="settings_security_key_delete_ack">Κατανοώ ότι τα αντίγραφα ασφαλείας που έχουν κρυπτογραφηθεί με αυτό το κλειδί θα χαθούν για πάντα.</string>
+    <string name="settings_security_key_delete_confirm">Διαγραφή κλειδιού για πάντα</string>
+    <string name="settings_security_key_deleted">Το κλειδί κρυπτογράφησης διαγράφηκε.</string>
+    <string name="settings_security_key_already_gone">Το κλειδί είχε ήδη αφαιρεθεί από το θησαυροφυλάκιο.</string>
+    <string name="settings_security_key_delete_failed">Δεν ήταν δυνατή η διαγραφή του κλειδιού. Δεν άλλαξε τίποτα.</string>
+    <string name="settings_security_key_in_use">Δεν διαγράφηκε: το κλειδί χρησιμοποιείται ακόμη από %1$s. Αλλάξτε πρώτα αυτά τα προφίλ.</string>
+    <string name="settings_security_key_in_use_title">Κλειδί σε χρήση</string>
+    <string name="settings_security_key_in_use_message">Αυτό το κλειδί δεν μπορεί να διαγραφεί όσο το χρησιμοποιούν αυτά τα προφίλ. Επεξεργαστείτε τα ώστε να χρησιμοποιούν άλλο κλειδί ή διαγράψτε τα πρώτα.</string>
+    <string name="settings_security_vault_key_gone">Το κλειδί συσκευής του θησαυροφυλακίου δεν είναι πλέον διαθέσιμο, επομένως τα αποθηκευμένα μυστικά δεν μπορούν να διαβαστούν σε αυτή τη συσκευή.</string>
+    <string name="settings_security_vault_keystore">Η ασφαλής αποθήκη κλειδιών του Android δεν είναι διαθέσιμη αυτή τη στιγμή.</string>
+    <string name="settings_security_vault_unreadable">Δεν ήταν δυνατή η ανάγνωση του θησαυροφυλακίου.</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">Αξιόπιστοι διακομιστές SSH</string>
+    <string name="settings_security_hosts_subtitle">Κλειδιά κεντρικών υπολογιστών που καρφιτσώθηκαν την πρώτη φορά που το DFTB συνδέθηκε σε κάθε διακομιστή SFTP ή SSH.</string>
+    <string name="settings_security_hosts_empty">Δεν έχει γίνει ακόμη επικοινωνία με κανέναν διακομιστή SSH.</string>
+    <string name="settings_security_hosts_unreadable">Το αρχείο αξιόπιστων διακομιστών δεν είναι αναγνώσιμο ή είναι κατεστραμμένο. Οι συνδέσεις SSH απορρίπτονται μέχρι να διορθωθεί, για προστασία από πλαστούς διακομιστές.</string>
+    <string name="settings_security_hosts_tofu_note">Ένας διακομιστής που παρουσιάζει διαφορετικό κλειδί απορρίπτεται πάντα. Διαγράψτε έναν διακομιστή μόνο αν γνωρίζετε ότι το κλειδί του άλλαξε σκόπιμα.</string>
+    <string name="settings_security_host_forget">Διαγραφή</string>
+    <string name="settings_security_host_forget_title">Διαγραφή του κλειδιού αυτού του διακομιστή;</string>
+    <string name="settings_security_host_forget_message">Το καρφιτσωμένο κλειδί του %1$s θα αφαιρεθεί.</string>
+    <string name="settings_security_host_forget_consequence_repin">Η επόμενη σύνδεση θα εμπιστευτεί όποιο κλειδί παρουσιάσει ο διακομιστής και θα το καρφιτσώσει ξανά.</string>
+    <string name="settings_security_host_forget_consequence_verify">Αν κάποιος υποδύεται τον διακομιστή εκείνη τη στιγμή, το DFTB θα τον εμπιστευτεί. Ελέγξτε το νέο αποτύπωμα με τον διαχειριστή του διακομιστή.</string>
+    <string name="settings_security_host_forget_confirm">Διαγραφή κλειδιού</string>
+    <string name="settings_security_host_forgotten">Το κλειδί του %1$s διαγράφηκε.</string>
+    <string name="settings_security_host_already_gone">Αυτός ο διακομιστής δεν υπήρχε πλέον στη λίστα.</string>
+    <string name="settings_security_host_unparsable">Αυτή η καταχώριση δεν μπορεί να αφαιρεθεί από εδώ επειδή η διεύθυνση του διακομιστή της είναι κακοσχηματισμένη.</string>
+    <string name="settings_security_hosts_write_failed">Δεν ήταν δυνατή η ενημέρωση του αρχείου αξιόπιστων διακομιστών. Δεν άλλαξε τίποτα.</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">Απομακρυσμένες θέσεις rclone</string>
+    <string name="settings_security_rclone_subtitle">Οι ορισμοί απομακρυσμένων θέσεων cloud αποθηκεύονται σφραγισμένοι στο θησαυροφυλάκιο.</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">Πρόσβαση ειδοποιήσεων</string>
+    <string name="settings_notifications_permission_not_required">Αυτή η έκδοση Android δεν ζητά άδεια ειδοποιήσεων.</string>
+    <string name="settings_notifications_permission_granted">Η άδεια ειδοποιήσεων παραχωρήθηκε.</string>
+    <string name="settings_notifications_permission_denied">Η άδεια ειδοποιήσεων απορρίφθηκε. Οι ειδοποιήσεις προόδου και αποτυχίας εργασιών δεν θα εμφανίζονται.</string>
+    <string name="settings_notifications_app_enabled">Οι ειδοποιήσεις είναι ενεργές για το DFTB.</string>
+    <string name="settings_notifications_app_disabled">Οι ειδοποιήσεις είναι απενεργοποιημένες για το DFTB στις ρυθμίσεις συστήματος.</string>
+    <string name="settings_notifications_open_settings">Άνοιγμα ρυθμίσεων ειδοποιήσεων</string>
+    <string name="settings_notifications_channels_title">Κατηγορίες</string>
+    <string name="settings_notifications_channels_subtitle">Κάθε κατηγορία μπορεί να σιγαστεί ξεχωριστά στις ρυθμίσεις συστήματος.</string>
+    <string name="settings_notifications_channel_on">Ενεργό</string>
+    <string name="settings_notifications_channel_blocked">Αποκλεισμένο</string>
+    <string name="settings_notifications_channel_missing">Δεν έχει δημιουργηθεί ακόμη</string>
+    <string name="settings_notifications_channel_open">Ρυθμίσεις</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">Προσωρινά αρχεία</string>
+    <string name="settings_storage_cache_subtitle">Χώρος που χρησιμοποιεί το DFTB σε αυτή τη συσκευή κατά τη δημιουργία και την ανάγνωση αντιγράφων ασφαλείας.</string>
+    <string name="settings_storage_staging">Προσωρινή αποθήκευση αρχειοθηκών</string>
+    <string name="settings_storage_other_cache">Άλλα προσωρινά αρχεία</string>
+    <string name="settings_storage_total_cache">Σύνολο</string>
+    <string name="settings_storage_staging_hint">Η προσωρινή αποθήκευση κρατά αρχειοθήκες 7z και ροές άγνωστου μεγέθους κατά τη δημιουργία τους. Τα υπολείμματα από μια διακοπείσα εργασία μπορούν να διαγραφούν με ασφάλεια.</string>
+    <string name="settings_storage_clear_staging">Εκκαθάριση προσωρινής αποθήκευσης</string>
+    <string name="settings_storage_clear_all">Εκκαθάριση όλων των προσωρινών αρχείων</string>
+    <string name="settings_storage_recalculate">Επανυπολογισμός</string>
+    <string name="settings_storage_clear_blocked">Τα προσωρινά αρχεία δεν μπορούν να διαγραφούν όσο εκτελείται αντίγραφο ασφαλείας ή επαναφορά.</string>
+    <string name="settings_storage_clear_staging_title">Εκκαθάριση προσωρινής αποθήκευσης αρχειοθηκών;</string>
+    <string name="settings_storage_clear_all_title">Εκκαθάριση όλων των προσωρινών αρχείων;</string>
+    <string name="settings_storage_clear_staging_consequence">Οι μερικώς δημιουργημένες αρχειοθήκες και τα αρχεία spool που άφησαν πίσω τους διακοπείσες εργασίες διαγράφονται.</string>
+    <string name="settings_storage_clear_all_consequence">Διαγράφεται ολόκληρη η προσωρινή μνήμη του DFTB: προσωρινή αποθήκευση, αρχεία spool και αρχεία καταγραφής που έχουν κοινοποιηθεί παλαιότερα.</string>
+    <string name="settings_storage_clear_backups_safe">Τα αντίγραφά σας στους προορισμούς τους, τα προφίλ και οι ρυθμίσεις σας δεν επηρεάζονται.</string>
+    <string name="settings_storage_clear_confirm">Εκκαθάριση</string>
+    <string name="settings_storage_cleared">Τα προσωρινά αρχεία διαγράφηκαν.</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="one">Τα προσωρινά αρχεία διαγράφηκαν· %1$s στοιχείο δεν μπόρεσε να αφαιρεθεί (ίσως ανήκει σε βοηθό root).</item>
+        <item quantity="other">Τα προσωρινά αρχεία διαγράφηκαν· %1$s στοιχεία δεν μπόρεσαν να αφαιρεθούν (ίσως ανήκουν σε βοηθό root).</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">Δεν ήταν δυνατή η διαγραφή των προσωρινών αρχείων.</string>
+    <string name="settings_storage_log_title">Διαγνωστική καταγραφή</string>
+    <string name="settings_storage_log_subtitle">Πρόσφατη δραστηριότητα που καταγράφεται στη μνήμη από την έναρξη της εφαρμογής. Χρήσιμη για αναφορές σφαλμάτων.</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="one">%1$d γραμμή καταγράφηκε</item>
+        <item quantity="other">%1$d γραμμές καταγράφηκαν</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">Η καταγραφή μπορεί να περιέχει διαδρομές αρχείων, ονόματα προορισμών και διευθύνσεις διακομιστών. Το DFTB έχει σχεδιαστεί ώστε να μην καταγράφει ποτέ κωδικούς πρόσβασης, κλειδιά ή διακριτικά. Ελέγξτε την πριν τη μοιραστείτε δημόσια.</string>
+    <string name="settings_storage_log_share">Κοινή χρήση</string>
+    <string name="settings_storage_log_save">Αποθήκευση σε αρχείο</string>
+    <string name="settings_storage_log_share_title">Κοινή χρήση καταγραφής DFTB</string>
+    <string name="settings_storage_log_saved">Η καταγραφή αποθηκεύτηκε.</string>
+    <string name="settings_storage_log_export_failed">Δεν ήταν δυνατή η εξαγωγή της καταγραφής.</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">Αντίγραφα ασφαλείας Android ανοιχτού κώδικα, με εξουσιοδότηση του χρήστη.</string>
+    <string name="settings_about_version_value">%1$s (%2$d)</string>
+    <string name="settings_about_sources_title">Πηγαίος κώδικας των έργων που αναφέρονται</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="one">%1$d έργο</item>
+        <item quantity="other">%1$d έργα</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">Άνοιγμα του αποθετηρίου πηγαίου κώδικα του %1$s</string>
+    <string name="settings_storage_measure_failed">Δεν ήταν δυνατή η μέτρηση του μεγέθους της προσωρινής μνήμης.</string>
+    <string name="settings_storage_measure_retry">Επανάληψη</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">準備完了</string>
+    <string name="diag_readiness_degraded">警告ありで準備完了</string>
+    <string name="diag_readiness_unavailable">利用不可</string>
+    <string name="diag_mode_requires_root">このモードには、DFTB にスーパーユーザーアクセスを付与する root マネージャーを備えた、root 化されたデバイスが必要です。</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">OK</string>
+    <string name="diag_status_warn">警告</string>
+    <string name="diag_status_fail">失敗</string>
+    <string name="diag_status_info">情報</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">Shizuku アクセスを許可</string>
+    <string name="diag_action_open_all_files_access">すべてのファイルへのアクセスを許可</string>
+    <string name="diag_action_request_legacy_storage">ストレージ権限を付与</string>
+    <string name="diag_action_request_notifications">通知を有効にする</string>
+    <string name="diag_action_open_battery_settings">バッテリー最適化を無効にする</string>
+    <string name="diag_action_install_shizuku">Shizuku をインストール</string>
+    <string name="diag_action_open_root_manager">root マネージャーを開く</string>
+    <string name="diag_action_install_companion_module">コンパニオンモジュールをインストール</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">診断エンジン</string>
+    <string name="diag_probe_hint">診断の実行自体が予期せず失敗しました。再実行してください。繰り返す場合は、システム概要からログを共有してください。</string>
+    <string name="diag_check_timed_out_hint">チェックが時間内に完了しませんでした。通常はスーパーユーザーの確認待ちや応答しないサービスが原因です。プロンプトに応答して再実行してください。</string>
+    <string name="diag_check_failed_hint">チェックは結果を生成する前にクラッシュしました。生のエラーは上に表示されています。</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">Android バージョン</string>
+    <string name="diag_all_files_access_title">すべてのファイルへのアクセス</string>
+    <string name="diag_all_files_access_hint">DFTB はファイルをバックアップしアーカイブを書き込むために、共有ストレージ全体を読み書きできる必要があります。システム設定ページで「すべてのファイルへのアクセス」を許可してください。</string>
+    <string name="diag_all_files_access_optional_hint">許可されていません。root シェルは引き続きすべてを読み取れますが、SAF を使わない共有ストレージの閲覧はできません。</string>
+    <string name="diag_legacy_storage_title">ストレージ権限</string>
+    <string name="diag_legacy_storage_hint">Android 10 では、共有ストレージの読み書きにストレージの実行時権限が必要です。</string>
+    <string name="diag_legacy_storage_optional_hint">許可されていません。root シェルは引き続きすべてを読み取れますが、共有ストレージの直接閲覧はできません。</string>
+    <string name="diag_notifications_title">通知</string>
+    <string name="diag_notifications_hint">通知がないと、実行中のバックアップはアプリがバックグラウンドにある間、進行状況の表示や失敗の報告ができません。</string>
+    <string name="diag_saf_title">ドキュメントピッカー（SAF）</string>
+    <string name="diag_saf_hint">フォルダーピッカーを処理するアプリがありません。このデバイスでは SD カードや USB ドライブ上の保存先を選択できません。</string>
+    <string name="diag_battery_title">バッテリー最適化</string>
+    <string name="diag_battery_hint">遅い接続での長時間バックアップは、Doze によって終了される可能性があります。DFTB を除外すると、スケジュールされ再開されたジョブが継続されます。</string>
+    <string name="diag_free_space_title">空き容量（アプリストレージ）</string>
+    <string name="diag_free_space_hint">空きが 500 MB 未満です。一時アーカイブとジョブジャーナルはここに保存されます。バックアップ前に空き容量を確保してください。</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">Shizuku インストール済み</string>
+    <string name="diag_shizuku_installed_hint">Shizuku（または Sui）をインストールし、ワイヤレスデバッグまたは root で起動してから再実行してください。</string>
+    <string name="diag_shizuku_binder_title">Shizuku サービス実行中</string>
+    <string name="diag_shizuku_binder_hint">Shizuku はインストールされていますが、そのサービスが実行されていません。Shizuku アプリを開いて起動してから、ここに戻ってください。</string>
+    <string name="diag_shizuku_version_supported_title">Shizuku API バージョン</string>
+    <string name="diag_shizuku_version_supported_hint">この Shizuku はバージョン 11 より古く、使用できません。Shizuku を更新してください。</string>
+    <string name="diag_shizuku_permission_title">Shizuku アクセス許可済み</string>
+    <string name="diag_shizuku_permission_hint">Shizuku のプロンプトで DFTB を許可してください。「今後表示しない」を選択した場合は、Shizuku アプリの承認済みアプリ一覧から再度有効にしてください。</string>
+    <string name="diag_shizuku_version_title">Shizuku サーバーバージョン</string>
+    <string name="diag_shizuku_uid_title">Shizuku の識別情報</string>
+    <string name="diag_shizuku_uid_root_hint">Shizuku は root として実行されており、すべてのパッケージのアプリデータにアクセスできます。</string>
+    <string name="diag_shizuku_uid_adb_hint">Shizuku は ADB シェルユーザーとして実行されており、一部のアプリデータディレクトリは読み取れません。</string>
+    <string name="diag_shizuku_selinux_title">Shizuku の SELinux コンテキスト</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">su バイナリ</string>
+    <string name="diag_su_binary_hint">このアプリから見える su バイナリがありません。KernelSU と APatch はアクセスが付与されるまでこれを隠すため、これだけでは失敗ではありません。</string>
+    <string name="diag_root_manager_title">root マネージャーアプリ</string>
+    <string name="diag_root_manager_hint">Magisk、KernelSU、APatch のいずれのマネージャーも検出されませんでした。</string>
+    <string name="diag_root_granted_title">スーパーユーザーアクセス</string>
+    <string name="diag_root_granted_hint">root マネージャーを開いて DFTB にスーパーユーザーアクセスを許可してから、再実行してください。</string>
+    <string name="diag_root_granted_shell_mount_master">root（mount master）</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">不明</string>
+    <string name="diag_shell_identity_title">シェルの識別情報</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">root の実装</string>
+    <string name="diag_root_implementation_hint">シェルから Magisk、KernelSU、APatch を識別できませんでした。</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">PATH 上に見つかりません。DFTB に同梱のものが使用されます。</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">見つかりません。グローバルマウント名前空間への移行（高度な root モード）はこれに依存します。</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">スーパーユーザーアクセスが付与されなかったため、コンパニオンモジュールを検査できませんでした。</string>
+    <string name="diag_module_installed_title">コンパニオンモジュールインストール済み</string>
+    <string name="diag_module_installed_hint">root マネージャーから DFTB コンパニオンモジュールをフラッシュして再起動してください。</string>
+    <string name="diag_module_enabled_title">コンパニオンモジュール有効</string>
+    <string name="diag_module_enabled_hint">モジュールが無効か、削除予定になっています。root マネージャーで再度有効にして再起動してください。</string>
+    <string name="diag_module_tool_rclone_title">システム rclone</string>
+    <string name="diag_module_tool_busybox_title">システム BusyBox</string>
+    <string name="diag_module_tool_zstd_title">システム zstd</string>
+    <string name="diag_module_tool_tar_title">システム tar</string>
+    <string name="diag_module_tool_missing_hint">PATH 上にありません。モジュールはインストールされていますが、そのファイルがまだマウントされていません。通常は再起動で解決します。</string>
+    <string name="diag_module_service_title">ブートサービススクリプト</string>
+    <string name="diag_module_journal_title">ブートジャーナルディレクトリ</string>
+    <string name="diag_module_journal_hint">モジュールインストール後の初回起動時に作成されます。スケジュールされ再開されたバックアップは、ここに状態を記録します。</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">保存された認証情報を保護する安全な鍵が失われましたが、暗号化されたエントリはこのデバイスに残っています。これらはもう復号できません。該当する認証情報を再入力して作り直してください。</string>
+
+    <string name="diag_module_tool_nsenter_title">システム nsenter</string>
+</resources>

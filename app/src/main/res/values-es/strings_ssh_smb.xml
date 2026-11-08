@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_net_missing_host">El destino no tiene ningún nombre de host configurado.</string>
+    <string name="storage_net_missing_credential">El destino no tiene credenciales guardadas.</string>
+    <string name="storage_net_credential_not_found">No se encontraron las credenciales guardadas para este destino.</string>
+    <string name="storage_net_credential_wrong_kind">El tipo de credencial guardada no es compatible con este protocolo.</string>
+    <string name="storage_net_missing_username">El destino no tiene ningún nombre de usuario configurado.</string>
+    <string name="storage_net_connect_failed">No se pudo conectar con %1$s: %2$s</string>
+    <string name="storage_net_op_failed">Falló la operación remota (%1$s): %2$s</string>
+    <string name="storage_net_not_a_directory">“%1$s” no es una carpeta del destino.</string>
+    <string name="storage_net_transfer_timeout">La transferencia no comenzó a tiempo (%1$s).</string>
+    <string name="storage_ssh_auth_failed">El servidor SSH rechazó el usuario, la contraseña o la clave.</string>
+    <string name="storage_ssh_key_unreadable">No se pudo leer la clave privada guardada. Comprueba el formato de la clave y la frase de contraseña.</string>
+    <string name="storage_ssh_host_key_changed">La clave de host SSH de %1$s ha cambiado (ahora es %2$s). Se rechazó la conexión para proteger tus datos. Si el servidor se reinstaló a propósito, olvida su clave guardada y vuelve a conectar.</string>
+    <string name="storage_ssh_no_shell">El servidor SSH no ofrece SFTP y rechazó el uso alternativo de comandos de shell.</string>
+    <string name="storage_smb_missing_share">No hay ningún recurso compartido configurado. Pon su nombre como primera carpeta de la ruta o define la opción de recurso compartido.</string>
+    <string name="storage_smb_not_disk_share">“%1$s” no es un recurso compartido de archivos.</string>
+    <string name="storage_smb_encryption_unsupported">Se solicitó cifrado pero el servidor no admite el cifrado SMB 3.</string>
+    <string name="storage_smb_auth_failed">El servidor SMB rechazó el usuario o la contraseña.</string>
+    <string name="storage_nfs_requires_root">NFS necesita el modo Root: Android no puede montar recursos de red para apps normales. Cambia al modo Root en Ajustes para usar este destino.</string>
+    <string name="storage_nfs_root_unavailable">El acceso root no está concedido ahora mismo, por lo que no se puede montar el recurso NFS.</string>
+    <string name="storage_nfs_kernel_unsupported">El kernel de este dispositivo no incluye cliente NFS, así que no se pueden montar recursos NFS.</string>
+    <string name="storage_nfs_missing_export">No hay ninguna ruta de exportación NFS configurada (por ejemplo /srv/backups).</string>
+    <string name="storage_nfs_bad_options">Las opciones de montaje NFS contienen caracteres no admitidos.</string>
+    <string name="storage_nfs_mount_failed">Falló el montaje de %1$s: %2$s</string>
+
+</resources>

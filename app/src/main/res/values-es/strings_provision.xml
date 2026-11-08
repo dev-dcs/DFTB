@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">Sincronización remota</string>
+    <string name="provision_feature_archiving">Archivado</string>
+    <string name="provision_feature_compression">Compresión</string>
+    <string name="provision_feature_encryption">Cifrado</string>
+    <string name="provision_feature_core_utilities">Utilidades básicas</string>
+    <string name="provision_feature_integrity">Integridad</string>
+    <string name="provision_tool_rclone_purpose">Sincroniza las copias de seguridad con almacenes en la nube y de red como S3, WebDAV y SFTP.</string>
+    <string name="provision_tool_busybox_purpose">Proporciona las utilidades básicas POSIX con opciones coherentes en todos los dispositivos.</string>
+    <string name="provision_tool_zstd_purpose">Compresión y descompresión Zstandard rápidas para archivos.</string>
+    <string name="provision_tool_xz_purpose">Compresión XZ/LZMA de alta relación para archivos.</string>
+    <string name="provision_tool_pigz_purpose">Compresión gzip en paralelo que usa varios núcleos de CPU.</string>
+    <string name="provision_tool_openssl_purpose">Cifra y descifra los archivos de copia de seguridad con un cifrado simétrico.</string>
+    <string name="provision_tool_tar_purpose">Transmite archivos hacia y desde archivos POSIX tar, conservando los metadatos.</string>
+    <string name="provision_tool_dftbtool_purpose">Utilidad integrada que calcula hashes y copia archivos, y comprueba que el proceso de extracción y ejecución funciona en este dispositivo.</string>
+    <string name="provision_tool_nsenter_purpose">Entra en los espacios de nombres de montaje, PID y otros del host para que las copias de seguridad vean los montajes reales del sistema con root.</string>
+</resources>

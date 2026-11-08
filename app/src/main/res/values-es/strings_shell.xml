@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">Panel</string>
+    <string name="shell_nav_profiles">Perfiles</string>
+    <string name="shell_nav_restore">Restaurar</string>
+    <string name="shell_nav_destinations">Destinos</string>
+    <string name="shell_nav_settings">Ajustes</string>
+    <string name="shell_back">Atrás</string>
+    <string name="shell_more_options">Más opciones</string>
+    <string name="shell_state_on">Activado</string>
+    <string name="shell_state_off">Desactivado</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s está esperando que confirmes su instalación.</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="one">%1$s y %2$d app más están esperando que confirmes su instalación.</item>
+        <item quantity="other">%1$s y %2$d apps más están esperando que confirmes su instalación.</item>
+    </plurals>
+    <string name="shell_install_review">Revisar</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">Panel</string>
+    <string name="shell_open_job_monitor">Abrir monitor de tareas</string>
+    <string name="shell_menu_system_info">Información del sistema</string>
+    <string name="shell_menu_discovery">Detección</string>
+    <string name="shell_menu_schedules">Programaciones</string>
+    <string name="shell_menu_licenses">Licencias de código abierto</string>
+
+    <string name="shell_section_active_jobs">En ejecución</string>
+    <string name="shell_section_profiles">Perfiles de copia de seguridad</string>
+    <string name="shell_section_upcoming">Próximas ejecuciones programadas</string>
+    <string name="shell_section_destinations">Estado de los destinos</string>
+
+    <string name="shell_action_new_profile">Nuevo perfil</string>
+    <string name="shell_action_create_profile">Crear un perfil</string>
+    <string name="shell_action_restore">Restaurar</string>
+    <string name="shell_action_add_destination">Añadir destino</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">Aún no hay perfiles de copia de seguridad</string>
+    <string name="shell_profiles_empty_body">Un perfil define qué se copia, adónde va y cuándo se ejecuta. Crea uno para hacer tu primera copia de seguridad.</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="one">Mostrar %1$d perfil más</item>
+        <item quantity="other">Mostrar %1$d perfiles más</item>
+    </plurals>
+    <string name="shell_profiles_manage">Gestionar perfiles</string>
+    <string name="shell_profile_destination">A %1$s</string>
+    <string name="shell_profile_destination_missing">Su destino se eliminó</string>
+    <string name="shell_profile_no_destination">Ningún destino seleccionado</string>
+    <string name="shell_profile_disabled">Desactivado</string>
+    <string name="shell_profile_next">Siguiente: %1$s</string>
+    <string name="shell_back_up_now">Copiar ahora</string>
+    <string name="shell_running">En ejecución…</string>
+    <string name="shell_needs_passphrase">Requiere frase de contraseña</string>
+    <string name="shell_set_destination">Elegir destino</string>
+    <string name="shell_open_profile">Abrir perfil</string>
+    <string name="shell_open_profiles">Ir a Perfiles</string>
+
+    <string name="shell_status_never">Sin copias de seguridad</string>
+    <string name="shell_status_running">En ejecución</string>
+    <string name="shell_status_success">Correcta</string>
+    <string name="shell_status_warnings">Completada con advertencias</string>
+    <string name="shell_status_failed">Fallida</string>
+    <string name="shell_status_cancelled">Cancelada</string>
+    <string name="shell_status_interrupted">Interrumpida</string>
+
+    <string name="shell_backup_queued">Copia de seguridad de %1$s en cola. Empieza en cuanto se cumpla su requisito de red.</string>
+    <string name="shell_resume_queued">La copia de seguridad de %1$s continuará donde se detuvo.</string>
+    <string name="shell_queue_failed">No se pudo poner en cola la copia de seguridad de %1$s. Inténtalo de nuevo.</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">No hay copias de seguridad programadas. Añade una programación a un perfil para ejecutarlo automáticamente.</string>
+    <string name="shell_upcoming_at">%1$s (%2$s)</string>
+    <string name="shell_upcoming_expected">Prevista %1$s · aún no en cola</string>
+    <string name="shell_upcoming_retry">Reintentando %1$s (intento %2$d)</string>
+    <string name="shell_upcoming_queued">En cola, esperando sus condiciones</string>
+    <string name="shell_upcoming_see_schedules">Ver programaciones</string>
+    <string name="shell_constraints">Requiere: %1$s</string>
+    <string name="shell_constraint_unmetered">red sin límite de datos</string>
+    <string name="shell_constraint_network">red</string>
+    <string name="shell_constraint_charging">cargando</string>
+    <string name="shell_constraint_idle">dispositivo inactivo</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">Aún no hay destinos. Añade uno para que tus copias de seguridad tengan adónde ir.</string>
+    <string name="shell_destinations_manage">Gestionar destinos</string>
+    <string name="shell_destination_verified">Comprobado %1$s</string>
+    <string name="shell_destination_never_verified">Nunca comprobado. Ejecuta una prueba de conexión para ver su espacio libre.</string>
+    <string name="shell_destination_stale">Última comprobación: %1$s. Pruébalo de nuevo para ver el espacio libre actual.</string>
+    <string name="shell_destination_space">%1$s libres de %2$s</string>
+    <string name="shell_destination_space_free">%1$s libres</string>
+    <string name="shell_destination_space_unknown">Capacidad desconocida</string>
+    <string name="shell_destination_low_space">Poco espacio</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">El acceso %1$s no está disponible</string>
+    <string name="shell_warn_elevation_root_body">DFTB no tiene concedido el acceso root en este momento. Los datos de apps, las particiones y otros elementos privilegiados no se pueden copiar ni restaurar hasta que lo tenga.</string>
+    <string name="shell_warn_elevation_shizuku_body">El servicio Shizuku no se está ejecutando o DFTB perdió su permiso. Inicia Shizuku (se detiene en cada reinicio) para copiar los datos de apps.</string>
+    <string name="shell_warn_check_again">Comprobar de nuevo</string>
+    <string name="shell_warn_open_settings">Cambiar modo</string>
+    <string name="shell_warn_notifications_title">Las notificaciones están desactivadas</string>
+    <string name="shell_warn_notifications_body">No verás el progreso de las copias de seguridad, los fallos ni las solicitudes de tu frase de contraseña mientras DFTB esté cerrado.</string>
+    <string name="shell_warn_allow">Permitir</string>
+    <string name="shell_warn_passphrase_title">%1$s está esperando su frase de contraseña</string>
+    <string name="shell_warn_passphrase_body">Este perfil cifra con una frase de contraseña que nunca se guarda, por lo que su copia de seguridad interrumpida no puede continuar sola. Ejecútala desde Perfiles e introduce la frase de contraseña cuando se te pida.</string>
+    <string name="shell_warn_interrupted_title">La copia de seguridad de %1$s se interrumpió</string>
+    <string name="shell_warn_interrupted_resumable">Puede continuar donde se detuvo en lugar de empezar de nuevo.</string>
+    <string name="shell_warn_interrupted_stale">Ya no se puede continuar: %1$s. La siguiente ejecución iniciará una copia de seguridad nueva.</string>
+    <string name="shell_skip_too_old">se detuvo hace más de dos días</string>
+    <string name="shell_skip_destination_missing">su destino se eliminó</string>
+    <string name="shell_skip_profile_disabled">el perfil está desactivado</string>
+    <string name="shell_skip_other">su progreso guardado no se puede usar</string>
+    <string name="shell_warn_resume">Continuar</string>
+    <string name="shell_warn_job_interrupted_title">%1$s interrumpido</string>
+    <string name="shell_warn_restore_interrupted_body">Las restauraciones nunca continúan solas. Los elementos restaurados antes de la interrupción se conservan; vuelve a iniciar la restauración desde Restaurar cuando quieras.</string>
+    <string name="shell_warn_job_interrupted_body">Esta tarea no continúa sola. Vuelve a iniciarla cuando quieras.</string>
+    <string name="shell_warn_failed_title">Falló la última copia de seguridad de %1$s</string>
+    <string name="shell_warn_failed_no_details">No se registraron detalles.</string>
+    <string name="shell_warn_retry">Reintentar</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">Cancelando…</string>
+    <string name="shell_job_progress_bytes">%1$s de %2$s</string>
+    <string name="shell_job_progress_items">%1$d de %2$d elementos</string>
+    <string name="shell_job_items_done">%1$d elementos completados</string>
+    <string name="shell_job_rate">%1$s/s</string>
+    <string name="shell_job_eta">Quedan %1$s</string>
+    <string name="shell_job_eta_unknown">Calculando el tiempo restante…</string>
+    <string name="shell_job_elapsed">transcurrido: %1$s</string>
+    <string name="shell_job_current_item">Ahora: %1$s</string>
+    <string name="shell_duration_days">%1$d d %2$d h</string>
+    <string name="shell_duration_hours">%1$d h %2$d min</string>
+    <string name="shell_duration_minutes">%1$d min %2$d s</string>
+    <string name="shell_duration_seconds">%1$d s</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">Monitor de tareas</string>
+    <string name="shell_monitor_title_all">Todas las tareas</string>
+    <string name="shell_monitor_no_jobs">No hay tareas en ejecución. Abajo siguen apareciendo las líneas de registro recientes de la app.</string>
+    <string name="shell_monitor_job_gone">Esta tarea ya no se está ejecutando y no se encontró ningún registro de ella.</string>
+    <string name="shell_monitor_finished">Finalizada %1$s</string>
+    <string name="shell_monitor_cancel">Cancelar</string>
+    <string name="shell_monitor_filter_job">Mostrar el registro de esta tarea</string>
+
+    <string name="shell_record_started">Inicio</string>
+    <string name="shell_record_finished">Fin</string>
+    <string name="shell_record_duration">Duración</string>
+    <string name="shell_record_processed">Datos procesados</string>
+    <string name="shell_record_items">Elementos</string>
+    <string name="shell_record_stored">Almacenado en el destino</string>
+    <string name="shell_record_average_rate">Velocidad media</string>
+
+    <string name="shell_cancel_backup_title">¿Cancelar esta copia de seguridad?</string>
+    <string name="shell_cancel_backup_body">La copia de seguridad de %1$s se detiene ahora y se registra como cancelada. Los elementos ya escritos permanecen en el destino como una copia de seguridad incompleta; la siguiente ejecución iniciará una nueva.</string>
+    <string name="shell_cancel_restore_title">¿Cancelar esta restauración?</string>
+    <string name="shell_cancel_restore_body">La restauración de %1$s se detiene ahora. Los elementos ya restaurados permanecen en el dispositivo tal como están; los restantes no se restauran. Puedes volver a iniciar la restauración más tarde.</string>
+    <string name="shell_cancel_job_title">¿Cancelar esta tarea?</string>
+    <string name="shell_cancel_job_body">%1$s se detiene ahora y se registra como cancelada. No continúa sola.</string>
+    <string name="shell_cancel_confirm">Cancelar tarea</string>
+    <string name="shell_cancel_keep">Seguir ejecutando</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">Registro</string>
+    <string name="shell_terminal_follow">Seguir las nuevas líneas del registro</string>
+    <string name="shell_terminal_jump">Ir a la última línea</string>
+    <string name="shell_terminal_copy">Copiar registro</string>
+    <string name="shell_terminal_copied">Registro copiado</string>
+    <string name="shell_terminal_share">Compartir registro</string>
+    <string name="shell_terminal_share_subject">Registro de DFTB: %1$s</string>
+    <string name="shell_terminal_share_failed">Ninguna app puede recibir el registro.</string>
+    <string name="shell_terminal_empty">Aún no hay líneas de registro.</string>
+    <string name="shell_terminal_filter_job">Esta tarea</string>
+    <string name="shell_terminal_filter_all">Todas las líneas</string>
+    <string name="shell_terminal_level_debug">Depuración</string>
+    <string name="shell_terminal_level_info">Información</string>
+    <string name="shell_terminal_level_warn">Advertencias</string>
+    <string name="shell_log_header_job">Tarea %1$s (%2$s)</string>
+    <string name="shell_log_header_all">Todas las tareas</string>
+
+    <string name="shell_progress_working">En curso</string>
+    <string name="shell_loading">Cargando</string>
+    <string name="shell_monitor_job_selected">Seleccionado</string>
+    <string name="shell_warn_severity_error">Error</string>
+    <string name="shell_warn_severity_caution">Advertencia</string>
+    <string name="shell_warn_severity_info">Información</string>
+</resources>

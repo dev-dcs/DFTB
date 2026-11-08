@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup encryption and checksums (core/pipeline/crypto, core/pipeline/checksum): user-facing
+     explanations of CipherIntegrityException.Reason and CipherKeyUnavailableException.Reason,
+     mapped by labelRes() in CipherErrorLabels.kt. Technical detail stays in exception messages. -->
+<resources>
+
+    <!-- CipherIntegrityException.Reason -->
+    <string name="crypto_reason_wrong_key">パスフレーズまたはキーが正しくありません。バックアップのロックを解除できませんでした。</string>
+    <string name="crypto_reason_key_type_mismatch">このバックアップは別の種類のキー（パスフレーズと保存済みキー）で暗号化されています。</string>
+    <string name="crypto_reason_tampered">暗号化されたバックアップは破損しているか、改変されています。</string>
+    <string name="crypto_reason_truncated">暗号化されたバックアップが不完全で、末尾が欠けています。</string>
+    <string name="crypto_reason_trailing_data">暗号化されたバックアップの末尾に予期しない余分なデータがあります。</string>
+    <string name="crypto_reason_bad_header">このファイルは DFTB の暗号化バックアップではないか、ヘッダーが破損しています。</string>
+    <string name="crypto_reason_insufficient_memory">このデバイスにはバックアップのロック解除に十分なメモリがありません。</string>
+    <string name="crypto_reason_unsupported_version">このバックアップは新しいバージョンのアプリで暗号化されています。</string>
+
+    <!-- CipherKeyUnavailableException.Reason -->
+    <string name="crypto_key_not_found">このバックアップの保存済み暗号化キーがこのデバイスにありません。</string>
+    <string name="crypto_key_invalid_entry">保存済みの暗号化キーが破損しているか、暗号化キーではありません。</string>
+    <string name="crypto_key_vault_error">セキュアキーストアを読み取れませんでした。</string>
+
+    <!-- Checksum verification -->
+    <string name="checksum_verified">チェックサムを検証しました（%1$s）。</string>
+    <string name="checksum_mismatch">チェックサムが一致しません（%1$s）。ファイルがバックアップ時の内容と異なります。</string>
+    <string name="checksum_sidecar_missing">このバックアップのチェックサムファイルが見つかりませんでした。</string>
+    <string name="checksum_sidecar_malformed">チェックサムファイルを読み取れませんでした。</string>
+</resources>

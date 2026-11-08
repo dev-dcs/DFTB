@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="archive_error_unsafe_path">Un élément a un chemin dangereux (absolu, \"..\" ou caractères non valides) et a été refusé.</string>
+    <string name="archive_error_single_item">Les sauvegardes par copie brute et par image disque contiennent exactement un fichier ou un flux.</string>
+    <string name="archive_error_size_mismatch">La taille d\'un fichier a changé pendant sa sauvegarde.</string>
+    <string name="archive_error_codec_unavailable">La compression sélectionnée n\'est pas disponible sur cet appareil. Choisissez une autre méthode de compression.</string>
+    <string name="archive_error_unsupported_format">Ce format de sauvegarde ne peut pas être ouvert comme archive.</string>
+    <string name="archive_error_truncated">Le fichier de sauvegarde est incomplet. Son envoi ou sa copie n\'est peut-être pas terminé.</string>
+    <string name="archive_error_writer_state">L\'archive était déjà terminée ou fermée.</string>
+
+</resources>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">Πίνακας</string>
+    <string name="shell_nav_profiles">Προφίλ</string>
+    <string name="shell_nav_restore">Επαναφορά</string>
+    <string name="shell_nav_destinations">Προορισμοί</string>
+    <string name="shell_nav_settings">Ρυθμίσεις</string>
+    <string name="shell_back">Πίσω</string>
+    <string name="shell_more_options">Περισσότερες επιλογές</string>
+    <string name="shell_state_on">Ενεργό</string>
+    <string name="shell_state_off">Ανενεργό</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">Το %1$s περιμένει να επιβεβαιώσετε την εγκατάστασή του.</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="one">Το %1$s και ακόμη %2$d εφαρμογή περιμένουν να επιβεβαιώσετε την εγκατάστασή τους.</item>
+        <item quantity="other">Το %1$s και ακόμη %2$d εφαρμογές περιμένουν να επιβεβαιώσετε την εγκατάστασή τους.</item>
+    </plurals>
+    <string name="shell_install_review">Έλεγχος</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">Πίνακας</string>
+    <string name="shell_open_job_monitor">Άνοιγμα παρακολούθησης εργασιών</string>
+    <string name="shell_menu_system_info">Πληροφορίες συστήματος</string>
+    <string name="shell_menu_discovery">Ανακάλυψη</string>
+    <string name="shell_menu_schedules">Χρονοπρογραμματισμοί</string>
+    <string name="shell_menu_licenses">Άδειες ανοιχτού κώδικα</string>
+
+    <string name="shell_section_active_jobs">Σε εξέλιξη τώρα</string>
+    <string name="shell_section_profiles">Προφίλ αντιγράφων ασφαλείας</string>
+    <string name="shell_section_upcoming">Επόμενες προγραμματισμένες εκτελέσεις</string>
+    <string name="shell_section_destinations">Κατάσταση προορισμών</string>
+
+    <string name="shell_action_new_profile">Νέο προφίλ</string>
+    <string name="shell_action_create_profile">Δημιουργία προφίλ</string>
+    <string name="shell_action_restore">Επαναφορά</string>
+    <string name="shell_action_add_destination">Προσθήκη προορισμού</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">Δεν υπάρχουν ακόμη προφίλ αντιγράφων ασφαλείας</string>
+    <string name="shell_profiles_empty_body">Ένα προφίλ ορίζει τι θα αντιγραφεί, πού θα αποθηκευτεί και πότε θα εκτελείται. Δημιουργήστε ένα για το πρώτο σας αντίγραφο ασφαλείας.</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="one">Εμφάνιση ακόμη %1$d προφίλ</item>
+        <item quantity="other">Εμφάνιση ακόμη %1$d προφίλ</item>
+    </plurals>
+    <string name="shell_profiles_manage">Διαχείριση προφίλ</string>
+    <string name="shell_profile_destination">Προς %1$s</string>
+    <string name="shell_profile_destination_missing">Ο προορισμός του διαγράφηκε</string>
+    <string name="shell_profile_no_destination">Δεν έχει επιλεγεί προορισμός</string>
+    <string name="shell_profile_disabled">Απενεργοποιημένο</string>
+    <string name="shell_profile_next">Επόμενο: %1$s</string>
+    <string name="shell_back_up_now">Δημιουργία αντιγράφου τώρα</string>
+    <string name="shell_running">Σε εξέλιξη…</string>
+    <string name="shell_needs_passphrase">Απαιτείται φράση πρόσβασης</string>
+    <string name="shell_set_destination">Επιλογή προορισμού</string>
+    <string name="shell_open_profile">Άνοιγμα προφίλ</string>
+    <string name="shell_open_profiles">Μετάβαση στα Προφίλ</string>
+
+    <string name="shell_status_never">Δεν έχει γίνει ποτέ αντίγραφο</string>
+    <string name="shell_status_running">Σε εξέλιξη</string>
+    <string name="shell_status_success">Επιτυχία</string>
+    <string name="shell_status_warnings">Ολοκληρώθηκε με προειδοποιήσεις</string>
+    <string name="shell_status_failed">Απέτυχε</string>
+    <string name="shell_status_cancelled">Ακυρώθηκε</string>
+    <string name="shell_status_interrupted">Διακόπηκε</string>
+
+    <string name="shell_backup_queued">Το αντίγραφο ασφαλείας του %1$s μπήκε στην ουρά. Ξεκινά μόλις ικανοποιηθεί η απαίτησή του για δίκτυο.</string>
+    <string name="shell_resume_queued">Το αντίγραφο ασφαλείας του %1$s θα συνεχιστεί από το σημείο που σταμάτησε.</string>
+    <string name="shell_queue_failed">Δεν ήταν δυνατή η προσθήκη του αντιγράφου ασφαλείας του %1$s στην ουρά. Δοκιμάστε ξανά.</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">Δεν υπάρχουν προγραμματισμένα αντίγραφα ασφαλείας. Προσθέστε χρονοπρογραμματισμό σε ένα προφίλ για αυτόματη εκτέλεση.</string>
+    <string name="shell_upcoming_at">%1$s (%2$s)</string>
+    <string name="shell_upcoming_expected">Αναμένεται %1$s · δεν έχει μπει ακόμη στην ουρά</string>
+    <string name="shell_upcoming_retry">Επανάληψη %1$s (προσπάθεια %2$d)</string>
+    <string name="shell_upcoming_queued">Στην ουρά, αναμένει τις προϋποθέσεις του</string>
+    <string name="shell_upcoming_see_schedules">Προβολή χρονοπρογραμματισμών</string>
+    <string name="shell_constraints">Απαιτεί: %1$s</string>
+    <string name="shell_constraint_unmetered">δίκτυο χωρίς χρέωση δεδομένων</string>
+    <string name="shell_constraint_network">δίκτυο</string>
+    <string name="shell_constraint_charging">φόρτιση</string>
+    <string name="shell_constraint_idle">αδράνεια συσκευής</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">Δεν υπάρχουν ακόμη προορισμοί. Προσθέστε έναν για να έχουν τα αντίγραφά σας πού να αποθηκεύονται.</string>
+    <string name="shell_destinations_manage">Διαχείριση προορισμών</string>
+    <string name="shell_destination_verified">Ελέγχθηκε %1$s</string>
+    <string name="shell_destination_never_verified">Δεν έχει ελεγχθεί ποτέ. Εκτελέστε δοκιμή σύνδεσης για να δείτε τον ελεύθερο χώρο του.</string>
+    <string name="shell_destination_stale">Τελευταίος έλεγχος %1$s. Δοκιμάστε ξανά για τον τρέχοντα ελεύθερο χώρο.</string>
+    <string name="shell_destination_space">%1$s ελεύθερα από %2$s</string>
+    <string name="shell_destination_space_free">%1$s ελεύθερα</string>
+    <string name="shell_destination_space_unknown">Άγνωστη χωρητικότητα</string>
+    <string name="shell_destination_low_space">Χαμηλός ελεύθερος χώρος</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">Η πρόσβαση %1$s δεν είναι διαθέσιμη</string>
+    <string name="shell_warn_elevation_root_body">Το root δεν έχει παραχωρηθεί αυτή τη στιγμή στο DFTB. Δεδομένα εφαρμογών, κατατμήσεις και άλλα προνομιούχα στοιχεία δεν μπορούν να αντιγραφούν ή να επαναφερθούν μέχρι να παραχωρηθεί.</string>
+    <string name="shell_warn_elevation_shizuku_body">Η υπηρεσία Shizuku δεν εκτελείται ή το DFTB έχασε την άδειά του. Ξεκινήστε το Shizuku (σταματά σε κάθε επανεκκίνηση) για να αντιγράψετε δεδομένα εφαρμογών.</string>
+    <string name="shell_warn_check_again">Έλεγχος ξανά</string>
+    <string name="shell_warn_open_settings">Αλλαγή λειτουργίας</string>
+    <string name="shell_warn_notifications_title">Οι ειδοποιήσεις είναι απενεργοποιημένες</string>
+    <string name="shell_warn_notifications_body">Δεν θα βλέπετε την πρόοδο των αντιγράφων ασφαλείας, τις αποτυχίες ή τα αιτήματα για τη φράση πρόσβασής σας όσο το DFTB είναι κλειστό.</string>
+    <string name="shell_warn_allow">Να επιτρέπεται</string>
+    <string name="shell_warn_passphrase_title">Το %1$s περιμένει τη φράση πρόσβασής του</string>
+    <string name="shell_warn_passphrase_body">Αυτό το προφίλ κρυπτογραφεί με φράση πρόσβασης που δεν αποθηκεύεται ποτέ, επομένως το διακοπέν αντίγραφο ασφαλείας δεν μπορεί να συνεχιστεί αυτόματα. Δημιουργήστε το αντίγραφο από τα Προφίλ και εισαγάγετε τη φράση πρόσβασης όταν σας ζητηθεί.</string>
+    <string name="shell_warn_interrupted_title">Το αντίγραφο ασφαλείας του %1$s διακόπηκε</string>
+    <string name="shell_warn_interrupted_resumable">Μπορεί να συνεχιστεί από το σημείο που σταμάτησε αντί να ξεκινήσει από την αρχή.</string>
+    <string name="shell_warn_interrupted_stale">Δεν μπορεί πλέον να συνεχιστεί: %1$s. Η επόμενη εκτέλεση ξεκινά νέο αντίγραφο ασφαλείας.</string>
+    <string name="shell_skip_too_old">σταμάτησε πριν από περισσότερες από δύο ημέρες</string>
+    <string name="shell_skip_destination_missing">ο προορισμός του αφαιρέθηκε</string>
+    <string name="shell_skip_profile_disabled">το προφίλ είναι απενεργοποιημένο</string>
+    <string name="shell_skip_other">η αποθηκευμένη πρόοδός του δεν μπορεί να χρησιμοποιηθεί</string>
+    <string name="shell_warn_resume">Συνέχιση</string>
+    <string name="shell_warn_job_interrupted_title">Το %1$s διακόπηκε</string>
+    <string name="shell_warn_restore_interrupted_body">Οι επαναφορές δεν συνεχίζονται ποτέ αυτόματα. Τα στοιχεία που επαναφέρθηκαν πριν από τη διακοπή παραμένουν στη θέση τους· ξεκινήστε ξανά την επαναφορά από την Επαναφορά όταν είστε έτοιμοι.</string>
+    <string name="shell_warn_job_interrupted_body">Αυτή η εργασία δεν συνεχίζεται αυτόματα. Ξεκινήστε την ξανά όταν είστε έτοιμοι.</string>
+    <string name="shell_warn_failed_title">Το τελευταίο αντίγραφο ασφαλείας του %1$s απέτυχε</string>
+    <string name="shell_warn_failed_no_details">Δεν καταγράφηκαν λεπτομέρειες.</string>
+    <string name="shell_warn_retry">Επανάληψη</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">Ακύρωση…</string>
+    <string name="shell_job_progress_bytes">%1$s από %2$s</string>
+    <string name="shell_job_progress_items">%1$d από %2$d στοιχεία</string>
+    <string name="shell_job_items_done">%1$d στοιχεία ολοκληρώθηκαν</string>
+    <string name="shell_job_rate">%1$s/s</string>
+    <string name="shell_job_eta">απομένουν %1$s</string>
+    <string name="shell_job_eta_unknown">Εκτίμηση υπολειπόμενου χρόνου…</string>
+    <string name="shell_job_elapsed">πέρασαν %1$s</string>
+    <string name="shell_job_current_item">Τώρα: %1$s</string>
+    <string name="shell_duration_days">%1$d ημ. %2$d ώ.</string>
+    <string name="shell_duration_hours">%1$d ώ. %2$d λ.</string>
+    <string name="shell_duration_minutes">%1$d λ. %2$d δ.</string>
+    <string name="shell_duration_seconds">%1$d δ.</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">Παρακολούθηση εργασιών</string>
+    <string name="shell_monitor_title_all">Όλες οι εργασίες</string>
+    <string name="shell_monitor_no_jobs">Καμία εργασία δεν εκτελείται. Οι πρόσφατες γραμμές καταγραφής της εφαρμογής εμφανίζονται παρακάτω.</string>
+    <string name="shell_monitor_job_gone">Αυτή η εργασία δεν εκτελείται πλέον και δεν βρέθηκε καταγραφή της.</string>
+    <string name="shell_monitor_finished">Ολοκληρώθηκε %1$s</string>
+    <string name="shell_monitor_cancel">Ακύρωση</string>
+    <string name="shell_monitor_filter_job">Εμφάνιση της καταγραφής αυτής της εργασίας</string>
+
+    <string name="shell_record_started">Έναρξη</string>
+    <string name="shell_record_finished">Ολοκλήρωση</string>
+    <string name="shell_record_duration">Διάρκεια</string>
+    <string name="shell_record_processed">Δεδομένα που επεξεργάστηκαν</string>
+    <string name="shell_record_items">Στοιχεία</string>
+    <string name="shell_record_stored">Αποθηκεύτηκαν στον προορισμό</string>
+    <string name="shell_record_average_rate">Μέση ταχύτητα</string>
+
+    <string name="shell_cancel_backup_title">Ακύρωση αυτού του αντιγράφου ασφαλείας;</string>
+    <string name="shell_cancel_backup_body">Το αντίγραφο ασφαλείας του %1$s σταματά τώρα και καταγράφεται ως ακυρωμένο. Τα στοιχεία που έχουν ήδη γραφτεί παραμένουν στον προορισμό ως ημιτελές αντίγραφο· η επόμενη εκτέλεση ξεκινά νέο.</string>
+    <string name="shell_cancel_restore_title">Ακύρωση αυτής της επαναφοράς;</string>
+    <string name="shell_cancel_restore_body">Η επαναφορά του %1$s σταματά τώρα. Τα στοιχεία που έχουν ήδη επαναφερθεί παραμένουν στη συσκευή ως έχουν· τα υπόλοιπα δεν επαναφέρονται. Μπορείτε να ξεκινήσετε ξανά την επαναφορά αργότερα.</string>
+    <string name="shell_cancel_job_title">Ακύρωση αυτής της εργασίας;</string>
+    <string name="shell_cancel_job_body">Το %1$s σταματά τώρα και καταγράφεται ως ακυρωμένο. Δεν συνεχίζεται αυτόματα.</string>
+    <string name="shell_cancel_confirm">Ακύρωση εργασίας</string>
+    <string name="shell_cancel_keep">Συνέχιση εκτέλεσης</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">Καταγραφή</string>
+    <string name="shell_terminal_follow">Παρακολούθηση νέων γραμμών καταγραφής</string>
+    <string name="shell_terminal_jump">Μετάβαση στην τελευταία γραμμή</string>
+    <string name="shell_terminal_copy">Αντιγραφή καταγραφής</string>
+    <string name="shell_terminal_copied">Η καταγραφή αντιγράφηκε</string>
+    <string name="shell_terminal_share">Κοινή χρήση καταγραφής</string>
+    <string name="shell_terminal_share_subject">Καταγραφή DFTB: %1$s</string>
+    <string name="shell_terminal_share_failed">Καμία εφαρμογή δεν μπορεί να λάβει την καταγραφή.</string>
+    <string name="shell_terminal_empty">Δεν υπάρχουν ακόμη γραμμές καταγραφής.</string>
+    <string name="shell_terminal_filter_job">Αυτή η εργασία</string>
+    <string name="shell_terminal_filter_all">Όλες οι γραμμές</string>
+    <string name="shell_terminal_level_debug">Αποσφαλμάτωση</string>
+    <string name="shell_terminal_level_info">Πληροφορίες</string>
+    <string name="shell_terminal_level_warn">Προειδοποιήσεις</string>
+    <string name="shell_log_header_job">Εργασία %1$s (%2$s)</string>
+    <string name="shell_log_header_all">Όλες οι εργασίες</string>
+
+    <string name="shell_progress_working">Σε εξέλιξη</string>
+    <string name="shell_loading">Φόρτωση</string>
+    <string name="shell_monitor_job_selected">Επιλεγμένο</string>
+    <string name="shell_warn_severity_error">Σφάλμα</string>
+    <string name="shell_warn_severity_caution">Προειδοποίηση</string>
+    <string name="shell_warn_severity_info">Πληροφορία</string>
+</resources>

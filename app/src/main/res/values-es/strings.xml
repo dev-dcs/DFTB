@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="system_info_title">Resumen del sistema</string>
+
+    <string name="language_section_title">Idioma</string>
+    <string name="language_section_description">Los cambios se aplican al instante, sin reiniciar la aplicación.</string>
+
+    <string name="appearance_section_title">Apariencia</string>
+    <string name="theme_mode_label">Tema</string>
+    <string name="theme_mode_system">Sistema</string>
+    <string name="theme_mode_light">Claro</string>
+    <string name="theme_mode_dark">Oscuro</string>
+    <string name="dynamic_color_label">Colores dinámicos (Material You)</string>
+    <string name="dynamic_color_unsupported">Requiere Android 12 o superior.</string>
+
+    <string name="mode_section_title">Modo de funcionamiento</string>
+    <string name="mode_not_selected">Aún no configurado. Completa el asistente de configuración para elegir un modo.</string>
+    <string name="mode_standard">Estándar (sin root)</string>
+    <string name="mode_standard_desc">Storage Access Framework, MediaStore y motores Kotlin/JNI puros. Sin acceso elevado.</string>
+    <string name="mode_shizuku">Shizuku</string>
+    <string name="mode_shizuku_desc">Acceso de nivel ADB autorizado por el usuario mediante el servicio Shizuku para datos de apps y carpetas Android/data.</string>
+    <string name="mode_root">Root</string>
+    <string name="mode_root_desc">Shell de superusuario mediante libsu con tar, zstd, busybox y rclone integrados. Imágenes de particiones disponibles.</string>
+    <string name="mode_module">Root avanzado (módulo complementario)</string>
+    <string name="mode_module_desc">Root más un módulo Magisk/KernelSU que aporta herramientas del sistema y un servicio de arranque para copias programadas y reanudadas.</string>
+
+    <string name="device_section_title">Dispositivo</string>
+    <string name="device_model">Modelo</string>
+    <string name="android_version">Versión de Android</string>
+    <string name="api_level">Nivel de API</string>
+    <string name="security_patch">Parche de seguridad</string>
+    <string name="supported_abis">ABI compatibles</string>
+    <string name="kernel_version">Kernel</string>
+
+    <string name="storage_section_title">Almacenamiento</string>
+    <string name="storage_internal">Almacenamiento interno (datos de la app)</string>
+    <string name="storage_external">Almacenamiento compartido</string>
+    <string name="storage_free_of_total">%1$s libres de %2$s</string>
+    <string name="storage_unavailable">No disponible</string>
+
+    <string name="native_section_title">Biblioteca nativa</string>
+    <string name="native_loaded">libdftb_native cargada</string>
+    <string name="native_not_loaded">No se pudo cargar libdftb_native</string>
+    <string name="native_version">Versión</string>
+    <string name="process_uid">UID del proceso</string>
+
+    <string name="app_section_title">Acerca de DFTB</string>
+    <string name="app_version">Versión</string>
+    <string name="app_package">Paquete</string>
+    <string name="app_build_type">Tipo de compilación</string>
+
+    <string name="usb_device_attached">Dispositivo USB conectado: %1$s</string>
+
+    <string name="notification_channel_jobs_name">Tareas en ejecución</string>
+    <string name="notification_channel_jobs_desc">Progreso en vivo de copias, restauraciones y verificaciones.</string>
+    <string name="notification_channel_alerts_name">Resultados y alertas</string>
+    <string name="notification_channel_alerts_desc">Tareas completadas o fallidas, espacio insuficiente, discrepancias de integridad.</string>
+    <string name="notification_channel_scheduler_name">Copias programadas</string>
+    <string name="notification_channel_scheduler_desc">Recordatorios y esperas de Wi‑Fi, carga o inactividad.</string>
+
+    <string name="notification_jobs_summary_title">DFTB está trabajando</string>
+    <string name="notification_idle_text">Preparando…</string>
+    <plurals name="notification_active_jobs">
+        <item quantity="one">%1$d tarea en ejecución</item>
+        <item quantity="many">%1$d tareas en ejecución</item>
+        <item quantity="other">%1$d tareas en ejecución</item>
+    </plurals>
+    <string name="notification_action_cancel">Cancelar</string>
+    <string name="notification_progress_bytes">%1$s de %2$s</string>
+    <string name="notification_progress_items">%1$d de %2$d elementos</string>
+
+    <string name="job_kind_backup">Copia de seguridad</string>
+    <string name="job_kind_restore">Restauración</string>
+    <string name="job_kind_verify">Verificación</string>
+    <string name="job_kind_sync">Sincronización</string>
+    <string name="job_phase_queued">En cola</string>
+    <string name="job_phase_preflight">Comprobaciones previas</string>
+    <string name="job_phase_running">En ejecución</string>
+    <string name="job_phase_finalizing">Finalizando</string>
+    <string name="job_phase_completed">Completada</string>
+    <string name="job_phase_failed">Fallida</string>
+    <string name="job_phase_cancelled">Cancelada</string>
+</resources>

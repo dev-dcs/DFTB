@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_reason_auth">Falló el inicio de sesión. Comprueba el usuario, la contraseña o la clave.</string>
+    <string name="storage_reason_host_key">La clave de identidad del servidor cambió o no es de confianza.</string>
+    <string name="storage_reason_network">No se pudo acceder al destino a través de la red.</string>
+    <string name="storage_reason_timeout">El destino tardó demasiado en responder.</string>
+    <string name="storage_reason_not_found">No se encontró la carpeta o unidad de destino.</string>
+    <string name="storage_reason_permission">La app no tiene permiso para escribir en este destino.</string>
+    <string name="storage_reason_no_space">El destino se ha quedado sin espacio.</string>
+    <string name="storage_reason_unsupported">Este destino no admite la operación solicitada.</string>
+    <string name="storage_reason_misconfigured">La configuración del destino está incompleta o no es válida.</string>
+    <string name="storage_reason_tool_missing">Falta una herramienta auxiliar necesaria.</string>
+    <string name="storage_reason_protocol">El destino devolvió un error inesperado. Inténtalo de nuevo.</string>
+    <string name="storage_preflight_sufficient">Hay espacio libre suficiente (%1$s disponibles).</string>
+    <string name="storage_preflight_insufficient">No hay suficiente espacio libre. Libera %1$s e inténtalo de nuevo.</string>
+    <string name="storage_preflight_unknown">No se pudo comprobar el espacio libre de este destino.</string>
+    <string name="storage_test_ok">Conectado en %1$d ms.</string>
+    <string name="storage_test_failed">Falló la conexión.</string>
+
+</resources>

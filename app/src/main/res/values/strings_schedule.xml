@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for scheduled backups, the background backup worker, checkpoint resume
+  and retention. Kept in their own file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Foreground notification of the backup worker -->
+    <string name="schedule_fg_title">Backing up %1$s</string>
+    <string name="schedule_fg_text_scheduled">Scheduled backup in progress</string>
+    <string name="schedule_fg_text_manual">Backup in progress</string>
+    <string name="schedule_fg_text_resume">Continuing an interrupted backup</string>
+
+    <!-- Unattended runs that need the user -->
+    <string name="schedule_passphrase_title">Passphrase needed for “%1$s”</string>
+    <string name="schedule_passphrase_text">This backup is encrypted with a passphrase DFTB does not store, so it cannot run unattended. Open DFTB to enter it and continue.</string>
+    <string name="schedule_failed_title">Scheduled backup of “%1$s” failed</string>
+    <string name="schedule_failed_text_generic">The backup could not run. Open DFTB for details.</string>
+
+    <!-- Interrupted jobs found after a reboot -->
+    <string name="schedule_restore_interrupted_title">Restore interrupted</string>
+    <string name="schedule_restore_interrupted_text">A restore stopped before it finished. Restores never restart on their own; open DFTB to run it again.</string>
+    <string name="schedule_job_interrupted_title">%1$s interrupted</string>
+    <string name="schedule_job_interrupted_text">This job stopped before it finished. Open DFTB to run it again.</string>
+</resources>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">取消</string>
+    <string name="profiles_ok">确定</string>
+    <string name="profiles_done">完成</string>
+    <string name="profiles_back">返回</string>
+    <string name="profiles_yes">是</string>
+    <string name="profiles_no">否</string>
+    <string name="profiles_unknown_error">未知错误</string>
+    <string name="profiles_cd_error">错误</string>
+    <string name="profiles_cd_warning">警告</string>
+    <string name="profiles_cd_unavailable">当前模式下不可用</string>
+    <string name="profiles_cd_step_done">已完成</string>
+    <string name="profiles_cd_step_errors">存在需要修复的问题</string>
+    <string name="profiles_cd_step_todo">尚未完成</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">备份配置</string>
+    <string name="profiles_open_schedules">计划与保留</string>
+    <string name="profiles_new">新建配置</string>
+    <string name="profiles_empty_title">还没有备份配置</string>
+    <string name="profiles_empty_body">配置用于指定备份什么、备份到哪里以及何时备份。点按“新建配置”即可创建你的第一个配置。</string>
+    <string name="profiles_more_actions">%1$s 的更多操作</string>
+    <string name="profiles_action_edit">编辑</string>
+    <string name="profiles_action_duplicate">复制</string>
+    <string name="profiles_action_delete">删除</string>
+    <string name="profiles_action_run_now">立即备份</string>
+    <string name="profiles_action_view_progress">查看进度</string>
+    <string name="profiles_badge_encrypted">已加密</string>
+    <string name="profiles_badge_twrp">兼容 TWRP</string>
+    <string name="profiles_badge_paused">已暂停</string>
+    <string name="profiles_badge_needs_passphrase">需要口令</string>
+    <string name="profiles_hint_scheduled_passphrase">此配置的计划运行会等待你输入其口令。</string>
+    <string name="profiles_resume_available">被中断的备份可以从中断处继续。</string>
+    <string name="profiles_resume_needs_passphrase">输入口令后，被中断的备份可以从中断处继续。</string>
+    <string name="profiles_resume_action">继续</string>
+    <string name="profiles_no_destination">未选择目标</string>
+    <string name="profiles_next_run">下次运行：%1$s</string>
+    <string name="profiles_last_run">上次备份：%1$s，%2$s</string>
+    <string name="profiles_last_run_never">从未备份</string>
+    <string name="profiles_schedule_on">计划已开启</string>
+    <string name="profiles_schedule_off">计划已暂停</string>
+    <string name="profiles_add_schedule">设置计划</string>
+    <string name="profiles_copy_name">%1$s 的副本</string>
+    <string name="profiles_targets_none">未选择任何内容</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="other">%d 个分区</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="other">%d 个应用</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="other">%d 个文件夹</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">“%1$s”的备份已加入队列</string>
+    <string name="profiles_event_resume_queued">正在继续“%1$s”被中断的备份</string>
+    <string name="profiles_event_started">“%1$s”的备份已开始</string>
+    <string name="profiles_event_already_running">“%1$s”正在备份</string>
+    <string name="profiles_event_duplicated">已创建“%1$s”。复制的计划初始为暂停状态。</string>
+    <string name="profiles_event_deleted">已删除“%1$s”</string>
+    <string name="profiles_event_schedule_on">“%1$s”的计划已恢复</string>
+    <string name="profiles_event_schedule_off">“%1$s”的计划已暂停</string>
+    <string name="profiles_event_finished">“%1$s”的备份：%2$s</string>
+    <string name="profiles_event_finished_detail">%1$s。%2$s</string>
+    <string name="profiles_event_failed">操作未成功。详情请查看日志。</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">删除“%1$s”？</string>
+    <string name="profiles_delete_consequence">配置“%1$s”及其计划将被移除，其被中断的备份也将无法再继续。此操作无法撤销。</string>
+    <string name="profiles_delete_backups_kept">已存储在 %1$s 上的备份及其历史记录会保留，你仍可恢复它们。DFTB 目前无法替你删除配置已存储的备份；如果不再需要，请自行从目标中移除。</string>
+    <string name="profiles_delete_backups_kept_generic">已存储的备份及其历史记录会保留，你仍可恢复它们。DFTB 目前无法替你删除配置已存储的备份；如果不再需要，请自行从目标中移除。</string>
+    <string name="profiles_delete_key_kept">加密密钥会保留在此设备的密钥库中，以便这些备份仍可读取。</string>
+    <string name="profiles_delete_confirm">删除配置</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">正在运行</string>
+    <string name="profiles_status_interrupted">已中断</string>
+    <string name="profiles_status_completed">已完成</string>
+    <string name="profiles_status_warnings">已完成，但有警告</string>
+    <string name="profiles_status_failed">失败</string>
+    <string name="profiles_status_cancelled">已取消</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">“%1$s”的口令</string>
+    <string name="profiles_passphrase_body">此配置使用 DFTB 从不保存的口令加密。请每次都使用相同的口令：没有口令，这些备份将无法解密，DFTB 也无能为力。</string>
+    <string name="profiles_passphrase_field">口令</string>
+    <string name="profiles_passphrase_confirm">重复口令</string>
+    <string name="profiles_passphrase_mismatch">两次输入的口令不一致</string>
+    <string name="profiles_passphrase_start">开始备份</string>
+    <string name="profiles_passphrase_body_resume">请输入此被中断的备份开始时使用的口令。DFTB 从不保存口令；使用不同的口令会导致备份中的各部分无法一同解密。</string>
+    <string name="profiles_passphrase_resume">继续备份</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="other">至少使用 %d 个字符</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">新建备份配置</string>
+    <string name="profiles_wizard_edit_title">编辑备份配置</string>
+    <string name="profiles_wizard_close">关闭</string>
+    <string name="profiles_wizard_back">返回</string>
+    <string name="profiles_wizard_next">下一步</string>
+    <string name="profiles_wizard_save">保存</string>
+    <string name="profiles_wizard_save_run">保存并立即备份</string>
+    <string name="profiles_wizard_not_found">此配置已不存在。</string>
+    <string name="profiles_wizard_leave">返回</string>
+    <string name="profiles_wizard_fix_errors">请先修复高亮显示的问题</string>
+    <string name="profiles_wizard_key_failed">无法在设备密钥库中创建加密密钥。未保存任何内容。</string>
+    <string name="profiles_wizard_save_failed">无法保存该配置。</string>
+    <string name="profiles_wizard_already_running">配置已保存；它正在备份。</string>
+    <string name="profiles_wizard_discard_title">放弃更改？</string>
+    <string name="profiles_wizard_discard_new">此新配置尚未保存；你输入的所有内容都将丢失。</string>
+    <string name="profiles_wizard_discard_edit">你的更改尚未保存，将会丢失。已保存的配置保持原样。</string>
+    <string name="profiles_wizard_discard_confirm">放弃</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">名称</string>
+    <string name="profiles_step_name_sub">为此配置命名</string>
+    <string name="profiles_step_targets">备份什么</string>
+    <string name="profiles_step_targets_sub">要备份的分区、应用和文件</string>
+    <string name="profiles_step_destination">备份到哪</string>
+    <string name="profiles_step_destination_sub">目标及其可用空间</string>
+    <string name="profiles_step_options">如何备份</string>
+    <string name="profiles_step_options_sub">格式、压缩、加密、完整性</string>
+    <string name="profiles_step_schedule">何时备份</string>
+    <string name="profiles_step_schedule_sub">计划、条件和保留</string>
+    <string name="profiles_step_review">检查</string>
+    <string name="profiles_step_review_sub">检查所有内容并保存</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">第 %1$d 步，共 %2$d 步：%3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">配置名称</string>
+    <string name="profiles_field_name_placeholder">例如：每晚照片</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d 个字符</string>
+    <string name="profiles_field_description">描述（可选）</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">请为配置命名。</string>
+    <string name="profiles_problem_name_too_long">名称过长。</string>
+    <string name="profiles_problem_name_duplicate">已有其他配置使用此名称。</string>
+    <string name="profiles_problem_description_too_long">描述过长。</string>
+    <string name="profiles_problem_no_targets">请至少选择一个分区、应用、文件夹或文件类别。</string>
+    <string name="profiles_problem_app_no_components">有应用未选择任何组件；请至少选择一个，或移除该应用。</string>
+    <string name="profiles_problem_path_invalid">文件夹必须是绝对路径（以 / 开头），或通过系统选择器选取的文件夹。</string>
+    <string name="profiles_problem_path_duplicate">同一文件夹被列出了两次。</string>
+    <string name="profiles_problem_filter_invalid">某个文件夹的过滤器有错误；请打开并修复。</string>
+    <string name="profiles_problem_components_unavailable">部分所选应用组件在当前模式下无法捕获；在模式允许之前将被跳过。</string>
+    <string name="profiles_problem_partitions_need_root">分区只能在 Root 模式下读取；在当前模式下将被跳过。</string>
+    <string name="profiles_problem_no_destination">请选择备份的存放位置。</string>
+    <string name="profiles_problem_destination_gone">所选目标已不存在；请另选一个。</string>
+    <string name="profiles_problem_encryption_unsupported">此配置使用了 DFTB 无法运行的加密方式；请选择一个加密选项。</string>
+    <string name="profiles_problem_transfer_unsupported">此目标不支持远程压缩；请选择其他传输模式。</string>
+    <string name="profiles_problem_vault_key_missing">密钥库中缺少此配置的设备密钥。保存时会创建新密钥；使用旧密钥创建的备份将无法解密。</string>
+    <string name="profiles_problem_twrp_not_local">TWRP 和 OrangeFox 只能读取设备存储和 USB 驱动器；从 Recovery 恢复前，请先将这些备份复制到那里。</string>
+    <string name="profiles_problem_twrp_no_partitions">TWRP 兼容只会改变分区的存储方式，而此配置不含分区。</string>
+    <string name="profiles_problem_interval_invalid">请将间隔输入为整数。</string>
+    <string name="profiles_problem_schedule_time">时间无效。</string>
+    <string name="profiles_problem_schedule_no_days">请至少选择一天。</string>
+    <string name="profiles_problem_schedule_invalid_day">计划中包含不存在的日期。</string>
+    <string name="profiles_problem_schedule_interval_short">间隔必须至少为 15 分钟，这是 Android 对重复任务的最小限制。</string>
+    <string name="profiles_problem_schedule_battery">电量必须在 0 到 100 之间。</string>
+    <string name="profiles_problem_keep_last">请输入要保留的备份数量（1 或更大）。</string>
+    <string name="profiles_problem_max_age">请输入最长保留天数（整数，1 或更大）。</string>
+    <string name="profiles_problem_passphrase_scheduled">计划运行无法输入口令：每次运行都会发出通知并等待，直到你输入口令。</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">不加密</string>
+    <string name="profiles_key_none_desc">以普通文件存储：任何能打开目标的人都可以读取。</string>
+    <string name="profiles_key_passphrase">口令（AES-256-GCM）</string>
+    <string name="profiles_key_passphrase_desc">每次备份和恢复时由你输入。从不保存，可在任何设备上恢复。</string>
+    <string name="profiles_key_vault">设备密钥（AES-256-GCM）</string>
+    <string name="profiles_key_vault_desc">保存在此设备安全密钥库中的随机密钥。完全自动，但与此设备绑定。</string>
+    <string name="profiles_key_stored">已保存的口令（AES-256-GCM）</string>
+    <string name="profiles_key_stored_desc">使用密钥库中已为此配置保存的口令。</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">TWRP 兼容模式下不可用：Recovery 只能读取未加密的普通文件。</string>
+    <string name="profiles_block_mask">需要加密：否则清单会显示真实名称。</string>
+    <string name="profiles_block_remote_needs_ssh">仅适用于 SSH 或 SFTP 目标。</string>
+    <string name="profiles_block_remote_unavailable">暂不可用：此 SSH 连接不提供远程命令通道。</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">每天</string>
+    <string name="profiles_freq_weekly">每周</string>
+    <string name="profiles_freq_interval">间隔</string>
+    <string name="profiles_unit_minutes">分钟</string>
+    <string name="profiles_unit_hours">小时</string>
+    <string name="profiles_slot_title">A/B 槽位</string>
+    <string name="profiles_slot_active">活动</string>
+    <string name="profiles_slot_inactive">非活动</string>
+    <string name="profiles_slot_both">两者</string>
+    <string name="profiles_slot_none">无槽位</string>
+    <string name="profiles_slot_active_desc">为设备启动所用的槽位制作镜像；自动跟随 OTA 更新。</string>
+    <string name="profiles_slot_inactive_desc">为另一个槽位制作镜像，例如更新后的旧系统。</string>
+    <string name="profiles_slot_both_desc">为两个槽位都制作镜像：体积翻倍，保留完整的后备。</string>
+    <string name="profiles_slot_none_desc">适用于没有 A/B 副本的分区。</string>
+    <string name="profiles_structure_preserve_desc">文件保持其文件夹结构。</string>
+    <string name="profiles_structure_categorized_desc">文件按类型（图片、视频、文档…）分类到不同文件夹。</string>
+    <string name="profiles_transfer_staging_desc">先在此设备上生成每个文件，再上传：可续传，需要本地可用空间。</string>
+    <string name="profiles_transfer_direct_desc">不经临时文件，直接流式传输到目标；上传中断时该文件会重新开始。</string>
+    <string name="profiles_transfer_remote_desc">通过 SSH 发送原始数据，并在服务器上压缩。</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s（%2$d）</string>
+    <string name="profiles_targets_tab_partitions">分区</string>
+    <string name="profiles_targets_tab_apps">应用</string>
+    <string name="profiles_targets_tab_files">文件</string>
+    <string name="profiles_components_title">应用组件</string>
+    <string name="profiles_components_subtitle">新选择的应用将包含：%1$s</string>
+    <string name="profiles_components_none">无</string>
+    <string name="profiles_components_apply_all">应用到所有已选项</string>
+    <string name="profiles_components_per_app">按应用（%1$d）</string>
+    <string name="profiles_components_per_app_title">每个应用的组件</string>
+    <string name="profiles_components_per_app_empty">尚未选择任何应用。</string>
+    <string name="profiles_component_reason">%1$s：%2$s</string>
+    <string name="profiles_remove_app">移除 %1$s</string>
+    <string name="profiles_files_add_title">文件夹</string>
+    <string name="profiles_files_storage_root">内部存储</string>
+    <string name="profiles_files_pick_folder">选择文件夹…</string>
+    <string name="profiles_files_no_picker">此设备上没有可用的文件夹选择器。</string>
+    <string name="profiles_files_path_field">文件夹路径</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">请输入尚未列出的绝对路径。</string>
+    <string name="profiles_files_add">添加</string>
+    <string name="profiles_files_none">未选择文件夹。</string>
+    <string name="profiles_files_saf_folder">通过系统文件夹选择器选取</string>
+    <string name="profiles_files_remove">移除 %1$s</string>
+    <string name="profiles_files_recursive">包含子文件夹</string>
+    <string name="profiles_files_edit_filter">过滤器</string>
+    <string name="profiles_files_readable">可通过 %1$s 读取</string>
+    <string name="profiles_files_tier_hint">需要 %1$s</string>
+    <string name="profiles_files_categories_title">文件类别</string>
+    <string name="profiles_files_categories_sub">来自标准文件夹（DCIM、Pictures、Music、Documents…）的匹配文件</string>
+    <string name="profiles_files_grant_failed">Android 未保留对该文件夹的访问权限；计划备份可能无法读取它。</string>
+    <string name="profiles_files_already_added">该文件夹已在列表中。</string>
+    <string name="profiles_filter_none">无过滤：所有文件</string>
+    <string name="profiles_filter_only">仅 %1$s</string>
+    <string name="profiles_filter_except">排除 %1$s</string>
+    <string name="profiles_filter_min">至少 %1$s</string>
+    <string name="profiles_filter_max">至多 %1$s</string>
+    <string name="profiles_filter_after">修改于 %1$s 之后</string>
+    <string name="profiles_filter_before">修改于 %1$s 之前</string>
+    <string name="profiles_filter_regex">路径模式</string>
+    <string name="profiles_filter_title">%1$s 的过滤器</string>
+    <string name="profiles_filter_save">保存过滤器</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">还没有目标</string>
+    <string name="profiles_dest_empty_body">添加一个目标：此设备上的文件夹、USB 驱动器、网络共享或云端远程。</string>
+    <string name="profiles_dest_add">添加目标</string>
+    <string name="profiles_dest_space">共 %2$s，可用 %1$s（上次检查）</string>
+    <string name="profiles_dest_space_free">可用 %1$s（上次检查）</string>
+    <string name="profiles_dest_space_unknown">尚未检查可用空间</string>
+    <string name="profiles_preflight_title">大小与空间</string>
+    <string name="profiles_preflight_subtitle">此备份所需的空间，以及目标是否有足够空间</string>
+    <string name="profiles_preflight_need_targets">请先选择要备份的内容。</string>
+    <string name="profiles_preflight_running">正在测量所选来源…</string>
+    <string name="profiles_preflight_again">重新估算</string>
+    <string name="profiles_preflight_failed">估算失败：%1$s</string>
+    <string name="profiles_preflight_stale">自上次估算以来，所选内容已更改。</string>
+    <string name="profiles_preflight_run">估算大小</string>
+    <string name="profiles_preflight_size">估算大小</string>
+    <string name="profiles_preflight_size_approx">约 %1$s</string>
+    <string name="profiles_preflight_items">项目</string>
+    <string name="profiles_preflight_artifacts">写入的文件</string>
+    <string name="profiles_preflight_unmeasured">无法测量：%1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s，%2$s</string>
+    <string name="profiles_preflight_issue">%1$s：%2$s</string>
+    <string name="profiles_preflight_no_destination">请选择目标以检查其可用空间。</string>
+    <string name="profiles_preflight_checking_space">正在检查 %1$s 的可用空间…</string>
+    <string name="profiles_preflight_check_space">检查可用空间</string>
+    <string name="profiles_preflight_destination">目标：%1$s</string>
+    <string name="profiles_preflight_staging">本地暂存（需要 %1$s）</string>
+    <string name="profiles_preflight_enough">空间充足：可用 %1$s</string>
+    <string name="profiles_preflight_enough_unknown_free">空间充足</string>
+    <string name="profiles_preflight_short">空间不足：还需要 %1$s（已包含安全余量）</string>
+    <string name="profiles_preflight_unknown">无法确定可用空间；备份仍会尝试进行。</string>
+    <string name="profiles_preflight_unknown_reason">无法确定可用空间（%1$s）；备份仍会尝试进行。</string>
+    <plurals name="profiles_items">
+        <item quantity="other">%d 个项目</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="other">%d 个文件</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="other">以及另外 %d 个</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">Recovery 兼容性</string>
+    <string name="profiles_opt_twrp">兼容 TWRP</string>
+    <string name="profiles_opt_twrp_hint">将分区存储为 TWRP / OrangeFox 备份文件夹，无需 DFTB 即可从 Recovery 恢复。</string>
+    <string name="profiles_opt_twrp_forced">由 TWRP 兼容模式强制：原始副本、不压缩、不加密、不隐藏名称。Recovery 只能读取普通文件。</string>
+    <string name="profiles_opt_format_title">格式与压缩</string>
+    <string name="profiles_opt_tree_format">归档格式（应用和文件）</string>
+    <string name="profiles_opt_7z_hint">7z 会先在本地存储中生成整个归档，然后再存储。</string>
+    <string name="profiles_opt_raw_hint">文件逐个复制，每个文件使用下方的编解码器压缩。</string>
+    <string name="profiles_opt_images_only">分区始终以原始镜像存储；请在下方选择其压缩方式。</string>
+    <string name="profiles_opt_codec_images">镜像压缩（分区）</string>
+    <string name="profiles_opt_codec_files">逐文件压缩</string>
+    <string name="profiles_opt_level">压缩级别</string>
+    <string name="profiles_opt_level_value">%1$d（%2$s）</string>
+    <string name="profiles_opt_level_none">此处所选内容均不压缩，因此没有可选的级别。</string>
+    <string name="profiles_opt_level_tree_clamped">归档使用级别 %1$d，这是其格式支持的最高级别。</string>
+    <string name="profiles_opt_level_image_clamped">分区镜像使用级别 %1$d，这是其编解码器支持的最高级别。</string>
+    <string name="profiles_opt_encryption_title">加密</string>
+    <string name="profiles_opt_encryption_legacy">已保存为“%1$s”，DFTB 无法运行。请从下方选项中选择一个。</string>
+    <string name="profiles_opt_passphrase_warning">计划运行需要你参与：DFTB 无法输入口令，因此每次运行都会等待你输入。</string>
+    <string name="profiles_opt_vault_warning">与设备绑定：如果此设备被重置或丢失，或其安全锁屏被移除，这些备份将无法再解密，无论在此设备还是其他设备上。</string>
+    <string name="profiles_opt_vault_reused">此配置沿用其现有的设备密钥，因此旧备份仍可读取。</string>
+    <string name="profiles_opt_stored_hint">已保存的口令保留在密钥库中，用于无人值守的运行。</string>
+    <string name="profiles_opt_mask">隐藏文件名</string>
+    <string name="profiles_opt_mask_hint">名称会被加密，因此目标只能看到随机名称。</string>
+    <string name="profiles_opt_integrity_title">完整性</string>
+    <string name="profiles_opt_checksum">校验和</string>
+    <string name="profiles_opt_checksum_weak">MD5 和 SHA-1 可以检测意外损坏，但无法防范蓄意篡改。</string>
+    <string name="profiles_opt_verify">备份后验证</string>
+    <string name="profiles_opt_verify_hint">回读每个已存储的文件并比对校验和。</string>
+    <string name="profiles_opt_layout_title">布局与传输</string>
+    <string name="profiles_opt_structure">文件夹结构</string>
+    <string name="profiles_opt_transfer">传输</string>
+    <string name="profiles_opt_staging_local">目标位于此设备时，文件直接就地写入（无额外副本）。</string>
+    <string name="profiles_opt_advanced">高级</string>
+    <string name="profiles_opt_posix">保留所有者和权限</string>
+    <string name="profiles_opt_posix_hint">记录每个文件的 POSIX 所有者、用户组和模式。</string>
+    <string name="profiles_opt_selinux">保留 SELinux 标签</string>
+    <string name="profiles_opt_selinux_hint">记录 SELinux 上下文；正确恢复应用数据时需要。</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">计划</string>
+    <string name="profiles_sched_enable">自动运行</string>
+    <string name="profiles_sched_enable_hint">关闭时，配置仅在你点按“立即备份”时运行。</string>
+    <string name="profiles_sched_time">时间</string>
+    <string name="profiles_sched_anchor">开始于</string>
+    <string name="profiles_sched_change_time">更改</string>
+    <string name="profiles_sched_pick_time">备份时间</string>
+    <string name="profiles_sched_days">日期</string>
+    <string name="profiles_sched_every">每隔</string>
+    <string name="profiles_sched_interval_min">至少 %1$d 分钟。</string>
+    <string name="profiles_sched_conditions">条件</string>
+    <string name="profiles_sched_unmetered">仅在非计费网络下</string>
+    <string name="profiles_sched_unmetered_hint">等待 Wi-Fi 或以太网，而不使用移动数据。</string>
+    <string name="profiles_sched_local_no_network">目标位于此设备上，因此不需要网络。</string>
+    <string name="profiles_sched_charging">仅在充电时</string>
+    <string name="profiles_sched_idle">仅在设备空闲时</string>
+    <string name="profiles_sched_idle_hint">进入空闲状态可能需要数小时，因此运行可能会被大幅延迟。</string>
+    <string name="profiles_sched_battery">最低电量</string>
+    <string name="profiles_sched_battery_value">电量至少 %1$d%%</string>
+    <string name="profiles_sched_catch_up">补跑错过的运行</string>
+    <string name="profiles_sched_catch_up_hint">如果设备在计划时间处于关机状态，则在之后尽快备份。</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s–%2$s</string>
+    <string name="profiles_sched_every_day">每天</string>
+    <string name="profiles_sched_weekdays">工作日</string>
+    <string name="profiles_sched_weekends">周末</string>
+    <string name="profiles_sched_daily">每天 %1$s</string>
+    <string name="profiles_sched_weekly">%1$s %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">自 %2$s 起每 %1$s</string>
+    <string name="profiles_sched_cond_charging">充电时</string>
+    <string name="profiles_sched_cond_unmetered">在非计费网络下</string>
+    <string name="profiles_sched_cond_idle">空闲时</string>
+    <string name="profiles_sched_cond_battery">电量至少 %1$d%%</string>
+    <string name="profiles_sched_cond_catch_up">补跑错过的运行</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">仅手动</string>
+    <string name="profiles_sched_paused">已暂停 · %1$s</string>
+    <string name="profiles_sched_invalid">计划需要修复</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="other">%d 分钟</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="other">%d 小时</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">保留</string>
+    <string name="profiles_retention_keep_last_switch">限制备份数量</string>
+    <string name="profiles_retention_keep_last_field">保留的备份数</string>
+    <string name="profiles_retention_max_age_switch">删除超过指定天数的备份</string>
+    <string name="profiles_retention_max_age_field">最长保留天数</string>
+    <string name="profiles_retention_note">每次备份成功后，超出这些限制的旧备份会从目标中删除。最新的成功备份始终会保留。</string>
+    <string name="profiles_retention_keep_all">保留所有备份</string>
+    <string name="profiles_retention_both">%1$s，且不超过 %2$s</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="other">保留最近 %d 个备份</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="other">备份保留 %d 天</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="other">%d 天</item>
+    </plurals>
+    <string name="profiles_retention_apply">立即应用</string>
+    <string name="profiles_retention_preview_title">对“%1$s”应用保留策略？</string>
+    <string name="profiles_retention_preview_changed">自你上次查看后列表已更改（有备份完成或被移除）。请重新检查。</string>
+    <string name="profiles_retention_preview_nothing">没有可删除的内容：所有已存储的备份都在限制范围内。</string>
+    <string name="profiles_retention_preview_unlisted">无法列出 %1$s；其中 DFTB 没有记录的备份未被纳入考虑。</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">该目标已从 DFTB 中移除：仅删除历史记录</string>
+    <string name="profiles_retention_preview_where">%2$s 上的 %1$s</string>
+    <string name="profiles_retention_preview_twrp">同时删除：%1$s</string>
+    <string name="profiles_retention_reason_keep_last">超出保留数量限制</string>
+    <string name="profiles_retention_reason_max_age">超出保留时长限制</string>
+    <string name="profiles_retention_hold_newest">最新的成功备份始终会保留。</string>
+    <string name="profiles_retention_hold_complete">最新的完整备份会保留。</string>
+    <string name="profiles_retention_hold_active">正在运行或可继续的备份仍在写入其中。</string>
+    <string name="profiles_retention_hold_unsafe">其存储路径看起来不安全，因此不会处理。</string>
+    <string name="profiles_retention_hold_twrp">无法确定其 TWRP 文件夹。</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s；%2$s，将在下次备份后重试。</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="other">这 %d 个备份将从其目标中永久删除：</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="other">%d 个已过期的备份被保留：</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="other">删除 %d 个备份</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="other">已删除“%2$s”的 %1$d 个备份</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="other">%d 个无法删除</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">计划与保留</string>
+    <string name="profiles_schedules_empty">还没有配置。</string>
+    <string name="profiles_schedules_group_active">已计划</string>
+    <string name="profiles_schedules_group_paused">已暂停</string>
+    <string name="profiles_schedules_group_manual">仅手动</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">保存前请修复这些问题</string>
+    <string name="profiles_review_warnings">需要注意</string>
+    <string name="profiles_review_edit">编辑 %1$s</string>
+    <string name="profiles_review_fix">前往 %1$s</string>
+    <string name="profiles_review_partitions">分区</string>
+    <string name="profiles_review_components">应用组件</string>
+    <string name="profiles_review_codec">流压缩</string>
+    <string name="profiles_event_failed_reason">操作失败：%1$s</string>
+    <string name="profiles_cd_ok">确定</string>
+    <string name="profiles_wizard_saved_not_scheduled">已保存，但无法设置计划。请重新打开该配置文件以重试。</string>
+    <string name="profiles_wizard_saved_not_started">已保存，但无法开始备份。请在列表中使用“立即备份”。</string>
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App restore (core/restore/apps): refusals, skipped parts and warnings. %1$s is the app label or package name unless noted. -->
+<resources>
+
+    <!-- Unit-level refusals -->
+    <string name="restore_app_no_package">此备份单元不包含应用。</string>
+    <string name="restore_app_multiple_packages">此应用备份包含多个包；只能恢复单个应用的备份。</string>
+    <string name="restore_app_layout_unsupported">此应用备份的存储形式无法恢复应用（仅归档和文件复制形式的应用备份可以恢复）。</string>
+    <string name="restore_app_no_manifest">%1$s 的备份没有应用清单，因此无法恢复。</string>
+    <string name="restore_app_manifest_unreadable">无法读取 %1$s 的应用清单：%2$s</string>
+    <string name="restore_app_manifest_mismatch">该应用清单属于 %2$s，而不是 %1$s；未恢复任何内容。</string>
+    <string name="restore_app_refused_self">DFTB 不会恢复自身（%1$s），除非明确允许受保护的包。</string>
+    <string name="restore_app_refused_privilege_provider">%1$s 提供 root 或 Shizuku 访问权限。除非明确允许受保护的包，否则禁止恢复它。</string>
+    <string name="restore_app_warn_system">%1$s 是系统组件。恢复它可能导致系统不稳定。</string>
+    <string name="restore_app_signature_mismatch">已安装的 %1$s 与备份使用的签名密钥不同。恢复已被拒绝；如需仅恢复其数据，请允许签名不匹配。</string>
+    <string name="restore_app_signature_mismatch_override">%1$s 与备份使用的签名密钥不同。按你的允许，未安装其 APK，仅恢复了其数据。</string>
+    <string name="restore_app_signature_unknown">无法将 %1$s 的签名密钥与备份进行比较。</string>
+    <string name="restore_app_user_needs_privilege">恢复到 Android 用户 %1$d 需要 Root 或 Shizuku 模式。</string>
+    <string name="restore_app_user_missing">此设备上不存在 Android 用户 %1$d。</string>
+    <string name="restore_app_unexpected">恢复 %1$s 失败：%2$s</string>
+    <string name="restore_app_nothing_restorable">在当前模式下，按所选选项无法恢复 %1$s 的任何内容。</string>
+
+    <!-- APK -->
+    <string name="restore_app_install_permission">DFTB 无权安装应用。请为 DFTB 允许“安装未知应用”，然后再次恢复 %1$s。</string>
+    <string name="restore_app_install_failed">安装 %1$s 失败：%2$s</string>
+    <string name="restore_app_install_declined">已拒绝安装 %1$s。</string>
+    <string name="restore_app_install_timeout">无人在规定时间内确认安装 %1$s。</string>
+    <string name="restore_app_apk_missing_parts">%1$s 的备份缺少 APK 部分（%2$s）；未安装该 APK。</string>
+    <string name="restore_app_same_version">%1$s %2$s 已安装；未重新安装其 APK。</string>
+    <string name="restore_app_installed_newer">已安装的 %1$s 版本比备份中的更新。已保留已安装的 APK，并将较旧的数据恢复到其上。</string>
+    <string name="restore_app_not_installed">%1$s 未安装，因此无法恢复其数据。</string>
+    <string name="restore_app_data_skipped_after_install_failure">由于安装 %1$s 失败，未恢复其数据。</string>
+
+    <!-- Data -->
+    <string name="restore_app_data_needs_root">%1$s 的私有数据只能在 Root 模式下恢复；已跳过。</string>
+    <string name="restore_app_external_needs_privilege">%1$s 的共享存储数据（Android/data、media、obb）需要 Root 或 Shizuku 模式；已跳过。</string>
+    <string name="restore_app_data_skipped_existing">%1$s 已有 %2$s；已保留（冲突策略：跳过）。</string>
+    <string name="restore_app_data_merged">%1$s 的 %2$s 已合并到现有数据中（冲突策略：两者都保留）；备份中不包含的文件保持原样。</string>
+    <string name="restore_app_merge_refused_symlink">%1$s 的 %2$s 包含符号链接，因此无法安全地将备份合并进去；已跳过。请改用覆盖策略恢复。</string>
+    <string name="restore_app_data_dir_missing">此设备上不存在 %1$s 的 %2$s（用户可能已锁定）；已跳过该部分。</string>
+    <string name="restore_app_data_failed">恢复 %1$s 的 %2$s 失败：%3$s</string>
+    <string name="restore_app_owner_failed">无法修正 %1$s 的 %2$s 的所有权：%3$s</string>
+    <string name="restore_app_owner_unknown">无法确定 %1$s 的 %2$s 的所有者；文件保留备份中记录的所有者。</string>
+    <string name="restore_app_selinux_failed">无法重置 %1$s 的 %2$s 的安全标签；应用可能无法读取该数据。</string>
+    <string name="restore_app_selinux_fallback">restorecon 不可用；%1$s 的 %2$s 的标签已根据备份设置，并按新 uid 重新计算了类别。</string>
+    <string name="restore_app_special_dropped">%1$s 的 %2$d 个设备或管道条目未被恢复。</string>
+
+    <!-- Permissions -->
+    <string name="restore_app_permissions_not_granted">无法授予 %1$s 的 %2$d 项权限：%3$s</string>
+    <string name="restore_app_permissions_need_privilege">在标准模式下无法重新授予 %1$s 的权限；请在系统设置中授予。</string>
+
+    <!-- Part names (used as %2$s above and as progress item names) -->
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">应用数据</string>
+    <string name="restore_app_part_de">设备保护的数据</string>
+    <string name="restore_app_part_cache">缓存</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s：%2$s</string>
+
+    <!-- Preflight -->
+    <string name="restore_app_preflight_root_for_data">应用私有数据只能在 Root 模式下恢复。</string>
+</resources>

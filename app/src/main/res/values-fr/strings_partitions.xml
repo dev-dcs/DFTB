@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="partition_view_standard">Standard</string>
+    <string name="partition_view_standard_summary">Les partitions que la plupart des gens sauvegardent : images de démarrage, données de démarrage vérifié, modem et identité de l\'appareil.</string>
+    <string name="partition_view_advanced">Avancé</string>
+    <string name="partition_view_advanced_summary">Toutes les partitions de l\'appareil, y compris les partitions système logiques. Examinez chaque niveau de risque avant de sélectionner.</string>
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">Sans slot</string>
+    <string name="partition_slot_active_marker">Actif</string>
+    <string name="partition_category_boot_chain">Chaîne de démarrage</string>
+    <string name="partition_category_firmware">Micrologiciel</string>
+    <string name="partition_category_modem">Modem</string>
+    <string name="partition_category_userdata">Données utilisateur</string>
+    <string name="partition_category_system_logical">Système (logique)</string>
+    <string name="partition_category_persist_identity">Identité et étalonnage de l\'appareil</string>
+    <string name="partition_category_other">Autre</string>
+    <string name="partition_risk_safe">Sans danger à imager</string>
+    <string name="partition_risk_huge">Très volumineuse</string>
+    <string name="partition_risk_huge_summary">Cette partition fait plusieurs gigaoctets. Vérifiez que la destination dispose de suffisamment d\'espace.</string>
+    <string name="partition_risk_critical">Propre à cet appareil</string>
+    <string name="partition_risk_critical_summary">Contient des données d\'identité ou d\'étalonnage (IMEI, radio, clés). Conservez cette sauvegarde en lieu sûr et ne la restaurez jamais sur un autre appareil.</string>
+    <string name="partition_logical_badge">Logique</string>
+    <string name="partition_unavailable_root_required">Les sauvegardes de partitions nécessitent le mode Root. Passez en mode Root dans les Paramètres pour analyser les partitions.</string>
+    <string name="partition_unavailable_root_not_granted">L\'accès root n\'est pas accordé pour le moment. Accordez l\'accès superutilisateur à DFTB et relancez l\'analyse.</string>
+    <string name="partition_unavailable_scan_failed">Impossible d\'exécuter l\'analyse des partitions. Réessayez.</string>
+    <string name="partition_unavailable_none_found">Aucune partition trouvée sur cet appareil.</string>
+    <string name="partition_warning_no_by_name">Aucun répertoire de partitions by-name trouvé ; seules les partitions logiques sont listées.</string>
+    <string name="partition_warning_by_name_conflict">Certains noms de partitions pointent vers des périphériques différents selon les répertoires : %1$s</string>
+    <string name="partition_warning_sizes_incomplete">Impossible de lire la taille de certaines partitions : %1$s</string>
+    <string name="partition_warning_active_slot_unknown">Cet appareil est de type A/B, mais le slot actif n\'a pas pu être déterminé.</string>
+    <string name="partition_warning_dm_names_unavailable">Cet appareil utilise des partitions dynamiques, mais leurs noms logiques n\'ont pas pu être lus.</string>
+    <string name="partition_warning_script_partial">L\'analyse a signalé des erreurs ; la liste peut être incomplète.</string>
+    <string name="partition_warning_unresolved_links">Certains liens de partitions n\'ont pas pu être résolus : %1$s</string>
+    <string name="partition_resolution_not_found">La partition %1$s n\'existe pas sur cet appareil.</string>
+    <string name="partition_resolution_active_slot_unknown">Impossible de choisir un slot pour %1$s car le slot actif est inconnu.</string>
+    <string name="partition_resolution_slot_missing">Le slot demandé de %1$s n\'est pas présent sur cet appareil.</string>
+    <string name="partition_scan_rescan">Analyser à nouveau</string>
+
+</resources>

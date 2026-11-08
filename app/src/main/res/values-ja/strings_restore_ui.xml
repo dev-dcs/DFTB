@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">戻る</string>
+    <string name="restore_ui_back_step">戻る</string>
+    <string name="restore_ui_next">次へ</string>
+    <string name="restore_ui_cancel">キャンセル</string>
+    <string name="restore_ui_retry">再試行</string>
+    <string name="restore_ui_refresh">更新</string>
+    <string name="restore_ui_yes">はい</string>
+    <string name="restore_ui_date_unknown">日付不明</string>
+    <string name="restore_ui_destination_label">保存先</string>
+    <string name="restore_ui_intent_failed">この画面をこのデバイスで開けませんでした。</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%2$s 中 %1$s（%3$d%%）</string>
+    <string name="restore_ui_progress_bytes_only">%1$s を処理済み</string>
+    <string name="restore_ui_progress_speed">%1$s/秒</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/秒 · 残り約 %2$s</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="other">%1$d 件の警告</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">復元</string>
+    <string name="restore_ui_twrp_open">TWRP バックアップをインポート</string>
+    <string name="restore_ui_twrp_link">TWRP または OrangeFox のバックアップをインポート</string>
+    <string name="restore_ui_no_destinations_title">保存先がまだありません</string>
+    <string name="restore_ui_no_destinations_body">バックアップは保存先から読み取られます。まず、バックアップが保存されている保存先を追加してください。</string>
+    <string name="restore_ui_add_destination">保存先を追加</string>
+    <string name="restore_ui_list_failed">保存先を読み取れませんでした</string>
+    <string name="restore_ui_no_backups_title">ここにバックアップはありません</string>
+    <string name="restore_ui_no_backups_body">この保存先には DFTB のバックアップフォルダーがありません。下に引いて再確認するか、別の保存先を選択してください。</string>
+    <string name="restore_ui_badge_encrypted">暗号化</string>
+    <string name="restore_ui_badge_locked">ロック中</string>
+    <string name="restore_ui_badge_partial">不完全</string>
+    <string name="restore_ui_badge_critical">識別データ</string>
+    <string name="restore_ui_badge_logical">論理</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">バックアップを読み取り中…</string>
+    <string name="restore_ui_open_failed">バックアップを開けませんでした</string>
+    <string name="restore_ui_locked_title">このバックアップは暗号化されています</string>
+    <string name="restore_ui_locked_body">内容を表示して復元するには、作成時のパスフレーズを入力してください。</string>
+    <string name="restore_ui_locked_vault_problem">プロファイルの保存済みキーを使用できませんでした（%1$s）。代わりにパスフレーズを入力してください。</string>
+    <string name="restore_ui_enter_passphrase">パスフレーズを入力</string>
+    <string name="restore_ui_passphrase_title">バックアップのロック解除</string>
+    <string name="restore_ui_passphrase_body">パスフレーズは、この画面を開いている間だけメモリ上に保持され、保存されることはありません。</string>
+    <string name="restore_ui_passphrase_label">パスフレーズ</string>
+    <string name="restore_ui_passphrase_unlock">ロック解除</string>
+    <string name="restore_ui_passphrase_show">パスフレーズを表示</string>
+    <string name="restore_ui_passphrase_hide">パスフレーズを非表示</string>
+    <string name="restore_ui_unlocked_vault">保存済みキーで開きました</string>
+    <string name="restore_ui_unlocked_passphrase">パスフレーズで開きました</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">このフォルダーには DFTB のバックアップインデックスがありません。</string>
+    <string name="restore_ui_catalog_key_required">この部分は暗号化されています。先にバックアップのロックを解除してください。</string>
+    <string name="restore_ui_catalog_corrupt_manifest">バックアップインデックスが破損しており、読み取れません。</string>
+    <string name="restore_ui_catalog_unsupported_schema">このバックアップは、より新しいバージョンの DFTB で作成されています。</string>
+    <string name="restore_ui_catalog_inconsistent_runs">この再開されたバックアップの各実行が、互いに対応していません。</string>
+    <string name="restore_ui_catalog_unsupported_encryption">このバックアップは、このバージョンでは読み取れない暗号化を使用しています。</string>
+    <string name="restore_ui_catalog_missing_file">保存されたファイルが保存先にありません。</string>
+    <string name="restore_ui_catalog_size_mismatch">保存されたファイルのサイズが正しくありません。</string>
+    <string name="restore_ui_catalog_digest_mismatch">保存されたファイルがチェックサムと一致しません。</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">アーカイブ内のファイルがチェックサムと一致しません。</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">チェックサムファイルがないか、保存されたデータと一致しません。</string>
+    <string name="restore_ui_catalog_not_single_stream">この項目は個別のファイルとして保存されています。</string>
+    <string name="restore_ui_problem_io">読み取りエラー</string>
+    <string name="restore_ui_problem_more">%1$s（ほか %2$d 件）</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">バックアップの詳細</string>
+    <string name="restore_ui_detail_created">開始</string>
+    <string name="restore_ui_detail_finished">完了</string>
+    <string name="restore_ui_detail_size">保存サイズ</string>
+    <string name="restore_ui_detail_device">作成元</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">API レベル %1$d</string>
+    <string name="restore_ui_detail_slot">当時のアクティブスロット</string>
+    <string name="restore_ui_detail_build">ビルド</string>
+    <string name="restore_ui_detail_app">作成に使用</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">形式</string>
+    <string name="restore_ui_detail_encryption">暗号化</string>
+    <string name="restore_ui_detail_checksum">チェックサム</string>
+    <string name="restore_ui_detail_structure">フォルダー構成</string>
+    <string name="restore_ui_detail_twrp">TWRP 互換</string>
+    <string name="restore_ui_detail_selection">プロファイルの選択</string>
+    <string name="restore_ui_detail_runs">統合された実行</string>
+    <string name="restore_ui_backup_warnings">バックアップ中に記録された警告</string>
+    <string name="restore_ui_partial_title">このバックアップは完了していません</string>
+    <string name="restore_ui_partial_body">中断されたか、まだ再開中です。含まれているのは下に表示された項目のみで、それらは検証と復元が可能です。</string>
+    <string name="restore_ui_cross_device_title">別のデバイスで作成されました</string>
+    <string name="restore_ui_cross_device_body">このバックアップは %1$s のものですが、このデバイスは %2$s です。アプリやファイルは通常問題なく復元できますが、別のデバイスのパーティションイメージにより、このデバイスが起動しなくなる可能性があります。</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="other">%1$d 個のパーティション</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="other">%1$d 個のアプリ</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="other">%1$d 個のフォルダー</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="other">%1$d 個のファイルカテゴリ</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">内容</string>
+    <string name="restore_ui_units_empty">このバックアップには復元できるものがありません。</string>
+    <string name="restore_ui_group_apps">アプリ</string>
+    <string name="restore_ui_group_partitions">パーティション</string>
+    <string name="restore_ui_group_files">ファイル</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">検証</string>
+    <string name="restore_ui_verify_subtitle">データを信頼する前に、保存されたデータが損なわれていないか確認します。</string>
+    <string name="restore_ui_verify_quick">クイック検証</string>
+    <string name="restore_ui_verify_deep">詳細検証</string>
+    <string name="restore_ui_verify_hint">クイック検証は、保存されたファイルをチェックサムと比較します。詳細検証は、すべてを復号・展開して内部の各ファイルまで確認するため、バックアップ全体を読み取ります。</string>
+    <string name="restore_ui_verify_running_quick">保存されたファイルを確認中…</string>
+    <string name="restore_ui_verify_running_deep">すべてのファイルをデコードして確認中…</string>
+    <string name="restore_ui_verify_all_ok">保存されている %1$d 個の項目はすべて正常です。</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="other">保存されている %2$d 個の項目のうち %1$d 個が破損しているか、見つかりません。</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">正常</string>
+    <string name="restore_ui_verify_bad_cd">問題あり</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">復元</string>
+    <string name="restore_ui_start_subtitle">復元する内容と方法を選択し、何かが書き込まれる前に確認します。</string>
+    <string name="restore_ui_start_wizard">復元…</string>
+    <string name="restore_ui_start_busy">このバックアップの復元を実行中です。</string>
+    <string name="restore_ui_start">復元を開始</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">ステップ %1$d/%2$d · %3$s</string>
+    <string name="restore_ui_step_select">項目を選択</string>
+    <string name="restore_ui_step_options">オプション</string>
+    <string name="restore_ui_step_preflight">確認</string>
+    <string name="restore_ui_select_all">すべて選択</string>
+    <string name="restore_ui_select_none">選択を解除</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="other">%2$d 項目中 %1$d 項目を選択 · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">一般</string>
+    <string name="restore_ui_conflict_title">すでに存在する場合</string>
+    <string name="restore_ui_conflict_skip">既存を保持</string>
+    <string name="restore_ui_conflict_overwrite">上書き</string>
+    <string name="restore_ui_conflict_keep_both">両方を保持</string>
+    <string name="restore_ui_conflict_skip_desc">既存のファイルは置き換えずに保持します</string>
+    <string name="restore_ui_conflict_overwrite_desc">既存のファイルをバックアップ済みのバージョンで置き換えます</string>
+    <string name="restore_ui_conflict_keep_both_desc">バックアップ済みのバージョンを、新しい名前で既存のファイルの隣に書き込みます</string>
+    <string name="restore_ui_verify_first">復元前に検証</string>
+    <string name="restore_ui_verify_first_hint">先に、選択したすべての項目をもう一度読み取ります。どれか1つでも破損している場合、何も書き込まれません。</string>
+    <string name="restore_ui_metadata">日付とパーミッションを復元</string>
+    <string name="restore_ui_metadata_hint">更新日時は常に復元します。所有者、モード、SELinux ラベルは、現在のモードで可能な場合に復元します。</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">ファイル</string>
+    <string name="restore_ui_target_title">ファイルの復元先</string>
+    <string name="restore_ui_target_original">元の場所</string>
+    <string name="restore_ui_target_folder">フォルダーのパス</string>
+    <string name="restore_ui_target_saf">選択したフォルダー</string>
+    <string name="restore_ui_target_original_hint">ファイルは、バックアップ元の場所に戻されます。現在のモードで DFTB が書き込めないフォルダーは、確認ステップで報告されます。</string>
+    <string name="restore_ui_folder_label">フォルダー</string>
+    <string name="restore_ui_folder_hint">絶対パス。例：/storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">フォルダーがまだ選択されていません</string>
+    <string name="restore_ui_tree_pick">フォルダーを選択</string>
+    <string name="restore_ui_tree_grant_failed">DFTB はそのフォルダーへのアクセスを保持できませんでした。別のフォルダーを選択してください。</string>
+    <string name="restore_ui_twrp_mode_title">TWRP バックアップフォルダー</string>
+    <string name="restore_ui_twrp_copy">フォルダーをコピー</string>
+    <string name="restore_ui_twrp_extract">ファイルを展開</string>
+    <string name="restore_ui_twrp_copy_desc">TWRP フォルダーをそのままコピーします。リカバリで TWRP または OrangeFox から復元できます。</string>
+    <string name="restore_ui_twrp_extract_desc">TWRP アーカイブ内のファイルを、選択したフォルダーに展開します。実行中のシステムには決して展開しません。</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">アプリ</string>
+    <string name="restore_ui_apps_standard_hint">標準モードでは、Android がインストールごとに確認を求め、アプリデータは復元できません。Shizuku は共有ストレージのデータを、root はすべてを復元します。</string>
+    <string name="restore_ui_apps_apks">アプリをインストール</string>
+    <string name="restore_ui_apps_data">アプリデータを復元</string>
+    <string name="restore_ui_apps_data_hint">プライベートデータには root が、Android/data と Android/media には Shizuku または root が必要です。</string>
+    <string name="restore_ui_version_title">アプリがすでにインストールされている場合</string>
+    <string name="restore_ui_version_auto">自動</string>
+    <string name="restore_ui_version_reinstall">常に再インストール</string>
+    <string name="restore_ui_version_data_only">データのみ</string>
+    <string name="restore_ui_version_auto_desc">アプリがない場合、またはバックアップの方が新しい場合にインストールします。それ以外の場合は、データのみ復元します。</string>
+    <string name="restore_ui_version_reinstall_desc">同じバージョンであっても、バックアップ済みのバージョンをインストールします。</string>
+    <string name="restore_ui_version_data_only_desc">インストールは行わず、すでにインストールされているバージョンにデータを復元します。</string>
+    <string name="restore_ui_apps_external">Android/data と Android/media を復元</string>
+    <string name="restore_ui_apps_obb">Android/obb を復元</string>
+    <string name="restore_ui_apps_permissions">記録された権限を再付与</string>
+    <string name="restore_ui_apps_permissions_hint">バックアップ時にアプリが持っていた実行時権限です（Shizuku または root）。</string>
+    <string name="restore_ui_apps_user">復元先のユーザー</string>
+    <string name="restore_ui_apps_user_self">ユーザー %1$d（自分）</string>
+    <string name="restore_ui_apps_user_other">ユーザー %1$d</string>
+    <string name="restore_ui_apps_advanced">詳細設定</string>
+    <string name="restore_ui_apps_cache">キャッシュフォルダーを復元</string>
+    <string name="restore_ui_apps_installer">記録されたインストーラーを復元</string>
+    <string name="restore_ui_apps_installer_hint">アプリを、入手元のストアからインストールされたものとして記録します（Shizuku または root）。</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">パーティション</string>
+    <string name="restore_ui_partitions_need_root">root が必要です</string>
+    <string name="restore_ui_partitions_need_root_body">パーティションへの書き込みには root が必要です。root モードに切り替えるか、リカバリまたは fastboot からこれらのイメージを復元してください。</string>
+    <string name="restore_ui_partitions_hint">すべてのイメージは、書き込み前に検証され、書き込み後に読み戻されます。マウント中または使用中のパーティションは常に拒否されます。</string>
+    <string name="restore_ui_critical_selected_title">識別用パーティションが選択されています</string>
+    <string name="restore_ui_critical_selected_body">%1$s には、1台のデバイス固有のデータ（IMEI、キャリブレーション、DRM、工場出荷時リセット保護）が含まれます。誤ったコピーを書き込むと、このデバイスが完全に使用できなくなるおそれがあります。下で許可しない限り、拒否されます。</string>
+    <string name="restore_ui_slot_title">書き込むスロット</string>
+    <string name="restore_ui_slot_same_role">同じ役割</string>
+    <string name="restore_ui_slot_active">アクティブスロット</string>
+    <string name="restore_ui_slot_inactive">非アクティブスロット</string>
+    <string name="restore_ui_slot_recorded">同じ文字</string>
+    <string name="restore_ui_slot_same_role_desc">イメージ化したスロットが持っていた役割（アクティブまたは非アクティブ）を、現在持っているスロットに書き込みます。推奨：スロットはアップデートのたびに入れ替わります。</string>
+    <string name="restore_ui_slot_active_desc">デバイスが現在起動しているスロットに書き込みます。</string>
+    <string name="restore_ui_slot_inactive_desc">デバイスが起動していないスロットに書き込みます。</string>
+    <string name="restore_ui_slot_recorded_desc">イメージ化したのと同じスロット文字に書き戻します（boot_a は boot_a へ）。</string>
+    <string name="restore_ui_overrides_title">安全チェック</string>
+    <string name="restore_ui_overrides_hint">これらのチェックは、危険な書き込みを拒否します。それぞれ、起こりうる問題を確認した後にのみオフにできます。</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">理解したうえで許可する</string>
+    <string name="restore_ui_risky_active_title">オフにした安全チェック</string>
+    <string name="restore_ui_risky_space">空き容量が不足していても復元</string>
+    <string name="restore_ui_risky_space_hint">復元先の空き容量が少ないと報告されても続行します。</string>
+    <string name="restore_ui_risky_space_consequence">復元中に復元先がいっぱいになる可能性があります。それまでに書き込まれたファイルは残りますが、残りは失敗し、空き容量を確保するまでこのデバイスのアプリが動作しなくなる場合があります。</string>
+    <string name="restore_ui_risky_downgrade">古いアプリバージョンを許可</string>
+    <string name="restore_ui_risky_downgrade_hint">インストール済みのバージョンより古いバックアップ済みバージョンをインストールします（Shizuku または root）。</string>
+    <string name="restore_ui_risky_downgrade_consequence">古いアプリバージョンは、新しいバージョンが書き込んだデータを理解できない場合があります。アプリがクラッシュしたり、データを失ったりするおそれがあります。一部のアプリでは、Android がダウングレードを拒否することがあります。</string>
+    <string name="restore_ui_risky_cross_slot">もう一方のスロットへの書き込みを許可</string>
+    <string name="restore_ui_risky_cross_slot_hint">選択したスロットが、イメージ化したスロットと異なります。</string>
+    <string name="restore_ui_risky_cross_slot_consequence">もう一方のスロットのパーティションが置き換えられます。イメージがそのスロットの残りの部分と一致しない場合、デバイスがそのスロットから起動できなくなる可能性があります。次回のアップデート時に、そのスロットに切り替わることもあります。</string>
+    <string name="restore_ui_risky_other_device">別のデバイスのイメージを許可</string>
+    <string name="restore_ui_risky_other_device_hint">イメージが別のデバイスモデルで取得されたか、その出所を証明できません。</string>
+    <string name="restore_ui_risky_other_device_consequence">パーティションイメージは、特定のデバイスモデル専用です。別のデバイスのイメージを書き込むと、このデバイスがハードブリックし、メーカーのフラッシュツールでしか復旧できなくなるおそれがあります。</string>
+    <string name="restore_ui_risky_other_build">別のビルドのイメージを許可</string>
+    <string name="restore_ui_risky_other_build_hint">同じデバイスですが、システムビルドが異なります（例：アップデート前）。</string>
+    <string name="restore_ui_risky_other_build_consequence">異なるビルドのパーティションを混在させると、ブートループや機能（カメラ、無線、暗号化）の不具合が発生することがあります。そのビルドのすべてのパーティションをまとめて復元してください。</string>
+    <string name="restore_ui_risky_smaller_image">パーティションより小さいイメージを許可</string>
+    <string name="restore_ui_risky_smaller_image_hint">パーティションの末尾部分はそのまま残ります。</string>
+    <string name="restore_ui_risky_smaller_image_consequence">イメージの後ろに古いデータが残ります。問題のないパーティションもありますが、機能しなくなるものもあります（例：末尾にフッターや署名があるもの）。</string>
+    <string name="restore_ui_risky_identity">識別用パーティションへの書き込みを許可</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV、モデムのキャリブレーション、persist、工場出荷時リセット保護など。</string>
+    <string name="restore_ui_risky_identity_consequence">これらのパーティションは、物理的な1台のデバイス固有のものです。別のデバイスのコピー、古いコピー、破損したコピーを書き込むと、通話、モバイルデータ、Wi-Fi、DRM、ブートローダーが完全に使用できなくなるおそれがあります。元に戻す方法はありません。</string>
+    <string name="restore_ui_confirm_type_word">確認のため %1$s と入力してください。</string>
+    <string name="restore_ui_confirm_word_label">確認</string>
+    <string name="restore_ui_confirm_word_device">OTHER DEVICE</string>
+    <string name="restore_ui_confirm_word_identity">IDENTITY</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">復元する項目を1つ以上選択してください。</string>
+    <string name="restore_ui_problem_folder_required">復元先のフォルダーを入力してください。</string>
+    <string name="restore_ui_problem_folder_absolute">/ で始まる絶対パスを使用してください。</string>
+    <string name="restore_ui_problem_folder_traversal">パスに . や .. のセグメントを含めることはできません。</string>
+    <string name="restore_ui_problem_folder_protected">ここはシステムの場所です。ストレージ内のフォルダーを選択してください。</string>
+    <string name="restore_ui_problem_tree_required">フォルダーを選択してください。</string>
+    <string name="restore_ui_problem_twrp_folder">TWRP アーカイブの展開にはフォルダーが必要です。実行中のシステムには決して展開されません。</string>
+    <string name="restore_ui_problem_app_nothing">インストールもデータも選択されていないため、アプリについて復元するものがありません。</string>
+    <string name="restore_ui_problem_downgrade_ignored">古いバージョンはアプリをインストールする場合にのみ関係します。現在、このオプションは無効です。</string>
+    <string name="restore_ui_problem_folder_app_data">このフォルダーはアプリデータ内にあります。ここへ書き込むと、インストール済みのアプリが動作しなくなるおそれがあります。</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">まだ何も書き込まれていません。現在のモードで復元できる内容は次のとおりです。</string>
+    <string name="restore_ui_preflight_running">各項目を確認中…</string>
+    <string name="restore_ui_preflight_failed">確認を完了できませんでした</string>
+    <string name="restore_ui_preflight_run">確認を実行</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="other">%2$d 項目中 %1$d 項目を復元できます</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">復元できます</string>
+    <string name="restore_ui_preflight_blocked_cd">復元できません</string>
+    <string name="restore_ui_preflight_space">%1$s が必要 · %2$s の空き</string>
+    <string name="restore_ui_preflight_space_needed">%1$s が必要</string>
+    <string name="restore_ui_preflight_shortfall">あと %1$s の空き容量が必要です。</string>
+    <string name="restore_ui_tier_none">特権は不要</string>
+    <string name="restore_ui_tier_shizuku">Shizuku または root が必要</string>
+    <string name="restore_ui_tier_root">root が必要</string>
+    <string name="restore_ui_space_not_needed">容量は不要</string>
+    <string name="restore_ui_space_ok">容量は十分</string>
+    <string name="restore_ui_space_unknown">空き容量不明</string>
+    <string name="restore_ui_space_insufficient">容量が不足</string>
+    <string name="restore_ui_blocker_nothing">選択した項目は、現在どれも復元できません。オプションまたは動作モードを変更してください。</string>
+    <string name="restore_ui_blocker_space">復元先に収まらない項目があります。空き容量を確保するか、その項目の選択を解除するか、空き容量が不足していても復元することを許可してください。</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">今すぐ復元しますか？</string>
+    <string name="restore_ui_confirm_body">DFTB は、%1$s のデータをこのデバイスに書き込みます。</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="other">%1$d 件のファイルセットを %2$s へ。%3$s。</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="other">%1$d 個のアプリが再インストールされ、データが置き換えられる場合があります。</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">次のパーティションがブロック単位で上書きされます：%1$s。この操作は元に戻せません。書き込みに失敗すると、デバイスが起動しなくなるおそれがあります。</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">復元</string>
+    <string name="restore_ui_run_started">復元を開始しました。この画面を離れても続行されます。</string>
+    <string name="restore_ui_run_running">復元中…</string>
+    <string name="restore_ui_run_cancelling">停止中…</string>
+    <string name="restore_ui_run_completed">完了</string>
+    <string name="restore_ui_run_completed_warnings">警告付きで完了</string>
+    <string name="restore_ui_run_cancelled">停止</string>
+    <string name="restore_ui_run_failed">失敗</string>
+    <string name="restore_ui_run_cancel">復元を停止</string>
+    <string name="restore_ui_run_done">完了</string>
+    <string name="restore_ui_run_summary">%1$d 件復元 · %2$d 件失敗 · %3$d 件未復元</string>
+    <string name="restore_ui_run_units">項目</string>
+    <string name="restore_ui_run_warnings">警告</string>
+    <string name="restore_ui_unit_waiting">待機中</string>
+    <string name="restore_ui_unit_running">復元中</string>
+    <string name="restore_ui_unit_restored">復元済み</string>
+    <string name="restore_ui_unit_failed">失敗</string>
+    <string name="restore_ui_unit_blocked">ここでは復元できません</string>
+    <string name="restore_ui_unit_not_run">未復元</string>
+    <string name="restore_ui_cancel_title">復元を停止しますか？</string>
+    <string name="restore_ui_cancel_body">すでに復元された項目は、復元されたままです。書き込み中のパーティションは、先に書き込みと確認を完了するため、停止までに少し時間がかかる場合があります。</string>
+    <string name="restore_ui_writing_partition_title">パーティションを書き込み中</string>
+    <string name="restore_ui_writing_partition_body">このパーティションの書き込みと確認が完了するまで、再起動、電源オフ、バッテリー切れを起こさないでください。</string>
+    <string name="restore_ui_do_not_reboot_title">再起動しないでください</string>
+    <string name="restore_ui_do_not_reboot_body">パーティションの書き込みが正常に完了しなかったため、パーティションが部分的にしか書き込まれていない可能性があります。正しく復元されるまで再起動しないでください。復元を再試行するか、リカバリまたは fastboot から正常なイメージをフラッシュしてください。</string>
+    <string name="restore_ui_install_pending_title">インストールの確認を待機中</string>
+    <string name="restore_ui_install_pending_body">Android がアプリのインストールごとに確認を求めます。通常、プロンプトは自動的に開きます。表示されない場合は、ここから開いてください。</string>
+    <string name="restore_ui_install_open">プロンプトを開く</string>
+    <string name="restore_ui_install_permission_title">DFTB にアプリのインストールが許可されていません</string>
+    <string name="restore_ui_install_permission_body">DFTB に不明なアプリのインストールを許可してから、もう一度復元してください：%1$s</string>
+    <string name="restore_ui_install_permission_open">設定を開く</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">TWRP バックアップをインポート</string>
+    <string name="restore_ui_twrp_intro">保存先から TWRP または OrangeFox のバックアップフォルダーを探します。生のパーティションイメージは root でここに書き戻せ、ファイルシステムアーカイブはフォルダーに展開できます。</string>
+    <string name="restore_ui_twrp_root_label">検索場所</string>
+    <string name="restore_ui_twrp_root_hint">保存先上のフォルダー。例：TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">検索</string>
+    <string name="restore_ui_twrp_searching">バックアップを検索中…</string>
+    <string name="restore_ui_twrp_search_incomplete">検索が完了しませんでした</string>
+    <string name="restore_ui_twrp_none_found">そこには TWRP バックアップフォルダーが見つかりませんでした。</string>
+    <string name="restore_ui_twrp_pick_backup">バックアップを選択すると、そのパーティションが表示されます。</string>
+    <string name="restore_ui_twrp_selected">選択中</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="other">%1$d 個のパーティション · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">問題あり</string>
+    <string name="restore_ui_twrp_device_folder">デバイスのシリアルフォルダー</string>
+    <string name="restore_ui_twrp_device_unknown">記録なし</string>
+    <string name="restore_ui_twrp_device_unknown_hint">フォルダーが TWRP/BACKUPS/&lt;serial&gt; の下にないため、DFTB はどのデバイスで作成されたか判別できません。</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s：分割された一部が見つかりません。</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s：単一ファイルと分割ファイルの両方が存在します。単一ファイルを使用します。</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s：対応するアーカイブのないチェックサムファイルです。</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s：チェックサムファイルが複数あります。最も強力なものを使用します。</string>
+    <string name="restore_ui_twrp_verify_title">チェックサム</string>
+    <string name="restore_ui_twrp_verify_subtitle">保存されたすべてのファイルを、TWRP がその隣に書き込んだチェックサムファイルと比較します。</string>
+    <string name="restore_ui_twrp_verify">チェックサムを検証</string>
+    <string name="restore_ui_twrp_verify_summary">%2$d 個中 %1$d 個が一致 · %3$d 個が不一致 · %4$d 個はチェックサムなし · %5$d 個は読み取り不可</string>
+    <string name="restore_ui_twrp_verify_damaged">破損したファイルは復元しないでください。</string>
+    <string name="restore_ui_twrp_check_ok">一致</string>
+    <string name="restore_ui_twrp_check_mismatch">チェックサムと一致しません</string>
+    <string name="restore_ui_twrp_check_no_sidecar">チェックサムファイルなし</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">チェックサムファイルを読み取れません</string>
+    <string name="restore_ui_twrp_check_read_failed">読み取れませんでした</string>
+    <string name="restore_ui_twrp_partitions_title">パーティション</string>
+    <string name="restore_ui_twrp_kind_image">生イメージ</string>
+    <string name="restore_ui_twrp_kind_archive">ファイルアーカイブ</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">TWRP 暗号化</string>
+    <string name="restore_ui_twrp_format_raw">raw</string>
+    <string name="restore_ui_twrp_format_unknown">不明な形式</string>
+    <string name="restore_ui_twrp_format_empty">空</string>
+    <string name="restore_ui_twrp_format_unreadable">形式を読み取れません</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="other">%1$d 個のパーツ</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">チェックサムなし</string>
+    <string name="restore_ui_twrp_action_restore">パーティションに書き込む</string>
+    <string name="restore_ui_twrp_action_extract">フォルダーに展開</string>
+    <string name="restore_ui_twrp_target_partition">書き込み先パーティション</string>
+    <string name="restore_ui_twrp_target_partition_hint">空欄の場合は %1$s に書き込みます。</string>
+    <string name="restore_ui_twrp_device_check_hint">TWRP が記録するのはデバイスのシリアルのみです。バックアップフォルダーにこのデバイスのシリアルが含まれていない場合、別のデバイスのイメージを許可するまで書き込みは拒否されます。</string>
+    <string name="restore_ui_twrp_extract_hint">ファイルとフォルダーは保存先に書き込まれます。リンク、デバイスノード、所有者、SELinux ラベルは書き込まれません。同じ名前の既存ファイルは上書きされます。</string>
+    <string name="restore_ui_twrp_extract_destination">展開先の保存先</string>
+    <string name="restore_ui_twrp_extract_folder">その保存先上のフォルダー</string>
+    <string name="restore_ui_twrp_extract_folder_hint">存在しない場合は作成されます。</string>
+    <string name="restore_ui_twrp_draft_not_image">パーティションに書き込めるのは、生イメージのみです。</string>
+    <string name="restore_ui_twrp_draft_split">分割されたイメージは、Android からは書き込めません。</string>
+    <string name="restore_ui_twrp_draft_not_archive">展開できるのは、ファイルアーカイブのみです。</string>
+    <string name="restore_ui_twrp_draft_encrypted">このアーカイブは TWRP で暗号化されているため、DFTB では復号できません。TWRP で復元してください。</string>
+    <string name="restore_ui_twrp_draft_unknown_format">このファイルは、読み取り可能なアーカイブではありません。</string>
+    <string name="restore_ui_twrp_draft_partition_name">パーティション名には、英字、数字、ドット、ハイフン、アンダースコアを使用してください。</string>
+    <string name="restore_ui_twrp_draft_destination">展開先の保存先を選択してください。</string>
+    <string name="restore_ui_twrp_draft_traversal">フォルダーに . や .. のセグメントを含めることはできません。</string>
+    <string name="restore_ui_twrp_confirm_restore_title">このイメージを書き込みますか？</string>
+    <string name="restore_ui_twrp_confirm_restore_body">%1$s が、このデバイスの %2$s パーティションを上書きします。イメージは先に検証され、書き込み後にパーティションが読み戻されますが、古い内容は復旧できません。書き込みに失敗すると、デバイスが起動しなくなるおそれがあります。</string>
+    <string name="restore_ui_twrp_confirm_extract_title">このアーカイブを展開しますか？</string>
+    <string name="restore_ui_twrp_confirm_extract_body">%1$s のファイルを、%3$s の %2$s に書き込みます。同じ名前の既存ファイルは上書きされます。</string>
+    <string name="restore_ui_twrp_task_target">%1$s → %2$s</string>
+    <string name="restore_ui_twrp_extract_result">%1$d 個のファイルと %2$d 個のフォルダーを書き込みました（%3$s）。</string>
+    <string name="restore_ui_cd_error">エラー</string>
+    <string name="restore_ui_cd_warning">警告</string>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rclone storage (core/storage/rclone): guided provider setup (ProviderGuides) and its field
+     labels/hints. Steps may contain %1$s = the rclone backend type (e.g. "drive"). -->
+<resources>
+
+    <!-- Shared OAuth steps -->
+    <string name="rclone_guide_oauth_step_install">Web ブラウザのあるコンピューターで、rclone.org/downloads から rclone をインストールします。</string>
+    <string name="rclone_guide_oauth_step_authorize">そのコンピューターのターミナルで次を実行します：rclone authorize \"%1$s\" — 開いたブラウザでサインインしてアクセスを許可します。</string>
+    <string name="rclone_guide_oauth_step_paste">rclone が矢印の間に出力する JSON テキスト（{ で始まり } で終わる部分）をコピーし、下の「トークン」欄に貼り付けます。</string>
+
+    <!-- S3: shared -->
+    <string name="rclone_guide_s3_step_bucket">保存後、保存先フォルダをバケット名で始まるように設定します（例：my-bucket/phone-backups）。</string>
+
+    <!-- S3: AWS -->
+    <string name="rclone_guide_s3_aws_title">Amazon S3</string>
+    <string name="rclone_guide_s3_aws_summary">アクセスキーを使って Amazon Web Services の S3 バケットにバックアップを保存します。</string>
+    <string name="rclone_guide_s3_aws_step1">AWS コンソールで、バックアップ用バケットに限定した IAM ユーザーを作成します（s3:ListBucket、s3:GetObject、s3:PutObject、s3:DeleteObject）。</string>
+    <string name="rclone_guide_s3_aws_step2">そのユーザーのアクセスキーを作成し、アクセスキー ID とシークレットアクセスキーをコピーします。</string>
+
+    <!-- S3: MinIO -->
+    <string name="rclone_guide_s3_minio_title">MinIO（セルフホスト S3）</string>
+    <string name="rclone_guide_s3_minio_summary">自分の MinIO サーバー、または運用中の S3 互換ストレージにバックアップを保存します。</string>
+    <string name="rclone_guide_s3_minio_step1">MinIO コンソールで、バックアップ用バケットに書き込める権限を持つユーザーのアクセスキーを作成し、サーバーの API アドレスを控えておきます。</string>
+
+    <!-- S3: Wasabi -->
+    <string name="rclone_guide_s3_wasabi_title">Wasabi</string>
+    <string name="rclone_guide_s3_wasabi_summary">S3 API 経由で Wasabi のホットクラウドストレージにバックアップを保存します。</string>
+    <string name="rclone_guide_s3_wasabi_step1">Wasabi コンソールで Access Keys を開き、新しいキーを作成して両方の値をコピーします。エンドポイントにはバケットのリージョンのサービス URL を使用します。</string>
+
+    <!-- S3: Cloudflare R2 -->
+    <string name="rclone_guide_s3_r2_title">Cloudflare R2</string>
+    <string name="rclone_guide_s3_r2_summary">Cloudflare R2 オブジェクトストレージにバックアップを保存します。復元時の転送料金はかかりません。</string>
+    <string name="rclone_guide_s3_r2_step1">Cloudflare ダッシュボードで R2 を開き、Manage R2 API Tokens を選択します。Object Read &amp; Write 権限のトークンを作成します。</string>
+    <string name="rclone_guide_s3_r2_step2">アクセスキー ID、シークレットアクセスキー、およびアカウントに表示される S3 エンドポイントをコピーします。</string>
+
+    <!-- Backblaze B2 -->
+    <string name="rclone_guide_b2_title">Backblaze B2</string>
+    <string name="rclone_guide_b2_summary">アプリケーションキーを使って Backblaze B2 クラウドストレージにバックアップを保存します。</string>
+    <string name="rclone_guide_b2_step1">Backblaze アカウントで Application Keys を開き、新しいキーを追加します。できればバックアップ用バケットに限定してください。</string>
+    <string name="rclone_guide_b2_step2">keyID と applicationKey をすぐにコピーしてください。Backblaze はキーを一度しか表示しません。</string>
+
+    <!-- Google Drive -->
+    <string name="rclone_guide_drive_title">Google Drive</string>
+    <string name="rclone_guide_drive_summary">Google Drive にバックアップを保存します。サインインはコンピューターで一度だけ行います。</string>
+    <string name="rclone_guide_drive_step_scope">フルアクセスには「drive」、DFTB が作成したファイルのみ参照させる場合は「drive.file」を選びます。</string>
+
+    <!-- OneDrive -->
+    <string name="rclone_guide_onedrive_title">Microsoft OneDrive</string>
+    <string name="rclone_guide_onedrive_summary">個人用 OneDrive、OneDrive for Business、SharePoint にバックアップを保存します。</string>
+    <string name="rclone_guide_onedrive_step_drive">OneDrive にはドライブ ID も必要です。コンピューターで rclone config を使ってリモートを作成し、rclone config show を実行して drive_id と drive_type をコピーします。</string>
+
+    <!-- Dropbox -->
+    <string name="rclone_guide_dropbox_title">Dropbox</string>
+    <string name="rclone_guide_dropbox_summary">Dropbox にバックアップを保存します。サインインはコンピューターで一度だけ行います。</string>
+
+    <!-- MEGA -->
+    <string name="rclone_guide_mega_title">MEGA</string>
+    <string name="rclone_guide_mega_summary">MEGA アカウントのエンドツーエンド暗号化ストレージにバックアップを保存します。</string>
+    <string name="rclone_guide_mega_step1">MEGA アカウントのメールアドレスとパスワードを入力します。</string>
+    <string name="rclone_guide_mega_step2">アカウントで二段階認証が有効だと MEGA がログインを拒否することがあります。このアカウントでは無効にするか、バックアップ専用の別の MEGA アカウントを使用してください。</string>
+
+    <!-- pCloud -->
+    <string name="rclone_guide_pcloud_title">pCloud</string>
+    <string name="rclone_guide_pcloud_summary">pCloud ストレージにバックアップを保存します。サインインはコンピューターで一度だけ行います。</string>
+    <string name="rclone_guide_pcloud_step_region">アカウントが EU リージョンの場合は eapi.pcloud.com を選び、それ以外は api.pcloud.com のままにします。</string>
+
+    <!-- Box -->
+    <string name="rclone_guide_box_title">Box</string>
+    <string name="rclone_guide_box_summary">Box にバックアップを保存します。サインインはコンピューターで一度だけ行います。</string>
+    <string name="rclone_guide_box_step_rotation">Box は使用のたびにリフレッシュトークンを置き換えます。DFTB がこのリモートを使用した後は、同じトークンをコンピューターで再利用しないでください。</string>
+
+    <!-- SFTP via rclone -->
+    <string name="rclone_guide_sftp_title">SFTP（rclone 経由）</string>
+    <string name="rclone_guide_sftp_summary">rclone 経由で SSH サーバーに接続します。たとえばデスクトップとリモート定義を共有できます。</string>
+    <string name="rclone_guide_sftp_step1">サーバーアドレスとアカウント名を入力します。</string>
+    <string name="rclone_guide_sftp_step2">パスワードでサインインするか、秘密鍵（PEM または OpenSSH 形式）を貼り付けます（パスフレーズがある場合はそれも入力）。どちらか一方は必須です。</string>
+
+    <!-- WebDAV: Nextcloud -->
+    <string name="rclone_guide_nextcloud_title">Nextcloud（WebDAV）</string>
+    <string name="rclone_guide_nextcloud_summary">WebDAV 経由で Nextcloud サーバーにバックアップを保存します。</string>
+    <string name="rclone_guide_nextcloud_step1">Nextcloud で「設定」→「セキュリティ」を開き、DFTB 用のアプリパスワードを作成します。</string>
+    <string name="rclone_guide_nextcloud_step2">「ファイル」設定に表示される WebDAV アドレスを使用します。形式は https://cloud.example.com/remote.php/dav/files/USERNAME/ です。</string>
+
+    <!-- Field labels -->
+    <string name="rclone_field_access_key_id">アクセスキー ID</string>
+    <string name="rclone_field_secret_access_key">シークレットアクセスキー</string>
+    <string name="rclone_field_region">リージョン</string>
+    <string name="rclone_field_endpoint">エンドポイント</string>
+    <string name="rclone_field_b2_account">キー ID</string>
+    <string name="rclone_field_b2_key">アプリケーションキー</string>
+    <string name="rclone_field_token">トークン</string>
+    <string name="rclone_field_client_id">クライアント ID（任意）</string>
+    <string name="rclone_field_client_secret">クライアントシークレット（任意）</string>
+    <string name="rclone_field_scope">アクセススコープ</string>
+    <string name="rclone_field_root_folder_id">ルートフォルダ ID（任意）</string>
+    <string name="rclone_field_drive_id">ドライブ ID</string>
+    <string name="rclone_field_drive_type">ドライブの種類</string>
+    <string name="rclone_field_email">メールアドレス</string>
+    <string name="rclone_field_password">パスワード</string>
+    <string name="rclone_field_pcloud_hostname">pCloud リージョン</string>
+    <string name="rclone_field_box_sub_type">アカウントの種類</string>
+    <string name="rclone_field_host">サーバー</string>
+    <string name="rclone_field_port">ポート</string>
+    <string name="rclone_field_username">ユーザー名</string>
+    <string name="rclone_field_key_pem">秘密鍵</string>
+    <string name="rclone_field_key_passphrase">鍵のパスフレーズ</string>
+    <string name="rclone_field_url">アドレス</string>
+
+    <!-- Field hints -->
+    <string name="rclone_hint_access_key_id">例：AKIAIOSFODNN7EXAMPLE</string>
+    <string name="rclone_hint_secret_access_key">暗号化してこのデバイス内にのみ保存されます</string>
+    <string name="rclone_hint_region_aws">バケットのリージョン（例：us-east-1、eu-central-1）</string>
+    <string name="rclone_hint_region_optional">プロバイダが必要としない限り空欄にします</string>
+    <string name="rclone_hint_endpoint_minio">例：https://minio.example.com:9000</string>
+    <string name="rclone_hint_endpoint_wasabi">例：s3.eu-central-1.wasabisys.com</string>
+    <string name="rclone_hint_endpoint_r2">https://ACCOUNT_ID.r2.cloudflarestorage.com</string>
+    <string name="rclone_hint_b2_account">キー作成時に表示された keyID</string>
+    <string name="rclone_hint_b2_key">キー作成時に一度だけ表示された applicationKey</string>
+    <string name="rclone_hint_token">rclone authorize が出力した JSON を貼り付け</string>
+    <string name="rclone_hint_client_id">プロバイダに独自のアプリを登録した場合のみ</string>
+    <string name="rclone_hint_drive_scope">drive = フルアクセス、drive.file = DFTB が作成したファイルのみ</string>
+    <string name="rclone_hint_root_folder_id">最上位として使うフォルダの ID</string>
+    <string name="rclone_hint_drive_id">rclone config show に表示される drive_id</string>
+    <string name="rclone_hint_drive_type">rclone config show に表示される drive_type</string>
+    <string name="rclone_hint_mega_user">MEGA へのサインインに使うメールアドレス</string>
+    <string name="rclone_hint_password">暗号化してこのデバイス内にのみ保存されます</string>
+    <string name="rclone_hint_pcloud_hostname">EU アカウントは eapi.pcloud.com</string>
+    <string name="rclone_hint_box_sub_type">enterprise は Box エンタープライズアカウントのみ使用</string>
+    <string name="rclone_hint_host">ホスト名または IP アドレス</string>
+    <string name="rclone_hint_port">通常は 22</string>
+    <string name="rclone_hint_username">サーバー上のアカウント名</string>
+    <string name="rclone_hint_sftp_password">鍵でサインインする場合は空欄</string>
+    <string name="rclone_hint_key_pem">BEGIN 行と END 行を含め、鍵全体を貼り付け</string>
+    <string name="rclone_hint_key_passphrase">鍵にパスフレーズがない場合は空欄</string>
+    <string name="rclone_hint_nextcloud_url">https://cloud.example.com/remote.php/dav/files/USERNAME/</string>
+    <string name="rclone_hint_nextcloud_password">Nextcloud のセキュリティ設定で作成したアプリパスワード</string>
+
+</resources>

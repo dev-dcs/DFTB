@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Discovery hub UI (ui/discovery): partitions, installed apps and file-scan preview tabs.
+     Engine-level messages live in strings_partitions.xml, strings_apps.xml and
+     strings_file_scan.xml and are reused, not duplicated. -->
+<resources>
+
+    <!-- Hub -->
+    <string name="discovery_title">ディスカバリー</string>
+    <string name="discovery_back">戻る</string>
+    <string name="discovery_entry_subtitle">プロファイルを作成する前に、このデバイスで DFTB がバックアップできるパーティション、アプリ、ファイルを確認します。</string>
+    <string name="discovery_entry_open">ディスカバリーを開く</string>
+    <string name="discovery_tab_partitions">パーティション</string>
+    <string name="discovery_tab_apps">アプリ</string>
+    <string name="discovery_tab_files">ファイル</string>
+
+    <!-- Shared -->
+    <string name="discovery_yes">はい</string>
+    <string name="discovery_no">いいえ</string>
+    <string name="discovery_unknown">不明</string>
+    <string name="discovery_not_applicable">該当なし</string>
+    <string name="discovery_unavailable">利用不可</string>
+    <string name="discovery_cancel">キャンセル</string>
+    <string name="discovery_ok">OK</string>
+    <string name="discovery_clear">クリア</string>
+    <string name="discovery_retry">再試行</string>
+    <string name="discovery_scanned_at">スキャン日時：%1$s</string>
+    <string name="discovery_warnings_title">警告（%1$d）</string>
+    <string name="discovery_size_unknown">サイズ不明</string>
+    <string name="discovery_size_not_measured">未計測</string>
+    <string name="discovery_size_not_measurable">このモードでは計測できません</string>
+
+    <!-- Tiers -->
+    <string name="discovery_tier_standard">標準</string>
+    <string name="discovery_tier_shizuku">Shizuku</string>
+    <string name="discovery_tier_root">Root</string>
+
+    <!-- Partitions -->
+    <string name="discovery_partitions_unavailable_title">パーティションを一覧表示できません</string>
+    <string name="discovery_partitions_header_title">パーティションレイアウト</string>
+    <string name="discovery_partitions_ab">A/B（シームレスアップデート）</string>
+    <string name="discovery_partitions_active_slot">アクティブな slot</string>
+    <string name="discovery_partitions_dynamic">動的パーティション</string>
+    <string name="discovery_partitions_virtual_ab">仮想 A/B</string>
+    <string name="discovery_partitions_count">見つかったパーティション</string>
+    <string name="discovery_partitions_warnings_subtitle">スキャンで検出された事項です。一覧が不完全な場合があります。</string>
+    <string name="discovery_partitions_empty_view">このビューにパーティションはありません。すべてのパーティションを表示するには「詳細」に切り替えてください。</string>
+    <string name="discovery_partitions_slot_active">%1$s · %2$s</string>
+
+    <!-- Apps -->
+    <string name="discovery_apps_limited_title">一部のアプリが非表示の可能性があります</string>
+    <string name="discovery_apps_usage_title">データサイズの表示には使用状況へのアクセスが必要です</string>
+    <string name="discovery_apps_usage_body">標準モードでは、Android は使用状況へのアクセス権を持つアプリにのみアプリデータのサイズを通知します。権限がない場合は APK サイズのみ表示されます。</string>
+    <string name="discovery_apps_usage_open">設定を開く</string>
+    <string name="discovery_apps_availability_title">バックアップ可能な項目</string>
+    <string name="discovery_apps_availability_subtitle">%1$s モード時</string>
+    <string name="discovery_apps_measure_title">アプリのサイズ</string>
+    <string name="discovery_apps_measure_subtitle">計測では一覧内のすべてのアプリのサイズを読み取るため、時間がかかることがあります。</string>
+    <string name="discovery_apps_measure">サイズを計測</string>
+    <string name="discovery_apps_measure_again">再計測</string>
+    <string name="discovery_apps_measure_progress">%2$d 個中 %1$d 個のアプリを計測済み</string>
+    <string name="discovery_apps_and_more">%1$s ほか %2$d 件</string>
+    <string name="discovery_apps_search">アプリを検索</string>
+    <string name="discovery_apps_filter_user">ユーザー</string>
+    <string name="discovery_apps_filter_system">システム</string>
+    <string name="discovery_apps_filter_updated">更新されたシステム</string>
+    <string name="discovery_apps_filter_split">分割 APK</string>
+    <string name="discovery_apps_filter_obb">OBB あり</string>
+    <string name="discovery_apps_sort">並べ替え</string>
+    <string name="discovery_apps_sort_name">名前</string>
+    <string name="discovery_apps_sort_size">サイズ</string>
+    <string name="discovery_apps_sort_updated">更新日</string>
+    <string name="discovery_apps_refresh">一覧を再読み込み</string>
+    <string name="discovery_apps_disabled">無効</string>
+    <string name="discovery_apps_version">バージョン</string>
+    <string name="discovery_apps_version_value">%1$s（%2$d）</string>
+    <string name="discovery_apps_target_sdk">ターゲット SDK</string>
+    <string name="discovery_apps_installed">インストール日</string>
+    <string name="discovery_apps_updated">最終更新</string>
+    <string name="discovery_apps_installer">インストール元</string>
+    <string name="discovery_apps_splits">スプリット</string>
+    <string name="discovery_apps_breakdown">サイズの内訳</string>
+    <string name="discovery_apps_breakdown_none">「サイズを計測」をタップして、このアプリの使用容量を確認します。</string>
+    <string name="discovery_apps_size_apk">ベース APK</string>
+    <string name="discovery_apps_size_splits">分割 APK</string>
+    <string name="discovery_apps_size_data_aggregate">アプリデータ（全ての場所）</string>
+    <string name="discovery_apps_size_cache_included">キャッシュ（上記に含む）</string>
+    <string name="discovery_apps_size_total">判明している合計</string>
+    <string name="discovery_apps_unreadable">読み取れません：%1$s</string>
+    <plurals name="discovery_apps_showing">
+        <item quantity="other">%2$d 個中 %1$d 個のアプリを表示</item>
+    </plurals>
+    <plurals name="discovery_apps_measured">
+        <item quantity="other">%1$d 個のアプリのサイズが判明</item>
+    </plurals>
+
+    <!-- App components and data locations -->
+    <string name="discovery_component_apk">APK ファイル</string>
+    <string name="discovery_component_internal_data">アプリのプライベートデータ</string>
+    <string name="discovery_component_external_data">Android/data フォルダ</string>
+    <string name="discovery_component_obb">OBB 拡張ファイル</string>
+    <string name="discovery_component_cache">キャッシュ</string>
+    <string name="discovery_location_ce_data">プライベートデータ</string>
+    <string name="discovery_location_de_data">デバイス保護データ</string>
+    <string name="discovery_location_cache">キャッシュ</string>
+    <string name="discovery_location_external_data">Android/data</string>
+    <string name="discovery_location_media">Android/media</string>
+    <string name="discovery_location_obb">Android/obb</string>
+
+    <!-- File categories -->
+    <string name="discovery_category_images">画像</string>
+    <string name="discovery_category_videos">動画</string>
+    <string name="discovery_category_audio">音声</string>
+    <string name="discovery_category_documents">ドキュメント</string>
+    <string name="discovery_category_archives">アーカイブ</string>
+    <string name="discovery_category_binaries">アプリとバイナリ</string>
+    <string name="discovery_category_databases">データベース</string>
+    <string name="discovery_category_configs">設定ファイル</string>
+
+    <!-- Size units (decimal, like the sizes Android shows) -->
+    <string name="discovery_unit_b">B</string>
+    <string name="discovery_unit_kb">kB</string>
+    <string name="discovery_unit_mb">MB</string>
+    <string name="discovery_unit_gb">GB</string>
+    <string name="discovery_unit_tb">TB</string>
+
+    <!-- Files: location -->
+    <string name="discovery_files_location_title">スキャン対象</string>
+    <string name="discovery_files_mode_folder">フォルダ</string>
+    <string name="discovery_files_mode_categories">カテゴリ</string>
+    <string name="discovery_files_storage_root">内部ストレージ</string>
+    <string name="discovery_files_pick_folder">フォルダを選択…</string>
+    <string name="discovery_files_no_location">上でフォルダを選ぶか、システムのピッカーで選択してください。</string>
+    <string name="discovery_files_selected">選択済み</string>
+    <string name="discovery_files_will_use">アクセス可能。次の方法で読み取ります：%1$s</string>
+    <string name="discovery_files_tier_hint">または：%1$s（動作モード）</string>
+    <string name="discovery_files_recursive">サブフォルダを含める</string>
+    <string name="discovery_files_categories_hint">標準フォルダ（DCIM、Pictures、Movies、Music、Download、Documents）から、選択した種類のファイルをスキャンします。</string>
+
+    <!-- Files: filter editor -->
+    <string name="discovery_files_filter_title">フィルタ</string>
+    <string name="discovery_files_filter_none">フィルタなし：すべてのファイルが対象</string>
+    <string name="discovery_files_filter_active">フィルタ有効</string>
+    <string name="discovery_files_include_ext">これらの拡張子のみ</string>
+    <string name="discovery_files_exclude_ext">これらの拡張子を除外</string>
+    <string name="discovery_files_ext_hint">カンマまたはスペースで区切ります（例：jpg, png, heic）</string>
+    <string name="discovery_files_min_size">最小サイズ</string>
+    <string name="discovery_files_max_size">最大サイズ</string>
+    <string name="discovery_files_modified_after">この日以降に更新</string>
+    <string name="discovery_files_modified_before">この日以前に更新</string>
+    <string name="discovery_files_any_date">任意の日付</string>
+    <string name="discovery_files_pick_date">日付を選択：%1$s</string>
+    <string name="discovery_files_include_regex">パスが一致すること（regex）</string>
+    <string name="discovery_files_exclude_regex">一致するパスを除外（regex）</string>
+    <string name="discovery_files_regex_hint">スキャン対象フォルダからの相対パスのどこかに一致</string>
+    <string name="discovery_files_default_exclusions">サムネイル、ゴミ箱、キャッシュを除外</string>
+    <string name="discovery_files_default_exclusions_hint">他のアプリの Android/data も、その内部をスキャンしない限り除外されます。</string>
+    <string name="discovery_files_reset_filter">フィルタをリセット</string>
+    <string name="discovery_files_error_number">数値を入力してください</string>
+    <string name="discovery_files_error_too_large">このサイズは大きすぎます</string>
+    <string name="discovery_files_error_dates_reversed">この日付が「この日以降」の日付より前です</string>
+
+    <!-- Files: run -->
+    <string name="discovery_files_preview_title">プレビュー</string>
+    <string name="discovery_files_run">プレビューを実行</string>
+    <string name="discovery_files_run_again">再実行</string>
+    <string name="discovery_files_need_location">先にスキャン対象を選択してください。</string>
+    <string name="discovery_files_fix_filter">プレビューを実行するには、上のフィルタのエラーを修正してください。</string>
+    <string name="discovery_files_cancelled">前回のプレビューはキャンセルされました。</string>
+    <string name="discovery_files_failed">予期しないエラーによりプレビューが停止しました。</string>
+    <string name="discovery_files_rejected">フィルタが拒否されました</string>
+    <string name="discovery_files_dirs">走査したフォルダ</string>
+    <string name="discovery_files_files">一致したファイル</string>
+    <string name="discovery_files_bytes">合計サイズ</string>
+    <string name="discovery_files_skipped">スキップした読み取り不可の項目</string>
+
+    <!-- Files: results -->
+    <string name="discovery_files_summary_title">サマリー</string>
+    <string name="discovery_files_nothing_matched">一致するファイルがありません。フィルタまたは場所を確認してください。</string>
+    <string name="discovery_files_by_category">カテゴリ別</string>
+    <string name="discovery_files_unclassified">その他のファイル</string>
+    <string name="discovery_files_top_extensions">主な拡張子</string>
+    <string name="discovery_files_no_extension">（拡張子なし）</string>
+    <string name="discovery_files_count_size">%1$s · %2$s</string>
+    <string name="discovery_files_largest">最大のファイル</string>
+    <string name="discovery_files_dates_title">最も古い／新しいファイル</string>
+    <string name="discovery_files_oldest">最も古い</string>
+    <string name="discovery_files_newest">最も新しい</string>
+    <string name="discovery_files_roots_title">スキャンした場所</string>
+    <string name="discovery_files_walker_used">読み取り方法：%1$s</string>
+    <string name="discovery_files_uncovered">対象外：%1$s</string>
+    <plurals name="discovery_files_count">
+        <item quantity="other">%1$d 個のファイル</item>
+    </plurals>
+    <plurals name="discovery_files_blocked_roots">
+        <item quantity="other">%1$d 件の場所をスキャンできませんでした</item>
+    </plurals>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">Prêt</string>
+    <string name="diag_readiness_degraded">Prêt avec avertissements</string>
+    <string name="diag_readiness_unavailable">Non disponible</string>
+    <string name="diag_mode_requires_root">Ce mode nécessite un appareil rooté avec un gestionnaire root qui accorde à DFTB l\'accès superutilisateur.</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">OK</string>
+    <string name="diag_status_warn">Avertissement</string>
+    <string name="diag_status_fail">Échec</string>
+    <string name="diag_status_info">Info</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">Accorder l\'accès Shizuku</string>
+    <string name="diag_action_open_all_files_access">Autoriser l\'accès à tous les fichiers</string>
+    <string name="diag_action_request_legacy_storage">Accorder la permission de stockage</string>
+    <string name="diag_action_request_notifications">Activer les notifications</string>
+    <string name="diag_action_open_battery_settings">Désactiver l\'optimisation de la batterie</string>
+    <string name="diag_action_install_shizuku">Installer Shizuku</string>
+    <string name="diag_action_open_root_manager">Ouvrir le gestionnaire root</string>
+    <string name="diag_action_install_companion_module">Installer le module compagnon</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">Moteur de diagnostics</string>
+    <string name="diag_probe_hint">L\'exécution des diagnostics a elle-même échoué de façon inattendue. Relancez ; si le problème persiste, partagez le journal depuis la vue d\'ensemble du système.</string>
+    <string name="diag_check_timed_out_hint">La vérification ne s\'est pas terminée à temps. Une invite superutilisateur en attente ou un service qui ne répond pas en est généralement la cause ; répondez à toute invite et relancez.</string>
+    <string name="diag_check_failed_hint">La vérification a planté avant de produire un résultat. L\'erreur brute est affichée ci-dessus.</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">Version d\'Android</string>
+    <string name="diag_all_files_access_title">Accès à tous les fichiers</string>
+    <string name="diag_all_files_access_hint">DFTB doit lire et écrire l\'ensemble du stockage partagé pour sauvegarder des fichiers et écrire des archives. Accordez l\'« accès à tous les fichiers » dans la page des paramètres système.</string>
+    <string name="diag_all_files_access_optional_hint">Non accordé. Le shell root peut quand même tout lire, mais la navigation du stockage partagé sans SAF sera indisponible.</string>
+    <string name="diag_legacy_storage_title">Permission de stockage</string>
+    <string name="diag_legacy_storage_hint">Sous Android 10, lire et écrire le stockage partagé nécessite la permission d\'exécution de stockage.</string>
+    <string name="diag_legacy_storage_optional_hint">Non accordée. Le shell root peut quand même tout lire, mais la navigation directe du stockage partagé sera indisponible.</string>
+    <string name="diag_notifications_title">Notifications</string>
+    <string name="diag_notifications_hint">Sans notifications, une sauvegarde en cours ne peut pas afficher sa progression ni signaler un échec lorsque l\'application est en arrière-plan.</string>
+    <string name="diag_saf_title">Sélecteur de documents (SAF)</string>
+    <string name="diag_saf_hint">Aucune application ne gère le sélecteur de dossiers. Les destinations sur cartes SD et clés USB ne peuvent pas être sélectionnées sur cet appareil.</string>
+    <string name="diag_battery_title">Optimisation de la batterie</string>
+    <string name="diag_battery_hint">Les sauvegardes longues sur des connexions lentes peuvent être arrêtées par Doze. Exempter DFTB maintient en vie les tâches planifiées et reprises.</string>
+    <string name="diag_free_space_title">Espace libre (stockage de l\'application)</string>
+    <string name="diag_free_space_hint">Moins de 500 Mo libres. Les archives temporaires et le journal des tâches résident ici ; libérez de l\'espace avant de sauvegarder.</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">Shizuku installé</string>
+    <string name="diag_shizuku_installed_hint">Installez Shizuku (ou Sui) et démarrez-le via le débogage sans fil ou le root, puis relancez.</string>
+    <string name="diag_shizuku_binder_title">Service Shizuku en cours d\'exécution</string>
+    <string name="diag_shizuku_binder_hint">Shizuku est installé mais son service n\'est pas en cours d\'exécution. Ouvrez l\'application Shizuku et démarrez-le, puis revenez ici.</string>
+    <string name="diag_shizuku_version_supported_title">Version de l\'API Shizuku</string>
+    <string name="diag_shizuku_version_supported_hint">Ce Shizuku est antérieur à la version 11 et ne peut pas être utilisé. Mettez Shizuku à jour.</string>
+    <string name="diag_shizuku_permission_title">Accès Shizuku accordé</string>
+    <string name="diag_shizuku_permission_hint">Autorisez DFTB dans l\'invite Shizuku. Si vous avez choisi « Ne plus demander », réactivez-le depuis la liste des applications autorisées de l\'application Shizuku.</string>
+    <string name="diag_shizuku_version_title">Version du serveur Shizuku</string>
+    <string name="diag_shizuku_uid_title">Identité Shizuku</string>
+    <string name="diag_shizuku_uid_root_hint">Shizuku s\'exécute en tant que root ; les données d\'application de chaque paquet sont accessibles.</string>
+    <string name="diag_shizuku_uid_adb_hint">Shizuku s\'exécute en tant qu\'utilisateur shell ADB ; certains répertoires de données d\'applications seront illisibles.</string>
+    <string name="diag_shizuku_selinux_title">Contexte SELinux de Shizuku</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">Binaire su</string>
+    <string name="diag_su_binary_hint">Aucun binaire su n\'est visible pour cette application. KernelSU et APatch le masquent tant que l\'accès n\'est pas accordé, donc cela seul n\'est pas un échec.</string>
+    <string name="diag_root_manager_title">Application gestionnaire root</string>
+    <string name="diag_root_manager_hint">Aucun gestionnaire Magisk, KernelSU ou APatch n\'a été détecté.</string>
+    <string name="diag_root_granted_title">Accès superutilisateur</string>
+    <string name="diag_root_granted_hint">Ouvrez votre gestionnaire root et autorisez l\'accès superutilisateur pour DFTB, puis relancez.</string>
+    <string name="diag_root_granted_shell_mount_master">root (mount master)</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">inconnu</string>
+    <string name="diag_shell_identity_title">Identité du shell</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">Implémentation du root</string>
+    <string name="diag_root_implementation_hint">Impossible d\'identifier Magisk, KernelSU ou APatch depuis le shell.</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">Introuvable dans le PATH. La copie intégrée à DFTB sera utilisée.</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">Introuvable. Entrer dans l\'espace de noms de montage global (mode root avancé) en dépend.</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">L\'accès superutilisateur n\'a pas été accordé, le module compagnon n\'a donc pas pu être inspecté.</string>
+    <string name="diag_module_installed_title">Module compagnon installé</string>
+    <string name="diag_module_installed_hint">Flashez le module compagnon DFTB depuis votre gestionnaire root et redémarrez.</string>
+    <string name="diag_module_enabled_title">Module compagnon activé</string>
+    <string name="diag_module_enabled_hint">Le module est désactivé ou programmé pour suppression. Réactivez-le dans votre gestionnaire root et redémarrez.</string>
+    <string name="diag_module_tool_rclone_title">rclone système</string>
+    <string name="diag_module_tool_busybox_title">BusyBox système</string>
+    <string name="diag_module_tool_zstd_title">zstd système</string>
+    <string name="diag_module_tool_tar_title">tar système</string>
+    <string name="diag_module_tool_missing_hint">Pas dans le PATH. Le module est installé mais ses fichiers ne sont pas encore montés ; un redémarrage résout généralement cela.</string>
+    <string name="diag_module_service_title">Script de service de démarrage</string>
+    <string name="diag_module_journal_title">Répertoire du journal de démarrage</string>
+    <string name="diag_module_journal_hint">Créé au premier démarrage après l\'installation du module ; les sauvegardes planifiées et reprises y enregistrent leur état.</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">La clé sécurisée qui protège vos identifiants enregistrés a disparu, mais des entrées chiffrées subsistent sur cet appareil. Elles ne peuvent plus être déchiffrées ; ressaisissez les identifiants concernés pour les recréer.</string>
+
+    <string name="diag_module_tool_nsenter_title">nsenter système</string>
+</resources>

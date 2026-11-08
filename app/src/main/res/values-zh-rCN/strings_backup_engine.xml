@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup engine (core/pipeline/engine): progress messages, results, failures and warnings that
+     appear in notifications, History and the live terminal. Technical detail stays in English
+     and is appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="backup_engine_planning">正在准备备份…</string>
+    <string name="backup_engine_preflight">正在检查可用空间…</string>
+    <string name="backup_engine_uploading">正在上传 %1$s…</string>
+    <string name="backup_engine_verifying">正在验证 %1$s…</string>
+    <string name="backup_engine_writing_manifest">正在写入备份索引…</string>
+
+    <!-- Results -->
+    <plurals name="backup_engine_completed">
+        <item quantity="other">已备份 %1$d 个项目。</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="other">%1$d 条警告。</item>
+    </plurals>
+    <string name="backup_engine_cancelled">备份已取消。已删除部分文件。</string>
+
+    <!-- Failures (BackupErrorCode) -->
+    <string name="backup_engine_error_no_destination">此配置文件没有目标位置。请选择备份的保存位置。</string>
+    <string name="backup_engine_error_destination_not_found">该配置文件的目标位置已不存在。</string>
+    <string name="backup_engine_error_nothing">未选择任何要备份的内容。</string>
+    <string name="backup_engine_error_sources_unavailable">在当前模式下，所选数据均无法备份。</string>
+    <string name="backup_engine_error_twrp_encryption">兼容 TWRP 的备份无法加密。请关闭加密或 TWRP 兼容性。</string>
+    <string name="backup_engine_error_masking_needs_encryption">隐藏文件名需要启用加密。请开启 AES-256-GCM 加密，或关闭名称隐藏。</string>
+    <string name="backup_engine_error_destination_space">目标位置没有足够的可用空间来存放此备份。</string>
+    <string name="backup_engine_error_staging_space">此设备没有足够的可用空间在本地准备备份。</string>
+    <string name="backup_engine_error_encryption_unsupported">暂不支持此加密模式。请使用 AES-256-GCM。</string>
+    <string name="backup_engine_error_key_missing">缺少此配置文件的加密密钥或口令。</string>
+    <string name="backup_engine_error_transfer_unsupported">所选传输模式不适用于此目标位置。</string>
+    <string name="backup_engine_error_source">无法读取部分数据。</string>
+    <string name="backup_engine_error_source_shape">某个分区源生成了多个映像。</string>
+    <string name="backup_engine_error_storage">写入目标位置失败。</string>
+    <string name="backup_engine_error_verify">已存储的文件与写入的内容不符，可能已损坏。</string>
+    <string name="backup_engine_error_manifest">无法写入备份索引。</string>
+    <string name="backup_engine_error_all_failed">备份的任何部分都未能完成。</string>
+    <string name="backup_engine_error_internal">备份因意外错误而停止。</string>
+
+    <!-- Warnings (BackupWarningCode) -->
+    <string name="backup_engine_warning_space_unknown">无法检查可用空间。</string>
+    <string name="backup_engine_warning_space_overridden">尽管可用空间不足，仍已开始。</string>
+    <string name="backup_engine_warning_format_substituted">所选格式在此不适用；已使用兼容的格式。</string>
+    <string name="backup_engine_warning_source_unavailable">已跳过：在当前模式下不可用。</string>
+    <string name="backup_engine_warning_source_partial">仅部分备份。</string>
+    <string name="backup_engine_warning_twrp_verbatim">TWRP 文件夹以未压缩且名称可读的方式存储，以便 TWRP 能够恢复。</string>
+    <string name="backup_engine_warning_twrp_not_device">TWRP 只能从设备存储或 USB 恢复。恢复前请将 TWRP 文件夹复制到那里。</string>
+    <string name="backup_engine_warning_estimate_failed">无法预先估算大小。</string>
+    <string name="backup_engine_warning_size_mismatch">数据在读取期间大小发生了变化。</string>
+    <string name="backup_engine_warning_artifact_failed">备份的这一部分失败了。</string>
+    <string name="backup_engine_warning_hash_records">无法将每个文件的校验和保存到目录中。</string>
+    <string name="backup_engine_warning_checkpoint">无法保存续传信息。</string>
+    <string name="backup_engine_warning_cleanup">无法删除一个临时文件。</string>
+    <string name="backup_engine_warning_resume_skipped">先前的尝试已完成；已跳过。</string>
+    <string name="backup_engine_error_resume_folder">要续传的备份文件夹名称无效。</string>
+    <string name="backup_engine_warning_resume_unindexed">先前已完成，但没有任何早期备份索引记录它。</string>
+    <string name="backup_engine_warning_prior_manifest">无法读取此文件夹中较早的备份索引。</string>
+</resources>

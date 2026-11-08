@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_back">رجوع</string>
+    <string name="settings_cancel">إلغاء</string>
+    <string name="settings_ok">حسنًا</string>
+    <string name="settings_retry">إعادة المحاولة</string>
+    <string name="settings_dismiss">إغلاق</string>
+    <string name="settings_save_failed">تعذّر حفظ الإعداد. حاول مرة أخرى.</string>
+    <string name="settings_unknown_section">صفحة الإعدادات هذه (\"%1$s\") غير موجودة. ارجع واختر قسمًا من القائمة.</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">عام</string>
+    <string name="settings_category_backup">النسخ الاحتياطية</string>
+    <string name="settings_category_security">الخصوصية والأمان</string>
+    <string name="settings_category_system">النظام</string>
+    <string name="settings_category_about">حول</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">اللغة</string>
+    <string name="settings_language_summary">لغة التطبيق</string>
+    <string name="settings_appearance_title">المظهر</string>
+    <string name="settings_appearance_summary">السمة والألوان</string>
+    <string name="settings_mode_title">وضع التشغيل</string>
+    <string name="settings_mode_summary">قياسي، أو Shizuku، أو الجذر، أو الوحدة المرافقة</string>
+    <string name="settings_defaults_title">الإعدادات الافتراضية للنسخ الاحتياطي</string>
+    <string name="settings_defaults_summary">الصيغة والضغط وبصمة التحقق والوجهة للملفات الجديدة</string>
+    <string name="settings_security_title">الأمان</string>
+    <string name="settings_security_summary">مفاتيح التشفير، ومفاتيح مضيفي SSH، ووجهات rclone</string>
+    <string name="settings_notifications_title">الإشعارات</string>
+    <string name="settings_notifications_summary">الإذن وقنوات الإشعارات</string>
+    <string name="settings_storage_title">التخزين والسجلات</string>
+    <string name="settings_storage_summary">الملفات المؤقتة وتصدير سجل التشخيص</string>
+    <string name="settings_about_title">حول</string>
+    <string name="settings_about_summary">الإصدار والتراخيص والشيفرة المصدرية</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">اللغة الحالية</string>
+    <string name="settings_language_current">%1$s (%2$s)</string>
+    <string name="settings_language_rtl_active">تخطيط الواجهة من اليمين إلى اليسار مفعّل لهذه اللغة.</string>
+    <string name="settings_language_scope_note">يُطبَّق فورًا على كل الشاشات والإشعارات دون إعادة تشغيل التطبيق.</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">يتبع النظام إعداد السمة الداكنة في الجهاز.</string>
+    <string name="settings_appearance_color_title">الألوان</string>
+    <string name="settings_appearance_dynamic_hint">يستخدم ألوان خلفيتك بدلًا من لوحة ألوان DFTB.</string>
+    <string name="settings_appearance_preview_title">معاينة</string>
+    <string name="settings_appearance_preview_subtitle">شكل التطبيق بهذه الإعدادات في الوضعين الفاتح والداكن.</string>
+    <string name="settings_appearance_preview_button">نسخ احتياطي الآن</string>
+    <string name="settings_appearance_preview_in_use">قيد الاستخدام</string>
+    <string name="settings_appearance_preview_cd">معاينة السمة %1$s</string>
+    <string name="settings_appearance_preview_active_cd">معاينة السمة %1$s، قيد الاستخدام حاليًا</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">غير مهيأ</string>
+    <string name="settings_mode_current_title">الوضع الحالي</string>
+    <string name="settings_mode_current_badge">الوضع الحالي</string>
+    <string name="settings_mode_selected_cd">محدد للفحص</string>
+    <string name="settings_mode_pick_hint">اختر وضعًا لفحص جاهزية هذا الجهاز له. لا يمكن التبديل إلا عند اجتياز الفحوصات المطلوبة له.</string>
+    <string name="settings_mode_jobs_running_title">هناك مهمة قيد التنفيذ</string>
+    <string name="settings_mode_jobs_running_body">لا يمكن تغيير وضع التشغيل أثناء تنفيذ نسخ احتياطي أو استعادة، لأن المهمة الجارية ستفقد الوصول إلى الأوامر التي تستخدمها. انتظر حتى تنتهي أو ألغِها أولًا.</string>
+    <string name="settings_mode_readiness">%1$s: %2$s</string>
+    <string name="settings_mode_switch_to">التبديل إلى %1$s</string>
+    <string name="settings_mode_reason_same">هذا هو الوضع الحالي.</string>
+    <string name="settings_mode_reason_no_diagnostics">بانتظار انتهاء فحوصات هذا الوضع.</string>
+    <string name="settings_mode_reason_unavailable">فشل فحص مطلوب، لذا لا يمكن استخدام هذا الوضع بعد. أصلح العناصر أعلاه وأعد تشغيل الفحوصات.</string>
+    <string name="settings_mode_blocked_jobs">غير متاح أثناء تنفيذ نسخ احتياطي أو استعادة.</string>
+    <string name="settings_mode_confirm_title">التبديل إلى %1$s؟</string>
+    <string name="settings_mode_confirm_message">سيتحول DFTB من %1$s إلى %2$s. هذا ما سيتغير:</string>
+    <string name="settings_mode_confirm_action">تبديل الوضع</string>
+    <string name="settings_mode_changed">تم تغيير وضع التشغيل إلى %1$s.</string>
+    <string name="settings_mode_effect_immediate">ستستخدم النسخ الاحتياطية والاستعادات وعمليات التشغيل المجدولة الجديدة الوضع الجديد من الآن فصاعدًا. لا تتغير ملفاتك ووجهاتك ونسخك الاحتياطية الحالية.</string>
+    <string name="settings_mode_effect_loses_partitions">صور الأقسام والنسخ الاحتياطية بنمط TWRP واستعادة الأقسام تتطلب الجذر ولن تعمل بعد الآن.</string>
+    <string name="settings_mode_effect_loses_app_data">لن يمكن قراءة بيانات التطبيقات الخاصة ومجلدات Android/data أو استعادتها؛ وستتخطى الملفات التي تتضمنها هذه العناصر أو يفشل نسخها.</string>
+    <string name="settings_mode_effect_needs_shizuku">يجب أن يعمل Shizuku عند كل نسخة احتياطية. يتوقف بعد كل إعادة تشغيل ما لم يُشغَّل مجددًا، وتفشل النسخ الاحتياطية المجدولة ما دام متوقفًا.</string>
+    <string name="settings_mode_effect_root_prompts">سيطلب مدير الجذر لديك منح DFTB صلاحية المستخدم المتميز. اسمح بها بشكل دائم لتعمل النسخ الاحتياطية المجدولة دون إشراف.</string>
+    <string name="settings_mode_effect_module_needed">يجب أن تبقى الوحدة المرافقة مثبّتة ومفعّلة في مدير الجذر لديك من أجل الأدوات على مستوى النظام وخدمة الإقلاع.</string>
+    <string name="settings_mode_effect_module_left">تبقى الوحدة المرافقة مثبّتة حتى تزيلها من مدير الجذر. ويتوقف DFTB عن نسخ سجل استئناف إعادة التشغيل إليها.</string>
+    <string name="settings_mode_effect_degraded">أعطت بعض فحوصات هذا الوضع تحذيرًا أو فشلت. قد لا تعمل الميزات التي تعتمد عليها حتى تُصلَح.</string>
+    <string name="settings_mode_shizuku_title">وصول Shizuku</string>
+    <string name="settings_mode_shizuku_subtitle">اطلب من Shizuku تفويض DFTB. يجب أن تكون خدمة Shizuku قيد التشغيل.</string>
+    <string name="settings_mode_shizuku_granted">تم منح وصول Shizuku.</string>
+    <string name="settings_mode_discovery_title">الاستكشاف</string>
+    <string name="settings_mode_discovery_subtitle">اطّلع على الأقسام والتطبيقات والمجلدات التي يستطيع هذا الوضع الوصول إليها على هذا الجهاز.</string>
+    <string name="settings_mode_discovery_open">فتح الاستكشاف</string>
+    <string name="settings_mode_module_tools_note">rclone وBusyBox غير مضمّنين في هذا الإصدار بعد، لذا تحتوي الوحدة المبنية الآن على الأدوات التي يوفرها إصدار هذا الجهاز فقط. تسرد النتيجة بدقة ما أُدرج وما هو مفقود.</string>
+    <string name="settings_mode_module_saved_as">تم الحفظ باسم %1$s</string>
+    <string name="settings_mode_module_build_failed">تعذّر إنتاج ملف الوحدة. توضح التفاصيل التقنية أدناه السبب.</string>
+    <string name="settings_mode_module_write_failed">تعذّرت كتابة الوحدة في الموقع المختار. اختر مجلدًا آخر وحاول مرة أخرى.</string>
+    <string name="settings_mode_module_details">التفاصيل التقنية</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">تبدأ ملفات النسخ الاحتياطي الجديدة بهذه الإعدادات. تحتفظ الملفات الحالية بإعداداتها الخاصة.</string>
+    <string name="settings_defaults_issues_title">بعض الإعدادات الافتراضية لم تعد صالحة</string>
+    <string name="settings_defaults_issue_format">الصيغة المحفوظة ليست صيغة أرشيف ولا يمكن أن تكون افتراضية للملف.</string>
+    <string name="settings_defaults_issue_level">مستوى الضغط المحفوظ خارج نطاق الصيغة المختارة.</string>
+    <string name="settings_defaults_issue_destination">حُذفت الوجهة الافتراضية. ستطلب الملفات الجديدة وجهة إلى أن تختار وجهة أخرى.</string>
+    <string name="settings_defaults_repair">إصلاح تلقائي</string>
+    <string name="settings_defaults_repaired">تم تصحيح الإعدادات الافتراضية.</string>
+    <string name="settings_defaults_extension">امتداد الملف: %1$s</string>
+    <string name="settings_defaults_7z_staging">يبني 7z الأرشيف كاملًا في تخزين محلي مؤقت قبل الرفع، لذا يحتاج هذا الجهاز إلى مساحة حرة تتسع للأرشيف الكامل.</string>
+    <string name="settings_defaults_level_not_applicable">%1$s لا يضغط، لذا لا يوجد مستوى للاختيار.</string>
+    <string name="settings_defaults_level_range">المستويات المسموحة لهذه الصيغة: من %1$d إلى %2$d</string>
+    <string name="settings_defaults_checksum_hint">يُستخدم للتحقق من كل عنصر بعد كتابته وقبل استعادته.</string>
+    <string name="settings_defaults_destination_title">الوجهة الافتراضية</string>
+    <string name="settings_defaults_destination_subtitle">المكان الذي ترسل إليه الملفات الجديدة نسخها الاحتياطية ما لم تختر غيره.</string>
+    <string name="settings_defaults_destination_ask">اسأل في كل مرة</string>
+    <string name="settings_defaults_destination_ask_hint">يطلب كل ملف جديد تحديد وجهة.</string>
+    <string name="settings_defaults_destination_none">لم تُعدّ أي وجهات بعد. أضف واحدة من شاشة الوجهات.</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">مفاتيح التشفير</string>
+    <string name="settings_security_keys_subtitle">مفاتيح عشوائية مخزنة في الخزنة الآمنة لهذا الجهاز. لا تغادر الجهاز أبدًا ولا تدخل في أي نسخة احتياطية.</string>
+    <string name="settings_security_keys_empty">لا توجد مفاتيح تشفير مخزنة.</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="zero">%1$d مفتاح</item>
+        <item quantity="one">مفتاح واحد</item>
+        <item quantity="two">مفتاحان</item>
+        <item quantity="few">%1$d مفاتيح</item>
+        <item quantity="many">%1$d مفتاحًا</item>
+        <item quantity="other">%1$d مفتاح</item>
+    </plurals>
+    <string name="settings_security_key_created">أُنشئ %1$s</string>
+    <string name="settings_security_key_unused">غير مستخدم في أي ملف</string>
+    <string name="settings_security_key_used_by">مستخدم في: %1$s</string>
+    <string name="settings_security_key_delete_cd">حذف المفتاح</string>
+    <string name="settings_security_key_delete_blocked_cd">حذف المفتاح (غير متاح ما دام أحد الملفات يستخدمه)</string>
+    <string name="settings_security_key_delete_title">حذف مفتاح التشفير هذا؟</string>
+    <string name="settings_security_key_delete_message">سيُمحى المفتاح %1$s من الخزنة نهائيًا.</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">كل نسخة احتياطية مشفرة بهذا المفتاح ستصبح غير قابلة للاسترداد نهائيًا، في كل وجهة.</string>
+    <string name="settings_security_key_delete_consequence_no_copy">لا توجد نسخة أخرى: المفتاح موجود فقط في خزنة هذا الجهاز، ولا يستطيع أحد إعادة إنشائه، ولا حتى مطورو DFTB.</string>
+    <string name="settings_security_key_delete_consequence_restore">ستفشل استعادة تلك النسخ الاحتياطية أو التحقق منها من الآن فصاعدًا.</string>
+    <string name="settings_security_key_delete_ack">أفهم أن النسخ الاحتياطية المشفرة بهذا المفتاح ستضيع إلى الأبد.</string>
+    <string name="settings_security_key_delete_confirm">حذف المفتاح إلى الأبد</string>
+    <string name="settings_security_key_deleted">تم حذف مفتاح التشفير.</string>
+    <string name="settings_security_key_already_gone">المفتاح لم يعد موجودًا في الخزنة أصلًا.</string>
+    <string name="settings_security_key_delete_failed">تعذّر حذف المفتاح. لم يتغير شيء.</string>
+    <string name="settings_security_key_in_use">لم يُحذف: المفتاح لا يزال مستخدمًا في %1$s. غيّر تلك الملفات أولًا.</string>
+    <string name="settings_security_key_in_use_title">المفتاح قيد الاستخدام</string>
+    <string name="settings_security_key_in_use_message">لا يمكن حذف هذا المفتاح ما دامت هذه الملفات تستخدمه. عدّلها لتستخدم مفتاحًا آخر، أو احذفها، أولًا.</string>
+    <string name="settings_security_vault_key_gone">مفتاح الجهاز الخاص بالخزنة لم يعد متاحًا، لذا لا يمكن قراءة الأسرار المخزنة على هذا الجهاز.</string>
+    <string name="settings_security_vault_keystore">مخزن مفاتيح Android الآمن غير متاح حاليًا.</string>
+    <string name="settings_security_vault_unreadable">تعذّرت قراءة الخزنة.</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">خوادم SSH الموثوقة</string>
+    <string name="settings_security_hosts_subtitle">مفاتيح المضيفين المثبتة عند أول اتصال لـ DFTB بكل خادم SFTP أو SSH.</string>
+    <string name="settings_security_hosts_empty">لم يُتصل بأي خادم SSH بعد.</string>
+    <string name="settings_security_hosts_unreadable">ملف الخوادم الموثوقة غير قابل للقراءة أو تالف. تُرفض اتصالات SSH إلى أن يُصلَح، للحماية من الخوادم المنتحلة.</string>
+    <string name="settings_security_hosts_tofu_note">يُرفض دائمًا أي خادم يقدم مفتاحًا مختلفًا. انسَ الخادم فقط إذا كنت تعلم أن مفتاحه غُيّر عمدًا.</string>
+    <string name="settings_security_host_forget">نسيان</string>
+    <string name="settings_security_host_forget_title">نسيان مفتاح هذا الخادم؟</string>
+    <string name="settings_security_host_forget_message">سيُزال المفتاح المثبت لـ %1$s.</string>
+    <string name="settings_security_host_forget_consequence_repin">سيثق الاتصال التالي بأي مفتاح يقدمه الخادم ويثبّته من جديد.</string>
+    <string name="settings_security_host_forget_consequence_verify">إذا كان أحدهم ينتحل شخصية الخادم في تلك اللحظة، فسيثق DFTB به. تحقق من البصمة الجديدة مع مسؤول الخادم.</string>
+    <string name="settings_security_host_forget_confirm">نسيان المفتاح</string>
+    <string name="settings_security_host_forgotten">تم نسيان مفتاح %1$s.</string>
+    <string name="settings_security_host_already_gone">لم يعد ذلك الخادم في القائمة.</string>
+    <string name="settings_security_host_unparsable">لا يمكن إزالة هذا الإدخال من هنا لأن عنوان خادمه مشوّه.</string>
+    <string name="settings_security_hosts_write_failed">تعذّر تحديث ملف الخوادم الموثوقة. لم يتغير شيء.</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">وجهات rclone</string>
+    <string name="settings_security_rclone_subtitle">تُخزَّن تعريفات الوجهات السحابية مختومة في الخزنة.</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">الوصول إلى الإشعارات</string>
+    <string name="settings_notifications_permission_not_required">لا يطلب إصدار Android هذا إذنًا للإشعارات.</string>
+    <string name="settings_notifications_permission_granted">تم منح إذن الإشعارات.</string>
+    <string name="settings_notifications_permission_denied">تم رفض إذن الإشعارات. لن تظهر تنبيهات تقدم المهام والفشل.</string>
+    <string name="settings_notifications_app_enabled">الإشعارات مفعّلة لـ DFTB.</string>
+    <string name="settings_notifications_app_disabled">الإشعارات متوقفة لـ DFTB في إعدادات النظام.</string>
+    <string name="settings_notifications_open_settings">فتح إعدادات الإشعارات</string>
+    <string name="settings_notifications_channels_title">الفئات</string>
+    <string name="settings_notifications_channels_subtitle">يمكن كتم كل فئة على حدة من إعدادات النظام.</string>
+    <string name="settings_notifications_channel_on">مفعّلة</string>
+    <string name="settings_notifications_channel_blocked">محظورة</string>
+    <string name="settings_notifications_channel_missing">لم تُنشأ بعد</string>
+    <string name="settings_notifications_channel_open">الإعدادات</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">الملفات المؤقتة</string>
+    <string name="settings_storage_cache_subtitle">المساحة التي يستخدمها DFTB على هذا الجهاز أثناء بناء النسخ الاحتياطية وقراءتها.</string>
+    <string name="settings_storage_staging">منطقة تجهيز الأرشيف</string>
+    <string name="settings_storage_other_cache">ملفات مؤقتة أخرى</string>
+    <string name="settings_storage_total_cache">الإجمالي</string>
+    <string name="settings_storage_staging_hint">تحتفظ منطقة التجهيز بأرشيفات 7z والتدفقات مجهولة الحجم أثناء بنائها. يمكن مسح المخلّفات من مهمة منقطعة بأمان.</string>
+    <string name="settings_storage_clear_staging">مسح منطقة التجهيز</string>
+    <string name="settings_storage_clear_all">مسح كل الملفات المؤقتة</string>
+    <string name="settings_storage_recalculate">إعادة الحساب</string>
+    <string name="settings_storage_clear_blocked">لا يمكن مسح الملفات المؤقتة أثناء تنفيذ نسخ احتياطي أو استعادة.</string>
+    <string name="settings_storage_clear_staging_title">مسح منطقة تجهيز الأرشيف؟</string>
+    <string name="settings_storage_clear_all_title">مسح كل الملفات المؤقتة؟</string>
+    <string name="settings_storage_clear_staging_consequence">ستُحذف الأرشيفات المبنية جزئيًا وملفات التخزين المؤقت التي خلّفتها المهام المنقطعة.</string>
+    <string name="settings_storage_clear_all_consequence">ستُحذف كل ذاكرة DFTB المؤقتة: منطقة التجهيز وملفات التخزين المؤقت وملفات السجل التي شوركت سابقًا.</string>
+    <string name="settings_storage_clear_backups_safe">لا تُمس نسخك الاحتياطية في وجهاتها ولا ملفاتك ولا إعداداتك.</string>
+    <string name="settings_storage_clear_confirm">مسح</string>
+    <string name="settings_storage_cleared">تم مسح الملفات المؤقتة.</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="zero">تم مسح الملفات المؤقتة؛ تعذّرت إزالة %1$s عنصر (قد تعود إلى مساعد الجذر).</item>
+        <item quantity="one">تم مسح الملفات المؤقتة؛ تعذّرت إزالة عنصر واحد (قد يعود إلى مساعد الجذر).</item>
+        <item quantity="two">تم مسح الملفات المؤقتة؛ تعذّرت إزالة عنصرين (قد يعودان إلى مساعد الجذر).</item>
+        <item quantity="few">تم مسح الملفات المؤقتة؛ تعذّرت إزالة %1$s عناصر (قد تعود إلى مساعد الجذر).</item>
+        <item quantity="many">تم مسح الملفات المؤقتة؛ تعذّرت إزالة %1$s عنصرًا (قد تعود إلى مساعد الجذر).</item>
+        <item quantity="other">تم مسح الملفات المؤقتة؛ تعذّرت إزالة %1$s عنصر (قد تعود إلى مساعد الجذر).</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">تعذّر مسح الملفات المؤقتة.</string>
+    <string name="settings_storage_log_title">سجل التشخيص</string>
+    <string name="settings_storage_log_subtitle">النشاط الأخير المسجل في الذاكرة منذ بدء التطبيق. مفيد لتقارير الأخطاء.</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="zero">لم يُسجَّل أي سطر (%1$d)</item>
+        <item quantity="one">سُجّل سطر واحد</item>
+        <item quantity="two">سُجّل سطران</item>
+        <item quantity="few">سُجّلت %1$d أسطر</item>
+        <item quantity="many">سُجّل %1$d سطرًا</item>
+        <item quantity="other">سُجّل %1$d سطر</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">قد يحتوي السجل على مسارات ملفات وأسماء وجهات وعناوين خوادم. صُمم DFTB ليتجنب تسجيل كلمات المرور أو المفاتيح أو الرموز. راجعه قبل مشاركته علنًا.</string>
+    <string name="settings_storage_log_share">مشاركة</string>
+    <string name="settings_storage_log_save">حفظ في ملف</string>
+    <string name="settings_storage_log_share_title">مشاركة سجل DFTB</string>
+    <string name="settings_storage_log_saved">تم حفظ السجل.</string>
+    <string name="settings_storage_log_export_failed">تعذّر تصدير السجل.</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">نسخ احتياطي لأندرويد، مفتوح المصدر ومفوَّض من المستخدم.</string>
+    <string name="settings_about_version_value">%1$s (%2$d)</string>
+    <string name="settings_about_sources_title">الشيفرة المصدرية للمشاريع المذكورة</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="zero">%1$d مشروع</item>
+        <item quantity="one">مشروع واحد</item>
+        <item quantity="two">مشروعان</item>
+        <item quantity="few">%1$d مشاريع</item>
+        <item quantity="many">%1$d مشروعًا</item>
+        <item quantity="other">%1$d مشروع</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">فتح مستودع المصدر لـ %1$s</string>
+    <string name="settings_storage_measure_failed">تعذّر قياس حجم ذاكرة التخزين المؤقت.</string>
+    <string name="settings_storage_measure_retry">إعادة المحاولة</string>
+</resources>

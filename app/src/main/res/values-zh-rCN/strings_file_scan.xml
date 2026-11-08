@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File discovery (core/discovery/files): filter validation, access blockers, warnings, walkers.
+     Mapped from enums/sealed types by FileScanText. -->
+<resources>
+
+    <!-- FilterProblem -->
+    <string name="file_scan_problem_include_regex">包含模式不是有效的正则表达式：%1$s</string>
+    <string name="file_scan_problem_exclude_regex">排除模式不是有效的正则表达式：%1$s</string>
+    <string name="file_scan_problem_negative_min">最小大小不能为负数。</string>
+    <string name="file_scan_problem_negative_max">最大大小不能为负数。</string>
+    <string name="file_scan_problem_size_inverted">最小大小大于最大大小。</string>
+    <string name="file_scan_problem_date_empty">“修改时间不早于”的日期必须早于“修改时间不晚于”的日期。</string>
+    <string name="file_scan_problem_extension_conflict">这些扩展名同时被包含和排除：%1$s</string>
+
+    <!-- BlockReason -->
+    <string name="file_scan_block_all_files">此文件夹需要“所有文件访问权限”，或使用 Shizuku/Root 模式。</string>
+    <string name="file_scan_block_media_permission">请允许访问照片、视频或音频以扫描此文件夹。</string>
+    <string name="file_scan_block_non_media">文档和其他非媒体文件需要“所有文件访问权限”，或使用 Shizuku/Root 模式。</string>
+    <string name="file_scan_block_app_sandbox">其他应用的 Android/data 和 Android/obb 文件夹只能在 Shizuku 或 Root 模式下读取。</string>
+    <string name="file_scan_block_root">此位置只能在 Root 模式下读取。</string>
+    <string name="file_scan_block_not_readable">应用无法读取此位置。请尝试 Shizuku 或 Root 模式。</string>
+    <string name="file_scan_block_saf">已失去对此文件夹的访问权限。请重新选择该文件夹。</string>
+
+    <!-- RootProblem -->
+    <string name="file_scan_root_not_found">文件夹不存在。</string>
+    <string name="file_scan_root_not_readable">无法读取该文件夹。</string>
+    <string name="file_scan_root_not_directory">该位置不是文件夹。</string>
+    <string name="file_scan_root_tool_failed">扫描工具在当前模式下失败。</string>
+
+    <!-- ScanWarning -->
+    <string name="file_scan_warning_partial_media">只能看到你选择的照片和视频。请允许完全访问以包含全部内容。</string>
+    <string name="file_scan_warning_find_exit">特权扫描以错误结束；结果可能不完整。</string>
+    <string name="file_scan_warning_unparseable">无法从扫描输出中读取某些文件名（例如包含换行符的名称）。</string>
+    <string name="file_scan_warning_find_unsupported">设备 shell 没有可用的 \"find\" 命令。</string>
+
+    <!-- AccessRequirement -->
+    <string name="file_scan_req_all_files">授予“所有文件访问权限”</string>
+    <string name="file_scan_req_permission">授予媒体权限</string>
+    <string name="file_scan_req_shizuku">切换到 Shizuku 或 Root 模式</string>
+    <string name="file_scan_req_root">切换到 Root 模式</string>
+    <string name="file_scan_req_saf">重新选择文件夹</string>
+
+    <!-- WalkerKind -->
+    <string name="file_scan_walker_nio">直接文件访问</string>
+    <string name="file_scan_walker_saf">存储访问框架</string>
+    <string name="file_scan_walker_find">特权 shell（find）</string>
+    <string name="file_scan_walker_media_store">媒体库</string>
+
+</resources>

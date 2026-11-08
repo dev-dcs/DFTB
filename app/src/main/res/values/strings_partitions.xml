@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition discovery (core/discovery/partition): categories, risk levels, views, scan
+     availability, scan warnings and target resolution failures. -->
+<resources>
+
+    <!-- Views -->
+    <string name="partition_view_standard">Standard</string>
+    <string name="partition_view_standard_summary">The partitions most people back up: boot images, verified-boot data, modem and device identity.</string>
+    <string name="partition_view_advanced">Advanced</string>
+    <string name="partition_view_advanced_summary">Every partition on the device, including logical system partitions. Review each risk label before selecting.</string>
+
+    <!-- Slots -->
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">Not slotted</string>
+    <string name="partition_slot_active_marker">Active</string>
+
+    <!-- Categories -->
+    <string name="partition_category_boot_chain">Boot chain</string>
+    <string name="partition_category_firmware">Firmware</string>
+    <string name="partition_category_modem">Modem</string>
+    <string name="partition_category_userdata">User data</string>
+    <string name="partition_category_system_logical">System (logical)</string>
+    <string name="partition_category_persist_identity">Device identity and calibration</string>
+    <string name="partition_category_other">Other</string>
+
+    <!-- Risk -->
+    <string name="partition_risk_safe">Safe to image</string>
+    <string name="partition_risk_huge">Very large</string>
+    <string name="partition_risk_huge_summary">This partition is many gigabytes. Make sure the destination has enough space.</string>
+    <string name="partition_risk_critical">Unique to this device</string>
+    <string name="partition_risk_critical_summary">Holds identity or calibration data (IMEI, radio, keys). Keep this backup safe and never restore it to a different device.</string>
+    <string name="partition_logical_badge">Logical</string>
+
+    <!-- Unavailable -->
+    <string name="partition_unavailable_root_required">Partition backups need Root mode. Switch to Root mode in Settings to scan partitions.</string>
+    <string name="partition_unavailable_root_not_granted">Root access is not granted right now. Grant superuser access to DFTB and scan again.</string>
+    <string name="partition_unavailable_scan_failed">The partition scan could not run. Try again.</string>
+    <string name="partition_unavailable_none_found">No partitions were found on this device.</string>
+
+    <!-- Warnings -->
+    <string name="partition_warning_no_by_name">No by-name partition directory was found; only logical partitions are listed.</string>
+    <string name="partition_warning_by_name_conflict">Some partition names point to different devices in different directories: %1$s</string>
+    <string name="partition_warning_sizes_incomplete">The size of some partitions could not be read: %1$s</string>
+    <string name="partition_warning_active_slot_unknown">This is an A/B device, but the active slot could not be determined.</string>
+    <string name="partition_warning_dm_names_unavailable">This device uses dynamic partitions, but their logical names could not be read.</string>
+    <string name="partition_warning_script_partial">The scan reported errors; the list may be incomplete.</string>
+    <string name="partition_warning_unresolved_links">Some partition links could not be resolved: %1$s</string>
+
+    <!-- Resolution failures -->
+    <string name="partition_resolution_not_found">Partition %1$s does not exist on this device.</string>
+    <string name="partition_resolution_active_slot_unknown">Cannot choose a slot for %1$s because the active slot is unknown.</string>
+    <string name="partition_resolution_slot_missing">The requested slot of %1$s is not present on this device.</string>
+
+    <!-- Scan status -->
+    <string name="partition_scan_rescan">Scan again</string>
+</resources>

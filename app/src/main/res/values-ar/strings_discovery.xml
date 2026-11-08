@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Discovery hub UI (ui/discovery): partitions, installed apps and file-scan preview tabs.
+     Engine-level messages live in strings_partitions.xml, strings_apps.xml and
+     strings_file_scan.xml and are reused, not duplicated. -->
+<resources>
+
+    <!-- Hub -->
+    <string name="discovery_title">الاستكشاف</string>
+    <string name="discovery_back">رجوع</string>
+    <string name="discovery_entry_subtitle">اطّلع على الأقسام والتطبيقات والملفات التي يتيح لك هذا الجهاز نسخها احتياطيًا عبر DFTB قبل إنشاء ملف تعريف.</string>
+    <string name="discovery_entry_open">فتح الاستكشاف</string>
+    <string name="discovery_tab_partitions">الأقسام</string>
+    <string name="discovery_tab_apps">التطبيقات</string>
+    <string name="discovery_tab_files">الملفات</string>
+
+    <!-- Shared -->
+    <string name="discovery_yes">نعم</string>
+    <string name="discovery_no">لا</string>
+    <string name="discovery_unknown">غير معروف</string>
+    <string name="discovery_not_applicable">غير منطبق</string>
+    <string name="discovery_unavailable">غير متاح</string>
+    <string name="discovery_cancel">إلغاء</string>
+    <string name="discovery_ok">موافق</string>
+    <string name="discovery_clear">مسح</string>
+    <string name="discovery_retry">إعادة المحاولة</string>
+    <string name="discovery_scanned_at">تم المسح %1$s</string>
+    <string name="discovery_warnings_title">تحذيرات (%1$d)</string>
+    <string name="discovery_size_unknown">الحجم غير معروف</string>
+    <string name="discovery_size_not_measured">لم يُقَس</string>
+    <string name="discovery_size_not_measurable">لا يمكن قياسه في هذا الوضع</string>
+
+    <!-- Tiers -->
+    <string name="discovery_tier_standard">قياسي</string>
+    <string name="discovery_tier_shizuku">Shizuku</string>
+    <string name="discovery_tier_root">Root</string>
+
+    <!-- Partitions -->
+    <string name="discovery_partitions_unavailable_title">تعذّر سرد الأقسام</string>
+    <string name="discovery_partitions_header_title">تخطيط الأقسام</string>
+    <string name="discovery_partitions_ab">A/B (تحديثات سلسة)</string>
+    <string name="discovery_partitions_active_slot">الـ slot النشط</string>
+    <string name="discovery_partitions_dynamic">الأقسام الديناميكية</string>
+    <string name="discovery_partitions_virtual_ab">A/B افتراضي</string>
+    <string name="discovery_partitions_count">الأقسام التي عُثر عليها</string>
+    <string name="discovery_partitions_warnings_subtitle">ملاحظات أثناء المسح؛ قد تكون القائمة ناقصة.</string>
+    <string name="discovery_partitions_empty_view">لا توجد أقسام في هذا العرض. بدّل إلى «متقدم» لرؤية كل الأقسام.</string>
+    <string name="discovery_partitions_slot_active">%1$s · %2$s</string>
+
+    <!-- Apps -->
+    <string name="discovery_apps_limited_title">قد تكون بعض التطبيقات مخفية</string>
+    <string name="discovery_apps_usage_title">يلزم الوصول إلى بيانات الاستخدام لعرض أحجام البيانات</string>
+    <string name="discovery_apps_usage_body">في الوضع القياسي لا يبلغ Android عن أحجام بيانات التطبيقات إلا للتطبيقات التي لديها وصول إلى بيانات الاستخدام. بدونه تُعرض أحجام APK فقط.</string>
+    <string name="discovery_apps_usage_open">فتح الإعدادات</string>
+    <string name="discovery_apps_availability_title">ما الذي يمكن نسخه احتياطيًا</string>
+    <string name="discovery_apps_availability_subtitle">في وضع %1$s</string>
+    <string name="discovery_apps_measure_title">أحجام التطبيقات</string>
+    <string name="discovery_apps_measure_subtitle">يقرأ القياس حجم كل تطبيق في القائمة وقد يستغرق بعض الوقت.</string>
+    <string name="discovery_apps_measure">قياس الأحجام</string>
+    <string name="discovery_apps_measure_again">إعادة القياس</string>
+    <string name="discovery_apps_measure_progress">تم قياس %1$d من %2$d تطبيقًا</string>
+    <string name="discovery_apps_and_more">%1$s و%2$d أخرى</string>
+    <string name="discovery_apps_search">بحث في التطبيقات</string>
+    <string name="discovery_apps_filter_user">المستخدم</string>
+    <string name="discovery_apps_filter_system">النظام</string>
+    <string name="discovery_apps_filter_updated">النظام المحدَّث</string>
+    <string name="discovery_apps_filter_split">APK مقسَّم</string>
+    <string name="discovery_apps_filter_obb">يحتوي على OBB</string>
+    <string name="discovery_apps_sort">الترتيب حسب</string>
+    <string name="discovery_apps_sort_name">الاسم</string>
+    <string name="discovery_apps_sort_size">الحجم</string>
+    <string name="discovery_apps_sort_updated">تاريخ التحديث</string>
+    <string name="discovery_apps_refresh">إعادة تحميل القائمة</string>
+    <string name="discovery_apps_disabled">معطّل</string>
+    <string name="discovery_apps_version">الإصدار</string>
+    <string name="discovery_apps_version_value">%1$s (%2$d)</string>
+    <string name="discovery_apps_target_sdk">SDK المستهدف</string>
+    <string name="discovery_apps_installed">تاريخ التثبيت</string>
+    <string name="discovery_apps_updated">آخر تحديث</string>
+    <string name="discovery_apps_installer">مثبّت بواسطة</string>
+    <string name="discovery_apps_splits">الأجزاء المقسّمة</string>
+    <string name="discovery_apps_breakdown">تفصيل الحجم</string>
+    <string name="discovery_apps_breakdown_none">اضغط «قياس الأحجام» لمعرفة المساحة التي يستخدمها هذا التطبيق.</string>
+    <string name="discovery_apps_size_apk">APK الأساسي</string>
+    <string name="discovery_apps_size_splits">ملفات APK المقسّمة</string>
+    <string name="discovery_apps_size_data_aggregate">بيانات التطبيق (كل المواقع)</string>
+    <string name="discovery_apps_size_cache_included">ذاكرة التخزين المؤقت (مشمولة أعلاه)</string>
+    <string name="discovery_apps_size_total">الإجمالي المعروف</string>
+    <string name="discovery_apps_unreadable">تعذّرت القراءة: %1$s</string>
+    <plurals name="discovery_apps_showing">
+        <item quantity="zero">عرض %1$d من %2$d تطبيق</item>
+        <item quantity="one">عرض %1$d من %2$d تطبيق</item>
+        <item quantity="two">عرض %1$d من %2$d تطبيق</item>
+        <item quantity="few">عرض %1$d من %2$d تطبيقات</item>
+        <item quantity="many">عرض %1$d من %2$d تطبيقًا</item>
+        <item quantity="other">عرض %1$d من %2$d تطبيق</item>
+    </plurals>
+    <plurals name="discovery_apps_measured">
+        <item quantity="zero">الأحجام معروفة لـ %1$d تطبيق</item>
+        <item quantity="one">الأحجام معروفة لتطبيق %1$d</item>
+        <item quantity="two">الأحجام معروفة لـ %1$d تطبيقين</item>
+        <item quantity="few">الأحجام معروفة لـ %1$d تطبيقات</item>
+        <item quantity="many">الأحجام معروفة لـ %1$d تطبيقًا</item>
+        <item quantity="other">الأحجام معروفة لـ %1$d تطبيق</item>
+    </plurals>
+
+    <!-- App components and data locations -->
+    <string name="discovery_component_apk">ملفات APK</string>
+    <string name="discovery_component_internal_data">بيانات التطبيق الخاصة</string>
+    <string name="discovery_component_external_data">مجلد Android/data</string>
+    <string name="discovery_component_obb">ملفات OBB الإضافية</string>
+    <string name="discovery_component_cache">ذاكرة التخزين المؤقت</string>
+    <string name="discovery_location_ce_data">البيانات الخاصة</string>
+    <string name="discovery_location_de_data">البيانات المحمية بالجهاز</string>
+    <string name="discovery_location_cache">ذاكرة التخزين المؤقت</string>
+    <string name="discovery_location_external_data">Android/data</string>
+    <string name="discovery_location_media">Android/media</string>
+    <string name="discovery_location_obb">Android/obb</string>
+
+    <!-- File categories -->
+    <string name="discovery_category_images">الصور</string>
+    <string name="discovery_category_videos">مقاطع الفيديو</string>
+    <string name="discovery_category_audio">الصوت</string>
+    <string name="discovery_category_documents">المستندات</string>
+    <string name="discovery_category_archives">الأرشيفات</string>
+    <string name="discovery_category_binaries">التطبيقات والملفات التنفيذية</string>
+    <string name="discovery_category_databases">قواعد البيانات</string>
+    <string name="discovery_category_configs">ملفات الإعدادات</string>
+
+    <!-- Size units (decimal, like the sizes Android shows) -->
+    <string name="discovery_unit_b">B</string>
+    <string name="discovery_unit_kb">kB</string>
+    <string name="discovery_unit_mb">MB</string>
+    <string name="discovery_unit_gb">GB</string>
+    <string name="discovery_unit_tb">TB</string>
+
+    <!-- Files: location -->
+    <string name="discovery_files_location_title">ما الذي سيُمسح</string>
+    <string name="discovery_files_mode_folder">مجلد</string>
+    <string name="discovery_files_mode_categories">الفئات</string>
+    <string name="discovery_files_storage_root">التخزين الداخلي</string>
+    <string name="discovery_files_pick_folder">اختيار مجلد…</string>
+    <string name="discovery_files_no_location">اختر مجلدًا أعلاه أو اخترْه بأداة الاختيار الخاصة بالنظام.</string>
+    <string name="discovery_files_selected">المحدد</string>
+    <string name="discovery_files_will_use">يمكن الوصول إليه. سيُقرأ بواسطة: %1$s</string>
+    <string name="discovery_files_tier_hint">أو: %1$s (وضع التشغيل)</string>
+    <string name="discovery_files_recursive">تضمين المجلدات الفرعية</string>
+    <string name="discovery_files_categories_hint">يمسح المجلدات القياسية (DCIM وPictures وMovies وMusic وDownload وDocuments) بحثًا عن ملفات الأنواع المختارة.</string>
+
+    <!-- Files: filter editor -->
+    <string name="discovery_files_filter_title">عامل التصفية</string>
+    <string name="discovery_files_filter_none">بدون تصفية: تطابق كل الملفات</string>
+    <string name="discovery_files_filter_active">التصفية مفعّلة</string>
+    <string name="discovery_files_include_ext">هذه الامتدادات فقط</string>
+    <string name="discovery_files_exclude_ext">تخطي هذه الامتدادات</string>
+    <string name="discovery_files_ext_hint">افصل بفواصل أو مسافات، مثال: jpg, png, heic</string>
+    <string name="discovery_files_min_size">الحجم الأدنى</string>
+    <string name="discovery_files_max_size">الحجم الأقصى</string>
+    <string name="discovery_files_modified_after">عُدّل في أو بعد</string>
+    <string name="discovery_files_modified_before">عُدّل في أو قبل</string>
+    <string name="discovery_files_any_date">أي تاريخ</string>
+    <string name="discovery_files_pick_date">اختيار التاريخ: %1$s</string>
+    <string name="discovery_files_include_regex">يجب أن يطابق المسار (regex)</string>
+    <string name="discovery_files_exclude_regex">تخطي المسارات المطابقة (regex)</string>
+    <string name="discovery_files_regex_hint">تتم المطابقة في أي موضع من المسار النسبي للمجلد الممسوح</string>
+    <string name="discovery_files_default_exclusions">تخطي الصور المصغّرة وسلة المحذوفات وذاكرات التخزين المؤقت</string>
+    <string name="discovery_files_default_exclusions_hint">يتخطى أيضًا Android/data الخاص بالتطبيقات الأخرى ما لم تمسح داخله.</string>
+    <string name="discovery_files_reset_filter">إعادة ضبط التصفية</string>
+    <string name="discovery_files_error_number">أدخل رقمًا</string>
+    <string name="discovery_files_error_too_large">هذا الحجم كبير جدًا</string>
+    <string name="discovery_files_error_dates_reversed">هذا التاريخ أسبق من تاريخ «في أو بعد»</string>
+
+    <!-- Files: run -->
+    <string name="discovery_files_preview_title">المعاينة</string>
+    <string name="discovery_files_run">تشغيل المعاينة</string>
+    <string name="discovery_files_run_again">تشغيل مرة أخرى</string>
+    <string name="discovery_files_need_location">اختر ما سيُمسح أولًا.</string>
+    <string name="discovery_files_fix_filter">أصلح أخطاء التصفية أعلاه لتشغيل المعاينة.</string>
+    <string name="discovery_files_cancelled">أُلغيت المعاينة الأخيرة.</string>
+    <string name="discovery_files_failed">توقفت المعاينة بسبب خطأ غير متوقع.</string>
+    <string name="discovery_files_rejected">رُفضت التصفية</string>
+    <string name="discovery_files_dirs">المجلدات التي تمت زيارتها</string>
+    <string name="discovery_files_files">الملفات المطابقة</string>
+    <string name="discovery_files_bytes">الحجم الإجمالي</string>
+    <string name="discovery_files_skipped">العناصر غير القابلة للقراءة التي تم تخطيها</string>
+
+    <!-- Files: results -->
+    <string name="discovery_files_summary_title">الملخص</string>
+    <string name="discovery_files_nothing_matched">لا توجد ملفات مطابقة. تحقق من التصفية أو الموقع.</string>
+    <string name="discovery_files_by_category">حسب الفئة</string>
+    <string name="discovery_files_unclassified">ملفات أخرى</string>
+    <string name="discovery_files_top_extensions">أكثر الامتدادات شيوعًا</string>
+    <string name="discovery_files_no_extension">(بدون امتداد)</string>
+    <string name="discovery_files_count_size">%1$s · %2$s</string>
+    <string name="discovery_files_largest">أكبر الملفات</string>
+    <string name="discovery_files_dates_title">الأقدم والأحدث</string>
+    <string name="discovery_files_oldest">الأقدم</string>
+    <string name="discovery_files_newest">الأحدث</string>
+    <string name="discovery_files_roots_title">المواقع الممسوحة</string>
+    <string name="discovery_files_walker_used">طريقة القراءة: %1$s</string>
+    <string name="discovery_files_uncovered">غير مشمول: %1$s</string>
+    <plurals name="discovery_files_count">
+        <item quantity="zero">%1$d ملف</item>
+        <item quantity="one">ملف واحد</item>
+        <item quantity="two">ملفان</item>
+        <item quantity="few">%1$d ملفات</item>
+        <item quantity="many">%1$d ملفًا</item>
+        <item quantity="other">%1$d ملف</item>
+    </plurals>
+    <plurals name="discovery_files_blocked_roots">
+        <item quantity="zero">تعذّر مسح %1$d موقع</item>
+        <item quantity="one">تعذّر مسح موقع واحد</item>
+        <item quantity="two">تعذّر مسح موقعين</item>
+        <item quantity="few">تعذّر مسح %1$d مواقع</item>
+        <item quantity="many">تعذّر مسح %1$d موقعًا</item>
+        <item quantity="other">تعذّر مسح %1$d موقع</item>
+    </plurals>
+</resources>

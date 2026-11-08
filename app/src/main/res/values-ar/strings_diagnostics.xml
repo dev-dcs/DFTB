@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">جاهز</string>
+    <string name="diag_readiness_degraded">جاهز مع تحذيرات</string>
+    <string name="diag_readiness_unavailable">غير متاح</string>
+    <string name="diag_mode_requires_root">يتطلب هذا الوضع جهازًا مُروَّتًا مع مدير روت يمنح DFTB وصول المستخدم الفائق.</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">سليم</string>
+    <string name="diag_status_warn">تحذير</string>
+    <string name="diag_status_fail">فشل</string>
+    <string name="diag_status_info">معلومات</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">منح وصول Shizuku</string>
+    <string name="diag_action_open_all_files_access">السماح بالوصول إلى كل الملفات</string>
+    <string name="diag_action_request_legacy_storage">منح إذن التخزين</string>
+    <string name="diag_action_request_notifications">تفعيل الإشعارات</string>
+    <string name="diag_action_open_battery_settings">تعطيل تحسين البطارية</string>
+    <string name="diag_action_install_shizuku">تثبيت Shizuku</string>
+    <string name="diag_action_open_root_manager">فتح مدير الروت</string>
+    <string name="diag_action_install_companion_module">تثبيت الوحدة المصاحبة</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">محرك التشخيصات</string>
+    <string name="diag_probe_hint">فشل تشغيل التشخيصات نفسه على نحو غير متوقع. أعد التشغيل؛ وإذا استمر ذلك، فشارك السجل من نظرة عامة على النظام.</string>
+    <string name="diag_check_timed_out_hint">لم ينتهِ الفحص في الوقت المحدّد. عادةً ما يكون السبب طلب صلاحيات المستخدم الفائق معلّقًا أو خدمة غير مستجيبة؛ أجب عن أي طلب وأعد التشغيل.</string>
+    <string name="diag_check_failed_hint">تعطّل الفحص قبل إنتاج نتيجة. الخطأ الخام معروض أعلاه.</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">إصدار Android</string>
+    <string name="diag_all_files_access_title">الوصول إلى كل الملفات</string>
+    <string name="diag_all_files_access_hint">يجب أن يقرأ DFTB ويكتب التخزين المشترك بالكامل لنسخ الملفات احتياطيًا ولكتابة الأرشيفات. امنح \"الوصول إلى كل الملفات\" في صفحة إعدادات النظام.</string>
+    <string name="diag_all_files_access_optional_hint">غير ممنوح. لا يزال بإمكان صدفة الروت قراءة كل شيء، لكن تصفّح التخزين المشترك دون SAF سيكون غير متاح.</string>
+    <string name="diag_legacy_storage_title">إذن التخزين</string>
+    <string name="diag_legacy_storage_hint">على Android 10، تتطلب قراءة التخزين المشترك والكتابة إليه إذن التخزين في وقت التشغيل.</string>
+    <string name="diag_legacy_storage_optional_hint">غير ممنوح. لا يزال بإمكان صدفة الروت قراءة كل شيء، لكن التصفّح المباشر للتخزين المشترك سيكون غير متاح.</string>
+    <string name="diag_notifications_title">الإشعارات</string>
+    <string name="diag_notifications_hint">بدون الإشعارات لا يمكن للنسخ الاحتياطي الجاري إظهار التقدّم أو الإبلاغ عن فشل بينما يكون التطبيق في الخلفية.</string>
+    <string name="diag_saf_title">منتقي المستندات (SAF)</string>
+    <string name="diag_saf_hint">لا يوجد تطبيق يتولى منتقي المجلدات. لا يمكن تحديد الوجهات على بطاقات SD ومحركات USB على هذا الجهاز.</string>
+    <string name="diag_battery_title">تحسين البطارية</string>
+    <string name="diag_battery_hint">قد تُنهى النسخ الاحتياطية الطويلة عبر الاتصالات البطيئة بواسطة وضع Doze. يُبقي إعفاء DFTB المهام المجدولة والمستأنَفة قيد التشغيل.</string>
+    <string name="diag_free_space_title">المساحة الحرة (تخزين التطبيق)</string>
+    <string name="diag_free_space_hint">أقل من 500 ميجابايت حرة. تعيش الأرشيفات المؤقتة وسجل المهام هنا؛ حرّر بعض المساحة قبل النسخ الاحتياطي.</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">Shizuku مُثبّت</string>
+    <string name="diag_shizuku_installed_hint">ثبّت Shizuku (أو Sui) وابدأه عبر تصحيح الأخطاء اللاسلكي أو الروت، ثم أعد التشغيل.</string>
+    <string name="diag_shizuku_binder_title">خدمة Shizuku قيد التشغيل</string>
+    <string name="diag_shizuku_binder_hint">‏Shizuku مُثبّت لكن خدمته لا تعمل. افتح تطبيق Shizuku وابدأه، ثم عُد إلى هنا.</string>
+    <string name="diag_shizuku_version_supported_title">إصدار واجهة Shizuku البرمجية</string>
+    <string name="diag_shizuku_version_supported_hint">إصدار Shizuku هذا أقدم من الإصدار 11 ولا يمكن استخدامه. حدّث Shizuku.</string>
+    <string name="diag_shizuku_permission_title">وصول Shizuku ممنوح</string>
+    <string name="diag_shizuku_permission_hint">اسمح لـ DFTB في طلب Shizuku. إذا اخترت \"عدم السؤال مرة أخرى\"، فأعد تفعيله من قائمة التطبيقات المصرّح لها في تطبيق Shizuku.</string>
+    <string name="diag_shizuku_version_title">إصدار خادم Shizuku</string>
+    <string name="diag_shizuku_uid_title">هوية Shizuku</string>
+    <string name="diag_shizuku_uid_root_hint">‏Shizuku يعمل بصلاحية الروت؛ بيانات التطبيقات لكل حزمة قابلة للوصول.</string>
+    <string name="diag_shizuku_uid_adb_hint">‏Shizuku يعمل بصلاحية مستخدم صدفة ADB؛ ستتعذّر قراءة بعض أدلة بيانات التطبيقات.</string>
+    <string name="diag_shizuku_selinux_title">سياق SELinux لـ Shizuku</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">ثنائي su</string>
+    <string name="diag_su_binary_hint">لا يوجد ثنائي su مرئي لهذا التطبيق. يُخفيه KernelSU وAPatch حتى يُمنح الوصول، لذا لا يُعدّ هذا وحده فشلًا.</string>
+    <string name="diag_root_manager_title">تطبيق مدير الروت</string>
+    <string name="diag_root_manager_hint">لم يُكتشف أي مدير Magisk أو KernelSU أو APatch.</string>
+    <string name="diag_root_granted_title">وصول المستخدم الفائق</string>
+    <string name="diag_root_granted_hint">افتح مدير الروت لديك واسمح بوصول المستخدم الفائق لـ DFTB، ثم أعد التشغيل.</string>
+    <string name="diag_root_granted_shell_mount_master">‏root (mount master)</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">غير معروف</string>
+    <string name="diag_shell_identity_title">هوية الصدفة</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">تنفيذ الروت</string>
+    <string name="diag_root_implementation_hint">تعذّر تحديد Magisk أو KernelSU أو APatch من الصدفة.</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">غير موجود في PATH. ستُستخدم النسخة المضمّنة مع DFTB.</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">غير موجود. يعتمد عليه الدخول إلى مجال التركيب العام (وضع الروت المتقدم).</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">لم يُمنح وصول المستخدم الفائق، لذا تعذّر فحص الوحدة المصاحبة.</string>
+    <string name="diag_module_installed_title">الوحدة المصاحبة مُثبّتة</string>
+    <string name="diag_module_installed_hint">افلش وحدة DFTB المصاحبة من مدير الروت لديك وأعد التشغيل.</string>
+    <string name="diag_module_enabled_title">الوحدة المصاحبة مُفعّلة</string>
+    <string name="diag_module_enabled_hint">الوحدة معطّلة أو مجدولة للإزالة. أعد تفعيلها في مدير الروت لديك وأعد التشغيل.</string>
+    <string name="diag_module_tool_rclone_title">‏rclone على مستوى النظام</string>
+    <string name="diag_module_tool_busybox_title">‏BusyBox على مستوى النظام</string>
+    <string name="diag_module_tool_zstd_title">‏zstd على مستوى النظام</string>
+    <string name="diag_module_tool_tar_title">‏tar على مستوى النظام</string>
+    <string name="diag_module_tool_missing_hint">غير موجود في PATH. الوحدة مُثبّتة لكن ملفاتها غير مُركَّبة بعد؛ وعادةً ما تصلح إعادة التشغيل ذلك.</string>
+    <string name="diag_module_service_title">نص خدمة الإقلاع</string>
+    <string name="diag_module_journal_title">دليل سجل الإقلاع</string>
+    <string name="diag_module_journal_hint">يُنشأ عند أول إقلاع بعد تثبيت الوحدة؛ تسجّل النسخ الاحتياطية المجدولة والمستأنَفة حالتها هنا.</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">المفتاح الآمن الذي يحمي بيانات اعتمادك المحفوظة اختفى، لكن المُدخَلات المشفّرة لا تزال على هذا الجهاز. لم يعد من الممكن فك تشفيرها؛ أعد إدخال بيانات الاعتماد المتأثرة لإعادة إنشائها.</string>
+
+    <string name="diag_module_tool_nsenter_title">‏nsenter على مستوى النظام</string>
+</resources>

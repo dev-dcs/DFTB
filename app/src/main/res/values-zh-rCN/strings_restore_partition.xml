@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition restore (core/restore/partition) and TWRP/OrangeFox import (core/restore/twrp). -->
+<resources>
+
+    <!-- Environment and target resolution -->
+    <string name="partition_restore_root_required">恢复分区需要 Root 模式并已授予超级用户权限。</string>
+    <string name="partition_restore_scan_failed">无法读取此设备的分区布局（%1$s）。</string>
+    <string name="partition_restore_not_partition_artifact">%1$s 不是分区映像。</string>
+    <string name="partition_restore_slot_device_not_ab">%1$s 是从 A/B slot 制作的映像，但此设备没有 slot。</string>
+    <string name="partition_restore_slot_unknown">此设备未报告其活动 slot，因此无法为 %1$s 选择目标 slot。</string>
+    <string name="partition_restore_not_found">此设备上不存在名为 %1$s 的分区。</string>
+    <string name="partition_restore_slot_missing">此设备上存在 %1$s，但不在所请求的 slot 中。非活动 slot 的逻辑分区仅在更新期间映射；请在 recovery 或 fastbootd 中恢复。</string>
+    <string name="partition_restore_slot_layout">%1$s 是从无 slot 的分区制作的映像，但在此设备上解析为 A/B slot。</string>
+    <string name="partition_restore_probe_failed">写入前无法检查 %1$s，因此未写入任何内容。</string>
+
+    <!-- Safety gates: %1$s = partition, %2$s = technical detail -->
+    <string name="partition_gate_device_mismatch">%1$s 是在另一台设备（%2$s）上制作的映像。在此写入可能导致此设备无法启动。</string>
+    <string name="partition_gate_build_mismatch">%1$s 是在不同的软件版本（%2$s）上制作的映像。请确认以恢复来自其他版本的映像。</string>
+    <string name="partition_gate_cross_slot">%1$s 将被写入与其制作映像时不同的 slot。请确认以跨 slot 写入。</string>
+    <string name="partition_gate_image_smaller">%1$s 的映像小于分区（%2$s 字节）。请确认以保持分区其余部分不变。</string>
+    <string name="partition_gate_critical_identity">%1$s 保存设备独有的标识或校准数据。恢复错误的副本可能永久损坏基带、IMEI 或 DRM。请确认以写入。</string>
+    <string name="partition_gate_image_larger">%1$s 的映像大于分区（%2$s 字节），无法写入。</string>
+    <string name="partition_gate_target_size_unknown">无法读取 %1$s 的确切大小，因此拒绝写入。</string>
+    <string name="partition_gate_not_block_device">%1$s（%2$s）不是块设备。</string>
+    <string name="partition_gate_live_system">%1$s 正被运行中的系统使用。请改为在 recovery（TWRP / OrangeFox）或 fastboot 中恢复。</string>
+    <string name="partition_gate_mounted">%1$s 已挂载（%2$s）。请先卸载，或在 recovery 中恢复。</string>
+    <string name="partition_gate_swap">%1$s 正用作交换空间。</string>
+    <string name="partition_gate_held">%1$s 正被 %2$s（device-mapper）使用。请在 recovery 中恢复。</string>
+    <string name="partition_gate_snapshot">%1$s 是虚拟 A/B 快照设备，绝不是恢复目标。</string>
+    <string name="partition_gate_read_only">%1$s 是只读的。</string>
+    <string name="partition_gate_overridden">已确认覆盖：%1$s</string>
+
+    <!-- Writing and verification -->
+    <string name="partition_restore_item_verifying_image">正在检查 %1$s 的映像</string>
+    <string name="partition_restore_item_writing">正在写入 %1$s</string>
+    <string name="partition_restore_item_reading_back">正在设备上验证 %1$s</string>
+    <string name="partition_restore_image_digest_mismatch">%1$s 的映像与其记录的校验和不符。未写入任何内容。</string>
+    <string name="partition_restore_image_read_failed">无法读取 %1$s 的映像（%2$s）。未写入任何内容。</string>
+    <string name="partition_restore_no_reference_digest">未记录 %1$s 的校验和；将对照从备份读取的映像进行验证。</string>
+    <string name="partition_restore_refused_by_helper">在写入任何数据之前，对 %1$s 的写入已被拒绝（%2$s）。</string>
+    <string name="partition_restore_partial_write">写入 %1$s 在 %2$s 字节后失败（%3$s）。该分区现在只写入了一部分。在正确恢复之前请勿重启，例如通过 recovery 或 fastboot 恢复。</string>
+    <string name="partition_restore_source_changed">写入期间 %1$s 的映像发生了变化。该分区包含未经验证的数据；请在重启前再次恢复。</string>
+    <string name="partition_restore_readback_mismatch">回读的 %1$s 与映像不符（预期 %2$s，实际读取 %3$s）。该分区包含已损坏的数据；请在重启前再次恢复。</string>
+    <string name="partition_restore_readback_failed">%1$s 已写入，但无法回读验证（%2$s）。</string>
+
+    <!-- TWRP / OrangeFox import -->
+    <string name="twrp_folder_not_found">在 %1$s 未找到 TWRP 备份。</string>
+    <string name="twrp_encrypted_unsupported">%1$s 已用 TWRP 备份密码加密。DFTB 无法解密 TWRP 加密的备份；请在 TWRP 中恢复。</string>
+    <string name="twrp_filesystem_restore_refused">%1$s 是 /%2$s 基于文件的备份。无法在运行中的 Android 上原地恢复；请在 recovery（TWRP / OrangeFox）中恢复，或将其文件解压到某个文件夹。</string>
+    <string name="twrp_split_image_unsupported">%1$s 是拆分为多个文件的原始映像，TWRP 从不生成这种映像，因此不会恢复。</string>
+    <string name="twrp_not_raw_image">%1$s 不是原始分区映像。</string>
+    <string name="twrp_not_archive">%1$s 是原始分区映像，不是文件归档。</string>
+    <string name="twrp_unknown_format">%1$s 既不是 tar 归档，也不是 gzip 压缩的 tar 归档，无法解压。</string>
+    <string name="twrp_sidecar_mismatch">%1$s 与其校验和文件 %2$s 不符。未写入任何内容。</string>
+    <string name="twrp_sidecar_missing">%1$s 没有校验和文件，因此只能在写入后验证。</string>
+    <string name="twrp_sidecar_unreadable">无法读取校验和文件 %1$s。</string>
+    <string name="twrp_split_gap">拆分归档 %1$s 不完整：缺少第 %2$s 部分。</string>
+    <string name="twrp_extract_skipped_links">%2$s 中有 %1$d 个链接或特殊文件未被解压（该文件夹无法存储它们）。</string>
+    <string name="twrp_extract_unsafe_entries">%2$s 中有 %1$d 个路径不安全的条目已被跳过。</string>
+    <string name="twrp_extract_digest_mismatch">%1$s 与其校验和文件 %2$s 不符；解压出的文件可能已损坏。</string>
+    <string name="twrp_extract_failed">解压 %1$s 失败（%2$s）。</string>
+    <string name="twrp_read_failed">无法读取 %1$s（%2$s）。</string>
+</resources>

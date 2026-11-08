@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the systemless companion-module builder and the reboot-resume flow.
+  Kept in their own file per project convention (new user-facing strings never go in strings.xml).
+  English base; translations live in the per-locale values-* variants.
+-->
+<resources>
+    <!-- Builder screen -->
+    <string name="companion_builder_title">Companion module</string>
+    <string name="companion_builder_subtitle">Build a systemless Magisk/KernelSU module that bundles DFTB\'s command-line tools and a reboot-resume boot service.</string>
+    <string name="companion_builder_build_action">Build module ZIP</string>
+    <string name="companion_builder_building">Building module…</string>
+    <string name="companion_builder_share_action">Share ZIP</string>
+    <string name="companion_builder_flash_hint">After building, flash the ZIP in Magisk, KernelSU or APatch, then reboot.</string>
+
+    <!-- Build results -->
+    <string name="companion_result_complete">Module built: %1$s</string>
+    <string name="companion_result_partial">Module built with %1$d tool(s) missing</string>
+    <string name="companion_result_failed">Could not build the companion module</string>
+    <string name="companion_result_size">Size: %1$s</string>
+    <string name="companion_result_included_tools">Included tools: %1$s</string>
+    <string name="companion_result_missing_tools">Missing tools: %1$s</string>
+    <string name="companion_result_no_tools">No command-line tools were available for this device\'s architecture.</string>
+
+    <!-- Reboot-resume -->
+    <string name="companion_resume_title">Resuming interrupted jobs</string>
+    <string name="companion_resume_pending">Waiting to resume after reboot</string>
+    <string name="companion_resume_found">%1$d interrupted job(s) ready to resume</string>
+    <string name="companion_resume_none">No interrupted jobs to resume</string>
+
+    <!-- Compatibility notes shown next to the build button -->
+    <string name="companion_requires_magisk">Requires Magisk v20.4 or newer, or a compatible KernelSU/APatch install.</string>
+    <string name="companion_requires_root">Installing a systemless module requires root (Magisk, KernelSU or APatch).</string>
+</resources>

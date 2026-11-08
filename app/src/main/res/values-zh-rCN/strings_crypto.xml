@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup encryption and checksums (core/pipeline/crypto, core/pipeline/checksum): user-facing
+     explanations of CipherIntegrityException.Reason and CipherKeyUnavailableException.Reason,
+     mapped by labelRes() in CipherErrorLabels.kt. Technical detail stays in exception messages. -->
+<resources>
+
+    <!-- CipherIntegrityException.Reason -->
+    <string name="crypto_reason_wrong_key">口令或密钥错误。无法解锁此备份。</string>
+    <string name="crypto_reason_key_type_mismatch">此备份使用了不同类型的密钥加密（口令与已保存密钥）。</string>
+    <string name="crypto_reason_tampered">加密备份已损坏或被修改。</string>
+    <string name="crypto_reason_truncated">加密备份不完整，缺少末尾部分。</string>
+    <string name="crypto_reason_trailing_data">加密备份末尾有意外的多余数据。</string>
+    <string name="crypto_reason_bad_header">此文件不是 DFTB 加密备份，或其文件头已损坏。</string>
+    <string name="crypto_reason_insufficient_memory">此设备没有足够内存来解锁此备份。</string>
+    <string name="crypto_reason_unsupported_version">此备份由更新版本的应用加密。</string>
+
+    <!-- CipherKeyUnavailableException.Reason -->
+    <string name="crypto_key_not_found">此设备上没有该备份已保存的加密密钥。</string>
+    <string name="crypto_key_invalid_entry">已保存的加密密钥已损坏，或不是加密密钥。</string>
+    <string name="crypto_key_vault_error">无法读取安全密钥存储。</string>
+
+    <!-- Checksum verification -->
+    <string name="checksum_verified">校验和已验证（%1$s）。</string>
+    <string name="checksum_mismatch">校验和不匹配（%1$s）。该文件与备份时的内容不同。</string>
+    <string name="checksum_sidecar_missing">未找到此备份的校验和文件。</string>
+    <string name="checksum_sidecar_malformed">无法读取校验和文件。</string>
+</resources>

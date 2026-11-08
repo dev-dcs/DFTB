@@ -1,0 +1,28 @@
+# Build output
+build/
+.gradle/
+local.properties
+*.apk
+*.aab
+*.dex
+.kotlin/
+
+# Signing: keystore.properties.example is the only committed signing file.
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+
+# IDE
+.idea/
+*.iml
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Filled by scripts/fetch_prebuilts.sh
+app/src/main/jniLibs/
+.prebuilts-cache/

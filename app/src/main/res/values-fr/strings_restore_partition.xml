@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="partition_restore_root_required">La restauration de partitions nécessite le mode Root avec l\'accès superutilisateur accordé.</string>
+    <string name="partition_restore_scan_failed">Impossible de lire la disposition des partitions de cet appareil (%1$s).</string>
+    <string name="partition_restore_not_partition_artifact">%1$s n\'est pas une image de partition.</string>
+    <string name="partition_restore_slot_device_not_ab">%1$s a été imagé depuis un slot A/B, mais cet appareil n\'a pas de slots.</string>
+    <string name="partition_restore_slot_unknown">Cet appareil n\'a pas indiqué son slot actif, le slot cible pour %1$s ne peut donc pas être choisi.</string>
+    <string name="partition_restore_not_found">Aucune partition nommée %1$s n\'existe sur cet appareil.</string>
+    <string name="partition_restore_slot_missing">%1$s existe sur cet appareil, mais pas dans le slot demandé. Les partitions logiques du slot inactif ne sont mappées que pendant une mise à jour ; restaurez-la depuis recovery ou fastbootd.</string>
+    <string name="partition_restore_slot_layout">%1$s a été imagé depuis une partition sans slots, mais correspond à un slot A/B sur cet appareil.</string>
+    <string name="partition_restore_probe_failed">Impossible d\'inspecter %1$s avant l\'écriture, rien n\'a donc été écrit.</string>
+    <string name="partition_gate_device_mismatch">%1$s a été imagé sur un autre appareil (%2$s). L\'écrire ici peut empêcher cet appareil de démarrer.</string>
+    <string name="partition_gate_build_mismatch">%1$s a été imagé sur une autre version logicielle (%2$s). Confirmez pour restaurer une image d\'une autre version.</string>
+    <string name="partition_gate_cross_slot">%1$s serait écrit dans un autre slot que celui dont il a été imagé. Confirmez pour changer de slot.</string>
+    <string name="partition_gate_image_smaller">L\'image de %1$s est plus petite que la partition (%2$s octets). Confirmez pour laisser le reste de la partition inchangé.</string>
+    <string name="partition_gate_critical_identity">%1$s contient des données d\'identité ou d\'étalonnage propres à l\'appareil. Restaurer la mauvaise copie peut casser définitivement la radio, l\'IMEI ou le DRM. Confirmez pour l\'écrire.</string>
+    <string name="partition_gate_image_larger">L\'image de %1$s est plus grande que la partition (%2$s octets) et ne peut pas être écrite.</string>
+    <string name="partition_gate_target_size_unknown">Impossible de lire la taille exacte de %1$s, l\'écriture est donc refusée.</string>
+    <string name="partition_gate_not_block_device">%1$s (%2$s) n\'est pas un périphérique bloc.</string>
+    <string name="partition_gate_live_system">%1$s est utilisé par le système en cours d\'exécution. Restaurez-le plutôt depuis recovery (TWRP / OrangeFox) ou fastboot.</string>
+    <string name="partition_gate_mounted">%1$s est monté (%2$s). Démontez-le d\'abord, ou restaurez-le depuis recovery.</string>
+    <string name="partition_gate_swap">%1$s est utilisé comme swap.</string>
+    <string name="partition_gate_held">%1$s est utilisé par %2$s (device-mapper). Restaurez-le depuis recovery.</string>
+    <string name="partition_gate_snapshot">%1$s est un périphérique d\'instantané A/B virtuel et n\'est jamais une cible de restauration.</string>
+    <string name="partition_gate_read_only">%1$s est en lecture seule.</string>
+    <string name="partition_gate_overridden">Contournement confirmé : %1$s</string>
+    <string name="partition_restore_item_verifying_image">Vérification de l\'image de %1$s</string>
+    <string name="partition_restore_item_writing">Écriture de %1$s</string>
+    <string name="partition_restore_item_reading_back">Vérification de %1$s sur l\'appareil</string>
+    <string name="partition_restore_image_digest_mismatch">L\'image de %1$s ne correspond pas à sa somme de contrôle enregistrée. Rien n\'a été écrit.</string>
+    <string name="partition_restore_image_read_failed">Impossible de lire l\'image de %1$s (%2$s). Rien n\'a été écrit.</string>
+    <string name="partition_restore_no_reference_digest">Aucune somme de contrôle n\'a été enregistrée pour %1$s ; elle est vérifiée par rapport à l\'image lue depuis la sauvegarde.</string>
+    <string name="partition_restore_refused_by_helper">L\'écriture vers %1$s a été refusée avant l\'écriture de toute donnée (%2$s).</string>
+    <string name="partition_restore_partial_write">L\'écriture de %1$s a échoué après %2$s octets (%3$s). La partition est maintenant partiellement écrite. Ne redémarrez pas avant qu\'elle ait été correctement restaurée, par exemple depuis recovery ou fastboot.</string>
+    <string name="partition_restore_source_changed">L\'image de %1$s a changé pendant l\'écriture. La partition contient des données non vérifiées ; restaurez-la à nouveau avant de redémarrer.</string>
+    <string name="partition_restore_readback_mismatch">La relecture de %1$s ne correspond pas à l\'image (attendu %2$s, lu %3$s). La partition contient des données endommagées ; restaurez-la à nouveau avant de redémarrer.</string>
+    <string name="partition_restore_readback_failed">%1$s a été écrit mais n\'a pas pu être relu pour vérification (%2$s).</string>
+    <string name="twrp_folder_not_found">Aucune sauvegarde TWRP trouvée à %1$s.</string>
+    <string name="twrp_encrypted_unsupported">%1$s est chiffré avec un mot de passe de sauvegarde TWRP. DFTB ne peut pas déchiffrer les sauvegardes chiffrées par TWRP ; restaurez-le depuis TWRP.</string>
+    <string name="twrp_filesystem_restore_refused">%1$s est une sauvegarde par fichiers de /%2$s. Elle ne peut pas être restaurée sur place depuis Android en cours d\'exécution ; restaurez-la depuis recovery (TWRP / OrangeFox), ou extrayez ses fichiers dans un dossier.</string>
+    <string name="twrp_split_image_unsupported">%1$s est une image brute divisée en plusieurs fichiers, ce que TWRP ne produit jamais ; elle n\'est donc pas restaurée.</string>
+    <string name="twrp_not_raw_image">%1$s n\'est pas une image brute de partition.</string>
+    <string name="twrp_not_archive">%1$s est une image brute de partition, pas une archive de fichiers.</string>
+    <string name="twrp_unknown_format">%1$s n\'est ni une archive tar ni une archive tar compressée gzip et ne peut pas être extrait.</string>
+    <string name="twrp_sidecar_mismatch">%1$s ne correspond pas à son fichier de somme de contrôle %2$s. Rien n\'a été écrit.</string>
+    <string name="twrp_sidecar_missing">%1$s n\'a pas de fichier de somme de contrôle, il ne peut donc être vérifié qu\'après l\'écriture.</string>
+    <string name="twrp_sidecar_unreadable">Impossible de lire le fichier de somme de contrôle %1$s.</string>
+    <string name="twrp_split_gap">L\'archive fractionnée %1$s est incomplète : la partie %2$s est manquante.</string>
+    <string name="twrp_extract_skipped_links">%1$d liens ou fichiers spéciaux de %2$s n\'ont pas été extraits (le dossier ne peut pas les stocker).</string>
+    <string name="twrp_extract_unsafe_entries">%1$d entrées de %2$s avec des chemins dangereux ont été ignorées.</string>
+    <string name="twrp_extract_digest_mismatch">%1$s ne correspond pas à son fichier de somme de contrôle %2$s ; les fichiers extraits peuvent être endommagés.</string>
+    <string name="twrp_extract_failed">Échec de l\'extraction de %1$s (%2$s).</string>
+    <string name="twrp_read_failed">Impossible de lire %1$s (%2$s).</string>
+
+</resources>

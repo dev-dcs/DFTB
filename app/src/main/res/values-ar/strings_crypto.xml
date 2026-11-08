@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup encryption and checksums (core/pipeline/crypto, core/pipeline/checksum): user-facing
+     explanations of CipherIntegrityException.Reason and CipherKeyUnavailableException.Reason,
+     mapped by labelRes() in CipherErrorLabels.kt. Technical detail stays in exception messages. -->
+<resources>
+
+    <!-- CipherIntegrityException.Reason -->
+    <string name="crypto_reason_wrong_key">عبارة المرور أو المفتاح غير صحيح. تعذّر فتح النسخة الاحتياطية.</string>
+    <string name="crypto_reason_key_type_mismatch">شُفِّرت هذه النسخة الاحتياطية بنوع مختلف من المفاتيح (عبارة مرور مقابل مفتاح محفوظ).</string>
+    <string name="crypto_reason_tampered">النسخة الاحتياطية المشفرة تالفة أو عُدّلت.</string>
+    <string name="crypto_reason_truncated">النسخة الاحتياطية المشفرة غير مكتملة؛ نهايتها مفقودة.</string>
+    <string name="crypto_reason_trailing_data">تحتوي النسخة الاحتياطية المشفرة على بيانات زائدة غير متوقعة في نهايتها.</string>
+    <string name="crypto_reason_bad_header">هذا الملف ليس نسخة احتياطية مشفرة من DFTB، أو أن ترويسته تالفة.</string>
+    <string name="crypto_reason_insufficient_memory">لا يملك هذا الجهاز ذاكرة كافية لفتح هذه النسخة الاحتياطية.</string>
+    <string name="crypto_reason_unsupported_version">شُفِّرت هذه النسخة الاحتياطية بإصدار أحدث من التطبيق.</string>
+
+    <!-- CipherKeyUnavailableException.Reason -->
+    <string name="crypto_key_not_found">مفتاح التشفير المحفوظ لهذه النسخة الاحتياطية غير موجود على هذا الجهاز.</string>
+    <string name="crypto_key_invalid_entry">مفتاح التشفير المحفوظ تالف أو ليس مفتاح تشفير.</string>
+    <string name="crypto_key_vault_error">تعذّرت قراءة مخزن المفاتيح الآمن.</string>
+
+    <!-- Checksum verification -->
+    <string name="checksum_verified">تم التحقق من المجموع الاختباري (%1$s).</string>
+    <string name="checksum_mismatch">المجموع الاختباري غير مطابق (%1$s). الملف يختلف عمّا تم نسخه.</string>
+    <string name="checksum_sidecar_missing">لم يُعثر على ملف المجموع الاختباري لهذه النسخة الاحتياطية.</string>
+    <string name="checksum_sidecar_malformed">تعذّرت قراءة ملف المجموع الاختباري.</string>
+</resources>

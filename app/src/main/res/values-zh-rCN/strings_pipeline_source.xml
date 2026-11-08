@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup sources (core/pipeline/source): why a source cannot run, and what it had to leave out. -->
+<resources>
+
+    <!-- Source unavailable -->
+    <string name="pipeline_source_unavailable_root_required">备份的这一部分需要 Root 模式。请在设置中将运行模式切换为 Root。</string>
+    <string name="pipeline_source_unavailable_root_not_granted">已选择 Root 模式，但当前未授予超级用户权限。请在 root 管理器中授予 DFTB root 权限后重试。</string>
+    <string name="pipeline_source_unavailable_nothing_selected">配置文件的这一部分没有要备份的内容。</string>
+    <string name="pipeline_source_unavailable_invalid_filter">此配置文件中的文件筛选无效。请编辑配置文件并修正高亮的筛选。</string>
+    <string name="pipeline_source_unavailable_scan_failed">文件扫描未完成，因此无法选择任何文件。</string>
+
+    <!-- Source warnings (%1$s = partition, package, folder or count) -->
+    <string name="pipeline_source_warn_partition_unresolved">此设备上未找到分区 %1$s（或无法确定其 slot），已跳过。</string>
+    <string name="pipeline_source_warn_partition_size_unknown">分区 %1$s 的大小未知；无法预先检查其映像是否完整。</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s 未安装（或对 DFTB 不可见），已跳过。</string>
+    <string name="pipeline_source_warn_app_invalid_package">“%1$s”不是有效的包名，已跳过。</string>
+    <string name="pipeline_source_warn_app_component_unavailable">在当前运行模式下无法捕获 %1$s，已跳过。</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">无法读取 %1$s 的某个 APK 文件，已跳过。</string>
+    <string name="pipeline_source_warn_files_truncated">匹配的文件超过了一次运行所能备份的数量；仅包含前 %1$s 个。</string>
+    <string name="pipeline_source_warn_files_root_blocked">在当前模式下无法读取 %1$s，已跳过。</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">扫描期间有 %1$s 个文件或文件夹无法读取，未被包含。</string>
+    <string name="pipeline_source_warn_nandroid_plan">%1$s 无法包含在兼容 TWRP 的备份中（见详情）。</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">无法列出 %1$s 的部分条目；TWRP 备份可能不完整。</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">归档 %1$s 时，部分文件被 Android 删除；它们不在 TWRP 备份中。</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">此 Android 版本的 tar 无法在 %1$s 归档内存储 SELinux 标签；标签改为保存在单独的清单中。</string>
+</resources>

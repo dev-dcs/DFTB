@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pipeline_source_unavailable_root_required">Esta parte de la copia de seguridad requiere el modo Root. Cambia el modo de funcionamiento a Root en Ajustes.</string>
+    <string name="pipeline_source_unavailable_root_not_granted">El modo Root está seleccionado pero el acceso de superusuario no está concedido ahora mismo. Concede root a DFTB en tu gestor de root e inténtalo de nuevo.</string>
+    <string name="pipeline_source_unavailable_nothing_selected">No hay nada que respaldar para esta parte del perfil.</string>
+    <string name="pipeline_source_unavailable_invalid_filter">Un filtro de archivos de este perfil no es válido. Edita el perfil y corrige el filtro resaltado.</string>
+    <string name="pipeline_source_unavailable_scan_failed">El análisis de archivos no terminó, por lo que no se pudo seleccionar ningún archivo.</string>
+    <string name="pipeline_source_warn_partition_unresolved">La partición %1$s no se encontró en este dispositivo (o no se pudo determinar su slot) y se omitió.</string>
+    <string name="pipeline_source_warn_partition_size_unknown">Se desconoce el tamaño de la partición %1$s; no se puede comprobar de antemano que su imagen esté completa.</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s no está instalada (o DFTB no puede verla) y se omitió.</string>
+    <string name="pipeline_source_warn_app_invalid_package">\"%1$s\" no es un nombre de paquete válido y se omitió.</string>
+    <string name="pipeline_source_warn_app_component_unavailable">%1$s no se puede capturar en el modo de funcionamiento actual y se omitió.</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">No se pudo leer un archivo APK de %1$s y se omitió.</string>
+    <string name="pipeline_source_warn_files_truncated">Coinciden más archivos de los que se pueden respaldar en una ejecución; solo se incluyen los primeros %1$s.</string>
+    <string name="pipeline_source_warn_files_root_blocked">%1$s no se pudo leer en el modo actual y se omitió.</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">No se pudieron leer %1$s archivos o carpetas durante el análisis y no se incluyen.</string>
+    <string name="pipeline_source_warn_nandroid_plan">%1$s no se puede incluir en la copia compatible con TWRP (consulta los detalles).</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">No se pudieron listar algunas entradas de %1$s; la copia TWRP puede estar incompleta.</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">Android eliminó algunos archivos mientras se archivaba %1$s; no están en la copia TWRP.</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">El tar de esta versión de Android no puede guardar etiquetas SELinux dentro de los archivos %1$s; las etiquetas se guardan en una lista aparte.</string>
+
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_back">Back</string>
+    <string name="settings_cancel">Cancel</string>
+    <string name="settings_ok">OK</string>
+    <string name="settings_retry">Retry</string>
+    <string name="settings_dismiss">Dismiss</string>
+    <string name="settings_save_failed">The setting could not be saved. Try again.</string>
+    <string name="settings_unknown_section">This settings page (\"%1$s\") does not exist. Go back and pick a section from the list.</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">General</string>
+    <string name="settings_category_backup">Backups</string>
+    <string name="settings_category_security">Privacy and security</string>
+    <string name="settings_category_system">System</string>
+    <string name="settings_category_about">About</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">Language</string>
+    <string name="settings_language_summary">App language</string>
+    <string name="settings_appearance_title">Appearance</string>
+    <string name="settings_appearance_summary">Theme and colors</string>
+    <string name="settings_mode_title">Operating mode</string>
+    <string name="settings_mode_summary">Standard, Shizuku, root or companion module</string>
+    <string name="settings_defaults_title">Backup defaults</string>
+    <string name="settings_defaults_summary">Format, compression, checksum and destination for new profiles</string>
+    <string name="settings_security_title">Security</string>
+    <string name="settings_security_summary">Encryption keys, SSH host keys, rclone remotes</string>
+    <string name="settings_notifications_title">Notifications</string>
+    <string name="settings_notifications_summary">Permission and notification channels</string>
+    <string name="settings_storage_title">Storage and logs</string>
+    <string name="settings_storage_summary">Temporary files and diagnostic log export</string>
+    <string name="settings_about_title">About</string>
+    <string name="settings_about_summary">Version, licenses and source code</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">Current language</string>
+    <string name="settings_language_current">%1$s (%2$s)</string>
+    <string name="settings_language_rtl_active">Right-to-left layout is active for this language.</string>
+    <string name="settings_language_scope_note">Applies instantly to every screen and to notifications, without restarting the app.</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">System follows the device\'s dark theme setting.</string>
+    <string name="settings_appearance_color_title">Colors</string>
+    <string name="settings_appearance_dynamic_hint">Uses colors from your wallpaper instead of the DFTB palette.</string>
+    <string name="settings_appearance_preview_title">Preview</string>
+    <string name="settings_appearance_preview_subtitle">How the app looks with these settings in light and dark.</string>
+    <string name="settings_appearance_preview_button">Back up now</string>
+    <string name="settings_appearance_preview_in_use">In use</string>
+    <string name="settings_appearance_preview_cd">%1$s theme preview</string>
+    <string name="settings_appearance_preview_active_cd">%1$s theme preview, currently in use</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">Not configured</string>
+    <string name="settings_mode_current_title">Current mode</string>
+    <string name="settings_mode_current_badge">Current mode</string>
+    <string name="settings_mode_selected_cd">Selected for checking</string>
+    <string name="settings_mode_pick_hint">Select a mode to check this device for it. Switching is only possible when its required checks pass.</string>
+    <string name="settings_mode_jobs_running_title">A job is running</string>
+    <string name="settings_mode_jobs_running_body">The operating mode cannot be changed while a backup or restore is in progress, because the running job would lose access to the commands it is using. Wait for it to finish or cancel it first.</string>
+    <string name="settings_mode_readiness">%1$s: %2$s</string>
+    <string name="settings_mode_switch_to">Switch to %1$s</string>
+    <string name="settings_mode_reason_same">This is the current mode.</string>
+    <string name="settings_mode_reason_no_diagnostics">Waiting for the checks of this mode to finish.</string>
+    <string name="settings_mode_reason_unavailable">A required check failed, so this mode cannot be used yet. Fix the items above and re-run the checks.</string>
+    <string name="settings_mode_blocked_jobs">Not available while a backup or restore is running.</string>
+    <string name="settings_mode_confirm_title">Switch to %1$s?</string>
+    <string name="settings_mode_confirm_message">DFTB will change from %1$s to %2$s. This is what changes:</string>
+    <string name="settings_mode_confirm_action">Switch mode</string>
+    <string name="settings_mode_changed">Operating mode changed to %1$s.</string>
+    <string name="settings_mode_effect_immediate">New backups, restores and scheduled runs use the new mode from now on. Your profiles, destinations and existing backups are not changed.</string>
+    <string name="settings_mode_effect_loses_partitions">Partition images, TWRP-style backups and partition restores need root and will no longer run.</string>
+    <string name="settings_mode_effect_loses_app_data">Private app data and Android/data folders can no longer be read or restored; profiles that include them will skip or fail those items.</string>
+    <string name="settings_mode_effect_needs_shizuku">Shizuku must be running for every backup. It stops after each reboot unless it is started again, and scheduled backups fail while it is not running.</string>
+    <string name="settings_mode_effect_root_prompts">Your root manager will ask to give DFTB superuser access. Allow it permanently so scheduled backups can run unattended.</string>
+    <string name="settings_mode_effect_module_needed">The companion module must stay installed and enabled in your root manager for the system-wide tools and the boot service.</string>
+    <string name="settings_mode_effect_module_left">The companion module stays installed until you remove it in your root manager. DFTB stops mirroring its reboot-resume journal to it.</string>
+    <string name="settings_mode_effect_degraded">Some checks for this mode warned or failed. Features that depend on them may not work until they are fixed.</string>
+    <string name="settings_mode_shizuku_title">Shizuku access</string>
+    <string name="settings_mode_shizuku_subtitle">Ask Shizuku to authorize DFTB. The Shizuku service must be running.</string>
+    <string name="settings_mode_shizuku_granted">Shizuku access granted.</string>
+    <string name="settings_mode_discovery_title">Discovery</string>
+    <string name="settings_mode_discovery_subtitle">See which partitions, apps and folders this mode can reach on this device.</string>
+    <string name="settings_mode_discovery_open">Open Discovery</string>
+    <string name="settings_mode_module_tools_note">rclone and BusyBox are not bundled in this build yet, so a module built now contains only the tools this device\'s build ships. The result lists exactly what was included and what is missing.</string>
+    <string name="settings_mode_module_saved_as">Saved as %1$s</string>
+    <string name="settings_mode_module_build_failed">No module file could be produced. The technical details below explain why.</string>
+    <string name="settings_mode_module_write_failed">The module could not be written to the chosen location. Pick another folder and try again.</string>
+    <string name="settings_mode_module_details">Technical details</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">New backup profiles start with these settings. Existing profiles keep their own.</string>
+    <string name="settings_defaults_issues_title">Some defaults are no longer valid</string>
+    <string name="settings_defaults_issue_format">The saved format is not an archive format and cannot be a profile default.</string>
+    <string name="settings_defaults_issue_level">The saved compression level is outside the range of the selected format.</string>
+    <string name="settings_defaults_issue_destination">The default destination was deleted. New profiles will ask for a destination until you pick another.</string>
+    <string name="settings_defaults_repair">Fix automatically</string>
+    <string name="settings_defaults_repaired">Defaults corrected.</string>
+    <string name="settings_defaults_extension">File extension: %1$s</string>
+    <string name="settings_defaults_7z_staging">7z builds the whole archive in local temporary storage before uploading, so this device needs free space for the full archive.</string>
+    <string name="settings_defaults_level_not_applicable">%1$s does not compress, so there is no level to choose.</string>
+    <string name="settings_defaults_level_range">Allowed levels for this format: %1$d to %2$d</string>
+    <string name="settings_defaults_checksum_hint">Used to verify every artifact after it is written and before it is restored.</string>
+    <string name="settings_defaults_destination_title">Default destination</string>
+    <string name="settings_defaults_destination_subtitle">Where new profiles send their backups unless you choose otherwise.</string>
+    <string name="settings_defaults_destination_ask">Ask every time</string>
+    <string name="settings_defaults_destination_ask_hint">Each new profile asks for a destination.</string>
+    <string name="settings_defaults_destination_none">No destinations are set up yet. Add one from the Destinations screen.</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">Encryption keys</string>
+    <string name="settings_security_keys_subtitle">Random keys stored in this device\'s secure vault. They never leave the device and are not part of any backup.</string>
+    <string name="settings_security_keys_empty">No encryption keys are stored.</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="one">%1$d key</item>
+        <item quantity="other">%1$d keys</item>
+    </plurals>
+    <string name="settings_security_key_created">Created %1$s</string>
+    <string name="settings_security_key_unused">Not used by any profile</string>
+    <string name="settings_security_key_used_by">Used by: %1$s</string>
+    <string name="settings_security_key_delete_cd">Delete key</string>
+    <string name="settings_security_key_delete_blocked_cd">Delete key (unavailable while a profile uses it)</string>
+    <string name="settings_security_key_delete_title">Delete this encryption key?</string>
+    <string name="settings_security_key_delete_message">Key %1$s will be erased from the vault permanently.</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">Every backup encrypted with this key becomes permanently unrecoverable, on every destination.</string>
+    <string name="settings_security_key_delete_consequence_no_copy">There is no other copy: the key exists only in this device\'s vault, and nobody, including the DFTB developers, can recreate it.</string>
+    <string name="settings_security_key_delete_consequence_restore">Restoring or verifying those backups will fail from now on.</string>
+    <string name="settings_security_key_delete_ack">I understand that backups encrypted with this key will be lost forever.</string>
+    <string name="settings_security_key_delete_confirm">Delete key forever</string>
+    <string name="settings_security_key_deleted">Encryption key deleted.</string>
+    <string name="settings_security_key_already_gone">The key was already gone from the vault.</string>
+    <string name="settings_security_key_delete_failed">The key could not be deleted. Nothing was changed.</string>
+    <string name="settings_security_key_in_use">Not deleted: the key is still used by %1$s. Change those profiles first.</string>
+    <string name="settings_security_key_in_use_title">Key in use</string>
+    <string name="settings_security_key_in_use_message">This key cannot be deleted while these profiles use it. Edit them to use another key, or delete them, first.</string>
+    <string name="settings_security_vault_key_gone">The vault\'s device key is no longer available, so the stored secrets cannot be read on this device.</string>
+    <string name="settings_security_vault_keystore">Android\'s secure key store is unavailable right now.</string>
+    <string name="settings_security_vault_unreadable">The vault could not be read.</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">Trusted SSH servers</string>
+    <string name="settings_security_hosts_subtitle">Host keys pinned the first time DFTB connected to each SFTP or SSH server.</string>
+    <string name="settings_security_hosts_empty">No SSH servers have been contacted yet.</string>
+    <string name="settings_security_hosts_unreadable">The trusted-servers file is unreadable or damaged. SSH connections are refused until it is fixed, to protect against impostor servers.</string>
+    <string name="settings_security_hosts_tofu_note">A server presenting a different key is always refused. Forget a server only if you know its key was changed on purpose.</string>
+    <string name="settings_security_host_forget">Forget</string>
+    <string name="settings_security_host_forget_title">Forget this server\'s key?</string>
+    <string name="settings_security_host_forget_message">The pinned key of %1$s will be removed.</string>
+    <string name="settings_security_host_forget_consequence_repin">The next connection trusts whatever key the server presents and pins it again.</string>
+    <string name="settings_security_host_forget_consequence_verify">If someone is impersonating the server at that moment, DFTB would trust them. Check the new fingerprint with the server\'s administrator.</string>
+    <string name="settings_security_host_forget_confirm">Forget key</string>
+    <string name="settings_security_host_forgotten">Forgot the key of %1$s.</string>
+    <string name="settings_security_host_already_gone">That server was no longer in the list.</string>
+    <string name="settings_security_host_unparsable">This entry cannot be removed from here because its server address is malformed.</string>
+    <string name="settings_security_hosts_write_failed">The trusted-servers file could not be updated. Nothing was changed.</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">rclone remotes</string>
+    <string name="settings_security_rclone_subtitle">Cloud remote definitions are stored sealed in the vault.</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">Notification access</string>
+    <string name="settings_notifications_permission_not_required">This Android version does not ask for a notification permission.</string>
+    <string name="settings_notifications_permission_granted">Notification permission granted.</string>
+    <string name="settings_notifications_permission_denied">Notification permission denied. Job progress and failure alerts will not be shown.</string>
+    <string name="settings_notifications_app_enabled">Notifications are on for DFTB.</string>
+    <string name="settings_notifications_app_disabled">Notifications are turned off for DFTB in system settings.</string>
+    <string name="settings_notifications_open_settings">Open notification settings</string>
+    <string name="settings_notifications_channels_title">Categories</string>
+    <string name="settings_notifications_channels_subtitle">Each category can be silenced separately in system settings.</string>
+    <string name="settings_notifications_channel_on">On</string>
+    <string name="settings_notifications_channel_blocked">Blocked</string>
+    <string name="settings_notifications_channel_missing">Not created yet</string>
+    <string name="settings_notifications_channel_open">Settings</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">Temporary files</string>
+    <string name="settings_storage_cache_subtitle">Space DFTB uses on this device while building and reading backups.</string>
+    <string name="settings_storage_staging">Archive staging</string>
+    <string name="settings_storage_other_cache">Other temporary files</string>
+    <string name="settings_storage_total_cache">Total</string>
+    <string name="settings_storage_staging_hint">Staging holds 7z archives and streams of unknown size while they are being built. Leftovers from an interrupted job can be cleared safely.</string>
+    <string name="settings_storage_clear_staging">Clear staging</string>
+    <string name="settings_storage_clear_all">Clear all temporary files</string>
+    <string name="settings_storage_recalculate">Recalculate</string>
+    <string name="settings_storage_measure_failed">Could not measure cache size.</string>
+    <string name="settings_storage_measure_retry">Retry</string>
+    <string name="settings_storage_clear_blocked">Temporary files cannot be cleared while a backup or restore is running.</string>
+    <string name="settings_storage_clear_staging_title">Clear archive staging?</string>
+    <string name="settings_storage_clear_all_title">Clear all temporary files?</string>
+    <string name="settings_storage_clear_staging_consequence">Partially built archives and spool files left behind by interrupted jobs are deleted.</string>
+    <string name="settings_storage_clear_all_consequence">All of DFTB\'s cache is deleted: staging, spool files and previously shared log files.</string>
+    <string name="settings_storage_clear_backups_safe">Your backups on their destinations, your profiles and your settings are not touched.</string>
+    <string name="settings_storage_clear_confirm">Clear</string>
+    <string name="settings_storage_cleared">Temporary files cleared.</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="one">Temporary files cleared; %1$s item could not be removed (it may belong to a root helper).</item>
+        <item quantity="other">Temporary files cleared; %1$s items could not be removed (they may belong to a root helper).</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">Temporary files could not be cleared.</string>
+    <string name="settings_storage_log_title">Diagnostic log</string>
+    <string name="settings_storage_log_subtitle">Recent activity recorded in memory since the app started. Useful for bug reports.</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="one">%1$d line recorded</item>
+        <item quantity="other">%1$d lines recorded</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">The log can contain file paths, destination names and server addresses. DFTB is designed never to log passwords, keys or tokens. Review it before sharing it publicly.</string>
+    <string name="settings_storage_log_share">Share</string>
+    <string name="settings_storage_log_save">Save to file</string>
+    <string name="settings_storage_log_share_title">Share DFTB log</string>
+    <string name="settings_storage_log_saved">Log saved.</string>
+    <string name="settings_storage_log_export_failed">The log could not be exported.</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">Open-source, user-authorized Android backup.</string>
+    <string name="settings_about_version_value">%1$s (%2$d)</string>
+    <string name="settings_about_sources_title">Source code of credited projects</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="one">%1$d project</item>
+        <item quantity="other">%1$d projects</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">Open the source repository of %1$s</string>
+</resources>

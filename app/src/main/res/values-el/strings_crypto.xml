@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="crypto_reason_wrong_key">Λάθος φράση πρόσβασης ή κλειδί. Δεν ήταν δυνατό το ξεκλείδωμα του αντιγράφου ασφαλείας.</string>
+    <string name="crypto_reason_key_type_mismatch">Αυτό το αντίγραφο ασφαλείας κρυπτογραφήθηκε με διαφορετικό είδος κλειδιού (φράση πρόσβασης ή αποθηκευμένο κλειδί).</string>
+    <string name="crypto_reason_tampered">Το κρυπτογραφημένο αντίγραφο ασφαλείας είναι κατεστραμμένο ή τροποποιήθηκε.</string>
+    <string name="crypto_reason_truncated">Το κρυπτογραφημένο αντίγραφο ασφαλείας είναι ελλιπές· λείπει το τέλος του.</string>
+    <string name="crypto_reason_trailing_data">Το κρυπτογραφημένο αντίγραφο ασφαλείας έχει μη αναμενόμενα επιπλέον δεδομένα στο τέλος.</string>
+    <string name="crypto_reason_bad_header">Αυτό το αρχείο δεν είναι κρυπτογραφημένο αντίγραφο ασφαλείας DFTB ή η κεφαλίδα του είναι κατεστραμμένη.</string>
+    <string name="crypto_reason_insufficient_memory">Αυτή η συσκευή δεν έχει αρκετή μνήμη για το ξεκλείδωμα αυτού του αντιγράφου ασφαλείας.</string>
+    <string name="crypto_reason_unsupported_version">Αυτό το αντίγραφο ασφαλείας κρυπτογραφήθηκε από νεότερη έκδοση της εφαρμογής.</string>
+    <string name="crypto_key_not_found">Το αποθηκευμένο κλειδί κρυπτογράφησης για αυτό το αντίγραφο ασφαλείας δεν βρίσκεται σε αυτήν τη συσκευή.</string>
+    <string name="crypto_key_invalid_entry">Το αποθηκευμένο κλειδί κρυπτογράφησης είναι κατεστραμμένο ή δεν είναι κλειδί κρυπτογράφησης.</string>
+    <string name="crypto_key_vault_error">Δεν ήταν δυνατή η ανάγνωση του ασφαλούς χώρου αποθήκευσης κλειδιών.</string>
+    <string name="checksum_verified">Το άθροισμα ελέγχου επαληθεύτηκε (%1$s).</string>
+    <string name="checksum_mismatch">Το άθροισμα ελέγχου δεν ταιριάζει (%1$s). Το αρχείο διαφέρει από αυτό που αποθηκεύτηκε.</string>
+    <string name="checksum_sidecar_missing">Δεν βρέθηκε αρχείο αθροίσματος ελέγχου για αυτό το αντίγραφο ασφαλείας.</string>
+    <string name="checksum_sidecar_malformed">Το αρχείο αθροίσματος ελέγχου δεν ήταν δυνατό να διαβαστεί.</string>
+
+</resources>

@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">رجوع</string>
+    <string name="restore_ui_back_step">رجوع</string>
+    <string name="restore_ui_next">التالي</string>
+    <string name="restore_ui_cancel">إلغاء</string>
+    <string name="restore_ui_retry">إعادة المحاولة</string>
+    <string name="restore_ui_refresh">تحديث</string>
+    <string name="restore_ui_yes">نعم</string>
+    <string name="restore_ui_date_unknown">التاريخ غير معروف</string>
+    <string name="restore_ui_destination_label">الوجهة</string>
+    <string name="restore_ui_intent_failed">تعذّر فتح هذه الشاشة على هذا الجهاز.</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%1$s من %2$s (%3$d%%)</string>
+    <string name="restore_ui_progress_bytes_only">تمت معالجة %1$s</string>
+    <string name="restore_ui_progress_speed">%1$s/ث</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/ث · متبقٍ نحو %2$s</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="zero">لا تحذيرات (%1$d)</item>
+        <item quantity="one">تحذير واحد</item>
+        <item quantity="two">تحذيران</item>
+        <item quantity="few">%1$d تحذيرات</item>
+        <item quantity="many">%1$d تحذيرًا</item>
+        <item quantity="other">%1$d تحذير</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">الاستعادة</string>
+    <string name="restore_ui_twrp_open">استيراد نسخة TWRP احتياطية</string>
+    <string name="restore_ui_twrp_link">استيراد نسخة TWRP أو OrangeFox احتياطية</string>
+    <string name="restore_ui_no_destinations_title">لا توجد وجهة بعد</string>
+    <string name="restore_ui_no_destinations_body">تُقرأ النسخ الاحتياطية من وجهة. أضف أولًا الوجهة التي تحتوي على نسخك الاحتياطية.</string>
+    <string name="restore_ui_add_destination">إضافة وجهة</string>
+    <string name="restore_ui_list_failed">تعذّرت قراءة الوجهة</string>
+    <string name="restore_ui_no_backups_title">لا توجد نسخ احتياطية هنا</string>
+    <string name="restore_ui_no_backups_body">لا تحتوي هذه الوجهة على مجلد نسخ احتياطي لـ DFTB. اسحب للأسفل لإعادة الفحص، أو اختر وجهة أخرى.</string>
+    <string name="restore_ui_badge_encrypted">مشفّرة</string>
+    <string name="restore_ui_badge_locked">مقفلة</string>
+    <string name="restore_ui_badge_partial">غير مكتملة</string>
+    <string name="restore_ui_badge_critical">بيانات الهوية</string>
+    <string name="restore_ui_badge_logical">منطقية</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">جارٍ قراءة النسخة الاحتياطية…</string>
+    <string name="restore_ui_open_failed">تعذّر فتح النسخة الاحتياطية</string>
+    <string name="restore_ui_locked_title">هذه النسخة الاحتياطية مشفرة</string>
+    <string name="restore_ui_locked_body">أدخل عبارة المرور التي أُنشئت بها لعرض محتوياتها واستعادتها.</string>
+    <string name="restore_ui_locked_vault_problem">تعذّر استخدام المفتاح المحفوظ للملف (%1$s). أدخل عبارة المرور بدلًا منه.</string>
+    <string name="restore_ui_enter_passphrase">إدخال عبارة المرور</string>
+    <string name="restore_ui_passphrase_title">فتح قفل النسخة الاحتياطية</string>
+    <string name="restore_ui_passphrase_body">تبقى عبارة المرور في الذاكرة فقط ما دامت هذه الشاشة مفتوحة ولا تُحفظ أبدًا.</string>
+    <string name="restore_ui_passphrase_label">عبارة المرور</string>
+    <string name="restore_ui_passphrase_unlock">فتح القفل</string>
+    <string name="restore_ui_passphrase_show">إظهار عبارة المرور</string>
+    <string name="restore_ui_passphrase_hide">إخفاء عبارة المرور</string>
+    <string name="restore_ui_unlocked_vault">فُتحت بالمفتاح المحفوظ</string>
+    <string name="restore_ui_unlocked_passphrase">فُتحت بعبارة المرور الخاصة بك</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">لا يحتوي هذا المجلد على فهرس نسخ احتياطي لـ DFTB.</string>
+    <string name="restore_ui_catalog_key_required">هذا الجزء مشفر؛ افتح قفل النسخة الاحتياطية أولًا.</string>
+    <string name="restore_ui_catalog_corrupt_manifest">فهرس النسخة الاحتياطية تالف ولا يمكن قراءته.</string>
+    <string name="restore_ui_catalog_unsupported_schema">أُنشئت هذه النسخة الاحتياطية بإصدار أحدث من DFTB.</string>
+    <string name="restore_ui_catalog_inconsistent_runs">عمليات التشغيل في هذه النسخة المستأنفة لا تنتمي إلى بعضها.</string>
+    <string name="restore_ui_catalog_unsupported_encryption">تستخدم هذه النسخة الاحتياطية تشفيرًا لا يستطيع هذا الإصدار قراءته.</string>
+    <string name="restore_ui_catalog_missing_file">ملف مخزّن مفقود في الوجهة.</string>
+    <string name="restore_ui_catalog_size_mismatch">حجم ملف مخزّن غير صحيح.</string>
+    <string name="restore_ui_catalog_digest_mismatch">ملف مخزّن لا يطابق بصمة التحقق الخاصة به.</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">ملف داخل الأرشيف لا يطابق بصمة التحقق الخاصة به.</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">ملف بصمة التحقق مفقود أو لا يتفق مع البيانات المخزنة.</string>
+    <string name="restore_ui_catalog_not_single_stream">هذا العنصر مخزّن كملفات منفصلة.</string>
+    <string name="restore_ui_problem_io">خطأ في القراءة</string>
+    <string name="restore_ui_problem_more">%1$s (و%2$d أخرى)</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">تفاصيل النسخة الاحتياطية</string>
+    <string name="restore_ui_detail_created">بدأت</string>
+    <string name="restore_ui_detail_finished">انتهت</string>
+    <string name="restore_ui_detail_size">الحجم المخزَّن</string>
+    <string name="restore_ui_detail_device">أُنشئت على</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">مستوى API %1$d</string>
+    <string name="restore_ui_detail_slot">الخانة النشطة حينها</string>
+    <string name="restore_ui_detail_build">رقم البناء</string>
+    <string name="restore_ui_detail_app">أُنشئت بواسطة</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">الصيغة</string>
+    <string name="restore_ui_detail_encryption">التشفير</string>
+    <string name="restore_ui_detail_checksum">بصمة التحقق</string>
+    <string name="restore_ui_detail_structure">تخطيط المجلدات</string>
+    <string name="restore_ui_detail_twrp">متوافقة مع TWRP</string>
+    <string name="restore_ui_detail_selection">محتوى الملف</string>
+    <string name="restore_ui_detail_runs">عمليات التشغيل المدمجة</string>
+    <string name="restore_ui_backup_warnings">تحذيرات سُجّلت أثناء النسخ الاحتياطي</string>
+    <string name="restore_ui_partial_title">لم تنتهِ هذه النسخة الاحتياطية</string>
+    <string name="restore_ui_partial_body">انقطعت أو لا تزال قيد الاستئناف. العناصر المدرجة أدناه فقط موجودة فيها؛ ويمكن التحقق منها واستعادتها.</string>
+    <string name="restore_ui_cross_device_title">أُنشئت على جهاز آخر</string>
+    <string name="restore_ui_cross_device_body">تأتي هذه النسخة الاحتياطية من %1$s؛ وهذا الجهاز هو %2$s. تُستعاد التطبيقات والملفات عادةً دون مشكلة؛ لكن صور الأقسام من جهاز آخر قد تمنع هذا الجهاز من الإقلاع.</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="zero">%1$d قسم</item>
+        <item quantity="one">قسم واحد</item>
+        <item quantity="two">قسمان</item>
+        <item quantity="few">%1$d أقسام</item>
+        <item quantity="many">%1$d قسمًا</item>
+        <item quantity="other">%1$d قسم</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="zero">%1$d تطبيق</item>
+        <item quantity="one">تطبيق واحد</item>
+        <item quantity="two">تطبيقان</item>
+        <item quantity="few">%1$d تطبيقات</item>
+        <item quantity="many">%1$d تطبيقًا</item>
+        <item quantity="other">%1$d تطبيق</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="zero">%1$d مجلد</item>
+        <item quantity="one">مجلد واحد</item>
+        <item quantity="two">مجلدان</item>
+        <item quantity="few">%1$d مجلدات</item>
+        <item quantity="many">%1$d مجلدًا</item>
+        <item quantity="other">%1$d مجلد</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="zero">%1$d فئة ملفات</item>
+        <item quantity="one">فئة ملفات واحدة</item>
+        <item quantity="two">فئتا ملفات</item>
+        <item quantity="few">%1$d فئات ملفات</item>
+        <item quantity="many">%1$d فئة ملفات</item>
+        <item quantity="other">%1$d فئة ملفات</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">المحتويات</string>
+    <string name="restore_ui_units_empty">لا تحتوي هذه النسخة الاحتياطية على شيء للاستعادة.</string>
+    <string name="restore_ui_group_apps">التطبيقات</string>
+    <string name="restore_ui_group_partitions">الأقسام</string>
+    <string name="restore_ui_group_files">الملفات</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">التحقق</string>
+    <string name="restore_ui_verify_subtitle">تأكد من سلامة البيانات المخزنة قبل الاعتماد عليها.</string>
+    <string name="restore_ui_verify_quick">تحقق سريع</string>
+    <string name="restore_ui_verify_deep">تحقق معمّق</string>
+    <string name="restore_ui_verify_hint">يقارن التحقق السريع الملفات المخزنة ببصمات التحقق الخاصة بها. أما المعمّق فيفك التشفير ويفك ضغط كل شيء أيضًا ويفحص كل ملف بداخله؛ ويقرأ النسخة الاحتياطية كلها.</string>
+    <string name="restore_ui_verify_running_quick">جارٍ فحص الملفات المخزنة…</string>
+    <string name="restore_ui_verify_running_deep">جارٍ فك ترميز كل ملف وفحصه…</string>
+    <string name="restore_ui_verify_all_ok">جميع العناصر المخزنة (%1$d) سليمة.</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="zero">لا عناصر تالفة أو مفقودة من أصل %2$d عنصر مخزن (%1$d).</item>
+        <item quantity="one">عنصر واحد من أصل %2$d عنصر مخزن تالف أو مفقود.</item>
+        <item quantity="two">عنصران من أصل %2$d عنصر مخزن تالفان أو مفقودان.</item>
+        <item quantity="few">%1$d عناصر من أصل %2$d عنصر مخزن تالفة أو مفقودة.</item>
+        <item quantity="many">%1$d عنصرًا من أصل %2$d عنصر مخزن تالف أو مفقود.</item>
+        <item quantity="other">%1$d عنصر من أصل %2$d عنصر مخزن تالف أو مفقود.</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">سليم</string>
+    <string name="restore_ui_verify_bad_cd">مشكلة</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">الاستعادة</string>
+    <string name="restore_ui_start_subtitle">اختر ما تريد استعادته وكيف، وافحصه قبل كتابة أي شيء.</string>
+    <string name="restore_ui_start_wizard">استعادة…</string>
+    <string name="restore_ui_start_busy">استعادة لهذه النسخة الاحتياطية قيد التنفيذ.</string>
+    <string name="restore_ui_start">بدء الاستعادة</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">الخطوة %1$d من %2$d · %3$s</string>
+    <string name="restore_ui_step_select">اختيار العناصر</string>
+    <string name="restore_ui_step_options">الخيارات</string>
+    <string name="restore_ui_step_preflight">الفحص</string>
+    <string name="restore_ui_select_all">تحديد الكل</string>
+    <string name="restore_ui_select_none">إلغاء التحديد</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="zero">لم يُحدد أي عنصر من أصل %2$d (%1$d) · %3$s</item>
+        <item quantity="one">حُدد عنصر واحد من أصل %2$d · %3$s</item>
+        <item quantity="two">حُدد عنصران من أصل %2$d · %3$s</item>
+        <item quantity="few">حُددت %1$d عناصر من أصل %2$d · %3$s</item>
+        <item quantity="many">حُدد %1$d عنصرًا من أصل %2$d · %3$s</item>
+        <item quantity="other">حُدد %1$d عنصر من أصل %2$d · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">عام</string>
+    <string name="restore_ui_conflict_title">عند وجود عنصر مسبقًا</string>
+    <string name="restore_ui_conflict_skip">الإبقاء على الموجود</string>
+    <string name="restore_ui_conflict_overwrite">الاستبدال</string>
+    <string name="restore_ui_conflict_keep_both">الإبقاء على الاثنين</string>
+    <string name="restore_ui_conflict_skip_desc">يُحتفظ بالملفات الموجودة ولا تُستبدل</string>
+    <string name="restore_ui_conflict_overwrite_desc">تُستبدل الملفات الموجودة بالنسخة المحفوظة احتياطيًا</string>
+    <string name="restore_ui_conflict_keep_both_desc">تُكتب النسخة المحفوظة احتياطيًا بجوار الملف الموجود باسم جديد</string>
+    <string name="restore_ui_verify_first">التحقق قبل الاستعادة</string>
+    <string name="restore_ui_verify_first_hint">يقرأ كل عنصر محدد مرة أخرى أولًا؛ ولا يُكتب شيء إذا كان أي منها تالفًا.</string>
+    <string name="restore_ui_metadata">استعادة التواريخ والأذونات</string>
+    <string name="restore_ui_metadata_hint">تواريخ التعديل دائمًا؛ والمالك والنمط وتسميات SELinux عندما يسمح الوضع الحالي بذلك.</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">الملفات</string>
+    <string name="restore_ui_target_title">استعادة الملفات إلى</string>
+    <string name="restore_ui_target_original">الموقع الأصلي</string>
+    <string name="restore_ui_target_folder">مسار مجلد</string>
+    <string name="restore_ui_target_saf">مجلد مختار</string>
+    <string name="restore_ui_target_original_hint">تعود الملفات إلى مكانها الذي نُسخت منه. تُبلَّغ في خطوة الفحص المجلدات التي لا يستطيع DFTB الكتابة فيها في الوضع الحالي.</string>
+    <string name="restore_ui_folder_label">المجلد</string>
+    <string name="restore_ui_folder_hint">مسار مطلق، مثل /storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">لم يُختر مجلد بعد</string>
+    <string name="restore_ui_tree_pick">اختيار مجلد</string>
+    <string name="restore_ui_tree_grant_failed">تعذّر على DFTB الاحتفاظ بإمكانية الوصول إلى ذلك المجلد. اختر مجلدًا آخر.</string>
+    <string name="restore_ui_twrp_mode_title">مجلد نسخة TWRP الاحتياطية</string>
+    <string name="restore_ui_twrp_copy">نسخ المجلد</string>
+    <string name="restore_ui_twrp_extract">فك ضغط الملفات</string>
+    <string name="restore_ui_twrp_copy_desc">ينسخ مجلد TWRP كما هو، ليتمكن TWRP أو OrangeFox من استعادته في وضع الاسترداد.</string>
+    <string name="restore_ui_twrp_extract_desc">يفك ضغط الملفات داخل أرشيفات TWRP إلى المجلد المختار. ولا يكون ذلك فوق النظام العامل أبدًا.</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">التطبيقات</string>
+    <string name="restore_ui_apps_standard_hint">في الوضع القياسي يطلب منك Android تأكيد كل تثبيت، ولا يمكن استعادة بيانات التطبيقات. يستعيد Shizuku بيانات التخزين المشترك؛ ويستعيد الجذر كل شيء.</string>
+    <string name="restore_ui_apps_apks">تثبيت التطبيقات</string>
+    <string name="restore_ui_apps_data">استعادة بيانات التطبيقات</string>
+    <string name="restore_ui_apps_data_hint">البيانات الخاصة تتطلب الجذر؛ وAndroid/data وAndroid/media تتطلبان Shizuku أو الجذر.</string>
+    <string name="restore_ui_version_title">عندما يكون التطبيق مثبتًا بالفعل</string>
+    <string name="restore_ui_version_auto">تلقائي</string>
+    <string name="restore_ui_version_reinstall">إعادة التثبيت دائمًا</string>
+    <string name="restore_ui_version_data_only">البيانات فقط</string>
+    <string name="restore_ui_version_auto_desc">يثبّت عندما يكون التطبيق مفقودًا أو النسخة الاحتياطية أحدث؛ وإلا تُستعاد البيانات فقط.</string>
+    <string name="restore_ui_version_reinstall_desc">يثبّت النسخة المحفوظة احتياطيًا حتى فوق الإصدار نفسه.</string>
+    <string name="restore_ui_version_data_only_desc">لا يثبّت أبدًا؛ ويستعيد البيانات على الإصدار المثبت بالفعل.</string>
+    <string name="restore_ui_apps_external">استعادة Android/data وAndroid/media</string>
+    <string name="restore_ui_apps_obb">استعادة Android/obb</string>
+    <string name="restore_ui_apps_permissions">منح الأذونات المسجلة مرة أخرى</string>
+    <string name="restore_ui_apps_permissions_hint">أذونات وقت التشغيل التي كانت للتطبيق عند نسخه احتياطيًا (Shizuku أو الجذر).</string>
+    <string name="restore_ui_apps_user">الاستعادة للمستخدم</string>
+    <string name="restore_ui_apps_user_self">المستخدم %1$d (أنت)</string>
+    <string name="restore_ui_apps_user_other">المستخدم %1$d</string>
+    <string name="restore_ui_apps_advanced">متقدم</string>
+    <string name="restore_ui_apps_cache">استعادة مجلدات الذاكرة المؤقتة</string>
+    <string name="restore_ui_apps_installer">استعادة المثبّت المسجّل</string>
+    <string name="restore_ui_apps_installer_hint">يضع علامة على التطبيق بأنه مثبّت من المتجر الذي جاء منه (Shizuku أو الجذر).</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">الأقسام</string>
+    <string name="restore_ui_partitions_need_root">الجذر مطلوب</string>
+    <string name="restore_ui_partitions_need_root_body">لا يمكن الكتابة على الأقسام إلا بالجذر. انتقل إلى وضع الجذر، أو استعد هذه الصور من وضع الاسترداد أو fastboot.</string>
+    <string name="restore_ui_partitions_hint">يُتحقق من كل صورة قبل كتابتها وتُقرأ مجددًا بعد ذلك. تُرفض دائمًا الأقسام المركّبة أو قيد الاستخدام.</string>
+    <string name="restore_ui_critical_selected_title">حُددت أقسام الهوية</string>
+    <string name="restore_ui_critical_selected_body">يحتوي %1$s على بيانات فريدة لجهاز واحد (IMEI والمعايرة وDRM وحماية إعادة ضبط المصنع). قد تؤدي كتابة النسخة الخاطئة إلى تعطيل هذا الجهاز نهائيًا. تُرفض ما لم تسمح بذلك أدناه.</string>
+    <string name="restore_ui_slot_title">الخانة المراد الكتابة عليها</string>
+    <string name="restore_ui_slot_same_role">الدور نفسه</string>
+    <string name="restore_ui_slot_active">الخانة النشطة</string>
+    <string name="restore_ui_slot_inactive">الخانة غير النشطة</string>
+    <string name="restore_ui_slot_recorded">الحرف نفسه</string>
+    <string name="restore_ui_slot_same_role_desc">يكتب على الخانة التي تؤدي الآن الدور (نشطة أو غير نشطة) الذي كانت تؤديه الخانة المنسوخة. موصى به: تتبدل الخانتان بعد كل تحديث.</string>
+    <string name="restore_ui_slot_active_desc">يكتب على الخانة التي أقلع منها الجهاز الآن.</string>
+    <string name="restore_ui_slot_inactive_desc">يكتب على الخانة التي لم يُقلع منها الجهاز.</string>
+    <string name="restore_ui_slot_recorded_desc">يكتب على حرف الخانة نفسه الذي نُسخ (boot_a إلى boot_a).</string>
+    <string name="restore_ui_overrides_title">فحوصات الأمان</string>
+    <string name="restore_ui_overrides_hint">ترفض هذه الفحوصات عمليات الكتابة الخطرة. يمكن إيقاف كل منها فقط بعد أن تؤكد ما قد يحدث من مشكلات.</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">أفهم ذلك، اسمح به</string>
+    <string name="restore_ui_risky_active_title">فحوصات الأمان التي أوقفتها</string>
+    <string name="restore_ui_risky_space">الاستعادة دون مساحة حرة كافية</string>
+    <string name="restore_ui_risky_space_hint">المتابعة حتى لو أبلغت وجهة عن مساحة حرة قليلة جدًا.</string>
+    <string name="restore_ui_risky_space_consequence">قد تمتلئ الوجهة أثناء الاستعادة. تبقى الملفات المكتوبة حتى الآن؛ وتفشل البقية، وقد تتوقف التطبيقات على هذا الجهاز عن العمل إلى أن تُحرَّر مساحة.</string>
+    <string name="restore_ui_risky_downgrade">السماح بإصدارات تطبيقات أقدم</string>
+    <string name="restore_ui_risky_downgrade_hint">تثبيت نسخة محفوظة احتياطيًا أقدم من المثبتة (Shizuku أو الجذر).</string>
+    <string name="restore_ui_risky_downgrade_consequence">قد لا يفهم إصدار أقدم من التطبيق البيانات التي كتبها الإصدار الأحدث. قد ينهار التطبيق أو يفقد بياناته. وقد يرفض Android الرجوع إلى إصدار أقدم لبعض التطبيقات.</string>
+    <string name="restore_ui_risky_cross_slot">السماح بالكتابة على الخانة الأخرى</string>
+    <string name="restore_ui_risky_cross_slot_hint">الخانة المختارة تختلف عن الخانة التي نُسخت.</string>
+    <string name="restore_ui_risky_cross_slot_consequence">ستُستبدل أقسام الخانة الأخرى. إذا لم تطابق الصور باقي تلك الخانة، فقد يفشل الجهاز في الإقلاع منها؛ وقد ينتقل إليها أيضًا عند التحديث التالي.</string>
+    <string name="restore_ui_risky_other_device">السماح بصور من جهاز آخر</string>
+    <string name="restore_ui_risky_other_device_hint">أُخذت الصور على طراز جهاز مختلف، أو يتعذر إثبات مصدرها.</string>
+    <string name="restore_ui_risky_other_device_consequence">صور الأقسام خاصة بطراز جهاز واحد. كتابة صورة جهاز آخر قد تعطل هذا الجهاز تعطيلًا تامًا بحيث لا تستعيده إلا أداة الفلاش الخاصة بالمصنع.</string>
+    <string name="restore_ui_risky_other_build">السماح بصور من بناء آخر</string>
+    <string name="restore_ui_risky_other_build_hint">الجهاز نفسه، لكن ببناء نظام مختلف (مثلًا قبل تحديث).</string>
+    <string name="restore_ui_risky_other_build_consequence">قد يسبب خلط أقسام من بناءات مختلفة حلقات إقلاع أو تعطل ميزات (الكاميرا والراديو والتشفير). استعد كل أقسام ذلك البناء معًا.</string>
+    <string name="restore_ui_risky_smaller_image">السماح بصور أصغر من القسم</string>
+    <string name="restore_ui_risky_smaller_image_hint">يُترك طرف القسم كما هو.</string>
+    <string name="restore_ui_risky_smaller_image_consequence">يحتفظ القسم ببيانات قديمة بعد الصورة. وهذا غير ضار لبعض الأقسام لكنه يعطل أخرى (مثل التي لها تذييل أو توقيع في النهاية).</string>
+    <string name="restore_ui_risky_identity">السماح بالكتابة على أقسام الهوية</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV ومعايرة المودم وpersist وحماية إعادة ضبط المصنع وما شابهها.</string>
+    <string name="restore_ui_risky_identity_consequence">هذه الأقسام فريدة لجهاز مادي واحد. نسخة من جهاز آخر، أو نسخة قديمة، أو تالفة قد تعطل المكالمات أو بيانات الجوال أو Wi-Fi أو DRM أو محمّل الإقلاع نهائيًا. لا يمكن التراجع.</string>
+    <string name="restore_ui_confirm_type_word">اكتب %1$s للتأكيد.</string>
+    <string name="restore_ui_confirm_word_label">التأكيد</string>
+    <string name="restore_ui_confirm_word_device">جهاز آخر</string>
+    <string name="restore_ui_confirm_word_identity">الهوية</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">حدد عنصرًا واحدًا على الأقل للاستعادة.</string>
+    <string name="restore_ui_problem_folder_required">أدخل المجلد المراد الاستعادة إليه.</string>
+    <string name="restore_ui_problem_folder_absolute">استخدم مسارًا مطلقًا يبدأ بـ /.</string>
+    <string name="restore_ui_problem_folder_traversal">يجب ألا يحتوي المسار على مقاطع . أو ..</string>
+    <string name="restore_ui_problem_folder_protected">هذا موقع نظام. اختر مجلدًا في مساحة التخزين لديك.</string>
+    <string name="restore_ui_problem_tree_required">اختر مجلدًا.</string>
+    <string name="restore_ui_problem_twrp_folder">يتطلب فك ضغط أرشيفات TWRP مجلدًا؛ ولا يتم ذلك فوق النظام العامل أبدًا.</string>
+    <string name="restore_ui_problem_app_nothing">بدون تحديد التثبيت أو البيانات لا يوجد ما يُستعاد للتطبيقات.</string>
+    <string name="restore_ui_problem_downgrade_ignored">الإصدارات الأقدم لا تهم إلا عند تثبيت التطبيقات؛ ولا تأثير لهذا الخيار الآن.</string>
+    <string name="restore_ui_problem_folder_app_data">هذا المجلد داخل بيانات التطبيقات. قد تعطل الكتابة فيه التطبيقات المثبتة.</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">لم يُكتب شيء بعد. هذا ما يمكن استعادته في الوضع الحالي.</string>
+    <string name="restore_ui_preflight_running">جارٍ فحص كل عنصر…</string>
+    <string name="restore_ui_preflight_failed">تعذّر إكمال الفحص</string>
+    <string name="restore_ui_preflight_run">تشغيل الفحص</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="zero">لا يمكن استعادة أي عنصر من أصل %2$d (%1$d)</item>
+        <item quantity="one">يمكن استعادة عنصر واحد من أصل %2$d</item>
+        <item quantity="two">يمكن استعادة عنصرين من أصل %2$d</item>
+        <item quantity="few">يمكن استعادة %1$d عناصر من أصل %2$d</item>
+        <item quantity="many">يمكن استعادة %1$d عنصرًا من أصل %2$d</item>
+        <item quantity="other">يمكن استعادة %1$d عنصر من أصل %2$d</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">يمكن استعادته</string>
+    <string name="restore_ui_preflight_blocked_cd">لا يمكن استعادته</string>
+    <string name="restore_ui_preflight_space">يحتاج %1$s · %2$s حرة</string>
+    <string name="restore_ui_preflight_space_needed">يحتاج %1$s</string>
+    <string name="restore_ui_preflight_shortfall">يلزم %1$s إضافية من المساحة.</string>
+    <string name="restore_ui_tier_none">لا يتطلب امتيازًا</string>
+    <string name="restore_ui_tier_shizuku">يتطلب Shizuku أو الجذر</string>
+    <string name="restore_ui_tier_root">يتطلب الجذر</string>
+    <string name="restore_ui_space_not_needed">لا يحتاج مساحة</string>
+    <string name="restore_ui_space_ok">المساحة كافية</string>
+    <string name="restore_ui_space_unknown">المساحة الحرة غير معروفة</string>
+    <string name="restore_ui_space_insufficient">المساحة غير كافية</string>
+    <string name="restore_ui_blocker_nothing">لا يمكن استعادة أي من العناصر المحددة الآن. غيّر الخيارات أو وضع التشغيل.</string>
+    <string name="restore_ui_blocker_space">عنصر لا يتسع في وجهته. حرّر بعض المساحة، أو ألغِ تحديده، أو اسمح بالاستعادة دون مساحة حرة كافية.</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">الاستعادة الآن؟</string>
+    <string name="restore_ui_confirm_body">سيكتب DFTB بيانات من %1$s على هذا الجهاز:</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="zero">لا مجموعات ملفات (%1$d) إلى %2$s؛ %3$s.</item>
+        <item quantity="one">مجموعة ملفات واحدة إلى %2$s؛ %3$s.</item>
+        <item quantity="two">مجموعتا ملفات إلى %2$s؛ %3$s.</item>
+        <item quantity="few">%1$d مجموعات ملفات إلى %2$s؛ %3$s.</item>
+        <item quantity="many">%1$d مجموعة ملفات إلى %2$s؛ %3$s.</item>
+        <item quantity="other">%1$d مجموعة ملفات إلى %2$s؛ %3$s.</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="zero">لا تطبيقات (%1$d) ستُعاد تثبيتها أو تُستبدل بياناتها.</item>
+        <item quantity="one">قد يُعاد تثبيت تطبيق واحد وتُستبدل بياناته.</item>
+        <item quantity="two">قد يُعاد تثبيت تطبيقين وتُستبدل بياناتهما.</item>
+        <item quantity="few">قد يُعاد تثبيت %1$d تطبيقات وتُستبدل بياناتها.</item>
+        <item quantity="many">قد يُعاد تثبيت %1$d تطبيقًا وتُستبدل بياناتها.</item>
+        <item quantity="other">قد يُعاد تثبيت %1$d تطبيق وتُستبدل بياناتها.</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">ستُكتب هذه الأقسام فوق محتواها كتلةً بكتلة: %1$s. لا يمكن التراجع عن ذلك، وقد تترك عملية كتابة فاشلة الجهاز غير قادر على الإقلاع.</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">الاستعادة</string>
+    <string name="restore_ui_run_started">بدأت الاستعادة. تستمر إذا غادرت هذه الشاشة.</string>
+    <string name="restore_ui_run_running">جارٍ الاستعادة…</string>
+    <string name="restore_ui_run_cancelling">جارٍ الإيقاف…</string>
+    <string name="restore_ui_run_completed">اكتملت</string>
+    <string name="restore_ui_run_completed_warnings">اكتملت مع تحذيرات</string>
+    <string name="restore_ui_run_cancelled">أُوقفت</string>
+    <string name="restore_ui_run_failed">فشلت</string>
+    <string name="restore_ui_run_cancel">إيقاف الاستعادة</string>
+    <string name="restore_ui_run_done">تم</string>
+    <string name="restore_ui_run_summary">استُعيد %1$d · فشل %2$d · لم يُستعد %3$d</string>
+    <string name="restore_ui_run_units">العناصر</string>
+    <string name="restore_ui_run_warnings">التحذيرات</string>
+    <string name="restore_ui_unit_waiting">بالانتظار</string>
+    <string name="restore_ui_unit_running">جارٍ الاستعادة</string>
+    <string name="restore_ui_unit_restored">استُعيد</string>
+    <string name="restore_ui_unit_failed">فشل</string>
+    <string name="restore_ui_unit_blocked">لا يمكن استعادته هنا</string>
+    <string name="restore_ui_unit_not_run">لم يُستعد</string>
+    <string name="restore_ui_cancel_title">إيقاف الاستعادة؟</string>
+    <string name="restore_ui_cancel_body">تبقى العناصر المستعادة بالفعل مستعادة. يُنهى القسم الذي تجري الكتابة عليه ويُفحص أولًا، لذا قد يستغرق الإيقاف لحظات.</string>
+    <string name="restore_ui_writing_partition_title">جارٍ الكتابة على قسم</string>
+    <string name="restore_ui_writing_partition_body">لا تعد التشغيل ولا تُطفئ الجهاز ولا تدع البطارية تنفد حتى تنتهي كتابة هذا القسم وفحصه.</string>
+    <string name="restore_ui_do_not_reboot_title">لا تعد التشغيل</string>
+    <string name="restore_ui_do_not_reboot_body">لم تنتهِ كتابة قسم بنجاح، لذا قد يكون القسم مكتوبًا جزئيًا. لا تعد التشغيل حتى يُستعاد بشكل صحيح: أعد محاولة الاستعادة، أو اكتب صورة سليمة من وضع الاسترداد أو fastboot.</string>
+    <string name="restore_ui_install_pending_title">بانتظار تأكيد التثبيت</string>
+    <string name="restore_ui_install_pending_body">يطلب Android منك تأكيد تثبيت كل تطبيق. تظهر نافذة التأكيد عادةً من تلقاء نفسها؛ وإن لم تظهر، فافتحها من هنا.</string>
+    <string name="restore_ui_install_open">فتح نافذة التأكيد</string>
+    <string name="restore_ui_install_permission_title">قد لا يُسمح لـ DFTB بتثبيت التطبيقات</string>
+    <string name="restore_ui_install_permission_body">اسمح لـ DFTB بتثبيت التطبيقات غير المعروفة، ثم أعد الاستعادة: %1$s</string>
+    <string name="restore_ui_install_permission_open">فتح الإعداد</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">استيراد نسخة TWRP احتياطية</string>
+    <string name="restore_ui_twrp_intro">ابحث عن مجلد نسخة TWRP أو OrangeFox احتياطية في وجهة. يمكن كتابة صور الأقسام الخام هنا بالجذر؛ ويمكن فك ضغط أرشيفات أنظمة الملفات إلى مجلد.</string>
+    <string name="restore_ui_twrp_root_label">البحث في</string>
+    <string name="restore_ui_twrp_root_hint">مجلد على الوجهة، مثل TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">بحث</string>
+    <string name="restore_ui_twrp_searching">جارٍ البحث عن النسخ الاحتياطية…</string>
+    <string name="restore_ui_twrp_search_incomplete">البحث لم يكتمل</string>
+    <string name="restore_ui_twrp_none_found">لم يُعثر على مجلد نسخة TWRP احتياطية هناك.</string>
+    <string name="restore_ui_twrp_pick_backup">اختر نسخة احتياطية لعرض أقسامها.</string>
+    <string name="restore_ui_twrp_selected">محددة</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="zero">%1$d قسم · %2$s</item>
+        <item quantity="one">قسم واحد · %2$s</item>
+        <item quantity="two">قسمان · %2$s</item>
+        <item quantity="few">%1$d أقسام · %2$s</item>
+        <item quantity="many">%1$d قسمًا · %2$s</item>
+        <item quantity="other">%1$d قسم · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">فيها مشكلات</string>
+    <string name="restore_ui_twrp_device_folder">مجلد الرقم التسلسلي للجهاز</string>
+    <string name="restore_ui_twrp_device_unknown">غير مسجّل</string>
+    <string name="restore_ui_twrp_device_unknown_hint">المجلد ليس ضمن TWRP/BACKUPS/&lt;serial&gt;، لذا لا يستطيع DFTB معرفة أي جهاز أنشأه.</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s: جزء مقسّم مفقود.</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s: يوجد ملف واحد وأجزاء مقسّمة معًا؛ يُستخدم الملف الواحد.</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s: ملف بصمة تحقق بلا أرشيفه.</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s: عدة ملفات بصمة تحقق؛ يُستخدم الأقوى.</string>
+    <string name="restore_ui_twrp_verify_title">بصمات التحقق</string>
+    <string name="restore_ui_twrp_verify_subtitle">قارن كل ملف مخزّن بملف بصمة التحقق الذي كتبه TWRP بجواره.</string>
+    <string name="restore_ui_twrp_verify">التحقق من البصمات</string>
+    <string name="restore_ui_twrp_verify_summary">تطابق %1$d من %2$d ملف · %3$d غير مطابق · %4$d بلا بصمة · %5$d غير قابل للقراءة</string>
+    <string name="restore_ui_twrp_verify_damaged">لا ينبغي استعادة الملفات التالفة.</string>
+    <string name="restore_ui_twrp_check_ok">مطابق</string>
+    <string name="restore_ui_twrp_check_mismatch">لا يطابق بصمة التحقق</string>
+    <string name="restore_ui_twrp_check_no_sidecar">لا يوجد ملف بصمة تحقق</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">ملف بصمة التحقق غير قابل للقراءة</string>
+    <string name="restore_ui_twrp_check_read_failed">تعذّرت قراءته</string>
+    <string name="restore_ui_twrp_partitions_title">الأقسام</string>
+    <string name="restore_ui_twrp_kind_image">صورة خام</string>
+    <string name="restore_ui_twrp_kind_archive">أرشيف ملفات</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">مشفّر بـ TWRP</string>
+    <string name="restore_ui_twrp_format_raw">خام</string>
+    <string name="restore_ui_twrp_format_unknown">صيغة غير معروفة</string>
+    <string name="restore_ui_twrp_format_empty">فارغ</string>
+    <string name="restore_ui_twrp_format_unreadable">الصيغة غير قابلة للقراءة</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="zero">%1$d جزء</item>
+        <item quantity="one">جزء واحد</item>
+        <item quantity="two">جزءان</item>
+        <item quantity="few">%1$d أجزاء</item>
+        <item quantity="many">%1$d جزءًا</item>
+        <item quantity="other">%1$d جزء</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">بلا بصمة تحقق</string>
+    <string name="restore_ui_twrp_action_restore">الكتابة على قسم</string>
+    <string name="restore_ui_twrp_action_extract">فك الضغط إلى مجلد</string>
+    <string name="restore_ui_twrp_target_partition">القسم الهدف</string>
+    <string name="restore_ui_twrp_target_partition_hint">اتركه فارغًا للكتابة على %1$s.</string>
+    <string name="restore_ui_twrp_device_check_hint">يسجل TWRP الرقم التسلسلي للجهاز فقط. إذا لم يذكر مجلد النسخة الاحتياطية الرقم التسلسلي لهذا الجهاز، تُرفض الكتابة إلى أن تسمح بصور من جهاز آخر.</string>
+    <string name="restore_ui_twrp_extract_hint">تُكتب الملفات والمجلدات إلى الوجهة؛ أما الروابط وعقد الأجهزة والمالكون وتسميات SELinux فلا. تُستبدل الملفات الموجودة التي لها الأسماء نفسها.</string>
+    <string name="restore_ui_twrp_extract_destination">فك الضغط إلى الوجهة</string>
+    <string name="restore_ui_twrp_extract_folder">مجلد على تلك الوجهة</string>
+    <string name="restore_ui_twrp_extract_folder_hint">يُنشأ إذا لم يكن موجودًا.</string>
+    <string name="restore_ui_twrp_draft_not_image">يمكن كتابة الصور الخام فقط على قسم.</string>
+    <string name="restore_ui_twrp_draft_split">لا يمكن كتابة الصور المقسّمة من Android.</string>
+    <string name="restore_ui_twrp_draft_not_archive">يمكن فك ضغط أرشيفات الملفات فقط.</string>
+    <string name="restore_ui_twrp_draft_encrypted">هذا الأرشيف مشفّر بـ TWRP؛ ولا يستطيع DFTB فك تشفيره. استعده في TWRP.</string>
+    <string name="restore_ui_twrp_draft_unknown_format">هذا الملف ليس أرشيفًا قابلًا للقراءة.</string>
+    <string name="restore_ui_twrp_draft_partition_name">استخدم اسم قسم من أحرف وأرقام ونقاط وشرطات وشرطات سفلية.</string>
+    <string name="restore_ui_twrp_draft_destination">اختر الوجهة المراد فك الضغط إليها.</string>
+    <string name="restore_ui_twrp_draft_traversal">يجب ألا يحتوي المجلد على مقاطع . أو ..</string>
+    <string name="restore_ui_twrp_confirm_restore_title">كتابة هذه الصورة؟</string>
+    <string name="restore_ui_twrp_confirm_restore_body">سيكتب %1$s فوق القسم %2$s في هذا الجهاز. تُفحص الصورة أولًا ويُقرأ القسم مجددًا بعد ذلك، لكن لا يمكن استرداد المحتوى القديم، وقد تترك عملية كتابة فاشلة الجهاز غير قادر على الإقلاع.</string>
+    <string name="restore_ui_twrp_confirm_extract_title">فك ضغط هذا الأرشيف؟</string>
+    <string name="restore_ui_twrp_confirm_extract_body">ستُكتب ملفات %1$s إلى %2$s في %3$s. تُستبدل الملفات الموجودة التي لها الأسماء نفسها.</string>
+    <string name="restore_ui_twrp_task_target">%1$s ← %2$s</string>
+    <string name="restore_ui_twrp_extract_result">كُتب %1$d ملف و%2$d مجلد (%3$s).</string>
+    <string name="restore_ui_cd_error">خطأ</string>
+    <string name="restore_ui_cd_warning">تحذير</string>
+</resources>

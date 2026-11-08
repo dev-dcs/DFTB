@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">返回</string>
+    <string name="restore_ui_back_step">返回</string>
+    <string name="restore_ui_next">下一步</string>
+    <string name="restore_ui_cancel">取消</string>
+    <string name="restore_ui_retry">重试</string>
+    <string name="restore_ui_refresh">刷新</string>
+    <string name="restore_ui_yes">是</string>
+    <string name="restore_ui_date_unknown">日期未知</string>
+    <string name="restore_ui_destination_label">目标</string>
+    <string name="restore_ui_intent_failed">此设备无法打开该界面。</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%1$s / %2$s（%3$d%%）</string>
+    <string name="restore_ui_progress_bytes_only">已处理 %1$s</string>
+    <string name="restore_ui_progress_speed">%1$s/秒</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/秒 · 约剩余 %2$s</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="other">%1$d 条警告</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">恢复</string>
+    <string name="restore_ui_twrp_open">导入 TWRP 备份</string>
+    <string name="restore_ui_twrp_link">导入 TWRP 或 OrangeFox 备份</string>
+    <string name="restore_ui_no_destinations_title">还没有目标</string>
+    <string name="restore_ui_no_destinations_body">备份是从目标中读取的。请先添加保存备份的目标。</string>
+    <string name="restore_ui_add_destination">添加目标</string>
+    <string name="restore_ui_list_failed">无法读取该目标</string>
+    <string name="restore_ui_no_backups_title">此处没有备份</string>
+    <string name="restore_ui_no_backups_body">此目标中没有 DFTB 备份文件夹。下拉可重新检查，或选择其他目标。</string>
+    <string name="restore_ui_badge_encrypted">已加密</string>
+    <string name="restore_ui_badge_locked">已锁定</string>
+    <string name="restore_ui_badge_partial">不完整</string>
+    <string name="restore_ui_badge_critical">身份数据</string>
+    <string name="restore_ui_badge_logical">逻辑</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">正在读取备份…</string>
+    <string name="restore_ui_open_failed">无法打开该备份</string>
+    <string name="restore_ui_locked_title">此备份已加密</string>
+    <string name="restore_ui_locked_body">请输入创建备份时使用的口令，以查看其内容并进行恢复。</string>
+    <string name="restore_ui_locked_vault_problem">无法使用该配置已保存的密钥（%1$s）。请改为输入口令。</string>
+    <string name="restore_ui_enter_passphrase">输入口令</string>
+    <string name="restore_ui_passphrase_title">解锁备份</string>
+    <string name="restore_ui_passphrase_body">口令仅在此界面打开期间保留在内存中，不会被保存。</string>
+    <string name="restore_ui_passphrase_label">口令</string>
+    <string name="restore_ui_passphrase_unlock">解锁</string>
+    <string name="restore_ui_passphrase_show">显示口令</string>
+    <string name="restore_ui_passphrase_hide">隐藏口令</string>
+    <string name="restore_ui_unlocked_vault">已使用保存的密钥打开</string>
+    <string name="restore_ui_unlocked_passphrase">已使用你的口令打开</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">此文件夹中没有 DFTB 备份索引。</string>
+    <string name="restore_ui_catalog_key_required">此部分已加密；请先解锁备份。</string>
+    <string name="restore_ui_catalog_corrupt_manifest">备份索引已损坏，无法读取。</string>
+    <string name="restore_ui_catalog_unsupported_schema">此备份由更新版本的 DFTB 创建。</string>
+    <string name="restore_ui_catalog_inconsistent_runs">此续传备份的各次运行互不匹配。</string>
+    <string name="restore_ui_catalog_unsupported_encryption">此备份使用了当前版本无法读取的加密方式。</string>
+    <string name="restore_ui_catalog_missing_file">目标上缺少一个已存储的文件。</string>
+    <string name="restore_ui_catalog_size_mismatch">某个已存储的文件大小不正确。</string>
+    <string name="restore_ui_catalog_digest_mismatch">某个已存储的文件与其校验和不符。</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">归档内的某个文件与其校验和不符。</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">校验和文件缺失，或与已存储的数据不一致。</string>
+    <string name="restore_ui_catalog_not_single_stream">此项目以多个独立文件存储。</string>
+    <string name="restore_ui_problem_io">读取错误</string>
+    <string name="restore_ui_problem_more">%1$s（以及另外 %2$d 项）</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">备份详情</string>
+    <string name="restore_ui_detail_created">开始时间</string>
+    <string name="restore_ui_detail_finished">完成时间</string>
+    <string name="restore_ui_detail_size">存储大小</string>
+    <string name="restore_ui_detail_device">创建设备</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">API 级别 %1$d</string>
+    <string name="restore_ui_detail_slot">当时的活动槽位</string>
+    <string name="restore_ui_detail_build">版本号</string>
+    <string name="restore_ui_detail_app">创建工具</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">格式</string>
+    <string name="restore_ui_detail_encryption">加密</string>
+    <string name="restore_ui_detail_checksum">校验和</string>
+    <string name="restore_ui_detail_structure">文件夹布局</string>
+    <string name="restore_ui_detail_twrp">兼容 TWRP</string>
+    <string name="restore_ui_detail_selection">配置所选内容</string>
+    <string name="restore_ui_detail_runs">合并的运行</string>
+    <string name="restore_ui_backup_warnings">备份期间记录的警告</string>
+    <string name="restore_ui_partial_title">此备份未完成</string>
+    <string name="restore_ui_partial_body">它被中断，或仍在续传中。其中只包含下方列出的项目；这些项目可以验证和恢复。</string>
+    <string name="restore_ui_cross_device_title">在另一台设备上创建</string>
+    <string name="restore_ui_cross_device_body">此备份来自 %1$s；本设备是 %2$s。应用和文件通常可以正常恢复；来自其他设备的分区镜像可能导致本设备无法启动。</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="other">%1$d 个分区</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="other">%1$d 个应用</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="other">%1$d 个文件夹</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="other">%1$d 个文件类别</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">内容</string>
+    <string name="restore_ui_units_empty">此备份中没有可恢复的内容。</string>
+    <string name="restore_ui_group_apps">应用</string>
+    <string name="restore_ui_group_partitions">分区</string>
+    <string name="restore_ui_group_files">文件</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">验证</string>
+    <string name="restore_ui_verify_subtitle">在依赖已存储的数据之前，先检查其是否完好。</string>
+    <string name="restore_ui_verify_quick">快速验证</string>
+    <string name="restore_ui_verify_deep">深度验证</string>
+    <string name="restore_ui_verify_hint">快速验证会将已存储的文件与其校验和比对。深度验证还会解密并解包所有内容，检查其中的每个文件；它会读取整个备份。</string>
+    <string name="restore_ui_verify_running_quick">正在检查已存储的文件…</string>
+    <string name="restore_ui_verify_running_deep">正在解码并检查每个文件…</string>
+    <string name="restore_ui_verify_all_ok">全部 %1$d 个已存储项目均完好。</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="other">%2$d 个已存储项目中有 %1$d 个已损坏或缺失。</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">完好</string>
+    <string name="restore_ui_verify_bad_cd">有问题</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">恢复</string>
+    <string name="restore_ui_start_subtitle">选择要恢复的内容和方式，并在写入任何数据之前进行检查。</string>
+    <string name="restore_ui_start_wizard">恢复…</string>
+    <string name="restore_ui_start_busy">此备份的恢复正在运行。</string>
+    <string name="restore_ui_start">开始恢复</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">第 %1$d 步，共 %2$d 步 · %3$s</string>
+    <string name="restore_ui_step_select">选择项目</string>
+    <string name="restore_ui_step_options">选项</string>
+    <string name="restore_ui_step_preflight">检查</string>
+    <string name="restore_ui_select_all">全选</string>
+    <string name="restore_ui_select_none">全不选</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="other">已选择 %2$d 个项目中的 %1$d 个 · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">常规</string>
+    <string name="restore_ui_conflict_title">当项目已存在时</string>
+    <string name="restore_ui_conflict_skip">保留现有</string>
+    <string name="restore_ui_conflict_overwrite">覆盖</string>
+    <string name="restore_ui_conflict_keep_both">两者都保留</string>
+    <string name="restore_ui_conflict_skip_desc">保留现有文件，不予替换</string>
+    <string name="restore_ui_conflict_overwrite_desc">用备份的版本替换现有文件</string>
+    <string name="restore_ui_conflict_keep_both_desc">将备份的版本以新名称写在现有文件旁边</string>
+    <string name="restore_ui_verify_first">恢复前验证</string>
+    <string name="restore_ui_verify_first_hint">先再次读取所有选中的项目；如有任何损坏，则不会写入任何内容。</string>
+    <string name="restore_ui_metadata">恢复日期和权限</string>
+    <string name="restore_ui_metadata_hint">始终恢复修改日期；在当前模式允许时恢复所有者、模式和 SELinux 标签。</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">文件</string>
+    <string name="restore_ui_target_title">将文件恢复到</string>
+    <string name="restore_ui_target_original">原位置</string>
+    <string name="restore_ui_target_folder">指定文件夹路径</string>
+    <string name="restore_ui_target_saf">所选文件夹</string>
+    <string name="restore_ui_target_original_hint">文件会放回备份时的来源位置。DFTB 在当前模式下无法写入的文件夹会在检查步骤中报告。</string>
+    <string name="restore_ui_folder_label">文件夹</string>
+    <string name="restore_ui_folder_hint">绝对路径，例如 /storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">尚未选择文件夹</string>
+    <string name="restore_ui_tree_pick">选择文件夹</string>
+    <string name="restore_ui_tree_grant_failed">DFTB 无法保留对该文件夹的访问权限。请选择其他文件夹。</string>
+    <string name="restore_ui_twrp_mode_title">TWRP 备份文件夹</string>
+    <string name="restore_ui_twrp_copy">复制文件夹</string>
+    <string name="restore_ui_twrp_extract">解包文件</string>
+    <string name="restore_ui_twrp_copy_desc">按原样复制 TWRP 文件夹，以便 TWRP 或 OrangeFox 在 Recovery 中恢复。</string>
+    <string name="restore_ui_twrp_extract_desc">将 TWRP 归档中的文件解包到所选文件夹。绝不会覆盖正在运行的系统。</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">应用</string>
+    <string name="restore_ui_apps_standard_hint">在标准模式下，Android 会要求你确认每次安装，且无法恢复应用数据。Shizuku 可恢复共享存储数据；root 可恢复全部内容。</string>
+    <string name="restore_ui_apps_apks">安装应用</string>
+    <string name="restore_ui_apps_data">恢复应用数据</string>
+    <string name="restore_ui_apps_data_hint">私有数据需要 root；Android/data 和 Android/media 需要 Shizuku 或 root。</string>
+    <string name="restore_ui_version_title">当应用已安装时</string>
+    <string name="restore_ui_version_auto">自动</string>
+    <string name="restore_ui_version_reinstall">始终重新安装</string>
+    <string name="restore_ui_version_data_only">仅数据</string>
+    <string name="restore_ui_version_auto_desc">应用缺失或备份版本较新时安装；否则仅恢复数据。</string>
+    <string name="restore_ui_version_reinstall_desc">即使版本相同，也安装备份的版本。</string>
+    <string name="restore_ui_version_data_only_desc">从不安装；将数据恢复到已安装的版本上。</string>
+    <string name="restore_ui_apps_external">恢复 Android/data 和 Android/media</string>
+    <string name="restore_ui_apps_obb">恢复 Android/obb</string>
+    <string name="restore_ui_apps_permissions">重新授予已记录的权限</string>
+    <string name="restore_ui_apps_permissions_hint">应用备份时拥有的运行时权限（Shizuku 或 root）。</string>
+    <string name="restore_ui_apps_user">为用户恢复</string>
+    <string name="restore_ui_apps_user_self">用户 %1$d（你）</string>
+    <string name="restore_ui_apps_user_other">用户 %1$d</string>
+    <string name="restore_ui_apps_advanced">高级</string>
+    <string name="restore_ui_apps_cache">恢复缓存文件夹</string>
+    <string name="restore_ui_apps_installer">恢复安装来源记录</string>
+    <string name="restore_ui_apps_installer_hint">将应用标记为由其来源商店安装（Shizuku 或 root）。</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">分区</string>
+    <string name="restore_ui_partitions_need_root">需要 root</string>
+    <string name="restore_ui_partitions_need_root_body">只有 root 才能写入分区。请切换到 Root 模式，或从 Recovery 或 fastboot 恢复这些镜像。</string>
+    <string name="restore_ui_partitions_hint">每个镜像在写入前都会验证，写入后会回读。已挂载或正在使用的分区一律拒绝写入。</string>
+    <string name="restore_ui_critical_selected_title">已选择身份分区</string>
+    <string name="restore_ui_critical_selected_body">%1$s 保存的是单台设备独有的数据（IMEI、校准数据、DRM、出厂重置保护）。写入错误的副本可能永久损坏此设备。除非你在下方允许，否则会拒绝写入。</string>
+    <string name="restore_ui_slot_title">要写入的槽位</string>
+    <string name="restore_ui_slot_same_role">相同角色</string>
+    <string name="restore_ui_slot_active">活动槽位</string>
+    <string name="restore_ui_slot_inactive">非活动槽位</string>
+    <string name="restore_ui_slot_recorded">相同字母</string>
+    <string name="restore_ui_slot_same_role_desc">写入当前担任被制作镜像槽位所担任角色（活动或非活动）的槽位。推荐：每次更新后槽位都会互换。</string>
+    <string name="restore_ui_slot_active_desc">写入设备当前启动所用的槽位。</string>
+    <string name="restore_ui_slot_inactive_desc">写入设备未用于启动的槽位。</string>
+    <string name="restore_ui_slot_recorded_desc">写回制作镜像时的同一槽位字母（boot_a 写回 boot_a）。</string>
+    <string name="restore_ui_overrides_title">安全检查</string>
+    <string name="restore_ui_overrides_hint">这些检查会拒绝有风险的写入。只有在你确认可能出现的后果后，才能逐项关闭。</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">我已了解，允许</string>
+    <string name="restore_ui_risky_active_title">你已关闭的安全检查</string>
+    <string name="restore_ui_risky_space">在可用空间不足时恢复</string>
+    <string name="restore_ui_risky_space_hint">即使目标报告可用空间过少也继续。</string>
+    <string name="restore_ui_risky_space_consequence">恢复期间目标可能被占满。已写入的文件会保留；其余文件将失败，且在释放空间之前，此设备上的应用可能无法正常工作。</string>
+    <string name="restore_ui_risky_downgrade">允许较旧的应用版本</string>
+    <string name="restore_ui_risky_downgrade_hint">安装比已安装版本更旧的备份版本（Shizuku 或 root）。</string>
+    <string name="restore_ui_risky_downgrade_consequence">较旧的应用版本可能无法识别较新版本写入的数据。应用可能崩溃或丢失数据。Android 可能会拒绝某些应用的降级。</string>
+    <string name="restore_ui_risky_cross_slot">允许写入另一个槽位</string>
+    <string name="restore_ui_risky_cross_slot_hint">所选槽位与制作镜像的槽位不同。</string>
+    <string name="restore_ui_risky_cross_slot_consequence">另一个槽位的分区将被替换。如果镜像与该槽位的其余部分不匹配，设备可能无法从该槽位启动；下次更新时也可能切换到该槽位。</string>
+    <string name="restore_ui_risky_other_device">允许来自另一台设备的镜像</string>
+    <string name="restore_ui_risky_other_device_hint">镜像取自不同型号的设备，或无法证明其来源。</string>
+    <string name="restore_ui_risky_other_device_consequence">分区镜像专属于某一设备型号。写入其他设备的镜像可能使此设备彻底变砖，只能使用出厂刷机工具恢复。</string>
+    <string name="restore_ui_risky_other_build">允许来自另一个版本的镜像</string>
+    <string name="restore_ui_risky_other_build_hint">同一设备，但系统版本不同（例如更新之前）。</string>
+    <string name="restore_ui_risky_other_build_consequence">混用不同版本的分区可能导致无限重启或功能损坏（相机、无线电、加密）。请将该版本的所有分区一并恢复。</string>
+    <string name="restore_ui_risky_smaller_image">允许小于分区的镜像</string>
+    <string name="restore_ui_risky_smaller_image_hint">分区末尾部分保持原样。</string>
+    <string name="restore_ui_risky_smaller_image_consequence">镜像之后，分区仍保留旧数据。这对某些分区无害，但会破坏另一些分区（例如末尾带有页脚或签名的分区）。</string>
+    <string name="restore_ui_risky_identity">允许写入身份分区</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV、基带校准、persist、出厂重置保护等类似分区。</string>
+    <string name="restore_ui_risky_identity_consequence">这些分区专属于单台物理设备。来自其他设备的副本、旧副本或已损坏的副本，可能永久损坏通话、移动数据、Wi-Fi、DRM 或引导加载程序。无法撤销。</string>
+    <string name="restore_ui_confirm_type_word">输入 %1$s 以确认。</string>
+    <string name="restore_ui_confirm_word_label">确认</string>
+    <string name="restore_ui_confirm_word_device">其他设备</string>
+    <string name="restore_ui_confirm_word_identity">身份数据</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">请至少选择一个要恢复的项目。</string>
+    <string name="restore_ui_problem_folder_required">请输入要恢复到的文件夹。</string>
+    <string name="restore_ui_problem_folder_absolute">请使用以 / 开头的绝对路径。</string>
+    <string name="restore_ui_problem_folder_traversal">路径不能包含 . 或 .. 段。</string>
+    <string name="restore_ui_problem_folder_protected">这是系统位置。请选择存储中的文件夹。</string>
+    <string name="restore_ui_problem_tree_required">请选择一个文件夹。</string>
+    <string name="restore_ui_problem_twrp_folder">解包 TWRP 归档需要一个文件夹；绝不会覆盖正在运行的系统。</string>
+    <string name="restore_ui_problem_app_nothing">既未选择安装也未选择数据时，没有可为应用恢复的内容。</string>
+    <string name="restore_ui_problem_downgrade_ignored">较旧版本仅在安装应用时才有意义；此选项目前无效。</string>
+    <string name="restore_ui_problem_folder_app_data">此文件夹位于应用数据内。写入此处可能损坏已安装的应用。</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">尚未写入任何内容。以下是当前模式下可以恢复的内容。</string>
+    <string name="restore_ui_preflight_running">正在检查每个项目…</string>
+    <string name="restore_ui_preflight_failed">无法完成检查</string>
+    <string name="restore_ui_preflight_run">运行检查</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="other">%2$d 个项目中有 %1$d 个可以恢复</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">可以恢复</string>
+    <string name="restore_ui_preflight_blocked_cd">无法恢复</string>
+    <string name="restore_ui_preflight_space">需要 %1$s · 可用 %2$s</string>
+    <string name="restore_ui_preflight_space_needed">需要 %1$s</string>
+    <string name="restore_ui_preflight_shortfall">还需要 %1$s 空间。</string>
+    <string name="restore_ui_tier_none">无需特权</string>
+    <string name="restore_ui_tier_shizuku">需要 Shizuku 或 root</string>
+    <string name="restore_ui_tier_root">需要 root</string>
+    <string name="restore_ui_space_not_needed">无需空间</string>
+    <string name="restore_ui_space_ok">空间充足</string>
+    <string name="restore_ui_space_unknown">可用空间未知</string>
+    <string name="restore_ui_space_insufficient">空间不足</string>
+    <string name="restore_ui_blocker_nothing">所选项目目前均无法恢复。请更改选项或运行模式。</string>
+    <string name="restore_ui_blocker_space">有项目放不进其目标。请释放一些空间、取消选择该项目，或允许在可用空间不足时恢复。</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">立即恢复？</string>
+    <string name="restore_ui_confirm_body">DFTB 将把 %1$s 中的数据写入此设备：</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="other">%1$d 个文件集恢复到 %2$s；%3$s。</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="other">%1$d 个应用可能会被重新安装，其数据将被替换。</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">以下分区将被逐块覆盖：%1$s。此操作无法撤销，写入失败可能导致设备无法启动。</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">恢复</string>
+    <string name="restore_ui_run_started">恢复已开始。离开此界面后它仍会继续。</string>
+    <string name="restore_ui_run_running">正在恢复…</string>
+    <string name="restore_ui_run_cancelling">正在停止…</string>
+    <string name="restore_ui_run_completed">已完成</string>
+    <string name="restore_ui_run_completed_warnings">已完成，但有警告</string>
+    <string name="restore_ui_run_cancelled">已停止</string>
+    <string name="restore_ui_run_failed">失败</string>
+    <string name="restore_ui_run_cancel">停止恢复</string>
+    <string name="restore_ui_run_done">完成</string>
+    <string name="restore_ui_run_summary">已恢复 %1$d · 失败 %2$d · 未恢复 %3$d</string>
+    <string name="restore_ui_run_units">项目</string>
+    <string name="restore_ui_run_warnings">警告</string>
+    <string name="restore_ui_unit_waiting">等待中</string>
+    <string name="restore_ui_unit_running">正在恢复</string>
+    <string name="restore_ui_unit_restored">已恢复</string>
+    <string name="restore_ui_unit_failed">失败</string>
+    <string name="restore_ui_unit_blocked">无法在此处恢复</string>
+    <string name="restore_ui_unit_not_run">未恢复</string>
+    <string name="restore_ui_cancel_title">停止恢复？</string>
+    <string name="restore_ui_cancel_body">已恢复的项目会保持已恢复状态。正在写入的分区会先完成写入并检查，因此停止可能需要一点时间。</string>
+    <string name="restore_ui_writing_partition_title">正在写入分区</string>
+    <string name="restore_ui_writing_partition_body">在此分区写入并检查完成之前，请勿重启、关机，也不要让电量耗尽。</string>
+    <string name="restore_ui_do_not_reboot_title">请勿重启</string>
+    <string name="restore_ui_do_not_reboot_body">分区写入未成功完成，因此该分区可能只写入了一部分。在正确恢复之前请勿重启：请重试恢复，或从 Recovery 或 fastboot 刷入完好的镜像。</string>
+    <string name="restore_ui_install_pending_title">等待安装确认</string>
+    <string name="restore_ui_install_pending_body">Android 会要求你确认每次应用安装。提示通常会自动弹出；如果没有看到，请在此打开。</string>
+    <string name="restore_ui_install_open">打开提示</string>
+    <string name="restore_ui_install_permission_title">DFTB 可能无法安装应用</string>
+    <string name="restore_ui_install_permission_body">请允许 DFTB 安装未知应用，然后重新恢复：%1$s</string>
+    <string name="restore_ui_install_permission_open">打开设置</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">导入 TWRP 备份</string>
+    <string name="restore_ui_twrp_intro">在目标上查找 TWRP 或 OrangeFox 备份文件夹。原始分区镜像可在此通过 root 写回；文件系统归档可解包到文件夹中。</string>
+    <string name="restore_ui_twrp_root_label">搜索位置</string>
+    <string name="restore_ui_twrp_root_hint">目标上的文件夹，例如 TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">搜索</string>
+    <string name="restore_ui_twrp_searching">正在搜索备份…</string>
+    <string name="restore_ui_twrp_search_incomplete">搜索未完成</string>
+    <string name="restore_ui_twrp_none_found">在该位置未找到 TWRP 备份文件夹。</string>
+    <string name="restore_ui_twrp_pick_backup">选择一个备份以查看其分区。</string>
+    <string name="restore_ui_twrp_selected">已选择</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="other">%1$d 个分区 · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">有问题</string>
+    <string name="restore_ui_twrp_device_folder">设备序列号文件夹</string>
+    <string name="restore_ui_twrp_device_unknown">未记录</string>
+    <string name="restore_ui_twrp_device_unknown_hint">该文件夹不在 TWRP/BACKUPS/&lt;serial&gt; 之下，因此 DFTB 无法判断它由哪台设备创建。</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s：缺少一个分卷。</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s：同时存在单个文件和分卷；将使用单个文件。</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s：有校验和文件，但缺少对应的归档。</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s：有多个校验和文件；将使用最强的一个。</string>
+    <string name="restore_ui_twrp_verify_title">校验和</string>
+    <string name="restore_ui_twrp_verify_subtitle">将每个已存储的文件与 TWRP 写在其旁边的校验和文件比对。</string>
+    <string name="restore_ui_twrp_verify">验证校验和</string>
+    <string name="restore_ui_twrp_verify_summary">%2$d 个文件中 %1$d 个匹配 · %3$d 个不匹配 · %4$d 个无校验和 · %5$d 个无法读取</string>
+    <string name="restore_ui_twrp_verify_damaged">不应恢复已损坏的文件。</string>
+    <string name="restore_ui_twrp_check_ok">匹配</string>
+    <string name="restore_ui_twrp_check_mismatch">与其校验和不符</string>
+    <string name="restore_ui_twrp_check_no_sidecar">无校验和文件</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">校验和文件无法读取</string>
+    <string name="restore_ui_twrp_check_read_failed">无法读取</string>
+    <string name="restore_ui_twrp_partitions_title">分区</string>
+    <string name="restore_ui_twrp_kind_image">原始镜像</string>
+    <string name="restore_ui_twrp_kind_archive">文件归档</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">TWRP 加密</string>
+    <string name="restore_ui_twrp_format_raw">原始</string>
+    <string name="restore_ui_twrp_format_unknown">未知格式</string>
+    <string name="restore_ui_twrp_format_empty">空</string>
+    <string name="restore_ui_twrp_format_unreadable">格式无法读取</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="other">%1$d 个分卷</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">无校验和</string>
+    <string name="restore_ui_twrp_action_restore">写入分区</string>
+    <string name="restore_ui_twrp_action_extract">解包到文件夹</string>
+    <string name="restore_ui_twrp_target_partition">目标分区</string>
+    <string name="restore_ui_twrp_target_partition_hint">留空则写入 %1$s。</string>
+    <string name="restore_ui_twrp_device_check_hint">TWRP 只记录设备序列号。如果备份文件夹未标明本设备的序列号，则会拒绝写入，除非你允许来自另一台设备的镜像。</string>
+    <string name="restore_ui_twrp_extract_hint">文件和文件夹会写入目标；链接、设备节点、所有者和 SELinux 标签不会写入。同名的现有文件将被覆盖。</string>
+    <string name="restore_ui_twrp_extract_destination">解包到目标</string>
+    <string name="restore_ui_twrp_extract_folder">该目标上的文件夹</string>
+    <string name="restore_ui_twrp_extract_folder_hint">如果不存在则会创建。</string>
+    <string name="restore_ui_twrp_draft_not_image">只有原始镜像可以写入分区。</string>
+    <string name="restore_ui_twrp_draft_split">无法在 Android 上写入分卷镜像。</string>
+    <string name="restore_ui_twrp_draft_not_archive">只有文件归档可以解包。</string>
+    <string name="restore_ui_twrp_draft_encrypted">此归档由 TWRP 加密；DFTB 无法解密。请在 TWRP 中恢复。</string>
+    <string name="restore_ui_twrp_draft_unknown_format">此文件不是可读取的归档。</string>
+    <string name="restore_ui_twrp_draft_partition_name">分区名称请使用字母、数字、点、短横线和下划线。</string>
+    <string name="restore_ui_twrp_draft_destination">请选择要解包到的目标。</string>
+    <string name="restore_ui_twrp_draft_traversal">文件夹不能包含 . 或 .. 段。</string>
+    <string name="restore_ui_twrp_confirm_restore_title">写入此镜像？</string>
+    <string name="restore_ui_twrp_confirm_restore_body">%1$s 将覆盖此设备的 %2$s 分区。镜像会先经过检查，分区写入后会回读，但旧内容无法恢复，写入失败可能导致设备无法启动。</string>
+    <string name="restore_ui_twrp_confirm_extract_title">解包此归档？</string>
+    <string name="restore_ui_twrp_confirm_extract_body">%1$s 中的文件将写入 %3$s 中的 %2$s。同名的现有文件将被覆盖。</string>
+    <string name="restore_ui_twrp_task_target">%1$s → %2$s</string>
+    <string name="restore_ui_twrp_extract_result">已写入 %1$d 个文件和 %2$d 个文件夹（%3$s）。</string>
+    <string name="restore_ui_cd_error">错误</string>
+    <string name="restore_ui_cd_warning">警告</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_net_missing_host">Ο προορισμός δεν έχει ρυθμισμένο όνομα κεντρικού υπολογιστή.</string>
+    <string name="storage_net_missing_credential">Ο προορισμός δεν έχει αποθηκευμένα διαπιστευτήρια.</string>
+    <string name="storage_net_credential_not_found">Δεν βρέθηκαν τα αποθηκευμένα διαπιστευτήρια για αυτόν τον προορισμό.</string>
+    <string name="storage_net_credential_wrong_kind">Ο τύπος των αποθηκευμένων διαπιστευτηρίων δεν υποστηρίζεται από αυτό το πρωτόκολλο.</string>
+    <string name="storage_net_missing_username">Ο προορισμός δεν έχει ρυθμισμένο όνομα χρήστη.</string>
+    <string name="storage_net_connect_failed">Δεν ήταν δυνατή η σύνδεση με το %1$s: %2$s</string>
+    <string name="storage_net_op_failed">Η απομακρυσμένη λειτουργία απέτυχε (%1$s): %2$s</string>
+    <string name="storage_net_not_a_directory">Το “%1$s” δεν είναι φάκελος στον προορισμό.</string>
+    <string name="storage_net_transfer_timeout">Η μεταφορά δεν ξεκίνησε εγκαίρως (%1$s).</string>
+    <string name="storage_ssh_auth_failed">Ο διακομιστής SSH απέρριψε το όνομα χρήστη, τον κωδικό ή το κλειδί.</string>
+    <string name="storage_ssh_key_unreadable">Δεν ήταν δυνατή η ανάγνωση του αποθηκευμένου ιδιωτικού κλειδιού. Ελέγξτε τη μορφή του κλειδιού και τη φράση πρόσβασης.</string>
+    <string name="storage_ssh_host_key_changed">Το κλειδί διακομιστή SSH του %1$s άλλαξε (τώρα %2$s). Η σύνδεση απορρίφθηκε για την προστασία των δεδομένων σας. Αν ο διακομιστής επανεγκαταστάθηκε σκόπιμα, διαγράψτε το αποθηκευμένο κλειδί του και συνδεθείτε ξανά.</string>
+    <string name="storage_ssh_no_shell">Ο διακομιστής SSH δεν προσφέρει SFTP και απέρριψε την εναλλακτική με εντολές shell.</string>
+    <string name="storage_smb_missing_share">Δεν έχει ρυθμιστεί κοινόχρηστος φάκελος. Βάλτε το όνομά του ως πρώτο φάκελο της διαδρομής ή ορίστε την επιλογή κοινόχρηστου φακέλου.</string>
+    <string name="storage_smb_not_disk_share">Το “%1$s” δεν είναι κοινόχρηστος φάκελος αρχείων.</string>
+    <string name="storage_smb_encryption_unsupported">Ζητήθηκε κρυπτογράφηση αλλά ο διακομιστής δεν υποστηρίζει κρυπτογράφηση SMB 3.</string>
+    <string name="storage_smb_auth_failed">Ο διακομιστής SMB απέρριψε το όνομα χρήστη ή τον κωδικό.</string>
+    <string name="storage_nfs_requires_root">Το NFS χρειάζεται λειτουργία Root: το Android δεν μπορεί να προσαρτήσει δικτυακούς κοινόχρηστους φακέλους για κανονικές εφαρμογές. Μεταβείτε σε λειτουργία Root στις Ρυθμίσεις για να χρησιμοποιήσετε αυτόν τον προορισμό.</string>
+    <string name="storage_nfs_root_unavailable">Η πρόσβαση root δεν έχει χορηγηθεί αυτή τη στιγμή, οπότε ο κοινόχρηστος φάκελος NFS δεν μπορεί να προσαρτηθεί.</string>
+    <string name="storage_nfs_kernel_unsupported">Ο πυρήνας αυτής της συσκευής δεν διαθέτει υποστήριξη πελάτη NFS, οπότε οι κοινόχρηστοι φάκελοι NFS δεν μπορούν να προσαρτηθούν.</string>
+    <string name="storage_nfs_missing_export">Δεν έχει ρυθμιστεί διαδρομή εξαγωγής NFS (για παράδειγμα /srv/backups).</string>
+    <string name="storage_nfs_bad_options">Οι επιλογές προσάρτησης NFS περιέχουν μη υποστηριζόμενους χαρακτήρες.</string>
+    <string name="storage_nfs_mount_failed">Η προσάρτηση του %1$s απέτυχε: %2$s</string>
+
+</resources>

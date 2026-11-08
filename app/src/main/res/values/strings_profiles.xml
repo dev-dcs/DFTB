@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">Cancel</string>
+    <string name="profiles_ok">OK</string>
+    <string name="profiles_done">Done</string>
+    <string name="profiles_back">Back</string>
+    <string name="profiles_yes">Yes</string>
+    <string name="profiles_no">No</string>
+    <string name="profiles_unknown_error">Unknown error</string>
+    <string name="profiles_cd_error">Error</string>
+    <string name="profiles_cd_warning">Warning</string>
+    <string name="profiles_cd_unavailable">Not available in the current mode</string>
+    <string name="profiles_cd_step_done">Done</string>
+    <string name="profiles_cd_step_errors">Has problems to fix</string>
+    <string name="profiles_cd_step_todo">Not done yet</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">Backup profiles</string>
+    <string name="profiles_open_schedules">Schedules and retention</string>
+    <string name="profiles_new">New profile</string>
+    <string name="profiles_empty_title">No backup profiles yet</string>
+    <string name="profiles_empty_body">A profile says what to back up, where to and when. Tap “New profile” to create your first one.</string>
+    <string name="profiles_more_actions">More actions for %1$s</string>
+    <string name="profiles_action_edit">Edit</string>
+    <string name="profiles_action_duplicate">Duplicate</string>
+    <string name="profiles_action_delete">Delete</string>
+    <string name="profiles_action_run_now">Back up now</string>
+    <string name="profiles_action_view_progress">View progress</string>
+    <string name="profiles_badge_encrypted">Encrypted</string>
+    <string name="profiles_badge_twrp">TWRP-compatible</string>
+    <string name="profiles_badge_paused">Paused</string>
+    <string name="profiles_badge_needs_passphrase">Needs passphrase</string>
+    <string name="profiles_hint_scheduled_passphrase">Scheduled runs of this profile wait for you to type its passphrase.</string>
+    <string name="profiles_resume_available">An interrupted backup can continue where it stopped.</string>
+    <string name="profiles_resume_needs_passphrase">An interrupted backup can continue where it stopped once you enter its passphrase.</string>
+    <string name="profiles_resume_action">Resume</string>
+    <string name="profiles_no_destination">No destination selected</string>
+    <string name="profiles_next_run">Next run: %1$s</string>
+    <string name="profiles_last_run">Last backup: %1$s, %2$s</string>
+    <string name="profiles_last_run_never">Never backed up</string>
+    <string name="profiles_schedule_on">Schedule on</string>
+    <string name="profiles_schedule_off">Schedule paused</string>
+    <string name="profiles_add_schedule">Set up a schedule</string>
+    <string name="profiles_copy_name">Copy of %1$s</string>
+    <string name="profiles_targets_none">Nothing selected</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="one">%d partition</item>
+        <item quantity="other">%d partitions</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="one">%d app</item>
+        <item quantity="other">%d apps</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="one">%d folder</item>
+        <item quantity="other">%d folders</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">Backup of “%1$s” queued</string>
+    <string name="profiles_event_resume_queued">Continuing the interrupted backup of “%1$s”</string>
+    <string name="profiles_event_started">Backup of “%1$s” started</string>
+    <string name="profiles_event_already_running">“%1$s” is already backing up</string>
+    <string name="profiles_event_duplicated">Created “%1$s”. A copied schedule starts paused.</string>
+    <string name="profiles_event_deleted">Deleted “%1$s”</string>
+    <string name="profiles_event_schedule_on">Schedule of “%1$s” resumed</string>
+    <string name="profiles_event_schedule_off">Schedule of “%1$s” paused</string>
+    <string name="profiles_event_finished">Backup of “%1$s”: %2$s</string>
+    <string name="profiles_event_finished_detail">%1$s. %2$s</string>
+    <string name="profiles_event_failed">That did not work. The log has the details.</string>
+    <string name="profiles_event_failed_reason">That did not work: %1$s</string>
+    <string name="profiles_cd_ok">OK</string>
+    <string name="profiles_wizard_saved_not_scheduled">Saved, but the schedule could not be set up. Open the profile again to retry.</string>
+    <string name="profiles_wizard_saved_not_started">Saved, but the backup could not be started. Use “Back up now” on the list.</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">Delete “%1$s”?</string>
+    <string name="profiles_delete_consequence">The profile “%1$s” and its schedule will be removed, and an interrupted backup of it can no longer be resumed. This cannot be undone.</string>
+    <string name="profiles_delete_backups_kept">Backups already stored on %1$s are kept, with their history entries, so you can still restore them. DFTB cannot delete a profile’s stored backups for you yet; remove them from the destination yourself if you no longer need them.</string>
+    <string name="profiles_delete_backups_kept_generic">Backups already stored are kept, with their history entries, so you can still restore them. DFTB cannot delete a profile’s stored backups for you yet; remove them from the destination yourself if you no longer need them.</string>
+    <string name="profiles_delete_key_kept">The encryption key stays in this device’s vault so those backups remain readable.</string>
+    <string name="profiles_delete_confirm">Delete profile</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">running</string>
+    <string name="profiles_status_interrupted">interrupted</string>
+    <string name="profiles_status_completed">completed</string>
+    <string name="profiles_status_warnings">completed with warnings</string>
+    <string name="profiles_status_failed">failed</string>
+    <string name="profiles_status_cancelled">cancelled</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">Passphrase for “%1$s”</string>
+    <string name="profiles_passphrase_body">This profile encrypts with a passphrase DFTB never stores. Use the same passphrase every time: without it these backups cannot be decrypted, not even by DFTB.</string>
+    <string name="profiles_passphrase_field">Passphrase</string>
+    <string name="profiles_passphrase_confirm">Repeat passphrase</string>
+    <string name="profiles_passphrase_mismatch">The passphrases do not match</string>
+    <string name="profiles_passphrase_start">Start backup</string>
+    <string name="profiles_passphrase_body_resume">Enter the passphrase this interrupted backup started with. DFTB never stores it; a different passphrase would leave the backup with parts that cannot be decrypted together.</string>
+    <string name="profiles_passphrase_resume">Resume backup</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="one">Use at least %d character</item>
+        <item quantity="other">Use at least %d characters</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">New backup profile</string>
+    <string name="profiles_wizard_edit_title">Edit backup profile</string>
+    <string name="profiles_wizard_close">Close</string>
+    <string name="profiles_wizard_back">Back</string>
+    <string name="profiles_wizard_next">Next</string>
+    <string name="profiles_wizard_save">Save</string>
+    <string name="profiles_wizard_save_run">Save &amp; back up now</string>
+    <string name="profiles_wizard_not_found">This profile no longer exists.</string>
+    <string name="profiles_wizard_leave">Go back</string>
+    <string name="profiles_wizard_fix_errors">Fix the highlighted problems first</string>
+    <string name="profiles_wizard_key_failed">The encryption key could not be created in the device vault. Nothing was saved.</string>
+    <string name="profiles_wizard_save_failed">The profile could not be saved.</string>
+    <string name="profiles_wizard_already_running">The profile was saved; it is already backing up.</string>
+    <string name="profiles_wizard_discard_title">Discard changes?</string>
+    <string name="profiles_wizard_discard_new">This new profile has not been saved; everything you entered will be lost.</string>
+    <string name="profiles_wizard_discard_edit">Your changes have not been saved and will be lost. The saved profile stays as it was.</string>
+    <string name="profiles_wizard_discard_confirm">Discard</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">Name</string>
+    <string name="profiles_step_name_sub">What to call this profile</string>
+    <string name="profiles_step_targets">What</string>
+    <string name="profiles_step_targets_sub">Partitions, apps and files to back up</string>
+    <string name="profiles_step_destination">Where</string>
+    <string name="profiles_step_destination_sub">The destination and its free space</string>
+    <string name="profiles_step_options">How</string>
+    <string name="profiles_step_options_sub">Format, compression, encryption, integrity</string>
+    <string name="profiles_step_schedule">When</string>
+    <string name="profiles_step_schedule_sub">Schedule, conditions and retention</string>
+    <string name="profiles_step_review">Review</string>
+    <string name="profiles_step_review_sub">Check everything and save</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">Step %1$d of %2$d: %3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">Profile name</string>
+    <string name="profiles_field_name_placeholder">e.g. Nightly photos</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d characters</string>
+    <string name="profiles_field_description">Description (optional)</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">Give the profile a name.</string>
+    <string name="profiles_problem_name_too_long">The name is too long.</string>
+    <string name="profiles_problem_name_duplicate">Another profile already uses this name.</string>
+    <string name="profiles_problem_description_too_long">The description is too long.</string>
+    <string name="profiles_problem_no_targets">Select at least one partition, app, folder or file category.</string>
+    <string name="profiles_problem_app_no_components">An app has no components selected; pick at least one or remove the app.</string>
+    <string name="profiles_problem_path_invalid">A folder must be an absolute path (starting with /) or a folder picked with the system picker.</string>
+    <string name="profiles_problem_path_duplicate">The same folder is listed twice.</string>
+    <string name="profiles_problem_filter_invalid">A folder filter has an error; open it to fix it.</string>
+    <string name="profiles_problem_components_unavailable">Some selected app components cannot be captured in the current mode; they will be skipped until the mode allows them.</string>
+    <string name="profiles_problem_partitions_need_root">Partitions can only be read in Root mode; in the current mode they will be skipped.</string>
+    <string name="profiles_problem_no_destination">Choose where the backups go.</string>
+    <string name="profiles_problem_destination_gone">The chosen destination no longer exists; pick another one.</string>
+    <string name="profiles_problem_encryption_unsupported">This profile used an encryption method DFTB cannot run; choose an encryption option.</string>
+    <string name="profiles_problem_transfer_unsupported">Remote compression is not available for this destination; choose another transfer mode.</string>
+    <string name="profiles_problem_vault_key_missing">This profile’s device key is missing from the vault. Saving creates a new key; backups made with the old key cannot be decrypted.</string>
+    <string name="profiles_problem_twrp_not_local">TWRP and OrangeFox only read device storage and USB drives; copy these backups there before restoring from recovery.</string>
+    <string name="profiles_problem_twrp_no_partitions">TWRP compatibility only changes how partitions are stored, and this profile has none.</string>
+    <string name="profiles_problem_interval_invalid">Enter the interval as a whole number.</string>
+    <string name="profiles_problem_schedule_time">The time is not valid.</string>
+    <string name="profiles_problem_schedule_no_days">Pick at least one day.</string>
+    <string name="profiles_problem_schedule_invalid_day">The schedule contains a day that does not exist.</string>
+    <string name="profiles_problem_schedule_interval_short">The interval must be at least 15 minutes, Android’s minimum for repeating work.</string>
+    <string name="profiles_problem_schedule_battery">The battery level must be between 0 and 100 percent.</string>
+    <string name="profiles_problem_keep_last">Enter how many backups to keep (1 or more).</string>
+    <string name="profiles_problem_max_age">Enter the maximum age in whole days (1 or more).</string>
+    <string name="profiles_problem_passphrase_scheduled">Scheduled runs cannot type a passphrase: each one waits, with a notification, until you enter it.</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">No encryption</string>
+    <string name="profiles_key_none_desc">Stored as plain files: anyone who can open the destination can read them.</string>
+    <string name="profiles_key_passphrase">Passphrase (AES-256-GCM)</string>
+    <string name="profiles_key_passphrase_desc">You type it for every backup and restore. Never stored, restorable on any device.</string>
+    <string name="profiles_key_vault">Device key (AES-256-GCM)</string>
+    <string name="profiles_key_vault_desc">A random key kept in this device’s secure vault. Fully automatic, but bound to this device.</string>
+    <string name="profiles_key_stored">Saved passphrase (AES-256-GCM)</string>
+    <string name="profiles_key_stored_desc">Uses the passphrase already saved in the vault for this profile.</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">Not available with TWRP compatibility: recovery can only read plain, unencrypted files.</string>
+    <string name="profiles_block_mask">Needs encryption: without it the manifest would show the real names.</string>
+    <string name="profiles_block_remote_needs_ssh">Only possible with SSH or SFTP destinations.</string>
+    <string name="profiles_block_remote_unavailable">Not available yet: the SSH connection offers no remote command channel.</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">Daily</string>
+    <string name="profiles_freq_weekly">Weekly</string>
+    <string name="profiles_freq_interval">Interval</string>
+    <string name="profiles_unit_minutes">Minutes</string>
+    <string name="profiles_unit_hours">Hours</string>
+    <string name="profiles_slot_title">A/B slot</string>
+    <string name="profiles_slot_active">Active</string>
+    <string name="profiles_slot_inactive">Inactive</string>
+    <string name="profiles_slot_both">Both</string>
+    <string name="profiles_slot_none">Not slotted</string>
+    <string name="profiles_slot_active_desc">Images the slot the device booted from; follows OTA updates automatically.</string>
+    <string name="profiles_slot_inactive_desc">Images the other slot, e.g. the previous system after an update.</string>
+    <string name="profiles_slot_both_desc">Images both slots: twice the size, keeps a complete fallback.</string>
+    <string name="profiles_slot_none_desc">For partitions that have no A/B copies.</string>
+    <string name="profiles_structure_preserve_desc">Files keep their folder structure.</string>
+    <string name="profiles_structure_categorized_desc">Files are sorted into folders by type (images, videos, documents…).</string>
+    <string name="profiles_transfer_staging_desc">Builds each file on this device first, then uploads it: resumable, needs local free space.</string>
+    <string name="profiles_transfer_direct_desc">Streams straight to the destination without temporary files; an interrupted upload restarts that file.</string>
+    <string name="profiles_transfer_remote_desc">Sends raw data over SSH and compresses on the server.</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s (%2$d)</string>
+    <string name="profiles_targets_tab_partitions">Partitions</string>
+    <string name="profiles_targets_tab_apps">Apps</string>
+    <string name="profiles_targets_tab_files">Files</string>
+    <string name="profiles_components_title">App components</string>
+    <string name="profiles_components_subtitle">Newly selected apps get: %1$s</string>
+    <string name="profiles_components_none">nothing</string>
+    <string name="profiles_components_apply_all">Apply to all selected</string>
+    <string name="profiles_components_per_app">Per app (%1$d)</string>
+    <string name="profiles_components_per_app_title">Components per app</string>
+    <string name="profiles_components_per_app_empty">No apps selected yet.</string>
+    <string name="profiles_component_reason">%1$s: %2$s</string>
+    <string name="profiles_remove_app">Remove %1$s</string>
+    <string name="profiles_files_add_title">Folders</string>
+    <string name="profiles_files_storage_root">Internal storage</string>
+    <string name="profiles_files_pick_folder">Pick a folder…</string>
+    <string name="profiles_files_no_picker">No folder picker is available on this device.</string>
+    <string name="profiles_files_path_field">Folder path</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">Enter an absolute path that is not already listed.</string>
+    <string name="profiles_files_add">Add</string>
+    <string name="profiles_files_none">No folders selected.</string>
+    <string name="profiles_files_saf_folder">Picked with the system folder picker</string>
+    <string name="profiles_files_remove">Remove %1$s</string>
+    <string name="profiles_files_recursive">Include subfolders</string>
+    <string name="profiles_files_edit_filter">Filter</string>
+    <string name="profiles_files_readable">Readable with %1$s</string>
+    <string name="profiles_files_tier_hint">Needs %1$s</string>
+    <string name="profiles_files_categories_title">File categories</string>
+    <string name="profiles_files_categories_sub">Matching files from the standard folders (DCIM, Pictures, Music, Documents…)</string>
+    <string name="profiles_files_grant_failed">Android did not keep access to that folder; scheduled backups may not be able to read it.</string>
+    <string name="profiles_files_already_added">That folder is already in the list.</string>
+    <string name="profiles_filter_none">No filter: every file</string>
+    <string name="profiles_filter_only">only %1$s</string>
+    <string name="profiles_filter_except">except %1$s</string>
+    <string name="profiles_filter_min">at least %1$s</string>
+    <string name="profiles_filter_max">at most %1$s</string>
+    <string name="profiles_filter_after">modified from %1$s</string>
+    <string name="profiles_filter_before">modified before %1$s</string>
+    <string name="profiles_filter_regex">path patterns</string>
+    <string name="profiles_filter_title">Filter for %1$s</string>
+    <string name="profiles_filter_save">Save filter</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">No destinations yet</string>
+    <string name="profiles_dest_empty_body">Add a destination: a folder on this device, a USB drive, a network share or a cloud remote.</string>
+    <string name="profiles_dest_add">Add destination</string>
+    <string name="profiles_dest_space">%1$s free of %2$s (last check)</string>
+    <string name="profiles_dest_space_free">%1$s free (last check)</string>
+    <string name="profiles_dest_space_unknown">Free space not checked yet</string>
+    <string name="profiles_preflight_title">Size and space</string>
+    <string name="profiles_preflight_subtitle">What this backup needs, and whether the destination has room</string>
+    <string name="profiles_preflight_need_targets">Select something to back up first.</string>
+    <string name="profiles_preflight_running">Measuring the selected sources…</string>
+    <string name="profiles_preflight_again">Estimate again</string>
+    <string name="profiles_preflight_failed">The estimate failed: %1$s</string>
+    <string name="profiles_preflight_stale">The selection changed since the last estimate.</string>
+    <string name="profiles_preflight_run">Estimate size</string>
+    <string name="profiles_preflight_size">Estimated size</string>
+    <string name="profiles_preflight_size_approx">about %1$s</string>
+    <string name="profiles_preflight_items">Items</string>
+    <string name="profiles_preflight_artifacts">Files written</string>
+    <string name="profiles_preflight_unmeasured">Could not be measured: %1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s, %2$s</string>
+    <string name="profiles_preflight_issue">%1$s: %2$s</string>
+    <string name="profiles_preflight_no_destination">Choose a destination to check its free space.</string>
+    <string name="profiles_preflight_checking_space">Checking free space on %1$s…</string>
+    <string name="profiles_preflight_check_space">Check free space</string>
+    <string name="profiles_preflight_destination">Destination: %1$s</string>
+    <string name="profiles_preflight_staging">Local staging (%1$s needed)</string>
+    <string name="profiles_preflight_enough">Enough room: %1$s free</string>
+    <string name="profiles_preflight_enough_unknown_free">Enough room</string>
+    <string name="profiles_preflight_short">Not enough room: %1$s more is needed (safety margin included)</string>
+    <string name="profiles_preflight_unknown">Free space could not be determined; the backup will try anyway.</string>
+    <string name="profiles_preflight_unknown_reason">Free space could not be determined (%1$s); the backup will try anyway.</string>
+    <plurals name="profiles_items">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="one">%d file</item>
+        <item quantity="other">%d files</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="one">and %d more</item>
+        <item quantity="other">and %d more</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">Recovery compatibility</string>
+    <string name="profiles_opt_twrp">TWRP-compatible</string>
+    <string name="profiles_opt_twrp_hint">Stores partitions as a TWRP / OrangeFox backup folder so they can be restored from recovery without DFTB.</string>
+    <string name="profiles_opt_twrp_forced">Forced by TWRP compatibility: raw copies, no compression, no encryption, no hidden names. Recovery can only read plain files.</string>
+    <string name="profiles_opt_format_title">Format and compression</string>
+    <string name="profiles_opt_tree_format">Archive format (apps and files)</string>
+    <string name="profiles_opt_7z_hint">7z builds the whole archive in local storage before it is stored.</string>
+    <string name="profiles_opt_raw_hint">Files are copied one by one, each compressed with the codec below.</string>
+    <string name="profiles_opt_images_only">Partitions are always stored as raw images; choose their compression below.</string>
+    <string name="profiles_opt_codec_images">Image compression (partitions)</string>
+    <string name="profiles_opt_codec_files">Per-file compression</string>
+    <string name="profiles_opt_level">Compression level</string>
+    <string name="profiles_opt_level_value">%1$d (%2$s)</string>
+    <string name="profiles_opt_level_none">Nothing selected here is compressed, so there is no level to choose.</string>
+    <string name="profiles_opt_level_tree_clamped">Archives use level %1$d, the highest their format supports.</string>
+    <string name="profiles_opt_level_image_clamped">Partition images use level %1$d, the highest their codec supports.</string>
+    <string name="profiles_opt_encryption_title">Encryption</string>
+    <string name="profiles_opt_encryption_legacy">Saved with “%1$s”, which DFTB cannot run. Choose one of the options below.</string>
+    <string name="profiles_opt_passphrase_warning">Scheduled runs will need you: DFTB cannot type the passphrase, so each one waits until you enter it.</string>
+    <string name="profiles_opt_vault_warning">Device-bound: if this device is reset or lost, or its secure lock screen is removed, these backups can no longer be decrypted, on this or any other device.</string>
+    <string name="profiles_opt_vault_reused">This profile keeps its existing device key, so older backups stay readable.</string>
+    <string name="profiles_opt_stored_hint">The saved passphrase stays in the vault and is used for unattended runs.</string>
+    <string name="profiles_opt_mask">Hide file names</string>
+    <string name="profiles_opt_mask_hint">Names are encrypted, so the destination only sees random names.</string>
+    <string name="profiles_opt_integrity_title">Integrity</string>
+    <string name="profiles_opt_checksum">Checksum</string>
+    <string name="profiles_opt_checksum_weak">MD5 and SHA-1 detect accidental damage but not deliberate tampering.</string>
+    <string name="profiles_opt_verify">Verify after backup</string>
+    <string name="profiles_opt_verify_hint">Reads every stored file back and compares checksums.</string>
+    <string name="profiles_opt_layout_title">Layout and transfer</string>
+    <string name="profiles_opt_structure">Folder structure</string>
+    <string name="profiles_opt_transfer">Transfer</string>
+    <string name="profiles_opt_staging_local">With a destination on this device, files are written in place (no extra copy).</string>
+    <string name="profiles_opt_advanced">Advanced</string>
+    <string name="profiles_opt_posix">Keep owners and permissions</string>
+    <string name="profiles_opt_posix_hint">Records the POSIX owner, group and mode of each file.</string>
+    <string name="profiles_opt_selinux">Keep SELinux labels</string>
+    <string name="profiles_opt_selinux_hint">Records SELinux contexts; needed to restore app data correctly.</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">Schedule</string>
+    <string name="profiles_sched_enable">Run automatically</string>
+    <string name="profiles_sched_enable_hint">When off, the profile only runs when you tap “Back up now”.</string>
+    <string name="profiles_sched_time">Time</string>
+    <string name="profiles_sched_anchor">Starting at</string>
+    <string name="profiles_sched_change_time">Change</string>
+    <string name="profiles_sched_pick_time">Backup time</string>
+    <string name="profiles_sched_days">Days</string>
+    <string name="profiles_sched_every">Every</string>
+    <string name="profiles_sched_interval_min">At least %1$d minutes.</string>
+    <string name="profiles_sched_conditions">Conditions</string>
+    <string name="profiles_sched_unmetered">Only on unmetered networks</string>
+    <string name="profiles_sched_unmetered_hint">Waits for Wi-Fi or Ethernet instead of using mobile data.</string>
+    <string name="profiles_sched_local_no_network">The destination is on this device, so no network is needed.</string>
+    <string name="profiles_sched_charging">Only while charging</string>
+    <string name="profiles_sched_idle">Only while the device is idle</string>
+    <string name="profiles_sched_idle_hint">Idle can take hours to happen, so runs may be delayed a lot.</string>
+    <string name="profiles_sched_battery">Minimum battery level</string>
+    <string name="profiles_sched_battery_value">At least %1$d%% battery</string>
+    <string name="profiles_sched_catch_up">Catch up missed runs</string>
+    <string name="profiles_sched_catch_up_hint">If the device was off at the scheduled time, back up as soon as possible afterwards.</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s–%2$s</string>
+    <string name="profiles_sched_every_day">every day</string>
+    <string name="profiles_sched_weekdays">weekdays</string>
+    <string name="profiles_sched_weekends">weekends</string>
+    <string name="profiles_sched_daily">Daily at %1$s</string>
+    <string name="profiles_sched_weekly">%1$s at %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">Every %1$s from %2$s</string>
+    <string name="profiles_sched_cond_charging">while charging</string>
+    <string name="profiles_sched_cond_unmetered">on unmetered networks</string>
+    <string name="profiles_sched_cond_idle">while idle</string>
+    <string name="profiles_sched_cond_battery">battery at least %1$d%%</string>
+    <string name="profiles_sched_cond_catch_up">catches up missed runs</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">Manual only</string>
+    <string name="profiles_sched_paused">Paused · %1$s</string>
+    <string name="profiles_sched_invalid">The schedule needs fixing</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="one">%d h</item>
+        <item quantity="other">%d h</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">Retention</string>
+    <string name="profiles_retention_keep_last_switch">Limit the number of backups</string>
+    <string name="profiles_retention_keep_last_field">Backups to keep</string>
+    <string name="profiles_retention_max_age_switch">Delete backups older than a number of days</string>
+    <string name="profiles_retention_max_age_field">Maximum age in days</string>
+    <string name="profiles_retention_note">After each successful backup, older backups beyond these limits are deleted from the destination. The newest successful backup is always kept.</string>
+    <string name="profiles_retention_keep_all">Keeps every backup</string>
+    <string name="profiles_retention_both">%1$s, none older than %2$s</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="one">Keeps the last backup</item>
+        <item quantity="other">Keeps the last %d backups</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="one">Keeps backups for %d day</item>
+        <item quantity="other">Keeps backups for %d days</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <string name="profiles_retention_apply">Apply now</string>
+    <string name="profiles_retention_preview_title">Apply retention to “%1$s”?</string>
+    <string name="profiles_retention_preview_changed">The list changed since you last saw it (a backup finished or was removed). Check it again.</string>
+    <string name="profiles_retention_preview_nothing">Nothing to delete: every stored backup is within the limits.</string>
+    <string name="profiles_retention_preview_unlisted">%1$s could not be listed; backups there that DFTB has no record of were not considered.</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">The destination was removed from DFTB: only the history entry is deleted</string>
+    <string name="profiles_retention_preview_where">%1$s on %2$s</string>
+    <string name="profiles_retention_preview_twrp">Also deletes: %1$s</string>
+    <string name="profiles_retention_reason_keep_last">beyond the keep-last limit</string>
+    <string name="profiles_retention_reason_max_age">older than the age limit</string>
+    <string name="profiles_retention_hold_newest">The newest successful backup is always kept.</string>
+    <string name="profiles_retention_hold_complete">The newest fully completed backup is kept.</string>
+    <string name="profiles_retention_hold_active">A running or resumable backup still writes into it.</string>
+    <string name="profiles_retention_hold_unsafe">Its stored path looks unsafe, so it is not touched.</string>
+    <string name="profiles_retention_hold_twrp">Its TWRP folder could not be determined.</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s; %2$s and will be retried after the next backup.</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="one">This backup will be permanently deleted from its destination:</item>
+        <item quantity="other">These %d backups will be permanently deleted from their destinations:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="one">%d expired backup is kept:</item>
+        <item quantity="other">%d expired backups are kept:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="one">Delete %d backup</item>
+        <item quantity="other">Delete %d backups</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="one">Deleted %1$d backup of “%2$s”</item>
+        <item quantity="other">Deleted %1$d backups of “%2$s”</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="one">%d could not be deleted</item>
+        <item quantity="other">%d could not be deleted</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">Schedules and retention</string>
+    <string name="profiles_schedules_empty">No profiles yet.</string>
+    <string name="profiles_schedules_group_active">Scheduled</string>
+    <string name="profiles_schedules_group_paused">Paused</string>
+    <string name="profiles_schedules_group_manual">Manual only</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">Fix these before saving</string>
+    <string name="profiles_review_warnings">Worth knowing</string>
+    <string name="profiles_review_edit">Edit %1$s</string>
+    <string name="profiles_review_fix">Go to %1$s</string>
+    <string name="profiles_review_partitions">Partitions</string>
+    <string name="profiles_review_components">App components</string>
+    <string name="profiles_review_codec">Stream compression</string>
+</resources>

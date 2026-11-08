@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Environment diagnostics (core/environment). One diag_<id>_title per check, optional diag_<id>_hint.
+     Check details that are raw tool output (versions, paths, uid lines) are intentionally not here. -->
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">Ready</string>
+    <string name="diag_readiness_degraded">Ready with warnings</string>
+    <string name="diag_readiness_unavailable">Not available</string>
+    <string name="diag_mode_requires_root">This mode requires a rooted device with a root manager that grants DFTB superuser access.</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">OK</string>
+    <string name="diag_status_warn">Warning</string>
+    <string name="diag_status_fail">Failed</string>
+    <string name="diag_status_info">Info</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">Grant Shizuku access</string>
+    <string name="diag_action_open_all_files_access">Allow all files access</string>
+    <string name="diag_action_request_legacy_storage">Grant storage permission</string>
+    <string name="diag_action_request_notifications">Enable notifications</string>
+    <string name="diag_action_open_battery_settings">Disable battery optimization</string>
+    <string name="diag_action_install_shizuku">Install Shizuku</string>
+    <string name="diag_action_open_root_manager">Open root manager</string>
+    <string name="diag_action_install_companion_module">Install companion module</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">Diagnostics engine</string>
+    <string name="diag_probe_hint">The diagnostics run itself failed unexpectedly. Re-run; if it persists, share the log from System overview.</string>
+    <string name="diag_check_timed_out_hint">The check did not finish in time. A pending superuser prompt or an unresponsive service is usually the cause; answer any prompt and re-run.</string>
+    <string name="diag_check_failed_hint">The check crashed before producing a result. The raw error is shown above.</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">Android version</string>
+    <string name="diag_all_files_access_title">All files access</string>
+    <string name="diag_all_files_access_hint">DFTB must read and write the whole shared storage to back up files and to write archives. Grant \"All files access\" in the system settings page.</string>
+    <string name="diag_all_files_access_optional_hint">Not granted. The root shell can still read everything, but SAF-free browsing of shared storage will be unavailable.</string>
+    <string name="diag_legacy_storage_title">Storage permission</string>
+    <string name="diag_legacy_storage_hint">On Android 10, reading and writing shared storage requires the storage runtime permission.</string>
+    <string name="diag_legacy_storage_optional_hint">Not granted. The root shell can still read everything, but direct browsing of shared storage will be unavailable.</string>
+    <string name="diag_notifications_title">Notifications</string>
+    <string name="diag_notifications_hint">Without notifications a running backup cannot show progress or report a failure while the app is in the background.</string>
+    <string name="diag_saf_title">Document picker (SAF)</string>
+    <string name="diag_saf_hint">No app handles the folder picker. Destinations on SD cards and USB drives cannot be selected on this device.</string>
+    <string name="diag_battery_title">Battery optimization</string>
+    <string name="diag_battery_hint">Long backups over slow connections may be killed by Doze. Exempting DFTB keeps scheduled and resumed jobs alive.</string>
+    <string name="diag_free_space_title">Free space (app storage)</string>
+    <string name="diag_free_space_hint">Less than 500 MB free. Temporary archives and the job journal live here; free some space before backing up.</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">Shizuku installed</string>
+    <string name="diag_shizuku_installed_hint">Install Shizuku (or Sui) and start it via wireless debugging or root, then re-run.</string>
+    <string name="diag_shizuku_binder_title">Shizuku service running</string>
+    <string name="diag_shizuku_binder_hint">Shizuku is installed but its service is not running. Open the Shizuku app and start it, then return here.</string>
+    <string name="diag_shizuku_version_supported_title">Shizuku API version</string>
+    <string name="diag_shizuku_version_supported_hint">This Shizuku is older than version 11 and cannot be used. Update Shizuku.</string>
+    <string name="diag_shizuku_permission_title">Shizuku access granted</string>
+    <string name="diag_shizuku_permission_hint">Allow DFTB in the Shizuku prompt. If you chose \"Don\'t ask again\", re-enable it from the Shizuku app\'s authorized-apps list.</string>
+    <string name="diag_shizuku_version_title">Shizuku server version</string>
+    <string name="diag_shizuku_uid_title">Shizuku identity</string>
+    <string name="diag_shizuku_uid_root_hint">Shizuku is running as root; app data of every package is reachable.</string>
+    <string name="diag_shizuku_uid_adb_hint">Shizuku is running as the ADB shell user; some app data directories will be unreadable.</string>
+    <string name="diag_shizuku_selinux_title">Shizuku SELinux context</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">su binary</string>
+    <string name="diag_su_binary_hint">No su binary is visible to this app. KernelSU and APatch hide it until access is granted, so this alone is not a failure.</string>
+    <string name="diag_root_manager_title">Root manager app</string>
+    <string name="diag_root_manager_hint">No Magisk, KernelSU or APatch manager was detected.</string>
+    <string name="diag_root_granted_title">Superuser access</string>
+    <string name="diag_root_granted_hint">Open your root manager and allow superuser access for DFTB, then re-run.</string>
+    <string name="diag_root_granted_shell_mount_master">root (mount master)</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">unknown</string>
+    <string name="diag_shell_identity_title">Shell identity</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">Root implementation</string>
+    <string name="diag_root_implementation_hint">Could not identify Magisk, KernelSU or APatch from the shell.</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">Not found on PATH. The copy bundled with DFTB will be used.</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">Not found. Entering the global mount namespace (advanced root mode) relies on it.</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">Superuser access was not granted, so the companion module could not be inspected.</string>
+    <string name="diag_module_installed_title">Companion module installed</string>
+    <string name="diag_module_installed_hint">Flash the DFTB companion module from your root manager and reboot.</string>
+    <string name="diag_module_enabled_title">Companion module enabled</string>
+    <string name="diag_module_enabled_hint">The module is disabled or scheduled for removal. Re-enable it in your root manager and reboot.</string>
+    <string name="diag_module_tool_rclone_title">System rclone</string>
+    <string name="diag_module_tool_busybox_title">System BusyBox</string>
+    <string name="diag_module_tool_nsenter_title">System nsenter</string>
+    <string name="diag_module_tool_zstd_title">System zstd</string>
+    <string name="diag_module_tool_tar_title">System tar</string>
+    <string name="diag_module_tool_missing_hint">Not on PATH. The module is installed but its files are not mounted yet; a reboot usually fixes this.</string>
+    <string name="diag_module_service_title">Boot service script</string>
+    <string name="diag_module_journal_title">Boot journal directory</string>
+    <string name="diag_module_journal_hint">Created on the first boot after installing the module; scheduled and resumed backups record their state here.</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">The secure key that protects your saved credentials is gone, but encrypted entries remain on this device. They can no longer be decrypted; re-enter the affected credentials to recreate them.</string>
+
+</resources>

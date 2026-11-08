@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="file_scan_problem_include_regex">Le motif d\'inclusion n\'est pas une expression régulière valide : %1$s</string>
+    <string name="file_scan_problem_exclude_regex">Le motif d\'exclusion n\'est pas une expression régulière valide : %1$s</string>
+    <string name="file_scan_problem_negative_min">La taille minimale ne peut pas être négative.</string>
+    <string name="file_scan_problem_negative_max">La taille maximale ne peut pas être négative.</string>
+    <string name="file_scan_problem_size_inverted">La taille minimale est supérieure à la taille maximale.</string>
+    <string name="file_scan_problem_date_empty">La date « modifié après » doit être antérieure à la date « modifié avant ».</string>
+    <string name="file_scan_problem_extension_conflict">Ces extensions sont à la fois incluses et exclues : %1$s</string>
+    <string name="file_scan_block_all_files">Ce dossier nécessite « Accès à tous les fichiers », ou le mode Shizuku/Root.</string>
+    <string name="file_scan_block_media_permission">Autorisez l\'accès aux photos, vidéos ou fichiers audio pour analyser ce dossier.</string>
+    <string name="file_scan_block_non_media">Les documents et autres fichiers non multimédias nécessitent « Accès à tous les fichiers », ou le mode Shizuku/Root.</string>
+    <string name="file_scan_block_app_sandbox">Les dossiers Android/data et Android/obb des autres applications ne peuvent être lus qu\'en mode Shizuku ou Root.</string>
+    <string name="file_scan_block_root">Cet emplacement n\'est lisible qu\'en mode Root.</string>
+    <string name="file_scan_block_not_readable">Cet emplacement n\'est pas lisible par l\'application. Essayez le mode Shizuku ou Root.</string>
+    <string name="file_scan_block_saf">L\'accès à ce dossier a été perdu. Sélectionnez-le à nouveau.</string>
+    <string name="file_scan_root_not_found">Le dossier n\'existe pas.</string>
+    <string name="file_scan_root_not_readable">Impossible de lire le dossier.</string>
+    <string name="file_scan_root_not_directory">L\'emplacement n\'est pas un dossier.</string>
+    <string name="file_scan_root_tool_failed">L\'outil d\'analyse a échoué dans le mode actuel.</string>
+    <string name="file_scan_warning_partial_media">Seules les photos et vidéos que vous avez sélectionnées sont visibles. Autorisez l\'accès complet pour toutes les inclure.</string>
+    <string name="file_scan_warning_find_exit">L\'analyse privilégiée s\'est terminée avec une erreur ; les résultats peuvent être incomplets.</string>
+    <string name="file_scan_warning_unparseable">Certains noms de fichiers n\'ont pas pu être lus dans la sortie de l\'analyse (par exemple des noms contenant des sauts de ligne).</string>
+    <string name="file_scan_warning_find_unsupported">Le shell de l\'appareil n\'a pas de commande \"find\" utilisable.</string>
+    <string name="file_scan_req_all_files">Accorder « Accès à tous les fichiers »</string>
+    <string name="file_scan_req_permission">Accorder l\'autorisation multimédia</string>
+    <string name="file_scan_req_shizuku">Passer au mode Shizuku ou Root</string>
+    <string name="file_scan_req_root">Passer au mode Root</string>
+    <string name="file_scan_req_saf">Sélectionner à nouveau le dossier</string>
+    <string name="file_scan_walker_nio">Accès direct aux fichiers</string>
+    <string name="file_scan_walker_saf">Storage Access Framework</string>
+    <string name="file_scan_walker_find">Shell privilégié (find)</string>
+    <string name="file_scan_walker_media_store">Médiathèque</string>
+
+</resources>

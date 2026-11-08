@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">إلغاء</string>
+    <string name="profiles_ok">حسنًا</string>
+    <string name="profiles_done">تم</string>
+    <string name="profiles_back">رجوع</string>
+    <string name="profiles_yes">نعم</string>
+    <string name="profiles_no">لا</string>
+    <string name="profiles_unknown_error">خطأ غير معروف</string>
+    <string name="profiles_cd_error">خطأ</string>
+    <string name="profiles_cd_warning">تحذير</string>
+    <string name="profiles_cd_unavailable">غير متاح في الوضع الحالي</string>
+    <string name="profiles_cd_step_done">تم</string>
+    <string name="profiles_cd_step_errors">يحتوي على مشكلات تحتاج إلى إصلاح</string>
+    <string name="profiles_cd_step_todo">لم يتم بعد</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">ملفات النسخ الاحتياطي</string>
+    <string name="profiles_open_schedules">الجداول والاحتفاظ</string>
+    <string name="profiles_new">ملف جديد</string>
+    <string name="profiles_empty_title">لا توجد ملفات نسخ احتياطي بعد</string>
+    <string name="profiles_empty_body">يحدد الملف ما يُنسخ احتياطيًا، وإلى أين، ومتى. اضغط «ملف جديد» لإنشاء أول ملف.</string>
+    <string name="profiles_more_actions">إجراءات أخرى لـ %1$s</string>
+    <string name="profiles_action_edit">تعديل</string>
+    <string name="profiles_action_duplicate">تكرار</string>
+    <string name="profiles_action_delete">حذف</string>
+    <string name="profiles_action_run_now">نسخ احتياطي الآن</string>
+    <string name="profiles_action_view_progress">عرض التقدم</string>
+    <string name="profiles_badge_encrypted">مشفّر</string>
+    <string name="profiles_badge_twrp">متوافق مع TWRP</string>
+    <string name="profiles_badge_paused">متوقف مؤقتًا</string>
+    <string name="profiles_badge_needs_passphrase">يتطلب عبارة مرور</string>
+    <string name="profiles_hint_scheduled_passphrase">تنتظر عمليات التشغيل المجدولة لهذا الملف أن تكتب عبارة المرور.</string>
+    <string name="profiles_resume_available">يمكن للنسخة الاحتياطية المنقطعة أن تتابع من حيث توقفت.</string>
+    <string name="profiles_resume_needs_passphrase">يمكن للنسخة الاحتياطية المنقطعة أن تتابع من حيث توقفت بعد إدخال عبارة المرور.</string>
+    <string name="profiles_resume_action">متابعة</string>
+    <string name="profiles_no_destination">لم تُحدد وجهة</string>
+    <string name="profiles_next_run">التشغيل التالي: %1$s</string>
+    <string name="profiles_last_run">آخر نسخة احتياطية: %1$s، %2$s</string>
+    <string name="profiles_last_run_never">لم يُنسخ احتياطيًا قط</string>
+    <string name="profiles_schedule_on">الجدول مفعّل</string>
+    <string name="profiles_schedule_off">الجدول متوقف مؤقتًا</string>
+    <string name="profiles_add_schedule">إعداد جدول</string>
+    <string name="profiles_copy_name">نسخة من %1$s</string>
+    <string name="profiles_targets_none">لم يُحدد شيء</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="zero">%d قسم</item>
+        <item quantity="one">قسم واحد</item>
+        <item quantity="two">قسمان</item>
+        <item quantity="few">%d أقسام</item>
+        <item quantity="many">%d قسمًا</item>
+        <item quantity="other">%d قسم</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="zero">%d تطبيق</item>
+        <item quantity="one">تطبيق واحد</item>
+        <item quantity="two">تطبيقان</item>
+        <item quantity="few">%d تطبيقات</item>
+        <item quantity="many">%d تطبيقًا</item>
+        <item quantity="other">%d تطبيق</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="zero">%d مجلد</item>
+        <item quantity="one">مجلد واحد</item>
+        <item quantity="two">مجلدان</item>
+        <item quantity="few">%d مجلدات</item>
+        <item quantity="many">%d مجلدًا</item>
+        <item quantity="other">%d مجلد</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">أُدرجت النسخة الاحتياطية لـ «%1$s» في قائمة الانتظار</string>
+    <string name="profiles_event_resume_queued">متابعة النسخة الاحتياطية المنقطعة لـ «%1$s»</string>
+    <string name="profiles_event_started">بدأت النسخة الاحتياطية لـ «%1$s»</string>
+    <string name="profiles_event_already_running">«%1$s» قيد النسخ الاحتياطي بالفعل</string>
+    <string name="profiles_event_duplicated">تم إنشاء «%1$s». يبدأ الجدول المنسوخ متوقفًا مؤقتًا.</string>
+    <string name="profiles_event_deleted">تم حذف «%1$s»</string>
+    <string name="profiles_event_schedule_on">استُؤنف جدول «%1$s»</string>
+    <string name="profiles_event_schedule_off">أُوقف جدول «%1$s» مؤقتًا</string>
+    <string name="profiles_event_finished">النسخة الاحتياطية لـ «%1$s»: %2$s</string>
+    <string name="profiles_event_finished_detail">%1$s. %2$s</string>
+    <string name="profiles_event_failed">لم تنجح العملية. تجد التفاصيل في السجل.</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">حذف «%1$s»؟</string>
+    <string name="profiles_delete_consequence">سيُزال الملف «%1$s» وجدوله، ولن يمكن متابعة أي نسخة احتياطية منقطعة له. لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="profiles_delete_backups_kept">تبقى النسخ الاحتياطية المخزنة بالفعل في %1$s مع سجلاتها في السجل التاريخي، لذا يمكنك استعادتها. لا يستطيع DFTB حذف النسخ المخزنة لملف ما نيابةً عنك بعد؛ احذفها من الوجهة بنفسك إن لم تعد بحاجة إليها.</string>
+    <string name="profiles_delete_backups_kept_generic">تبقى النسخ الاحتياطية المخزنة بالفعل مع سجلاتها في السجل التاريخي، لذا يمكنك استعادتها. لا يستطيع DFTB حذف النسخ المخزنة لملف ما نيابةً عنك بعد؛ احذفها من الوجهة بنفسك إن لم تعد بحاجة إليها.</string>
+    <string name="profiles_delete_key_kept">يبقى مفتاح التشفير في خزنة هذا الجهاز لتظل تلك النسخ قابلة للقراءة.</string>
+    <string name="profiles_delete_confirm">حذف الملف</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">قيد التنفيذ</string>
+    <string name="profiles_status_interrupted">انقطعت</string>
+    <string name="profiles_status_completed">اكتملت</string>
+    <string name="profiles_status_warnings">اكتملت مع تحذيرات</string>
+    <string name="profiles_status_failed">فشلت</string>
+    <string name="profiles_status_cancelled">أُلغيت</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">عبارة المرور لـ «%1$s»</string>
+    <string name="profiles_passphrase_body">يشفّر هذا الملف بعبارة مرور لا يخزنها DFTB أبدًا. استخدم عبارة المرور نفسها في كل مرة: فبدونها لا يمكن فك تشفير هذه النسخ الاحتياطية، ولا حتى بواسطة DFTB.</string>
+    <string name="profiles_passphrase_field">عبارة المرور</string>
+    <string name="profiles_passphrase_confirm">أعد كتابة عبارة المرور</string>
+    <string name="profiles_passphrase_mismatch">عبارتا المرور غير متطابقتين</string>
+    <string name="profiles_passphrase_start">بدء النسخ الاحتياطي</string>
+    <string name="profiles_passphrase_body_resume">أدخل عبارة المرور التي بدأت بها هذه النسخة الاحتياطية المنقطعة. لا يخزنها DFTB؛ وعبارة مختلفة ستترك النسخة بأجزاء لا يمكن فك تشفيرها معًا.</string>
+    <string name="profiles_passphrase_resume">متابعة النسخ الاحتياطي</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="zero">استخدم %d حرف على الأقل</item>
+        <item quantity="one">استخدم حرفًا واحدًا على الأقل</item>
+        <item quantity="two">استخدم حرفين على الأقل</item>
+        <item quantity="few">استخدم %d أحرف على الأقل</item>
+        <item quantity="many">استخدم %d حرفًا على الأقل</item>
+        <item quantity="other">استخدم %d حرف على الأقل</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">ملف نسخ احتياطي جديد</string>
+    <string name="profiles_wizard_edit_title">تعديل ملف النسخ الاحتياطي</string>
+    <string name="profiles_wizard_close">إغلاق</string>
+    <string name="profiles_wizard_back">رجوع</string>
+    <string name="profiles_wizard_next">التالي</string>
+    <string name="profiles_wizard_save">حفظ</string>
+    <string name="profiles_wizard_save_run">حفظ ونسخ احتياطي الآن</string>
+    <string name="profiles_wizard_not_found">لم يعد هذا الملف موجودًا.</string>
+    <string name="profiles_wizard_leave">رجوع</string>
+    <string name="profiles_wizard_fix_errors">أصلح المشكلات المميزة أولًا</string>
+    <string name="profiles_wizard_key_failed">تعذّر إنشاء مفتاح التشفير في خزنة الجهاز. لم يُحفظ شيء.</string>
+    <string name="profiles_wizard_save_failed">تعذّر حفظ الملف.</string>
+    <string name="profiles_wizard_already_running">تم حفظ الملف؛ وهو قيد النسخ الاحتياطي بالفعل.</string>
+    <string name="profiles_wizard_discard_title">تجاهل التغييرات؟</string>
+    <string name="profiles_wizard_discard_new">لم يُحفظ هذا الملف الجديد؛ وسيضيع كل ما أدخلته.</string>
+    <string name="profiles_wizard_discard_edit">لم تُحفظ تغييراتك وستضيع. يبقى الملف المحفوظ كما كان.</string>
+    <string name="profiles_wizard_discard_confirm">تجاهل</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">الاسم</string>
+    <string name="profiles_step_name_sub">اسم هذا الملف</string>
+    <string name="profiles_step_targets">ماذا</string>
+    <string name="profiles_step_targets_sub">الأقسام والتطبيقات والملفات المراد نسخها احتياطيًا</string>
+    <string name="profiles_step_destination">أين</string>
+    <string name="profiles_step_destination_sub">الوجهة ومساحتها الحرة</string>
+    <string name="profiles_step_options">كيف</string>
+    <string name="profiles_step_options_sub">الصيغة والضغط والتشفير والسلامة</string>
+    <string name="profiles_step_schedule">متى</string>
+    <string name="profiles_step_schedule_sub">الجدول والشروط والاحتفاظ</string>
+    <string name="profiles_step_review">مراجعة</string>
+    <string name="profiles_step_review_sub">تحقق من كل شيء ثم احفظ</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">الخطوة %1$d من %2$d: %3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">اسم الملف</string>
+    <string name="profiles_field_name_placeholder">مثال: صور ليلية</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d حرفًا</string>
+    <string name="profiles_field_description">الوصف (اختياري)</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">أعطِ الملف اسمًا.</string>
+    <string name="profiles_problem_name_too_long">الاسم طويل جدًا.</string>
+    <string name="profiles_problem_name_duplicate">يستخدم ملف آخر هذا الاسم بالفعل.</string>
+    <string name="profiles_problem_description_too_long">الوصف طويل جدًا.</string>
+    <string name="profiles_problem_no_targets">حدد قسمًا أو تطبيقًا أو مجلدًا أو فئة ملفات واحدة على الأقل.</string>
+    <string name="profiles_problem_app_no_components">لم تُحدد أي مكونات لأحد التطبيقات؛ اختر مكونًا واحدًا على الأقل أو أزل التطبيق.</string>
+    <string name="profiles_problem_path_invalid">يجب أن يكون المجلد مسارًا مطلقًا (يبدأ بـ /) أو مجلدًا اختير بمنتقي النظام.</string>
+    <string name="profiles_problem_path_duplicate">المجلد نفسه مدرج مرتين.</string>
+    <string name="profiles_problem_filter_invalid">في عامل تصفية أحد المجلدات خطأ؛ افتحه لإصلاحه.</string>
+    <string name="profiles_problem_components_unavailable">لا يمكن التقاط بعض مكونات التطبيقات المحددة في الوضع الحالي؛ وستُتخطى إلى أن يسمح بها الوضع.</string>
+    <string name="profiles_problem_partitions_need_root">لا يمكن قراءة الأقسام إلا في وضع الجذر؛ وستُتخطى في الوضع الحالي.</string>
+    <string name="profiles_problem_no_destination">اختر وجهة النسخ الاحتياطية.</string>
+    <string name="profiles_problem_destination_gone">الوجهة المختارة لم تعد موجودة؛ اختر وجهة أخرى.</string>
+    <string name="profiles_problem_encryption_unsupported">استخدم هذا الملف طريقة تشفير لا يستطيع DFTB تشغيلها؛ اختر خيار تشفير.</string>
+    <string name="profiles_problem_transfer_unsupported">الضغط عن بُعد غير متاح لهذه الوجهة؛ اختر وضع نقل آخر.</string>
+    <string name="profiles_problem_vault_key_missing">مفتاح الجهاز الخاص بهذا الملف مفقود من الخزنة. سيُنشئ الحفظ مفتاحًا جديدًا؛ ولا يمكن فك تشفير النسخ المأخوذة بالمفتاح القديم.</string>
+    <string name="profiles_problem_twrp_not_local">يقرأ TWRP وOrangeFox تخزين الجهاز ومحركات USB فقط؛ انسخ هذه النسخ الاحتياطية إلى هناك قبل الاستعادة من وضع الاسترداد.</string>
+    <string name="profiles_problem_twrp_no_partitions">توافق TWRP يغيّر فقط طريقة تخزين الأقسام، وليس في هذا الملف أي قسم.</string>
+    <string name="profiles_problem_interval_invalid">أدخل الفاصل الزمني كعدد صحيح.</string>
+    <string name="profiles_problem_schedule_time">الوقت غير صالح.</string>
+    <string name="profiles_problem_schedule_no_days">اختر يومًا واحدًا على الأقل.</string>
+    <string name="profiles_problem_schedule_invalid_day">يحتوي الجدول على يوم غير موجود.</string>
+    <string name="profiles_problem_schedule_interval_short">يجب ألا يقل الفاصل الزمني عن 15 دقيقة، وهو الحد الأدنى في Android للأعمال المتكررة.</string>
+    <string name="profiles_problem_schedule_battery">يجب أن يكون مستوى البطارية بين 0 و100 بالمئة.</string>
+    <string name="profiles_problem_keep_last">أدخل عدد النسخ الاحتياطية المراد الاحتفاظ بها (1 أو أكثر).</string>
+    <string name="profiles_problem_max_age">أدخل الحد الأقصى للعمر بعدد صحيح من الأيام (1 أو أكثر).</string>
+    <string name="profiles_problem_passphrase_scheduled">لا تستطيع عمليات التشغيل المجدولة كتابة عبارة مرور: تنتظر كل واحدة منها، مع إشعار، حتى تدخلها.</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">بلا تشفير</string>
+    <string name="profiles_key_none_desc">تُخزَّن كملفات عادية: يستطيع كل من يفتح الوجهة قراءتها.</string>
+    <string name="profiles_key_passphrase">عبارة مرور (AES-256-GCM)</string>
+    <string name="profiles_key_passphrase_desc">تكتبها في كل نسخة احتياطية واستعادة. لا تُخزَّن أبدًا، ويمكن الاستعادة بها على أي جهاز.</string>
+    <string name="profiles_key_vault">مفتاح الجهاز (AES-256-GCM)</string>
+    <string name="profiles_key_vault_desc">مفتاح عشوائي محفوظ في الخزنة الآمنة لهذا الجهاز. تلقائي بالكامل، لكنه مرتبط بهذا الجهاز.</string>
+    <string name="profiles_key_stored">عبارة مرور محفوظة (AES-256-GCM)</string>
+    <string name="profiles_key_stored_desc">تستخدم عبارة المرور المحفوظة في الخزنة لهذا الملف.</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">غير متاح مع توافق TWRP: يستطيع وضع الاسترداد قراءة الملفات العادية غير المشفرة فقط.</string>
+    <string name="profiles_block_mask">يتطلب التشفير: بدونه سيُظهر البيان الأسماء الحقيقية.</string>
+    <string name="profiles_block_remote_needs_ssh">ممكن فقط مع وجهات SSH أو SFTP.</string>
+    <string name="profiles_block_remote_unavailable">غير متاح بعد: لا يوفر اتصال SSH قناة أوامر عن بُعد.</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">يوميًا</string>
+    <string name="profiles_freq_weekly">أسبوعيًا</string>
+    <string name="profiles_freq_interval">فاصل زمني</string>
+    <string name="profiles_unit_minutes">دقائق</string>
+    <string name="profiles_unit_hours">ساعات</string>
+    <string name="profiles_slot_title">خانة A/B</string>
+    <string name="profiles_slot_active">النشطة</string>
+    <string name="profiles_slot_inactive">غير النشطة</string>
+    <string name="profiles_slot_both">كلتاهما</string>
+    <string name="profiles_slot_none">بلا خانات</string>
+    <string name="profiles_slot_active_desc">ينسخ صورة الخانة التي أقلع منها الجهاز؛ ويتبع تحديثات OTA تلقائيًا.</string>
+    <string name="profiles_slot_inactive_desc">ينسخ صورة الخانة الأخرى، مثل النظام السابق بعد تحديث.</string>
+    <string name="profiles_slot_both_desc">ينسخ صورتي الخانتين: ضعف الحجم، ويحتفظ ببديل كامل.</string>
+    <string name="profiles_slot_none_desc">للأقسام التي ليس لها نسخ A/B.</string>
+    <string name="profiles_structure_preserve_desc">تحتفظ الملفات ببنية مجلداتها.</string>
+    <string name="profiles_structure_categorized_desc">تُرتَّب الملفات في مجلدات حسب النوع (صور، فيديوهات، مستندات…).</string>
+    <string name="profiles_transfer_staging_desc">يبني كل ملف على هذا الجهاز أولًا ثم يرفعه: قابل للاستئناف، ويحتاج إلى مساحة حرة محلية.</string>
+    <string name="profiles_transfer_direct_desc">يبث مباشرة إلى الوجهة دون ملفات مؤقتة؛ والرفع المنقطع يعيد ذلك الملف من البداية.</string>
+    <string name="profiles_transfer_remote_desc">يرسل البيانات الخام عبر SSH ويضغطها على الخادم.</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s (%2$d)</string>
+    <string name="profiles_targets_tab_partitions">الأقسام</string>
+    <string name="profiles_targets_tab_apps">التطبيقات</string>
+    <string name="profiles_targets_tab_files">الملفات</string>
+    <string name="profiles_components_title">مكونات التطبيق</string>
+    <string name="profiles_components_subtitle">التطبيقات المحددة حديثًا تحصل على: %1$s</string>
+    <string name="profiles_components_none">لا شيء</string>
+    <string name="profiles_components_apply_all">تطبيق على كل المحدد</string>
+    <string name="profiles_components_per_app">لكل تطبيق (%1$d)</string>
+    <string name="profiles_components_per_app_title">المكونات لكل تطبيق</string>
+    <string name="profiles_components_per_app_empty">لم تُحدد أي تطبيقات بعد.</string>
+    <string name="profiles_component_reason">%1$s: %2$s</string>
+    <string name="profiles_remove_app">إزالة %1$s</string>
+    <string name="profiles_files_add_title">المجلدات</string>
+    <string name="profiles_files_storage_root">التخزين الداخلي</string>
+    <string name="profiles_files_pick_folder">اختيار مجلد…</string>
+    <string name="profiles_files_no_picker">لا يتوفر منتقي مجلدات على هذا الجهاز.</string>
+    <string name="profiles_files_path_field">مسار المجلد</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">أدخل مسارًا مطلقًا غير مدرج بالفعل.</string>
+    <string name="profiles_files_add">إضافة</string>
+    <string name="profiles_files_none">لم تُحدد مجلدات.</string>
+    <string name="profiles_files_saf_folder">اختير بمنتقي مجلدات النظام</string>
+    <string name="profiles_files_remove">إزالة %1$s</string>
+    <string name="profiles_files_recursive">تضمين المجلدات الفرعية</string>
+    <string name="profiles_files_edit_filter">عامل تصفية</string>
+    <string name="profiles_files_readable">قابل للقراءة عبر %1$s</string>
+    <string name="profiles_files_tier_hint">يتطلب %1$s</string>
+    <string name="profiles_files_categories_title">فئات الملفات</string>
+    <string name="profiles_files_categories_sub">الملفات المطابقة من المجلدات القياسية (DCIM وPictures وMusic وDocuments…)</string>
+    <string name="profiles_files_grant_failed">لم يحتفظ Android بإمكانية الوصول إلى ذلك المجلد؛ وقد لا تتمكن النسخ الاحتياطية المجدولة من قراءته.</string>
+    <string name="profiles_files_already_added">ذلك المجلد موجود في القائمة بالفعل.</string>
+    <string name="profiles_filter_none">بلا تصفية: كل الملفات</string>
+    <string name="profiles_filter_only">فقط %1$s</string>
+    <string name="profiles_filter_except">باستثناء %1$s</string>
+    <string name="profiles_filter_min">%1$s على الأقل</string>
+    <string name="profiles_filter_max">%1$s على الأكثر</string>
+    <string name="profiles_filter_after">عُدّلت منذ %1$s</string>
+    <string name="profiles_filter_before">عُدّلت قبل %1$s</string>
+    <string name="profiles_filter_regex">أنماط المسارات</string>
+    <string name="profiles_filter_title">عامل تصفية لـ %1$s</string>
+    <string name="profiles_filter_save">حفظ عامل التصفية</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">لا توجد وجهات بعد</string>
+    <string name="profiles_dest_empty_body">أضف وجهة: مجلدًا على هذا الجهاز، أو محرك USB، أو مشاركة شبكية، أو وجهة سحابية.</string>
+    <string name="profiles_dest_add">إضافة وجهة</string>
+    <string name="profiles_dest_space">%1$s حرة من %2$s (آخر فحص)</string>
+    <string name="profiles_dest_space_free">%1$s حرة (آخر فحص)</string>
+    <string name="profiles_dest_space_unknown">لم تُفحص المساحة الحرة بعد</string>
+    <string name="profiles_preflight_title">الحجم والمساحة</string>
+    <string name="profiles_preflight_subtitle">ما تحتاجه هذه النسخة الاحتياطية، وهل تتسع الوجهة لها</string>
+    <string name="profiles_preflight_need_targets">حدد ما تريد نسخه احتياطيًا أولًا.</string>
+    <string name="profiles_preflight_running">جارٍ قياس المصادر المحددة…</string>
+    <string name="profiles_preflight_again">تقدير مرة أخرى</string>
+    <string name="profiles_preflight_failed">فشل التقدير: %1$s</string>
+    <string name="profiles_preflight_stale">تغيّر التحديد منذ آخر تقدير.</string>
+    <string name="profiles_preflight_run">تقدير الحجم</string>
+    <string name="profiles_preflight_size">الحجم المقدّر</string>
+    <string name="profiles_preflight_size_approx">نحو %1$s</string>
+    <string name="profiles_preflight_items">العناصر</string>
+    <string name="profiles_preflight_artifacts">الملفات المكتوبة</string>
+    <string name="profiles_preflight_unmeasured">تعذّر القياس: %1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s، %2$s</string>
+    <string name="profiles_preflight_issue">%1$s: %2$s</string>
+    <string name="profiles_preflight_no_destination">اختر وجهة لفحص مساحتها الحرة.</string>
+    <string name="profiles_preflight_checking_space">جارٍ فحص المساحة الحرة في %1$s…</string>
+    <string name="profiles_preflight_check_space">فحص المساحة الحرة</string>
+    <string name="profiles_preflight_destination">الوجهة: %1$s</string>
+    <string name="profiles_preflight_staging">تجهيز محلي (يلزم %1$s)</string>
+    <string name="profiles_preflight_enough">المساحة كافية: %1$s حرة</string>
+    <string name="profiles_preflight_enough_unknown_free">المساحة كافية</string>
+    <string name="profiles_preflight_short">المساحة غير كافية: يلزم %1$s إضافية (مع هامش أمان)</string>
+    <string name="profiles_preflight_unknown">تعذّر تحديد المساحة الحرة؛ وسيحاول النسخ الاحتياطي على أي حال.</string>
+    <string name="profiles_preflight_unknown_reason">تعذّر تحديد المساحة الحرة (%1$s)؛ وسيحاول النسخ الاحتياطي على أي حال.</string>
+    <plurals name="profiles_items">
+        <item quantity="zero">%d عنصر</item>
+        <item quantity="one">عنصر واحد</item>
+        <item quantity="two">عنصران</item>
+        <item quantity="few">%d عناصر</item>
+        <item quantity="many">%d عنصرًا</item>
+        <item quantity="other">%d عنصر</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="zero">%d ملف</item>
+        <item quantity="one">ملف واحد</item>
+        <item quantity="two">ملفان</item>
+        <item quantity="few">%d ملفات</item>
+        <item quantity="many">%d ملفًا</item>
+        <item quantity="other">%d ملف</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="zero">و%d أخرى</item>
+        <item quantity="one">وواحد آخر</item>
+        <item quantity="two">واثنان آخران</item>
+        <item quantity="few">و%d أخرى</item>
+        <item quantity="many">و%d آخر</item>
+        <item quantity="other">و%d آخر</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">التوافق مع وضع الاسترداد</string>
+    <string name="profiles_opt_twrp">متوافق مع TWRP</string>
+    <string name="profiles_opt_twrp_hint">يخزن الأقسام كمجلد نسخ احتياطي بنمط TWRP / OrangeFox ليمكن استعادتها من وضع الاسترداد دون DFTB.</string>
+    <string name="profiles_opt_twrp_forced">مفروض بسبب توافق TWRP: نسخ خام، بلا ضغط، بلا تشفير، بلا أسماء مخفية. يستطيع وضع الاسترداد قراءة الملفات العادية فقط.</string>
+    <string name="profiles_opt_format_title">الصيغة والضغط</string>
+    <string name="profiles_opt_tree_format">صيغة الأرشيف (التطبيقات والملفات)</string>
+    <string name="profiles_opt_7z_hint">يبني 7z الأرشيف كاملًا في التخزين المحلي قبل حفظه.</string>
+    <string name="profiles_opt_raw_hint">تُنسخ الملفات واحدًا تلو الآخر، ويُضغط كل منها بالمرمّز أدناه.</string>
+    <string name="profiles_opt_images_only">تُخزَّن الأقسام دائمًا كصور خام؛ اختر ضغطها أدناه.</string>
+    <string name="profiles_opt_codec_images">ضغط الصور (الأقسام)</string>
+    <string name="profiles_opt_codec_files">الضغط لكل ملف</string>
+    <string name="profiles_opt_level">مستوى الضغط</string>
+    <string name="profiles_opt_level_value">%1$d (%2$s)</string>
+    <string name="profiles_opt_level_none">لا شيء مما حددته هنا يُضغط، لذا لا يوجد مستوى للاختيار.</string>
+    <string name="profiles_opt_level_tree_clamped">تستخدم الأرشيفات المستوى %1$d، وهو أعلى ما تدعمه صيغتها.</string>
+    <string name="profiles_opt_level_image_clamped">تستخدم صور الأقسام المستوى %1$d، وهو أعلى ما يدعمه مرمّزها.</string>
+    <string name="profiles_opt_encryption_title">التشفير</string>
+    <string name="profiles_opt_encryption_legacy">حُفظ بـ «%1$s»، وهو ما لا يستطيع DFTB تشغيله. اختر أحد الخيارات أدناه.</string>
+    <string name="profiles_opt_passphrase_warning">ستحتاج عمليات التشغيل المجدولة إليك: لا يستطيع DFTB كتابة عبارة المرور، لذا تنتظر كل واحدة حتى تدخلها.</string>
+    <string name="profiles_opt_vault_warning">مرتبط بالجهاز: إذا أُعيد ضبط هذا الجهاز أو فُقد، أو أُزيل قفل الشاشة الآمن فيه، فلن يمكن فك تشفير هذه النسخ الاحتياطية بعد ذلك، لا على هذا الجهاز ولا على غيره.</string>
+    <string name="profiles_opt_vault_reused">يحتفظ هذا الملف بمفتاح جهازه الحالي، لتبقى النسخ الأقدم قابلة للقراءة.</string>
+    <string name="profiles_opt_stored_hint">تبقى عبارة المرور المحفوظة في الخزنة وتُستخدم في التشغيل دون إشراف.</string>
+    <string name="profiles_opt_mask">إخفاء أسماء الملفات</string>
+    <string name="profiles_opt_mask_hint">تُشفَّر الأسماء، فلا ترى الوجهة سوى أسماء عشوائية.</string>
+    <string name="profiles_opt_integrity_title">السلامة</string>
+    <string name="profiles_opt_checksum">بصمة التحقق</string>
+    <string name="profiles_opt_checksum_weak">يكشف MD5 وSHA-1 التلف العرضي لكن ليس التلاعب المتعمد.</string>
+    <string name="profiles_opt_verify">التحقق بعد النسخ الاحتياطي</string>
+    <string name="profiles_opt_verify_hint">يقرأ كل ملف مخزّن مجددًا ويقارن بصمات التحقق.</string>
+    <string name="profiles_opt_layout_title">التخطيط والنقل</string>
+    <string name="profiles_opt_structure">بنية المجلدات</string>
+    <string name="profiles_opt_transfer">النقل</string>
+    <string name="profiles_opt_staging_local">عند كون الوجهة على هذا الجهاز، تُكتب الملفات في مكانها (دون نسخة إضافية).</string>
+    <string name="profiles_opt_advanced">متقدم</string>
+    <string name="profiles_opt_posix">الاحتفاظ بالمالكين والأذونات</string>
+    <string name="profiles_opt_posix_hint">يسجل مالك كل ملف ومجموعته ونمطه بحسب POSIX.</string>
+    <string name="profiles_opt_selinux">الاحتفاظ بتسميات SELinux</string>
+    <string name="profiles_opt_selinux_hint">يسجل سياقات SELinux؛ مطلوب لاستعادة بيانات التطبيقات بشكل صحيح.</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">الجدول</string>
+    <string name="profiles_sched_enable">التشغيل تلقائيًا</string>
+    <string name="profiles_sched_enable_hint">عند الإيقاف، لا يعمل الملف إلا عند الضغط على «نسخ احتياطي الآن».</string>
+    <string name="profiles_sched_time">الوقت</string>
+    <string name="profiles_sched_anchor">يبدأ في</string>
+    <string name="profiles_sched_change_time">تغيير</string>
+    <string name="profiles_sched_pick_time">وقت النسخ الاحتياطي</string>
+    <string name="profiles_sched_days">الأيام</string>
+    <string name="profiles_sched_every">كل</string>
+    <string name="profiles_sched_interval_min">%1$d دقيقة على الأقل.</string>
+    <string name="profiles_sched_conditions">الشروط</string>
+    <string name="profiles_sched_unmetered">على الشبكات غير المحدودة فقط</string>
+    <string name="profiles_sched_unmetered_hint">ينتظر Wi-Fi أو Ethernet بدلًا من استخدام بيانات الجوال.</string>
+    <string name="profiles_sched_local_no_network">الوجهة على هذا الجهاز، فلا حاجة إلى شبكة.</string>
+    <string name="profiles_sched_charging">أثناء الشحن فقط</string>
+    <string name="profiles_sched_idle">أثناء خمول الجهاز فقط</string>
+    <string name="profiles_sched_idle_hint">قد يستغرق الخمول ساعات حتى يحدث، لذا قد تتأخر عمليات التشغيل كثيرًا.</string>
+    <string name="profiles_sched_battery">الحد الأدنى لمستوى البطارية</string>
+    <string name="profiles_sched_battery_value">بطارية %1$d%% على الأقل</string>
+    <string name="profiles_sched_catch_up">تعويض عمليات التشغيل الفائتة</string>
+    <string name="profiles_sched_catch_up_hint">إذا كان الجهاز مطفأً في الوقت المجدول، يُنسخ احتياطيًا في أقرب وقت ممكن بعد ذلك.</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s–%2$s</string>
+    <string name="profiles_sched_every_day">كل يوم</string>
+    <string name="profiles_sched_weekdays">أيام الأسبوع</string>
+    <string name="profiles_sched_weekends">عطلة نهاية الأسبوع</string>
+    <string name="profiles_sched_daily">يوميًا في %1$s</string>
+    <string name="profiles_sched_weekly">%1$s في %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">كل %1$s ابتداءً من %2$s</string>
+    <string name="profiles_sched_cond_charging">أثناء الشحن</string>
+    <string name="profiles_sched_cond_unmetered">على الشبكات غير المحدودة</string>
+    <string name="profiles_sched_cond_idle">أثناء الخمول</string>
+    <string name="profiles_sched_cond_battery">بطارية %1$d%% على الأقل</string>
+    <string name="profiles_sched_cond_catch_up">يعوّض عمليات التشغيل الفائتة</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">يدوي فقط</string>
+    <string name="profiles_sched_paused">متوقف مؤقتًا · %1$s</string>
+    <string name="profiles_sched_invalid">الجدول يحتاج إلى إصلاح</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="zero">%d د</item>
+        <item quantity="one">%d د</item>
+        <item quantity="two">%d د</item>
+        <item quantity="few">%d د</item>
+        <item quantity="many">%d د</item>
+        <item quantity="other">%d د</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="zero">%d س</item>
+        <item quantity="one">%d س</item>
+        <item quantity="two">%d س</item>
+        <item quantity="few">%d س</item>
+        <item quantity="many">%d س</item>
+        <item quantity="other">%d س</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">الاحتفاظ</string>
+    <string name="profiles_retention_keep_last_switch">تحديد عدد النسخ الاحتياطية</string>
+    <string name="profiles_retention_keep_last_field">النسخ المراد الاحتفاظ بها</string>
+    <string name="profiles_retention_max_age_switch">حذف النسخ الأقدم من عدد معين من الأيام</string>
+    <string name="profiles_retention_max_age_field">الحد الأقصى للعمر بالأيام</string>
+    <string name="profiles_retention_note">بعد كل نسخة احتياطية ناجحة، تُحذف من الوجهة النسخ الأقدم التي تتجاوز هذه الحدود. يُحتفظ دائمًا بأحدث نسخة ناجحة.</string>
+    <string name="profiles_retention_keep_all">يحتفظ بكل النسخ الاحتياطية</string>
+    <string name="profiles_retention_both">%1$s، ولا نسخة أقدم من %2$s</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="zero">يحتفظ بآخر %d نسخة احتياطية</item>
+        <item quantity="one">يحتفظ بآخر نسخة احتياطية</item>
+        <item quantity="two">يحتفظ بآخر نسختين احتياطيتين</item>
+        <item quantity="few">يحتفظ بآخر %d نسخ احتياطية</item>
+        <item quantity="many">يحتفظ بآخر %d نسخة احتياطية</item>
+        <item quantity="other">يحتفظ بآخر %d نسخة احتياطية</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="zero">يحتفظ بالنسخ الاحتياطية لمدة %d يوم</item>
+        <item quantity="one">يحتفظ بالنسخ الاحتياطية لمدة يوم واحد</item>
+        <item quantity="two">يحتفظ بالنسخ الاحتياطية لمدة يومين</item>
+        <item quantity="few">يحتفظ بالنسخ الاحتياطية لمدة %d أيام</item>
+        <item quantity="many">يحتفظ بالنسخ الاحتياطية لمدة %d يومًا</item>
+        <item quantity="other">يحتفظ بالنسخ الاحتياطية لمدة %d يوم</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">يوم واحد</item>
+        <item quantity="two">يومان</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يومًا</item>
+        <item quantity="other">%d يوم</item>
+    </plurals>
+    <string name="profiles_retention_apply">تطبيق الآن</string>
+    <string name="profiles_retention_preview_title">تطبيق الاحتفاظ على «%1$s»؟</string>
+    <string name="profiles_retention_preview_changed">تغيرت القائمة منذ آخر مرة رأيتها (انتهت نسخة احتياطية أو أُزيلت). تحقق منها مرة أخرى.</string>
+    <string name="profiles_retention_preview_nothing">لا شيء للحذف: كل نسخة مخزنة ضمن الحدود.</string>
+    <string name="profiles_retention_preview_unlisted">تعذّر سرد محتويات %1$s؛ ولم تُؤخذ في الاعتبار النسخ الاحتياطية هناك التي لا يملك DFTB سجلًا لها.</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">أُزيلت الوجهة من DFTB: يُحذف سجل التاريخ فقط</string>
+    <string name="profiles_retention_preview_where">%1$s على %2$s</string>
+    <string name="profiles_retention_preview_twrp">يحذف أيضًا: %1$s</string>
+    <string name="profiles_retention_reason_keep_last">تتجاوز حد الاحتفاظ بآخر النسخ</string>
+    <string name="profiles_retention_reason_max_age">أقدم من حد العمر</string>
+    <string name="profiles_retention_hold_newest">يُحتفظ دائمًا بأحدث نسخة ناجحة.</string>
+    <string name="profiles_retention_hold_complete">يُحتفظ بأحدث نسخة مكتملة بالكامل.</string>
+    <string name="profiles_retention_hold_active">لا تزال نسخة احتياطية قيد التنفيذ أو قابلة للمتابعة تكتب فيها.</string>
+    <string name="profiles_retention_hold_unsafe">يبدو مسارها المخزَّن غير آمن، لذا لا تُمس.</string>
+    <string name="profiles_retention_hold_twrp">تعذّر تحديد مجلد TWRP الخاص بها.</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s؛ %2$s وستُعاد المحاولة بعد النسخة الاحتياطية التالية.</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="zero">ستُحذف %d نسخة احتياطية نهائيًا من وجهاتها:</item>
+        <item quantity="one">ستُحذف هذه النسخة الاحتياطية نهائيًا من وجهتها:</item>
+        <item quantity="two">ستُحذف هاتان النسختان الاحتياطيتان نهائيًا من وجهتيهما:</item>
+        <item quantity="few">ستُحذف هذه النسخ الاحتياطية الـ%d نهائيًا من وجهاتها:</item>
+        <item quantity="many">ستُحذف هذه النسخ الاحتياطية الـ%d نهائيًا من وجهاتها:</item>
+        <item quantity="other">ستُحذف هذه النسخ الاحتياطية الـ%d نهائيًا من وجهاتها:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="zero">لا نسخ احتياطية منتهية محتفظ بها (%d):</item>
+        <item quantity="one">يُحتفظ بنسخة احتياطية منتهية واحدة:</item>
+        <item quantity="two">يُحتفظ بنسختين احتياطيتين منتهيتين:</item>
+        <item quantity="few">يُحتفظ بـ%d نسخ احتياطية منتهية:</item>
+        <item quantity="many">يُحتفظ بـ%d نسخة احتياطية منتهية:</item>
+        <item quantity="other">يُحتفظ بـ%d نسخة احتياطية منتهية:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="zero">حذف %d نسخة احتياطية</item>
+        <item quantity="one">حذف نسخة احتياطية واحدة</item>
+        <item quantity="two">حذف نسختين احتياطيتين</item>
+        <item quantity="few">حذف %d نسخ احتياطية</item>
+        <item quantity="many">حذف %d نسخة احتياطية</item>
+        <item quantity="other">حذف %d نسخة احتياطية</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="zero">لم تُحذف أي نسخة احتياطية (%1$d) لـ «%2$s»</item>
+        <item quantity="one">حُذفت نسخة احتياطية واحدة لـ «%2$s»</item>
+        <item quantity="two">حُذفت نسختان احتياطيتان لـ «%2$s»</item>
+        <item quantity="few">حُذفت %1$d نسخ احتياطية لـ «%2$s»</item>
+        <item quantity="many">حُذفت %1$d نسخة احتياطية لـ «%2$s»</item>
+        <item quantity="other">حُذفت %1$d نسخة احتياطية لـ «%2$s»</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="zero">تعذّر حذف %d</item>
+        <item quantity="one">تعذّر حذف واحدة</item>
+        <item quantity="two">تعذّر حذف اثنتين</item>
+        <item quantity="few">تعذّر حذف %d</item>
+        <item quantity="many">تعذّر حذف %d</item>
+        <item quantity="other">تعذّر حذف %d</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">الجداول والاحتفاظ</string>
+    <string name="profiles_schedules_empty">لا توجد ملفات بعد.</string>
+    <string name="profiles_schedules_group_active">مجدولة</string>
+    <string name="profiles_schedules_group_paused">متوقفة مؤقتًا</string>
+    <string name="profiles_schedules_group_manual">يدوية فقط</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">أصلح هذه قبل الحفظ</string>
+    <string name="profiles_review_warnings">جدير بالمعرفة</string>
+    <string name="profiles_review_edit">تعديل %1$s</string>
+    <string name="profiles_review_fix">الانتقال إلى %1$s</string>
+    <string name="profiles_review_partitions">الأقسام</string>
+    <string name="profiles_review_components">مكونات التطبيق</string>
+    <string name="profiles_review_codec">ضغط التدفق</string>
+    <string name="profiles_event_failed_reason">لم تنجح العملية: %1$s</string>
+    <string name="profiles_cd_ok">حسنًا</string>
+    <string name="profiles_wizard_saved_not_scheduled">تم الحفظ، لكن تعذّر إعداد الجدول الزمني. افتح الملف الشخصي مرة أخرى لإعادة المحاولة.</string>
+    <string name="profiles_wizard_saved_not_started">تم الحفظ، لكن تعذّر بدء النسخ الاحتياطي. استخدم «نسخ احتياطي الآن» في القائمة.</string>
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">لوحة التحكم</string>
+    <string name="shell_nav_profiles">الملفات الشخصية</string>
+    <string name="shell_nav_restore">الاستعادة</string>
+    <string name="shell_nav_destinations">الوجهات</string>
+    <string name="shell_nav_settings">الإعدادات</string>
+    <string name="shell_back">رجوع</string>
+    <string name="shell_more_options">خيارات أخرى</string>
+    <string name="shell_state_on">مفعّل</string>
+    <string name="shell_state_off">متوقف</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s بانتظار تأكيدك لتثبيته.</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="zero">%1$s و%2$d تطبيق آخر بانتظار تأكيدك لتثبيتها.</item>
+        <item quantity="one">%1$s وتطبيق آخر واحد بانتظار تأكيدك لتثبيتهما.</item>
+        <item quantity="two">%1$s وتطبيقان آخران بانتظار تأكيدك لتثبيتها.</item>
+        <item quantity="few">%1$s و%2$d تطبيقات أخرى بانتظار تأكيدك لتثبيتها.</item>
+        <item quantity="many">%1$s و%2$d تطبيقًا آخر بانتظار تأكيدك لتثبيتها.</item>
+        <item quantity="other">%1$s و%2$d تطبيق آخر بانتظار تأكيدك لتثبيتها.</item>
+    </plurals>
+    <string name="shell_install_review">مراجعة</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">لوحة التحكم</string>
+    <string name="shell_open_job_monitor">فتح مراقب المهام</string>
+    <string name="shell_menu_system_info">معلومات النظام</string>
+    <string name="shell_menu_discovery">الاستكشاف</string>
+    <string name="shell_menu_schedules">الجداول</string>
+    <string name="shell_menu_licenses">تراخيص المصدر المفتوح</string>
+
+    <string name="shell_section_active_jobs">قيد التنفيذ الآن</string>
+    <string name="shell_section_profiles">ملفات النسخ الاحتياطي</string>
+    <string name="shell_section_upcoming">عمليات التشغيل المجدولة التالية</string>
+    <string name="shell_section_destinations">حالة الوجهات</string>
+
+    <string name="shell_action_new_profile">ملف جديد</string>
+    <string name="shell_action_create_profile">إنشاء ملف</string>
+    <string name="shell_action_restore">استعادة</string>
+    <string name="shell_action_add_destination">إضافة وجهة</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">لا توجد ملفات نسخ احتياطي بعد</string>
+    <string name="shell_profiles_empty_body">يحدد الملف ما يُنسخ احتياطيًا، وأين يُحفظ، ومتى يعمل. أنشئ ملفًا لإجراء أول نسخة احتياطية.</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="zero">عرض %1$d ملف آخر</item>
+        <item quantity="one">عرض ملف آخر</item>
+        <item quantity="two">عرض ملفين آخرين</item>
+        <item quantity="few">عرض %1$d ملفات أخرى</item>
+        <item quantity="many">عرض %1$d ملفًا آخر</item>
+        <item quantity="other">عرض %1$d ملف آخر</item>
+    </plurals>
+    <string name="shell_profiles_manage">إدارة الملفات</string>
+    <string name="shell_profile_destination">إلى %1$s</string>
+    <string name="shell_profile_destination_missing">تم حذف وجهته</string>
+    <string name="shell_profile_no_destination">لم تُحدد وجهة</string>
+    <string name="shell_profile_disabled">معطّل</string>
+    <string name="shell_profile_next">التالي: %1$s</string>
+    <string name="shell_back_up_now">نسخ احتياطي الآن</string>
+    <string name="shell_running">قيد التنفيذ…</string>
+    <string name="shell_needs_passphrase">يتطلب عبارة مرور</string>
+    <string name="shell_set_destination">اختيار وجهة</string>
+    <string name="shell_open_profile">فتح الملف</string>
+    <string name="shell_open_profiles">الانتقال إلى الملفات الشخصية</string>
+
+    <string name="shell_status_never">لم يُنسخ احتياطيًا قط</string>
+    <string name="shell_status_running">قيد التنفيذ</string>
+    <string name="shell_status_success">تم بنجاح</string>
+    <string name="shell_status_warnings">اكتمل مع تحذيرات</string>
+    <string name="shell_status_failed">فشل</string>
+    <string name="shell_status_cancelled">أُلغي</string>
+    <string name="shell_status_interrupted">انقطع</string>
+
+    <string name="shell_backup_queued">أُدرجت النسخة الاحتياطية لـ %1$s في قائمة الانتظار. ستبدأ فور تحقق شرط الشبكة.</string>
+    <string name="shell_resume_queued">ستتابع النسخة الاحتياطية لـ %1$s من حيث توقفت.</string>
+    <string name="shell_queue_failed">تعذّر إدراج النسخة الاحتياطية لـ %1$s في قائمة الانتظار. حاول مرة أخرى.</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">لا توجد نسخ احتياطية مجدولة. أضف جدولًا إلى ملف لتشغيله تلقائيًا.</string>
+    <string name="shell_upcoming_at">%1$s (%2$s)</string>
+    <string name="shell_upcoming_expected">متوقع %1$s · لم يُدرج في الانتظار بعد</string>
+    <string name="shell_upcoming_retry">إعادة المحاولة %1$s (المحاولة %2$d)</string>
+    <string name="shell_upcoming_queued">في قائمة الانتظار، بانتظار استيفاء شروطه</string>
+    <string name="shell_upcoming_see_schedules">عرض الجداول</string>
+    <string name="shell_constraints">يتطلب: %1$s</string>
+    <string name="shell_constraint_unmetered">شبكة غير محدودة</string>
+    <string name="shell_constraint_network">شبكة</string>
+    <string name="shell_constraint_charging">الشحن</string>
+    <string name="shell_constraint_idle">خمول الجهاز</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">لا توجد وجهات بعد. أضف وجهة لتجد نسخك الاحتياطية مكانًا تُحفظ فيه.</string>
+    <string name="shell_destinations_manage">إدارة الوجهات</string>
+    <string name="shell_destination_verified">تم الفحص %1$s</string>
+    <string name="shell_destination_never_verified">لم تُفحص قط. شغّل اختبار اتصال لمعرفة المساحة الحرة.</string>
+    <string name="shell_destination_stale">آخر فحص %1$s. اختبرها مجددًا لمعرفة المساحة الحرة الحالية.</string>
+    <string name="shell_destination_space">%1$s حرة من %2$s</string>
+    <string name="shell_destination_space_free">%1$s حرة</string>
+    <string name="shell_destination_space_unknown">السعة غير معروفة</string>
+    <string name="shell_destination_low_space">المساحة منخفضة</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">الوصول عبر %1$s غير متاح</string>
+    <string name="shell_warn_elevation_root_body">لم يُمنح DFTB صلاحية الجذر حاليًا. لا يمكن نسخ بيانات التطبيقات والأقسام وغيرها من العناصر ذات الامتياز احتياطيًا أو استعادتها حتى تُمنح.</string>
+    <string name="shell_warn_elevation_shizuku_body">خدمة Shizuku لا تعمل أو فقد DFTB إذنها. شغّل Shizuku (يتوقف عند كل إعادة تشغيل) لنسخ بيانات التطبيقات احتياطيًا.</string>
+    <string name="shell_warn_check_again">فحص مجددًا</string>
+    <string name="shell_warn_open_settings">تغيير الوضع</string>
+    <string name="shell_warn_notifications_title">الإشعارات متوقفة</string>
+    <string name="shell_warn_notifications_body">لن ترى تقدم النسخ الاحتياطي أو حالات الفشل أو طلبات عبارة المرور أثناء إغلاق DFTB.</string>
+    <string name="shell_warn_allow">سماح</string>
+    <string name="shell_warn_passphrase_title">%1$s بانتظار عبارة المرور</string>
+    <string name="shell_warn_passphrase_body">يشفّر هذا الملف بعبارة مرور لا تُخزَّن أبدًا، لذا لا يمكن لنسخته الاحتياطية المنقطعة أن تتابع من تلقاء نفسها. شغّل النسخ من الملفات الشخصية وأدخل عبارة المرور عند الطلب.</string>
+    <string name="shell_warn_interrupted_title">انقطعت النسخة الاحتياطية لـ %1$s</string>
+    <string name="shell_warn_interrupted_resumable">يمكنها المتابعة من حيث توقفت بدلًا من البدء من جديد.</string>
+    <string name="shell_warn_interrupted_stale">لم يعد بالإمكان متابعتها: %1$s. سيبدأ التشغيل التالي نسخة احتياطية جديدة.</string>
+    <string name="shell_skip_too_old">توقفت قبل أكثر من يومين</string>
+    <string name="shell_skip_destination_missing">أُزيلت وجهتها</string>
+    <string name="shell_skip_profile_disabled">الملف معطّل</string>
+    <string name="shell_skip_other">يتعذر استخدام تقدمها المحفوظ</string>
+    <string name="shell_warn_resume">متابعة</string>
+    <string name="shell_warn_job_interrupted_title">انقطع %1$s</string>
+    <string name="shell_warn_restore_interrupted_body">لا تتابع عمليات الاستعادة من تلقاء نفسها. تبقى العناصر المستعادة قبل الانقطاع في مكانها؛ شغّل الاستعادة مرة أخرى من الاستعادة عندما تكون مستعدًا.</string>
+    <string name="shell_warn_job_interrupted_body">لا تتابع هذه المهمة من تلقاء نفسها. شغّلها مرة أخرى عندما تكون مستعدًا.</string>
+    <string name="shell_warn_failed_title">فشلت آخر نسخة احتياطية لـ %1$s</string>
+    <string name="shell_warn_failed_no_details">لم تُسجَّل أي تفاصيل.</string>
+    <string name="shell_warn_retry">إعادة المحاولة</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">جارٍ الإلغاء…</string>
+    <string name="shell_job_progress_bytes">%1$s من %2$s</string>
+    <string name="shell_job_progress_items">%1$d من %2$d عنصر</string>
+    <string name="shell_job_items_done">اكتمل %1$d عنصر</string>
+    <string name="shell_job_rate">%1$s/ث</string>
+    <string name="shell_job_eta">متبقٍ %1$s</string>
+    <string name="shell_job_eta_unknown">جارٍ تقدير الوقت المتبقي…</string>
+    <string name="shell_job_elapsed">مضى %1$s</string>
+    <string name="shell_job_current_item">الآن: %1$s</string>
+    <string name="shell_duration_days">%1$d ي %2$d س</string>
+    <string name="shell_duration_hours">%1$d س %2$d د</string>
+    <string name="shell_duration_minutes">%1$d د %2$d ث</string>
+    <string name="shell_duration_seconds">%1$d ث</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">مراقب المهام</string>
+    <string name="shell_monitor_title_all">جميع المهام</string>
+    <string name="shell_monitor_no_jobs">لا توجد مهام قيد التنفيذ. تظهر أحدث أسطر سجل التطبيق أدناه.</string>
+    <string name="shell_monitor_job_gone">لم تعد هذه المهمة قيد التنفيذ ولم يُعثر على أي سجل لها.</string>
+    <string name="shell_monitor_finished">انتهت %1$s</string>
+    <string name="shell_monitor_cancel">إلغاء</string>
+    <string name="shell_monitor_filter_job">عرض سجل هذه المهمة</string>
+
+    <string name="shell_record_started">بدأت</string>
+    <string name="shell_record_finished">انتهت</string>
+    <string name="shell_record_duration">المدة</string>
+    <string name="shell_record_processed">البيانات المعالجة</string>
+    <string name="shell_record_items">العناصر</string>
+    <string name="shell_record_stored">المخزَّن في الوجهة</string>
+    <string name="shell_record_average_rate">متوسط السرعة</string>
+
+    <string name="shell_cancel_backup_title">إلغاء هذه النسخة الاحتياطية؟</string>
+    <string name="shell_cancel_backup_body">ستتوقف النسخة الاحتياطية لـ %1$s الآن وتُسجَّل كملغاة. تبقى العناصر المكتوبة بالفعل في الوجهة كنسخة احتياطية غير مكتملة؛ وسيبدأ التشغيل التالي نسخة جديدة.</string>
+    <string name="shell_cancel_restore_title">إلغاء هذه الاستعادة؟</string>
+    <string name="shell_cancel_restore_body">ستتوقف استعادة %1$s الآن. تبقى العناصر المستعادة بالفعل على الجهاز كما هي؛ ولا تُستعاد العناصر المتبقية. يمكنك تشغيل الاستعادة مرة أخرى لاحقًا.</string>
+    <string name="shell_cancel_job_title">إلغاء هذه المهمة؟</string>
+    <string name="shell_cancel_job_body">سيتوقف %1$s الآن ويُسجَّل كملغى. لا يتابع من تلقاء نفسه.</string>
+    <string name="shell_cancel_confirm">إلغاء المهمة</string>
+    <string name="shell_cancel_keep">متابعة التنفيذ</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">السجل</string>
+    <string name="shell_terminal_follow">تتبع أسطر السجل الجديدة</string>
+    <string name="shell_terminal_jump">الانتقال إلى آخر سطر</string>
+    <string name="shell_terminal_copy">نسخ السجل</string>
+    <string name="shell_terminal_copied">تم نسخ السجل</string>
+    <string name="shell_terminal_share">مشاركة السجل</string>
+    <string name="shell_terminal_share_subject">سجل DFTB: %1$s</string>
+    <string name="shell_terminal_share_failed">لا يوجد تطبيق يستقبل السجل.</string>
+    <string name="shell_terminal_empty">لا توجد أسطر سجل بعد.</string>
+    <string name="shell_terminal_filter_job">هذه المهمة</string>
+    <string name="shell_terminal_filter_all">جميع الأسطر</string>
+    <string name="shell_terminal_level_debug">تصحيح</string>
+    <string name="shell_terminal_level_info">معلومات</string>
+    <string name="shell_terminal_level_warn">تحذيرات</string>
+    <string name="shell_log_header_job">المهمة %1$s (%2$s)</string>
+    <string name="shell_log_header_all">جميع المهام</string>
+
+    <string name="shell_progress_working">قيد التنفيذ</string>
+    <string name="shell_loading">جارٍ التحميل</string>
+    <string name="shell_monitor_job_selected">محدد</string>
+    <string name="shell_warn_severity_error">خطأ</string>
+    <string name="shell_warn_severity_caution">تحذير</string>
+    <string name="shell_warn_severity_info">معلومة</string>
+</resources>

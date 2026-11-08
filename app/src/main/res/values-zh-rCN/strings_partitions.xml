@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition discovery (core/discovery/partition): categories, risk levels, views, scan
+     availability, scan warnings and target resolution failures. -->
+<resources>
+
+    <!-- Views -->
+    <string name="partition_view_standard">标准</string>
+    <string name="partition_view_standard_summary">大多数人会备份的分区：启动映像、验证启动数据、基带和设备标识。</string>
+    <string name="partition_view_advanced">高级</string>
+    <string name="partition_view_advanced_summary">设备上的所有分区，包括逻辑系统分区。选择前请查看每个风险标签。</string>
+
+    <!-- Slots -->
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">无 slot</string>
+    <string name="partition_slot_active_marker">活动</string>
+
+    <!-- Categories -->
+    <string name="partition_category_boot_chain">启动链</string>
+    <string name="partition_category_firmware">固件</string>
+    <string name="partition_category_modem">基带</string>
+    <string name="partition_category_userdata">用户数据</string>
+    <string name="partition_category_system_logical">系统（逻辑）</string>
+    <string name="partition_category_persist_identity">设备标识与校准</string>
+    <string name="partition_category_other">其他</string>
+
+    <!-- Risk -->
+    <string name="partition_risk_safe">可安全制作映像</string>
+    <string name="partition_risk_huge">非常大</string>
+    <string name="partition_risk_huge_summary">此分区有数 GB 之大。请确保目标位置有足够空间。</string>
+    <string name="partition_risk_critical">此设备独有</string>
+    <string name="partition_risk_critical_summary">包含标识或校准数据（IMEI、射频、密钥）。请妥善保管此备份，切勿将其恢复到其他设备。</string>
+    <string name="partition_logical_badge">逻辑</string>
+
+    <!-- Unavailable -->
+    <string name="partition_unavailable_root_required">分区备份需要 Root 模式。请在设置中切换到 Root 模式以扫描分区。</string>
+    <string name="partition_unavailable_root_not_granted">当前未授予 Root 权限。请向 DFTB 授予超级用户权限后重新扫描。</string>
+    <string name="partition_unavailable_scan_failed">无法运行分区扫描。请重试。</string>
+    <string name="partition_unavailable_none_found">此设备上未找到任何分区。</string>
+
+    <!-- Warnings -->
+    <string name="partition_warning_no_by_name">未找到 by-name 分区目录；仅列出逻辑分区。</string>
+    <string name="partition_warning_by_name_conflict">部分分区名称在不同目录中指向不同设备：%1$s</string>
+    <string name="partition_warning_sizes_incomplete">无法读取部分分区的大小：%1$s</string>
+    <string name="partition_warning_active_slot_unknown">这是 A/B 设备，但无法确定活动 slot。</string>
+    <string name="partition_warning_dm_names_unavailable">此设备使用动态分区，但无法读取其逻辑名称。</string>
+    <string name="partition_warning_script_partial">扫描报告了错误；列表可能不完整。</string>
+    <string name="partition_warning_unresolved_links">无法解析部分分区链接：%1$s</string>
+
+    <!-- Resolution failures -->
+    <string name="partition_resolution_not_found">此设备上不存在分区 %1$s。</string>
+    <string name="partition_resolution_active_slot_unknown">无法为 %1$s 选择 slot，因为活动 slot 未知。</string>
+    <string name="partition_resolution_slot_missing">此设备上不存在 %1$s 所请求的 slot。</string>
+
+    <!-- Scan status -->
+    <string name="partition_scan_rescan">重新扫描</string>
+</resources>

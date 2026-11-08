@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="backup_engine_planning">Preparando la copia de seguridad…</string>
+    <string name="backup_engine_preflight">Comprobando el espacio libre…</string>
+    <string name="backup_engine_uploading">Subiendo %1$s…</string>
+    <string name="backup_engine_verifying">Verificando %1$s…</string>
+    <string name="backup_engine_writing_manifest">Escribiendo el índice de la copia de seguridad…</string>
+    <plurals name="backup_engine_completed">
+        <item quantity="one">%1$d artefacto respaldado.</item>
+        <item quantity="many">%1$d artefactos respaldados.</item>
+        <item quantity="other">%1$d artefactos respaldados.</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="one">%1$d advertencia.</item>
+        <item quantity="many">%1$d advertencias.</item>
+        <item quantity="other">%1$d advertencias.</item>
+    </plurals>
+    <string name="backup_engine_cancelled">Copia de seguridad cancelada. Se eliminaron los archivos parciales.</string>
+    <string name="backup_engine_error_no_destination">Este perfil no tiene destino. Elige dónde guardar las copias de seguridad.</string>
+    <string name="backup_engine_error_destination_not_found">El destino del perfil ya no existe.</string>
+    <string name="backup_engine_error_nothing">No hay nada seleccionado para respaldar.</string>
+    <string name="backup_engine_error_sources_unavailable">Ninguno de los datos seleccionados se puede respaldar en el modo actual.</string>
+    <string name="backup_engine_error_twrp_encryption">Las copias compatibles con TWRP no se pueden cifrar. Desactiva el cifrado o la compatibilidad con TWRP.</string>
+    <string name="backup_engine_error_masking_needs_encryption">Ocultar los nombres de archivo requiere cifrado. Activa el cifrado AES-256-GCM o desactiva la ocultación de nombres.</string>
+    <string name="backup_engine_error_resume_folder">La carpeta de copia de seguridad que se va a reanudar tiene un nombre no válido.</string>
+    <string name="backup_engine_error_destination_space">El destino no tiene espacio libre suficiente para esta copia de seguridad.</string>
+    <string name="backup_engine_error_staging_space">Este dispositivo no tiene espacio libre suficiente para preparar la copia de seguridad localmente.</string>
+    <string name="backup_engine_error_encryption_unsupported">Este modo de cifrado aún no es compatible. Usa AES-256-GCM.</string>
+    <string name="backup_engine_error_key_missing">Falta la clave de cifrado o la frase de contraseña de este perfil.</string>
+    <string name="backup_engine_error_transfer_unsupported">El modo de transferencia seleccionado no está disponible para este destino.</string>
+    <string name="backup_engine_error_source">No se pudieron leer algunos datos.</string>
+    <string name="backup_engine_error_source_shape">Una fuente de partición produjo más de una imagen.</string>
+    <string name="backup_engine_error_storage">Falló la escritura en el destino.</string>
+    <string name="backup_engine_error_verify">Un archivo almacenado no coincide con lo que se escribió. Puede estar dañado.</string>
+    <string name="backup_engine_error_manifest">No se pudo escribir el índice de la copia de seguridad.</string>
+    <string name="backup_engine_error_all_failed">No se pudo completar ninguna parte de la copia de seguridad.</string>
+    <string name="backup_engine_error_internal">La copia de seguridad se detuvo por un error inesperado.</string>
+    <string name="backup_engine_warning_space_unknown">No se pudo comprobar el espacio libre.</string>
+    <string name="backup_engine_warning_space_overridden">Iniciado a pesar del poco espacio libre.</string>
+    <string name="backup_engine_warning_format_substituted">El formato elegido no se aplica aquí; se usó uno compatible.</string>
+    <string name="backup_engine_warning_source_unavailable">Omitido: no disponible en el modo actual.</string>
+    <string name="backup_engine_warning_source_partial">Respaldado solo en parte.</string>
+    <string name="backup_engine_warning_twrp_verbatim">La carpeta TWRP se guarda sin comprimir y con nombres legibles para que TWRP pueda restaurarla.</string>
+    <string name="backup_engine_warning_twrp_not_device">TWRP solo puede restaurar desde el almacenamiento del dispositivo o USB. Copia allí la carpeta TWRP antes de restaurar.</string>
+    <string name="backup_engine_warning_estimate_failed">No se pudo estimar el tamaño de antemano.</string>
+    <string name="backup_engine_warning_size_mismatch">El tamaño de los datos cambió mientras se leían.</string>
+    <string name="backup_engine_warning_artifact_failed">Esta parte de la copia de seguridad falló.</string>
+    <string name="backup_engine_warning_hash_records">No se pudieron guardar en el catálogo las sumas de comprobación por archivo.</string>
+    <string name="backup_engine_warning_checkpoint">No se pudo guardar la información de reanudación.</string>
+    <string name="backup_engine_warning_cleanup">No se pudo eliminar un archivo temporal.</string>
+    <string name="backup_engine_warning_resume_skipped">Ya completado en un intento anterior; omitido.</string>
+    <string name="backup_engine_warning_resume_unindexed">Completado antes, pero ningún índice de copia anterior lo describe.</string>
+    <string name="backup_engine_warning_prior_manifest">No se pudo leer un índice de copia anterior de esta carpeta.</string>
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_reason_auth">Η σύνδεση απέτυχε. Ελέγξτε το όνομα χρήστη, τον κωδικό ή το κλειδί.</string>
+    <string name="storage_reason_host_key">Το κλειδί ταυτότητας του διακομιστή άλλαξε ή δεν είναι αξιόπιστο.</string>
+    <string name="storage_reason_network">Δεν ήταν δυνατή η πρόσβαση στον προορισμό μέσω δικτύου.</string>
+    <string name="storage_reason_timeout">Ο προορισμός άργησε πολύ να απαντήσει.</string>
+    <string name="storage_reason_not_found">Ο φάκελος ή ο δίσκος προορισμού δεν βρέθηκε.</string>
+    <string name="storage_reason_permission">Η εφαρμογή δεν έχει άδεια εγγραφής σε αυτόν τον προορισμό.</string>
+    <string name="storage_reason_no_space">Ο προορισμός δεν έχει άλλο ελεύθερο χώρο.</string>
+    <string name="storage_reason_unsupported">Αυτός ο προορισμός δεν υποστηρίζει τη ζητούμενη λειτουργία.</string>
+    <string name="storage_reason_misconfigured">Οι ρυθμίσεις του προορισμού είναι ελλιπείς ή μη έγκυρες.</string>
+    <string name="storage_reason_tool_missing">Δεν είναι εγκατεστημένο ένα απαιτούμενο βοηθητικό εργαλείο.</string>
+    <string name="storage_reason_protocol">Ο προορισμός επέστρεψε μη αναμενόμενο σφάλμα. Δοκιμάστε ξανά.</string>
+    <string name="storage_preflight_sufficient">Επαρκής ελεύθερος χώρος (%1$s διαθέσιμα).</string>
+    <string name="storage_preflight_insufficient">Ανεπαρκής ελεύθερος χώρος. Ελευθερώστε %1$s και δοκιμάστε ξανά.</string>
+    <string name="storage_preflight_unknown">Δεν ήταν δυνατός ο έλεγχος του ελεύθερου χώρου για αυτόν τον προορισμό.</string>
+    <string name="storage_test_ok">Συνδέθηκε σε %1$d ms.</string>
+    <string name="storage_test_failed">Η σύνδεση απέτυχε.</string>
+
+</resources>

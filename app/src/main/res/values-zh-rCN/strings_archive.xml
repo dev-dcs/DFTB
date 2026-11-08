@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Archive layer (core/pipeline/archive): user-facing explanations of ArchiveErrorKind,
+     mapped by ArchiveErrorKind.labelRes(). Technical detail stays in exception messages. -->
+<resources>
+    <string name="archive_error_unsafe_path">某个项目的路径不安全（绝对路径、“..”或包含无效字符），已被拒绝。</string>
+    <string name="archive_error_single_item">原始复制和磁盘映像备份只能包含一个文件或流。</string>
+    <string name="archive_error_size_mismatch">某个文件在备份期间大小发生了变化。</string>
+    <string name="archive_error_codec_unavailable">此设备上无法使用所选的压缩方式。请选择其他压缩方式。</string>
+    <string name="archive_error_unsupported_format">无法将此备份格式作为归档打开。</string>
+    <string name="archive_error_truncated">备份文件不完整。可能尚未完成上传或复制。</string>
+    <string name="archive_error_writer_state">该归档已完成或已关闭。</string>
+</resources>

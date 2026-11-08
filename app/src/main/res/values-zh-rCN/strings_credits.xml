@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bundle kinds -->
+    <string name="bundle_kind_native_binary">内置命令行工具</string>
+    <string name="bundle_kind_jvm_library">库</string>
+    <string name="bundle_kind_android_library">Android 库</string>
+    <string name="bundle_kind_format_compatibility">兼容的格式与项目</string>
+    <string name="bundle_kind_build_toolchain">构建工具</string>
+
+    <!-- License names -->
+    <string name="license_apache_2_0_name">Apache License 2.0</string>
+    <string name="license_mit_name">MIT License</string>
+    <string name="license_gpl_2_0_only_name">GNU General Public License v2.0 only</string>
+    <string name="license_gpl_3_0_name">GNU General Public License v3.0 or later</string>
+    <string name="license_lgpl_2_1_name">GNU Lesser General Public License v2.1 or later</string>
+    <string name="license_bsd_3_clause_name">BSD 3-Clause License</string>
+    <string name="license_zero_bsd_name">Zero-Clause BSD License (0BSD)</string>
+    <string name="license_zlib_name">zlib License</string>
+    <string name="license_openssl_apache_2_0_name">Apache License 2.0（OpenSSL 3.x）</string>
+    <string name="license_dual_bsd_gpl_name">BSD 3-Clause 或 GNU GPL v2.0（双重许可）</string>
+    <string name="license_lgpl_2_1_with_unrar_restriction_name">GNU LGPL v2.1 并附 unRAR 限制</string>
+    <string name="license_cc0_or_apache_2_0_name">CC0 1.0 或 Apache License 2.0（双重许可）</string>
+
+    <!-- Credit descriptions: native binaries -->
+    <string name="credit_rclone_desc">用于与数十家云端和网络存储提供商同步文件的命令行程序。DFTB 运行它在远程目标位置上传、下载和校验备份。</string>
+    <string name="credit_busybox_desc">提供数百种 Unix 实用工具的单一可执行文件。DFTB 在 root 模式下用它提供一致的 Shell 工具集，不依赖设备厂商的二进制文件。</string>
+    <string name="credit_zstd_desc">由 Meta 开发的快速无损压缩算法和工具。DFTB 的默认归档格式（.tar.zst）和压缩分区镜像都使用它。</string>
+    <string name="credit_xz_desc">基于 LZMA2 的压缩工具和 liblzma 库。DFTB 使用 xz 工具生成高压缩比的 .tar.xz 归档和 .xz 镜像压缩。</string>
+    <string name="credit_pigz_desc">利用每个 CPU 核心的 gzip 并行实现。DFTB 用它在多核设备上快速生成标准 .gz 输出。</string>
+    <string name="credit_openssl_desc">加密与 TLS 工具包。DFTB 调用 openssl 工具对归档进行流式 AES 加密，并在 root 模式下生成校验和。</string>
+    <string name="credit_gnu_tar_desc">GNU 归档工具。DFTB 用它创建和解压 tar 归档，保留属主、权限、SELinux 上下文和扩展属性。</string>
+    <string name="credit_rsync_desc">快速的增量文件传输工具。DFTB 用它进行 1:1 镜像备份，以及向本地和 SSH 目标位置进行增量同步。</string>
+
+    <!-- Credit descriptions: Android libraries -->
+    <string name="credit_libsu_desc">topjohnwu 开发的 Android 库，用于在 root Shell 中运行命令并以 root 身份访问文件。DFTB 的 root 和模块层级基于它构建。</string>
+    <string name="credit_shizuku_api_desc">Shizuku 服务的客户端库。当用户启用 Shizuku 时，DFTB 用它以 ADB 级权限运行特权文件操作。</string>
+    <string name="credit_androidx_compose_desc">Android 的声明式 UI 工具包。DFTB 的每个界面都使用 Compose 和 Material 3 构建。</string>
+    <string name="credit_androidx_room_desc">基于 SQLite 的持久化库。DFTB 在 Room 数据库中存储备份配置、任务历史和目标位置设置。</string>
+    <string name="credit_androidx_work_desc">可延迟的后台工作调度器。DFTB 用它运行定时且感知约束条件的备份。</string>
+    <string name="credit_androidx_datastore_desc">类型化的异步键值存储。DFTB 将语言、主题和运行模式等应用偏好保存在 DataStore 中。</string>
+    <string name="credit_androidx_navigation_desc">Compose 的导航框架。DFTB 使用其类型安全的路由在界面间切换。</string>
+    <string name="credit_hilt_desc">基于 Dagger 构建的 Android 依赖注入框架。DFTB 用它连接仓库、引擎和视图模型。</string>
+    <string name="credit_material_components_desc">Google 的 Material Design 组件库和主题系统。DFTB 的视觉设计、配色和动态主题遵循 Material 3。</string>
+    <string name="credit_material_symbols_desc">Google 的开源图标集。DFTB 中的所有图标均为 Material Symbols 和 Material Icons。</string>
+
+    <!-- Credit descriptions: JVM libraries -->
+    <string name="credit_kotlin_desc">JetBrains 开发的编程语言和标准库。DFTB 完全用 Kotlin 编写。</string>
+    <string name="credit_kotlinx_coroutines_desc">用于 Kotlin 协程异步编程的库。DFTB 用它处理所有后台和流式工作。</string>
+    <string name="credit_kotlinx_serialization_desc">多平台序列化库。DFTB 用它处理备份清单、导出的设置和类型安全的导航路由。</string>
+    <string name="credit_commons_compress_desc">支持 tar、zip、7z、gzip、bzip2、xz 和 zstd 归档的 Java 库。DFTB 在无 root 的设备上用它实现纯 Kotlin 归档引擎。</string>
+    <string name="credit_commons_io_desc">用于流和文件操作的实用库。DFTB 用它进行稳健的复制、哈希计算和临时文件处理。</string>
+    <string name="credit_commons_net_desc">网络协议的客户端实现。DFTB 用它处理 FTP 和 FTPS 目标位置。</string>
+    <string name="credit_xz_java_desc">XZ 和 LZMA 压缩的纯 Java 实现。DFTB 用它在无原生工具的情况下读写 .xz 归档。</string>
+    <string name="credit_sshj_desc">Java 的 SSHv2 库。DFTB 用它处理 SFTP 目标位置以及通过 SSH 流式备份。</string>
+    <string name="credit_smbj_desc">SMB2 和 SMB3 客户端库。DFTB 用它备份到 Windows 共享和 NAS 设备。</string>
+    <string name="credit_okhttp_desc">适用于 JVM 和 Android 的 HTTP 客户端。DFTB 用它处理 WebDAV、S3 等基于 HTTP 的目标位置。</string>
+    <string name="credit_okio_desc">支撑 OkHttp 的高效 I/O 库。DFTB 用它的缓冲源和接收器实现流式处理流程。</string>
+    <string name="credit_bouncycastle_desc">Java 的加密提供程序。DFTB 用它进行 OpenPGP 加密以及实现 Android 平台未提供的算法。</string>
+
+    <!-- Credit descriptions: compatible formats and projects -->
+    <string name="credit_seven_zip_desc">采用 7z 格式的文件归档器，p7zip 是其 POSIX 移植版。DFTB 读写与 7-Zip 兼容的 .7z 归档；工具本身并未内置。</string>
+    <string name="credit_shizuku_desc">RikkaApps 开发的应用，向用户授权的其他应用公开具有 ADB 或 root 权限的系统 API。安装后，DFTB 的 Shizuku 层级会连接到它。</string>
+    <string name="credit_magisk_desc">Android 的无系统修改式 root 方案。DFTB 的伴随模块采用 Magisk 模块格式，并可备份和还原已安装的模块。</string>
+    <string name="credit_kernelsu_desc">Android 基于内核的 root 方案。DFTB 的伴随模块兼容 KernelSU 的模块格式。</string>
+    <string name="credit_apatch_desc">Android 基于内核补丁的 root 方案。DFTB 的伴随模块兼容 APatch 的模块格式。</string>
+    <string name="credit_twrp_desc">Team Win Recovery Project，一款 Android 第三方 Recovery。DFTB 可以 nandroid 风格的布局写入分区备份，供 TWRP 还原。</string>
+    <string name="credit_orangefox_desc">基于 TWRP 的第三方 Recovery。DFTB 的分区备份采用与 OrangeFox 还原兼容的布局。</string>
+    <string name="credit_blake3_desc">快速的加密哈希函数。DFTB 自带 BLAKE3 规范的实现，用于校验和文件与验证。</string>
+
+    <!-- Credit descriptions: build toolchain -->
+    <string name="credit_ksp_desc">Google 的 Kotlin Symbol Processing API。在构建时用于生成 Room 和 Hilt 代码；其中没有任何内容包含在应用里。</string>
+    <string name="credit_gradle_desc">构建自动化工具和 Android Gradle Plugin。用于编译和打包 DFTB；其中没有任何内容包含在应用里。</string>
+</resources>

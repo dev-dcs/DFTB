@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FTP/FTPS and WebDAV destination settings (core/storage/ftp, core/storage/webdav).
+     Labels for the protocol-specific DestinationConfig.options keys. -->
+<resources>
+
+    <!-- FTPS mode (option "ftps_mode") -->
+    <string name="net_storage_ftps_mode_label">FTPS 模式</string>
+    <string name="net_storage_ftps_mode_explicit">显式（AUTH TLS，通常为 21 端口）</string>
+    <string name="net_storage_ftps_mode_implicit">隐式（连接即用 TLS，通常为 990 端口）</string>
+
+    <!-- WebDAV scheme (option "scheme") -->
+    <string name="net_storage_webdav_scheme_label">协议</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS（加密）</string>
+    <string name="net_storage_webdav_scheme_http">HTTP（未加密）</string>
+    <string name="net_storage_webdav_host_hint">服务器名称，或完整 URL，例如 https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">你的密码将以未加密方式发送。除非此服务器位于你完全信任的网络中，否则请使用 HTTPS。</string>
+    <string name="net_storage_webdav_auth_note">使用用户名和密码（HTTP Basic）或应用令牌登录。不支持 Digest 认证。</string>
+
+    <!-- Timeouts (options "connect_timeout_s", "data_timeout_s", "io_timeout_s") -->
+    <string name="net_storage_connect_timeout_label">连接超时（秒）</string>
+    <string name="net_storage_io_timeout_label">传输超时（秒）</string>
+
+    <!-- Certificate pinning (option "tls_pin_sha256") -->
+    <string name="net_storage_tls_pin_label">受信任的证书指纹（SHA-256）</string>
+    <string name="net_storage_tls_pin_hint">可选。粘贴服务器证书的 SHA-256 指纹以信任自签名证书。</string>
+    <string name="net_storage_tls_pin_invalid">指纹必须为 64 个十六进制字符。</string>
+
+    <!-- FTPS data-channel hint -->
+    <string name="net_storage_ftps_session_reuse_hint">服务器拒绝了加密数据连接。如果它要求 TLS 会话复用（例如 vsftpd 的 require_ssl_reuse），请在服务器上关闭该选项。</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_engine_opening">Lecture de la sauvegarde…</string>
+    <string name="restore_engine_preflight">Vérification de ce qui peut être restauré…</string>
+    <string name="restore_engine_verifying">Vérification de la sauvegarde avant la restauration…</string>
+    <string name="restore_engine_restoring">Restauration de %1$s…</string>
+    <plurals name="restore_engine_completed">
+        <item quantity="one">%1$d élément restauré.</item>
+        <item quantity="many">%1$d éléments restaurés.</item>
+        <item quantity="other">%1$d éléments restaurés.</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="one">%1$d avertissement.</item>
+        <item quantity="many">%1$d avertissements.</item>
+        <item quantity="other">%1$d avertissements.</item>
+    </plurals>
+    <string name="restore_engine_cancelled">Restauration arrêtée. Les fichiers déjà restaurés ont été conservés.</string>
+    <string name="restore_engine_error_destination">La destination de cette sauvegarde n\'existe plus.</string>
+    <string name="restore_engine_error_open">Impossible de lire la sauvegarde.</string>
+    <string name="restore_engine_error_key_required">Cette sauvegarde est chiffrée. Saisissez sa phrase secrète ou sa clé.</string>
+    <string name="restore_engine_error_wrong_key">Phrase secrète ou clé incorrecte pour cette sauvegarde.</string>
+    <string name="restore_engine_error_unsupported">Cette sauvegarde a été réalisée d\'une manière que cette version de DFTB ne peut pas restaurer.</string>
+    <string name="restore_engine_error_nothing">Rien n\'est sélectionné à restaurer.</string>
+    <string name="restore_engine_error_blocked">Aucun des éléments sélectionnés ne peut être restauré dans le mode actuel.</string>
+    <string name="restore_engine_error_space">Espace libre insuffisant pour restaurer.</string>
+    <string name="restore_engine_error_verify">La sauvegarde est endommagée ; rien n\'a été restauré.</string>
+    <string name="restore_engine_error_all_failed">La restauration de chaque élément sélectionné a échoué.</string>
+    <string name="restore_engine_error_internal">La restauration s\'est arrêtée à cause d\'une erreur inattendue.</string>
+    <string name="restore_engine_no_app_restorer">La restauration des applications n\'est pas disponible dans cette version.</string>
+    <string name="restore_engine_no_partition_restorer">La restauration des partitions n\'est pas disponible dans cette version.</string>
+    <string name="restore_engine_unit_blocked">%1$s ne peut pas être restauré : %2$s</string>
+    <string name="restore_engine_space_unknown">L\'espace libre pour %1$s est inconnu ; la restauration risque de manquer de place.</string>
+    <string name="restore_engine_space_overridden">%1$s : restauration malgré %2$s d\'espace supplémentaire nécessaire.</string>
+    <string name="restore_engine_cross_device">Cette sauvegarde provient d\'un appareil %1$s ; cet appareil est un %2$s.</string>
+    <string name="restore_engine_resume_skipped">%1$s a déjà été restauré et est ignoré.</string>
+    <string name="restore_engine_partial_backup">Cette sauvegarde n\'a pas été terminée ; seuls les éléments qu\'elle contient peuvent être restaurés.</string>
+    <string name="restore_engine_checkpoint_failed">Impossible d\'enregistrer la progression de la restauration ; une restauration interrompue recommencera depuis le début.</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="one">…et %1$d autre problème.</item>
+        <item quantity="many">…et %1$d autres problèmes.</item>
+        <item quantity="other">…et %1$d autres problèmes.</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="one">%1$d fichier n\'a pas d\'emplacement d\'origine connu et n\'a pas été restauré. Restaurez-le plutôt dans un dossier.</item>
+        <item quantity="many">%1$d fichiers n\'ont pas d\'emplacement d\'origine connu et n\'ont pas été restaurés. Restaurez-les plutôt dans un dossier.</item>
+        <item quantity="other">%1$d fichiers n\'ont pas d\'emplacement d\'origine connu et n\'ont pas été restaurés. Restaurez-les plutôt dans un dossier.</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="one">%1$d fichier existant a été conservé.</item>
+        <item quantity="many">%1$d fichiers existants ont été conservés.</item>
+        <item quantity="other">%1$d fichiers existants ont été conservés.</item>
+    </plurals>
+    <string name="restore_file_error_original_unknown">La sauvegarde n\'indique pas d\'où proviennent ces fichiers. Restaurez-les dans un dossier.</string>
+    <string name="restore_file_error_target">Impossible d\'ouvrir le dossier de restauration.</string>
+    <string name="restore_file_error_no_privilege">DFTB ne peut pas écrire dans ce dossier dans le mode actuel. Choisissez un autre dossier ou passez à Shizuku ou root.</string>
+    <string name="restore_file_error_saf">L\'accès au dossier choisi a été retiré. Sélectionnez à nouveau le dossier.</string>
+    <string name="restore_file_error_twrp_folder">Les archives TWRP ne peuvent être extraites que dans un dossier choisi, jamais par-dessus le système en cours d\'exécution.</string>
+    <string name="restore_file_error_corrupt">Les données de la sauvegarde sont endommagées.</string>
+    <string name="restore_file_error_no_space">Le dossier de restauration est plein.</string>
+    <string name="restore_file_error_archive">Impossible de lire l\'archive.</string>
+    <string name="restore_file_error_storage">Impossible de lire la destination.</string>
+    <string name="restore_issue_unsafe_path">chemin dangereux refusé</string>
+    <string name="restore_issue_through_symlink">refusé : il serait écrit à travers un lien symbolique</string>
+    <string name="restore_issue_parent_not_dir">un fichier bloque le chemin de son dossier</string>
+    <string name="restore_issue_directory_in_the_way">un dossier du même nom existe</string>
+    <string name="restore_issue_skipped_existing">fichier existant conservé</string>
+    <string name="restore_issue_symlink_unsupported">les liens symboliques ne sont pas pris en charge dans ce dossier</string>
+    <string name="restore_issue_hardlink_unsupported">les liens physiques ne sont pas pris en charge dans ce dossier</string>
+    <string name="restore_issue_hardlink_missing">le fichier vers lequel pointe ce lien n\'a pas été restauré</string>
+    <string name="restore_issue_special_skipped">fichier spécial (tube ou périphérique) ignoré</string>
+    <string name="restore_issue_digest_mismatch">les octets restaurés ne correspondent pas à la sauvegarde ; le fichier n\'a pas été écrit</string>
+    <string name="restore_issue_write_failed">écriture impossible</string>
+    <string name="restore_issue_metadata_failed">impossible de restaurer la date, le propriétaire ou les permissions</string>
+
+</resources>

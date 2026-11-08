@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Wizard chrome -->
+    <string name="onboarding_title">Καλώς ήρθατε στο DFTB</string>
+    <string name="onboarding_step_counter">Βήμα %1$d από %2$d</string>
+    <string name="onboarding_back">Πίσω</string>
+    <string name="onboarding_next">Επόμενο</string>
+    <string name="onboarding_finish">Τέλος</string>
+    <string name="onboarding_finishing">Αποθήκευση των επιλογών σας…</string>
+    <string name="onboarding_no_app_for_link">Καμία εφαρμογή σε αυτήν τη συσκευή δεν μπορεί να ανοίξει αυτόν τον σύνδεσμο.</string>
+    <string name="onboarding_no_app_for_action">Δεν υπάρχει διαθέσιμη οθόνη συστήματος για αυτήν την ενέργεια σε αυτήν τη συσκευή.</string>
+    <string name="onboarding_finish_requires_mode">Επιλέξτε μια λειτουργία που είναι διαθέσιμη σε αυτήν τη συσκευή πριν ολοκληρώσετε.</string>
+    <string name="onboarding_finish_error">Δεν ήταν δυνατή η αποθήκευση των επιλογών σας. Δοκιμάστε ξανά.</string>
+
+    <!-- Step 1: language -->
+    <string name="onboarding_language_title">Επιλέξτε τη γλώσσα σας</string>
+    <string name="onboarding_language_description">Όλη η εφαρμογή αλλάζει άμεσα. Μπορείτε να το αλλάξετε αργότερα από την επισκόπηση συστήματος ή τις Ρυθμίσεις.</string>
+    <string name="onboarding_language_suggested">Προτεινόμενη από τις ρυθμίσεις της συσκευής σας: %1$s</string>
+    <string name="onboarding_language_use_suggested">Χρήση %1$s</string>
+
+    <!-- Step 2: overview -->
+    <string name="onboarding_overview_title">Τι μπορεί να κάνει το DFTB</string>
+    <string name="onboarding_overview_description">Μια εργαλειοθήκη ανοιχτού κώδικα για αντίγραφα ασφαλείας και αποκατάσταση από καταστροφή για τη συσκευή που σας ανήκει. Όλα όσα ακολουθούν είναι προαιρετικά· εσείς αποφασίζετε τι θα προστατεύσετε και πού θα αποθηκευτεί.</string>
+    <string name="onboarding_feature_partitions_title">Εικόνες κατατμήσεων</string>
+    <string name="onboarding_feature_partitions_desc">Εικόνες επιπέδου μπλοκ των boot, vendor_boot, dtbo, persist και άλλων κατατμήσεων, συμπεριλαμβανομένης της ενεργής ή ανενεργής υποδοχής A/B (λειτουργίες root).</string>
+    <string name="onboarding_feature_apps_title">Εφαρμογές</string>
+    <string name="onboarding_feature_apps_desc">APK και split APK, εσωτερικά δεδομένα, εξωτερικά δεδομένα, αρχεία επέκτασης OBB και προσωρινές μνήμες, επιλεγμένα ανά εφαρμογή.</string>
+    <string name="onboarding_feature_files_title">Αρχεία και κατηγορίες</string>
+    <string name="onboarding_feature_files_desc">Οποιοσδήποτε φάκελος, καθώς και έξυπνες κατηγορίες όπως φωτογραφίες, βίντεο, έγγραφα και βάσεις δεδομένων, περιορισμένες με φίλτρα μεγέθους, ημερομηνίας και μοτίβου.</string>
+    <string name="onboarding_feature_destinations_title">Προορισμοί</string>
+    <string name="onboarding_feature_destinations_desc">Τοπικός χώρος, μονάδες USB OTG, διακομιστές FTP/FTPS, SFTP/SSH, SMB, WebDAV και NFS, και οποιοσδήποτε πάροχος cloud προσβάσιμος μέσω rclone.</string>
+    <string name="onboarding_feature_pipelines_title">Ευέλικτες ροές</string>
+    <string name="onboarding_feature_pipelines_desc">Κοντέινερ tar ή zip με συμπίεση zstd, xz, gzip ή bzip2, κρυπτογράφηση AES-256 με απόκρυψη ονομάτων αρχείων, μανιφέστα αθροισμάτων ελέγχου και απευθείας ροή στον προορισμό.</string>
+    <string name="onboarding_feature_twrp_title">Αντίγραφα συμβατά με recovery</string>
+    <string name="onboarding_feature_twrp_desc">Προαιρετικές διατάξεις συμβατές με TWRP και OrangeFox ώστε ένα αντίγραφο να μπορεί να επαναφερθεί και από custom recovery.</string>
+    <string name="onboarding_feature_restore_title">Πλήρως συμμετρική επαναφορά</string>
+    <string name="onboarding_feature_restore_desc">Ό,τι δημιουργεί το DFTB μπορεί και να το επαναφέρει: ολόκληρα προφίλ, μεμονωμένες εφαρμογές, επιλεγμένα αρχεία ή μία εικόνα κατάτμησης, με επαλήθευση ακεραιότητας πρώτα.</string>
+    <string name="onboarding_feature_scheduling_title">Προγραμματισμός, διατήρηση και συνέχιση</string>
+    <string name="onboarding_feature_scheduling_desc">Ημερήσιος, εβδομαδιαίος ή με διαστήματα προγραμματισμός με συνθήκες Wi‑Fi, φόρτισης και μπαταρίας· αυτόματη εκκαθάριση παλιών αντιγράφων· οι διακοπτόμενες εργασίες συνεχίζουν από το τελευταίο σημείο ελέγχου.</string>
+
+    <!-- Step 3: responsibility -->
+    <string name="onboarding_disclaimer_title">Η ευθύνη σας</string>
+    <string name="onboarding_disclaimer_description">Το DFTB σάς δίνει ισχυρό έλεγχο χαμηλού επιπέδου στη δική σας συσκευή. Διαβάστε αυτά τα σημεία πριν συνεχίσετε.</string>
+    <string name="onboarding_disclaimer_partitions">Η εγγραφή κατατμήσεων μπορεί να καταστήσει μια συσκευή μη εκκινήσιμη. Επαναφέρετε μόνο εικόνες κατατμήσεων που δημιουργήσατε σε αυτήν ακριβώς τη συσκευή και το firmware.</string>
+    <string name="onboarding_disclaimer_verify">Επαληθεύετε πάντα τα αντίγραφα και κρατάτε ένα δεύτερο αντίγραφο σε διαφορετικό μέσο. Ένα αντίγραφο που δεν δοκιμάσατε ποτέ δεν είναι αντίγραφο.</string>
+    <string name="onboarding_disclaimer_passwords">Οι κωδικοί και τα κλειδιά κρυπτογράφησης δεν μπορούν να ανακτηθούν. Αν τα χάσετε, χάνεται και το κρυπτογραφημένο αντίγραφο.</string>
+    <string name="onboarding_disclaimer_elevation">Η παραχώρηση πρόσβασης root ή Shizuku, και ό,τι γίνεται με αυτήν, είναι δική σας απόφαση και ευθύνη. Το DFTB τη χρησιμοποιεί μόνο για τις ενέργειες που ξεκινάτε ή προγραμματίζετε.</string>
+    <string name="onboarding_disclaimer_cloud">Ο αποθηκευτικός χώρος cloud και δικτύου υπόκειται στους όρους, τη διαθεσιμότητα και την τιμολόγηση του παρόχου. Το DFTB δεν ελέγχει υπηρεσίες τρίτων.</string>
+    <string name="onboarding_disclaimer_warranty">Το DFTB είναι δωρεάν λογισμικό ανοιχτού κώδικα που παρέχεται χωρίς καμία εγγύηση, υπό τους όρους της άδειας ανοιχτού κώδικα.</string>
+    <string name="onboarding_disclaimer_accept">Κατανοώ και αποδέχομαι</string>
+
+    <!-- Step 4: licenses -->
+    <string name="onboarding_licenses_title">Άδειες ανοιχτού κώδικα και μνείες</string>
+    <string name="onboarding_licenses_description">Το DFTB στηρίζεται σε αυτά τα έργα. Πατήστε μια καταχώριση για λεπτομέρειες· τα κουμπιά Πηγή και Άδεια ανοίγουν το έργο στο πρόγραμμα περιήγησής σας.</string>
+    <string name="licenses_title">Άδειες ανοιχτού κώδικα</string>
+    <string name="licenses_source">Πηγή</string>
+    <string name="licenses_license">Άδεια</string>
+    <string name="licenses_website">Ιστότοπος</string>
+    <string name="licenses_version">v%1$s</string>
+    <string name="licenses_expand">Εμφάνιση λεπτομερειών</string>
+    <string name="licenses_collapse">Απόκρυψη λεπτομερειών</string>
+
+    <!-- Step 5: operating mode -->
+    <string name="onboarding_mode_title">Λειτουργία</string>
+    <string name="onboarding_mode_description">Επιλέξτε πώς μπορεί το DFTB να έχει πρόσβαση στη συσκευή σας. Κάθε επιλογή ελέγχεται ζωντανά· μπορείτε να αλλάξετε λειτουργία αργότερα στις Ρυθμίσεις.</string>
+    <string name="onboarding_mode_select_hint">Επιλέξτε μια λειτουργία παραπάνω για να εκτελεστούν οι διαγνωστικοί έλεγχοι.</string>
+    <string name="onboarding_mode_selected">Επιλεγμένη</string>
+    <string name="onboarding_diagnostics_running">Έλεγχος %1$s… αυτό μπορεί να διαρκέσει μερικά δευτερόλεπτα αν εκκρεμεί μια προτροπή υπερχρήστη.</string>
+    <string name="onboarding_diagnostics_failed">Δεν ήταν δυνατή η ολοκλήρωση των διαγνωστικών ελέγχων.</string>
+    <string name="onboarding_diagnostics_rerun">Επανάληψη ελέγχων</string>
+    <string name="onboarding_diagnostics_duration">%1$d έλεγχοι σε %2$d ms</string>
+    <string name="onboarding_readiness_ready_desc">Όλα όσα χρειάζεται αυτή η λειτουργία είναι στη θέση τους.</string>
+    <string name="onboarding_readiness_degraded_desc">Αυτή η λειτουργία δουλεύει, αλλά ορισμένες προαιρετικές δυνατότητες είναι περιορισμένες μέχρι να επιλυθούν οι παρακάτω προειδοποιήσεις.</string>
+    <string name="onboarding_readiness_unavailable_desc">Ένας απαιτούμενος έλεγχος απέτυχε, οπότε αυτή η λειτουργία δεν μπορεί να επιλεγεί ακόμη. Διορθώστε τα παρακάτω και επαναλάβετε, ή επιλέξτε άλλη λειτουργία.</string>
+    <string name="onboarding_shizuku_denied">Δεν παραχωρήθηκε πρόσβαση Shizuku. Ξεκινήστε την υπηρεσία Shizuku και επιτρέψτε το DFTB όταν σας ζητηθεί.</string>
+    <string name="onboarding_module_dialog_title">Συνοδευτική μονάδα</string>
+    <string name="onboarding_module_dialog_text">Η συνοδευτική μονάδα DFTB δημιουργείται σε αυτήν τη συσκευή από την ίδια την εφαρμογή και εγκαθίσταται μέσω του διαχειριστή root σας. Ολοκληρώστε πρώτα τη ρύθμιση· ο εγκαταστάτης της μονάδας είναι διαθέσιμος στη συνέχεια από τις Ρυθμίσεις. Μέχρι τότε, η προχωρημένη λειτουργία root αναφέρει τη μονάδα ως απούσα.</string>
+    <string name="onboarding_module_dialog_ok">Το κατάλαβα</string>
+
+    <!-- Step 6: baseline -->
+    <string name="onboarding_baseline_title">Βασική διαμόρφωση</string>
+    <string name="onboarding_baseline_description">Προεπιλογές για κάθε νέο προφίλ αντιγράφων. Κάθε προφίλ μπορεί να τις παρακάμψει.</string>
+    <string name="onboarding_destination_title">Προεπιλεγμένος προορισμός</string>
+    <string name="onboarding_destination_choose_folder">Επιλογή φακέλου</string>
+    <string name="onboarding_destination_app_storage">Χώρος εφαρμογής</string>
+    <string name="onboarding_destination_decide_later">Απόφαση αργότερα</string>
+    <string name="onboarding_destination_none">Χωρίς προεπιλεγμένο προορισμό. Θα επιλέξετε έναν κατά τη δημιουργία προφίλ.</string>
+    <string name="onboarding_destination_current">Προεπιλεγμένος προορισμός: %1$s (%2$s)</string>
+    <string name="onboarding_destination_app_storage_name">Χώρος εφαρμογής (αντίγραφα)</string>
+    <string name="onboarding_destination_folder_fallback_name">Επιλεγμένος φάκελος</string>
+    <string name="onboarding_destination_error">Δεν ήταν δυνατή η αποθήκευση του φακέλου ως προορισμού. Επιλέξτε τον ξανά.</string>
+    <string name="onboarding_destination_app_storage_hint">Ο χώρος εφαρμογής βρίσκεται στο Android/data και διαγράφεται όταν απεγκατασταθεί το DFTB. Ένας φάκελος της επιλογής σας ή ένας προορισμός δικτύου είναι ασφαλέστερος.</string>
+    <string name="onboarding_format_title">Προεπιλεγμένη μορφή αρχειοθέτησης</string>
+    <string name="onboarding_compression_title">Επίπεδο συμπίεσης</string>
+    <string name="onboarding_compression_value">Επίπεδο %1$d · %2$s</string>
+    <string name="onboarding_checksum_title">Αλγόριθμος αθροίσματος ελέγχου</string>
+    <string name="onboarding_notifications_title">Ειδοποιήσεις</string>
+    <string name="onboarding_notifications_desc">Απαιτούνται για την εμφάνιση ζωντανής προόδου και την αναφορά ολοκληρωμένων ή αποτυχημένων εργασιών όταν το DFTB είναι στο παρασκήνιο.</string>
+    <string name="onboarding_notifications_granted">Οι ειδοποιήσεις είναι ενεργοποιημένες.</string>
+    <string name="onboarding_notifications_request">Ενεργοποίηση ειδοποιήσεων</string>
+    <string name="onboarding_battery_title">Βελτιστοποίηση μπαταρίας</string>
+    <string name="onboarding_battery_desc">Προαιρετικό. Η εξαίρεση του DFTB από τη βελτιστοποίηση μπαταρίας κρατά ζωντανά τα μεγάλα ή προγραμματισμένα αντίγραφα όταν η οθόνη είναι σβηστή.</string>
+    <string name="onboarding_battery_granted">Το DFTB εξαιρείται από τη βελτιστοποίηση μπαταρίας.</string>
+    <string name="onboarding_battery_request">Αίτημα εξαίρεσης</string>
+
+    <!-- Compression level labels -->
+    <string name="compression_level_store">Αποθήκευση</string>
+    <string name="compression_level_fast">Γρήγορη</string>
+    <string name="compression_level_balanced">Ισορροπημένη</string>
+    <string name="compression_level_maximum">Μέγιστη</string>
+    <string name="compression_level_ultra">Ultra</string>
+
+    <!-- ArchiveFormat -->
+    <string name="format_tar">tar (χωρίς συμπίεση)</string>
+    <string name="format_tar_gz">tar + gzip</string>
+    <string name="format_tar_xz">tar + xz</string>
+    <string name="format_tar_zst">tar + zstd</string>
+    <string name="format_tar_bz2">tar + bzip2</string>
+    <string name="format_zip">zip</string>
+    <string name="format_7z">7z</string>
+    <string name="format_raw_copy">Ακατέργαστο αντίγραφο</string>
+    <string name="format_dd_image">Εικόνα κατάτμησης</string>
+
+    <!-- ChecksumAlgorithm -->
+    <string name="checksum_md5">MD5</string>
+    <string name="checksum_sha1">SHA-1</string>
+    <string name="checksum_sha256">SHA-256</string>
+    <string name="checksum_sha512">SHA-512</string>
+    <string name="checksum_blake3">BLAKE3</string>
+
+    <!-- CompressionCodec -->
+    <string name="codec_none">Κανένας</string>
+    <string name="codec_gzip">gzip</string>
+    <string name="codec_xz">xz</string>
+    <string name="codec_zstd">zstd</string>
+    <string name="codec_bzip2">bzip2</string>
+
+    <!-- EncryptionMode -->
+    <string name="encryption_none">Καμία</string>
+    <string name="encryption_aes_256_gcm">AES-256-GCM</string>
+    <string name="encryption_zip_aes">ZIP AES</string>
+    <string name="encryption_openssl">OpenSSL (AES-256-CBC)</string>
+    <string name="encryption_gpg">OpenPGP (GPG)</string>
+
+    <!-- StructureMode -->
+    <string name="structure_preserve_hierarchy">Διατήρηση ιεραρχίας φακέλων</string>
+    <string name="structure_categorized">Ταξινόμηση σε κατηγορίες</string>
+
+    <!-- TransferMode -->
+    <string name="transfer_local_staging">Δημιουργία τοπικά και μετά μεταφόρτωση</string>
+    <string name="transfer_direct_stream">Απευθείας ροή στον προορισμό</string>
+    <string name="transfer_remote_compress">Συμπίεση στον απομακρυσμένο κόμβο</string>
+
+    <!-- DestinationType -->
+    <string name="destination_type_local_internal">Χώρος εφαρμογής</string>
+    <string name="destination_type_local_saf">Φάκελος</string>
+    <string name="destination_type_usb_otg">Μονάδα USB OTG</string>
+    <string name="destination_type_ftp">FTP</string>
+    <string name="destination_type_ftps">FTPS</string>
+    <string name="destination_type_sftp">SFTP</string>
+    <string name="destination_type_ssh">SSH</string>
+    <string name="destination_type_smb">Κοινή χρήση SMB</string>
+    <string name="destination_type_webdav">WebDAV</string>
+    <string name="destination_type_nfs">NFS</string>
+    <string name="destination_type_rclone">Απομακρυσμένο rclone</string>
+    <string name="destination_type_s3">Συμβατό με S3</string>
+    <string name="destination_type_mega">MEGA</string>
+    <string name="destination_type_pcloud">pCloud</string>
+
+    <!-- Readiness -->
+    <string name="readiness_ready">Έτοιμο</string>
+    <string name="readiness_degraded">Έτοιμο με προειδοποιήσεις</string>
+    <string name="readiness_unavailable">Μη διαθέσιμο</string>
+
+</resources>

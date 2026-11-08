@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">仪表盘</string>
+    <string name="shell_nav_profiles">配置</string>
+    <string name="shell_nav_restore">恢复</string>
+    <string name="shell_nav_destinations">目标</string>
+    <string name="shell_nav_settings">设置</string>
+    <string name="shell_back">返回</string>
+    <string name="shell_more_options">更多选项</string>
+    <string name="shell_state_on">开</string>
+    <string name="shell_state_off">关</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s 正在等待你确认安装。</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="other">%1$s 及另外 %2$d 个应用正在等待你确认安装。</item>
+    </plurals>
+    <string name="shell_install_review">查看</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">仪表盘</string>
+    <string name="shell_open_job_monitor">打开任务监视器</string>
+    <string name="shell_menu_system_info">系统信息</string>
+    <string name="shell_menu_discovery">发现</string>
+    <string name="shell_menu_schedules">计划</string>
+    <string name="shell_menu_licenses">开源许可</string>
+
+    <string name="shell_section_active_jobs">正在运行</string>
+    <string name="shell_section_profiles">备份配置</string>
+    <string name="shell_section_upcoming">接下来的计划运行</string>
+    <string name="shell_section_destinations">目标状态</string>
+
+    <string name="shell_action_new_profile">新建配置</string>
+    <string name="shell_action_create_profile">创建配置</string>
+    <string name="shell_action_restore">恢复</string>
+    <string name="shell_action_add_destination">添加目标</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">还没有备份配置</string>
+    <string name="shell_profiles_empty_body">配置用于指定备份什么、备份到哪里以及何时运行。创建一个配置即可进行首次备份。</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="other">再显示 %1$d 个配置</item>
+    </plurals>
+    <string name="shell_profiles_manage">管理配置</string>
+    <string name="shell_profile_destination">备份到 %1$s</string>
+    <string name="shell_profile_destination_missing">其目标已被删除</string>
+    <string name="shell_profile_no_destination">未选择目标</string>
+    <string name="shell_profile_disabled">已停用</string>
+    <string name="shell_profile_next">下次：%1$s</string>
+    <string name="shell_back_up_now">立即备份</string>
+    <string name="shell_running">正在运行…</string>
+    <string name="shell_needs_passphrase">需要口令</string>
+    <string name="shell_set_destination">选择目标</string>
+    <string name="shell_open_profile">打开配置</string>
+    <string name="shell_open_profiles">前往配置</string>
+
+    <string name="shell_status_never">从未备份</string>
+    <string name="shell_status_running">正在运行</string>
+    <string name="shell_status_success">成功</string>
+    <string name="shell_status_warnings">已完成，但有警告</string>
+    <string name="shell_status_failed">失败</string>
+    <string name="shell_status_cancelled">已取消</string>
+    <string name="shell_status_interrupted">已中断</string>
+
+    <string name="shell_backup_queued">%1$s 的备份已加入队列，一旦满足其网络要求便会开始。</string>
+    <string name="shell_resume_queued">%1$s 的备份将从中断处继续。</string>
+    <string name="shell_queue_failed">无法将 %1$s 的备份加入队列。请重试。</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">没有已计划的备份。为配置添加计划即可自动运行。</string>
+    <string name="shell_upcoming_at">%1$s（%2$s）</string>
+    <string name="shell_upcoming_expected">预计 %1$s · 尚未加入队列</string>
+    <string name="shell_upcoming_retry">正在重试 %1$s（第 %2$d 次）</string>
+    <string name="shell_upcoming_queued">已加入队列，等待满足条件</string>
+    <string name="shell_upcoming_see_schedules">查看计划</string>
+    <string name="shell_constraints">需要：%1$s</string>
+    <string name="shell_constraint_unmetered">非计费网络</string>
+    <string name="shell_constraint_network">网络</string>
+    <string name="shell_constraint_charging">充电中</string>
+    <string name="shell_constraint_idle">设备空闲</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">还没有目标。请添加一个，让备份有处可去。</string>
+    <string name="shell_destinations_manage">管理目标</string>
+    <string name="shell_destination_verified">已于 %1$s 检查</string>
+    <string name="shell_destination_never_verified">从未检查。请运行连接测试以查看其可用空间。</string>
+    <string name="shell_destination_stale">上次检查于 %1$s。请再次测试以获取当前可用空间。</string>
+    <string name="shell_destination_space">共 %2$s，可用 %1$s</string>
+    <string name="shell_destination_space_free">可用 %1$s</string>
+    <string name="shell_destination_space_unknown">容量未知</string>
+    <string name="shell_destination_low_space">空间不足</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">%1$s 权限不可用</string>
+    <string name="shell_warn_elevation_root_body">DFTB 目前未获得 Root 授权。在获得授权之前，无法备份或恢复应用数据、分区及其他特权项目。</string>
+    <string name="shell_warn_elevation_shizuku_body">Shizuku 服务未运行，或 DFTB 失去了权限。请启动 Shizuku（每次重启后都会停止）以备份应用数据。</string>
+    <string name="shell_warn_check_again">重新检查</string>
+    <string name="shell_warn_open_settings">更改模式</string>
+    <string name="shell_warn_notifications_title">通知已关闭</string>
+    <string name="shell_warn_notifications_body">DFTB 关闭时，你将看不到备份进度、失败信息或口令请求。</string>
+    <string name="shell_warn_allow">允许</string>
+    <string name="shell_warn_passphrase_title">%1$s 正在等待口令</string>
+    <string name="shell_warn_passphrase_body">此配置使用不会被保存的口令加密，因此其被中断的备份无法自行继续。请在“配置”中重新备份，并在提示时输入口令。</string>
+    <string name="shell_warn_interrupted_title">%1$s 的备份被中断</string>
+    <string name="shell_warn_interrupted_resumable">可以从中断处继续，而无需从头开始。</string>
+    <string name="shell_warn_interrupted_stale">无法再继续：%1$s。下次运行将开始新的备份。</string>
+    <string name="shell_skip_too_old">已停止超过两天</string>
+    <string name="shell_skip_destination_missing">其目标已被移除</string>
+    <string name="shell_skip_profile_disabled">该配置已停用</string>
+    <string name="shell_skip_other">其已保存的进度无法使用</string>
+    <string name="shell_warn_resume">继续</string>
+    <string name="shell_warn_job_interrupted_title">%1$s 已中断</string>
+    <string name="shell_warn_restore_interrupted_body">恢复绝不会自动继续。中断前已恢复的项目会保留原样；准备好后，请在“恢复”中重新开始恢复。</string>
+    <string name="shell_warn_job_interrupted_body">此任务不会自动继续。准备好后请重新开始。</string>
+    <string name="shell_warn_failed_title">%1$s 的上次备份失败</string>
+    <string name="shell_warn_failed_no_details">未记录任何详情。</string>
+    <string name="shell_warn_retry">重试</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">正在取消…</string>
+    <string name="shell_job_progress_bytes">%1$s / %2$s</string>
+    <string name="shell_job_progress_items">%1$d / %2$d 个项目</string>
+    <string name="shell_job_items_done">已完成 %1$d 个项目</string>
+    <string name="shell_job_rate">%1$s/秒</string>
+    <string name="shell_job_eta">剩余 %1$s</string>
+    <string name="shell_job_eta_unknown">正在估算剩余时间…</string>
+    <string name="shell_job_elapsed">已用时 %1$s</string>
+    <string name="shell_job_current_item">当前：%1$s</string>
+    <string name="shell_duration_days">%1$d 天 %2$d 小时</string>
+    <string name="shell_duration_hours">%1$d 小时 %2$d 分钟</string>
+    <string name="shell_duration_minutes">%1$d 分钟 %2$d 秒</string>
+    <string name="shell_duration_seconds">%1$d 秒</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">任务监视器</string>
+    <string name="shell_monitor_title_all">所有任务</string>
+    <string name="shell_monitor_no_jobs">没有正在运行的任务。应用最近的日志行仍显示在下方。</string>
+    <string name="shell_monitor_job_gone">此任务已不再运行，且未找到其记录。</string>
+    <string name="shell_monitor_finished">已于 %1$s 完成</string>
+    <string name="shell_monitor_cancel">取消</string>
+    <string name="shell_monitor_filter_job">显示此任务的日志</string>
+
+    <string name="shell_record_started">开始时间</string>
+    <string name="shell_record_finished">完成时间</string>
+    <string name="shell_record_duration">时长</string>
+    <string name="shell_record_processed">已处理数据</string>
+    <string name="shell_record_items">项目</string>
+    <string name="shell_record_stored">目标上的存储量</string>
+    <string name="shell_record_average_rate">平均速度</string>
+
+    <string name="shell_cancel_backup_title">取消此备份？</string>
+    <string name="shell_cancel_backup_body">%1$s 的备份将立即停止，并记录为已取消。已写入的项目会作为不完整备份保留在目标上；下次运行将开始新的备份。</string>
+    <string name="shell_cancel_restore_title">取消此恢复？</string>
+    <string name="shell_cancel_restore_body">%1$s 的恢复将立即停止。已恢复的项目会原样保留在设备上；其余项目不会被恢复。你可以稍后重新开始恢复。</string>
+    <string name="shell_cancel_job_title">取消此任务？</string>
+    <string name="shell_cancel_job_body">%1$s 将立即停止，并记录为已取消。它不会自动继续。</string>
+    <string name="shell_cancel_confirm">取消任务</string>
+    <string name="shell_cancel_keep">继续运行</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">日志</string>
+    <string name="shell_terminal_follow">跟随新日志行</string>
+    <string name="shell_terminal_jump">跳转到最新一行</string>
+    <string name="shell_terminal_copy">复制日志</string>
+    <string name="shell_terminal_copied">日志已复制</string>
+    <string name="shell_terminal_share">分享日志</string>
+    <string name="shell_terminal_share_subject">DFTB 日志：%1$s</string>
+    <string name="shell_terminal_share_failed">没有可接收该日志的应用。</string>
+    <string name="shell_terminal_empty">暂无日志行。</string>
+    <string name="shell_terminal_filter_job">此任务</string>
+    <string name="shell_terminal_filter_all">所有行</string>
+    <string name="shell_terminal_level_debug">调试</string>
+    <string name="shell_terminal_level_info">信息</string>
+    <string name="shell_terminal_level_warn">警告</string>
+    <string name="shell_log_header_job">任务 %1$s（%2$s）</string>
+    <string name="shell_log_header_all">所有任务</string>
+
+    <string name="shell_progress_working">处理中</string>
+    <string name="shell_loading">加载中</string>
+    <string name="shell_monitor_job_selected">已选择</string>
+    <string name="shell_warn_severity_error">错误</string>
+    <string name="shell_warn_severity_caution">警告</string>
+    <string name="shell_warn_severity_info">信息</string>
+</resources>

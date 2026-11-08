@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_app_no_package">Esta unidad de copia de seguridad no contiene ninguna app.</string>
+    <string name="restore_app_multiple_packages">Esta copia de app contiene varios paquetes; solo se pueden restaurar copias de una sola app.</string>
+    <string name="restore_app_layout_unsupported">Esta copia de app se guarda en una forma desde la que no se pueden restaurar apps (solo las copias de apps en archivo comprimido y por copia de archivos).</string>
+    <string name="restore_app_no_manifest">La copia de %1$s no tiene manifiesto de app, por lo que no se puede restaurar.</string>
+    <string name="restore_app_manifest_unreadable">No se pudo leer el manifiesto de app de %1$s: %2$s</string>
+    <string name="restore_app_manifest_mismatch">El manifiesto de app pertenece a %2$s, no a %1$s; no se restauró nada.</string>
+    <string name="restore_app_refused_self">DFTB no se restaura a sí misma (%1$s) salvo que se permitan expresamente los paquetes protegidos.</string>
+    <string name="restore_app_refused_privilege_provider">%1$s proporciona acceso root o Shizuku. Su restauración está bloqueada salvo que se permitan expresamente los paquetes protegidos.</string>
+    <string name="restore_app_warn_system">%1$s es un componente del sistema. Restaurarlo puede dejar el sistema inestable.</string>
+    <string name="restore_app_signature_mismatch">El %1$s instalado está firmado con una clave distinta a la de la copia. Se rechazó la restauración; permite una firma distinta para restaurar solo sus datos.</string>
+    <string name="restore_app_signature_mismatch_override">%1$s está firmado con una clave distinta a la de la copia. No se instaló su APK y solo se restauraron sus datos, como permitiste.</string>
+    <string name="restore_app_signature_unknown">No se pudo comparar la clave de firma de %1$s con la copia de seguridad.</string>
+    <string name="restore_app_user_needs_privilege">Restaurar en el usuario de Android %1$d requiere el modo Root o Shizuku.</string>
+    <string name="restore_app_user_missing">El usuario de Android %1$d no existe en este dispositivo.</string>
+    <string name="restore_app_unexpected">Falló la restauración de %1$s: %2$s</string>
+    <string name="restore_app_nothing_restorable">No se puede restaurar nada de %1$s en el modo actual con las opciones seleccionadas.</string>
+    <string name="restore_app_install_permission">DFTB no tiene permiso para instalar apps. Permite \"Instalar apps desconocidas\" para DFTB y vuelve a restaurar %1$s.</string>
+    <string name="restore_app_install_failed">Falló la instalación de %1$s: %2$s</string>
+    <string name="restore_app_install_declined">Se rechazó la instalación de %1$s.</string>
+    <string name="restore_app_install_timeout">Nadie confirmó a tiempo la instalación de %1$s.</string>
+    <string name="restore_app_apk_missing_parts">A la copia de %1$s le faltan partes del APK (%2$s); no se instaló el APK.</string>
+    <string name="restore_app_same_version">%1$s %2$s ya está instalado; no se reinstaló su APK.</string>
+    <string name="restore_app_installed_newer">Hay instalada una versión de %1$s más reciente que la de la copia. Se conservó el APK instalado y se restauran sobre él los datos más antiguos.</string>
+    <string name="restore_app_not_installed">%1$s no está instalado, por lo que no se pueden restaurar sus datos.</string>
+    <string name="restore_app_data_skipped_after_install_failure">Como falló la instalación de %1$s, no se restauraron sus datos.</string>
+    <string name="restore_app_data_needs_root">Los datos privados de %1$s solo se pueden restaurar en modo Root; se omitieron.</string>
+    <string name="restore_app_external_needs_privilege">Los datos del almacenamiento compartido de %1$s (Android/data, media, obb) requieren el modo Root o Shizuku; se omitieron.</string>
+    <string name="restore_app_data_skipped_existing">%1$s ya tiene %2$s; se conservó (política de conflicto: omitir).</string>
+    <string name="restore_app_data_merged">%2$s de %1$s se combinó con los datos existentes (política de conflicto: conservar ambos); los archivos que la copia no contiene se dejaron en su sitio.</string>
+    <string name="restore_app_merge_refused_symlink">%2$s de %1$s contiene enlaces simbólicos, así que la copia no se puede combinar de forma segura; se omitió. Restaura con la política de sobrescritura.</string>
+    <string name="restore_app_data_dir_missing">%2$s de %1$s no existe en este dispositivo (puede que el usuario esté bloqueado); se omitió esa parte.</string>
+    <string name="restore_app_data_failed">Falló la restauración de %2$s de %1$s: %3$s</string>
+    <string name="restore_app_owner_failed">No se pudo corregir la propiedad de %2$s de %1$s: %3$s</string>
+    <string name="restore_app_owner_unknown">No se pudo determinar el propietario de %2$s para %1$s; los archivos conservan el propietario registrado en la copia.</string>
+    <string name="restore_app_selinux_failed">No se pudieron restablecer las etiquetas de seguridad de %2$s de %1$s; puede que la app no pueda leer esos datos.</string>
+    <string name="restore_app_selinux_fallback">restorecon no está disponible; las etiquetas de %2$s de %1$s se establecieron desde la copia con categorías recalculadas para el nuevo uid.</string>
+    <string name="restore_app_special_dropped">No se restauraron %2$d entradas de dispositivo o tubería de %1$s.</string>
+    <string name="restore_app_permissions_not_granted">No se pudieron conceder %2$d permiso(s) de %1$s: %3$s</string>
+    <string name="restore_app_permissions_need_privilege">Los permisos de %1$s no se pueden volver a conceder en modo Estándar; concédelos en los ajustes del sistema.</string>
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">datos de la app</string>
+    <string name="restore_app_part_de">datos protegidos por el dispositivo</string>
+    <string name="restore_app_part_cache">caché</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s: %2$s</string>
+    <string name="restore_app_preflight_root_for_data">Los datos privados de las apps solo se restaurarán en modo Root.</string>
+
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup sources (core/pipeline/source): why a source cannot run, and what it had to leave out. -->
+<resources>
+
+    <!-- Source unavailable -->
+    <string name="pipeline_source_unavailable_root_required">يتطلب هذا الجزء من النسخ الاحتياطي وضع Root. بدّل وضع التشغيل إلى Root في الإعدادات.</string>
+    <string name="pipeline_source_unavailable_root_not_granted">وضع Root محدد لكن صلاحية المستخدم المتميز غير ممنوحة حاليًا. امنح DFTB صلاحية root في مدير root وحاول مرة أخرى.</string>
+    <string name="pipeline_source_unavailable_nothing_selected">لا يوجد ما يُنسخ احتياطيًا لهذا الجزء من الملف الشخصي.</string>
+    <string name="pipeline_source_unavailable_invalid_filter">عامل تصفية ملفات في هذا الملف الشخصي غير صالح. عدّل الملف الشخصي وأصلح عامل التصفية المميّز.</string>
+    <string name="pipeline_source_unavailable_scan_failed">لم ينتهِ مسح الملفات، لذا تعذّر تحديد أي ملفات.</string>
+
+    <!-- Source warnings (%1$s = partition, package, folder or count) -->
+    <string name="pipeline_source_warn_partition_unresolved">لم يُعثر على القسم %1$s على هذا الجهاز (أو تعذّر تحديد الـ slot الخاص به) وتم تخطيه.</string>
+    <string name="pipeline_source_warn_partition_size_unknown">حجم القسم %1$s غير معروف؛ لا يمكن التحقق مسبقًا من اكتمال صورته.</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s غير مثبّت (أو غير مرئي لـ DFTB) وتم تخطيه.</string>
+    <string name="pipeline_source_warn_app_invalid_package">\"%1$s\" ليس اسم حزمة صالحًا وتم تخطيه.</string>
+    <string name="pipeline_source_warn_app_component_unavailable">لا يمكن التقاط %1$s في وضع التشغيل الحالي وتم تخطيه.</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">تعذّرت قراءة ملف APK تابع لـ %1$s وتم تخطيه.</string>
+    <string name="pipeline_source_warn_files_truncated">عدد الملفات المطابقة أكبر مما يمكن نسخه في تشغيل واحد؛ يتم تضمين أول %1$s فقط.</string>
+    <string name="pipeline_source_warn_files_root_blocked">تعذّرت قراءة %1$s في الوضع الحالي وتم تخطيه.</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">تعذّرت قراءة %1$s من الملفات أو المجلدات أثناء المسح ولم يتم تضمينها.</string>
+    <string name="pipeline_source_warn_nandroid_plan">لا يمكن تضمين %1$s في النسخة الاحتياطية المتوافقة مع TWRP (انظر التفاصيل).</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">تعذّر سرد بعض عناصر %1$s؛ قد تكون نسخة TWRP الاحتياطية ناقصة.</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">حذف Android بعض الملفات أثناء أرشفة %1$s؛ وهي غير موجودة في نسخة TWRP الاحتياطية.</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">لا يستطيع tar في إصدار Android هذا تخزين تسميات SELinux داخل أرشيفات %1$s؛ تُحفظ التسميات في قائمة منفصلة بدلًا من ذلك.</string>
+</resources>

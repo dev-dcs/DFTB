@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_app_no_package">Cette unité de sauvegarde ne contient pas d\'application.</string>
+    <string name="restore_app_multiple_packages">Cette sauvegarde d\'application contient plusieurs paquets ; seules les sauvegardes d\'une seule application peuvent être restaurées.</string>
+    <string name="restore_app_layout_unsupported">Cette sauvegarde d\'application est stockée sous une forme dont on ne peut pas restaurer les applications (seules les sauvegardes d\'applications par archive et par copie de fichiers le peuvent).</string>
+    <string name="restore_app_no_manifest">La sauvegarde de %1$s n\'a pas de manifeste d\'application, elle ne peut donc pas être restaurée.</string>
+    <string name="restore_app_manifest_unreadable">Impossible de lire le manifeste d\'application de %1$s : %2$s</string>
+    <string name="restore_app_manifest_mismatch">Le manifeste d\'application appartient à %2$s, pas à %1$s ; rien n\'a été restauré.</string>
+    <string name="restore_app_refused_self">DFTB ne se restaure pas lui-même (%1$s) sauf si les paquets protégés sont explicitement autorisés.</string>
+    <string name="restore_app_refused_privilege_provider">%1$s fournit l\'accès root ou Shizuku. Sa restauration est bloquée sauf si les paquets protégés sont explicitement autorisés.</string>
+    <string name="restore_app_warn_system">%1$s est un composant système. Le restaurer peut rendre le système instable.</string>
+    <string name="restore_app_signature_mismatch">%1$s installé est signé avec une clé différente de celle de la sauvegarde. La restauration a été refusée ; autorisez une signature différente pour ne restaurer que ses données.</string>
+    <string name="restore_app_signature_mismatch_override">%1$s est signé avec une clé différente de celle de la sauvegarde. Son APK n\'a pas été installé et seules ses données ont été restaurées, comme vous l\'avez autorisé.</string>
+    <string name="restore_app_signature_unknown">Impossible de comparer la clé de signature de %1$s avec la sauvegarde.</string>
+    <string name="restore_app_user_needs_privilege">La restauration vers l\'utilisateur Android %1$d nécessite le mode Root ou Shizuku.</string>
+    <string name="restore_app_user_missing">L\'utilisateur Android %1$d n\'existe pas sur cet appareil.</string>
+    <string name="restore_app_unexpected">Échec de la restauration de %1$s : %2$s</string>
+    <string name="restore_app_nothing_restorable">Rien de %1$s ne peut être restauré dans le mode actuel avec les options sélectionnées.</string>
+    <string name="restore_app_install_permission">DFTB n\'est pas autorisé à installer des applications. Autorisez « Installer des applications inconnues » pour DFTB, puis restaurez à nouveau %1$s.</string>
+    <string name="restore_app_install_failed">Échec de l\'installation de %1$s : %2$s</string>
+    <string name="restore_app_install_declined">L\'installation de %1$s a été refusée.</string>
+    <string name="restore_app_install_timeout">Personne n\'a confirmé l\'installation de %1$s à temps.</string>
+    <string name="restore_app_apk_missing_parts">Il manque des parties d\'APK à la sauvegarde de %1$s (%2$s) ; l\'APK n\'a pas été installé.</string>
+    <string name="restore_app_same_version">%1$s %2$s est déjà installé ; son APK n\'a pas été réinstallé.</string>
+    <string name="restore_app_installed_newer">Une version de %1$s plus récente que celle de la sauvegarde est installée. L\'APK installé a été conservé et les données plus anciennes sont restaurées dessus.</string>
+    <string name="restore_app_not_installed">%1$s n\'est pas installé, ses données ne peuvent donc pas être restaurées.</string>
+    <string name="restore_app_data_skipped_after_install_failure">L\'installation de %1$s ayant échoué, ses données n\'ont pas été restaurées.</string>
+    <string name="restore_app_data_needs_root">Les données privées de %1$s ne peuvent être restaurées qu\'en mode Root ; elles ont été ignorées.</string>
+    <string name="restore_app_external_needs_privilege">Les données du stockage partagé de %1$s (Android/data, media, obb) nécessitent le mode Root ou Shizuku ; elles ont été ignorées.</string>
+    <string name="restore_app_data_skipped_existing">%1$s contient déjà %2$s ; conservé (politique de conflit : ignorer).</string>
+    <string name="restore_app_data_merged">%2$s de %1$s a été fusionné avec les données existantes (politique de conflit : garder les deux) ; les fichiers absents de la sauvegarde ont été laissés en place.</string>
+    <string name="restore_app_merge_refused_symlink">%2$s de %1$s contient des liens symboliques, la sauvegarde ne peut donc pas y être fusionnée en toute sécurité ; ignoré. Restaurez plutôt avec la politique d\'écrasement.</string>
+    <string name="restore_app_data_dir_missing">%2$s de %1$s n\'existe pas sur cet appareil (l\'utilisateur est peut-être verrouillé) ; cette partie a été ignorée.</string>
+    <string name="restore_app_data_failed">Échec de la restauration de %2$s de %1$s : %3$s</string>
+    <string name="restore_app_owner_failed">Impossible de corriger le propriétaire de %2$s de %1$s : %3$s</string>
+    <string name="restore_app_owner_unknown">Impossible de déterminer le propriétaire de %2$s pour %1$s ; les fichiers gardent le propriétaire enregistré dans la sauvegarde.</string>
+    <string name="restore_app_selinux_failed">Impossible de réinitialiser les étiquettes de sécurité de %2$s de %1$s ; l\'application risque de ne pas pouvoir lire ces données.</string>
+    <string name="restore_app_selinux_fallback">restorecon est indisponible ; les étiquettes de %2$s de %1$s ont été définies à partir de la sauvegarde, avec des catégories recalculées pour le nouvel uid.</string>
+    <string name="restore_app_special_dropped">%2$d entrées de périphérique ou de tube de %1$s n\'ont pas été restaurées.</string>
+    <string name="restore_app_permissions_not_granted">%2$d autorisation(s) de %1$s n\'ont pas pu être accordées : %3$s</string>
+    <string name="restore_app_permissions_need_privilege">Les autorisations de %1$s ne peuvent pas être réaccordées en mode Standard ; accordez-les dans les paramètres système.</string>
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">données de l\'application</string>
+    <string name="restore_app_part_de">données protégées par l\'appareil</string>
+    <string name="restore_app_part_cache">cache</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s: %2$s</string>
+    <string name="restore_app_preflight_root_for_data">Les données privées des applications ne seront restaurées qu\'en mode Root.</string>
+
+</resources>

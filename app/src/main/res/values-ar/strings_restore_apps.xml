@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App restore (core/restore/apps): refusals, skipped parts and warnings. %1$s is the app label or package name unless noted. -->
+<resources>
+
+    <!-- Unit-level refusals -->
+    <string name="restore_app_no_package">لا تحتوي وحدة النسخ الاحتياطي هذه على تطبيق.</string>
+    <string name="restore_app_multiple_packages">تحتوي نسخة التطبيق الاحتياطية هذه على عدة حزم؛ لا يمكن استعادة سوى نسخ التطبيق الواحد.</string>
+    <string name="restore_app_layout_unsupported">نسخة التطبيق الاحتياطية هذه مخزّنة بصيغة لا يمكن استعادة التطبيقات منها (الأرشيف ونسخ الملفات فقط).</string>
+    <string name="restore_app_no_manifest">لا تحتوي نسخة %1$s الاحتياطية على بيان التطبيق، لذا لا يمكن استعادتها.</string>
+    <string name="restore_app_manifest_unreadable">تعذّرت قراءة بيان التطبيق لـ %1$s: %2$s</string>
+    <string name="restore_app_manifest_mismatch">بيان التطبيق يخص %2$s وليس %1$s؛ لم تتم استعادة أي شيء.</string>
+    <string name="restore_app_refused_self">لا يستعيد DFTB نفسه (%1$s) ما لم يُسمح صراحةً بالحزم المحمية.</string>
+    <string name="restore_app_refused_privilege_provider">%1$s يوفّر وصول root أو Shizuku. تُمنع استعادته ما لم يُسمح صراحةً بالحزم المحمية.</string>
+    <string name="restore_app_warn_system">%1$s مكوّن نظام. قد تؤدي استعادته إلى عدم استقرار النظام.</string>
+    <string name="restore_app_signature_mismatch">%1$s المثبّت موقّع بمفتاح مختلف عن النسخة الاحتياطية. تم رفض الاستعادة؛ اسمح بعدم تطابق التوقيع لاستعادة بياناته فقط.</string>
+    <string name="restore_app_signature_mismatch_override">%1$s موقّع بمفتاح مختلف عن النسخة الاحتياطية. لم يُثبَّت APK الخاص به واستُعيدت بياناته فقط، كما سمحت.</string>
+    <string name="restore_app_signature_unknown">تعذّرت مقارنة مفتاح توقيع %1$s بالنسخة الاحتياطية.</string>
+    <string name="restore_app_user_needs_privilege">تتطلب الاستعادة إلى مستخدم Android رقم %1$d وضع Root أو Shizuku.</string>
+    <string name="restore_app_user_missing">مستخدم Android رقم %1$d غير موجود على هذا الجهاز.</string>
+    <string name="restore_app_unexpected">فشلت استعادة %1$s: %2$s</string>
+    <string name="restore_app_nothing_restorable">لا يمكن استعادة أي شيء من %1$s في الوضع الحالي بالخيارات المحددة.</string>
+
+    <!-- APK -->
+    <string name="restore_app_install_permission">DFTB غير مسموح له بتثبيت التطبيقات. اسمح بـ \"تثبيت التطبيقات غير المعروفة\" لـ DFTB ثم أعد استعادة %1$s.</string>
+    <string name="restore_app_install_failed">فشل تثبيت %1$s: %2$s</string>
+    <string name="restore_app_install_declined">تم رفض تثبيت %1$s.</string>
+    <string name="restore_app_install_timeout">لم يؤكد أحد تثبيت %1$s في الوقت المناسب.</string>
+    <string name="restore_app_apk_missing_parts">تفتقر نسخة %1$s الاحتياطية إلى أجزاء APK (%2$s)؛ لم يُثبَّت APK.</string>
+    <string name="restore_app_same_version">%1$s %2$s مثبّت بالفعل؛ لم يُعد تثبيت APK الخاص به.</string>
+    <string name="restore_app_installed_newer">الإصدار المثبّت من %1$s أحدث من الموجود في النسخة الاحتياطية. تم الاحتفاظ بـ APK المثبّت واستُعيدت البيانات الأقدم فوقه.</string>
+    <string name="restore_app_not_installed">%1$s غير مثبّت، لذا لا يمكن استعادة بياناته.</string>
+    <string name="restore_app_data_skipped_after_install_failure">بسبب فشل تثبيت %1$s لم تتم استعادة بياناته.</string>
+
+    <!-- Data -->
+    <string name="restore_app_data_needs_root">البيانات الخاصة بـ %1$s لا تُستعاد إلا في وضع Root؛ تم تخطيها.</string>
+    <string name="restore_app_external_needs_privilege">بيانات التخزين المشترك لـ %1$s (Android/data وmedia وobb) تتطلب وضع Root أو Shizuku؛ تم تخطيها.</string>
+    <string name="restore_app_data_skipped_existing">%1$s لديه %2$s بالفعل؛ تم الاحتفاظ به (سياسة التعارض: تخطي).</string>
+    <string name="restore_app_data_merged">تم دمج %2$s الخاص بـ %1$s في البيانات الموجودة (سياسة التعارض: الاحتفاظ بالاثنين)؛ بقيت الملفات غير الموجودة في النسخة الاحتياطية في مكانها.</string>
+    <string name="restore_app_merge_refused_symlink">يحتوي %2$s الخاص بـ %1$s على روابط رمزية، لذا لا يمكن دمج النسخة الاحتياطية فيه بأمان؛ تم تخطيه. استعد بسياسة الاستبدال بدلًا من ذلك.</string>
+    <string name="restore_app_data_dir_missing">%2$s الخاص بـ %1$s غير موجود على هذا الجهاز (ربما المستخدم مقفل)؛ تم تخطي ذلك الجزء.</string>
+    <string name="restore_app_data_failed">فشلت استعادة %2$s الخاص بـ %1$s: %3$s</string>
+    <string name="restore_app_owner_failed">تعذّر إصلاح ملكية %2$s الخاص بـ %1$s: %3$s</string>
+    <string name="restore_app_owner_unknown">تعذّر تحديد مالك %2$s الخاص بـ %1$s؛ تحتفظ الملفات بالمالك المسجّل في النسخة الاحتياطية.</string>
+    <string name="restore_app_selinux_failed">تعذّرت إعادة ضبط تسميات الأمان لـ %2$s الخاص بـ %1$s؛ قد لا يتمكن التطبيق من قراءة تلك البيانات.</string>
+    <string name="restore_app_selinux_fallback">restorecon غير متاح؛ ضُبطت تسميات %2$s الخاص بـ %1$s من النسخة الاحتياطية مع إعادة حساب الفئات للـ uid الجديد.</string>
+    <string name="restore_app_special_dropped">لم تتم استعادة %2$d من عناصر الأجهزة أو الأنابيب الخاصة بـ %1$s.</string>
+
+    <!-- Permissions -->
+    <string name="restore_app_permissions_not_granted">تعذّر منح %2$d من أذونات %1$s: %3$s</string>
+    <string name="restore_app_permissions_need_privilege">لا يمكن إعادة منح أذونات %1$s في الوضع القياسي؛ امنحها من إعدادات النظام.</string>
+
+    <!-- Part names (used as %2$s above and as progress item names) -->
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">بيانات التطبيق</string>
+    <string name="restore_app_part_de">البيانات المحمية بالجهاز</string>
+    <string name="restore_app_part_cache">ذاكرة التخزين المؤقت</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s: %2$s</string>
+
+    <!-- Preflight -->
+    <string name="restore_app_preflight_root_for_data">لا تُستعاد البيانات الخاصة بالتطبيقات إلا في وضع Root.</string>
+</resources>

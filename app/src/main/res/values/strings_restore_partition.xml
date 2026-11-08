@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition restore (core/restore/partition) and TWRP/OrangeFox import (core/restore/twrp). -->
+<resources>
+
+    <!-- Environment and target resolution -->
+    <string name="partition_restore_root_required">Restoring partitions needs Root mode with superuser access granted.</string>
+    <string name="partition_restore_scan_failed">Could not read this device\'s partition layout (%1$s).</string>
+    <string name="partition_restore_not_partition_artifact">%1$s is not a partition image.</string>
+    <string name="partition_restore_slot_device_not_ab">%1$s was imaged from an A/B slot, but this device has no slots.</string>
+    <string name="partition_restore_slot_unknown">This device did not report its active slot, so the target slot for %1$s cannot be chosen.</string>
+    <string name="partition_restore_not_found">No partition named %1$s exists on this device.</string>
+    <string name="partition_restore_slot_missing">%1$s exists on this device, but not in the requested slot. Logical partitions of the inactive slot are only mapped during an update; restore it from recovery or fastbootd.</string>
+    <string name="partition_restore_slot_layout">%1$s was imaged from a partition without slots, but resolves to an A/B slot on this device.</string>
+    <string name="partition_restore_probe_failed">Could not inspect %1$s before writing, so nothing was written.</string>
+
+    <!-- Safety gates: %1$s = partition, %2$s = technical detail -->
+    <string name="partition_gate_device_mismatch">%1$s was imaged on another device (%2$s). Writing it here can stop this device from booting.</string>
+    <string name="partition_gate_build_mismatch">%1$s was imaged on a different software build (%2$s). Confirm to restore an image from another build.</string>
+    <string name="partition_gate_cross_slot">%1$s would be written to a different slot than the one it was imaged from. Confirm to cross slots.</string>
+    <string name="partition_gate_image_smaller">The image of %1$s is smaller than the partition (%2$s bytes). Confirm to leave the rest of the partition unchanged.</string>
+    <string name="partition_gate_critical_identity">%1$s holds device-unique identity or calibration data. Restoring the wrong copy can permanently break the radio, IMEI or DRM. Confirm to write it.</string>
+    <string name="partition_gate_image_larger">The image of %1$s is larger than the partition (%2$s bytes) and cannot be written.</string>
+    <string name="partition_gate_target_size_unknown">The exact size of %1$s could not be read, so the write is refused.</string>
+    <string name="partition_gate_not_block_device">%1$s (%2$s) is not a block device.</string>
+    <string name="partition_gate_live_system">%1$s is used by the running system. Restore it from recovery (TWRP / OrangeFox) or fastboot instead.</string>
+    <string name="partition_gate_mounted">%1$s is mounted (%2$s). Unmount it first, or restore it from recovery.</string>
+    <string name="partition_gate_swap">%1$s is in use as swap.</string>
+    <string name="partition_gate_held">%1$s is in use by %2$s (device-mapper). Restore it from recovery.</string>
+    <string name="partition_gate_snapshot">%1$s is a virtual A/B snapshot device and is never a restore target.</string>
+    <string name="partition_gate_read_only">%1$s is read-only.</string>
+    <string name="partition_gate_overridden">Confirmed override: %1$s</string>
+
+    <!-- Writing and verification -->
+    <string name="partition_restore_item_verifying_image">Checking image of %1$s</string>
+    <string name="partition_restore_item_writing">Writing %1$s</string>
+    <string name="partition_restore_item_reading_back">Verifying %1$s on the device</string>
+    <string name="partition_restore_image_digest_mismatch">The image of %1$s does not match its recorded checksum. Nothing was written.</string>
+    <string name="partition_restore_image_read_failed">Could not read the image of %1$s (%2$s). Nothing was written.</string>
+    <string name="partition_restore_no_reference_digest">No checksum was recorded for %1$s; it is verified against the image as read from the backup.</string>
+    <string name="partition_restore_refused_by_helper">The write to %1$s was refused before any data was written (%2$s).</string>
+    <string name="partition_restore_partial_write">Writing %1$s failed after %2$s bytes (%3$s). The partition is now partially written. Do not reboot until it has been restored correctly, for example from recovery or fastboot.</string>
+    <string name="partition_restore_source_changed">The image of %1$s changed while it was being written. The partition holds unverified data; restore it again before rebooting.</string>
+    <string name="partition_restore_readback_mismatch">Read-back of %1$s does not match the image (expected %2$s, read %3$s). The partition holds damaged data; restore it again before rebooting.</string>
+    <string name="partition_restore_readback_failed">%1$s was written but could not be read back for verification (%2$s).</string>
+
+    <!-- TWRP / OrangeFox import -->
+    <string name="twrp_folder_not_found">No TWRP backup was found at %1$s.</string>
+    <string name="twrp_encrypted_unsupported">%1$s is encrypted with a TWRP backup password. DFTB cannot decrypt TWRP-encrypted backups; restore it from TWRP.</string>
+    <string name="twrp_filesystem_restore_refused">%1$s is a file-based backup of /%2$s. It cannot be restored in place from running Android; restore it from recovery (TWRP / OrangeFox), or extract its files into a folder.</string>
+    <string name="twrp_split_image_unsupported">%1$s is a raw image split into several files, which TWRP never produces, so it is not restored.</string>
+    <string name="twrp_not_raw_image">%1$s is not a raw partition image.</string>
+    <string name="twrp_not_archive">%1$s is a raw partition image, not a file archive.</string>
+    <string name="twrp_unknown_format">%1$s is neither a tar archive nor a gzip-compressed tar archive and cannot be extracted.</string>
+    <string name="twrp_sidecar_mismatch">%1$s does not match its checksum file %2$s. Nothing was written.</string>
+    <string name="twrp_sidecar_missing">%1$s has no checksum file, so it can only be verified after writing.</string>
+    <string name="twrp_sidecar_unreadable">The checksum file %1$s could not be read.</string>
+    <string name="twrp_split_gap">The split archive %1$s is incomplete: part %2$s is missing.</string>
+    <string name="twrp_extract_skipped_links">%1$d links or special files in %2$s were not extracted (the folder cannot store them).</string>
+    <string name="twrp_extract_unsafe_entries">%1$d entries of %2$s with unsafe paths were skipped.</string>
+    <string name="twrp_extract_digest_mismatch">%1$s does not match its checksum file %2$s; the extracted files may be damaged.</string>
+    <string name="twrp_extract_failed">Extracting %1$s failed (%2$s).</string>
+    <string name="twrp_read_failed">Could not read %1$s (%2$s).</string>
+</resources>

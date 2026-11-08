@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Wizard chrome ===================== -->
+    <string name="onboarding_title">Bienvenue dans DFTB</string>
+    <string name="onboarding_step_counter">Étape %1$d sur %2$d</string>
+    <string name="onboarding_back">Retour</string>
+    <string name="onboarding_next">Suivant</string>
+    <string name="onboarding_finish">Terminer</string>
+    <string name="onboarding_finishing">Enregistrement de vos choix…</string>
+    <string name="onboarding_no_app_for_link">Aucune application de cet appareil ne peut ouvrir ce lien.</string>
+    <string name="onboarding_no_app_for_action">Aucun écran système n\'est disponible pour cette action sur cet appareil.</string>
+    <string name="onboarding_finish_requires_mode">Choisissez un mode de fonctionnement disponible sur cet appareil avant de terminer.</string>
+    <string name="onboarding_finish_error">Vos choix n\'ont pas pu être enregistrés. Veuillez réessayer.</string>
+
+    <!-- ===================== Step 1: language ===================== -->
+    <string name="onboarding_language_title">Choisissez votre langue</string>
+    <string name="onboarding_language_description">Toute l\'application bascule instantanément. Vous pourrez changer cela plus tard depuis la vue d\'ensemble du système ou les Paramètres.</string>
+    <string name="onboarding_language_suggested">Suggérée d\'après les paramètres de votre appareil : %1$s</string>
+    <string name="onboarding_language_use_suggested">Utiliser %1$s</string>
+
+    <!-- ===================== Step 2: overview ===================== -->
+    <string name="onboarding_overview_title">Ce que DFTB sait faire</string>
+    <string name="onboarding_overview_description">Une boîte à outils open-source de sauvegarde et de reprise après sinistre pour l\'appareil qui vous appartient. Tout ce qui suit est facultatif ; vous décidez de ce que vous protégez et de l\'endroit où cela va.</string>
+    <string name="onboarding_feature_partitions_title">Images de partitions</string>
+    <string name="onboarding_feature_partitions_desc">Images au niveau bloc des partitions boot, vendor_boot, dtbo, persist et autres, y compris le slot A/B actif ou inactif (modes root).</string>
+    <string name="onboarding_feature_apps_title">Applications</string>
+    <string name="onboarding_feature_apps_desc">APK et APK fractionnés, données internes, données externes, fichiers d\'extension OBB et caches, sélectionnés par application.</string>
+    <string name="onboarding_feature_files_title">Fichiers et catégories</string>
+    <string name="onboarding_feature_files_desc">N\'importe quel dossier, ainsi que des catégories intelligentes comme les photos, vidéos, documents et bases de données, affinées par des filtres de taille, de date et de motif.</string>
+    <string name="onboarding_feature_destinations_title">Destinations</string>
+    <string name="onboarding_feature_destinations_desc">Stockage local, clés USB OTG, serveurs FTP/FTPS, SFTP/SSH, SMB, WebDAV et NFS, et tout fournisseur cloud accessible via rclone.</string>
+    <string name="onboarding_feature_pipelines_title">Pipelines flexibles</string>
+    <string name="onboarding_feature_pipelines_desc">Conteneurs tar ou zip avec compression zstd, xz, gzip ou bzip2, chiffrement AES-256 avec masquage des noms de fichiers, manifestes de sommes de contrôle, et diffusion directe vers la destination.</string>
+    <string name="onboarding_feature_twrp_title">Sauvegardes compatibles recovery</string>
+    <string name="onboarding_feature_twrp_desc">Dispositions facultatives compatibles TWRP et OrangeFox pour qu\'une sauvegarde puisse aussi être restaurée depuis un recovery personnalisé.</string>
+    <string name="onboarding_feature_restore_title">Restauration en symétrie totale</string>
+    <string name="onboarding_feature_restore_desc">Tout ce que DFTB sauvegarde, il peut le restaurer : profils entiers, applications uniques, fichiers sélectionnés ou une image de partition, avec vérification d\'intégrité au préalable.</string>
+    <string name="onboarding_feature_scheduling_title">Planification, rétention et reprise</string>
+    <string name="onboarding_feature_scheduling_desc">Planifications quotidiennes, hebdomadaires ou par intervalle avec conditions de Wi‑Fi, de charge et de batterie ; élagage automatique des anciennes sauvegardes ; les tâches interrompues reprennent à leur dernier point de contrôle.</string>
+
+    <!-- ===================== Step 3: responsibility ===================== -->
+    <string name="onboarding_disclaimer_title">Votre responsabilité</string>
+    <string name="onboarding_disclaimer_description">DFTB vous donne un contrôle puissant et de bas niveau sur votre propre appareil. Veuillez lire ces points avant de continuer.</string>
+    <string name="onboarding_disclaimer_partitions">Écrire des partitions peut rendre un appareil non démarrable. Ne restaurez que des images de partitions que vous avez créées sur cet appareil et ce micrologiciel exacts.</string>
+    <string name="onboarding_disclaimer_verify">Vérifiez toujours les sauvegardes et conservez une seconde copie sur un support différent. Une sauvegarde que vous n\'avez jamais testée n\'est pas une sauvegarde.</string>
+    <string name="onboarding_disclaimer_passwords">Les mots de passe et clés de chiffrement ne peuvent pas être récupérés. Si vous les perdez, la sauvegarde chiffrée est perdue aussi.</string>
+    <string name="onboarding_disclaimer_elevation">Accorder l\'accès root ou Shizuku, et tout ce qui en est fait, relève de votre décision et de votre responsabilité. DFTB ne l\'utilise que pour les opérations que vous lancez ou planifiez.</string>
+    <string name="onboarding_disclaimer_cloud">Le stockage cloud et réseau est soumis aux conditions, à la disponibilité et aux tarifs du fournisseur. DFTB ne contrôle pas les services tiers.</string>
+    <string name="onboarding_disclaimer_warranty">DFTB est un logiciel libre et open-source fourni sans aucune garantie, selon les termes de sa licence open-source.</string>
+    <string name="onboarding_disclaimer_accept">Je comprends et j\'accepte</string>
+
+    <!-- ===================== Step 4: licenses ===================== -->
+    <string name="onboarding_licenses_title">Licences open-source et crédits</string>
+    <string name="onboarding_licenses_description">DFTB repose sur les épaules de ces projets. Touchez une entrée pour les détails ; les boutons Source et Licence ouvrent le projet dans votre navigateur.</string>
+    <string name="licenses_title">Licences open-source</string>
+    <string name="licenses_source">Source</string>
+    <string name="licenses_license">Licence</string>
+    <string name="licenses_website">Site web</string>
+    <string name="licenses_version">v%1$s</string>
+    <string name="licenses_expand">Afficher les détails</string>
+    <string name="licenses_collapse">Masquer les détails</string>
+
+    <!-- ===================== Step 5: operating mode ===================== -->
+    <string name="onboarding_mode_title">Mode de fonctionnement</string>
+    <string name="onboarding_mode_description">Choisissez comment DFTB peut accéder à votre appareil. Chaque choix est vérifié en direct ; vous pourrez changer de mode plus tard dans les Paramètres.</string>
+    <string name="onboarding_mode_select_hint">Sélectionnez un mode ci-dessus pour lancer les diagnostics.</string>
+    <string name="onboarding_mode_selected">Sélectionné</string>
+    <string name="onboarding_diagnostics_running">Vérification de %1$s… cela peut prendre quelques secondes si une invite superutilisateur est en attente.</string>
+    <string name="onboarding_diagnostics_failed">Les diagnostics n\'ont pas pu être menés à terme.</string>
+    <string name="onboarding_diagnostics_rerun">Relancer les vérifications</string>
+    <string name="onboarding_diagnostics_duration">%1$d vérifications en %2$d ms</string>
+    <string name="onboarding_readiness_ready_desc">Tout ce dont ce mode a besoin est en place.</string>
+    <string name="onboarding_readiness_degraded_desc">Ce mode fonctionne, mais certaines fonctionnalités facultatives sont limitées tant que les avertissements ci-dessous ne sont pas résolus.</string>
+    <string name="onboarding_readiness_unavailable_desc">Une vérification requise a échoué, ce mode ne peut donc pas encore être sélectionné. Corrigez les éléments ci-dessous et relancez, ou choisissez un autre mode.</string>
+    <string name="onboarding_shizuku_denied">L\'accès Shizuku n\'a pas été accordé. Démarrez le service Shizuku et autorisez DFTB lorsque vous y êtes invité.</string>
+    <string name="onboarding_module_dialog_title">Module compagnon</string>
+    <string name="onboarding_module_dialog_text">Le module compagnon DFTB est construit sur cet appareil depuis l\'application elle-même et flashé via votre gestionnaire root. Terminez d\'abord la configuration ; l\'installateur du module sera disponible ensuite depuis les Paramètres. En attendant, le mode root avancé signale le module comme manquant.</string>
+    <string name="onboarding_module_dialog_ok">Compris</string>
+
+    <!-- ===================== Step 6: baseline ===================== -->
+    <string name="onboarding_baseline_title">Configuration de base</string>
+    <string name="onboarding_baseline_description">Valeurs par défaut pour chaque nouveau profil de sauvegarde. Chaque profil peut les remplacer.</string>
+    <string name="onboarding_destination_title">Destination par défaut</string>
+    <string name="onboarding_destination_choose_folder">Choisir un dossier</string>
+    <string name="onboarding_destination_app_storage">Stockage de l\'application</string>
+    <string name="onboarding_destination_decide_later">Décider plus tard</string>
+    <string name="onboarding_destination_none">Aucune destination par défaut. Vous en choisirez une lors de la création d\'un profil.</string>
+    <string name="onboarding_destination_current">Destination par défaut : %1$s (%2$s)</string>
+    <string name="onboarding_destination_app_storage_name">Stockage de l\'application (sauvegardes)</string>
+    <string name="onboarding_destination_folder_fallback_name">Dossier sélectionné</string>
+    <string name="onboarding_destination_error">Le dossier n\'a pas pu être enregistré comme destination. Veuillez le choisir à nouveau.</string>
+    <string name="onboarding_destination_app_storage_hint">Le stockage de l\'application se trouve sous Android/data et est supprimé lorsque DFTB est désinstallé. Un dossier de votre choix ou une destination réseau est plus sûr.</string>
+    <string name="onboarding_format_title">Format d\'archive par défaut</string>
+    <string name="onboarding_compression_title">Niveau de compression</string>
+    <string name="onboarding_compression_value">Niveau %1$d · %2$s</string>
+    <string name="onboarding_checksum_title">Algorithme de somme de contrôle</string>
+    <string name="onboarding_notifications_title">Notifications</string>
+    <string name="onboarding_notifications_desc">Nécessaires pour afficher la progression en direct et signaler les tâches terminées ou échouées lorsque DFTB est en arrière-plan.</string>
+    <string name="onboarding_notifications_granted">Les notifications sont activées.</string>
+    <string name="onboarding_notifications_request">Activer les notifications</string>
+    <string name="onboarding_battery_title">Optimisation de la batterie</string>
+    <string name="onboarding_battery_desc">Facultatif. Exempter DFTB de l\'optimisation de la batterie maintient en vie les sauvegardes longues ou planifiées pendant que l\'écran est éteint.</string>
+    <string name="onboarding_battery_granted">DFTB est exempté de l\'optimisation de la batterie.</string>
+    <string name="onboarding_battery_request">Demander l\'exemption</string>
+
+    <!-- ===================== Compression level labels ===================== -->
+    <string name="compression_level_store">Stocker</string>
+    <string name="compression_level_fast">Rapide</string>
+    <string name="compression_level_balanced">Équilibré</string>
+    <string name="compression_level_maximum">Maximum</string>
+    <string name="compression_level_ultra">Ultra</string>
+
+    <!-- ===================== ArchiveFormat ===================== -->
+    <string name="format_tar">tar (non compressé)</string>
+    <string name="format_tar_gz">tar + gzip</string>
+    <string name="format_tar_xz">tar + xz</string>
+    <string name="format_tar_zst">tar + zstd</string>
+    <string name="format_tar_bz2">tar + bzip2</string>
+    <string name="format_zip">zip</string>
+    <string name="format_7z">7z</string>
+    <string name="format_raw_copy">Copie brute</string>
+    <string name="format_dd_image">Image de partition</string>
+
+    <!-- ===================== ChecksumAlgorithm ===================== -->
+    <string name="checksum_md5">MD5</string>
+    <string name="checksum_sha1">SHA-1</string>
+    <string name="checksum_sha256">SHA-256</string>
+    <string name="checksum_sha512">SHA-512</string>
+    <string name="checksum_blake3">BLAKE3</string>
+
+    <!-- ===================== CompressionCodec ===================== -->
+    <string name="codec_none">Aucune</string>
+    <string name="codec_gzip">gzip</string>
+    <string name="codec_xz">xz</string>
+    <string name="codec_zstd">zstd</string>
+    <string name="codec_bzip2">bzip2</string>
+
+    <!-- ===================== EncryptionMode ===================== -->
+    <string name="encryption_none">Aucun</string>
+    <string name="encryption_aes_256_gcm">AES-256-GCM</string>
+    <string name="encryption_zip_aes">ZIP AES</string>
+    <string name="encryption_openssl">OpenSSL (AES-256-CBC)</string>
+    <string name="encryption_gpg">OpenPGP (GPG)</string>
+
+    <!-- ===================== StructureMode ===================== -->
+    <string name="structure_preserve_hierarchy">Préserver la hiérarchie des dossiers</string>
+    <string name="structure_categorized">Trier par catégories</string>
+
+    <!-- ===================== TransferMode ===================== -->
+    <string name="transfer_local_staging">Construire localement, puis téléverser</string>
+    <string name="transfer_direct_stream">Diffuser directement vers la destination</string>
+    <string name="transfer_remote_compress">Compresser sur l\'hôte distant</string>
+
+    <!-- ===================== DestinationType ===================== -->
+    <string name="destination_type_local_internal">Stockage de l\'application</string>
+    <string name="destination_type_local_saf">Dossier</string>
+    <string name="destination_type_usb_otg">Clé USB OTG</string>
+    <string name="destination_type_ftp">FTP</string>
+    <string name="destination_type_ftps">FTPS</string>
+    <string name="destination_type_sftp">SFTP</string>
+    <string name="destination_type_ssh">SSH</string>
+    <string name="destination_type_smb">Partage SMB</string>
+    <string name="destination_type_webdav">WebDAV</string>
+    <string name="destination_type_nfs">NFS</string>
+    <string name="destination_type_rclone">Distant rclone</string>
+    <string name="destination_type_s3">Compatible S3</string>
+    <string name="destination_type_mega">MEGA</string>
+    <string name="destination_type_pcloud">pCloud</string>
+
+    <!-- ===================== Readiness ===================== -->
+    <string name="readiness_ready">Prêt</string>
+    <string name="readiness_degraded">Prêt avec avertissements</string>
+    <string name="readiness_unavailable">Non disponible</string>
+
+</resources>

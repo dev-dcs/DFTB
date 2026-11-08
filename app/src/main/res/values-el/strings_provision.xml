@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">Απομακρυσμένος συγχρονισμός</string>
+    <string name="provision_feature_archiving">Αρχειοθέτηση</string>
+    <string name="provision_feature_compression">Συμπίεση</string>
+    <string name="provision_feature_encryption">Κρυπτογράφηση</string>
+    <string name="provision_feature_core_utilities">Βασικά βοηθητικά προγράμματα</string>
+    <string name="provision_feature_integrity">Ακεραιότητα</string>
+    <string name="provision_tool_rclone_purpose">Συγχρονίζει αντίγραφα ασφαλείας από και προς απομακρυσμένους χώρους cloud και δικτύου, όπως S3, WebDAV και SFTP.</string>
+    <string name="provision_tool_busybox_purpose">Παρέχει τα βασικά βοηθητικά προγράμματα POSIX με συνεπείς επιλογές σε όλες τις συσκευές.</string>
+    <string name="provision_tool_zstd_purpose">Γρήγορη συμπίεση και αποσυμπίεση Zstandard για αρχεία.</string>
+    <string name="provision_tool_xz_purpose">Συμπίεση XZ/LZMA υψηλού λόγου για αρχεία.</string>
+    <string name="provision_tool_pigz_purpose">Παράλληλη συμπίεση gzip που αξιοποιεί πολλούς πυρήνες CPU.</string>
+    <string name="provision_tool_openssl_purpose">Κρυπτογραφεί και αποκρυπτογραφεί τα αρχεία αντιγράφων ασφαλείας με συμμετρική κρυπτογράφηση.</string>
+    <string name="provision_tool_tar_purpose">Γράφει και διαβάζει αρχεία σε αρχεία POSIX tar με ροή, διατηρώντας τα μεταδεδομένα.</string>
+    <string name="provision_tool_dftbtool_purpose">Ενσωματωμένο βοηθητικό που υπολογίζει κατακερματισμούς και αντιγράφει αρχεία, αποδεικνύοντας ότι η διαδικασία εξαγωγής και εκτέλεσης λειτουργεί σε αυτή τη συσκευή.</string>
+    <string name="provision_tool_nsenter_purpose">Εισέρχεται στους χώρους ονομάτων προσάρτησης, PID και άλλους του κεντρικού συστήματος, ώστε τα αντίγραφα ασφαλείας να βλέπουν τις πραγματικές προσαρτήσεις του συστήματος υπό root.</string>
+</resources>

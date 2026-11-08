@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ======================= Hardware features (all optional) ======================= -->
+    <uses-feature android:name="android.hardware.usb.host" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <!-- ======================= Network & destinations ======================= -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- mDNS / NSD discovery of LAN shares (SMB, SFTP, WebDAV hosts). -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <!-- ======================= Storage (API 29 → 37) ======================= -->
+    <!-- Android 10–12: legacy storage permissions. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
+    <!-- Android 11+: a backup utility is exactly the category "All files access" exists for. -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <!-- Android 13+: granular media access for SAF-less media backups in Standard mode. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- Android 14+: partial photo/video access selection. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <!-- Preserve EXIF GPS when copying photos 1:1. -->
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+
+    <!-- ======================= Apps (backup / restore) ======================= -->
+    <!-- Enumerating every installed package is the core purpose of an app-backup tool. -->
+    <uses-permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+    <!-- Restoring APKs / split APKs through PackageInstaller in Standard mode. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Reading per-app data-usage/sizes for estimates (Standard mode, user grants in Settings). -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- ======================= Background execution ======================= -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Android 14+: a typed foreground service is mandatory. Backups are data transfers. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- Android 13+: runtime notification permission. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Long-running backups over slow uplinks must not be killed by Doze. User-prompted. -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- ======================= Shizuku (Tier 2) ======================= -->
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+
+    <!-- ======================= Package visibility (API 30+) ======================= -->
+    <queries>
+        <!-- Shizuku manager / Sui -->
+        <package android:name="moe.shizuku.privileged.api" />
+        <!-- Root managers: diagnostics report which one is installed. -->
+        <package android:name="com.topjohnwu.magisk" />
+        <package android:name="me.weishu.kernelsu" />
+        <package android:name="me.bmax.apatch" />
+        <!-- Needed for `pm install` fallbacks and share targets. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".DftbApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:localeConfig="@xml/locales_config"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DFTB"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="37">
+
+        <!-- WorkManager: default initializer removed; DftbApplication provides a Hilt-aware
+             Configuration (HiltWorkerFactory) via Configuration.Provider. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <!-- AppCompat per-app language persistence for API < 33 (API 33+ uses the framework). -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+
+        <!-- Shizuku binder provider (Tier 2). -->
+        <provider
+            android:name="rikka.shizuku.ShizukuProvider"
+            android:authorities="${applicationId}.shizuku"
+            android:enabled="true"
+            android:exported="true"
+            android:multiprocess="false"
+            android:permission="android.permission.INTERACT_ACROSS_USERS_FULL" />
+
+        <!-- Shares backup archives / module zips with other apps without exposing raw paths. -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Foreground service that owns the live job notification for backups and restores. -->
+        <service
+            android:name=".service.DftbForegroundService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:stopWithTask="false" />
+
+        <!--
+            No <service> entry for libsu's RootFileService: a libsu RootService is not an Android
+            Service (it extends ContextWrapper) and is launched by libsu via app_process from its
+            class name, so declaring it is both unnecessary and rejected by lint.
+        -->
+
+        <!--
+            Reboot-resume journal trigger. Direct-boot awareness is intentionally NOT enabled yet:
+            making this receiver direct-boot aware would force DftbApplication.onCreate to run during
+            locked boot, where DataStore/Room access against credential-encrypted storage would crash
+            the process. The receiver already lists LOCKED_BOOT_COMPLETED in HANDLED_ACTIONS and
+            defers while the user is locked, so the extra action + directBootAware can be enabled with
+            no code change once DftbApplication is made direct-boot safe.
+        -->
+        <receiver
+            android:name=".core.boot.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+            Companion-module resume trigger. Not exported: its only sender is the module's service.sh,
+            whose `am broadcast -n` runs as uid 0, and ActivityManager lets root reach non-exported
+            components. Keeping it private stops other apps from triggering resume reconciliation.
+        -->
+        <receiver
+            android:name=".companion.BootResumeTrigger"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="ca.devdcs.backup.action.RESUME_JOBS" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+            configChanges includes locale|layoutDirection so a language switch is delivered as
+            onConfigurationChanged instead of an Activity recreation. Compose re-reads
+            LocalConfiguration and the locale wrapper (ProvideAppLocale) swaps resources live.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="locale|layoutDirection|orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|uiMode|density|fontScale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.DFTB.Splash"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <!-- USB OTG mass-storage attached: offer it as a destination. -->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/usb_device_filter" />
+        </activity>
+        <!-- WorkManager runs scheduled backups as a dataSync foreground service. -->
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="dataSync"
+            tools:node="merge" />
+
+        <!-- Re-aligns backup schedules after an app update or a clock / time-zone change. -->
+        <receiver
+            android:name=".core.schedule.ScheduleRearmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

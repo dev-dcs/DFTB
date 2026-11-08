@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="crypto_reason_wrong_key">Phrase secrète ou clé incorrecte. Impossible de déverrouiller la sauvegarde.</string>
+    <string name="crypto_reason_key_type_mismatch">Cette sauvegarde a été chiffrée avec un autre type de clé (phrase secrète ou clé enregistrée).</string>
+    <string name="crypto_reason_tampered">La sauvegarde chiffrée est endommagée ou a été modifiée.</string>
+    <string name="crypto_reason_truncated">La sauvegarde chiffrée est incomplète ; sa fin est manquante.</string>
+    <string name="crypto_reason_trailing_data">La sauvegarde chiffrée contient des données supplémentaires inattendues à la fin.</string>
+    <string name="crypto_reason_bad_header">Ce fichier n\'est pas une sauvegarde chiffrée DFTB, ou son en-tête est endommagé.</string>
+    <string name="crypto_reason_insufficient_memory">Cet appareil n\'a pas assez de mémoire pour déverrouiller cette sauvegarde.</string>
+    <string name="crypto_reason_unsupported_version">Cette sauvegarde a été chiffrée par une version plus récente de l\'application.</string>
+    <string name="crypto_key_not_found">La clé de chiffrement enregistrée pour cette sauvegarde n\'est pas sur cet appareil.</string>
+    <string name="crypto_key_invalid_entry">La clé de chiffrement enregistrée est endommagée ou n\'est pas une clé de chiffrement.</string>
+    <string name="crypto_key_vault_error">Impossible de lire le coffre sécurisé de clés.</string>
+    <string name="checksum_verified">Somme de contrôle vérifiée (%1$s).</string>
+    <string name="checksum_mismatch">Somme de contrôle différente (%1$s). Le fichier diffère de ce qui a été sauvegardé.</string>
+    <string name="checksum_sidecar_missing">Aucun fichier de somme de contrôle trouvé pour cette sauvegarde.</string>
+    <string name="checksum_sidecar_malformed">Impossible de lire le fichier de somme de contrôle.</string>
+
+</resources>

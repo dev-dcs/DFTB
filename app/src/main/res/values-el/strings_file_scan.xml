@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="file_scan_problem_include_regex">Το μοτίβο συμπερίληψης δεν είναι έγκυρη κανονική έκφραση: %1$s</string>
+    <string name="file_scan_problem_exclude_regex">Το μοτίβο εξαίρεσης δεν είναι έγκυρη κανονική έκφραση: %1$s</string>
+    <string name="file_scan_problem_negative_min">Το ελάχιστο μέγεθος δεν μπορεί να είναι αρνητικό.</string>
+    <string name="file_scan_problem_negative_max">Το μέγιστο μέγεθος δεν μπορεί να είναι αρνητικό.</string>
+    <string name="file_scan_problem_size_inverted">Το ελάχιστο μέγεθος είναι μεγαλύτερο από το μέγιστο.</string>
+    <string name="file_scan_problem_date_empty">Η ημερομηνία «τροποποιήθηκε μετά» πρέπει να είναι προγενέστερη της «τροποποιήθηκε πριν».</string>
+    <string name="file_scan_problem_extension_conflict">Αυτές οι επεκτάσεις είναι ταυτόχρονα συμπεριλαμβανόμενες και εξαιρούμενες: %1$s</string>
+    <string name="file_scan_block_all_files">Αυτός ο φάκελος απαιτεί «Πρόσβαση σε όλα τα αρχεία» ή λειτουργία Shizuku/Root.</string>
+    <string name="file_scan_block_media_permission">Επιτρέψτε την πρόσβαση σε φωτογραφίες, βίντεο ή ήχο για να σαρωθεί αυτός ο φάκελος.</string>
+    <string name="file_scan_block_non_media">Τα έγγραφα και άλλα αρχεία που δεν είναι πολυμέσα απαιτούν «Πρόσβαση σε όλα τα αρχεία» ή λειτουργία Shizuku/Root.</string>
+    <string name="file_scan_block_app_sandbox">Οι φάκελοι Android/data και Android/obb άλλων εφαρμογών διαβάζονται μόνο σε λειτουργία Shizuku ή Root.</string>
+    <string name="file_scan_block_root">Αυτή η τοποθεσία διαβάζεται μόνο σε λειτουργία Root.</string>
+    <string name="file_scan_block_not_readable">Αυτή η τοποθεσία δεν είναι αναγνώσιμη από την εφαρμογή. Δοκιμάστε λειτουργία Shizuku ή Root.</string>
+    <string name="file_scan_block_saf">Χάθηκε η πρόσβαση σε αυτόν τον φάκελο. Επιλέξτε τον ξανά.</string>
+    <string name="file_scan_root_not_found">Ο φάκελος δεν υπάρχει.</string>
+    <string name="file_scan_root_not_readable">Δεν ήταν δυνατή η ανάγνωση του φακέλου.</string>
+    <string name="file_scan_root_not_directory">Η τοποθεσία δεν είναι φάκελος.</string>
+    <string name="file_scan_root_tool_failed">Το εργαλείο σάρωσης απέτυχε στην τρέχουσα λειτουργία.</string>
+    <string name="file_scan_warning_partial_media">Ορατές είναι μόνο οι φωτογραφίες και τα βίντεο που επιλέξατε. Επιτρέψτε πλήρη πρόσβαση για να συμπεριληφθούν όλα.</string>
+    <string name="file_scan_warning_find_exit">Η σάρωση με δικαιώματα τερματίστηκε με σφάλμα· τα αποτελέσματα μπορεί να είναι ελλιπή.</string>
+    <string name="file_scan_warning_unparseable">Ορισμένα ονόματα αρχείων δεν ήταν δυνατό να διαβαστούν από την έξοδο της σάρωσης (για παράδειγμα ονόματα με αλλαγές γραμμής).</string>
+    <string name="file_scan_warning_find_unsupported">Το shell της συσκευής δεν διαθέτει χρησιμοποιήσιμη εντολή \"find\".</string>
+    <string name="file_scan_req_all_files">Χορήγηση «Πρόσβαση σε όλα τα αρχεία»</string>
+    <string name="file_scan_req_permission">Χορήγηση άδειας πολυμέσων</string>
+    <string name="file_scan_req_shizuku">Μετάβαση σε λειτουργία Shizuku ή Root</string>
+    <string name="file_scan_req_root">Μετάβαση σε λειτουργία Root</string>
+    <string name="file_scan_req_saf">Επιλογή ξανά του φακέλου</string>
+    <string name="file_scan_walker_nio">Άμεση πρόσβαση σε αρχεία</string>
+    <string name="file_scan_walker_saf">Storage Access Framework</string>
+    <string name="file_scan_walker_find">Shell με δικαιώματα (find)</string>
+    <string name="file_scan_walker_media_store">Βιβλιοθήκη πολυμέσων</string>
+
+</resources>

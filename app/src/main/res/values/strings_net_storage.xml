@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FTP/FTPS and WebDAV destination settings (core/storage/ftp, core/storage/webdav).
+     Labels for the protocol-specific DestinationConfig.options keys. -->
+<resources>
+
+    <!-- FTPS mode (option "ftps_mode") -->
+    <string name="net_storage_ftps_mode_label">FTPS mode</string>
+    <string name="net_storage_ftps_mode_explicit">Explicit (AUTH TLS, usually port 21)</string>
+    <string name="net_storage_ftps_mode_implicit">Implicit (TLS from connect, usually port 990)</string>
+
+    <!-- WebDAV scheme (option "scheme") -->
+    <string name="net_storage_webdav_scheme_label">Protocol</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS (encrypted)</string>
+    <string name="net_storage_webdav_scheme_http">HTTP (unencrypted)</string>
+    <string name="net_storage_webdav_host_hint">Server name, or a full URL such as https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">Your password will be sent without encryption. Use HTTPS unless this server is on a network you fully trust.</string>
+    <string name="net_storage_webdav_auth_note">Sign in with a username and password (HTTP Basic) or an app token. Digest authentication is not supported.</string>
+
+    <!-- Timeouts (options "connect_timeout_s", "data_timeout_s", "io_timeout_s") -->
+    <string name="net_storage_connect_timeout_label">Connection timeout (seconds)</string>
+    <string name="net_storage_io_timeout_label">Transfer timeout (seconds)</string>
+
+    <!-- Certificate pinning (option "tls_pin_sha256") -->
+    <string name="net_storage_tls_pin_label">Trusted certificate fingerprint (SHA-256)</string>
+    <string name="net_storage_tls_pin_hint">Optional. Paste the server certificate\'s SHA-256 fingerprint to trust a self-signed certificate.</string>
+    <string name="net_storage_tls_pin_invalid">The fingerprint must be 64 hexadecimal characters.</string>
+
+    <!-- FTPS data-channel hint -->
+    <string name="net_storage_ftps_session_reuse_hint">The server rejected the encrypted data connection. If it requires TLS session reuse (for example vsftpd require_ssl_reuse), turn that option off on the server.</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for installed-app discovery (app picker, size estimates, component
+  availability). Kept in their own file per project convention. English base.
+-->
+<resources>
+    <!-- App kinds -->
+    <string name="apps_kind_user">用户应用</string>
+    <string name="apps_kind_system">系统应用</string>
+    <string name="apps_kind_updated_system">已更新的系统应用</string>
+
+    <!-- Size sources -->
+    <string name="apps_size_source_stats">大小来自 Android 存储统计</string>
+    <string name="apps_size_source_du">大小为磁盘实测值</string>
+    <string name="apps_size_source_apk_only">仅知道 APK 大小</string>
+
+    <!-- Component availability -->
+    <string name="apps_avail_available">可用</string>
+    <string name="apps_avail_needs_root">需要 Root 模式</string>
+    <string name="apps_avail_shizuku_adb_private">Shizuku 通过 ADB 运行，无法读取应用私有数据。请使用 Root 模式，或以 root 启动 Shizuku。</string>
+    <string name="apps_avail_needs_shizuku_or_root">Android 11 及更高版本需要 Shizuku 或 Root 模式</string>
+    <string name="apps_avail_needs_legacy_storage">需要存储权限及旧版存储访问</string>
+    <string name="apps_avail_needs_install_all_files">DFTB 需要“安装未知应用”和“所有文件访问权限”，或使用 Shizuku 或 Root 模式</string>
+    <string name="apps_avail_elevation_unavailable">所选的 Shizuku 或 Root 模式当前不可用</string>
+
+    <!-- Scan warnings -->
+    <string name="apps_warn_limited_visibility">DFTB 无法看到此设备上的所有已安装应用；列表可能不完整。</string>
+    <string name="apps_warn_usage_access">未授予使用情况访问权限，因此只显示 APK 大小。请在设置中授予以查看数据大小。</string>
+    <string name="apps_warn_list_failed">无法读取已安装应用列表。</string>
+    <string name="apps_warn_package_failed">无法读取 %1$s 的详细信息。</string>
+    <string name="apps_warn_stats_failed">无法读取 %1$s 的存储统计。</string>
+    <string name="apps_warn_shell_unavailable">Shizuku 或 Root shell 不可用；大小将回退为 Android 报告的值。</string>
+    <string name="apps_warn_shell_failed">通过 shell 测量应用数据失败。</string>
+    <string name="apps_warn_data_unreadable">无法读取 %1$s 的部分数据文件夹。</string>
+
+    <!-- Special handling -->
+    <string name="apps_flag_split">拆分 APK</string>
+    <string name="apps_flag_obb">包含 OBB 文件</string>
+    <string name="apps_flag_self">这就是 DFTB</string>
+    <string name="apps_flag_root_manager">Root 管理器：恢复其数据可能破坏 root</string>
+    <string name="apps_flag_critical_system">核心系统包：恢复其数据可能导致设备不稳定</string>
+    <string name="apps_flag_no_allow_backup">开发者已选择不允许备份</string>
+    <string name="apps_flag_debuggable">可调试版本</string>
+    <string name="apps_flag_apex">系统模块（APEX）</string>
+</resources>

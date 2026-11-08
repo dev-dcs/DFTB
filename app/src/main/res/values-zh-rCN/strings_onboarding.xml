@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Wizard chrome ===================== -->
+    <string name="onboarding_title">欢迎使用 DFTB</string>
+    <string name="onboarding_step_counter">第 %1$d 步，共 %2$d 步</string>
+    <string name="onboarding_back">上一步</string>
+    <string name="onboarding_next">下一步</string>
+    <string name="onboarding_finish">完成</string>
+    <string name="onboarding_finishing">正在保存你的选择…</string>
+    <string name="onboarding_no_app_for_link">此设备上没有可打开该链接的应用。</string>
+    <string name="onboarding_no_app_for_action">此设备上没有可用于该操作的系统界面。</string>
+    <string name="onboarding_finish_requires_mode">请在完成前选择一个此设备上可用的运行模式。</string>
+    <string name="onboarding_finish_error">无法保存你的选择，请重试。</string>
+
+    <!-- ===================== Step 1: language ===================== -->
+    <string name="onboarding_language_title">选择你的语言</string>
+    <string name="onboarding_language_description">整个应用会立即切换。之后你可以在系统概览或设置中更改。</string>
+    <string name="onboarding_language_suggested">根据你的设备设置建议：%1$s</string>
+    <string name="onboarding_language_use_suggested">使用 %1$s</string>
+
+    <!-- ===================== Step 2: overview ===================== -->
+    <string name="onboarding_overview_title">DFTB 能做什么</string>
+    <string name="onboarding_overview_description">一套面向你所拥有设备的开源备份与灾难恢复工具包。以下所有功能均为可选；由你决定保护什么以及备份到哪里。</string>
+    <string name="onboarding_feature_partitions_title">分区镜像</string>
+    <string name="onboarding_feature_partitions_desc">对 boot、vendor_boot、dtbo、persist 及其他分区进行块级镜像，包括活动或非活动的 A/B 槽位（root 模式）。</string>
+    <string name="onboarding_feature_apps_title">应用</string>
+    <string name="onboarding_feature_apps_desc">APK 与分包 APK、内部数据、外部数据、OBB 扩展文件和缓存，可按应用逐一选择。</string>
+    <string name="onboarding_feature_files_title">文件与类别</string>
+    <string name="onboarding_feature_files_desc">任意文件夹，以及照片、视频、文档、数据库等智能类别，可按大小、日期和模式进行筛选。</string>
+    <string name="onboarding_feature_destinations_title">目标位置</string>
+    <string name="onboarding_feature_destinations_desc">本地存储、USB OTG 驱动器、FTP/FTPS、SFTP/SSH、SMB、WebDAV 和 NFS 服务器，以及任何可通过 rclone 访问的云服务提供商。</string>
+    <string name="onboarding_feature_pipelines_title">灵活的处理流程</string>
+    <string name="onboarding_feature_pipelines_desc">tar 或 zip 容器，支持 zstd、xz、gzip 或 bzip2 压缩，支持带文件名遮蔽的 AES-256 加密、校验和清单，以及直接流式传输到目标位置。</string>
+    <string name="onboarding_feature_twrp_title">兼容 Recovery 的备份</string>
+    <string name="onboarding_feature_twrp_desc">可选的 TWRP 和 OrangeFox 兼容布局，使备份也能从第三方 Recovery 中还原。</string>
+    <string name="onboarding_feature_restore_title">完全对称还原</string>
+    <string name="onboarding_feature_restore_desc">DFTB 备份的一切都能还原：整个配置、单个应用、选定文件或某个分区镜像，并会先进行完整性校验。</string>
+    <string name="onboarding_feature_scheduling_title">定时、保留与续传</string>
+    <string name="onboarding_feature_scheduling_desc">每日、每周或按间隔的定时任务，可设置 Wi‑Fi、充电和电量条件；自动清理旧备份；中断的任务可从上次检查点续传。</string>
+
+    <!-- ===================== Step 3: responsibility ===================== -->
+    <string name="onboarding_disclaimer_title">你的责任</string>
+    <string name="onboarding_disclaimer_description">DFTB 让你对自己的设备拥有强大的底层控制能力。请在继续前阅读以下要点。</string>
+    <string name="onboarding_disclaimer_partitions">写入分区可能导致设备无法启动。只还原你在此设备和固件上创建的分区镜像。</string>
+    <string name="onboarding_disclaimer_verify">务必校验备份并在不同介质上保留第二份副本。从未测试过的备份不算备份。</string>
+    <string name="onboarding_disclaimer_passwords">加密密码和密钥无法找回。一旦丢失，加密备份也将随之丢失。</string>
+    <string name="onboarding_disclaimer_elevation">授予 root 或 Shizuku 访问权限，以及由此进行的一切操作，均由你决定并由你负责。DFTB 仅将其用于你启动或定时的操作。</string>
+    <string name="onboarding_disclaimer_cloud">云端和网络存储受服务提供商的条款、可用性和价格约束。DFTB 无法控制第三方服务。</string>
+    <string name="onboarding_disclaimer_warranty">DFTB 是免费的开源软件，依据其开源许可证的条款提供，不附带任何担保。</string>
+    <string name="onboarding_disclaimer_accept">我已理解并接受</string>
+
+    <!-- ===================== Step 4: licenses ===================== -->
+    <string name="onboarding_licenses_title">开源许可证与致谢</string>
+    <string name="onboarding_licenses_description">DFTB 站在这些项目的肩膀上。点按条目查看详情；"源代码"和"许可证"按钮会在浏览器中打开对应项目。</string>
+    <string name="licenses_title">开源许可证</string>
+    <string name="licenses_source">源代码</string>
+    <string name="licenses_license">许可证</string>
+    <string name="licenses_website">网站</string>
+    <string name="licenses_version">v%1$s</string>
+    <string name="licenses_expand">显示详情</string>
+    <string name="licenses_collapse">隐藏详情</string>
+
+    <!-- ===================== Step 5: operating mode ===================== -->
+    <string name="onboarding_mode_title">运行模式</string>
+    <string name="onboarding_mode_description">选择 DFTB 访问你设备的方式。每个选项都会实时检测；之后你可以在设置中切换模式。</string>
+    <string name="onboarding_mode_select_hint">在上方选择一个模式以运行诊断。</string>
+    <string name="onboarding_mode_selected">已选择</string>
+    <string name="onboarding_diagnostics_running">正在检查 %1$s… 如果正在等待超级用户授权提示，这可能需要几秒钟。</string>
+    <string name="onboarding_diagnostics_failed">无法完成诊断。</string>
+    <string name="onboarding_diagnostics_rerun">重新检查</string>
+    <string name="onboarding_diagnostics_duration">%2$d 毫秒内完成 %1$d 项检查</string>
+    <string name="onboarding_readiness_ready_desc">此模式所需的一切均已就绪。</string>
+    <string name="onboarding_readiness_degraded_desc">此模式可用，但在解决下方警告之前，部分可选功能会受限。</string>
+    <string name="onboarding_readiness_unavailable_desc">某项必需检查未通过，因此暂时无法选择此模式。请修复下方项目并重新检查，或选择其他模式。</string>
+    <string name="onboarding_shizuku_denied">未授予 Shizuku 访问权限。请启动 Shizuku 服务，并在提示时允许 DFTB。</string>
+    <string name="onboarding_module_dialog_title">伴随模块</string>
+    <string name="onboarding_module_dialog_text">DFTB 伴随模块由应用自身在此设备上构建，并通过你的 root 管理器刷入。请先完成设置；之后可在设置中使用模块安装程序。在此之前，高级 root 模式会报告模块缺失。</string>
+    <string name="onboarding_module_dialog_ok">知道了</string>
+
+    <!-- ===================== Step 6: baseline ===================== -->
+    <string name="onboarding_baseline_title">基础配置</string>
+    <string name="onboarding_baseline_description">每个新备份配置的默认值。每个配置都可以覆盖这些设置。</string>
+    <string name="onboarding_destination_title">默认目标位置</string>
+    <string name="onboarding_destination_choose_folder">选择文件夹</string>
+    <string name="onboarding_destination_app_storage">应用存储</string>
+    <string name="onboarding_destination_decide_later">稍后决定</string>
+    <string name="onboarding_destination_none">无默认目标位置。你将在创建配置时选择一个。</string>
+    <string name="onboarding_destination_current">默认目标位置：%1$s（%2$s）</string>
+    <string name="onboarding_destination_app_storage_name">应用存储（备份）</string>
+    <string name="onboarding_destination_folder_fallback_name">所选文件夹</string>
+    <string name="onboarding_destination_error">无法将该文件夹保存为目标位置。请重新选择。</string>
+    <string name="onboarding_destination_app_storage_hint">应用存储位于 Android/data 下，卸载 DFTB 时会被删除。选择你自己的文件夹或网络目标位置更安全。</string>
+    <string name="onboarding_format_title">默认归档格式</string>
+    <string name="onboarding_compression_title">压缩级别</string>
+    <string name="onboarding_compression_value">级别 %1$d · %2$s</string>
+    <string name="onboarding_checksum_title">校验和算法</string>
+    <string name="onboarding_notifications_title">通知</string>
+    <string name="onboarding_notifications_desc">用于在 DFTB 处于后台时显示实时进度，并报告已完成或失败的任务。</string>
+    <string name="onboarding_notifications_granted">通知已启用。</string>
+    <string name="onboarding_notifications_request">启用通知</string>
+    <string name="onboarding_battery_title">电池优化</string>
+    <string name="onboarding_battery_desc">可选。将 DFTB 从电池优化中排除，可在息屏时保持长时间或定时备份继续运行。</string>
+    <string name="onboarding_battery_granted">DFTB 已从电池优化中排除。</string>
+    <string name="onboarding_battery_request">请求排除</string>
+
+    <!-- ===================== Compression level labels ===================== -->
+    <string name="compression_level_store">存储</string>
+    <string name="compression_level_fast">快速</string>
+    <string name="compression_level_balanced">均衡</string>
+    <string name="compression_level_maximum">最高</string>
+    <string name="compression_level_ultra">极致</string>
+
+    <!-- ===================== ArchiveFormat ===================== -->
+    <string name="format_tar">tar（未压缩）</string>
+    <string name="format_tar_gz">tar + gzip</string>
+    <string name="format_tar_xz">tar + xz</string>
+    <string name="format_tar_zst">tar + zstd</string>
+    <string name="format_tar_bz2">tar + bzip2</string>
+    <string name="format_zip">zip</string>
+    <string name="format_7z">7z</string>
+    <string name="format_raw_copy">原样复制</string>
+    <string name="format_dd_image">分区镜像</string>
+
+    <!-- ===================== ChecksumAlgorithm ===================== -->
+    <string name="checksum_md5">MD5</string>
+    <string name="checksum_sha1">SHA-1</string>
+    <string name="checksum_sha256">SHA-256</string>
+    <string name="checksum_sha512">SHA-512</string>
+    <string name="checksum_blake3">BLAKE3</string>
+
+    <!-- ===================== CompressionCodec ===================== -->
+    <string name="codec_none">无</string>
+    <string name="codec_gzip">gzip</string>
+    <string name="codec_xz">xz</string>
+    <string name="codec_zstd">zstd</string>
+    <string name="codec_bzip2">bzip2</string>
+
+    <!-- ===================== EncryptionMode ===================== -->
+    <string name="encryption_none">无</string>
+    <string name="encryption_aes_256_gcm">AES-256-GCM</string>
+    <string name="encryption_zip_aes">ZIP AES</string>
+    <string name="encryption_openssl">OpenSSL（AES-256-CBC）</string>
+    <string name="encryption_gpg">OpenPGP（GPG）</string>
+
+    <!-- ===================== StructureMode ===================== -->
+    <string name="structure_preserve_hierarchy">保留文件夹层级</string>
+    <string name="structure_categorized">按类别整理</string>
+
+    <!-- ===================== TransferMode ===================== -->
+    <string name="transfer_local_staging">先在本地构建，再上传</string>
+    <string name="transfer_direct_stream">直接流式传输到目标位置</string>
+    <string name="transfer_remote_compress">在远程主机上压缩</string>
+
+    <!-- ===================== DestinationType ===================== -->
+    <string name="destination_type_local_internal">应用存储</string>
+    <string name="destination_type_local_saf">文件夹</string>
+    <string name="destination_type_usb_otg">USB OTG 驱动器</string>
+    <string name="destination_type_ftp">FTP</string>
+    <string name="destination_type_ftps">FTPS</string>
+    <string name="destination_type_sftp">SFTP</string>
+    <string name="destination_type_ssh">SSH</string>
+    <string name="destination_type_smb">SMB 共享</string>
+    <string name="destination_type_webdav">WebDAV</string>
+    <string name="destination_type_nfs">NFS</string>
+    <string name="destination_type_rclone">rclone 远程</string>
+    <string name="destination_type_s3">S3 兼容</string>
+    <string name="destination_type_mega">MEGA</string>
+    <string name="destination_type_pcloud">pCloud</string>
+
+    <!-- ===================== Readiness ===================== -->
+    <string name="readiness_ready">就绪</string>
+    <string name="readiness_degraded">就绪但有警告</string>
+    <string name="readiness_unavailable">不可用</string>
+
+</resources>

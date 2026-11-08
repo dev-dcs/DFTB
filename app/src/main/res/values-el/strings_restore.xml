@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_engine_opening">Ανάγνωση του αντιγράφου ασφαλείας…</string>
+    <string name="restore_engine_preflight">Έλεγχος του τι μπορεί να επαναφερθεί…</string>
+    <string name="restore_engine_verifying">Επαλήθευση του αντιγράφου ασφαλείας πριν από την επαναφορά…</string>
+    <string name="restore_engine_restoring">Επαναφορά %1$s…</string>
+    <plurals name="restore_engine_completed">
+        <item quantity="one">Επαναφέρθηκε %1$d στοιχείο.</item>
+        <item quantity="other">Επαναφέρθηκαν %1$d στοιχεία.</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="one">%1$d προειδοποίηση.</item>
+        <item quantity="other">%1$d προειδοποιήσεις.</item>
+    </plurals>
+    <string name="restore_engine_cancelled">Η επαναφορά σταμάτησε. Τα αρχεία που έχουν ήδη επαναφερθεί διατηρήθηκαν.</string>
+    <string name="restore_engine_error_destination">Ο προορισμός αυτού του αντιγράφου ασφαλείας δεν υπάρχει πλέον.</string>
+    <string name="restore_engine_error_open">Δεν ήταν δυνατή η ανάγνωση του αντιγράφου ασφαλείας.</string>
+    <string name="restore_engine_error_key_required">Αυτό το αντίγραφο ασφαλείας είναι κρυπτογραφημένο. Εισαγάγετε τη φράση πρόσβασης ή το κλειδί του.</string>
+    <string name="restore_engine_error_wrong_key">Λάθος φράση πρόσβασης ή κλειδί για αυτό το αντίγραφο ασφαλείας.</string>
+    <string name="restore_engine_error_unsupported">Αυτό το αντίγραφο ασφαλείας δημιουργήθηκε με τρόπο που αυτή η έκδοση του DFTB δεν μπορεί να επαναφέρει.</string>
+    <string name="restore_engine_error_nothing">Δεν έχει επιλεγεί τίποτα για επαναφορά.</string>
+    <string name="restore_engine_error_blocked">Κανένα από τα επιλεγμένα στοιχεία δεν μπορεί να επαναφερθεί στην τρέχουσα λειτουργία.</string>
+    <string name="restore_engine_error_space">Ανεπαρκής ελεύθερος χώρος για επαναφορά.</string>
+    <string name="restore_engine_error_verify">Το αντίγραφο ασφαλείας είναι κατεστραμμένο· δεν επαναφέρθηκε τίποτα.</string>
+    <string name="restore_engine_error_all_failed">Η επαναφορά απέτυχε για όλα τα επιλεγμένα στοιχεία.</string>
+    <string name="restore_engine_error_internal">Η επαναφορά σταμάτησε λόγω μη αναμενόμενου σφάλματος.</string>
+    <string name="restore_engine_no_app_restorer">Η επαναφορά εφαρμογών δεν είναι διαθέσιμη σε αυτήν την έκδοση.</string>
+    <string name="restore_engine_no_partition_restorer">Η επαναφορά κατατμήσεων δεν είναι διαθέσιμη σε αυτήν την έκδοση.</string>
+    <string name="restore_engine_unit_blocked">Το %1$s δεν μπορεί να επαναφερθεί: %2$s</string>
+    <string name="restore_engine_space_unknown">Ο ελεύθερος χώρος για το %1$s είναι άγνωστος· η επαναφορά μπορεί να εξαντλήσει τον χώρο.</string>
+    <string name="restore_engine_space_overridden">%1$s: γίνεται επαναφορά αν και χρειάζονται άλλα %2$s χώρου.</string>
+    <string name="restore_engine_cross_device">Αυτό το αντίγραφο ασφαλείας προέρχεται από %1$s· αυτή η συσκευή είναι %2$s.</string>
+    <string name="restore_engine_resume_skipped">Το %1$s έχει ήδη επαναφερθεί και παραλείπεται.</string>
+    <string name="restore_engine_partial_backup">Αυτό το αντίγραφο ασφαλείας δεν ολοκληρώθηκε· μπορούν να επαναφερθούν μόνο τα στοιχεία που περιέχει.</string>
+    <string name="restore_engine_checkpoint_failed">Δεν ήταν δυνατή η αποθήκευση της προόδου επαναφοράς· μια διακοπείσα επαναφορά θα ξεκινήσει από την αρχή.</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="one">…και ακόμη %1$d πρόβλημα.</item>
+        <item quantity="other">…και ακόμη %1$d προβλήματα.</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="one">%1$d αρχείο δεν έχει γνωστή αρχική τοποθεσία και δεν επαναφέρθηκε. Επαναφέρετέ το σε φάκελο.</item>
+        <item quantity="other">%1$d αρχεία δεν έχουν γνωστή αρχική τοποθεσία και δεν επαναφέρθηκαν. Επαναφέρετέ τα σε φάκελο.</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="one">Διατηρήθηκε %1$d υπάρχον αρχείο.</item>
+        <item quantity="other">Διατηρήθηκαν %1$d υπάρχοντα αρχεία.</item>
+    </plurals>
+    <string name="restore_file_error_original_unknown">Το αντίγραφο ασφαλείας δεν καταγράφει από πού προέρχονται αυτά τα αρχεία. Επαναφέρετέ τα σε έναν φάκελο.</string>
+    <string name="restore_file_error_target">Δεν είναι δυνατό το άνοιγμα του φακέλου επαναφοράς.</string>
+    <string name="restore_file_error_no_privilege">Το DFTB δεν μπορεί να γράψει σε αυτόν τον φάκελο στην τρέχουσα λειτουργία. Επιλέξτε άλλον φάκελο ή μεταβείτε σε Shizuku ή root.</string>
+    <string name="restore_file_error_saf">Η πρόσβαση στον επιλεγμένο φάκελο αφαιρέθηκε. Επιλέξτε ξανά τον φάκελο.</string>
+    <string name="restore_file_error_twrp_folder">Τα αρχεία TWRP μπορούν να εξαχθούν μόνο σε επιλεγμένο φάκελο, ποτέ πάνω από το σύστημα που εκτελείται.</string>
+    <string name="restore_file_error_corrupt">Τα δεδομένα του αντιγράφου ασφαλείας είναι κατεστραμμένα.</string>
+    <string name="restore_file_error_no_space">Ο φάκελος επαναφοράς είναι γεμάτος.</string>
+    <string name="restore_file_error_archive">Δεν ήταν δυνατή η ανάγνωση του αρχείου συμπίεσης.</string>
+    <string name="restore_file_error_storage">Δεν ήταν δυνατή η ανάγνωση του προορισμού.</string>
+    <string name="restore_issue_unsafe_path">μη ασφαλής διαδρομή απορρίφθηκε</string>
+    <string name="restore_issue_through_symlink">απορρίφθηκε: θα γραφόταν μέσω συμβολικού συνδέσμου</string>
+    <string name="restore_issue_parent_not_dir">ένα αρχείο εμποδίζει τον φάκελό του</string>
+    <string name="restore_issue_directory_in_the_way">υπάρχει φάκελος με το ίδιο όνομα</string>
+    <string name="restore_issue_skipped_existing">το υπάρχον αρχείο διατηρήθηκε</string>
+    <string name="restore_issue_symlink_unsupported">οι συμβολικοί σύνδεσμοι δεν υποστηρίζονται σε αυτόν τον φάκελο</string>
+    <string name="restore_issue_hardlink_unsupported">οι σκληροί σύνδεσμοι δεν υποστηρίζονται σε αυτόν τον φάκελο</string>
+    <string name="restore_issue_hardlink_missing">το αρχείο στο οποίο δείχνει αυτός ο σύνδεσμος δεν επαναφέρθηκε</string>
+    <string name="restore_issue_special_skipped">ειδικό αρχείο (pipe ή συσκευή) παραλείφθηκε</string>
+    <string name="restore_issue_digest_mismatch">τα byte που επαναφέρθηκαν δεν ταιριάζουν με το αντίγραφο ασφαλείας· το αρχείο δεν γράφτηκε</string>
+    <string name="restore_issue_write_failed">δεν ήταν δυνατή η εγγραφή</string>
+    <string name="restore_issue_metadata_failed">δεν ήταν δυνατή η επαναφορά ημερομηνίας, ιδιοκτήτη ή δικαιωμάτων</string>
+
+</resources>

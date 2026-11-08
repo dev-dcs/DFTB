@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_app_no_package">Αυτή η μονάδα αντιγράφου ασφαλείας δεν περιέχει εφαρμογή.</string>
+    <string name="restore_app_multiple_packages">Αυτό το αντίγραφο εφαρμογής περιέχει πολλά πακέτα· μπορούν να επαναφερθούν μόνο αντίγραφα μίας εφαρμογής.</string>
+    <string name="restore_app_layout_unsupported">Αυτό το αντίγραφο εφαρμογής αποθηκεύεται σε μορφή από την οποία δεν μπορούν να επαναφερθούν εφαρμογές (μόνο αντίγραφα εφαρμογών σε αρχείο συμπίεσης και αντιγραφής αρχείων).</string>
+    <string name="restore_app_no_manifest">Το αντίγραφο του %1$s δεν έχει manifest εφαρμογής, οπότε δεν μπορεί να επαναφερθεί.</string>
+    <string name="restore_app_manifest_unreadable">Το manifest εφαρμογής του %1$s δεν ήταν δυνατό να διαβαστεί: %2$s</string>
+    <string name="restore_app_manifest_mismatch">Το manifest εφαρμογής ανήκει στο %2$s, όχι στο %1$s· δεν επαναφέρθηκε τίποτα.</string>
+    <string name="restore_app_refused_self">Το DFTB δεν επαναφέρει τον εαυτό του (%1$s) εκτός αν επιτρέπονται ρητά τα προστατευμένα πακέτα.</string>
+    <string name="restore_app_refused_privilege_provider">Το %1$s παρέχει πρόσβαση root ή Shizuku. Η επαναφορά του μπλοκάρεται εκτός αν επιτρέπονται ρητά τα προστατευμένα πακέτα.</string>
+    <string name="restore_app_warn_system">Το %1$s είναι στοιχείο συστήματος. Η επαναφορά του μπορεί να κάνει το σύστημα ασταθές.</string>
+    <string name="restore_app_signature_mismatch">Το εγκατεστημένο %1$s είναι υπογεγραμμένο με διαφορετικό κλειδί από το αντίγραφο. Η επαναφορά απορρίφθηκε· επιτρέψτε ασυμφωνία υπογραφής για να επαναφέρετε μόνο τα δεδομένα του.</string>
+    <string name="restore_app_signature_mismatch_override">Το %1$s είναι υπογεγραμμένο με διαφορετικό κλειδί από το αντίγραφο. Το APK του δεν εγκαταστάθηκε και επαναφέρθηκαν μόνο τα δεδομένα του, όπως επιτρέψατε.</string>
+    <string name="restore_app_signature_unknown">Το κλειδί υπογραφής του %1$s δεν ήταν δυνατό να συγκριθεί με το αντίγραφο ασφαλείας.</string>
+    <string name="restore_app_user_needs_privilege">Η επαναφορά στον χρήστη Android %1$d απαιτεί λειτουργία Root ή Shizuku.</string>
+    <string name="restore_app_user_missing">Ο χρήστης Android %1$d δεν υπάρχει σε αυτήν τη συσκευή.</string>
+    <string name="restore_app_unexpected">Η επαναφορά του %1$s απέτυχε: %2$s</string>
+    <string name="restore_app_nothing_restorable">Τίποτα από το %1$s δεν μπορεί να επαναφερθεί στην τρέχουσα λειτουργία με τις επιλεγμένες επιλογές.</string>
+    <string name="restore_app_install_permission">Το DFTB δεν επιτρέπεται να εγκαθιστά εφαρμογές. Επιτρέψτε «Εγκατάσταση άγνωστων εφαρμογών» για το DFTB και μετά επαναφέρετε ξανά το %1$s.</string>
+    <string name="restore_app_install_failed">Η εγκατάσταση του %1$s απέτυχε: %2$s</string>
+    <string name="restore_app_install_declined">Η εγκατάσταση του %1$s απορρίφθηκε.</string>
+    <string name="restore_app_install_timeout">Κανείς δεν επιβεβαίωσε εγκαίρως την εγκατάσταση του %1$s.</string>
+    <string name="restore_app_apk_missing_parts">Στο αντίγραφο του %1$s λείπουν τμήματα APK (%2$s)· το APK δεν εγκαταστάθηκε.</string>
+    <string name="restore_app_same_version">Το %1$s %2$s είναι ήδη εγκατεστημένο· το APK του δεν επανεγκαταστάθηκε.</string>
+    <string name="restore_app_installed_newer">Είναι εγκατεστημένη νεότερη έκδοση του %1$s από αυτή του αντιγράφου. Το εγκατεστημένο APK διατηρήθηκε και τα παλαιότερα δεδομένα επαναφέρονται πάνω σε αυτό.</string>
+    <string name="restore_app_not_installed">Το %1$s δεν είναι εγκατεστημένο, οπότε τα δεδομένα του δεν μπορούν να επαναφερθούν.</string>
+    <string name="restore_app_data_skipped_after_install_failure">Επειδή η εγκατάσταση του %1$s απέτυχε, τα δεδομένα του δεν επαναφέρθηκαν.</string>
+    <string name="restore_app_data_needs_root">Τα ιδιωτικά δεδομένα του %1$s μπορούν να επαναφερθούν μόνο σε λειτουργία Root· παραλείφθηκαν.</string>
+    <string name="restore_app_external_needs_privilege">Τα δεδομένα κοινόχρηστου αποθηκευτικού χώρου του %1$s (Android/data, media, obb) απαιτούν λειτουργία Root ή Shizuku· παραλείφθηκαν.</string>
+    <string name="restore_app_data_skipped_existing">Το %1$s έχει ήδη %2$s· διατηρήθηκε (πολιτική συγκρούσεων: παράλειψη).</string>
+    <string name="restore_app_data_merged">Το %2$s του %1$s συγχωνεύτηκε με τα υπάρχοντα δεδομένα (πολιτική συγκρούσεων: διατήρηση και των δύο)· τα αρχεία που δεν περιέχει το αντίγραφο αφέθηκαν στη θέση τους.</string>
+    <string name="restore_app_merge_refused_symlink">Το %2$s του %1$s περιέχει συμβολικούς συνδέσμους, οπότε το αντίγραφο δεν μπορεί να συγχωνευτεί με ασφάλεια· παραλείφθηκε. Επαναφέρετε με την πολιτική αντικατάστασης.</string>
+    <string name="restore_app_data_dir_missing">Το %2$s του %1$s δεν υπάρχει σε αυτήν τη συσκευή (ο χρήστης μπορεί να είναι κλειδωμένος)· αυτό το τμήμα παραλείφθηκε.</string>
+    <string name="restore_app_data_failed">Η επαναφορά του %2$s του %1$s απέτυχε: %3$s</string>
+    <string name="restore_app_owner_failed">Δεν ήταν δυνατή η διόρθωση της ιδιοκτησίας του %2$s του %1$s: %3$s</string>
+    <string name="restore_app_owner_unknown">Δεν ήταν δυνατός ο προσδιορισμός του ιδιοκτήτη του %2$s για το %1$s· τα αρχεία διατηρούν τον ιδιοκτήτη που καταγράφηκε στο αντίγραφο.</string>
+    <string name="restore_app_selinux_failed">Οι ετικέτες ασφαλείας του %2$s του %1$s δεν ήταν δυνατό να επαναφερθούν· η εφαρμογή μπορεί να μην μπορεί να διαβάσει αυτά τα δεδομένα.</string>
+    <string name="restore_app_selinux_fallback">Το restorecon δεν είναι διαθέσιμο· οι ετικέτες του %2$s του %1$s ορίστηκαν από το αντίγραφο με κατηγορίες που υπολογίστηκαν εκ νέου για το νέο uid.</string>
+    <string name="restore_app_special_dropped">%2$d καταχωρίσεις συσκευής ή pipe του %1$s δεν επαναφέρθηκαν.</string>
+    <string name="restore_app_permissions_not_granted">%2$d άδεια(ες) του %1$s δεν ήταν δυνατό να χορηγηθούν: %3$s</string>
+    <string name="restore_app_permissions_need_privilege">Οι άδειες του %1$s δεν μπορούν να χορηγηθούν ξανά σε Τυπική λειτουργία· χορηγήστε τις στις ρυθμίσεις συστήματος.</string>
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">δεδομένα εφαρμογής</string>
+    <string name="restore_app_part_de">δεδομένα προστατευμένα από τη συσκευή</string>
+    <string name="restore_app_part_cache">προσωρινή μνήμη</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s: %2$s</string>
+    <string name="restore_app_preflight_root_for_data">Τα ιδιωτικά δεδομένα εφαρμογών θα επαναφερθούν μόνο σε λειτουργία Root.</string>
+
+</resources>

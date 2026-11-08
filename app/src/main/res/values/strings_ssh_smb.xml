@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SFTP/SSH, SMB and NFS storage backends (core/storage/{ssh,smb,nfs}). These become
+     StorageException messages shown when a destination connection test or transfer fails.
+     Technical detail (server error text, fingerprints, paths) is passed in as format arguments. -->
+<resources>
+
+    <!-- Shared -->
+    <string name="storage_net_missing_host">The destination has no host name configured.</string>
+    <string name="storage_net_missing_credential">The destination has no saved credentials.</string>
+    <string name="storage_net_credential_not_found">The saved credentials for this destination could not be found.</string>
+    <string name="storage_net_credential_wrong_kind">The saved credential type is not supported by this protocol.</string>
+    <string name="storage_net_missing_username">The destination has no user name configured.</string>
+    <string name="storage_net_connect_failed">Could not connect to %1$s: %2$s</string>
+    <string name="storage_net_op_failed">Remote operation failed (%1$s): %2$s</string>
+    <string name="storage_net_not_a_directory">“%1$s” is not a folder on the destination.</string>
+    <string name="storage_net_transfer_timeout">The transfer did not start in time (%1$s).</string>
+
+    <!-- SFTP / SSH -->
+    <string name="storage_ssh_auth_failed">The SSH server rejected the user name, password or key.</string>
+    <string name="storage_ssh_key_unreadable">The saved private key could not be read. Check the key format and passphrase.</string>
+    <string name="storage_ssh_host_key_changed">The SSH host key of %1$s has changed (now %2$s). The connection was refused to protect your data. If the server was reinstalled on purpose, forget its saved key and connect again.</string>
+    <string name="storage_ssh_no_shell">The SSH server does not offer SFTP and refused the shell command fallback.</string>
+
+    <!-- SMB -->
+    <string name="storage_smb_missing_share">No share is configured. Put the share name as the first folder of the path, or set the share option.</string>
+    <string name="storage_smb_not_disk_share">“%1$s” is not a file share.</string>
+    <string name="storage_smb_encryption_unsupported">Encryption was requested but the server does not support SMB 3 encryption.</string>
+    <string name="storage_smb_auth_failed">The SMB server rejected the user name or password.</string>
+
+    <!-- NFS -->
+    <string name="storage_nfs_requires_root">NFS needs Root mode: Android cannot mount network shares for normal apps. Switch to Root mode in Settings to use this destination.</string>
+    <string name="storage_nfs_root_unavailable">Root access is not granted right now, so the NFS share cannot be mounted.</string>
+    <string name="storage_nfs_kernel_unsupported">This device\'s kernel has no NFS client support, so NFS shares cannot be mounted.</string>
+    <string name="storage_nfs_missing_export">No NFS export path is configured (for example /srv/backups).</string>
+    <string name="storage_nfs_bad_options">The NFS mount options contain unsupported characters.</string>
+    <string name="storage_nfs_mount_failed">Mounting %1$s failed: %2$s</string>
+</resources>

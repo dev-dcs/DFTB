@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SFTP/SSH, SMB and NFS storage backends (core/storage/{ssh,smb,nfs}). These become
+     StorageException messages shown when a destination connection test or transfer fails.
+     Technical detail (server error text, fingerprints, paths) is passed in as format arguments. -->
+<resources>
+
+    <!-- Shared -->
+    <string name="storage_net_missing_host">保存先にホスト名が設定されていません。</string>
+    <string name="storage_net_missing_credential">保存先に保存済みの資格情報がありません。</string>
+    <string name="storage_net_credential_not_found">この保存先の保存済み資格情報が見つかりません。</string>
+    <string name="storage_net_credential_wrong_kind">保存済みの資格情報の種類はこのプロトコルでは未対応です。</string>
+    <string name="storage_net_missing_username">保存先にユーザー名が設定されていません。</string>
+    <string name="storage_net_connect_failed">%1$s に接続できませんでした：%2$s</string>
+    <string name="storage_net_op_failed">リモート操作に失敗しました（%1$s）：%2$s</string>
+    <string name="storage_net_not_a_directory">「%1$s」は保存先上のフォルダではありません。</string>
+    <string name="storage_net_transfer_timeout">転送が時間内に開始されませんでした（%1$s）。</string>
+
+    <!-- SFTP / SSH -->
+    <string name="storage_ssh_auth_failed">SSH サーバーがユーザー名、パスワード、または鍵を拒否しました。</string>
+    <string name="storage_ssh_key_unreadable">保存済みの秘密鍵を読み取れません。鍵の形式とパスフレーズを確認してください。</string>
+    <string name="storage_ssh_host_key_changed">%1$s の SSH ホスト鍵が変更されました（現在：%2$s）。データ保護のため接続を拒否しました。サーバーを意図的に再インストールした場合は、保存済みの鍵を削除してから再接続してください。</string>
+    <string name="storage_ssh_no_shell">SSH サーバーは SFTP を提供せず、シェルコマンドへのフォールバックも拒否しました。</string>
+
+    <!-- SMB -->
+    <string name="storage_smb_missing_share">共有が設定されていません。共有名をパスの最初のフォルダにするか、共有オプションを設定してください。</string>
+    <string name="storage_smb_not_disk_share">「%1$s」はファイル共有ではありません。</string>
+    <string name="storage_smb_encryption_unsupported">暗号化が要求されましたが、サーバーは SMB 3 暗号化に対応していません。</string>
+    <string name="storage_smb_auth_failed">SMB サーバーがユーザー名またはパスワードを拒否しました。</string>
+
+    <!-- NFS -->
+    <string name="storage_nfs_requires_root">NFS には Root モードが必要です。Android では通常のアプリがネットワーク共有をマウントできません。この保存先を使うには、設定で Root モードに切り替えてください。</string>
+    <string name="storage_nfs_root_unavailable">現在 Root 権限が付与されていないため、NFS 共有をマウントできません。</string>
+    <string name="storage_nfs_kernel_unsupported">このデバイスのカーネルは NFS クライアントに対応していないため、NFS 共有をマウントできません。</string>
+    <string name="storage_nfs_missing_export">NFS エクスポートパスが設定されていません（例：/srv/backups）。</string>
+    <string name="storage_nfs_bad_options">NFS マウントオプションにサポートされない文字が含まれています。</string>
+    <string name="storage_nfs_mount_failed">%1$s のマウントに失敗しました：%2$s</string>
+</resources>

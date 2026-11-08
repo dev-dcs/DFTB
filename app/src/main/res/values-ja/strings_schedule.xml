@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for scheduled backups, the background backup worker, checkpoint resume
+  and retention. Kept in their own file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Foreground notification of the backup worker -->
+    <string name="schedule_fg_title">%1$s をバックアップ中</string>
+    <string name="schedule_fg_text_scheduled">スケジュールされたバックアップを実行中</string>
+    <string name="schedule_fg_text_manual">バックアップを実行中</string>
+    <string name="schedule_fg_text_resume">中断されたバックアップを再開中</string>
+
+    <!-- Unattended runs that need the user -->
+    <string name="schedule_passphrase_title">「%1$s」にパスフレーズが必要です</string>
+    <string name="schedule_passphrase_text">このバックアップは DFTB が保存しないパスフレーズで暗号化されているため、無人実行できません。DFTB を開いて入力し、続行してください。</string>
+    <string name="schedule_failed_title">「%1$s」のスケジュールバックアップに失敗しました</string>
+    <string name="schedule_failed_text_generic">バックアップを実行できませんでした。詳細は DFTB を開いて確認してください。</string>
+
+    <!-- Interrupted jobs found after a reboot -->
+    <string name="schedule_restore_interrupted_title">復元が中断されました</string>
+    <string name="schedule_restore_interrupted_text">復元が完了前に停止しました。復元は自動では再開されません。DFTB を開いて再実行してください。</string>
+    <string name="schedule_job_interrupted_title">%1$s が中断されました</string>
+    <string name="schedule_job_interrupted_text">このジョブは完了前に停止しました。DFTB を開いて再実行してください。</string>
+</resources>

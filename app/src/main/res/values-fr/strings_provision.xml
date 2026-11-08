@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">Synchronisation distante</string>
+    <string name="provision_feature_archiving">Archivage</string>
+    <string name="provision_feature_compression">Compression</string>
+    <string name="provision_feature_encryption">Chiffrement</string>
+    <string name="provision_feature_core_utilities">Utilitaires de base</string>
+    <string name="provision_feature_integrity">Intégrité</string>
+    <string name="provision_tool_rclone_purpose">Synchronise les sauvegardes avec des stockages cloud et réseau comme S3, WebDAV et SFTP.</string>
+    <string name="provision_tool_busybox_purpose">Fournit les utilitaires de base POSIX avec des options identiques sur tous les appareils.</string>
+    <string name="provision_tool_zstd_purpose">Compression et décompression Zstandard rapides pour les archives.</string>
+    <string name="provision_tool_xz_purpose">Compression XZ/LZMA à fort taux pour les archives.</string>
+    <string name="provision_tool_pigz_purpose">Compression gzip parallèle exploitant plusieurs cœurs du processeur.</string>
+    <string name="provision_tool_openssl_purpose">Chiffre et déchiffre les archives de sauvegarde avec un chiffrement symétrique.</string>
+    <string name="provision_tool_tar_purpose">Écrit et lit des fichiers dans des archives POSIX tar en flux, en préservant les métadonnées.</string>
+    <string name="provision_tool_dftbtool_purpose">Utilitaire intégré qui calcule les empreintes et copie des fichiers, prouvant que la chaîne d\'extraction et d\'exécution fonctionne sur cet appareil.</string>
+    <string name="provision_tool_nsenter_purpose">Entre dans les espaces de noms de montage, de PID et autres de l\'hôte afin que les sauvegardes voient les vrais montages système sous root.</string>
+</resources>

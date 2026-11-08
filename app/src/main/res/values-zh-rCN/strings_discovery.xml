@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Discovery hub UI (ui/discovery): partitions, installed apps and file-scan preview tabs.
+     Engine-level messages live in strings_partitions.xml, strings_apps.xml and
+     strings_file_scan.xml and are reused, not duplicated. -->
+<resources>
+
+    <!-- Hub -->
+    <string name="discovery_title">发现</string>
+    <string name="discovery_back">返回</string>
+    <string name="discovery_entry_subtitle">在创建配置文件之前，查看此设备允许 DFTB 备份哪些分区、应用和文件。</string>
+    <string name="discovery_entry_open">打开发现</string>
+    <string name="discovery_tab_partitions">分区</string>
+    <string name="discovery_tab_apps">应用</string>
+    <string name="discovery_tab_files">文件</string>
+
+    <!-- Shared -->
+    <string name="discovery_yes">是</string>
+    <string name="discovery_no">否</string>
+    <string name="discovery_unknown">未知</string>
+    <string name="discovery_not_applicable">不适用</string>
+    <string name="discovery_unavailable">不可用</string>
+    <string name="discovery_cancel">取消</string>
+    <string name="discovery_ok">确定</string>
+    <string name="discovery_clear">清除</string>
+    <string name="discovery_retry">重试</string>
+    <string name="discovery_scanned_at">扫描于 %1$s</string>
+    <string name="discovery_warnings_title">警告（%1$d）</string>
+    <string name="discovery_size_unknown">大小未知</string>
+    <string name="discovery_size_not_measured">未测量</string>
+    <string name="discovery_size_not_measurable">此模式下无法测量</string>
+
+    <!-- Tiers -->
+    <string name="discovery_tier_standard">标准</string>
+    <string name="discovery_tier_shizuku">Shizuku</string>
+    <string name="discovery_tier_root">Root</string>
+
+    <!-- Partitions -->
+    <string name="discovery_partitions_unavailable_title">无法列出分区</string>
+    <string name="discovery_partitions_header_title">分区布局</string>
+    <string name="discovery_partitions_ab">A/B（无缝更新）</string>
+    <string name="discovery_partitions_active_slot">活动 slot</string>
+    <string name="discovery_partitions_dynamic">动态分区</string>
+    <string name="discovery_partitions_virtual_ab">虚拟 A/B</string>
+    <string name="discovery_partitions_count">找到的分区</string>
+    <string name="discovery_partitions_warnings_subtitle">扫描发现的情况；列表可能不完整。</string>
+    <string name="discovery_partitions_empty_view">此视图中没有分区。切换到“高级”可查看所有分区。</string>
+    <string name="discovery_partitions_slot_active">%1$s · %2$s</string>
+
+    <!-- Apps -->
+    <string name="discovery_apps_limited_title">部分应用可能被隐藏</string>
+    <string name="discovery_apps_usage_title">查看数据大小需要使用情况访问权限</string>
+    <string name="discovery_apps_usage_body">在标准模式下，Android 只向拥有使用情况访问权限的应用报告应用数据大小。没有该权限时只显示 APK 大小。</string>
+    <string name="discovery_apps_usage_open">打开设置</string>
+    <string name="discovery_apps_availability_title">可备份的内容</string>
+    <string name="discovery_apps_availability_subtitle">在 %1$s 模式下</string>
+    <string name="discovery_apps_measure_title">应用大小</string>
+    <string name="discovery_apps_measure_subtitle">测量会读取每个列出应用的大小，可能需要一段时间。</string>
+    <string name="discovery_apps_measure">测量大小</string>
+    <string name="discovery_apps_measure_again">重新测量</string>
+    <string name="discovery_apps_measure_progress">已测量 %1$d / %2$d 个应用</string>
+    <string name="discovery_apps_and_more">%1$s 等另外 %2$d 个</string>
+    <string name="discovery_apps_search">搜索应用</string>
+    <string name="discovery_apps_filter_user">用户</string>
+    <string name="discovery_apps_filter_system">系统</string>
+    <string name="discovery_apps_filter_updated">已更新的系统</string>
+    <string name="discovery_apps_filter_split">拆分 APK</string>
+    <string name="discovery_apps_filter_obb">含 OBB</string>
+    <string name="discovery_apps_sort">排序方式</string>
+    <string name="discovery_apps_sort_name">名称</string>
+    <string name="discovery_apps_sort_size">大小</string>
+    <string name="discovery_apps_sort_updated">更新时间</string>
+    <string name="discovery_apps_refresh">重新加载列表</string>
+    <string name="discovery_apps_disabled">已停用</string>
+    <string name="discovery_apps_version">版本</string>
+    <string name="discovery_apps_version_value">%1$s（%2$d）</string>
+    <string name="discovery_apps_target_sdk">目标 SDK</string>
+    <string name="discovery_apps_installed">安装时间</string>
+    <string name="discovery_apps_updated">上次更新</string>
+    <string name="discovery_apps_installer">安装来源</string>
+    <string name="discovery_apps_splits">拆分包</string>
+    <string name="discovery_apps_breakdown">大小明细</string>
+    <string name="discovery_apps_breakdown_none">点按“测量大小”查看此应用占用的空间。</string>
+    <string name="discovery_apps_size_apk">基础 APK</string>
+    <string name="discovery_apps_size_splits">拆分 APK</string>
+    <string name="discovery_apps_size_data_aggregate">应用数据（所有位置）</string>
+    <string name="discovery_apps_size_cache_included">缓存（已含在上方）</string>
+    <string name="discovery_apps_size_total">已知总计</string>
+    <string name="discovery_apps_unreadable">无法读取：%1$s</string>
+    <plurals name="discovery_apps_showing">
+        <item quantity="other">显示 %2$d 个应用中的 %1$d 个</item>
+    </plurals>
+    <plurals name="discovery_apps_measured">
+        <item quantity="other">已知 %1$d 个应用的大小</item>
+    </plurals>
+
+    <!-- App components and data locations -->
+    <string name="discovery_component_apk">APK 文件</string>
+    <string name="discovery_component_internal_data">应用私有数据</string>
+    <string name="discovery_component_external_data">Android/data 文件夹</string>
+    <string name="discovery_component_obb">OBB 扩展文件</string>
+    <string name="discovery_component_cache">缓存</string>
+    <string name="discovery_location_ce_data">私有数据</string>
+    <string name="discovery_location_de_data">设备保护的数据</string>
+    <string name="discovery_location_cache">缓存</string>
+    <string name="discovery_location_external_data">Android/data</string>
+    <string name="discovery_location_media">Android/media</string>
+    <string name="discovery_location_obb">Android/obb</string>
+
+    <!-- File categories -->
+    <string name="discovery_category_images">图片</string>
+    <string name="discovery_category_videos">视频</string>
+    <string name="discovery_category_audio">音频</string>
+    <string name="discovery_category_documents">文档</string>
+    <string name="discovery_category_archives">压缩包</string>
+    <string name="discovery_category_binaries">应用和二进制文件</string>
+    <string name="discovery_category_databases">数据库</string>
+    <string name="discovery_category_configs">配置文件</string>
+
+    <!-- Size units (decimal, like the sizes Android shows) -->
+    <string name="discovery_unit_b">B</string>
+    <string name="discovery_unit_kb">kB</string>
+    <string name="discovery_unit_mb">MB</string>
+    <string name="discovery_unit_gb">GB</string>
+    <string name="discovery_unit_tb">TB</string>
+
+    <!-- Files: location -->
+    <string name="discovery_files_location_title">扫描内容</string>
+    <string name="discovery_files_mode_folder">文件夹</string>
+    <string name="discovery_files_mode_categories">类别</string>
+    <string name="discovery_files_storage_root">内部存储</string>
+    <string name="discovery_files_pick_folder">选择文件夹…</string>
+    <string name="discovery_files_no_location">请在上方选择文件夹，或使用系统选择器选择。</string>
+    <string name="discovery_files_selected">已选择</string>
+    <string name="discovery_files_will_use">可访问。将通过以下方式读取：%1$s</string>
+    <string name="discovery_files_tier_hint">或者：%1$s（运行模式）</string>
+    <string name="discovery_files_recursive">包含子文件夹</string>
+    <string name="discovery_files_categories_hint">在标准文件夹（DCIM、Pictures、Movies、Music、Download、Documents）中扫描所选类型的文件。</string>
+
+    <!-- Files: filter editor -->
+    <string name="discovery_files_filter_title">筛选</string>
+    <string name="discovery_files_filter_none">无筛选：匹配所有文件</string>
+    <string name="discovery_files_filter_active">筛选已启用</string>
+    <string name="discovery_files_include_ext">仅这些扩展名</string>
+    <string name="discovery_files_exclude_ext">跳过这些扩展名</string>
+    <string name="discovery_files_ext_hint">用逗号或空格分隔，例如 jpg, png, heic</string>
+    <string name="discovery_files_min_size">最小大小</string>
+    <string name="discovery_files_max_size">最大大小</string>
+    <string name="discovery_files_modified_after">修改时间不早于</string>
+    <string name="discovery_files_modified_before">修改时间不晚于</string>
+    <string name="discovery_files_any_date">任意日期</string>
+    <string name="discovery_files_pick_date">选择日期：%1$s</string>
+    <string name="discovery_files_include_regex">路径必须匹配（regex）</string>
+    <string name="discovery_files_exclude_regex">跳过匹配的路径（regex）</string>
+    <string name="discovery_files_regex_hint">在相对于所扫描文件夹的路径中的任意位置匹配</string>
+    <string name="discovery_files_default_exclusions">跳过缩略图、回收站和缓存</string>
+    <string name="discovery_files_default_exclusions_hint">同时会跳过其他应用的 Android/data，除非你直接扫描其内部。</string>
+    <string name="discovery_files_reset_filter">重置筛选</string>
+    <string name="discovery_files_error_number">请输入数字</string>
+    <string name="discovery_files_error_too_large">此大小过大</string>
+    <string name="discovery_files_error_dates_reversed">此日期早于“不早于”日期</string>
+
+    <!-- Files: run -->
+    <string name="discovery_files_preview_title">预览</string>
+    <string name="discovery_files_run">运行预览</string>
+    <string name="discovery_files_run_again">再次运行</string>
+    <string name="discovery_files_need_location">请先选择要扫描的内容。</string>
+    <string name="discovery_files_fix_filter">请先修正上方的筛选错误再运行预览。</string>
+    <string name="discovery_files_cancelled">上一次预览已取消。</string>
+    <string name="discovery_files_failed">预览因意外错误而停止。</string>
+    <string name="discovery_files_rejected">筛选条件被拒绝</string>
+    <string name="discovery_files_dirs">已访问的文件夹</string>
+    <string name="discovery_files_files">匹配的文件</string>
+    <string name="discovery_files_bytes">总大小</string>
+    <string name="discovery_files_skipped">已跳过的不可读条目</string>
+
+    <!-- Files: results -->
+    <string name="discovery_files_summary_title">摘要</string>
+    <string name="discovery_files_nothing_matched">没有匹配的文件。请检查筛选条件或位置。</string>
+    <string name="discovery_files_by_category">按类别</string>
+    <string name="discovery_files_unclassified">其他文件</string>
+    <string name="discovery_files_top_extensions">常见扩展名</string>
+    <string name="discovery_files_no_extension">（无扩展名）</string>
+    <string name="discovery_files_count_size">%1$s · %2$s</string>
+    <string name="discovery_files_largest">最大的文件</string>
+    <string name="discovery_files_dates_title">最早和最新</string>
+    <string name="discovery_files_oldest">最早</string>
+    <string name="discovery_files_newest">最新</string>
+    <string name="discovery_files_roots_title">已扫描的位置</string>
+    <string name="discovery_files_walker_used">读取方式：%1$s</string>
+    <string name="discovery_files_uncovered">未覆盖：%1$s</string>
+    <plurals name="discovery_files_count">
+        <item quantity="other">%1$d 个文件</item>
+    </plurals>
+    <plurals name="discovery_files_blocked_roots">
+        <item quantity="other">%1$d 个位置无法扫描</item>
+    </plurals>
+</resources>

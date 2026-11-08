@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition restore (core/restore/partition) and TWRP/OrangeFox import (core/restore/twrp). -->
+<resources>
+
+    <!-- Environment and target resolution -->
+    <string name="partition_restore_root_required">パーティションの復元には、スーパーユーザー権限が付与された Root モードが必要です。</string>
+    <string name="partition_restore_scan_failed">このデバイスのパーティションレイアウトを読み取れませんでした（%1$s）。</string>
+    <string name="partition_restore_not_partition_artifact">%1$s はパーティションイメージではありません。</string>
+    <string name="partition_restore_slot_device_not_ab">%1$s は A/B slot からイメージ化されましたが、このデバイスには slot がありません。</string>
+    <string name="partition_restore_slot_unknown">このデバイスがアクティブな slot を報告しなかったため、%1$s のターゲット slot を選択できません。</string>
+    <string name="partition_restore_not_found">このデバイスに %1$s という名前のパーティションは存在しません。</string>
+    <string name="partition_restore_slot_missing">%1$s はこのデバイスに存在しますが、要求された slot にはありません。非アクティブ slot の論理パーティションは更新中のみマップされます。recovery または fastbootd から復元してください。</string>
+    <string name="partition_restore_slot_layout">%1$s は slot のないパーティションからイメージ化されましたが、このデバイスでは A/B slot に解決されます。</string>
+    <string name="partition_restore_probe_failed">書き込み前に %1$s を調べられなかったため、何も書き込まれませんでした。</string>
+
+    <!-- Safety gates: %1$s = partition, %2$s = technical detail -->
+    <string name="partition_gate_device_mismatch">%1$s は別のデバイス（%2$s）でイメージ化されました。ここに書き込むと、このデバイスが起動しなくなる可能性があります。</string>
+    <string name="partition_gate_build_mismatch">%1$s は別のソフトウェアビルド（%2$s）でイメージ化されました。別ビルドのイメージを復元するには確認してください。</string>
+    <string name="partition_gate_cross_slot">%1$s はイメージ化された時とは別の slot に書き込まれます。slot をまたぐ場合は確認してください。</string>
+    <string name="partition_gate_image_smaller">%1$s のイメージはパーティションより小さいです（%2$s バイト）。パーティションの残りを変更しない場合は確認してください。</string>
+    <string name="partition_gate_critical_identity">%1$s にはデバイス固有の ID またはキャリブレーションデータが含まれます。誤ったコピーを復元すると、無線、IMEI、DRM が恒久的に壊れる可能性があります。書き込むには確認してください。</string>
+    <string name="partition_gate_image_larger">%1$s のイメージはパーティションより大きく（%2$s バイト）、書き込めません。</string>
+    <string name="partition_gate_target_size_unknown">%1$s の正確なサイズを読み取れないため、書き込みを拒否しました。</string>
+    <string name="partition_gate_not_block_device">%1$s（%2$s）はブロックデバイスではありません。</string>
+    <string name="partition_gate_live_system">%1$s は実行中のシステムが使用しています。代わりに recovery（TWRP / OrangeFox）または fastboot から復元してください。</string>
+    <string name="partition_gate_mounted">%1$s はマウントされています（%2$s）。先にアンマウントするか、recovery から復元してください。</string>
+    <string name="partition_gate_swap">%1$s はスワップとして使用中です。</string>
+    <string name="partition_gate_held">%1$s は %2$s（device-mapper）が使用中です。recovery から復元してください。</string>
+    <string name="partition_gate_snapshot">%1$s は仮想 A/B スナップショットデバイスであり、復元先にはなりません。</string>
+    <string name="partition_gate_read_only">%1$s は読み取り専用です。</string>
+    <string name="partition_gate_overridden">上書きを確認済み：%1$s</string>
+
+    <!-- Writing and verification -->
+    <string name="partition_restore_item_verifying_image">%1$s のイメージを確認中</string>
+    <string name="partition_restore_item_writing">%1$s を書き込み中</string>
+    <string name="partition_restore_item_reading_back">デバイス上で %1$s を検証中</string>
+    <string name="partition_restore_image_digest_mismatch">%1$s のイメージが記録されたチェックサムと一致しません。何も書き込まれませんでした。</string>
+    <string name="partition_restore_image_read_failed">%1$s のイメージを読み取れませんでした（%2$s）。何も書き込まれませんでした。</string>
+    <string name="partition_restore_no_reference_digest">%1$s のチェックサムは記録されていません。バックアップから読み取ったイメージと照合して検証されます。</string>
+    <string name="partition_restore_refused_by_helper">データが書き込まれる前に %1$s への書き込みが拒否されました（%2$s）。</string>
+    <string name="partition_restore_partial_write">%1$s の書き込みが %2$s バイト後に失敗しました（%3$s）。パーティションは一部のみ書き込まれた状態です。recovery や fastboot などで正しく復元するまで再起動しないでください。</string>
+    <string name="partition_restore_source_changed">書き込み中に %1$s のイメージが変更されました。パーティションには未検証のデータが含まれています。再起動前にもう一度復元してください。</string>
+    <string name="partition_restore_readback_mismatch">%1$s の読み戻しがイメージと一致しません（期待値 %2$s、読み取り値 %3$s）。パーティションに破損データがあります。再起動前にもう一度復元してください。</string>
+    <string name="partition_restore_readback_failed">%1$s は書き込まれましたが、検証のための読み戻しができませんでした（%2$s）。</string>
+
+    <!-- TWRP / OrangeFox import -->
+    <string name="twrp_folder_not_found">%1$s に TWRP バックアップが見つかりませんでした。</string>
+    <string name="twrp_encrypted_unsupported">%1$s は TWRP のバックアップパスワードで暗号化されています。DFTB は TWRP 暗号化バックアップを復号できないため、TWRP から復元してください。</string>
+    <string name="twrp_filesystem_restore_refused">%1$s は /%2$s のファイルベースのバックアップです。実行中の Android 上でその場で復元することはできません。recovery（TWRP / OrangeFox）から復元するか、ファイルをフォルダに展開してください。</string>
+    <string name="twrp_split_image_unsupported">%1$s は複数ファイルに分割された raw イメージで、TWRP では生成されないため復元されません。</string>
+    <string name="twrp_not_raw_image">%1$s は raw パーティションイメージではありません。</string>
+    <string name="twrp_not_archive">%1$s は raw パーティションイメージであり、ファイルアーカイブではありません。</string>
+    <string name="twrp_unknown_format">%1$s は tar アーカイブでも gzip 圧縮された tar アーカイブでもないため、展開できません。</string>
+    <string name="twrp_sidecar_mismatch">%1$s がチェックサムファイル %2$s と一致しません。何も書き込まれませんでした。</string>
+    <string name="twrp_sidecar_missing">%1$s にはチェックサムファイルがないため、書き込み後にのみ検証できます。</string>
+    <string name="twrp_sidecar_unreadable">チェックサムファイル %1$s を読み取れませんでした。</string>
+    <string name="twrp_split_gap">分割アーカイブ %1$s が不完全です：パート %2$s がありません。</string>
+    <string name="twrp_extract_skipped_links">%2$s 内の %1$d 件のリンクまたは特殊ファイルは展開されませんでした（このフォルダでは保存できません）。</string>
+    <string name="twrp_extract_unsafe_entries">%2$s 内の安全でないパスを持つ %1$d 件のエントリをスキップしました。</string>
+    <string name="twrp_extract_digest_mismatch">%1$s がチェックサムファイル %2$s と一致しません。展開されたファイルが破損している可能性があります。</string>
+    <string name="twrp_extract_failed">%1$s の展開に失敗しました（%2$s）。</string>
+    <string name="twrp_read_failed">%1$s を読み取れませんでした（%2$s）。</string>
+</resources>

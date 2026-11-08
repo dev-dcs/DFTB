@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App restore (core/restore/apps): refusals, skipped parts and warnings. %1$s is the app label or package name unless noted. -->
+<resources>
+
+    <!-- Unit-level refusals -->
+    <string name="restore_app_no_package">このバックアップユニットにはアプリが含まれていません。</string>
+    <string name="restore_app_multiple_packages">このアプリのバックアップには複数のパッケージが含まれています。復元できるのは単一アプリのバックアップのみです。</string>
+    <string name="restore_app_layout_unsupported">このアプリのバックアップは、アプリを復元できない形式で保存されています（アーカイブ形式とファイルコピー形式のみ復元可能）。</string>
+    <string name="restore_app_no_manifest">%1$s のバックアップにはアプリのマニフェストがないため、復元できません。</string>
+    <string name="restore_app_manifest_unreadable">%1$s のアプリのマニフェストを読み取れませんでした：%2$s</string>
+    <string name="restore_app_manifest_mismatch">アプリのマニフェストは %1$s ではなく %2$s のものです。何も復元されませんでした。</string>
+    <string name="restore_app_refused_self">保護対象パッケージが明示的に許可されていない限り、DFTB 自身（%1$s）は復元されません。</string>
+    <string name="restore_app_refused_privilege_provider">%1$s は root または Shizuku のアクセスを提供します。保護対象パッケージが明示的に許可されていない限り、復元はブロックされます。</string>
+    <string name="restore_app_warn_system">%1$s はシステムコンポーネントです。復元するとシステムが不安定になる可能性があります。</string>
+    <string name="restore_app_signature_mismatch">インストール済みの %1$s はバックアップと異なる鍵で署名されています。復元は拒否されました。データのみを復元するには、署名の不一致を許可してください。</string>
+    <string name="restore_app_signature_mismatch_override">%1$s はバックアップと異なる鍵で署名されています。許可されたとおり、APK はインストールされず、データのみ復元されました。</string>
+    <string name="restore_app_signature_unknown">%1$s の署名鍵をバックアップと比較できませんでした。</string>
+    <string name="restore_app_user_needs_privilege">Android ユーザー %1$d への復元には Root または Shizuku モードが必要です。</string>
+    <string name="restore_app_user_missing">このデバイスに Android ユーザー %1$d は存在しません。</string>
+    <string name="restore_app_unexpected">%1$s の復元に失敗しました：%2$s</string>
+    <string name="restore_app_nothing_restorable">現在のモードと選択したオプションでは、%1$s の復元可能な項目がありません。</string>
+
+    <!-- APK -->
+    <string name="restore_app_install_permission">DFTB にアプリのインストール権限がありません。DFTB に「不明なアプリのインストール」を許可してから、もう一度 %1$s を復元してください。</string>
+    <string name="restore_app_install_failed">%1$s のインストールに失敗しました：%2$s</string>
+    <string name="restore_app_install_declined">%1$s のインストールは拒否されました。</string>
+    <string name="restore_app_install_timeout">時間内に %1$s のインストールが確認されませんでした。</string>
+    <string name="restore_app_apk_missing_parts">%1$s のバックアップに APK の一部（%2$s）が不足しているため、APK はインストールされませんでした。</string>
+    <string name="restore_app_same_version">%1$s %2$s はすでにインストールされているため、APK は再インストールされませんでした。</string>
+    <string name="restore_app_installed_newer">インストール済みの %1$s はバックアップより新しいバージョンです。インストール済みの APK は保持され、古いデータがその上に復元されます。</string>
+    <string name="restore_app_not_installed">%1$s はインストールされていないため、データを復元できません。</string>
+    <string name="restore_app_data_skipped_after_install_failure">%1$s のインストールに失敗したため、データは復元されませんでした。</string>
+
+    <!-- Data -->
+    <string name="restore_app_data_needs_root">%1$s のプライベートデータは Root モードでのみ復元できます。スキップしました。</string>
+    <string name="restore_app_external_needs_privilege">%1$s の共有ストレージデータ（Android/data、media、obb）には Root または Shizuku モードが必要です。スキップしました。</string>
+    <string name="restore_app_data_skipped_existing">%1$s にはすでに %2$s があります。保持しました（競合ポリシー：スキップ）。</string>
+    <string name="restore_app_data_merged">%1$s の %2$s を既存データにマージしました（競合ポリシー：両方保持）。バックアップに含まれないファイルはそのまま残されました。</string>
+    <string name="restore_app_merge_refused_symlink">%1$s の %2$s にシンボリックリンクが含まれているため、バックアップを安全にマージできません。スキップしました。代わりに上書きポリシーで復元してください。</string>
+    <string name="restore_app_data_dir_missing">このデバイスに %1$s の %2$s が存在しません（ユーザーがロックされている可能性があります）。この部分をスキップしました。</string>
+    <string name="restore_app_data_failed">%1$s の %2$s の復元に失敗しました：%3$s</string>
+    <string name="restore_app_owner_failed">%1$s の %2$s の所有権を修正できませんでした：%3$s</string>
+    <string name="restore_app_owner_unknown">%1$s の %2$s の所有者を特定できませんでした。ファイルはバックアップに記録された所有者のままになります。</string>
+    <string name="restore_app_selinux_failed">%1$s の %2$s のセキュリティラベルをリセットできませんでした。アプリがそのデータを読み取れない可能性があります。</string>
+    <string name="restore_app_selinux_fallback">restorecon が利用できないため、%1$s の %2$s のラベルはバックアップから設定され、新しい uid に合わせてカテゴリが再計算されました。</string>
+    <string name="restore_app_special_dropped">%1$s の %2$d 件のデバイスまたはパイプのエントリは復元されませんでした。</string>
+
+    <!-- Permissions -->
+    <string name="restore_app_permissions_not_granted">%1$s の %2$d 件のパーミッションを付与できませんでした：%3$s</string>
+    <string name="restore_app_permissions_need_privilege">標準モードでは %1$s のパーミッションを再付与できません。システム設定で付与してください。</string>
+
+    <!-- Part names (used as %2$s above and as progress item names) -->
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">アプリデータ</string>
+    <string name="restore_app_part_de">デバイス保護データ</string>
+    <string name="restore_app_part_cache">キャッシュ</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s：%2$s</string>
+
+    <!-- Preflight -->
+    <string name="restore_app_preflight_root_for_data">アプリのプライベートデータは Root モードでのみ復元されます。</string>
+</resources>

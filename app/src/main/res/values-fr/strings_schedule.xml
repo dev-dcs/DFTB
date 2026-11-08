@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="schedule_fg_title">Sauvegarde de %1$s</string>
+    <string name="schedule_fg_text_scheduled">Sauvegarde planifiée en cours</string>
+    <string name="schedule_fg_text_manual">Sauvegarde en cours</string>
+    <string name="schedule_fg_text_resume">Reprise d\'une sauvegarde interrompue</string>
+    <string name="schedule_passphrase_title">Phrase secrète requise pour « %1$s »</string>
+    <string name="schedule_passphrase_text">Cette sauvegarde est chiffrée avec une phrase secrète que DFTB ne stocke pas, elle ne peut donc pas s\'exécuter sans surveillance. Ouvrez DFTB pour la saisir et continuer.</string>
+    <string name="schedule_failed_title">La sauvegarde planifiée de « %1$s » a échoué</string>
+    <string name="schedule_failed_text_generic">La sauvegarde n\'a pas pu s\'exécuter. Ouvrez DFTB pour les détails.</string>
+    <string name="schedule_restore_interrupted_title">Restauration interrompue</string>
+    <string name="schedule_restore_interrupted_text">Une restauration s\'est arrêtée avant d\'être terminée. Les restaurations ne redémarrent jamais d\'elles-mêmes ; ouvrez DFTB pour la relancer.</string>
+    <string name="schedule_job_interrupted_title">%1$s interrompu</string>
+    <string name="schedule_job_interrupted_text">Cette tâche s\'est arrêtée avant d\'être terminée. Ouvrez DFTB pour la relancer.</string>
+
+</resources>

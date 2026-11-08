@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="schedule_fg_title">Respaldando %1$s</string>
+    <string name="schedule_fg_text_scheduled">Copia de seguridad programada en curso</string>
+    <string name="schedule_fg_text_manual">Copia de seguridad en curso</string>
+    <string name="schedule_fg_text_resume">Continuando una copia de seguridad interrumpida</string>
+    <string name="schedule_passphrase_title">Se necesita la frase de contraseña de «%1$s»</string>
+    <string name="schedule_passphrase_text">Esta copia de seguridad está cifrada con una frase de contraseña que DFTB no guarda, por lo que no se puede ejecutar sin supervisión. Abre DFTB para introducirla y continuar.</string>
+    <string name="schedule_failed_title">Falló la copia de seguridad programada de «%1$s»</string>
+    <string name="schedule_failed_text_generic">No se pudo ejecutar la copia de seguridad. Abre DFTB para ver los detalles.</string>
+    <string name="schedule_restore_interrupted_title">Restauración interrumpida</string>
+    <string name="schedule_restore_interrupted_text">Una restauración se detuvo antes de terminar. Las restauraciones nunca se reinician solas; abre DFTB para ejecutarla de nuevo.</string>
+    <string name="schedule_job_interrupted_title">%1$s interrumpido</string>
+    <string name="schedule_job_interrupted_text">Esta tarea se detuvo antes de terminar. Abre DFTB para ejecutarla de nuevo.</string>
+
+</resources>

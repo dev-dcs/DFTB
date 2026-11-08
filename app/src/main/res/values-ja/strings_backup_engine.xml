@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup engine (core/pipeline/engine): progress messages, results, failures and warnings that
+     appear in notifications, History and the live terminal. Technical detail stays in English
+     and is appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="backup_engine_planning">バックアップを準備中…</string>
+    <string name="backup_engine_preflight">空き容量を確認中…</string>
+    <string name="backup_engine_uploading">%1$s をアップロード中…</string>
+    <string name="backup_engine_verifying">%1$s を検証中…</string>
+    <string name="backup_engine_writing_manifest">バックアップインデックスを書き込み中…</string>
+
+    <!-- Results -->
+    <plurals name="backup_engine_completed">
+        <item quantity="other">%1$d 個のアーティファクトをバックアップしました。</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="other">警告 %1$d 件。</item>
+    </plurals>
+    <string name="backup_engine_cancelled">バックアップをキャンセルしました。不完全なファイルは削除されました。</string>
+
+    <!-- Failures (BackupErrorCode) -->
+    <string name="backup_engine_error_no_destination">このプロファイルには保存先がありません。バックアップの保存先を選択してください。</string>
+    <string name="backup_engine_error_destination_not_found">プロファイルの保存先は存在しなくなりました。</string>
+    <string name="backup_engine_error_nothing">バックアップ対象が選択されていません。</string>
+    <string name="backup_engine_error_sources_unavailable">現在のモードでは、選択したデータはどれもバックアップできません。</string>
+    <string name="backup_engine_error_twrp_encryption">TWRP 互換のバックアップは暗号化できません。暗号化または TWRP 互換性をオフにしてください。</string>
+    <string name="backup_engine_error_masking_needs_encryption">ファイル名の非表示には暗号化が必要です。AES-256-GCM 暗号化をオンにするか、名前の非表示をオフにしてください。</string>
+    <string name="backup_engine_error_destination_space">保存先にこのバックアップ用の十分な空き容量がありません。</string>
+    <string name="backup_engine_error_staging_space">このデバイスにはバックアップをローカルで準備するための十分な空き容量がありません。</string>
+    <string name="backup_engine_error_encryption_unsupported">この暗号化モードはまだサポートされていません。AES-256-GCM を使用してください。</string>
+    <string name="backup_engine_error_key_missing">このプロファイルの暗号化キーまたはパスフレーズがありません。</string>
+    <string name="backup_engine_error_transfer_unsupported">選択した転送モードはこの保存先では利用できません。</string>
+    <string name="backup_engine_error_source">一部のデータを読み取れませんでした。</string>
+    <string name="backup_engine_error_source_shape">パーティションソースが複数のイメージを生成しました。</string>
+    <string name="backup_engine_error_storage">保存先への書き込みに失敗しました。</string>
+    <string name="backup_engine_error_verify">保存されたファイルが書き込んだ内容と一致しません。破損している可能性があります。</string>
+    <string name="backup_engine_error_manifest">バックアップインデックスを書き込めませんでした。</string>
+    <string name="backup_engine_error_all_failed">バックアップのどの部分も完了できませんでした。</string>
+    <string name="backup_engine_error_internal">予期しないエラーによりバックアップが停止しました。</string>
+
+    <!-- Warnings (BackupWarningCode) -->
+    <string name="backup_engine_warning_space_unknown">空き容量を確認できませんでした。</string>
+    <string name="backup_engine_warning_space_overridden">空き容量が少ないにもかかわらず開始しました。</string>
+    <string name="backup_engine_warning_format_substituted">選択した形式はここでは適用できないため、互換性のある形式を使用しました。</string>
+    <string name="backup_engine_warning_source_unavailable">スキップ：現在のモードでは利用できません。</string>
+    <string name="backup_engine_warning_source_partial">一部のみバックアップされました。</string>
+    <string name="backup_engine_warning_twrp_verbatim">TWRP が復元できるよう、TWRP フォルダは非圧縮かつ読み取り可能な名前で保存されます。</string>
+    <string name="backup_engine_warning_twrp_not_device">TWRP はデバイスストレージまたは USB からのみ復元できます。復元前に TWRP フォルダをそこへコピーしてください。</string>
+    <string name="backup_engine_warning_estimate_failed">事前にサイズを見積もれませんでした。</string>
+    <string name="backup_engine_warning_size_mismatch">読み取り中にデータのサイズが変わりました。</string>
+    <string name="backup_engine_warning_artifact_failed">バックアップのこの部分は失敗しました。</string>
+    <string name="backup_engine_warning_hash_records">ファイルごとのチェックサムをカタログに保存できませんでした。</string>
+    <string name="backup_engine_warning_checkpoint">再開情報を保存できませんでした。</string>
+    <string name="backup_engine_warning_cleanup">一時ファイルを削除できませんでした。</string>
+    <string name="backup_engine_warning_resume_skipped">以前の試行で完了済みのためスキップしました。</string>
+    <string name="backup_engine_error_resume_folder">再開するバックアップフォルダの名前が無効です。</string>
+    <string name="backup_engine_warning_resume_unindexed">以前に完了していますが、それを記録した以前のバックアップインデックスがありません。</string>
+    <string name="backup_engine_warning_prior_manifest">このフォルダ内の以前のバックアップインデックスを読み取れませんでした。</string>
+</resources>

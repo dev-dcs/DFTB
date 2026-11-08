@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">キャンセル</string>
+    <string name="profiles_ok">OK</string>
+    <string name="profiles_done">完了</string>
+    <string name="profiles_back">戻る</string>
+    <string name="profiles_yes">はい</string>
+    <string name="profiles_no">いいえ</string>
+    <string name="profiles_unknown_error">不明なエラー</string>
+    <string name="profiles_cd_error">エラー</string>
+    <string name="profiles_cd_warning">警告</string>
+    <string name="profiles_cd_unavailable">現在のモードでは利用できません</string>
+    <string name="profiles_cd_step_done">完了</string>
+    <string name="profiles_cd_step_errors">修正が必要な問題があります</string>
+    <string name="profiles_cd_step_todo">未完了</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">バックアッププロファイル</string>
+    <string name="profiles_open_schedules">スケジュールと保持</string>
+    <string name="profiles_new">新規プロファイル</string>
+    <string name="profiles_empty_title">バックアッププロファイルはまだありません</string>
+    <string name="profiles_empty_body">プロファイルは、バックアップする対象、保存先、実行タイミングを定義します。「新規プロファイル」をタップして、最初のプロファイルを作成してください。</string>
+    <string name="profiles_more_actions">%1$s のその他の操作</string>
+    <string name="profiles_action_edit">編集</string>
+    <string name="profiles_action_duplicate">複製</string>
+    <string name="profiles_action_delete">削除</string>
+    <string name="profiles_action_run_now">今すぐバックアップ</string>
+    <string name="profiles_action_view_progress">進行状況を表示</string>
+    <string name="profiles_badge_encrypted">暗号化</string>
+    <string name="profiles_badge_twrp">TWRP 互換</string>
+    <string name="profiles_badge_paused">一時停止中</string>
+    <string name="profiles_badge_needs_passphrase">パスフレーズが必要</string>
+    <string name="profiles_hint_scheduled_passphrase">このプロファイルのスケジュール実行は、パスフレーズが入力されるまで待機します。</string>
+    <string name="profiles_resume_available">中断されたバックアップは、中断した箇所から再開できます。</string>
+    <string name="profiles_resume_needs_passphrase">中断されたバックアップは、パスフレーズを入力すると中断した箇所から再開できます。</string>
+    <string name="profiles_resume_action">再開</string>
+    <string name="profiles_no_destination">保存先が選択されていません</string>
+    <string name="profiles_next_run">次回の実行：%1$s</string>
+    <string name="profiles_last_run">前回のバックアップ：%1$s、%2$s</string>
+    <string name="profiles_last_run_never">バックアップ未実施</string>
+    <string name="profiles_schedule_on">スケジュール有効</string>
+    <string name="profiles_schedule_off">スケジュール一時停止中</string>
+    <string name="profiles_add_schedule">スケジュールを設定</string>
+    <string name="profiles_copy_name">%1$s のコピー</string>
+    <string name="profiles_targets_none">何も選択されていません</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="other">%d 個のパーティション</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="other">%d 個のアプリ</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="other">%d 個のフォルダー</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">「%1$s」のバックアップをキューに追加しました</string>
+    <string name="profiles_event_resume_queued">「%1$s」の中断されたバックアップを再開します</string>
+    <string name="profiles_event_started">「%1$s」のバックアップを開始しました</string>
+    <string name="profiles_event_already_running">「%1$s」はすでにバックアップ中です</string>
+    <string name="profiles_event_duplicated">「%1$s」を作成しました。コピーされたスケジュールは一時停止状態で開始されます。</string>
+    <string name="profiles_event_deleted">「%1$s」を削除しました</string>
+    <string name="profiles_event_schedule_on">「%1$s」のスケジュールを再開しました</string>
+    <string name="profiles_event_schedule_off">「%1$s」のスケジュールを一時停止しました</string>
+    <string name="profiles_event_finished">「%1$s」のバックアップ：%2$s</string>
+    <string name="profiles_event_finished_detail">%1$s。%2$s</string>
+    <string name="profiles_event_failed">失敗しました。詳細はログをご確認ください。</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">「%1$s」を削除しますか？</string>
+    <string name="profiles_delete_consequence">プロファイル「%1$s」とそのスケジュールが削除され、中断されたバックアップも再開できなくなります。この操作は元に戻せません。</string>
+    <string name="profiles_delete_backups_kept">%1$s にすでに保存されているバックアップは、履歴エントリとともに保持されるため、引き続き復元できます。DFTB では、プロファイルの保存済みバックアップをまだ削除できません。不要な場合は、保存先から手動で削除してください。</string>
+    <string name="profiles_delete_backups_kept_generic">すでに保存されているバックアップは、履歴エントリとともに保持されるため、引き続き復元できます。DFTB では、プロファイルの保存済みバックアップをまだ削除できません。不要な場合は、保存先から手動で削除してください。</string>
+    <string name="profiles_delete_key_kept">これらのバックアップを読み取れるよう、暗号化キーはこのデバイスの保管庫に残ります。</string>
+    <string name="profiles_delete_confirm">プロファイルを削除</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">実行中</string>
+    <string name="profiles_status_interrupted">中断</string>
+    <string name="profiles_status_completed">完了</string>
+    <string name="profiles_status_warnings">警告付きで完了</string>
+    <string name="profiles_status_failed">失敗</string>
+    <string name="profiles_status_cancelled">キャンセル済み</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">「%1$s」のパスフレーズ</string>
+    <string name="profiles_passphrase_body">このプロファイルは、DFTB が保存しないパスフレーズで暗号化されます。毎回同じパスフレーズを使用してください。パスフレーズがないと、DFTB でもこれらのバックアップを復号できません。</string>
+    <string name="profiles_passphrase_field">パスフレーズ</string>
+    <string name="profiles_passphrase_confirm">パスフレーズを再入力</string>
+    <string name="profiles_passphrase_mismatch">パスフレーズが一致しません</string>
+    <string name="profiles_passphrase_start">バックアップを開始</string>
+    <string name="profiles_passphrase_body_resume">この中断されたバックアップを開始したときのパスフレーズを入力してください。DFTB はパスフレーズを保存しません。異なるパスフレーズを使用すると、バックアップに一緒に復号できない部分が生じます。</string>
+    <string name="profiles_passphrase_resume">バックアップを再開</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="other">%d 文字以上で入力してください</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">新規バックアッププロファイル</string>
+    <string name="profiles_wizard_edit_title">バックアッププロファイルを編集</string>
+    <string name="profiles_wizard_close">閉じる</string>
+    <string name="profiles_wizard_back">戻る</string>
+    <string name="profiles_wizard_next">次へ</string>
+    <string name="profiles_wizard_save">保存</string>
+    <string name="profiles_wizard_save_run">保存して今すぐバックアップ</string>
+    <string name="profiles_wizard_not_found">このプロファイルは存在しなくなりました。</string>
+    <string name="profiles_wizard_leave">戻る</string>
+    <string name="profiles_wizard_fix_errors">先に強調表示された問題を修正してください</string>
+    <string name="profiles_wizard_key_failed">デバイスの保管庫に暗号化キーを作成できませんでした。何も保存されていません。</string>
+    <string name="profiles_wizard_save_failed">プロファイルを保存できませんでした。</string>
+    <string name="profiles_wizard_already_running">プロファイルは保存されました。すでにバックアップ中です。</string>
+    <string name="profiles_wizard_discard_title">変更を破棄しますか？</string>
+    <string name="profiles_wizard_discard_new">この新規プロファイルは保存されていません。入力した内容はすべて失われます。</string>
+    <string name="profiles_wizard_discard_edit">変更は保存されておらず、失われます。保存済みのプロファイルは元のままです。</string>
+    <string name="profiles_wizard_discard_confirm">破棄</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">名前</string>
+    <string name="profiles_step_name_sub">このプロファイルの名前</string>
+    <string name="profiles_step_targets">対象</string>
+    <string name="profiles_step_targets_sub">バックアップするパーティション、アプリ、ファイル</string>
+    <string name="profiles_step_destination">保存先</string>
+    <string name="profiles_step_destination_sub">保存先とその空き容量</string>
+    <string name="profiles_step_options">方法</string>
+    <string name="profiles_step_options_sub">形式、圧縮、暗号化、整合性</string>
+    <string name="profiles_step_schedule">タイミング</string>
+    <string name="profiles_step_schedule_sub">スケジュール、条件、保持</string>
+    <string name="profiles_step_review">確認</string>
+    <string name="profiles_step_review_sub">内容を確認して保存</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">ステップ %1$d/%2$d：%3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">プロファイル名</string>
+    <string name="profiles_field_name_placeholder">例：毎晩の写真</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d 文字</string>
+    <string name="profiles_field_description">説明（任意）</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">プロファイルに名前を付けてください。</string>
+    <string name="profiles_problem_name_too_long">名前が長すぎます。</string>
+    <string name="profiles_problem_name_duplicate">この名前はすでに別のプロファイルで使用されています。</string>
+    <string name="profiles_problem_description_too_long">説明が長すぎます。</string>
+    <string name="profiles_problem_no_targets">パーティション、アプリ、フォルダー、ファイルカテゴリのいずれかを1つ以上選択してください。</string>
+    <string name="profiles_problem_app_no_components">コンポーネントが選択されていないアプリがあります。1つ以上選択するか、そのアプリを削除してください。</string>
+    <string name="profiles_problem_path_invalid">フォルダーは、絶対パス（/ で始まる）か、システムのピッカーで選択したフォルダーである必要があります。</string>
+    <string name="profiles_problem_path_duplicate">同じフォルダーが2回登録されています。</string>
+    <string name="profiles_problem_filter_invalid">フォルダーのフィルターにエラーがあります。開いて修正してください。</string>
+    <string name="profiles_problem_components_unavailable">選択したアプリコンポーネントの一部は現在のモードでは取得できません。モードが対応するまでスキップされます。</string>
+    <string name="profiles_problem_partitions_need_root">パーティションは root モードでのみ読み取れます。現在のモードではスキップされます。</string>
+    <string name="profiles_problem_no_destination">バックアップの保存先を選択してください。</string>
+    <string name="profiles_problem_destination_gone">選択した保存先は存在しなくなりました。別の保存先を選択してください。</string>
+    <string name="profiles_problem_encryption_unsupported">このプロファイルは、DFTB が実行できない暗号化方式を使用していました。暗号化オプションを選択してください。</string>
+    <string name="profiles_problem_transfer_unsupported">この保存先ではリモート圧縮を利用できません。別の転送モードを選択してください。</string>
+    <string name="profiles_problem_vault_key_missing">このプロファイルのデバイスキーが保管庫にありません。保存すると新しいキーが作成され、古いキーで作成したバックアップは復号できなくなります。</string>
+    <string name="profiles_problem_twrp_not_local">TWRP と OrangeFox は、デバイスのストレージと USB ドライブのみを読み取ります。リカバリから復元する前に、これらのバックアップをそこへコピーしてください。</string>
+    <string name="profiles_problem_twrp_no_partitions">TWRP 互換性はパーティションの保存方法のみを変更しますが、このプロファイルにはパーティションがありません。</string>
+    <string name="profiles_problem_interval_invalid">間隔は整数で入力してください。</string>
+    <string name="profiles_problem_schedule_time">時刻が無効です。</string>
+    <string name="profiles_problem_schedule_no_days">曜日を1つ以上選択してください。</string>
+    <string name="profiles_problem_schedule_invalid_day">スケジュールに存在しない曜日が含まれています。</string>
+    <string name="profiles_problem_schedule_interval_short">間隔は、Android の繰り返し処理の最小値である15分以上にする必要があります。</string>
+    <string name="profiles_problem_schedule_battery">バッテリー残量は0～100パーセントの範囲で指定してください。</string>
+    <string name="profiles_problem_keep_last">保持するバックアップの数を入力してください（1以上）。</string>
+    <string name="profiles_problem_max_age">最大保持期間を日数の整数で入力してください（1以上）。</string>
+    <string name="profiles_problem_passphrase_scheduled">スケジュール実行ではパスフレーズを入力できません。実行のたびに、通知とともに入力されるまで待機します。</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">暗号化なし</string>
+    <string name="profiles_key_none_desc">通常のファイルとして保存されます。保存先を開ける人は誰でも読み取れます。</string>
+    <string name="profiles_key_passphrase">パスフレーズ（AES-256-GCM）</string>
+    <string name="profiles_key_passphrase_desc">バックアップと復元のたびに入力します。保存されず、どのデバイスでも復元できます。</string>
+    <string name="profiles_key_vault">デバイスキー（AES-256-GCM）</string>
+    <string name="profiles_key_vault_desc">このデバイスのセキュアな保管庫に保持されるランダムなキーです。完全に自動ですが、このデバイスに紐づきます。</string>
+    <string name="profiles_key_stored">保存済みパスフレーズ（AES-256-GCM）</string>
+    <string name="profiles_key_stored_desc">このプロファイル用に保管庫にすでに保存されているパスフレーズを使用します。</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">TWRP 互換では利用できません。リカバリは、暗号化されていない通常のファイルのみ読み取れます。</string>
+    <string name="profiles_block_mask">暗号化が必要です。暗号化しないと、マニフェストに実際の名前が表示されます。</string>
+    <string name="profiles_block_remote_needs_ssh">SSH または SFTP の保存先でのみ利用できます。</string>
+    <string name="profiles_block_remote_unavailable">まだ利用できません。この SSH 接続にはリモートコマンドチャンネルがありません。</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">毎日</string>
+    <string name="profiles_freq_weekly">毎週</string>
+    <string name="profiles_freq_interval">間隔</string>
+    <string name="profiles_unit_minutes">分</string>
+    <string name="profiles_unit_hours">時間</string>
+    <string name="profiles_slot_title">A/B スロット</string>
+    <string name="profiles_slot_active">アクティブ</string>
+    <string name="profiles_slot_inactive">非アクティブ</string>
+    <string name="profiles_slot_both">両方</string>
+    <string name="profiles_slot_none">スロットなし</string>
+    <string name="profiles_slot_active_desc">デバイスが起動したスロットをイメージ化します。OTA アップデートに自動的に追従します。</string>
+    <string name="profiles_slot_inactive_desc">もう一方のスロットをイメージ化します。例：アップデート後の以前のシステム。</string>
+    <string name="profiles_slot_both_desc">両方のスロットをイメージ化します。サイズは2倍になりますが、完全なフォールバックを保持できます。</string>
+    <string name="profiles_slot_none_desc">A/B コピーを持たないパーティション用です。</string>
+    <string name="profiles_structure_preserve_desc">ファイルのフォルダー構造を維持します。</string>
+    <string name="profiles_structure_categorized_desc">ファイルを種類（画像、動画、ドキュメントなど）ごとにフォルダーへ振り分けます。</string>
+    <string name="profiles_transfer_staging_desc">各ファイルをまずこのデバイス上に作成してからアップロードします。再開可能ですが、ローカルの空き容量が必要です。</string>
+    <string name="profiles_transfer_direct_desc">一時ファイルを使わず、保存先へ直接ストリーミングします。アップロードが中断された場合は、そのファイルを最初からやり直します。</string>
+    <string name="profiles_transfer_remote_desc">生データを SSH 経由で送信し、サーバー側で圧縮します。</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s（%2$d）</string>
+    <string name="profiles_targets_tab_partitions">パーティション</string>
+    <string name="profiles_targets_tab_apps">アプリ</string>
+    <string name="profiles_targets_tab_files">ファイル</string>
+    <string name="profiles_components_title">アプリのコンポーネント</string>
+    <string name="profiles_components_subtitle">新しく選択したアプリの対象：%1$s</string>
+    <string name="profiles_components_none">なし</string>
+    <string name="profiles_components_apply_all">選択したすべてに適用</string>
+    <string name="profiles_components_per_app">アプリごと（%1$d）</string>
+    <string name="profiles_components_per_app_title">アプリごとのコンポーネント</string>
+    <string name="profiles_components_per_app_empty">アプリがまだ選択されていません。</string>
+    <string name="profiles_component_reason">%1$s：%2$s</string>
+    <string name="profiles_remove_app">%1$s を削除</string>
+    <string name="profiles_files_add_title">フォルダー</string>
+    <string name="profiles_files_storage_root">内部ストレージ</string>
+    <string name="profiles_files_pick_folder">フォルダーを選択…</string>
+    <string name="profiles_files_no_picker">このデバイスでは、フォルダーピッカーを利用できません。</string>
+    <string name="profiles_files_path_field">フォルダーのパス</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">まだ一覧にない絶対パスを入力してください。</string>
+    <string name="profiles_files_add">追加</string>
+    <string name="profiles_files_none">フォルダーが選択されていません。</string>
+    <string name="profiles_files_saf_folder">システムのフォルダーピッカーで選択</string>
+    <string name="profiles_files_remove">%1$s を削除</string>
+    <string name="profiles_files_recursive">サブフォルダーを含める</string>
+    <string name="profiles_files_edit_filter">フィルター</string>
+    <string name="profiles_files_readable">%1$s で読み取り可能</string>
+    <string name="profiles_files_tier_hint">%1$s が必要</string>
+    <string name="profiles_files_categories_title">ファイルカテゴリ</string>
+    <string name="profiles_files_categories_sub">標準フォルダー（DCIM、Pictures、Music、Documents など）内の一致するファイル</string>
+    <string name="profiles_files_grant_failed">Android がそのフォルダーへのアクセスを保持しませんでした。スケジュールされたバックアップでは読み取れない可能性があります。</string>
+    <string name="profiles_files_already_added">そのフォルダーはすでに一覧にあります。</string>
+    <string name="profiles_filter_none">フィルターなし：すべてのファイル</string>
+    <string name="profiles_filter_only">%1$s のみ</string>
+    <string name="profiles_filter_except">%1$s を除く</string>
+    <string name="profiles_filter_min">%1$s 以上</string>
+    <string name="profiles_filter_max">%1$s 以下</string>
+    <string name="profiles_filter_after">%1$s 以降に更新</string>
+    <string name="profiles_filter_before">%1$s より前に更新</string>
+    <string name="profiles_filter_regex">パスのパターン</string>
+    <string name="profiles_filter_title">%1$s のフィルター</string>
+    <string name="profiles_filter_save">フィルターを保存</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">保存先はまだありません</string>
+    <string name="profiles_dest_empty_body">保存先を追加してください。このデバイス上のフォルダー、USB ドライブ、ネットワーク共有、クラウドリモートなどが利用できます。</string>
+    <string name="profiles_dest_add">保存先を追加</string>
+    <string name="profiles_dest_space">%2$s 中 %1$s の空き（前回の確認時）</string>
+    <string name="profiles_dest_space_free">%1$s の空き（前回の確認時）</string>
+    <string name="profiles_dest_space_unknown">空き容量は未確認です</string>
+    <string name="profiles_preflight_title">サイズと容量</string>
+    <string name="profiles_preflight_subtitle">このバックアップに必要な容量と、保存先に十分な空きがあるか</string>
+    <string name="profiles_preflight_need_targets">先にバックアップする対象を選択してください。</string>
+    <string name="profiles_preflight_running">選択したソースを計測中…</string>
+    <string name="profiles_preflight_again">再度見積もる</string>
+    <string name="profiles_preflight_failed">見積もりに失敗しました：%1$s</string>
+    <string name="profiles_preflight_stale">前回の見積もり以降に選択内容が変更されました。</string>
+    <string name="profiles_preflight_run">サイズを見積もる</string>
+    <string name="profiles_preflight_size">見積もりサイズ</string>
+    <string name="profiles_preflight_size_approx">約 %1$s</string>
+    <string name="profiles_preflight_items">項目</string>
+    <string name="profiles_preflight_artifacts">書き込まれるファイル</string>
+    <string name="profiles_preflight_unmeasured">計測できませんでした：%1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s、%2$s</string>
+    <string name="profiles_preflight_issue">%1$s：%2$s</string>
+    <string name="profiles_preflight_no_destination">空き容量を確認するには、保存先を選択してください。</string>
+    <string name="profiles_preflight_checking_space">%1$s の空き容量を確認中…</string>
+    <string name="profiles_preflight_check_space">空き容量を確認</string>
+    <string name="profiles_preflight_destination">保存先：%1$s</string>
+    <string name="profiles_preflight_staging">ローカルのステージング（%1$s が必要）</string>
+    <string name="profiles_preflight_enough">十分な空きがあります：%1$s の空き</string>
+    <string name="profiles_preflight_enough_unknown_free">十分な空きがあります</string>
+    <string name="profiles_preflight_short">空き容量が不足しています：あと %1$s 必要です（安全マージンを含む）</string>
+    <string name="profiles_preflight_unknown">空き容量を確認できませんでした。バックアップはそのまま試行されます。</string>
+    <string name="profiles_preflight_unknown_reason">空き容量を確認できませんでした（%1$s）。バックアップはそのまま試行されます。</string>
+    <plurals name="profiles_items">
+        <item quantity="other">%d 項目</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="other">%d 個のファイル</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="other">ほか %d 件</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">リカバリ互換性</string>
+    <string name="profiles_opt_twrp">TWRP 互換</string>
+    <string name="profiles_opt_twrp_hint">パーティションを TWRP / OrangeFox のバックアップフォルダーとして保存し、DFTB なしでリカバリから復元できるようにします。</string>
+    <string name="profiles_opt_twrp_forced">TWRP 互換により強制されます：生コピー、圧縮なし、暗号化なし、名前の秘匿なし。リカバリは通常のファイルのみ読み取れます。</string>
+    <string name="profiles_opt_format_title">形式と圧縮</string>
+    <string name="profiles_opt_tree_format">アーカイブ形式（アプリとファイル）</string>
+    <string name="profiles_opt_7z_hint">7z は、保存前にアーカイブ全体をローカルストレージに作成します。</string>
+    <string name="profiles_opt_raw_hint">ファイルは1つずつコピーされ、それぞれ下のコーデックで圧縮されます。</string>
+    <string name="profiles_opt_images_only">パーティションは常に生イメージとして保存されます。圧縮方式は下で選択してください。</string>
+    <string name="profiles_opt_codec_images">イメージの圧縮（パーティション）</string>
+    <string name="profiles_opt_codec_files">ファイルごとの圧縮</string>
+    <string name="profiles_opt_level">圧縮レベル</string>
+    <string name="profiles_opt_level_value">%1$d（%2$s）</string>
+    <string name="profiles_opt_level_none">ここで選択した内容は圧縮されないため、選択できるレベルはありません。</string>
+    <string name="profiles_opt_level_tree_clamped">アーカイブはレベル %1$d を使用します。これは形式が対応する最高レベルです。</string>
+    <string name="profiles_opt_level_image_clamped">パーティションイメージはレベル %1$d を使用します。これはコーデックが対応する最高レベルです。</string>
+    <string name="profiles_opt_encryption_title">暗号化</string>
+    <string name="profiles_opt_encryption_legacy">「%1$s」で保存されていますが、DFTB は実行できません。下のオプションから選択してください。</string>
+    <string name="profiles_opt_passphrase_warning">スケジュール実行にはあなたの操作が必要です。DFTB はパスフレーズを入力できないため、実行のたびに入力されるまで待機します。</string>
+    <string name="profiles_opt_vault_warning">デバイスに紐づきます。このデバイスが初期化または紛失された場合、あるいは画面ロックが解除された場合、これらのバックアップは、このデバイスでも他のデバイスでも復号できなくなります。</string>
+    <string name="profiles_opt_vault_reused">このプロファイルは既存のデバイスキーを引き続き使用するため、古いバックアップも読み取れます。</string>
+    <string name="profiles_opt_stored_hint">保存済みのパスフレーズは保管庫に残り、無人での実行に使用されます。</string>
+    <string name="profiles_opt_mask">ファイル名を隠す</string>
+    <string name="profiles_opt_mask_hint">名前が暗号化されるため、保存先にはランダムな名前のみが見えます。</string>
+    <string name="profiles_opt_integrity_title">整合性</string>
+    <string name="profiles_opt_checksum">チェックサム</string>
+    <string name="profiles_opt_checksum_weak">MD5 と SHA-1 は偶発的な破損は検出できますが、意図的な改ざんは検出できません。</string>
+    <string name="profiles_opt_verify">バックアップ後に検証</string>
+    <string name="profiles_opt_verify_hint">保存されたすべてのファイルを読み戻して、チェックサムを比較します。</string>
+    <string name="profiles_opt_layout_title">レイアウトと転送</string>
+    <string name="profiles_opt_structure">フォルダー構造</string>
+    <string name="profiles_opt_transfer">転送</string>
+    <string name="profiles_opt_staging_local">保存先がこのデバイス上にある場合、ファイルはその場所に直接書き込まれます（余分なコピーなし）。</string>
+    <string name="profiles_opt_advanced">詳細設定</string>
+    <string name="profiles_opt_posix">所有者とパーミッションを保持</string>
+    <string name="profiles_opt_posix_hint">各ファイルの POSIX の所有者、グループ、モードを記録します。</string>
+    <string name="profiles_opt_selinux">SELinux ラベルを保持</string>
+    <string name="profiles_opt_selinux_hint">SELinux コンテキストを記録します。アプリデータを正しく復元するために必要です。</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">スケジュール</string>
+    <string name="profiles_sched_enable">自動的に実行</string>
+    <string name="profiles_sched_enable_hint">オフの場合、プロファイルは「今すぐバックアップ」をタップしたときのみ実行されます。</string>
+    <string name="profiles_sched_time">時刻</string>
+    <string name="profiles_sched_anchor">開始時刻</string>
+    <string name="profiles_sched_change_time">変更</string>
+    <string name="profiles_sched_pick_time">バックアップ時刻</string>
+    <string name="profiles_sched_days">曜日</string>
+    <string name="profiles_sched_every">間隔</string>
+    <string name="profiles_sched_interval_min">最低 %1$d 分。</string>
+    <string name="profiles_sched_conditions">条件</string>
+    <string name="profiles_sched_unmetered">従量制ではないネットワークのみ</string>
+    <string name="profiles_sched_unmetered_hint">モバイルデータを使わず、Wi-Fi またはイーサネットを待ちます。</string>
+    <string name="profiles_sched_local_no_network">保存先はこのデバイス上にあるため、ネットワークは不要です。</string>
+    <string name="profiles_sched_charging">充電中のみ</string>
+    <string name="profiles_sched_idle">デバイスのアイドル中のみ</string>
+    <string name="profiles_sched_idle_hint">アイドル状態になるまで数時間かかる場合があるため、実行が大幅に遅れることがあります。</string>
+    <string name="profiles_sched_battery">最低バッテリー残量</string>
+    <string name="profiles_sched_battery_value">バッテリー残量 %1$d%% 以上</string>
+    <string name="profiles_sched_catch_up">実行できなかった分を補完</string>
+    <string name="profiles_sched_catch_up_hint">スケジュールされた時刻にデバイスの電源が切れていた場合、その後できるだけ早くバックアップします。</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s～%2$s</string>
+    <string name="profiles_sched_every_day">毎日</string>
+    <string name="profiles_sched_weekdays">平日</string>
+    <string name="profiles_sched_weekends">週末</string>
+    <string name="profiles_sched_daily">毎日 %1$s</string>
+    <string name="profiles_sched_weekly">%1$s の %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">%2$s から %1$s ごと</string>
+    <string name="profiles_sched_cond_charging">充電中</string>
+    <string name="profiles_sched_cond_unmetered">従量制ではないネットワーク</string>
+    <string name="profiles_sched_cond_idle">アイドル中</string>
+    <string name="profiles_sched_cond_battery">バッテリー残量 %1$d%% 以上</string>
+    <string name="profiles_sched_cond_catch_up">実行できなかった分を補完</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">手動のみ</string>
+    <string name="profiles_sched_paused">一時停止中 · %1$s</string>
+    <string name="profiles_sched_invalid">スケジュールの修正が必要です</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="other">%d 分</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="other">%d 時間</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">保持</string>
+    <string name="profiles_retention_keep_last_switch">バックアップの数を制限</string>
+    <string name="profiles_retention_keep_last_field">保持するバックアップ数</string>
+    <string name="profiles_retention_max_age_switch">指定した日数より古いバックアップを削除</string>
+    <string name="profiles_retention_max_age_field">最大保持日数</string>
+    <string name="profiles_retention_note">バックアップが正常に完了するたびに、これらの制限を超えた古いバックアップが保存先から削除されます。正常に完了した最新のバックアップは常に保持されます。</string>
+    <string name="profiles_retention_keep_all">すべてのバックアップを保持</string>
+    <string name="profiles_retention_both">%1$s、%2$s より古いものは保持しない</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="other">直近 %d 件のバックアップを保持</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="other">バックアップを %d 日間保持</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="other">%d 日</item>
+    </plurals>
+    <string name="profiles_retention_apply">今すぐ適用</string>
+    <string name="profiles_retention_preview_title">「%1$s」に保持ルールを適用しますか？</string>
+    <string name="profiles_retention_preview_changed">前回表示した後に一覧が変更されました（バックアップが完了または削除されました）。もう一度確認してください。</string>
+    <string name="profiles_retention_preview_nothing">削除するものはありません。保存されているバックアップはすべて制限内です。</string>
+    <string name="profiles_retention_preview_unlisted">%1$s を一覧表示できませんでした。そこにある、DFTB に記録のないバックアップは対象外としました。</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">保存先は DFTB から削除されています。履歴エントリのみ削除されます</string>
+    <string name="profiles_retention_preview_where">%2$s 上の %1$s</string>
+    <string name="profiles_retention_preview_twrp">あわせて削除：%1$s</string>
+    <string name="profiles_retention_reason_keep_last">保持数の上限を超えています</string>
+    <string name="profiles_retention_reason_max_age">保持期間の上限より古いです</string>
+    <string name="profiles_retention_hold_newest">正常に完了した最新のバックアップは常に保持されます。</string>
+    <string name="profiles_retention_hold_complete">完全に完了した最新のバックアップは保持されます。</string>
+    <string name="profiles_retention_hold_active">実行中または再開可能なバックアップが、まだこれに書き込んでいます。</string>
+    <string name="profiles_retention_hold_unsafe">保存されているパスが安全でない可能性があるため、操作しません。</string>
+    <string name="profiles_retention_hold_twrp">その TWRP フォルダーを特定できませんでした。</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s、%2$s。次回のバックアップ後に再試行されます。</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="other">これら %d 件のバックアップは、保存先から完全に削除されます：</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="other">期限切れのバックアップ %d 件は保持されます：</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="other">%d 件のバックアップを削除</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="other">「%2$s」のバックアップを %1$d 件削除しました</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="other">%d 件は削除できませんでした</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">スケジュールと保持</string>
+    <string name="profiles_schedules_empty">プロファイルはまだありません。</string>
+    <string name="profiles_schedules_group_active">スケジュール済み</string>
+    <string name="profiles_schedules_group_paused">一時停止中</string>
+    <string name="profiles_schedules_group_manual">手動のみ</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">保存前にこれらを修正してください</string>
+    <string name="profiles_review_warnings">ご確認ください</string>
+    <string name="profiles_review_edit">%1$s を編集</string>
+    <string name="profiles_review_fix">%1$s へ移動</string>
+    <string name="profiles_review_partitions">パーティション</string>
+    <string name="profiles_review_components">アプリのコンポーネント</string>
+    <string name="profiles_review_codec">ストリーム圧縮</string>
+    <string name="profiles_event_failed_reason">失敗しました: %1$s</string>
+    <string name="profiles_cd_ok">OK</string>
+    <string name="profiles_wizard_saved_not_scheduled">保存しましたが、スケジュールを設定できませんでした。プロファイルをもう一度開いて再試行してください。</string>
+    <string name="profiles_wizard_saved_not_started">保存しましたが、バックアップを開始できませんでした。リストの「今すぐバックアップ」を使用してください。</string>
+</resources>

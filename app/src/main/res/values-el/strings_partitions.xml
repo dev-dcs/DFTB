@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="partition_view_standard">Τυπική</string>
+    <string name="partition_view_standard_summary">Οι κατατμήσεις που αποθηκεύουν οι περισσότεροι: εικόνες εκκίνησης, δεδομένα επαληθευμένης εκκίνησης, modem και ταυτότητα συσκευής.</string>
+    <string name="partition_view_advanced">Για προχωρημένους</string>
+    <string name="partition_view_advanced_summary">Όλες οι κατατμήσεις της συσκευής, συμπεριλαμβανομένων των λογικών κατατμήσεων συστήματος. Ελέγξτε κάθε ετικέτα κινδύνου πριν από την επιλογή.</string>
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">Χωρίς slot</string>
+    <string name="partition_slot_active_marker">Ενεργό</string>
+    <string name="partition_category_boot_chain">Αλυσίδα εκκίνησης</string>
+    <string name="partition_category_firmware">Υλικολογισμικό</string>
+    <string name="partition_category_modem">Modem</string>
+    <string name="partition_category_userdata">Δεδομένα χρήστη</string>
+    <string name="partition_category_system_logical">Σύστημα (λογική)</string>
+    <string name="partition_category_persist_identity">Ταυτότητα και βαθμονόμηση συσκευής</string>
+    <string name="partition_category_other">Άλλο</string>
+    <string name="partition_risk_safe">Ασφαλές για δημιουργία εικόνας</string>
+    <string name="partition_risk_huge">Πολύ μεγάλο</string>
+    <string name="partition_risk_huge_summary">Αυτή η κατάτμηση είναι πολλά gigabyte. Βεβαιωθείτε ότι ο προορισμός έχει αρκετό χώρο.</string>
+    <string name="partition_risk_critical">Μοναδικό για αυτήν τη συσκευή</string>
+    <string name="partition_risk_critical_summary">Περιέχει δεδομένα ταυτότητας ή βαθμονόμησης (IMEI, ραδιόφωνο, κλειδιά). Φυλάξτε αυτό το αντίγραφο με ασφάλεια και μην το επαναφέρετε ποτέ σε άλλη συσκευή.</string>
+    <string name="partition_logical_badge">Λογική</string>
+    <string name="partition_unavailable_root_required">Τα αντίγραφα κατατμήσεων απαιτούν λειτουργία Root. Μεταβείτε σε λειτουργία Root στις Ρυθμίσεις για να σαρώσετε κατατμήσεις.</string>
+    <string name="partition_unavailable_root_not_granted">Η πρόσβαση root δεν έχει χορηγηθεί αυτή τη στιγμή. Χορηγήστε πρόσβαση υπερχρήστη στο DFTB και σαρώστε ξανά.</string>
+    <string name="partition_unavailable_scan_failed">Η σάρωση κατατμήσεων δεν μπόρεσε να εκτελεστεί. Δοκιμάστε ξανά.</string>
+    <string name="partition_unavailable_none_found">Δεν βρέθηκαν κατατμήσεις σε αυτήν τη συσκευή.</string>
+    <string name="partition_warning_no_by_name">Δεν βρέθηκε κατάλογος κατατμήσεων by-name· εμφανίζονται μόνο οι λογικές κατατμήσεις.</string>
+    <string name="partition_warning_by_name_conflict">Ορισμένα ονόματα κατατμήσεων δείχνουν σε διαφορετικές συσκευές σε διαφορετικούς καταλόγους: %1$s</string>
+    <string name="partition_warning_sizes_incomplete">Το μέγεθος ορισμένων κατατμήσεων δεν ήταν δυνατό να διαβαστεί: %1$s</string>
+    <string name="partition_warning_active_slot_unknown">Αυτή είναι συσκευή A/B, αλλά δεν ήταν δυνατός ο προσδιορισμός του ενεργού slot.</string>
+    <string name="partition_warning_dm_names_unavailable">Αυτή η συσκευή χρησιμοποιεί δυναμικές κατατμήσεις, αλλά τα λογικά ονόματά τους δεν ήταν δυνατό να διαβαστούν.</string>
+    <string name="partition_warning_script_partial">Η σάρωση ανέφερε σφάλματα· η λίστα μπορεί να είναι ελλιπής.</string>
+    <string name="partition_warning_unresolved_links">Ορισμένοι σύνδεσμοι κατατμήσεων δεν ήταν δυνατό να επιλυθούν: %1$s</string>
+    <string name="partition_resolution_not_found">Η κατάτμηση %1$s δεν υπάρχει σε αυτήν τη συσκευή.</string>
+    <string name="partition_resolution_active_slot_unknown">Δεν είναι δυνατή η επιλογή slot για το %1$s επειδή το ενεργό slot είναι άγνωστο.</string>
+    <string name="partition_resolution_slot_missing">Το ζητούμενο slot του %1$s δεν υπάρχει σε αυτήν τη συσκευή.</string>
+    <string name="partition_scan_rescan">Νέα σάρωση</string>
+
+</resources>

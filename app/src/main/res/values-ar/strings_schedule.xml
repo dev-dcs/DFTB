@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for scheduled backups, the background backup worker, checkpoint resume
+  and retention. Kept in their own file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Foreground notification of the backup worker -->
+    <string name="schedule_fg_title">جارٍ نسخ %1$s احتياطيًا</string>
+    <string name="schedule_fg_text_scheduled">النسخ الاحتياطي المجدول قيد التنفيذ</string>
+    <string name="schedule_fg_text_manual">النسخ الاحتياطي قيد التنفيذ</string>
+    <string name="schedule_fg_text_resume">جارٍ متابعة نسخة احتياطية انقطعت</string>
+
+    <!-- Unattended runs that need the user -->
+    <string name="schedule_passphrase_title">مطلوب عبارة مرور لـ \"%1$s\"</string>
+    <string name="schedule_passphrase_text">هذه النسخة الاحتياطية مشفرة بعبارة مرور لا يخزنها DFTB، لذا لا يمكن تشغيلها دون تدخل. افتح DFTB لإدخالها والمتابعة.</string>
+    <string name="schedule_failed_title">فشل النسخ الاحتياطي المجدول لـ \"%1$s\"</string>
+    <string name="schedule_failed_text_generic">تعذّر تشغيل النسخ الاحتياطي. افتح DFTB للاطلاع على التفاصيل.</string>
+
+    <!-- Interrupted jobs found after a reboot -->
+    <string name="schedule_restore_interrupted_title">انقطعت الاستعادة</string>
+    <string name="schedule_restore_interrupted_text">توقفت استعادة قبل أن تنتهي. لا تُعاد الاستعادة تلقائيًا أبدًا؛ افتح DFTB لتشغيلها مرة أخرى.</string>
+    <string name="schedule_job_interrupted_title">انقطع %1$s</string>
+    <string name="schedule_job_interrupted_text">توقفت هذه المهمة قبل أن تنتهي. افتح DFTB لتشغيلها مرة أخرى.</string>
+</resources>

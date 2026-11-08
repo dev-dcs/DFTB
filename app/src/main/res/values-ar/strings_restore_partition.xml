@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition restore (core/restore/partition) and TWRP/OrangeFox import (core/restore/twrp). -->
+<resources>
+
+    <!-- Environment and target resolution -->
+    <string name="partition_restore_root_required">تتطلب استعادة الأقسام وضع Root مع منح صلاحية المستخدم المتميز.</string>
+    <string name="partition_restore_scan_failed">تعذّرت قراءة تخطيط الأقسام لهذا الجهاز (%1$s).</string>
+    <string name="partition_restore_not_partition_artifact">%1$s ليس صورة قسم.</string>
+    <string name="partition_restore_slot_device_not_ab">أُنشئت صورة %1$s من slot A/B لكن هذا الجهاز لا يملك slots.</string>
+    <string name="partition_restore_slot_unknown">لم يبلغ هذا الجهاز عن الـ slot النشط، لذا لا يمكن اختيار الـ slot الهدف لـ %1$s.</string>
+    <string name="partition_restore_not_found">لا يوجد قسم باسم %1$s على هذا الجهاز.</string>
+    <string name="partition_restore_slot_missing">%1$s موجود على هذا الجهاز لكن ليس في الـ slot المطلوب. تُربط الأقسام المنطقية للـ slot غير النشط أثناء التحديث فقط؛ استعدها من recovery أو fastbootd.</string>
+    <string name="partition_restore_slot_layout">أُنشئت صورة %1$s من قسم بلا slots، لكنه يُحَلّ إلى slot A/B على هذا الجهاز.</string>
+    <string name="partition_restore_probe_failed">تعذّر فحص %1$s قبل الكتابة، لذا لم يُكتب شيء.</string>
+
+    <!-- Safety gates: %1$s = partition, %2$s = technical detail -->
+    <string name="partition_gate_device_mismatch">أُنشئت صورة %1$s على جهاز آخر (%2$s). كتابتها هنا قد تمنع هذا الجهاز من الإقلاع.</string>
+    <string name="partition_gate_build_mismatch">أُنشئت صورة %1$s على إصدار برمجي مختلف (%2$s). أكّد لاستعادة صورة من إصدار آخر.</string>
+    <string name="partition_gate_cross_slot">سيُكتب %1$s إلى slot مختلف عن الذي أُنشئت منه الصورة. أكّد للكتابة عبر الـ slots.</string>
+    <string name="partition_gate_image_smaller">صورة %1$s أصغر من القسم (%2$s بايت). أكّد لترك بقية القسم دون تغيير.</string>
+    <string name="partition_gate_critical_identity">يحتوي %1$s على بيانات هوية أو معايرة فريدة للجهاز. استعادة نسخة خاطئة قد تعطّل الراديو أو IMEI أو DRM بشكل دائم. أكّد للكتابة.</string>
+    <string name="partition_gate_image_larger">صورة %1$s أكبر من القسم (%2$s بايت) ولا يمكن كتابتها.</string>
+    <string name="partition_gate_target_size_unknown">تعذّرت قراءة الحجم الدقيق لـ %1$s، لذا رُفضت الكتابة.</string>
+    <string name="partition_gate_not_block_device">%1$s (%2$s) ليس جهاز كتل.</string>
+    <string name="partition_gate_live_system">%1$s مستخدم من النظام العامل. استعده من recovery (TWRP / OrangeFox) أو fastboot بدلًا من ذلك.</string>
+    <string name="partition_gate_mounted">%1$s مركّب (%2$s). ألغِ تركيبه أولًا أو استعده من recovery.</string>
+    <string name="partition_gate_swap">%1$s قيد الاستخدام كمساحة swap.</string>
+    <string name="partition_gate_held">%1$s قيد الاستخدام من %2$s (device-mapper). استعده من recovery.</string>
+    <string name="partition_gate_snapshot">%1$s جهاز لقطة A/B افتراضي ولا يكون هدف استعادة أبدًا.</string>
+    <string name="partition_gate_read_only">%1$s للقراءة فقط.</string>
+    <string name="partition_gate_overridden">تجاوز مؤكَّد: %1$s</string>
+
+    <!-- Writing and verification -->
+    <string name="partition_restore_item_verifying_image">جارٍ فحص صورة %1$s</string>
+    <string name="partition_restore_item_writing">جارٍ كتابة %1$s</string>
+    <string name="partition_restore_item_reading_back">جارٍ التحقق من %1$s على الجهاز</string>
+    <string name="partition_restore_image_digest_mismatch">صورة %1$s لا تطابق المجموع الاختباري المسجّل. لم يُكتب شيء.</string>
+    <string name="partition_restore_image_read_failed">تعذّرت قراءة صورة %1$s (%2$s). لم يُكتب شيء.</string>
+    <string name="partition_restore_no_reference_digest">لم يُسجَّل مجموع اختباري لـ %1$s؛ سيُتحقق منه مقابل الصورة المقروءة من النسخة الاحتياطية.</string>
+    <string name="partition_restore_refused_by_helper">رُفضت الكتابة إلى %1$s قبل كتابة أي بيانات (%2$s).</string>
+    <string name="partition_restore_partial_write">فشلت الكتابة إلى %1$s بعد %2$s بايت (%3$s). القسم مكتوب جزئيًا الآن. لا تعد التشغيل قبل استعادته بشكل صحيح، مثلًا من recovery أو fastboot.</string>
+    <string name="partition_restore_source_changed">تغيّرت صورة %1$s أثناء كتابتها. يحتوي القسم على بيانات غير مُتحقَّق منها؛ استعده مرة أخرى قبل إعادة التشغيل.</string>
+    <string name="partition_restore_readback_mismatch">القراءة المرتجعة لـ %1$s لا تطابق الصورة (المتوقع %2$s، المقروء %3$s). يحتوي القسم على بيانات تالفة؛ استعده مرة أخرى قبل إعادة التشغيل.</string>
+    <string name="partition_restore_readback_failed">كُتب %1$s لكن تعذّرت قراءته للتحقق (%2$s).</string>
+
+    <!-- TWRP / OrangeFox import -->
+    <string name="twrp_folder_not_found">لم يُعثر على نسخة TWRP احتياطية في %1$s.</string>
+    <string name="twrp_encrypted_unsupported">%1$s مشفّر بكلمة مرور نسخ TWRP الاحتياطي. لا يستطيع DFTB فك تشفير نسخ TWRP؛ استعده من TWRP.</string>
+    <string name="twrp_filesystem_restore_refused">%1$s نسخة احتياطية قائمة على الملفات لـ /%2$s. لا يمكن استعادتها في مكانها من Android العامل؛ استعدها من recovery (TWRP / OrangeFox) أو فك ملفاتها إلى مجلد.</string>
+    <string name="twrp_split_image_unsupported">%1$s صورة خام مقسّمة إلى عدة ملفات، وهو ما لا ينتجه TWRP أبدًا، لذا لا تُستعاد.</string>
+    <string name="twrp_not_raw_image">%1$s ليس صورة قسم خام.</string>
+    <string name="twrp_not_archive">%1$s صورة قسم خام وليس أرشيف ملفات.</string>
+    <string name="twrp_unknown_format">%1$s ليس أرشيف tar ولا أرشيف tar مضغوطًا بـ gzip ولا يمكن فكه.</string>
+    <string name="twrp_sidecar_mismatch">%1$s لا يطابق ملف المجموع الاختباري %2$s. لم يُكتب شيء.</string>
+    <string name="twrp_sidecar_missing">لا يملك %1$s ملف مجموع اختباري، لذا لا يمكن التحقق منه إلا بعد الكتابة.</string>
+    <string name="twrp_sidecar_unreadable">تعذّرت قراءة ملف المجموع الاختباري %1$s.</string>
+    <string name="twrp_split_gap">الأرشيف المقسّم %1$s غير مكتمل: الجزء %2$s مفقود.</string>
+    <string name="twrp_extract_skipped_links">لم يتم فك %1$d من الروابط أو الملفات الخاصة في %2$s (لا يستطيع المجلد تخزينها).</string>
+    <string name="twrp_extract_unsafe_entries">تم تخطي %1$d من العناصر ذات المسارات غير الآمنة في %2$s.</string>
+    <string name="twrp_extract_digest_mismatch">%1$s لا يطابق ملف المجموع الاختباري %2$s؛ قد تكون الملفات المفكوكة تالفة.</string>
+    <string name="twrp_extract_failed">فشل فك %1$s (%2$s).</string>
+    <string name="twrp_read_failed">تعذّرت قراءة %1$s (%2$s).</string>
+</resources>

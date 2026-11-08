@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition discovery (core/discovery/partition): categories, risk levels, views, scan
+     availability, scan warnings and target resolution failures. -->
+<resources>
+
+    <!-- Views -->
+    <string name="partition_view_standard">標準</string>
+    <string name="partition_view_standard_summary">多くの人がバックアップするパーティション：ブートイメージ、検証済みブートデータ、モデム、デバイス ID。</string>
+    <string name="partition_view_advanced">詳細</string>
+    <string name="partition_view_advanced_summary">論理システムパーティションを含む、デバイス上のすべてのパーティション。選択する前に各リスクラベルを確認してください。</string>
+
+    <!-- Slots -->
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">slot なし</string>
+    <string name="partition_slot_active_marker">アクティブ</string>
+
+    <!-- Categories -->
+    <string name="partition_category_boot_chain">ブートチェーン</string>
+    <string name="partition_category_firmware">ファームウェア</string>
+    <string name="partition_category_modem">モデム</string>
+    <string name="partition_category_userdata">ユーザーデータ</string>
+    <string name="partition_category_system_logical">システム（論理）</string>
+    <string name="partition_category_persist_identity">デバイス ID とキャリブレーション</string>
+    <string name="partition_category_other">その他</string>
+
+    <!-- Risk -->
+    <string name="partition_risk_safe">イメージ化しても安全</string>
+    <string name="partition_risk_huge">非常に大きい</string>
+    <string name="partition_risk_huge_summary">このパーティションは数 GB あります。保存先に十分な空き容量があることを確認してください。</string>
+    <string name="partition_risk_critical">このデバイス固有</string>
+    <string name="partition_risk_critical_summary">ID またはキャリブレーションデータ（IMEI、無線、鍵）を含みます。このバックアップは安全に保管し、別のデバイスには決して復元しないでください。</string>
+    <string name="partition_logical_badge">論理</string>
+
+    <!-- Unavailable -->
+    <string name="partition_unavailable_root_required">パーティションのバックアップには Root モードが必要です。パーティションをスキャンするには、設定で Root モードに切り替えてください。</string>
+    <string name="partition_unavailable_root_not_granted">現在 Root 権限が付与されていません。DFTB にスーパーユーザー権限を付与してから再スキャンしてください。</string>
+    <string name="partition_unavailable_scan_failed">パーティションスキャンを実行できませんでした。もう一度お試しください。</string>
+    <string name="partition_unavailable_none_found">このデバイスでパーティションが見つかりませんでした。</string>
+
+    <!-- Warnings -->
+    <string name="partition_warning_no_by_name">by-name パーティションディレクトリが見つからないため、論理パーティションのみ表示しています。</string>
+    <string name="partition_warning_by_name_conflict">一部のパーティション名が、ディレクトリによって異なるデバイスを指しています：%1$s</string>
+    <string name="partition_warning_sizes_incomplete">一部のパーティションのサイズを読み取れませんでした：%1$s</string>
+    <string name="partition_warning_active_slot_unknown">これは A/B デバイスですが、アクティブな slot を特定できませんでした。</string>
+    <string name="partition_warning_dm_names_unavailable">このデバイスは動的パーティションを使用していますが、論理名を読み取れませんでした。</string>
+    <string name="partition_warning_script_partial">スキャンでエラーが報告されました。一覧が不完全な場合があります。</string>
+    <string name="partition_warning_unresolved_links">一部のパーティションリンクを解決できませんでした：%1$s</string>
+
+    <!-- Resolution failures -->
+    <string name="partition_resolution_not_found">このデバイスにパーティション %1$s は存在しません。</string>
+    <string name="partition_resolution_active_slot_unknown">アクティブな slot が不明なため、%1$s の slot を選択できません。</string>
+    <string name="partition_resolution_slot_missing">要求された %1$s の slot はこのデバイスに存在しません。</string>
+
+    <!-- Scan status -->
+    <string name="partition_scan_rescan">再スキャン</string>
+</resources>

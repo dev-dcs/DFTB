@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">远程同步</string>
+    <string name="provision_feature_archiving">归档</string>
+    <string name="provision_feature_compression">压缩</string>
+    <string name="provision_feature_encryption">加密</string>
+    <string name="provision_feature_core_utilities">核心工具</string>
+    <string name="provision_feature_integrity">完整性</string>
+    <string name="provision_tool_rclone_purpose">将备份与 S3、WebDAV、SFTP 等云端和网络远程存储相互同步。</string>
+    <string name="provision_tool_busybox_purpose">提供 POSIX 核心工具，并在各设备上保持一致的选项。</string>
+    <string name="provision_tool_zstd_purpose">快速的 Zstandard 压缩与解压，用于归档。</string>
+    <string name="provision_tool_xz_purpose">高压缩率的 XZ/LZMA 压缩，用于归档。</string>
+    <string name="provision_tool_pigz_purpose">并行 gzip 压缩，可利用多个 CPU 核心。</string>
+    <string name="provision_tool_openssl_purpose">使用对称密码加密和解密备份归档。</string>
+    <string name="provision_tool_tar_purpose">以流方式将文件写入和读出 POSIX tar 归档，并保留元数据。</string>
+    <string name="provision_tool_dftbtool_purpose">内置辅助工具，用于计算哈希和复制文件，以验证此设备上的解压并执行流程可正常运行。</string>
+    <string name="provision_tool_nsenter_purpose">进入宿主机的挂载、PID 等命名空间，使备份在 root 权限下能看到真实的系统挂载。</string>
+</resources>
