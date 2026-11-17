@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore engine (core/restore): progress, results, failures and per-file problems shown in
+     notifications, History and the restore screens. Technical detail stays in English and is
+     appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="restore_engine_opening">Reading the backup…</string>
+    <string name="restore_engine_preflight">Checking what can be restored…</string>
+    <string name="restore_engine_verifying">Verifying the backup before restoring…</string>
+    <string name="restore_engine_restoring">Restoring %1$s…</string>
+
+    <!-- Results -->
+    <plurals name="restore_engine_completed">
+        <item quantity="one">%1$d item restored.</item>
+        <item quantity="other">%1$d items restored.</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="one">%1$d warning.</item>
+        <item quantity="other">%1$d warnings.</item>
+    </plurals>
+    <string name="restore_engine_cancelled">Restore stopped. Files restored so far were kept.</string>
+
+    <!-- Failures (RestoreErrorCode) -->
+    <string name="restore_engine_error_destination">The destination of this backup no longer exists.</string>
+    <string name="restore_engine_error_open">The backup could not be read.</string>
+    <string name="restore_engine_error_key_required">This backup is encrypted. Enter its passphrase or key.</string>
+    <string name="restore_engine_error_wrong_key">Wrong passphrase or key for this backup.</string>
+    <string name="restore_engine_error_unsupported">This backup was made in a way this version of DFTB cannot restore.</string>
+    <string name="restore_engine_error_nothing">Nothing is selected to restore.</string>
+    <string name="restore_engine_error_blocked">None of the selected items can be restored in the current mode.</string>
+    <string name="restore_engine_error_space">Not enough free space to restore.</string>
+    <string name="restore_engine_error_verify">The backup is damaged; nothing was restored.</string>
+    <string name="restore_engine_error_all_failed">Every selected item failed to restore.</string>
+    <string name="restore_engine_error_internal">The restore stopped because of an unexpected error.</string>
+
+    <!-- Unit-level notices -->
+    <string name="restore_engine_no_app_restorer">Restoring apps is not available in this version.</string>
+    <string name="restore_engine_no_partition_restorer">Restoring partitions is not available in this version.</string>
+    <string name="restore_engine_unit_blocked">%1$s cannot be restored: %2$s</string>
+    <string name="restore_engine_space_unknown">Free space for %1$s is unknown; the restore may run out of room.</string>
+    <string name="restore_engine_space_overridden">%1$s: restoring although %2$s more space is needed.</string>
+    <string name="restore_engine_cross_device">This backup comes from a %1$s; this device is a %2$s.</string>
+    <string name="restore_engine_resume_skipped">%1$s was already restored and is skipped.</string>
+    <string name="restore_engine_partial_backup">This backup did not finish; only the items it contains can be restored.</string>
+    <string name="restore_engine_checkpoint_failed">Restore progress could not be saved; an interrupted restore will start over.</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="one">…and %1$d more problem.</item>
+        <item quantity="other">…and %1$d more problems.</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="one">%1$d file has no known original location and was not restored. Restore it to a folder instead.</item>
+        <item quantity="other">%1$d files have no known original location and were not restored. Restore them to a folder instead.</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="one">%1$d existing file was kept.</item>
+        <item quantity="other">%1$d existing files were kept.</item>
+    </plurals>
+
+    <!-- File unit failures (FileRestoreError) -->
+    <string name="restore_file_error_original_unknown">The backup does not record where these files came from. Restore them to a folder.</string>
+    <string name="restore_file_error_target">The restore folder cannot be opened.</string>
+    <string name="restore_file_error_no_privilege">DFTB cannot write to this folder in the current mode. Choose another folder or switch to Shizuku or root.</string>
+    <string name="restore_file_error_saf">Access to the chosen folder was removed. Pick the folder again.</string>
+    <string name="restore_file_error_twrp_folder">TWRP archives can only be unpacked into a chosen folder, never over the running system.</string>
+    <string name="restore_file_error_corrupt">The backup data is damaged.</string>
+    <string name="restore_file_error_no_space">The restore folder is full.</string>
+    <string name="restore_file_error_archive">The archive could not be read.</string>
+    <string name="restore_file_error_storage">The destination could not be read.</string>
+
+    <!-- Per-file problems (ExtractIssueCode) -->
+    <string name="restore_issue_unsafe_path">unsafe path refused</string>
+    <string name="restore_issue_through_symlink">refused: it would be written through a symbolic link</string>
+    <string name="restore_issue_parent_not_dir">a file is in the way of its folder</string>
+    <string name="restore_issue_directory_in_the_way">a folder with the same name exists</string>
+    <string name="restore_issue_skipped_existing">kept the existing file</string>
+    <string name="restore_issue_symlink_unsupported">symbolic links are not supported in this folder</string>
+    <string name="restore_issue_hardlink_unsupported">hard links are not supported in this folder</string>
+    <string name="restore_issue_hardlink_missing">the file this link points to was not restored</string>
+    <string name="restore_issue_special_skipped">special file (pipe or device) skipped</string>
+    <string name="restore_issue_digest_mismatch">restored bytes do not match the backup; the file was not written</string>
+    <string name="restore_issue_write_failed">could not be written</string>
+    <string name="restore_issue_metadata_failed">date, owner or permissions could not be restored</string>
+</resources>

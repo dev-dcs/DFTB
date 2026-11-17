@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FTP/FTPS and WebDAV destination settings (core/storage/ftp, core/storage/webdav).
+     Labels for the protocol-specific DestinationConfig.options keys. -->
+<resources>
+
+    <!-- FTPS mode (option "ftps_mode") -->
+    <string name="net_storage_ftps_mode_label">FTPS モード</string>
+    <string name="net_storage_ftps_mode_explicit">明示的（AUTH TLS、通常はポート 21）</string>
+    <string name="net_storage_ftps_mode_implicit">暗黙的（接続時から TLS、通常はポート 990）</string>
+
+    <!-- WebDAV scheme (option "scheme") -->
+    <string name="net_storage_webdav_scheme_label">プロトコル</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS（暗号化）</string>
+    <string name="net_storage_webdav_scheme_http">HTTP（暗号化なし）</string>
+    <string name="net_storage_webdav_host_hint">サーバー名、または https://cloud.example.com/remote.php/dav/files/me のような完全な URL</string>
+    <string name="net_storage_webdav_http_warning">パスワードが暗号化されずに送信されます。完全に信頼できるネットワーク上のサーバーでない限り、HTTPS を使用してください。</string>
+    <string name="net_storage_webdav_auth_note">ユーザー名とパスワード（HTTP Basic）またはアプリトークンでサインインします。Digest 認証には対応していません。</string>
+
+    <!-- Timeouts (options "connect_timeout_s", "data_timeout_s", "io_timeout_s") -->
+    <string name="net_storage_connect_timeout_label">接続タイムアウト（秒）</string>
+    <string name="net_storage_io_timeout_label">転送タイムアウト（秒）</string>
+
+    <!-- Certificate pinning (option "tls_pin_sha256") -->
+    <string name="net_storage_tls_pin_label">信頼する証明書のフィンガープリント（SHA-256）</string>
+    <string name="net_storage_tls_pin_hint">任意。自己署名証明書を信頼するには、サーバー証明書の SHA-256 フィンガープリントを貼り付けてください。</string>
+    <string name="net_storage_tls_pin_invalid">フィンガープリントは 16 進数 64 文字にしてください。</string>
+
+    <!-- FTPS data-channel hint -->
+    <string name="net_storage_ftps_session_reuse_hint">サーバーが暗号化データ接続を拒否しました。TLS セッション再利用が必須の場合（例：vsftpd の require_ssl_reuse）は、サーバー側でそのオプションをオフにしてください。</string>
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for installed-app discovery (app picker, size estimates, component
+  availability). Kept in their own file per project convention. English base.
+-->
+<resources>
+    <!-- App kinds -->
+    <string name="apps_kind_user">User app</string>
+    <string name="apps_kind_system">System app</string>
+    <string name="apps_kind_updated_system">Updated system app</string>
+
+    <!-- Size sources -->
+    <string name="apps_size_source_stats">Sizes reported by Android storage statistics</string>
+    <string name="apps_size_source_du">Sizes measured on disk</string>
+    <string name="apps_size_source_apk_only">Only APK sizes are known</string>
+
+    <!-- Component availability -->
+    <string name="apps_avail_available">Available</string>
+    <string name="apps_avail_needs_root">Needs Root mode</string>
+    <string name="apps_avail_shizuku_adb_private">Shizuku is running through ADB, which cannot read private app data. Use Root mode, or start Shizuku with root.</string>
+    <string name="apps_avail_needs_shizuku_or_root">Needs Shizuku or Root mode on Android 11 and later</string>
+    <string name="apps_avail_needs_legacy_storage">Needs storage permission with legacy storage access</string>
+    <string name="apps_avail_needs_install_all_files">Needs \"Install unknown apps\" and \"All files access\" for DFTB, or Shizuku or Root mode</string>
+    <string name="apps_avail_elevation_unavailable">The selected Shizuku or Root mode is not available right now</string>
+
+    <!-- Scan warnings -->
+    <string name="apps_warn_limited_visibility">DFTB cannot see every installed app on this device; the list may be incomplete.</string>
+    <string name="apps_warn_usage_access">Usage access is not granted, so only APK sizes are shown. Grant it in Settings to see data sizes.</string>
+    <string name="apps_warn_list_failed">Could not read the list of installed apps.</string>
+    <string name="apps_warn_package_failed">Could not read details of %1$s.</string>
+    <string name="apps_warn_stats_failed">Could not read storage statistics for %1$s.</string>
+    <string name="apps_warn_shell_unavailable">The Shizuku or Root shell is not available; sizes fall back to what Android reports.</string>
+    <string name="apps_warn_shell_failed">Measuring app data through the shell failed.</string>
+    <string name="apps_warn_data_unreadable">Some data folders of %1$s could not be read.</string>
+
+    <!-- Special handling -->
+    <string name="apps_flag_split">Split APK</string>
+    <string name="apps_flag_obb">Has OBB files</string>
+    <string name="apps_flag_self">This is DFTB</string>
+    <string name="apps_flag_root_manager">Root manager: restoring its data can break root</string>
+    <string name="apps_flag_critical_system">Core system package: restoring its data can make the device unstable</string>
+    <string name="apps_flag_no_allow_backup">The developer opted out of backups</string>
+    <string name="apps_flag_debuggable">Debuggable build</string>
+    <string name="apps_flag_apex">System module (APEX)</string>
+</resources>

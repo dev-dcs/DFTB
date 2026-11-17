@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for installed-app discovery (app picker, size estimates, component
+  availability). Kept in their own file per project convention. English base.
+-->
+<resources>
+    <!-- App kinds -->
+    <string name="apps_kind_user">تطبيق مستخدم</string>
+    <string name="apps_kind_system">تطبيق نظام</string>
+    <string name="apps_kind_updated_system">تطبيق نظام محدَّث</string>
+
+    <!-- Size sources -->
+    <string name="apps_size_source_stats">الأحجام وفق إحصاءات تخزين Android</string>
+    <string name="apps_size_source_du">الأحجام مقيسة على القرص</string>
+    <string name="apps_size_source_apk_only">أحجام APK فقط معروفة</string>
+
+    <!-- Component availability -->
+    <string name="apps_avail_available">متاح</string>
+    <string name="apps_avail_needs_root">يتطلب وضع Root</string>
+    <string name="apps_avail_shizuku_adb_private">يعمل Shizuku عبر ADB ولا يستطيع قراءة البيانات الخاصة بالتطبيقات. استخدم وضع Root أو شغّل Shizuku بصلاحية root.</string>
+    <string name="apps_avail_needs_shizuku_or_root">يتطلب Shizuku أو وضع Root على Android 11 فما فوق</string>
+    <string name="apps_avail_needs_legacy_storage">يتطلب إذن التخزين مع الوصول القديم إلى التخزين</string>
+    <string name="apps_avail_needs_install_all_files">يتطلب \"تثبيت التطبيقات غير المعروفة\" و\"الوصول إلى جميع الملفات\" لـ DFTB، أو Shizuku أو وضع Root</string>
+    <string name="apps_avail_elevation_unavailable">وضع Shizuku أو Root المحدد غير متاح حاليًا</string>
+
+    <!-- Scan warnings -->
+    <string name="apps_warn_limited_visibility">لا يستطيع DFTB رؤية كل التطبيقات المثبّتة على هذا الجهاز؛ قد تكون القائمة ناقصة.</string>
+    <string name="apps_warn_usage_access">لم يُمنح الوصول إلى بيانات الاستخدام، لذا تُعرض أحجام APK فقط. امنحه من الإعدادات لعرض أحجام البيانات.</string>
+    <string name="apps_warn_list_failed">تعذّرت قراءة قائمة التطبيقات المثبّتة.</string>
+    <string name="apps_warn_package_failed">تعذّرت قراءة تفاصيل %1$s.</string>
+    <string name="apps_warn_stats_failed">تعذّرت قراءة إحصاءات التخزين لـ %1$s.</string>
+    <string name="apps_warn_shell_unavailable">صدفة Shizuku أو Root غير متاحة؛ سيُستخدم ما يبلغ عنه Android للأحجام.</string>
+    <string name="apps_warn_shell_failed">فشل قياس بيانات التطبيق عبر الصدفة.</string>
+    <string name="apps_warn_data_unreadable">تعذّرت قراءة بعض مجلدات البيانات لـ %1$s.</string>
+
+    <!-- Special handling -->
+    <string name="apps_flag_split">APK مقسَّم</string>
+    <string name="apps_flag_obb">يحتوي على ملفات OBB</string>
+    <string name="apps_flag_self">هذا هو DFTB</string>
+    <string name="apps_flag_root_manager">مدير Root: قد تؤدي استعادة بياناته إلى تعطيل root</string>
+    <string name="apps_flag_critical_system">حزمة نظام أساسية: قد تؤدي استعادة بياناتها إلى عدم استقرار الجهاز</string>
+    <string name="apps_flag_no_allow_backup">اختار المطوّر عدم السماح بالنسخ الاحتياطي</string>
+    <string name="apps_flag_debuggable">إصدار قابل لتصحيح الأخطاء</string>
+    <string name="apps_flag_apex">وحدة نظام (APEX)</string>
+</resources>

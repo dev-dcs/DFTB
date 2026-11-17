@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">ダッシュボード</string>
+    <string name="shell_nav_profiles">プロファイル</string>
+    <string name="shell_nav_restore">復元</string>
+    <string name="shell_nav_destinations">保存先</string>
+    <string name="shell_nav_settings">設定</string>
+    <string name="shell_back">戻る</string>
+    <string name="shell_more_options">その他のオプション</string>
+    <string name="shell_state_on">オン</string>
+    <string name="shell_state_off">オフ</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s のインストールの確認をお待ちしています。</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="other">%1$s ほか %2$d 件のアプリのインストールの確認をお待ちしています。</item>
+    </plurals>
+    <string name="shell_install_review">確認</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">ダッシュボード</string>
+    <string name="shell_open_job_monitor">ジョブモニターを開く</string>
+    <string name="shell_menu_system_info">システム情報</string>
+    <string name="shell_menu_discovery">ディスカバリー</string>
+    <string name="shell_menu_schedules">スケジュール</string>
+    <string name="shell_menu_licenses">オープンソースライセンス</string>
+
+    <string name="shell_section_active_jobs">実行中</string>
+    <string name="shell_section_profiles">バックアッププロファイル</string>
+    <string name="shell_section_upcoming">次回のスケジュール実行</string>
+    <string name="shell_section_destinations">保存先の状態</string>
+
+    <string name="shell_action_new_profile">新規プロファイル</string>
+    <string name="shell_action_create_profile">プロファイルを作成</string>
+    <string name="shell_action_restore">復元</string>
+    <string name="shell_action_add_destination">保存先を追加</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">バックアッププロファイルはまだありません</string>
+    <string name="shell_profiles_empty_body">プロファイルは、バックアップする対象、保存先、実行タイミングを定義します。最初のバックアップを作成するには、プロファイルを作成してください。</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="other">さらに %1$d 件のプロファイルを表示</item>
+    </plurals>
+    <string name="shell_profiles_manage">プロファイルを管理</string>
+    <string name="shell_profile_destination">保存先：%1$s</string>
+    <string name="shell_profile_destination_missing">保存先が削除されました</string>
+    <string name="shell_profile_no_destination">保存先が選択されていません</string>
+    <string name="shell_profile_disabled">無効</string>
+    <string name="shell_profile_next">次回：%1$s</string>
+    <string name="shell_back_up_now">今すぐバックアップ</string>
+    <string name="shell_running">実行中…</string>
+    <string name="shell_needs_passphrase">パスフレーズが必要</string>
+    <string name="shell_set_destination">保存先を選択</string>
+    <string name="shell_open_profile">プロファイルを開く</string>
+    <string name="shell_open_profiles">プロファイルへ移動</string>
+
+    <string name="shell_status_never">バックアップ未実施</string>
+    <string name="shell_status_running">実行中</string>
+    <string name="shell_status_success">成功</string>
+    <string name="shell_status_warnings">警告付きで完了</string>
+    <string name="shell_status_failed">失敗</string>
+    <string name="shell_status_cancelled">キャンセル済み</string>
+    <string name="shell_status_interrupted">中断</string>
+
+    <string name="shell_backup_queued">%1$s のバックアップをキューに追加しました。ネットワーク要件を満たし次第、開始されます。</string>
+    <string name="shell_resume_queued">%1$s のバックアップは中断した箇所から再開されます。</string>
+    <string name="shell_queue_failed">%1$s のバックアップをキューに追加できませんでした。もう一度お試しください。</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">スケジュールされたバックアップはありません。プロファイルにスケジュールを追加すると、自動的に実行されます。</string>
+    <string name="shell_upcoming_at">%1$s（%2$s）</string>
+    <string name="shell_upcoming_expected">予定：%1$s · まだキューに追加されていません</string>
+    <string name="shell_upcoming_retry">%1$s を再試行中（%2$d 回目）</string>
+    <string name="shell_upcoming_queued">キューに追加済み。条件を待機中</string>
+    <string name="shell_upcoming_see_schedules">スケジュールを表示</string>
+    <string name="shell_constraints">必要条件：%1$s</string>
+    <string name="shell_constraint_unmetered">従量制ではないネットワーク</string>
+    <string name="shell_constraint_network">ネットワーク</string>
+    <string name="shell_constraint_charging">充電中</string>
+    <string name="shell_constraint_idle">デバイスのアイドル状態</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">保存先はまだありません。バックアップの保存先を追加してください。</string>
+    <string name="shell_destinations_manage">保存先を管理</string>
+    <string name="shell_destination_verified">%1$s に確認済み</string>
+    <string name="shell_destination_never_verified">未確認です。接続テストを実行すると空き容量を確認できます。</string>
+    <string name="shell_destination_stale">最終確認：%1$s。現在の空き容量を確認するには、もう一度テストしてください。</string>
+    <string name="shell_destination_space">%2$s 中 %1$s の空き</string>
+    <string name="shell_destination_space_free">%1$s の空き</string>
+    <string name="shell_destination_space_unknown">容量不明</string>
+    <string name="shell_destination_low_space">空き容量が少なくなっています</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">%1$s アクセスを利用できません</string>
+    <string name="shell_warn_elevation_root_body">現在、DFTB に root が許可されていません。許可されるまで、アプリデータ、パーティションなどの特権が必要な項目はバックアップも復元もできません。</string>
+    <string name="shell_warn_elevation_shizuku_body">Shizuku サービスが実行されていないか、DFTB の権限が失われました。アプリデータをバックアップするには Shizuku を起動してください（再起動のたびに停止します）。</string>
+    <string name="shell_warn_check_again">再確認</string>
+    <string name="shell_warn_open_settings">モードを変更</string>
+    <string name="shell_warn_notifications_title">通知がオフです</string>
+    <string name="shell_warn_notifications_body">DFTB を閉じている間は、バックアップの進行状況、失敗、パスフレーズの入力要求が表示されません。</string>
+    <string name="shell_warn_allow">許可</string>
+    <string name="shell_warn_passphrase_title">%1$s のパスフレーズを待機中</string>
+    <string name="shell_warn_passphrase_body">このプロファイルは保存されないパスフレーズで暗号化されるため、中断されたバックアップは自動的に再開できません。プロファイル画面からバックアップを実行し、求められたらパスフレーズを入力してください。</string>
+    <string name="shell_warn_interrupted_title">%1$s のバックアップが中断されました</string>
+    <string name="shell_warn_interrupted_resumable">最初からやり直さず、中断した箇所から再開できます。</string>
+    <string name="shell_warn_interrupted_stale">これ以上再開できません：%1$s。次回の実行で新しいバックアップを開始します。</string>
+    <string name="shell_skip_too_old">中断から2日以上経過しています</string>
+    <string name="shell_skip_destination_missing">保存先が削除されました</string>
+    <string name="shell_skip_profile_disabled">プロファイルが無効です</string>
+    <string name="shell_skip_other">保存された進行状況を使用できません</string>
+    <string name="shell_warn_resume">再開</string>
+    <string name="shell_warn_job_interrupted_title">%1$s が中断されました</string>
+    <string name="shell_warn_restore_interrupted_body">復元は自動的に再開されません。中断前に復元された項目はそのまま残ります。準備ができたら、復元画面からもう一度復元を開始してください。</string>
+    <string name="shell_warn_job_interrupted_body">このジョブは自動的に再開されません。準備ができたら、もう一度開始してください。</string>
+    <string name="shell_warn_failed_title">%1$s の前回のバックアップに失敗しました</string>
+    <string name="shell_warn_failed_no_details">詳細は記録されていません。</string>
+    <string name="shell_warn_retry">再試行</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">キャンセル中…</string>
+    <string name="shell_job_progress_bytes">%2$s 中 %1$s</string>
+    <string name="shell_job_progress_items">%2$d 項目中 %1$d 項目</string>
+    <string name="shell_job_items_done">%1$d 項目完了</string>
+    <string name="shell_job_rate">%1$s/秒</string>
+    <string name="shell_job_eta">残り %1$s</string>
+    <string name="shell_job_eta_unknown">残り時間を計算中…</string>
+    <string name="shell_job_elapsed">経過 %1$s</string>
+    <string name="shell_job_current_item">処理中：%1$s</string>
+    <string name="shell_duration_days">%1$d日 %2$d時間</string>
+    <string name="shell_duration_hours">%1$d時間 %2$d分</string>
+    <string name="shell_duration_minutes">%1$d分 %2$d秒</string>
+    <string name="shell_duration_seconds">%1$d秒</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">ジョブモニター</string>
+    <string name="shell_monitor_title_all">すべてのジョブ</string>
+    <string name="shell_monitor_no_jobs">実行中のジョブはありません。アプリの最近のログ行は下に引き続き表示されます。</string>
+    <string name="shell_monitor_job_gone">このジョブはすでに実行されておらず、記録も見つかりませんでした。</string>
+    <string name="shell_monitor_finished">%1$s に完了</string>
+    <string name="shell_monitor_cancel">キャンセル</string>
+    <string name="shell_monitor_filter_job">このジョブのログを表示</string>
+
+    <string name="shell_record_started">開始</string>
+    <string name="shell_record_finished">完了</string>
+    <string name="shell_record_duration">所要時間</string>
+    <string name="shell_record_processed">処理済みデータ</string>
+    <string name="shell_record_items">項目</string>
+    <string name="shell_record_stored">保存先に保存済み</string>
+    <string name="shell_record_average_rate">平均速度</string>
+
+    <string name="shell_cancel_backup_title">このバックアップをキャンセルしますか？</string>
+    <string name="shell_cancel_backup_body">%1$s のバックアップをただちに停止し、キャンセル済みとして記録します。すでに書き込まれた項目は不完全なバックアップとして保存先に残ります。次回の実行では新しいバックアップを開始します。</string>
+    <string name="shell_cancel_restore_title">この復元をキャンセルしますか？</string>
+    <string name="shell_cancel_restore_body">%1$s の復元をただちに停止します。すでに復元された項目はそのままデバイスに残り、残りの項目は復元されません。復元は後でもう一度開始できます。</string>
+    <string name="shell_cancel_job_title">このジョブをキャンセルしますか？</string>
+    <string name="shell_cancel_job_body">%1$s をただちに停止し、キャンセル済みとして記録します。自動的には再開されません。</string>
+    <string name="shell_cancel_confirm">ジョブをキャンセル</string>
+    <string name="shell_cancel_keep">実行を続ける</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">ログ</string>
+    <string name="shell_terminal_follow">新しいログ行を追従</string>
+    <string name="shell_terminal_jump">最新の行へ移動</string>
+    <string name="shell_terminal_copy">ログをコピー</string>
+    <string name="shell_terminal_copied">ログをコピーしました</string>
+    <string name="shell_terminal_share">ログを共有</string>
+    <string name="shell_terminal_share_subject">DFTB ログ：%1$s</string>
+    <string name="shell_terminal_share_failed">ログを受け取れるアプリがありません。</string>
+    <string name="shell_terminal_empty">ログ行はまだありません。</string>
+    <string name="shell_terminal_filter_job">このジョブ</string>
+    <string name="shell_terminal_filter_all">すべての行</string>
+    <string name="shell_terminal_level_debug">デバッグ</string>
+    <string name="shell_terminal_level_info">情報</string>
+    <string name="shell_terminal_level_warn">警告</string>
+    <string name="shell_log_header_job">ジョブ %1$s（%2$s）</string>
+    <string name="shell_log_header_all">すべてのジョブ</string>
+
+    <string name="shell_progress_working">処理中</string>
+    <string name="shell_loading">読み込み中</string>
+    <string name="shell_monitor_job_selected">選択中</string>
+    <string name="shell_warn_severity_error">エラー</string>
+    <string name="shell_warn_severity_caution">警告</string>
+    <string name="shell_warn_severity_info">情報</string>
+</resources>

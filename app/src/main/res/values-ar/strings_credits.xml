@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bundle kinds -->
+    <string name="bundle_kind_native_binary">أدوات سطر أوامر مضمّنة</string>
+    <string name="bundle_kind_jvm_library">مكتبات</string>
+    <string name="bundle_kind_android_library">مكتبات Android</string>
+    <string name="bundle_kind_format_compatibility">صيغ ومشاريع متوافقة</string>
+    <string name="bundle_kind_build_toolchain">أدوات البناء</string>
+
+    <!-- License names -->
+    <string name="license_apache_2_0_name">‏رخصة Apache 2.0</string>
+    <string name="license_mit_name">‏رخصة MIT</string>
+    <string name="license_gpl_2_0_only_name">‏رخصة جنو العمومية العامة الإصدار 2.0 فقط</string>
+    <string name="license_gpl_3_0_name">‏رخصة جنو العمومية العامة الإصدار 3.0 أو أحدث</string>
+    <string name="license_lgpl_2_1_name">‏رخصة جنو العمومية الصغرى الإصدار 2.1 أو أحدث</string>
+    <string name="license_bsd_3_clause_name">‏رخصة BSD ذات البنود الثلاثة</string>
+    <string name="license_zero_bsd_name">‏رخصة BSD ذات البنود الصفرية (0BSD)</string>
+    <string name="license_zlib_name">‏رخصة zlib</string>
+    <string name="license_openssl_apache_2_0_name">‏رخصة Apache 2.0 (OpenSSL 3.x)</string>
+    <string name="license_dual_bsd_gpl_name">‏رخصة BSD ذات البنود الثلاثة أو جنو GPL الإصدار 2.0 (مزدوجة الترخيص)</string>
+    <string name="license_lgpl_2_1_with_unrar_restriction_name">‏رخصة جنو LGPL الإصدار 2.1 مع قيد unRAR</string>
+    <string name="license_cc0_or_apache_2_0_name">‏رخصة CC0 1.0 أو Apache 2.0 (مزدوجة الترخيص)</string>
+
+    <!-- Credit descriptions: native binaries -->
+    <string name="credit_rclone_desc">برنامج سطر أوامر لمزامنة الملفات مع عشرات مزوّدي التخزين السحابي والشبكي. يُشغّله DFTB لرفع النسخ الاحتياطية وتنزيلها والتحقق منها على الوجهات البعيدة.</string>
+    <string name="credit_busybox_desc">ملف تنفيذي واحد يوفّر مئات أدوات يونكس. يستخدمه DFTB لمجموعة أدوات صدفة متسقة عند التشغيل في وضع الروت، بمعزل عن ثنائيات مُصنّع الجهاز.</string>
+    <string name="credit_zstd_desc">خوارزمية وأداة ضغط سريعة بلا فقدان من Meta. تستخدمها صيغة أرشيف DFTB الافتراضية (.tar.zst) وصور الأقسام المضغوطة.</string>
+    <string name="credit_xz_desc">أدوات ضغط قائمة على LZMA2 ومكتبة liblzma. يستخدم DFTB أداة xz لأرشيفات .tar.xz عالية النسبة ولضغط صور .xz.</string>
+    <string name="credit_pigz_desc">تنفيذ متوازٍ لـ gzip يستخدم كل نواة معالج. يستخدمه DFTB لإنتاج مخرجات .gz القياسية بسرعة على الأجهزة متعددة الأنوية.</string>
+    <string name="credit_openssl_desc">مجموعة أدوات تشفير وTLS. يستدعي DFTB أداة openssl لتشفير AES المتدفق للأرشيفات ولتوليد المجاميع التحقّقية في وضع الروت.</string>
+    <string name="credit_gnu_tar_desc">أداة الأرشفة من جنو. يستخدمها DFTB لإنشاء أرشيفات tar واستخراجها مع الحفاظ على الملكية والأذونات وسياقات SELinux والسمات الموسّعة.</string>
+    <string name="credit_rsync_desc">أداة نقل ملفات تزايدية سريعة. يستخدمها DFTB للنسخ الاحتياطية المطابقة 1:1 وللمزامنة التفاضلية إلى الوجهات المحلية ووجهات SSH.</string>
+
+    <!-- Credit descriptions: Android libraries -->
+    <string name="credit_libsu_desc">مكتبة Android من topjohnwu لتشغيل الأوامر في صدفة روت والوصول إلى الملفات بصلاحية الروت. تُبنى مستويات الروت والوحدة في DFTB عليها.</string>
+    <string name="credit_shizuku_api_desc">مكتبة عميل لخدمة Shizuku. يستخدمها DFTB لتشغيل عمليات الملفات المميّزة بأذونات بمستوى ADB عندما يُفعّل المستخدم Shizuku.</string>
+    <string name="credit_androidx_compose_desc">مجموعة أدوات واجهة المستخدم التعريفية من Android. كل شاشة في DFTB مبنية بـ Compose وMaterial 3.</string>
+    <string name="credit_androidx_room_desc">مكتبة حفظ فوق SQLite. يخزّن DFTB ملفات تعريف النسخ الاحتياطي وسجل المهام وإعدادات الوجهات في قاعدة بيانات Room.</string>
+    <string name="credit_androidx_work_desc">مجدول عمل خلفي قابل للتأجيل. يستخدمه DFTB لتشغيل النسخ الاحتياطية المجدولة والمراعية للشروط.</string>
+    <string name="credit_androidx_datastore_desc">تخزين مفتاح-قيمة مُنمَّط وغير متزامن. يحتفظ DFTB بتفضيلات التطبيق مثل اللغة والسمة ووضع التشغيل في DataStore.</string>
+    <string name="credit_androidx_navigation_desc">إطار تنقّل لـ Compose. يستخدم DFTB مساراته الآمنة من حيث النوع للانتقال بين الشاشات.</string>
+    <string name="credit_hilt_desc">إطار حقن تبعيات لـ Android مبني على Dagger. يستخدمه DFTB لربط المستودعات والمحركات ونماذج العرض.</string>
+    <string name="credit_material_components_desc">مكتبة مكوّنات Material Design ونظام السمات من Google. يتبع التصميم المرئي لـ DFTB وألوانه وسماته الديناميكية Material 3.</string>
+    <string name="credit_material_symbols_desc">مجموعة أيقونات مفتوحة المصدر من Google. كل الأيقونات في DFTB هي Material Symbols وMaterial Icons.</string>
+
+    <!-- Credit descriptions: JVM libraries -->
+    <string name="credit_kotlin_desc">لغة برمجة ومكتبة قياسية من JetBrains. كُتب DFTB بالكامل بلغة Kotlin.</string>
+    <string name="credit_kotlinx_coroutines_desc">مكتبة للبرمجة غير المتزامنة مع كوروتينات Kotlin. يستخدمها DFTB لكل العمل الخلفي والمتدفق.</string>
+    <string name="credit_kotlinx_serialization_desc">مكتبة تسلسل متعددة المنصّات. يستخدمها DFTB لبيانات النسخ الاحتياطي الوصفية والإعدادات المصدَّرة ومسارات التنقّل الآمنة من حيث النوع.</string>
+    <string name="credit_commons_compress_desc">مكتبة Java لأرشيفات tar وzip و7z وgzip وbzip2 وxz وzstd. يستخدمها DFTB لمحرك الأرشيف الخالص بـ Kotlin على الأجهزة بلا روت.</string>
+    <string name="credit_commons_io_desc">مكتبة أدوات للتدفقات وعمليات الملفات. يستخدمها DFTB للنسخ المتين والتجزئة والتعامل مع الملفات المؤقتة.</string>
+    <string name="credit_commons_net_desc">تنفيذات عملاء لبروتوكولات الشبكة. يستخدمها DFTB لوجهات FTP وFTPS.</string>
+    <string name="credit_xz_java_desc">تنفيذ خالص بـ Java لضغط XZ وLZMA. يستخدمه DFTB لقراءة أرشيفات .xz وكتابتها دون أدوات أصلية.</string>
+    <string name="credit_sshj_desc">مكتبة SSHv2 لـ Java. يستخدمها DFTB لوجهات SFTP ولبثّ النسخ الاحتياطية عبر SSH.</string>
+    <string name="credit_smbj_desc">مكتبة عميل SMB2 وSMB3. يستخدمها DFTB للنسخ الاحتياطي إلى مشاركات Windows وأجهزة NAS.</string>
+    <string name="credit_okhttp_desc">عميل HTTP لـ JVM وAndroid. يستخدمه DFTB لوجهات WebDAV وS3 وغيرها من الوجهات القائمة على HTTP.</string>
+    <string name="credit_okio_desc">مكتبة إدخال/إخراج فعّالة ترتكز عليها OkHttp. يستخدم DFTB مصادرها ومصارفها المخزَّنة مؤقتًا لمسارات البثّ.</string>
+    <string name="credit_bouncycastle_desc">مزوّد تشفير لـ Java. يستخدمه DFTB لتشفير OpenPGP وللخوارزميات غير المتوفرة في منصّة Android.</string>
+
+    <!-- Credit descriptions: compatible formats and projects -->
+    <string name="credit_seven_zip_desc">مؤرشِف ملفات بصيغة 7z، مع p7zip كنسخته المتوافقة مع POSIX. يقرأ DFTB أرشيفات .7z المتوافقة مع 7-Zip ويكتبها؛ الأداة نفسها غير مضمّنة.</string>
+    <string name="credit_shizuku_desc">تطبيق من RikkaApps يعرض واجهات النظام البرمجية بامتيازات ADB أو الروت للتطبيقات التي يصرّح لها المستخدم. يتصل مستوى Shizuku في DFTB به عند تثبيته.</string>
+    <string name="credit_magisk_desc">حل روت بلا نظام لـ Android. تستخدم وحدة DFTB المصاحبة صيغة وحدات Magisk ويمكنها نسخ الوحدات المثبّتة احتياطيًا واستعادتها.</string>
+    <string name="credit_kernelsu_desc">حل روت قائم على النواة لـ Android. وحدة DFTB المصاحبة متوافقة مع صيغة وحدات KernelSU.</string>
+    <string name="credit_apatch_desc">حل روت قائم على ترقيع النواة لـ Android. وحدة DFTB المصاحبة متوافقة مع صيغة وحدات APatch.</string>
+    <string name="credit_twrp_desc">‏Team Win Recovery Project، استرداد مخصّص لـ Android. يمكن لـ DFTB كتابة نسخ احتياطية للأقسام بتخطيط على نمط nandroid يمكن لـ TWRP استعادته.</string>
+    <string name="credit_orangefox_desc">استرداد مخصّص قائم على TWRP. تتبع النسخ الاحتياطية للأقسام في DFTB تخطيطًا متوافقًا مع استعادات OrangeFox.</string>
+    <string name="credit_blake3_desc">دالة تجزئة تشفيرية سريعة. يشحن DFTB تنفيذه الخاص لمواصفة BLAKE3 لملفات المجاميع التحقّقية والتحقق.</string>
+
+    <!-- Credit descriptions: build toolchain -->
+    <string name="credit_ksp_desc">واجهة معالجة رموز Kotlin البرمجية من Google. تُستخدم في وقت البناء لتوليد شفرة Room وHilt؛ لا يُشحن منها شيء في التطبيق.</string>
+    <string name="credit_gradle_desc">أداة أتمتة البناء وإضافة Android Gradle. تُستخدم لتجميع DFTB وتحزيمه؛ لا يُشحن منهما شيء في التطبيق.</string>
+</resources>

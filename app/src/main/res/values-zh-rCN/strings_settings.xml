@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">设置</string>
+    <string name="settings_back">返回</string>
+    <string name="settings_cancel">取消</string>
+    <string name="settings_ok">确定</string>
+    <string name="settings_retry">重试</string>
+    <string name="settings_dismiss">关闭</string>
+    <string name="settings_save_failed">无法保存该设置。请重试。</string>
+    <string name="settings_unknown_section">此设置页面（“%1$s”）不存在。请返回并从列表中选择一个分类。</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">常规</string>
+    <string name="settings_category_backup">备份</string>
+    <string name="settings_category_security">隐私与安全</string>
+    <string name="settings_category_system">系统</string>
+    <string name="settings_category_about">关于</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">语言</string>
+    <string name="settings_language_summary">应用语言</string>
+    <string name="settings_appearance_title">外观</string>
+    <string name="settings_appearance_summary">主题和颜色</string>
+    <string name="settings_mode_title">运行模式</string>
+    <string name="settings_mode_summary">标准、Shizuku、root 或配套模块</string>
+    <string name="settings_defaults_title">备份默认值</string>
+    <string name="settings_defaults_summary">新配置的格式、压缩、校验和与目标</string>
+    <string name="settings_security_title">安全</string>
+    <string name="settings_security_summary">加密密钥、SSH 主机密钥、rclone 远程</string>
+    <string name="settings_notifications_title">通知</string>
+    <string name="settings_notifications_summary">权限和通知渠道</string>
+    <string name="settings_storage_title">存储与日志</string>
+    <string name="settings_storage_summary">临时文件和诊断日志导出</string>
+    <string name="settings_about_title">关于</string>
+    <string name="settings_about_summary">版本、许可和源代码</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">当前语言</string>
+    <string name="settings_language_current">%1$s（%2$s）</string>
+    <string name="settings_language_rtl_active">此语言已启用从右到左布局。</string>
+    <string name="settings_language_scope_note">立即应用于所有界面和通知，无需重启应用。</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">“系统”选项跟随设备的深色主题设置。</string>
+    <string name="settings_appearance_color_title">颜色</string>
+    <string name="settings_appearance_dynamic_hint">使用壁纸中的颜色，而不是 DFTB 调色板。</string>
+    <string name="settings_appearance_preview_title">预览</string>
+    <string name="settings_appearance_preview_subtitle">应用在这些设置下于浅色和深色模式中的外观。</string>
+    <string name="settings_appearance_preview_button">立即备份</string>
+    <string name="settings_appearance_preview_in_use">使用中</string>
+    <string name="settings_appearance_preview_cd">%1$s主题预览</string>
+    <string name="settings_appearance_preview_active_cd">%1$s主题预览，当前使用中</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">未配置</string>
+    <string name="settings_mode_current_title">当前模式</string>
+    <string name="settings_mode_current_badge">当前模式</string>
+    <string name="settings_mode_selected_cd">已选中以供检查</string>
+    <string name="settings_mode_pick_hint">选择一种模式，检查此设备是否支持。只有其必需的检查全部通过时才能切换。</string>
+    <string name="settings_mode_jobs_running_title">有任务正在运行</string>
+    <string name="settings_mode_jobs_running_body">备份或恢复进行期间无法更改运行模式，因为正在运行的任务会失去对其所用命令的访问权限。请等待其完成，或先取消它。</string>
+    <string name="settings_mode_readiness">%1$s：%2$s</string>
+    <string name="settings_mode_switch_to">切换到%1$s</string>
+    <string name="settings_mode_reason_same">这是当前模式。</string>
+    <string name="settings_mode_reason_no_diagnostics">正在等待此模式的检查完成。</string>
+    <string name="settings_mode_reason_unavailable">有必需的检查未通过，因此尚无法使用此模式。请修复上方的项目并重新运行检查。</string>
+    <string name="settings_mode_blocked_jobs">备份或恢复运行期间不可用。</string>
+    <string name="settings_mode_confirm_title">切换到%1$s？</string>
+    <string name="settings_mode_confirm_message">DFTB 将从%1$s切换到%2$s。变化如下：</string>
+    <string name="settings_mode_confirm_action">切换模式</string>
+    <string name="settings_mode_changed">运行模式已更改为%1$s。</string>
+    <string name="settings_mode_effect_immediate">从现在起，新的备份、恢复和计划运行将使用新模式。你的配置、目标和现有备份不会改变。</string>
+    <string name="settings_mode_effect_loses_partitions">分区镜像、TWRP 风格备份和分区恢复需要 root，将无法再运行。</string>
+    <string name="settings_mode_effect_loses_app_data">无法再读取或恢复应用私有数据和 Android/data 文件夹；包含它们的配置将跳过这些项目或使其失败。</string>
+    <string name="settings_mode_effect_needs_shizuku">每次备份都必须运行 Shizuku。除非重新启动，否则它会在每次重启后停止，而它未运行时计划备份会失败。</string>
+    <string name="settings_mode_effect_root_prompts">你的 root 管理器将询问是否授予 DFTB 超级用户权限。请永久允许，以便计划备份可以无人值守地运行。</string>
+    <string name="settings_mode_effect_module_needed">配套模块必须保持安装，并在你的 root 管理器中保持启用，以提供系统级工具和启动服务。</string>
+    <string name="settings_mode_effect_module_left">在你于 root 管理器中将其移除之前，配套模块会一直保持安装。DFTB 将不再向它镜像重启续传日志。</string>
+    <string name="settings_mode_effect_degraded">此模式的部分检查出现警告或失败。依赖这些检查的功能在修复之前可能无法正常工作。</string>
+    <string name="settings_mode_shizuku_title">Shizuku 访问权限</string>
+    <string name="settings_mode_shizuku_subtitle">请求 Shizuku 授权 DFTB。Shizuku 服务必须正在运行。</string>
+    <string name="settings_mode_shizuku_granted">已授予 Shizuku 访问权限。</string>
+    <string name="settings_mode_discovery_title">发现</string>
+    <string name="settings_mode_discovery_subtitle">查看此模式在此设备上可以访问哪些分区、应用和文件夹。</string>
+    <string name="settings_mode_discovery_open">打开“发现”</string>
+    <string name="settings_mode_module_tools_note">此版本尚未内置 rclone 和 BusyBox，因此现在生成的模块只包含此设备的版本所附带的工具。结果会准确列出已包含和缺少的内容。</string>
+    <string name="settings_mode_module_saved_as">已保存为 %1$s</string>
+    <string name="settings_mode_module_build_failed">无法生成模块文件。下方的技术详情说明了原因。</string>
+    <string name="settings_mode_module_write_failed">无法将模块写入所选位置。请选择其他文件夹后重试。</string>
+    <string name="settings_mode_module_details">技术详情</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">新的备份配置将以这些设置为起点。现有配置保留各自的设置。</string>
+    <string name="settings_defaults_issues_title">部分默认值已失效</string>
+    <string name="settings_defaults_issue_format">已保存的格式不是归档格式，不能作为配置默认值。</string>
+    <string name="settings_defaults_issue_level">已保存的压缩级别超出了所选格式的范围。</string>
+    <string name="settings_defaults_issue_destination">默认目标已被删除。在你另选一个之前，新配置会要求选择目标。</string>
+    <string name="settings_defaults_repair">自动修复</string>
+    <string name="settings_defaults_repaired">默认值已更正。</string>
+    <string name="settings_defaults_extension">文件扩展名：%1$s</string>
+    <string name="settings_defaults_7z_staging">7z 会先在本地临时存储中生成整个归档，然后再上传，因此此设备需要有足够的可用空间来容纳完整归档。</string>
+    <string name="settings_defaults_level_not_applicable">%1$s 不进行压缩，因此没有可选的级别。</string>
+    <string name="settings_defaults_level_range">此格式允许的级别：%1$d 到 %2$d</string>
+    <string name="settings_defaults_checksum_hint">用于在每个产物写入后以及恢复前对其进行验证。</string>
+    <string name="settings_defaults_destination_title">默认目标</string>
+    <string name="settings_defaults_destination_subtitle">除非你另行选择，新配置会将备份发送到这里。</string>
+    <string name="settings_defaults_destination_ask">每次询问</string>
+    <string name="settings_defaults_destination_ask_hint">每个新配置都会要求选择目标。</string>
+    <string name="settings_defaults_destination_none">尚未设置任何目标。请在“目标”界面中添加一个。</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">加密密钥</string>
+    <string name="settings_security_keys_subtitle">存储在此设备安全密钥库中的随机密钥。它们永远不会离开设备，也不属于任何备份。</string>
+    <string name="settings_security_keys_empty">未存储任何加密密钥。</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="other">%1$d 个密钥</item>
+    </plurals>
+    <string name="settings_security_key_created">创建于 %1$s</string>
+    <string name="settings_security_key_unused">未被任何配置使用</string>
+    <string name="settings_security_key_used_by">使用者：%1$s</string>
+    <string name="settings_security_key_delete_cd">删除密钥</string>
+    <string name="settings_security_key_delete_blocked_cd">删除密钥（有配置使用时不可用）</string>
+    <string name="settings_security_key_delete_title">删除此加密密钥？</string>
+    <string name="settings_security_key_delete_message">密钥 %1$s 将从密钥库中永久擦除。</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">所有使用此密钥加密的备份，在所有目标上都将永久无法恢复。</string>
+    <string name="settings_security_key_delete_consequence_no_copy">没有其他副本：该密钥只存在于此设备的密钥库中，任何人（包括 DFTB 开发者）都无法重新生成。</string>
+    <string name="settings_security_key_delete_consequence_restore">此后恢复或验证这些备份将会失败。</string>
+    <string name="settings_security_key_delete_ack">我明白，使用此密钥加密的备份将永久丢失。</string>
+    <string name="settings_security_key_delete_confirm">永久删除密钥</string>
+    <string name="settings_security_key_deleted">加密密钥已删除。</string>
+    <string name="settings_security_key_already_gone">该密钥在密钥库中已不存在。</string>
+    <string name="settings_security_key_delete_failed">无法删除该密钥。未做任何更改。</string>
+    <string name="settings_security_key_in_use">未删除：该密钥仍被 %1$s 使用。请先更改这些配置。</string>
+    <string name="settings_security_key_in_use_title">密钥正在使用</string>
+    <string name="settings_security_key_in_use_message">这些配置正在使用此密钥时，无法将其删除。请先编辑它们以使用其他密钥，或将它们删除。</string>
+    <string name="settings_security_vault_key_gone">密钥库的设备密钥已不可用，因此无法在此设备上读取已存储的机密。</string>
+    <string name="settings_security_vault_keystore">Android 安全密钥库目前不可用。</string>
+    <string name="settings_security_vault_unreadable">无法读取密钥库。</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">受信任的 SSH 服务器</string>
+    <string name="settings_security_hosts_subtitle">DFTB 首次连接每台 SFTP 或 SSH 服务器时固定的主机密钥。</string>
+    <string name="settings_security_hosts_empty">尚未连接过任何 SSH 服务器。</string>
+    <string name="settings_security_hosts_unreadable">受信任服务器文件无法读取或已损坏。在修复之前将拒绝 SSH 连接，以防范冒充的服务器。</string>
+    <string name="settings_security_hosts_tofu_note">出示不同密钥的服务器始终会被拒绝。只有在你确知其密钥是被有意更改时，才应忘记某台服务器。</string>
+    <string name="settings_security_host_forget">忘记</string>
+    <string name="settings_security_host_forget_title">忘记此服务器的密钥？</string>
+    <string name="settings_security_host_forget_message">%1$s 已固定的密钥将被移除。</string>
+    <string name="settings_security_host_forget_consequence_repin">下次连接时将信任服务器出示的任何密钥，并重新固定它。</string>
+    <string name="settings_security_host_forget_consequence_verify">如果此时有人正在冒充该服务器，DFTB 会信任对方。请向服务器管理员核对新的指纹。</string>
+    <string name="settings_security_host_forget_confirm">忘记密钥</string>
+    <string name="settings_security_host_forgotten">已忘记 %1$s 的密钥。</string>
+    <string name="settings_security_host_already_gone">该服务器已不在列表中。</string>
+    <string name="settings_security_host_unparsable">无法从此处移除该条目，因为其服务器地址格式错误。</string>
+    <string name="settings_security_hosts_write_failed">无法更新受信任服务器文件。未做任何更改。</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">rclone 远程</string>
+    <string name="settings_security_rclone_subtitle">云端远程的定义以密封形式存储在密钥库中。</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">通知权限</string>
+    <string name="settings_notifications_permission_not_required">此 Android 版本不要求通知权限。</string>
+    <string name="settings_notifications_permission_granted">已授予通知权限。</string>
+    <string name="settings_notifications_permission_denied">通知权限被拒绝。将不会显示任务进度和失败提醒。</string>
+    <string name="settings_notifications_app_enabled">DFTB 的通知已开启。</string>
+    <string name="settings_notifications_app_disabled">DFTB 的通知已在系统设置中关闭。</string>
+    <string name="settings_notifications_open_settings">打开通知设置</string>
+    <string name="settings_notifications_channels_title">类别</string>
+    <string name="settings_notifications_channels_subtitle">每个类别都可以在系统设置中单独静音。</string>
+    <string name="settings_notifications_channel_on">开</string>
+    <string name="settings_notifications_channel_blocked">已屏蔽</string>
+    <string name="settings_notifications_channel_missing">尚未创建</string>
+    <string name="settings_notifications_channel_open">设置</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">临时文件</string>
+    <string name="settings_storage_cache_subtitle">DFTB 在生成和读取备份时在此设备上占用的空间。</string>
+    <string name="settings_storage_staging">归档暂存</string>
+    <string name="settings_storage_other_cache">其他临时文件</string>
+    <string name="settings_storage_total_cache">总计</string>
+    <string name="settings_storage_staging_hint">暂存区用于存放正在生成的 7z 归档和大小未知的流。中断任务留下的残留文件可以安全清除。</string>
+    <string name="settings_storage_clear_staging">清除暂存</string>
+    <string name="settings_storage_clear_all">清除所有临时文件</string>
+    <string name="settings_storage_recalculate">重新计算</string>
+    <string name="settings_storage_clear_blocked">备份或恢复运行期间无法清除临时文件。</string>
+    <string name="settings_storage_clear_staging_title">清除归档暂存？</string>
+    <string name="settings_storage_clear_all_title">清除所有临时文件？</string>
+    <string name="settings_storage_clear_staging_consequence">中断任务留下的未完成归档和缓冲文件将被删除。</string>
+    <string name="settings_storage_clear_all_consequence">DFTB 的所有缓存都将被删除：暂存、缓冲文件以及之前分享过的日志文件。</string>
+    <string name="settings_storage_clear_backups_safe">你在各目标上的备份、你的配置和你的设置不会受到影响。</string>
+    <string name="settings_storage_clear_confirm">清除</string>
+    <string name="settings_storage_cleared">临时文件已清除。</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="other">临时文件已清除；有 %1$s 项无法移除（它们可能属于 root 辅助程序）。</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">无法清除临时文件。</string>
+    <string name="settings_storage_log_title">诊断日志</string>
+    <string name="settings_storage_log_subtitle">自应用启动以来记录在内存中的近期活动。对提交错误报告很有用。</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="other">已记录 %1$d 行</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">日志可能包含文件路径、目标名称和服务器地址。DFTB 的设计是绝不记录密码、密钥或令牌。公开分享之前请先检查。</string>
+    <string name="settings_storage_log_share">分享</string>
+    <string name="settings_storage_log_save">保存到文件</string>
+    <string name="settings_storage_log_share_title">分享 DFTB 日志</string>
+    <string name="settings_storage_log_saved">日志已保存。</string>
+    <string name="settings_storage_log_export_failed">无法导出日志。</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">开源、由用户授权的 Android 备份。</string>
+    <string name="settings_about_version_value">%1$s (%2$d)</string>
+    <string name="settings_about_sources_title">所列项目的源代码</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="other">%1$d 个项目</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">打开 %1$s 的源代码仓库</string>
+    <string name="settings_storage_measure_failed">无法测量缓存大小。</string>
+    <string name="settings_storage_measure_retry">重试</string>
+</resources>

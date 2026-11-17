@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="partition_restore_root_required">Η επαναφορά κατατμήσεων απαιτεί λειτουργία Root με χορηγημένη πρόσβαση υπερχρήστη.</string>
+    <string name="partition_restore_scan_failed">Δεν ήταν δυνατή η ανάγνωση της διάταξης κατατμήσεων αυτής της συσκευής (%1$s).</string>
+    <string name="partition_restore_not_partition_artifact">Το %1$s δεν είναι εικόνα κατάτμησης.</string>
+    <string name="partition_restore_slot_device_not_ab">Το %1$s δημιουργήθηκε από slot A/B, αλλά αυτή η συσκευή δεν έχει slots.</string>
+    <string name="partition_restore_slot_unknown">Αυτή η συσκευή δεν ανέφερε το ενεργό slot της, οπότε δεν μπορεί να επιλεγεί το slot προορισμού για το %1$s.</string>
+    <string name="partition_restore_not_found">Δεν υπάρχει κατάτμηση με όνομα %1$s σε αυτήν τη συσκευή.</string>
+    <string name="partition_restore_slot_missing">Το %1$s υπάρχει σε αυτήν τη συσκευή, αλλά όχι στο ζητούμενο slot. Οι λογικές κατατμήσεις του ανενεργού slot αντιστοιχίζονται μόνο κατά τη διάρκεια ενημέρωσης· επαναφέρετέ τη από recovery ή fastbootd.</string>
+    <string name="partition_restore_slot_layout">Το %1$s δημιουργήθηκε από κατάτμηση χωρίς slots, αλλά αντιστοιχεί σε slot A/B σε αυτήν τη συσκευή.</string>
+    <string name="partition_restore_probe_failed">Δεν ήταν δυνατός ο έλεγχος του %1$s πριν από την εγγραφή, οπότε δεν γράφτηκε τίποτα.</string>
+    <string name="partition_gate_device_mismatch">Το %1$s δημιουργήθηκε σε άλλη συσκευή (%2$s). Η εγγραφή του εδώ μπορεί να εμποδίσει την εκκίνηση αυτής της συσκευής.</string>
+    <string name="partition_gate_build_mismatch">Το %1$s δημιουργήθηκε σε διαφορετική έκδοση λογισμικού (%2$s). Επιβεβαιώστε για να επαναφέρετε εικόνα από άλλη έκδοση.</string>
+    <string name="partition_gate_cross_slot">Το %1$s θα γραφόταν σε διαφορετικό slot από αυτό από το οποίο δημιουργήθηκε. Επιβεβαιώστε για εγγραφή σε άλλο slot.</string>
+    <string name="partition_gate_image_smaller">Η εικόνα του %1$s είναι μικρότερη από την κατάτμηση (%2$s byte). Επιβεβαιώστε για να μείνει αμετάβλητο το υπόλοιπο της κατάτμησης.</string>
+    <string name="partition_gate_critical_identity">Το %1$s περιέχει δεδομένα ταυτότητας ή βαθμονόμησης μοναδικά για τη συσκευή. Η επαναφορά λάθος αντιγράφου μπορεί να χαλάσει μόνιμα το ραδιόφωνο, το IMEI ή το DRM. Επιβεβαιώστε για εγγραφή.</string>
+    <string name="partition_gate_image_larger">Η εικόνα του %1$s είναι μεγαλύτερη από την κατάτμηση (%2$s byte) και δεν μπορεί να γραφτεί.</string>
+    <string name="partition_gate_target_size_unknown">Το ακριβές μέγεθος του %1$s δεν ήταν δυνατό να διαβαστεί, οπότε η εγγραφή απορρίπτεται.</string>
+    <string name="partition_gate_not_block_device">Το %1$s (%2$s) δεν είναι συσκευή μπλοκ.</string>
+    <string name="partition_gate_live_system">Το %1$s χρησιμοποιείται από το σύστημα που εκτελείται. Επαναφέρετέ το από recovery (TWRP / OrangeFox) ή fastboot.</string>
+    <string name="partition_gate_mounted">Το %1$s είναι προσαρτημένο (%2$s). Αποπροσαρτήστε το πρώτα ή επαναφέρετέ το από recovery.</string>
+    <string name="partition_gate_swap">Το %1$s χρησιμοποιείται ως swap.</string>
+    <string name="partition_gate_held">Το %1$s χρησιμοποιείται από το %2$s (device-mapper). Επαναφέρετέ το από recovery.</string>
+    <string name="partition_gate_snapshot">Το %1$s είναι εικονική συσκευή στιγμιότυπου A/B και δεν είναι ποτέ στόχος επαναφοράς.</string>
+    <string name="partition_gate_read_only">Το %1$s είναι μόνο για ανάγνωση.</string>
+    <string name="partition_gate_overridden">Επιβεβαιωμένη παράκαμψη: %1$s</string>
+    <string name="partition_restore_item_verifying_image">Έλεγχος εικόνας του %1$s</string>
+    <string name="partition_restore_item_writing">Εγγραφή του %1$s</string>
+    <string name="partition_restore_item_reading_back">Επαλήθευση του %1$s στη συσκευή</string>
+    <string name="partition_restore_image_digest_mismatch">Η εικόνα του %1$s δεν ταιριάζει με το καταγεγραμμένο άθροισμα ελέγχου. Δεν γράφτηκε τίποτα.</string>
+    <string name="partition_restore_image_read_failed">Δεν ήταν δυνατή η ανάγνωση της εικόνας του %1$s (%2$s). Δεν γράφτηκε τίποτα.</string>
+    <string name="partition_restore_no_reference_digest">Δεν καταγράφηκε άθροισμα ελέγχου για το %1$s· επαληθεύεται με την εικόνα όπως διαβάστηκε από το αντίγραφο ασφαλείας.</string>
+    <string name="partition_restore_refused_by_helper">Η εγγραφή στο %1$s απορρίφθηκε πριν γραφτούν δεδομένα (%2$s).</string>
+    <string name="partition_restore_partial_write">Η εγγραφή του %1$s απέτυχε μετά από %2$s byte (%3$s). Η κατάτμηση είναι τώρα μερικώς γραμμένη. Μην κάνετε επανεκκίνηση μέχρι να επαναφερθεί σωστά, για παράδειγμα από recovery ή fastboot.</string>
+    <string name="partition_restore_source_changed">Η εικόνα του %1$s άλλαξε κατά την εγγραφή. Η κατάτμηση περιέχει μη επαληθευμένα δεδομένα· επαναφέρετέ την ξανά πριν από την επανεκκίνηση.</string>
+    <string name="partition_restore_readback_mismatch">Η αναδιάβαση του %1$s δεν ταιριάζει με την εικόνα (αναμενόμενο %2$s, διαβάστηκε %3$s). Η κατάτμηση περιέχει κατεστραμμένα δεδομένα· επαναφέρετέ την ξανά πριν από την επανεκκίνηση.</string>
+    <string name="partition_restore_readback_failed">Το %1$s γράφτηκε αλλά δεν ήταν δυνατή η αναδιάβασή του για επαλήθευση (%2$s).</string>
+    <string name="twrp_folder_not_found">Δεν βρέθηκε αντίγραφο TWRP στο %1$s.</string>
+    <string name="twrp_encrypted_unsupported">Το %1$s είναι κρυπτογραφημένο με κωδικό αντιγράφου TWRP. Το DFTB δεν μπορεί να αποκρυπτογραφήσει αντίγραφα κρυπτογραφημένα από TWRP· επαναφέρετέ το από το TWRP.</string>
+    <string name="twrp_filesystem_restore_refused">Το %1$s είναι αντίγραφο βάσει αρχείων του /%2$s. Δεν μπορεί να επαναφερθεί επιτόπου από το Android που εκτελείται· επαναφέρετέ το από recovery (TWRP / OrangeFox) ή εξαγάγετε τα αρχεία του σε φάκελο.</string>
+    <string name="twrp_split_image_unsupported">Το %1$s είναι ωμή εικόνα χωρισμένη σε πολλά αρχεία, κάτι που το TWRP δεν παράγει ποτέ, οπότε δεν επαναφέρεται.</string>
+    <string name="twrp_not_raw_image">Το %1$s δεν είναι ωμή εικόνα κατάτμησης.</string>
+    <string name="twrp_not_archive">Το %1$s είναι ωμή εικόνα κατάτμησης, όχι αρχείο συμπίεσης αρχείων.</string>
+    <string name="twrp_unknown_format">Το %1$s δεν είναι ούτε αρχείο tar ούτε tar συμπιεσμένο με gzip και δεν μπορεί να εξαχθεί.</string>
+    <string name="twrp_sidecar_mismatch">Το %1$s δεν ταιριάζει με το αρχείο αθροίσματος ελέγχου %2$s. Δεν γράφτηκε τίποτα.</string>
+    <string name="twrp_sidecar_missing">Το %1$s δεν έχει αρχείο αθροίσματος ελέγχου, οπότε μπορεί να επαληθευτεί μόνο μετά την εγγραφή.</string>
+    <string name="twrp_sidecar_unreadable">Το αρχείο αθροίσματος ελέγχου %1$s δεν ήταν δυνατό να διαβαστεί.</string>
+    <string name="twrp_split_gap">Το χωρισμένο αρχείο %1$s είναι ελλιπές: λείπει το τμήμα %2$s.</string>
+    <string name="twrp_extract_skipped_links">%1$d σύνδεσμοι ή ειδικά αρχεία του %2$s δεν εξήχθησαν (ο φάκελος δεν μπορεί να τα αποθηκεύσει).</string>
+    <string name="twrp_extract_unsafe_entries">%1$d καταχωρίσεις του %2$s με μη ασφαλείς διαδρομές παραλείφθηκαν.</string>
+    <string name="twrp_extract_digest_mismatch">Το %1$s δεν ταιριάζει με το αρχείο αθροίσματος ελέγχου %2$s· τα εξαγόμενα αρχεία μπορεί να είναι κατεστραμμένα.</string>
+    <string name="twrp_extract_failed">Η εξαγωγή του %1$s απέτυχε (%2$s).</string>
+    <string name="twrp_read_failed">Δεν ήταν δυνατή η ανάγνωση του %1$s (%2$s).</string>
+
+</resources>

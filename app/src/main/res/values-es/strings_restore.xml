@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="restore_engine_opening">Leyendo la copia de seguridad…</string>
+    <string name="restore_engine_preflight">Comprobando qué se puede restaurar…</string>
+    <string name="restore_engine_verifying">Verificando la copia de seguridad antes de restaurar…</string>
+    <string name="restore_engine_restoring">Restaurando %1$s…</string>
+    <plurals name="restore_engine_completed">
+        <item quantity="one">%1$d elemento restaurado.</item>
+        <item quantity="many">%1$d elementos restaurados.</item>
+        <item quantity="other">%1$d elementos restaurados.</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="one">%1$d advertencia.</item>
+        <item quantity="many">%1$d advertencias.</item>
+        <item quantity="other">%1$d advertencias.</item>
+    </plurals>
+    <string name="restore_engine_cancelled">Restauración detenida. Se conservaron los archivos restaurados hasta ahora.</string>
+    <string name="restore_engine_error_destination">El destino de esta copia de seguridad ya no existe.</string>
+    <string name="restore_engine_error_open">No se pudo leer la copia de seguridad.</string>
+    <string name="restore_engine_error_key_required">Esta copia de seguridad está cifrada. Introduce su frase de contraseña o clave.</string>
+    <string name="restore_engine_error_wrong_key">Frase de contraseña o clave incorrecta para esta copia de seguridad.</string>
+    <string name="restore_engine_error_unsupported">Esta copia de seguridad se hizo de una forma que esta versión de DFTB no puede restaurar.</string>
+    <string name="restore_engine_error_nothing">No hay nada seleccionado para restaurar.</string>
+    <string name="restore_engine_error_blocked">Ninguno de los elementos seleccionados se puede restaurar en el modo actual.</string>
+    <string name="restore_engine_error_space">No hay espacio libre suficiente para restaurar.</string>
+    <string name="restore_engine_error_verify">La copia de seguridad está dañada; no se restauró nada.</string>
+    <string name="restore_engine_error_all_failed">Falló la restauración de todos los elementos seleccionados.</string>
+    <string name="restore_engine_error_internal">La restauración se detuvo por un error inesperado.</string>
+    <string name="restore_engine_no_app_restorer">La restauración de apps no está disponible en esta versión.</string>
+    <string name="restore_engine_no_partition_restorer">La restauración de particiones no está disponible en esta versión.</string>
+    <string name="restore_engine_unit_blocked">%1$s no se puede restaurar: %2$s</string>
+    <string name="restore_engine_space_unknown">Se desconoce el espacio libre para %1$s; la restauración podría quedarse sin espacio.</string>
+    <string name="restore_engine_space_overridden">%1$s: se restaura aunque hacen falta %2$s más de espacio.</string>
+    <string name="restore_engine_cross_device">Esta copia de seguridad procede de un %1$s; este dispositivo es un %2$s.</string>
+    <string name="restore_engine_resume_skipped">%1$s ya se restauró y se omite.</string>
+    <string name="restore_engine_partial_backup">Esta copia de seguridad no terminó; solo se pueden restaurar los elementos que contiene.</string>
+    <string name="restore_engine_checkpoint_failed">No se pudo guardar el progreso de la restauración; una restauración interrumpida empezará de nuevo.</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="one">…y %1$d problema más.</item>
+        <item quantity="many">…y %1$d problemas más.</item>
+        <item quantity="other">…y %1$d problemas más.</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="one">%1$d archivo no tiene ubicación original conocida y no se restauró. Restáuralo en una carpeta.</item>
+        <item quantity="many">%1$d archivos no tienen ubicación original conocida y no se restauraron. Restáuralos en una carpeta.</item>
+        <item quantity="other">%1$d archivos no tienen ubicación original conocida y no se restauraron. Restáuralos en una carpeta.</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="one">Se conservó %1$d archivo existente.</item>
+        <item quantity="many">Se conservaron %1$d archivos existentes.</item>
+        <item quantity="other">Se conservaron %1$d archivos existentes.</item>
+    </plurals>
+    <string name="restore_file_error_original_unknown">La copia de seguridad no registra de dónde proceden estos archivos. Restáuralos en una carpeta.</string>
+    <string name="restore_file_error_target">No se puede abrir la carpeta de restauración.</string>
+    <string name="restore_file_error_no_privilege">DFTB no puede escribir en esta carpeta en el modo actual. Elige otra carpeta o cambia a Shizuku o root.</string>
+    <string name="restore_file_error_saf">Se quitó el acceso a la carpeta elegida. Selecciónala de nuevo.</string>
+    <string name="restore_file_error_twrp_folder">Los archivos TWRP solo se pueden extraer en una carpeta elegida, nunca sobre el sistema en ejecución.</string>
+    <string name="restore_file_error_corrupt">Los datos de la copia de seguridad están dañados.</string>
+    <string name="restore_file_error_no_space">La carpeta de restauración está llena.</string>
+    <string name="restore_file_error_archive">No se pudo leer el archivo comprimido.</string>
+    <string name="restore_file_error_storage">No se pudo leer el destino.</string>
+    <string name="restore_issue_unsafe_path">ruta insegura rechazada</string>
+    <string name="restore_issue_through_symlink">rechazado: se escribiría a través de un enlace simbólico</string>
+    <string name="restore_issue_parent_not_dir">un archivo bloquea su carpeta</string>
+    <string name="restore_issue_directory_in_the_way">existe una carpeta con el mismo nombre</string>
+    <string name="restore_issue_skipped_existing">se conservó el archivo existente</string>
+    <string name="restore_issue_symlink_unsupported">los enlaces simbólicos no son compatibles en esta carpeta</string>
+    <string name="restore_issue_hardlink_unsupported">los enlaces duros no son compatibles en esta carpeta</string>
+    <string name="restore_issue_hardlink_missing">no se restauró el archivo al que apunta este enlace</string>
+    <string name="restore_issue_special_skipped">archivo especial (tubería o dispositivo) omitido</string>
+    <string name="restore_issue_digest_mismatch">los bytes restaurados no coinciden con la copia de seguridad; no se escribió el archivo</string>
+    <string name="restore_issue_write_failed">no se pudo escribir</string>
+    <string name="restore_issue_metadata_failed">no se pudieron restaurar la fecha, el propietario ni los permisos</string>
+
+</resources>

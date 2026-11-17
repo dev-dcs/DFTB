@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Archive layer (core/pipeline/archive): user-facing explanations of ArchiveErrorKind,
+     mapped by ArchiveErrorKind.labelRes(). Technical detail stays in exception messages. -->
+<resources>
+    <string name="archive_error_unsafe_path">安全でないパス（絶対パス、「..」、無効な文字）を持つ項目が拒否されました。</string>
+    <string name="archive_error_single_item">rawコピーとディスクイメージのバックアップには、ファイルまたはストリームを 1 つだけ含められます。</string>
+    <string name="archive_error_size_mismatch">バックアップ中にファイルのサイズが変わりました。</string>
+    <string name="archive_error_codec_unavailable">選択した圧縮方式はこのデバイスでは利用できません。別の圧縮方式を選択してください。</string>
+    <string name="archive_error_unsupported_format">このバックアップ形式はアーカイブとして開けません。</string>
+    <string name="archive_error_truncated">バックアップファイルが不完全です。アップロードまたはコピーが完了していない可能性があります。</string>
+    <string name="archive_error_writer_state">このアーカイブはすでに完了または閉じられています。</string>
+</resources>

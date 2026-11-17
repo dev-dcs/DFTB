@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="crypto_reason_wrong_key">Frase de contraseña o clave incorrecta. No se pudo desbloquear la copia de seguridad.</string>
+    <string name="crypto_reason_key_type_mismatch">Esta copia de seguridad se cifró con otro tipo de clave (frase de contraseña o clave guardada).</string>
+    <string name="crypto_reason_tampered">La copia de seguridad cifrada está dañada o fue modificada.</string>
+    <string name="crypto_reason_truncated">La copia de seguridad cifrada está incompleta; falta su final.</string>
+    <string name="crypto_reason_trailing_data">La copia de seguridad cifrada tiene datos adicionales inesperados al final.</string>
+    <string name="crypto_reason_bad_header">Este archivo no es una copia de seguridad cifrada de DFTB, o su cabecera está dañada.</string>
+    <string name="crypto_reason_insufficient_memory">Este dispositivo no tiene memoria suficiente para desbloquear esta copia de seguridad.</string>
+    <string name="crypto_reason_unsupported_version">Esta copia de seguridad se cifró con una versión más reciente de la app.</string>
+    <string name="crypto_key_not_found">La clave de cifrado guardada para esta copia de seguridad no está en este dispositivo.</string>
+    <string name="crypto_key_invalid_entry">La clave de cifrado guardada está dañada o no es una clave de cifrado.</string>
+    <string name="crypto_key_vault_error">No se pudo leer el almacén seguro de claves.</string>
+    <string name="checksum_verified">Suma de comprobación verificada (%1$s).</string>
+    <string name="checksum_mismatch">La suma de comprobación no coincide (%1$s). El archivo difiere de lo que se respaldó.</string>
+    <string name="checksum_sidecar_missing">No se encontró ningún archivo de suma de comprobación para esta copia de seguridad.</string>
+    <string name="checksum_sidecar_malformed">No se pudo leer el archivo de suma de comprobación.</string>
+
+</resources>

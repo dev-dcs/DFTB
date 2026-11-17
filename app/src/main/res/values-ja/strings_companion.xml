@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Companion module builder and reboot-resume strings -->
+<resources>
+    <string name="companion_builder_title">コンパニオンモジュール</string>
+    <string name="companion_builder_subtitle">DFTB のコマンドラインツールと再起動後の再開用ブートサービスを同梱した、systemless な Magisk/KernelSU モジュールを作成します。</string>
+    <string name="companion_builder_build_action">モジュール ZIP を作成</string>
+    <string name="companion_builder_building">モジュールを作成中…</string>
+    <string name="companion_builder_share_action">ZIP を共有</string>
+    <string name="companion_builder_flash_hint">作成後、Magisk、KernelSU、APatch のいずれかで ZIP をフラッシュし、再起動してください。</string>
+    <string name="companion_result_complete">モジュールを作成しました: %1$s</string>
+    <string name="companion_result_partial">モジュールを作成しました（%1$d 個のツールが不足）</string>
+    <string name="companion_result_failed">コンパニオンモジュールを作成できませんでした</string>
+    <string name="companion_result_size">サイズ: %1$s</string>
+    <string name="companion_result_included_tools">含まれるツール: %1$s</string>
+    <string name="companion_result_missing_tools">不足しているツール: %1$s</string>
+    <string name="companion_result_no_tools">このデバイスのアーキテクチャで使用できるコマンドラインツールがありませんでした。</string>
+    <string name="companion_resume_title">中断したジョブを再開中</string>
+    <string name="companion_resume_pending">再起動後の再開を待機中</string>
+    <string name="companion_resume_found">再開可能な中断ジョブが %1$d 件あります</string>
+    <string name="companion_resume_none">再開する中断ジョブはありません</string>
+    <string name="companion_requires_magisk">Magisk v20.4 以降、または互換性のある KernelSU/APatch が必要です。</string>
+    <string name="companion_requires_root">systemless モジュールのインストールには root（Magisk、KernelSU、APatch）が必要です。</string>
+</resources>

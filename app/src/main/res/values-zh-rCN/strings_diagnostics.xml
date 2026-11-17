@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">就绪</string>
+    <string name="diag_readiness_degraded">就绪但有警告</string>
+    <string name="diag_readiness_unavailable">不可用</string>
+    <string name="diag_mode_requires_root">此模式需要已 root 的设备，并配有可授予 DFTB 超级用户访问权限的 root 管理器。</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">正常</string>
+    <string name="diag_status_warn">警告</string>
+    <string name="diag_status_fail">失败</string>
+    <string name="diag_status_info">信息</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">授予 Shizuku 访问权限</string>
+    <string name="diag_action_open_all_files_access">允许所有文件访问</string>
+    <string name="diag_action_request_legacy_storage">授予存储权限</string>
+    <string name="diag_action_request_notifications">启用通知</string>
+    <string name="diag_action_open_battery_settings">关闭电池优化</string>
+    <string name="diag_action_install_shizuku">安装 Shizuku</string>
+    <string name="diag_action_open_root_manager">打开 root 管理器</string>
+    <string name="diag_action_install_companion_module">安装伴随模块</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">诊断引擎</string>
+    <string name="diag_probe_hint">诊断运行本身意外失败。请重新运行；如果持续出现，请从系统概览分享日志。</string>
+    <string name="diag_check_timed_out_hint">检查未能及时完成。通常由待处理的超级用户授权提示或无响应的服务导致；请回应任何提示并重新运行。</string>
+    <string name="diag_check_failed_hint">检查在产生结果前崩溃。原始错误显示在上方。</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">Android 版本</string>
+    <string name="diag_all_files_access_title">所有文件访问</string>
+    <string name="diag_all_files_access_hint">DFTB 必须读写整个共享存储才能备份文件和写入归档。请在系统设置页面授予"所有文件访问"权限。</string>
+    <string name="diag_all_files_access_optional_hint">未授予。root Shell 仍可读取所有内容，但将无法在不使用 SAF 的情况下浏览共享存储。</string>
+    <string name="diag_legacy_storage_title">存储权限</string>
+    <string name="diag_legacy_storage_hint">在 Android 10 上，读写共享存储需要存储运行时权限。</string>
+    <string name="diag_legacy_storage_optional_hint">未授予。root Shell 仍可读取所有内容，但将无法直接浏览共享存储。</string>
+    <string name="diag_notifications_title">通知</string>
+    <string name="diag_notifications_hint">没有通知，正在运行的备份在应用处于后台时将无法显示进度或报告失败。</string>
+    <string name="diag_saf_title">文档选择器（SAF）</string>
+    <string name="diag_saf_hint">没有应用处理文件夹选择器。此设备上无法选择 SD 卡和 USB 驱动器上的目标位置。</string>
+    <string name="diag_battery_title">电池优化</string>
+    <string name="diag_battery_hint">在慢速连接上进行的长时间备份可能被 Doze 终止。排除 DFTB 可保持定时任务和续传任务继续运行。</string>
+    <string name="diag_free_space_title">可用空间（应用存储）</string>
+    <string name="diag_free_space_hint">可用空间不足 500 MB。临时归档和任务日志保存在此处；备份前请先释放一些空间。</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">已安装 Shizuku</string>
+    <string name="diag_shizuku_installed_hint">请安装 Shizuku（或 Sui），并通过无线调试或 root 启动它，然后重新运行。</string>
+    <string name="diag_shizuku_binder_title">Shizuku 服务正在运行</string>
+    <string name="diag_shizuku_binder_hint">已安装 Shizuku 但其服务未运行。请打开 Shizuku 应用并启动它，然后返回此处。</string>
+    <string name="diag_shizuku_version_supported_title">Shizuku API 版本</string>
+    <string name="diag_shizuku_version_supported_hint">此 Shizuku 低于版本 11，无法使用。请更新 Shizuku。</string>
+    <string name="diag_shizuku_permission_title">已授予 Shizuku 访问权限</string>
+    <string name="diag_shizuku_permission_hint">请在 Shizuku 提示中允许 DFTB。如果你选择了"不再询问"，请从 Shizuku 应用的已授权应用列表中重新启用。</string>
+    <string name="diag_shizuku_version_title">Shizuku 服务端版本</string>
+    <string name="diag_shizuku_uid_title">Shizuku 身份</string>
+    <string name="diag_shizuku_uid_root_hint">Shizuku 正以 root 身份运行；每个软件包的应用数据均可访问。</string>
+    <string name="diag_shizuku_uid_adb_hint">Shizuku 正以 ADB Shell 用户身份运行；部分应用数据目录将无法读取。</string>
+    <string name="diag_shizuku_selinux_title">Shizuku SELinux 上下文</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">su 二进制文件</string>
+    <string name="diag_su_binary_hint">此应用看不到任何 su 二进制文件。KernelSU 和 APatch 在授予访问权限前会将其隐藏，因此仅此一项并不算失败。</string>
+    <string name="diag_root_manager_title">root 管理器应用</string>
+    <string name="diag_root_manager_hint">未检测到 Magisk、KernelSU 或 APatch 管理器。</string>
+    <string name="diag_root_granted_title">超级用户访问权限</string>
+    <string name="diag_root_granted_hint">请打开你的 root 管理器并为 DFTB 允许超级用户访问，然后重新运行。</string>
+    <string name="diag_root_granted_shell_mount_master">root（mount master）</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">未知</string>
+    <string name="diag_shell_identity_title">Shell 身份</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">root 实现</string>
+    <string name="diag_root_implementation_hint">无法从 Shell 识别出 Magisk、KernelSU 或 APatch。</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">在 PATH 中未找到。将使用 DFTB 内置的副本。</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">未找到。进入全局挂载命名空间（高级 root 模式）依赖它。</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">未授予超级用户访问权限，因此无法检查伴随模块。</string>
+    <string name="diag_module_installed_title">已安装伴随模块</string>
+    <string name="diag_module_installed_hint">请从你的 root 管理器刷入 DFTB 伴随模块并重启。</string>
+    <string name="diag_module_enabled_title">已启用伴随模块</string>
+    <string name="diag_module_enabled_hint">模块已禁用或已计划移除。请在你的 root 管理器中重新启用并重启。</string>
+    <string name="diag_module_tool_rclone_title">系统 rclone</string>
+    <string name="diag_module_tool_busybox_title">系统 BusyBox</string>
+    <string name="diag_module_tool_zstd_title">系统 zstd</string>
+    <string name="diag_module_tool_tar_title">系统 tar</string>
+    <string name="diag_module_tool_missing_hint">不在 PATH 中。模块已安装但其文件尚未挂载；通常重启即可解决。</string>
+    <string name="diag_module_service_title">开机服务脚本</string>
+    <string name="diag_module_journal_title">开机日志目录</string>
+    <string name="diag_module_journal_hint">在安装模块后的首次开机时创建；定时任务和续传任务会在此记录状态。</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">保护你已保存凭据的安全密钥已丢失，但加密条目仍保留在此设备上。它们将无法再被解密；请重新输入受影响的凭据以重新创建。</string>
+
+    <string name="diag_module_tool_nsenter_title">系统 nsenter</string>
+</resources>

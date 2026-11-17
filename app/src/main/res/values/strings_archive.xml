@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Archive layer (core/pipeline/archive): user-facing explanations of ArchiveErrorKind,
+     mapped by ArchiveErrorKind.labelRes(). Technical detail stays in exception messages. -->
+<resources>
+    <string name="archive_error_unsafe_path">An item has an unsafe path (absolute, \"..\" or invalid characters) and was refused.</string>
+    <string name="archive_error_single_item">Raw copy and disk image backups hold exactly one file or stream.</string>
+    <string name="archive_error_size_mismatch">A file changed size while it was being backed up.</string>
+    <string name="archive_error_codec_unavailable">The selected compression is not available on this device. Choose another compression method.</string>
+    <string name="archive_error_unsupported_format">This backup format cannot be opened as an archive.</string>
+    <string name="archive_error_truncated">The backup file is incomplete. It may not have finished uploading or copying.</string>
+    <string name="archive_error_writer_state">The archive was already finished or closed.</string>
+</resources>

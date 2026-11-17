@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Companion module builder and reboot-resume strings -->
+<resources>
+    <string name="companion_builder_title">Συνοδευτική μονάδα</string>
+    <string name="companion_builder_subtitle">Δημιουργήστε μια μονάδα systemless Magisk/KernelSU που περιλαμβάνει τα εργαλεία γραμμής εντολών του DFTB και μια υπηρεσία εκκίνησης για συνέχιση μετά την επανεκκίνηση.</string>
+    <string name="companion_builder_build_action">Δημιουργία ZIP μονάδας</string>
+    <string name="companion_builder_building">Δημιουργία μονάδας…</string>
+    <string name="companion_builder_share_action">Κοινοποίηση ZIP</string>
+    <string name="companion_builder_flash_hint">Μετά τη δημιουργία, κάντε flash το ZIP στο Magisk, το KernelSU ή το APatch και επανεκκινήστε.</string>
+    <string name="companion_result_complete">Η μονάδα δημιουργήθηκε: %1$s</string>
+    <string name="companion_result_partial">Η μονάδα δημιουργήθηκε με %1$d εργαλείο(α) που λείπουν</string>
+    <string name="companion_result_failed">Δεν ήταν δυνατή η δημιουργία της συνοδευτικής μονάδας</string>
+    <string name="companion_result_size">Μέγεθος: %1$s</string>
+    <string name="companion_result_included_tools">Εργαλεία που περιλαμβάνονται: %1$s</string>
+    <string name="companion_result_missing_tools">Εργαλεία που λείπουν: %1$s</string>
+    <string name="companion_result_no_tools">Δεν υπήρχαν διαθέσιμα εργαλεία γραμμής εντολών για την αρχιτεκτονική αυτής της συσκευής.</string>
+    <string name="companion_resume_title">Συνέχιση διακοπεισών εργασιών</string>
+    <string name="companion_resume_pending">Αναμονή για συνέχιση μετά την επανεκκίνηση</string>
+    <string name="companion_resume_found">%1$d διακοπείσα(ες) εργασία(ες) έτοιμη(ες) για συνέχιση</string>
+    <string name="companion_resume_none">Δεν υπάρχουν διακοπείσες εργασίες για συνέχιση</string>
+    <string name="companion_requires_magisk">Απαιτεί Magisk v20.4 ή νεότερο, ή συμβατή εγκατάσταση KernelSU/APatch.</string>
+    <string name="companion_requires_root">Η εγκατάσταση μιας μονάδας systemless απαιτεί root (Magisk, KernelSU ή APatch).</string>
+</resources>

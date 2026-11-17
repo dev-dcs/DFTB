@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="system_info_title">Επισκόπηση συστήματος</string>
+
+    <string name="language_section_title">Γλώσσα</string>
+    <string name="language_section_description">Οι αλλαγές εφαρμόζονται άμεσα, χωρίς επανεκκίνηση της εφαρμογής.</string>
+
+    <string name="appearance_section_title">Εμφάνιση</string>
+    <string name="theme_mode_label">Θέμα</string>
+    <string name="theme_mode_system">Σύστημα</string>
+    <string name="theme_mode_light">Φωτεινό</string>
+    <string name="theme_mode_dark">Σκούρο</string>
+    <string name="dynamic_color_label">Δυναμικά χρώματα (Material You)</string>
+    <string name="dynamic_color_unsupported">Απαιτεί Android 12 ή νεότερο.</string>
+
+    <string name="mode_section_title">Λειτουργία</string>
+    <string name="mode_not_selected">Δεν έχει ρυθμιστεί ακόμη. Ολοκληρώστε τον οδηγό ρύθμισης για να επιλέξετε λειτουργία.</string>
+    <string name="mode_standard">Τυπική (χωρίς root)</string>
+    <string name="mode_standard_desc">Storage Access Framework, MediaStore και καθαρές μηχανές Kotlin/JNI. Χωρίς αυξημένη πρόσβαση.</string>
+    <string name="mode_shizuku">Shizuku</string>
+    <string name="mode_shizuku_desc">Πρόσβαση επιπέδου ADB με έγκριση χρήστη μέσω της υπηρεσίας Shizuku για δεδομένα εφαρμογών και φακέλους Android/data.</string>
+    <string name="mode_root">Root</string>
+    <string name="mode_root_desc">Κέλυφος υπερχρήστη μέσω libsu με ενσωματωμένα tar, zstd, busybox και rclone. Διαθέσιμες εικόνες κατατμήσεων.</string>
+    <string name="mode_module">Προχωρημένο root (συνοδευτική μονάδα)</string>
+    <string name="mode_module_desc">Root και μονάδα Magisk/KernelSU που παρέχει εργαλεία συστήματος και υπηρεσία εκκίνησης για προγραμματισμένα και συνεχιζόμενα αντίγραφα.</string>
+
+    <string name="device_section_title">Συσκευή</string>
+    <string name="device_model">Μοντέλο</string>
+    <string name="android_version">Έκδοση Android</string>
+    <string name="api_level">Επίπεδο API</string>
+    <string name="security_patch">Ενημέρωση ασφαλείας</string>
+    <string name="supported_abis">Υποστηριζόμενα ABI</string>
+    <string name="kernel_version">Πυρήνας</string>
+
+    <string name="storage_section_title">Αποθηκευτικός χώρος</string>
+    <string name="storage_internal">Εσωτερικός χώρος (δεδομένα εφαρμογής)</string>
+    <string name="storage_external">Κοινόχρηστος χώρος</string>
+    <string name="storage_free_of_total">%1$s ελεύθερα από %2$s</string>
+    <string name="storage_unavailable">Μη διαθέσιμο</string>
+
+    <string name="native_section_title">Εγγενής βοηθητική βιβλιοθήκη</string>
+    <string name="native_loaded">Η libdftb_native φορτώθηκε</string>
+    <string name="native_not_loaded">Η libdftb_native δεν ήταν δυνατό να φορτωθεί</string>
+    <string name="native_version">Έκδοση</string>
+    <string name="process_uid">UID διεργασίας</string>
+
+    <string name="app_section_title">Σχετικά με το DFTB</string>
+    <string name="app_version">Έκδοση</string>
+    <string name="app_package">Πακέτο</string>
+    <string name="app_build_type">Τύπος έκδοσης</string>
+
+    <string name="usb_device_attached">Συνδέθηκε συσκευή USB: %1$s</string>
+
+    <string name="notification_channel_jobs_name">Εργασίες σε εξέλιξη</string>
+    <string name="notification_channel_jobs_desc">Ζωντανή πρόοδος αντιγράφων, επαναφορών και επαληθεύσεων.</string>
+    <string name="notification_channel_alerts_name">Αποτελέσματα και ειδοποιήσεις</string>
+    <string name="notification_channel_alerts_desc">Ολοκληρωμένες ή αποτυχημένες εργασίες, ανεπαρκής χώρος, αναντιστοιχίες ακεραιότητας.</string>
+    <string name="notification_channel_scheduler_name">Προγραμματισμένα αντίγραφα</string>
+    <string name="notification_channel_scheduler_desc">Υπενθυμίσεις και αναμονή για Wi‑Fi, φόρτιση ή αδράνεια.</string>
+
+    <string name="notification_jobs_summary_title">Το DFTB εργάζεται</string>
+    <string name="notification_idle_text">Προετοιμασία…</string>
+    <plurals name="notification_active_jobs">
+        <item quantity="one">%1$d εργασία σε εξέλιξη</item>
+        <item quantity="other">%1$d εργασίες σε εξέλιξη</item>
+    </plurals>
+    <string name="notification_action_cancel">Ακύρωση</string>
+    <string name="notification_progress_bytes">%1$s από %2$s</string>
+    <string name="notification_progress_items">%1$d από %2$d στοιχεία</string>
+
+    <string name="job_kind_backup">Αντίγραφο ασφαλείας</string>
+    <string name="job_kind_restore">Επαναφορά</string>
+    <string name="job_kind_verify">Επαλήθευση</string>
+    <string name="job_kind_sync">Συγχρονισμός</string>
+    <string name="job_phase_queued">Σε ουρά</string>
+    <string name="job_phase_preflight">Προκαταρκτικοί έλεγχοι</string>
+    <string name="job_phase_running">Σε εξέλιξη</string>
+    <string name="job_phase_finalizing">Ολοκλήρωση</string>
+    <string name="job_phase_completed">Ολοκληρώθηκε</string>
+    <string name="job_phase_failed">Απέτυχε</string>
+    <string name="job_phase_cancelled">Ακυρώθηκε</string>
+</resources>

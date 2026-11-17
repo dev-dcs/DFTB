@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pipeline_source_unavailable_root_required">Αυτό το τμήμα του αντιγράφου ασφαλείας απαιτεί λειτουργία Root. Αλλάξτε τη λειτουργία σε Root στις Ρυθμίσεις.</string>
+    <string name="pipeline_source_unavailable_root_not_granted">Η λειτουργία Root είναι επιλεγμένη αλλά η πρόσβαση υπερχρήστη δεν έχει χορηγηθεί αυτή τη στιγμή. Χορηγήστε root στο DFTB από τον διαχειριστή root και δοκιμάστε ξανά.</string>
+    <string name="pipeline_source_unavailable_nothing_selected">Δεν υπάρχει τίποτα για αντίγραφο ασφαλείας σε αυτό το τμήμα του προφίλ.</string>
+    <string name="pipeline_source_unavailable_invalid_filter">Ένα φίλτρο αρχείων σε αυτό το προφίλ δεν είναι έγκυρο. Επεξεργαστείτε το προφίλ και διορθώστε το επισημασμένο φίλτρο.</string>
+    <string name="pipeline_source_unavailable_scan_failed">Η σάρωση αρχείων δεν ολοκληρώθηκε, οπότε δεν ήταν δυνατή η επιλογή αρχείων.</string>
+    <string name="pipeline_source_warn_partition_unresolved">Η κατάτμηση %1$s δεν βρέθηκε σε αυτήν τη συσκευή (ή δεν ήταν δυνατός ο προσδιορισμός του slot της) και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_partition_size_unknown">Το μέγεθος της κατάτμησης %1$s είναι άγνωστο· η πληρότητα της εικόνας της δεν μπορεί να ελεγχθεί εκ των προτέρων.</string>
+    <string name="pipeline_source_warn_app_not_installed">Το %1$s δεν είναι εγκατεστημένο (ή δεν είναι ορατό στο DFTB) και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_app_invalid_package">Το \"%1$s\" δεν είναι έγκυρο όνομα πακέτου και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_app_component_unavailable">Το %1$s δεν μπορεί να αποθηκευτεί στην τρέχουσα λειτουργία και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">Ένα αρχείο APK του %1$s δεν ήταν δυνατό να διαβαστεί και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_files_truncated">Ταιριάζουν περισσότερα αρχεία από όσα μπορούν να αποθηκευτούν σε μία εκτέλεση· συμπεριλαμβάνονται μόνο τα πρώτα %1$s.</string>
+    <string name="pipeline_source_warn_files_root_blocked">Το %1$s δεν ήταν δυνατό να διαβαστεί στην τρέχουσα λειτουργία και παραλείφθηκε.</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">%1$s αρχεία ή φάκελοι δεν ήταν δυνατό να διαβαστούν κατά τη σάρωση και δεν συμπεριλαμβάνονται.</string>
+    <string name="pipeline_source_warn_nandroid_plan">Το %1$s δεν μπορεί να συμπεριληφθεί στο αντίγραφο ασφαλείας συμβατό με TWRP (δείτε τις λεπτομέρειες).</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">Ορισμένες καταχωρίσεις του %1$s δεν ήταν δυνατό να εμφανιστούν· το αντίγραφο TWRP μπορεί να είναι ελλιπές.</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">Ορισμένα αρχεία διαγράφηκαν από το Android κατά την αρχειοθέτηση του %1$s· δεν υπάρχουν στο αντίγραφο TWRP.</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">Το tar αυτής της έκδοσης Android δεν μπορεί να αποθηκεύσει ετικέτες SELinux μέσα σε αρχεία %1$s· οι ετικέτες αποθηκεύονται σε ξεχωριστή λίστα.</string>
+
+</resources>

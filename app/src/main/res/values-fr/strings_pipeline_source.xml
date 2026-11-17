@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="pipeline_source_unavailable_root_required">Cette partie de la sauvegarde nécessite le mode Root. Passez le mode de fonctionnement sur Root dans les Paramètres.</string>
+    <string name="pipeline_source_unavailable_root_not_granted">Le mode Root est sélectionné mais l\'accès superutilisateur n\'est pas accordé pour le moment. Accordez root à DFTB dans votre gestionnaire root et réessayez.</string>
+    <string name="pipeline_source_unavailable_nothing_selected">Rien à sauvegarder pour cette partie du profil.</string>
+    <string name="pipeline_source_unavailable_invalid_filter">Un filtre de fichiers de ce profil n\'est pas valide. Modifiez le profil et corrigez le filtre en surbrillance.</string>
+    <string name="pipeline_source_unavailable_scan_failed">L\'analyse des fichiers ne s\'est pas terminée, aucun fichier n\'a donc pu être sélectionné.</string>
+    <string name="pipeline_source_warn_partition_unresolved">La partition %1$s est introuvable sur cet appareil (ou son slot n\'a pas pu être déterminé) et a été ignorée.</string>
+    <string name="pipeline_source_warn_partition_size_unknown">La taille de la partition %1$s est inconnue ; l\'exhaustivité de son image ne peut pas être vérifiée à l\'avance.</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s n\'est pas installée (ou n\'est pas visible pour DFTB) et a été ignorée.</string>
+    <string name="pipeline_source_warn_app_invalid_package">\"%1$s\" n\'est pas un nom de paquet valide et a été ignoré.</string>
+    <string name="pipeline_source_warn_app_component_unavailable">%1$s ne peut pas être capturé dans le mode de fonctionnement actuel et a été ignoré.</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">Un fichier APK de %1$s n\'a pas pu être lu et a été ignoré.</string>
+    <string name="pipeline_source_warn_files_truncated">Plus de fichiers correspondent que ce qui peut être sauvegardé en une exécution ; seuls les %1$s premiers sont inclus.</string>
+    <string name="pipeline_source_warn_files_root_blocked">%1$s n\'a pas pu être lu dans le mode actuel et a été ignoré.</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">%1$s fichiers ou dossiers n\'ont pas pu être lus pendant l\'analyse et ne sont pas inclus.</string>
+    <string name="pipeline_source_warn_nandroid_plan">%1$s ne peut pas être inclus dans la sauvegarde compatible TWRP (voir les détails).</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">Certaines entrées de %1$s n\'ont pas pu être listées ; la sauvegarde TWRP peut être incomplète.</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">Certains fichiers ont été supprimés par Android pendant l\'archivage de %1$s ; ils ne figurent pas dans la sauvegarde TWRP.</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">Le tar de cette version d\'Android ne peut pas stocker les étiquettes SELinux dans les archives %1$s ; elles sont enregistrées dans une liste séparée.</string>
+
+</resources>

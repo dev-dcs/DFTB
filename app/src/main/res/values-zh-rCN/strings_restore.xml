@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore engine (core/restore): progress, results, failures and per-file problems shown in
+     notifications, History and the restore screens. Technical detail stays in English and is
+     appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="restore_engine_opening">正在读取备份…</string>
+    <string name="restore_engine_preflight">正在检查可恢复的内容…</string>
+    <string name="restore_engine_verifying">恢复前正在验证备份…</string>
+    <string name="restore_engine_restoring">正在恢复 %1$s…</string>
+
+    <!-- Results -->
+    <plurals name="restore_engine_completed">
+        <item quantity="other">已恢复 %1$d 个项目。</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="other">%1$d 条警告。</item>
+    </plurals>
+    <string name="restore_engine_cancelled">恢复已停止。已恢复的文件会保留。</string>
+
+    <!-- Failures (RestoreErrorCode) -->
+    <string name="restore_engine_error_destination">此备份的目标位置已不存在。</string>
+    <string name="restore_engine_error_open">无法读取该备份。</string>
+    <string name="restore_engine_error_key_required">此备份已加密。请输入其口令或密钥。</string>
+    <string name="restore_engine_error_wrong_key">此备份的口令或密钥错误。</string>
+    <string name="restore_engine_error_unsupported">此备份的创建方式是当前版本的 DFTB 无法恢复的。</string>
+    <string name="restore_engine_error_nothing">未选择任何要恢复的内容。</string>
+    <string name="restore_engine_error_blocked">在当前模式下，所选项目均无法恢复。</string>
+    <string name="restore_engine_error_space">可用空间不足，无法恢复。</string>
+    <string name="restore_engine_error_verify">备份已损坏；未恢复任何内容。</string>
+    <string name="restore_engine_error_all_failed">所有选定项目均恢复失败。</string>
+    <string name="restore_engine_error_internal">恢复因意外错误而停止。</string>
+
+    <!-- Unit-level notices -->
+    <string name="restore_engine_no_app_restorer">此版本不支持恢复应用。</string>
+    <string name="restore_engine_no_partition_restorer">此版本不支持恢复分区。</string>
+    <string name="restore_engine_unit_blocked">无法恢复 %1$s：%2$s</string>
+    <string name="restore_engine_space_unknown">%1$s 的可用空间未知；恢复期间空间可能耗尽。</string>
+    <string name="restore_engine_space_overridden">%1$s：尽管还需要 %2$s 空间，仍继续恢复。</string>
+    <string name="restore_engine_cross_device">此备份来自 %1$s；此设备是 %2$s。</string>
+    <string name="restore_engine_resume_skipped">%1$s 已恢复，已跳过。</string>
+    <string name="restore_engine_partial_backup">此备份未完成；只能恢复其中包含的项目。</string>
+    <string name="restore_engine_checkpoint_failed">无法保存恢复进度；中断的恢复将从头开始。</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="other">…另有 %1$d 个问题。</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="other">%1$d 个文件没有已知的原始位置，未被恢复。请改为将其恢复到某个文件夹。</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="other">已保留 %1$d 个现有文件。</item>
+    </plurals>
+
+    <!-- File unit failures (FileRestoreError) -->
+    <string name="restore_file_error_original_unknown">备份未记录这些文件的来源位置。请将它们恢复到某个文件夹。</string>
+    <string name="restore_file_error_target">无法打开恢复文件夹。</string>
+    <string name="restore_file_error_no_privilege">在当前模式下，DFTB 无法写入此文件夹。请选择其他文件夹，或切换到 Shizuku 或 root。</string>
+    <string name="restore_file_error_saf">对所选文件夹的访问权限已被移除。请重新选择该文件夹。</string>
+    <string name="restore_file_error_twrp_folder">TWRP 归档只能解压到所选文件夹，绝不能覆盖正在运行的系统。</string>
+    <string name="restore_file_error_corrupt">备份数据已损坏。</string>
+    <string name="restore_file_error_no_space">恢复文件夹已满。</string>
+    <string name="restore_file_error_archive">无法读取该归档。</string>
+    <string name="restore_file_error_storage">无法读取目标位置。</string>
+
+    <!-- Per-file problems (ExtractIssueCode) -->
+    <string name="restore_issue_unsafe_path">已拒绝不安全的路径</string>
+    <string name="restore_issue_through_symlink">已拒绝：将会通过符号链接写入</string>
+    <string name="restore_issue_parent_not_dir">有文件挡住了其所在文件夹</string>
+    <string name="restore_issue_directory_in_the_way">存在同名文件夹</string>
+    <string name="restore_issue_skipped_existing">已保留现有文件</string>
+    <string name="restore_issue_symlink_unsupported">此文件夹不支持符号链接</string>
+    <string name="restore_issue_hardlink_unsupported">此文件夹不支持硬链接</string>
+    <string name="restore_issue_hardlink_missing">此链接指向的文件未被恢复</string>
+    <string name="restore_issue_special_skipped">已跳过特殊文件（管道或设备）</string>
+    <string name="restore_issue_digest_mismatch">恢复的字节与备份不符；文件未写入</string>
+    <string name="restore_issue_write_failed">无法写入</string>
+    <string name="restore_issue_metadata_failed">无法恢复日期、所有者或权限</string>
+</resources>

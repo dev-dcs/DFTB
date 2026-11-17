@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">Cancelar</string>
+    <string name="profiles_ok">Aceptar</string>
+    <string name="profiles_done">Hecho</string>
+    <string name="profiles_back">Atrás</string>
+    <string name="profiles_yes">Sí</string>
+    <string name="profiles_no">No</string>
+    <string name="profiles_unknown_error">Error desconocido</string>
+    <string name="profiles_cd_error">Error</string>
+    <string name="profiles_cd_warning">Advertencia</string>
+    <string name="profiles_cd_unavailable">No disponible en el modo actual</string>
+    <string name="profiles_cd_step_done">Hecho</string>
+    <string name="profiles_cd_step_errors">Tiene problemas que corregir</string>
+    <string name="profiles_cd_step_todo">Aún sin hacer</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">Perfiles de copia de seguridad</string>
+    <string name="profiles_open_schedules">Programaciones y retención</string>
+    <string name="profiles_new">Nuevo perfil</string>
+    <string name="profiles_empty_title">Aún no hay perfiles de copia de seguridad</string>
+    <string name="profiles_empty_body">Un perfil define qué copiar, adónde y cuándo. Toca «Nuevo perfil» para crear el primero.</string>
+    <string name="profiles_more_actions">Más acciones para %1$s</string>
+    <string name="profiles_action_edit">Editar</string>
+    <string name="profiles_action_duplicate">Duplicar</string>
+    <string name="profiles_action_delete">Eliminar</string>
+    <string name="profiles_action_run_now">Copiar ahora</string>
+    <string name="profiles_action_view_progress">Ver progreso</string>
+    <string name="profiles_badge_encrypted">Cifrado</string>
+    <string name="profiles_badge_twrp">Compatible con TWRP</string>
+    <string name="profiles_badge_paused">En pausa</string>
+    <string name="profiles_badge_needs_passphrase">Requiere frase de contraseña</string>
+    <string name="profiles_hint_scheduled_passphrase">Las ejecuciones programadas de este perfil esperan a que escribas su frase de contraseña.</string>
+    <string name="profiles_resume_available">Una copia de seguridad interrumpida puede continuar donde se detuvo.</string>
+    <string name="profiles_resume_needs_passphrase">Una copia de seguridad interrumpida puede continuar donde se detuvo cuando introduzcas su frase de contraseña.</string>
+    <string name="profiles_resume_action">Continuar</string>
+    <string name="profiles_no_destination">Ningún destino seleccionado</string>
+    <string name="profiles_next_run">Próxima ejecución: %1$s</string>
+    <string name="profiles_last_run">Última copia: %1$s, %2$s</string>
+    <string name="profiles_last_run_never">Sin copias de seguridad</string>
+    <string name="profiles_schedule_on">Programación activa</string>
+    <string name="profiles_schedule_off">Programación en pausa</string>
+    <string name="profiles_add_schedule">Configurar una programación</string>
+    <string name="profiles_copy_name">Copia de %1$s</string>
+    <string name="profiles_targets_none">Nada seleccionado</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="one">%d partición</item>
+        <item quantity="other">%d particiones</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="one">%d app</item>
+        <item quantity="other">%d apps</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="one">%d carpeta</item>
+        <item quantity="other">%d carpetas</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">Copia de seguridad de «%1$s» en cola</string>
+    <string name="profiles_event_resume_queued">Continuando la copia de seguridad interrumpida de «%1$s»</string>
+    <string name="profiles_event_started">Copia de seguridad de «%1$s» iniciada</string>
+    <string name="profiles_event_already_running">«%1$s» ya se está copiando</string>
+    <string name="profiles_event_duplicated">Se creó «%1$s». Una programación copiada empieza en pausa.</string>
+    <string name="profiles_event_deleted">«%1$s» eliminado</string>
+    <string name="profiles_event_schedule_on">Programación de «%1$s» reanudada</string>
+    <string name="profiles_event_schedule_off">Programación de «%1$s» en pausa</string>
+    <string name="profiles_event_finished">Copia de seguridad de «%1$s»: %2$s</string>
+    <string name="profiles_event_finished_detail">%1$s. %2$s</string>
+    <string name="profiles_event_failed">No funcionó. El registro contiene los detalles.</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">¿Eliminar «%1$s»?</string>
+    <string name="profiles_delete_consequence">Se eliminarán el perfil «%1$s» y su programación, y una copia de seguridad interrumpida de él ya no se podrá reanudar. Esta acción no se puede deshacer.</string>
+    <string name="profiles_delete_backups_kept">Las copias de seguridad ya almacenadas en %1$s se conservan, con sus entradas de historial, para que aún puedas restaurarlas. DFTB todavía no puede eliminar por ti las copias almacenadas de un perfil; quítalas tú mismo del destino si ya no las necesitas.</string>
+    <string name="profiles_delete_backups_kept_generic">Las copias de seguridad ya almacenadas se conservan, con sus entradas de historial, para que aún puedas restaurarlas. DFTB todavía no puede eliminar por ti las copias almacenadas de un perfil; quítalas tú mismo del destino si ya no las necesitas.</string>
+    <string name="profiles_delete_key_kept">La clave de cifrado permanece en el almacén de este dispositivo para que esas copias de seguridad sigan siendo legibles.</string>
+    <string name="profiles_delete_confirm">Eliminar perfil</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">en ejecución</string>
+    <string name="profiles_status_interrupted">interrumpida</string>
+    <string name="profiles_status_completed">completada</string>
+    <string name="profiles_status_warnings">completada con advertencias</string>
+    <string name="profiles_status_failed">fallida</string>
+    <string name="profiles_status_cancelled">cancelada</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">Frase de contraseña de «%1$s»</string>
+    <string name="profiles_passphrase_body">Este perfil cifra con una frase de contraseña que DFTB nunca guarda. Usa siempre la misma: sin ella no se podrán descifrar estas copias de seguridad, ni siquiera con DFTB.</string>
+    <string name="profiles_passphrase_field">Frase de contraseña</string>
+    <string name="profiles_passphrase_confirm">Repite la frase de contraseña</string>
+    <string name="profiles_passphrase_mismatch">Las frases de contraseña no coinciden</string>
+    <string name="profiles_passphrase_start">Iniciar copia de seguridad</string>
+    <string name="profiles_passphrase_body_resume">Introduce la frase de contraseña con la que empezó esta copia de seguridad interrumpida. DFTB nunca la guarda; una frase distinta dejaría la copia con partes que no se pueden descifrar juntas.</string>
+    <string name="profiles_passphrase_resume">Continuar copia de seguridad</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="one">Usa al menos %d carácter</item>
+        <item quantity="other">Usa al menos %d caracteres</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">Nuevo perfil de copia de seguridad</string>
+    <string name="profiles_wizard_edit_title">Editar perfil de copia de seguridad</string>
+    <string name="profiles_wizard_close">Cerrar</string>
+    <string name="profiles_wizard_back">Atrás</string>
+    <string name="profiles_wizard_next">Siguiente</string>
+    <string name="profiles_wizard_save">Guardar</string>
+    <string name="profiles_wizard_save_run">Guardar y copiar ahora</string>
+    <string name="profiles_wizard_not_found">Este perfil ya no existe.</string>
+    <string name="profiles_wizard_leave">Volver</string>
+    <string name="profiles_wizard_fix_errors">Corrige primero los problemas resaltados</string>
+    <string name="profiles_wizard_key_failed">No se pudo crear la clave de cifrado en el almacén del dispositivo. No se guardó nada.</string>
+    <string name="profiles_wizard_save_failed">No se pudo guardar el perfil.</string>
+    <string name="profiles_wizard_already_running">El perfil se guardó; ya se está copiando.</string>
+    <string name="profiles_wizard_discard_title">¿Descartar los cambios?</string>
+    <string name="profiles_wizard_discard_new">Este perfil nuevo no se ha guardado; se perderá todo lo que introdujiste.</string>
+    <string name="profiles_wizard_discard_edit">Tus cambios no se han guardado y se perderán. El perfil guardado permanece como estaba.</string>
+    <string name="profiles_wizard_discard_confirm">Descartar</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">Nombre</string>
+    <string name="profiles_step_name_sub">Cómo llamar a este perfil</string>
+    <string name="profiles_step_targets">Qué</string>
+    <string name="profiles_step_targets_sub">Particiones, apps y archivos que copiar</string>
+    <string name="profiles_step_destination">Dónde</string>
+    <string name="profiles_step_destination_sub">El destino y su espacio libre</string>
+    <string name="profiles_step_options">Cómo</string>
+    <string name="profiles_step_options_sub">Formato, compresión, cifrado, integridad</string>
+    <string name="profiles_step_schedule">Cuándo</string>
+    <string name="profiles_step_schedule_sub">Programación, condiciones y retención</string>
+    <string name="profiles_step_review">Revisión</string>
+    <string name="profiles_step_review_sub">Comprueba todo y guarda</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">Paso %1$d de %2$d: %3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">Nombre del perfil</string>
+    <string name="profiles_field_name_placeholder">p. ej. Fotos nocturnas</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d caracteres</string>
+    <string name="profiles_field_description">Descripción (opcional)</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">Ponle un nombre al perfil.</string>
+    <string name="profiles_problem_name_too_long">El nombre es demasiado largo.</string>
+    <string name="profiles_problem_name_duplicate">Otro perfil ya usa este nombre.</string>
+    <string name="profiles_problem_description_too_long">La descripción es demasiado larga.</string>
+    <string name="profiles_problem_no_targets">Selecciona al menos una partición, app, carpeta o categoría de archivos.</string>
+    <string name="profiles_problem_app_no_components">Una app no tiene componentes seleccionados; elige al menos uno o quita la app.</string>
+    <string name="profiles_problem_path_invalid">Una carpeta debe ser una ruta absoluta (que empiece por /) o una carpeta elegida con el selector del sistema.</string>
+    <string name="profiles_problem_path_duplicate">La misma carpeta aparece dos veces.</string>
+    <string name="profiles_problem_filter_invalid">Un filtro de carpeta tiene un error; ábrelo para corregirlo.</string>
+    <string name="profiles_problem_components_unavailable">Algunos componentes de apps seleccionados no se pueden capturar en el modo actual; se omitirán hasta que el modo lo permita.</string>
+    <string name="profiles_problem_partitions_need_root">Las particiones solo se pueden leer en modo Root; en el modo actual se omitirán.</string>
+    <string name="profiles_problem_no_destination">Elige adónde van las copias de seguridad.</string>
+    <string name="profiles_problem_destination_gone">El destino elegido ya no existe; elige otro.</string>
+    <string name="profiles_problem_encryption_unsupported">Este perfil usaba un método de cifrado que DFTB no puede ejecutar; elige una opción de cifrado.</string>
+    <string name="profiles_problem_transfer_unsupported">La compresión remota no está disponible para este destino; elige otro modo de transferencia.</string>
+    <string name="profiles_problem_vault_key_missing">Falta la clave de dispositivo de este perfil en el almacén. Al guardar se crea una clave nueva; las copias de seguridad hechas con la clave anterior no se pueden descifrar.</string>
+    <string name="profiles_problem_twrp_not_local">TWRP y OrangeFox solo leen el almacenamiento del dispositivo y las unidades USB; copia allí estas copias de seguridad antes de restaurar desde recovery.</string>
+    <string name="profiles_problem_twrp_no_partitions">La compatibilidad con TWRP solo cambia cómo se almacenan las particiones, y este perfil no tiene ninguna.</string>
+    <string name="profiles_problem_interval_invalid">Introduce el intervalo como un número entero.</string>
+    <string name="profiles_problem_schedule_time">La hora no es válida.</string>
+    <string name="profiles_problem_schedule_no_days">Elige al menos un día.</string>
+    <string name="profiles_problem_schedule_invalid_day">La programación contiene un día que no existe.</string>
+    <string name="profiles_problem_schedule_interval_short">El intervalo debe ser de al menos 15 minutos, el mínimo de Android para tareas repetitivas.</string>
+    <string name="profiles_problem_schedule_battery">El nivel de batería debe estar entre 0 y 100 por ciento.</string>
+    <string name="profiles_problem_keep_last">Introduce cuántas copias de seguridad conservar (1 o más).</string>
+    <string name="profiles_problem_max_age">Introduce la antigüedad máxima en días enteros (1 o más).</string>
+    <string name="profiles_problem_passphrase_scheduled">Las ejecuciones programadas no pueden escribir una frase de contraseña: cada una espera, con una notificación, hasta que la introduzcas.</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">Sin cifrado</string>
+    <string name="profiles_key_none_desc">Se almacenan como archivos sin cifrar: cualquiera que pueda abrir el destino puede leerlos.</string>
+    <string name="profiles_key_passphrase">Frase de contraseña (AES-256-GCM)</string>
+    <string name="profiles_key_passphrase_desc">La escribes en cada copia de seguridad y restauración. Nunca se guarda y se puede restaurar en cualquier dispositivo.</string>
+    <string name="profiles_key_vault">Clave de dispositivo (AES-256-GCM)</string>
+    <string name="profiles_key_vault_desc">Una clave aleatoria guardada en el almacén seguro de este dispositivo. Totalmente automática, pero ligada a este dispositivo.</string>
+    <string name="profiles_key_stored">Frase de contraseña guardada (AES-256-GCM)</string>
+    <string name="profiles_key_stored_desc">Usa la frase de contraseña ya guardada en el almacén para este perfil.</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">No disponible con la compatibilidad con TWRP: recovery solo puede leer archivos sin cifrar.</string>
+    <string name="profiles_block_mask">Requiere cifrado: sin él, el manifiesto mostraría los nombres reales.</string>
+    <string name="profiles_block_remote_needs_ssh">Solo es posible con destinos SSH o SFTP.</string>
+    <string name="profiles_block_remote_unavailable">Aún no disponible: la conexión SSH no ofrece canal de comandos remotos.</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">Diaria</string>
+    <string name="profiles_freq_weekly">Semanal</string>
+    <string name="profiles_freq_interval">Intervalo</string>
+    <string name="profiles_unit_minutes">Minutos</string>
+    <string name="profiles_unit_hours">Horas</string>
+    <string name="profiles_slot_title">Ranura A/B</string>
+    <string name="profiles_slot_active">Activa</string>
+    <string name="profiles_slot_inactive">Inactiva</string>
+    <string name="profiles_slot_both">Ambas</string>
+    <string name="profiles_slot_none">Sin ranura</string>
+    <string name="profiles_slot_active_desc">Crea la imagen de la ranura desde la que arrancó el dispositivo; sigue automáticamente las actualizaciones OTA.</string>
+    <string name="profiles_slot_inactive_desc">Crea la imagen de la otra ranura, p. ej. el sistema anterior tras una actualización.</string>
+    <string name="profiles_slot_both_desc">Crea la imagen de ambas ranuras: el doble de tamaño, con una alternativa completa.</string>
+    <string name="profiles_slot_none_desc">Para particiones que no tienen copias A/B.</string>
+    <string name="profiles_structure_preserve_desc">Los archivos conservan su estructura de carpetas.</string>
+    <string name="profiles_structure_categorized_desc">Los archivos se ordenan en carpetas por tipo (imágenes, vídeos, documentos…).</string>
+    <string name="profiles_transfer_staging_desc">Crea cada archivo primero en este dispositivo y luego lo sube: reanudable, requiere espacio libre local.</string>
+    <string name="profiles_transfer_direct_desc">Transmite directamente al destino sin archivos temporales; una subida interrumpida reinicia ese archivo.</string>
+    <string name="profiles_transfer_remote_desc">Envía datos sin procesar por SSH y comprime en el servidor.</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s (%2$d)</string>
+    <string name="profiles_targets_tab_partitions">Particiones</string>
+    <string name="profiles_targets_tab_apps">Apps</string>
+    <string name="profiles_targets_tab_files">Archivos</string>
+    <string name="profiles_components_title">Componentes de apps</string>
+    <string name="profiles_components_subtitle">Las apps recién seleccionadas incluyen: %1$s</string>
+    <string name="profiles_components_none">nada</string>
+    <string name="profiles_components_apply_all">Aplicar a todas las seleccionadas</string>
+    <string name="profiles_components_per_app">Por app (%1$d)</string>
+    <string name="profiles_components_per_app_title">Componentes por app</string>
+    <string name="profiles_components_per_app_empty">Aún no hay apps seleccionadas.</string>
+    <string name="profiles_component_reason">%1$s: %2$s</string>
+    <string name="profiles_remove_app">Quitar %1$s</string>
+    <string name="profiles_files_add_title">Carpetas</string>
+    <string name="profiles_files_storage_root">Almacenamiento interno</string>
+    <string name="profiles_files_pick_folder">Elegir una carpeta…</string>
+    <string name="profiles_files_no_picker">No hay ningún selector de carpetas disponible en este dispositivo.</string>
+    <string name="profiles_files_path_field">Ruta de la carpeta</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">Introduce una ruta absoluta que aún no esté en la lista.</string>
+    <string name="profiles_files_add">Añadir</string>
+    <string name="profiles_files_none">Ninguna carpeta seleccionada.</string>
+    <string name="profiles_files_saf_folder">Elegida con el selector de carpetas del sistema</string>
+    <string name="profiles_files_remove">Quitar %1$s</string>
+    <string name="profiles_files_recursive">Incluir subcarpetas</string>
+    <string name="profiles_files_edit_filter">Filtro</string>
+    <string name="profiles_files_readable">Legible con %1$s</string>
+    <string name="profiles_files_tier_hint">Requiere %1$s</string>
+    <string name="profiles_files_categories_title">Categorías de archivos</string>
+    <string name="profiles_files_categories_sub">Archivos coincidentes de las carpetas estándar (DCIM, Pictures, Music, Documents…)</string>
+    <string name="profiles_files_grant_failed">Android no conservó el acceso a esa carpeta; es posible que las copias de seguridad programadas no puedan leerla.</string>
+    <string name="profiles_files_already_added">Esa carpeta ya está en la lista.</string>
+    <string name="profiles_filter_none">Sin filtro: todos los archivos</string>
+    <string name="profiles_filter_only">solo %1$s</string>
+    <string name="profiles_filter_except">excepto %1$s</string>
+    <string name="profiles_filter_min">al menos %1$s</string>
+    <string name="profiles_filter_max">como máximo %1$s</string>
+    <string name="profiles_filter_after">modificados desde %1$s</string>
+    <string name="profiles_filter_before">modificados antes de %1$s</string>
+    <string name="profiles_filter_regex">patrones de ruta</string>
+    <string name="profiles_filter_title">Filtro de %1$s</string>
+    <string name="profiles_filter_save">Guardar filtro</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">Aún no hay destinos</string>
+    <string name="profiles_dest_empty_body">Añade un destino: una carpeta de este dispositivo, una unidad USB, un recurso de red o un remoto en la nube.</string>
+    <string name="profiles_dest_add">Añadir destino</string>
+    <string name="profiles_dest_space">%1$s libres de %2$s (última comprobación)</string>
+    <string name="profiles_dest_space_free">%1$s libres (última comprobación)</string>
+    <string name="profiles_dest_space_unknown">Espacio libre aún sin comprobar</string>
+    <string name="profiles_preflight_title">Tamaño y espacio</string>
+    <string name="profiles_preflight_subtitle">Lo que necesita esta copia de seguridad y si el destino tiene espacio</string>
+    <string name="profiles_preflight_need_targets">Selecciona primero qué copiar.</string>
+    <string name="profiles_preflight_running">Midiendo las fuentes seleccionadas…</string>
+    <string name="profiles_preflight_again">Estimar de nuevo</string>
+    <string name="profiles_preflight_failed">La estimación falló: %1$s</string>
+    <string name="profiles_preflight_stale">La selección cambió desde la última estimación.</string>
+    <string name="profiles_preflight_run">Estimar tamaño</string>
+    <string name="profiles_preflight_size">Tamaño estimado</string>
+    <string name="profiles_preflight_size_approx">unos %1$s</string>
+    <string name="profiles_preflight_items">Elementos</string>
+    <string name="profiles_preflight_artifacts">Archivos escritos</string>
+    <string name="profiles_preflight_unmeasured">No se pudo medir: %1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s, %2$s</string>
+    <string name="profiles_preflight_issue">%1$s: %2$s</string>
+    <string name="profiles_preflight_no_destination">Elige un destino para comprobar su espacio libre.</string>
+    <string name="profiles_preflight_checking_space">Comprobando el espacio libre en %1$s…</string>
+    <string name="profiles_preflight_check_space">Comprobar espacio libre</string>
+    <string name="profiles_preflight_destination">Destino: %1$s</string>
+    <string name="profiles_preflight_staging">Preparación local (se necesitan %1$s)</string>
+    <string name="profiles_preflight_enough">Espacio suficiente: %1$s libres</string>
+    <string name="profiles_preflight_enough_unknown_free">Espacio suficiente</string>
+    <string name="profiles_preflight_short">Espacio insuficiente: se necesitan %1$s más (margen de seguridad incluido)</string>
+    <string name="profiles_preflight_unknown">No se pudo determinar el espacio libre; la copia de seguridad lo intentará de todos modos.</string>
+    <string name="profiles_preflight_unknown_reason">No se pudo determinar el espacio libre (%1$s); la copia de seguridad lo intentará de todos modos.</string>
+    <plurals name="profiles_items">
+        <item quantity="one">%d elemento</item>
+        <item quantity="other">%d elementos</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="one">%d archivo</item>
+        <item quantity="other">%d archivos</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="one">y %d más</item>
+        <item quantity="other">y %d más</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">Compatibilidad con recovery</string>
+    <string name="profiles_opt_twrp">Compatible con TWRP</string>
+    <string name="profiles_opt_twrp_hint">Almacena las particiones como una carpeta de copia de seguridad de TWRP / OrangeFox para poder restaurarlas desde recovery sin DFTB.</string>
+    <string name="profiles_opt_twrp_forced">Impuesto por la compatibilidad con TWRP: copias sin procesar, sin compresión, sin cifrado y sin nombres ocultos. Recovery solo puede leer archivos sin cifrar.</string>
+    <string name="profiles_opt_format_title">Formato y compresión</string>
+    <string name="profiles_opt_tree_format">Formato de archivo comprimido (apps y archivos)</string>
+    <string name="profiles_opt_7z_hint">7z construye el archivo completo en el almacenamiento local antes de guardarlo.</string>
+    <string name="profiles_opt_raw_hint">Los archivos se copian uno a uno, cada uno comprimido con el códec indicado abajo.</string>
+    <string name="profiles_opt_images_only">Las particiones siempre se almacenan como imágenes sin procesar; elige su compresión abajo.</string>
+    <string name="profiles_opt_codec_images">Compresión de imágenes (particiones)</string>
+    <string name="profiles_opt_codec_files">Compresión por archivo</string>
+    <string name="profiles_opt_level">Nivel de compresión</string>
+    <string name="profiles_opt_level_value">%1$d (%2$s)</string>
+    <string name="profiles_opt_level_none">Nada de lo seleccionado aquí se comprime, por lo que no hay nivel que elegir.</string>
+    <string name="profiles_opt_level_tree_clamped">Los archivos comprimidos usan el nivel %1$d, el más alto que admite su formato.</string>
+    <string name="profiles_opt_level_image_clamped">Las imágenes de particiones usan el nivel %1$d, el más alto que admite su códec.</string>
+    <string name="profiles_opt_encryption_title">Cifrado</string>
+    <string name="profiles_opt_encryption_legacy">Guardado con «%1$s», que DFTB no puede ejecutar. Elige una de las opciones de abajo.</string>
+    <string name="profiles_opt_passphrase_warning">Las ejecuciones programadas te necesitarán: DFTB no puede escribir la frase de contraseña, así que cada una espera hasta que la introduzcas.</string>
+    <string name="profiles_opt_vault_warning">Ligada al dispositivo: si este dispositivo se restablece o se pierde, o se quita su bloqueo de pantalla seguro, estas copias de seguridad ya no se podrán descifrar, ni en este ni en ningún otro dispositivo.</string>
+    <string name="profiles_opt_vault_reused">Este perfil conserva su clave de dispositivo existente, por lo que las copias de seguridad anteriores siguen siendo legibles.</string>
+    <string name="profiles_opt_stored_hint">La frase de contraseña guardada permanece en el almacén y se usa en las ejecuciones sin supervisión.</string>
+    <string name="profiles_opt_mask">Ocultar nombres de archivo</string>
+    <string name="profiles_opt_mask_hint">Los nombres se cifran, de modo que el destino solo ve nombres aleatorios.</string>
+    <string name="profiles_opt_integrity_title">Integridad</string>
+    <string name="profiles_opt_checksum">Suma de verificación</string>
+    <string name="profiles_opt_checksum_weak">MD5 y SHA-1 detectan daños accidentales, pero no manipulaciones deliberadas.</string>
+    <string name="profiles_opt_verify">Verificar tras la copia de seguridad</string>
+    <string name="profiles_opt_verify_hint">Vuelve a leer cada archivo almacenado y compara las sumas de verificación.</string>
+    <string name="profiles_opt_layout_title">Estructura y transferencia</string>
+    <string name="profiles_opt_structure">Estructura de carpetas</string>
+    <string name="profiles_opt_transfer">Transferencia</string>
+    <string name="profiles_opt_staging_local">Con un destino en este dispositivo, los archivos se escriben directamente en su sitio (sin copia adicional).</string>
+    <string name="profiles_opt_advanced">Avanzado</string>
+    <string name="profiles_opt_posix">Conservar propietarios y permisos</string>
+    <string name="profiles_opt_posix_hint">Registra el propietario, el grupo y el modo POSIX de cada archivo.</string>
+    <string name="profiles_opt_selinux">Conservar etiquetas SELinux</string>
+    <string name="profiles_opt_selinux_hint">Registra los contextos SELinux; necesario para restaurar correctamente los datos de las apps.</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">Programación</string>
+    <string name="profiles_sched_enable">Ejecutar automáticamente</string>
+    <string name="profiles_sched_enable_hint">Si está desactivado, el perfil solo se ejecuta cuando tocas «Copiar ahora».</string>
+    <string name="profiles_sched_time">Hora</string>
+    <string name="profiles_sched_anchor">A partir de las</string>
+    <string name="profiles_sched_change_time">Cambiar</string>
+    <string name="profiles_sched_pick_time">Hora de la copia de seguridad</string>
+    <string name="profiles_sched_days">Días</string>
+    <string name="profiles_sched_every">Cada</string>
+    <string name="profiles_sched_interval_min">Al menos %1$d minutos.</string>
+    <string name="profiles_sched_conditions">Condiciones</string>
+    <string name="profiles_sched_unmetered">Solo en redes sin límite de datos</string>
+    <string name="profiles_sched_unmetered_hint">Espera a una red Wi-Fi o Ethernet en lugar de usar datos móviles.</string>
+    <string name="profiles_sched_local_no_network">El destino está en este dispositivo, así que no se necesita red.</string>
+    <string name="profiles_sched_charging">Solo mientras se carga</string>
+    <string name="profiles_sched_idle">Solo con el dispositivo inactivo</string>
+    <string name="profiles_sched_idle_hint">El estado inactivo puede tardar horas en producirse, por lo que las ejecuciones pueden retrasarse mucho.</string>
+    <string name="profiles_sched_battery">Nivel mínimo de batería</string>
+    <string name="profiles_sched_battery_value">Al menos %1$d%% de batería</string>
+    <string name="profiles_sched_catch_up">Recuperar ejecuciones perdidas</string>
+    <string name="profiles_sched_catch_up_hint">Si el dispositivo estaba apagado a la hora programada, hace la copia de seguridad lo antes posible después.</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s–%2$s</string>
+    <string name="profiles_sched_every_day">todos los días</string>
+    <string name="profiles_sched_weekdays">días laborables</string>
+    <string name="profiles_sched_weekends">fines de semana</string>
+    <string name="profiles_sched_daily">Cada día a las %1$s</string>
+    <string name="profiles_sched_weekly">%1$s a las %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">Cada %1$s desde %2$s</string>
+    <string name="profiles_sched_cond_charging">mientras se carga</string>
+    <string name="profiles_sched_cond_unmetered">en redes sin límite de datos</string>
+    <string name="profiles_sched_cond_idle">con el dispositivo inactivo</string>
+    <string name="profiles_sched_cond_battery">batería al menos %1$d%%</string>
+    <string name="profiles_sched_cond_catch_up">recupera ejecuciones perdidas</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">Solo manual</string>
+    <string name="profiles_sched_paused">En pausa · %1$s</string>
+    <string name="profiles_sched_invalid">La programación necesita corrección</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="one">%d h</item>
+        <item quantity="other">%d h</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">Retención</string>
+    <string name="profiles_retention_keep_last_switch">Limitar el número de copias de seguridad</string>
+    <string name="profiles_retention_keep_last_field">Copias de seguridad que conservar</string>
+    <string name="profiles_retention_max_age_switch">Eliminar copias de seguridad con más de cierto número de días</string>
+    <string name="profiles_retention_max_age_field">Antigüedad máxima en días</string>
+    <string name="profiles_retention_note">Tras cada copia de seguridad correcta, se eliminan del destino las copias más antiguas que superen estos límites. La copia correcta más reciente siempre se conserva.</string>
+    <string name="profiles_retention_keep_all">Conserva todas las copias de seguridad</string>
+    <string name="profiles_retention_both">%1$s, ninguna anterior a %2$s</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="one">Conserva la última copia de seguridad</item>
+        <item quantity="other">Conserva las últimas %d copias de seguridad</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="one">Conserva las copias de seguridad durante %d día</item>
+        <item quantity="other">Conserva las copias de seguridad durante %d días</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <string name="profiles_retention_apply">Aplicar ahora</string>
+    <string name="profiles_retention_preview_title">¿Aplicar la retención a «%1$s»?</string>
+    <string name="profiles_retention_preview_changed">La lista cambió desde la última vez que la viste (una copia de seguridad terminó o se eliminó). Revísala de nuevo.</string>
+    <string name="profiles_retention_preview_nothing">Nada que eliminar: todas las copias de seguridad almacenadas están dentro de los límites.</string>
+    <string name="profiles_retention_preview_unlisted">No se pudo listar %1$s; no se tuvieron en cuenta las copias de seguridad de allí que DFTB no tiene registradas.</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">El destino se quitó de DFTB: solo se elimina la entrada del historial</string>
+    <string name="profiles_retention_preview_where">%1$s en %2$s</string>
+    <string name="profiles_retention_preview_twrp">También elimina: %1$s</string>
+    <string name="profiles_retention_reason_keep_last">supera el límite de copias que conservar</string>
+    <string name="profiles_retention_reason_max_age">supera el límite de antigüedad</string>
+    <string name="profiles_retention_hold_newest">La copia de seguridad correcta más reciente siempre se conserva.</string>
+    <string name="profiles_retention_hold_complete">Se conserva la copia de seguridad completada por completo más reciente.</string>
+    <string name="profiles_retention_hold_active">Una copia de seguridad en ejecución o reanudable aún escribe en ella.</string>
+    <string name="profiles_retention_hold_unsafe">Su ruta almacenada parece insegura, por lo que no se toca.</string>
+    <string name="profiles_retention_hold_twrp">No se pudo determinar su carpeta de TWRP.</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s; %2$s y se reintentará tras la siguiente copia de seguridad.</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="one">Esta copia de seguridad se eliminará de forma permanente de su destino:</item>
+        <item quantity="other">Estas %d copias de seguridad se eliminarán de forma permanente de sus destinos:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="one">Se conserva %d copia de seguridad caducada:</item>
+        <item quantity="other">Se conservan %d copias de seguridad caducadas:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="one">Eliminar %d copia de seguridad</item>
+        <item quantity="other">Eliminar %d copias de seguridad</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="one">Se eliminó %1$d copia de seguridad de «%2$s»</item>
+        <item quantity="other">Se eliminaron %1$d copias de seguridad de «%2$s»</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="one">no se pudo eliminar %d</item>
+        <item quantity="other">no se pudieron eliminar %d</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">Programaciones y retención</string>
+    <string name="profiles_schedules_empty">Aún no hay perfiles.</string>
+    <string name="profiles_schedules_group_active">Programados</string>
+    <string name="profiles_schedules_group_paused">En pausa</string>
+    <string name="profiles_schedules_group_manual">Solo manual</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">Corrige esto antes de guardar</string>
+    <string name="profiles_review_warnings">Conviene saber</string>
+    <string name="profiles_review_edit">Editar %1$s</string>
+    <string name="profiles_review_fix">Ir a %1$s</string>
+    <string name="profiles_review_partitions">Particiones</string>
+    <string name="profiles_review_components">Componentes de apps</string>
+    <string name="profiles_review_codec">Compresión de flujo</string>
+    <string name="profiles_event_failed_reason">No funcionó: %1$s</string>
+    <string name="profiles_cd_ok">Aceptar</string>
+    <string name="profiles_wizard_saved_not_scheduled">Guardado, pero no se pudo configurar la programación. Vuelve a abrir el perfil para reintentarlo.</string>
+    <string name="profiles_wizard_saved_not_started">Guardado, pero no se pudo iniciar la copia. Usa «Copiar ahora» en la lista.</string>
+</resources>

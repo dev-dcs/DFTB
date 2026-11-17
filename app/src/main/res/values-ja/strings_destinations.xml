@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Destinations manager, destination editor, guided rclone setup and raw rclone.conf editor
+     (ui/destinations, ui/rclone). -->
+<resources>
+
+    <!-- Common -->
+    <string name="destinations_back">戻る</string>
+    <string name="destinations_cancel">キャンセル</string>
+    <string name="destinations_more">その他のオプション</string>
+    <string name="destinations_expand">展開</string>
+    <string name="destinations_collapse">折りたたむ</string>
+    <string name="destinations_secret_show">表示</string>
+    <string name="destinations_secret_hide">非表示</string>
+
+    <!-- System overview entry point -->
+    <string name="destinations_entry_subtitle">バックアップの保存先：フォルダ、USB ドライブ、サーバー、クラウドアカウント。</string>
+    <string name="destinations_entry_open">保存先を管理</string>
+
+    <!-- Destinations list -->
+    <string name="destinations_title">保存先</string>
+    <string name="destinations_add">保存先を追加</string>
+    <string name="destinations_empty">保存先がまだありません。バックアップの保存先を選ぶには追加してください。</string>
+    <string name="destinations_never_verified">未検証</string>
+    <string name="destinations_last_verified">最終検証：%1$s</string>
+    <string name="destinations_space">空き %1$s／合計 %2$s</string>
+    <string name="destinations_space_free_only">空き %1$s</string>
+    <string name="destinations_test">テスト</string>
+    <string name="destinations_edit">編集</string>
+    <string name="destinations_delete">削除</string>
+    <string name="destinations_delete_title">保存先を削除しますか？</string>
+    <string name="destinations_delete_message">「%1$s」と保存されているパスワードまたは鍵をこのデバイスから削除します。そこに保存済みのバックアップは削除されません。</string>
+    <string name="destinations_deleted">「%1$s」を削除しました。</string>
+    <string name="destinations_delete_failed">保存先を削除できませんでした。</string>
+
+    <!-- Editor: flow -->
+    <string name="destinations_add_title">保存先を追加</string>
+    <string name="destinations_edit_title">保存先を編集</string>
+    <string name="destinations_not_found">この保存先は存在しません。</string>
+    <string name="destinations_pick_type">保存先の種類は？</string>
+    <string name="destinations_more_providers_title">Google Drive、OneDrive、Dropbox、pCloud など</string>
+    <string name="destinations_more_providers_text">クラウドサービスは rclone 経由で接続します。先にリモートを設定し、rclone の保存先として追加してください。</string>
+    <string name="destinations_fix_errors">強調表示された項目を先に修正してください。</string>
+    <string name="destinations_test_connection">接続をテスト</string>
+    <string name="destinations_save">保存</string>
+    <string name="destinations_error_save">保存先を保存できませんでした。</string>
+    <string name="destinations_error_test">接続テストを開始できませんでした。</string>
+    <string name="destinations_error_vault">セキュア資格情報ストアを利用できません。パスワードまたは鍵は保存されませんでした。</string>
+    <string name="destinations_error_tree_grant">そのフォルダへのアクセスを維持できませんでした。もう一度選択してください。</string>
+    <string name="destinations_error_no_picker">このデバイスにはフォルダ選択機能がありません。</string>
+
+    <!-- Editor: type descriptions -->
+    <string name="destinations_type_desc_local_internal">アプリが直接書き込めるこのデバイス上のフォルダ。</string>
+    <string name="destinations_type_desc_local_saf">選択した任意のフォルダ：内部ストレージ、SD カード、ドキュメントプロバイダ。</string>
+    <string name="destinations_type_desc_usb_otg">このデバイスに接続した USB ドライブ上のフォルダ。</string>
+    <string name="destinations_type_desc_ftp">暗号化なしの FTP。信頼できるネットワーク内のルーターや NAS 向け。</string>
+    <string name="destinations_type_desc_ftps">TLS 上の FTP（明示的または暗黙的）。</string>
+    <string name="destinations_type_desc_sftp">任意の SSH サーバー上の SFTP。パスワードまたは秘密鍵を使用。</string>
+    <string name="destinations_type_desc_ssh">SSH サーバー。SFTP が使えれば SFTP、なければシェルコマンドを使用。</string>
+    <string name="destinations_type_desc_smb">Windows 共有、Samba、NAS（SMB 2/3）。</string>
+    <string name="destinations_type_desc_webdav">Nextcloud、ownCloud、NAS などの WebDAV サーバー。</string>
+    <string name="destinations_type_desc_nfs">カーネルがマウントする NFS エクスポート。Root モードが必要です。</string>
+    <string name="destinations_type_desc_rclone">rclone で設定したリモート：50 以上のクラウドサービスに対応。</string>
+    <string name="destinations_type_desc_s3">Amazon S3 または S3 互換のオブジェクトストレージ。</string>
+    <string name="destinations_type_desc_mega">MEGA クラウドストレージアカウント。</string>
+    <string name="destinations_type_desc_pcloud">pCloud。rclone リモート経由で接続します。</string>
+
+    <!-- Editor: sections -->
+    <string name="destinations_section_folder">フォルダ</string>
+    <string name="destinations_section_rclone">rclone リモート</string>
+    <string name="destinations_section_location">場所</string>
+    <string name="destinations_section_credentials">サインイン</string>
+    <string name="destinations_section_advanced">詳細設定</string>
+    <string name="destinations_section_advanced_hint">任意のプロトコル設定。ほとんどのサーバーでは既定値で問題ありません。</string>
+
+    <!-- Editor: fields -->
+    <string name="destinations_field_name">名前</string>
+    <string name="destinations_field_host">サーバー</string>
+    <string name="destinations_field_server_url">サーバーアドレスまたは URL</string>
+    <string name="destinations_field_port">ポート</string>
+    <string name="destinations_field_base_path">サーバー上のフォルダ</string>
+    <string name="destinations_field_local_path">フォルダのパス</string>
+    <string name="destinations_field_subfolder">サブフォルダ（任意）</string>
+    <string name="destinations_field_smb_path">共有とフォルダ</string>
+    <string name="destinations_field_nfs_path">エクスポートパス</string>
+    <string name="destinations_field_bucket_path">バケットとフォルダ</string>
+    <string name="destinations_field_username">ユーザー名</string>
+    <string name="destinations_field_access_key_id">アクセスキー ID</string>
+    <string name="destinations_field_email">メールアドレス</string>
+    <string name="destinations_field_password">パスワード</string>
+    <string name="destinations_field_secret_access_key">シークレットアクセスキー</string>
+    <string name="destinations_field_private_key">秘密鍵</string>
+    <string name="destinations_field_passphrase">鍵のパスフレーズ（任意）</string>
+    <string name="destinations_field_auth">サインイン方法</string>
+    <string name="destinations_field_remote_name">リモート名</string>
+    <string name="destinations_field_folder">フォルダ</string>
+    <string name="destinations_field_usb_volume">USB ドライブ</string>
+    <string name="destinations_field_ftps_mode">TLS モード</string>
+    <string name="destinations_field_connect_timeout">接続タイムアウト（秒）</string>
+    <string name="destinations_field_data_timeout">データタイムアウト（秒）</string>
+    <string name="destinations_field_io_timeout">読み書きタイムアウト（秒）</string>
+    <string name="destinations_field_tls_pin">固定する証明書（SHA-256）</string>
+    <string name="destinations_field_scheme">プロトコル</string>
+    <string name="destinations_field_smb_share">共有名</string>
+    <string name="destinations_field_smb_domain">ドメイン／ワークグループ</string>
+    <string name="destinations_field_smb_encrypt">暗号化を必須にする</string>
+    <string name="destinations_field_smb_guest">ゲストアクセス</string>
+    <string name="destinations_field_nfs_export">エクスポート</string>
+    <string name="destinations_field_nfs_mount_options">マウントオプション</string>
+    <string name="destinations_field_s3_provider">プロバイダ</string>
+    <string name="destinations_field_s3_region">リージョン</string>
+    <string name="destinations_field_s3_endpoint">エンドポイント</string>
+
+    <!-- Editor: hints -->
+    <string name="destinations_hint_host">ホスト名または IP アドレス（プロトコルとポートは不要）</string>
+    <string name="destinations_hint_webdav_url">例：https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="destinations_hint_port_default">空欄で既定値（%1$d）を使用</string>
+    <string name="destinations_hint_base_path">例：/backups/phone。空欄は最上位を意味します。</string>
+    <string name="destinations_hint_local_path">絶対パス。空欄の場合はアプリ専用のストレージフォルダを使用します。</string>
+    <string name="destinations_hint_subfolder">存在しない場合、選択したフォルダ内に作成されます</string>
+    <string name="destinations_hint_smb_path">/share/folder。共有を詳細設定で指定した場合はフォルダのみ</string>
+    <string name="destinations_hint_nfs_path">サーバー上のエクスポートパス（例：/srv/backups）</string>
+    <string name="destinations_hint_bucket_path">bucket または bucket/folder</string>
+    <string name="destinations_hint_timeout">1～3600。空欄で既定値を使用</string>
+    <string name="destinations_hint_tls_pin">16 進数 64 桁。この証明書のみを信頼します（自己署名証明書など）。</string>
+    <string name="destinations_hint_smb_share">設定すると、上記のパスはこの共有内のフォルダになります</string>
+    <string name="destinations_hint_smb_encrypt">セッションを暗号化できないサーバーを拒否（SMB 3）</string>
+    <string name="destinations_hint_smb_guest">パスワードが保存されていない場合はゲストとして接続</string>
+    <string name="destinations_hint_nfs_export">設定すると、上記のパスはこのエクスポート内のフォルダになります</string>
+    <string name="destinations_hint_nfs_mount_options">vers=3,nolock,proto=tcp,soft,timeo=600 にマージされます</string>
+    <string name="destinations_hint_s3_provider">例：AWS、Minio、Wasabi、Cloudflare、Other</string>
+    <string name="destinations_hint_s3_region">例：us-east-1（ほとんどの S3 互換サービスでは任意）</string>
+    <string name="destinations_hint_s3_endpoint">AWS の場合は空欄。例：https://s3.example.com</string>
+    <string name="destinations_hint_private_key">OpenSSH、PEM、PuTTY 形式の秘密鍵を貼り付け</string>
+    <string name="destinations_secret_stored_hint">安全に保存済み。空欄のままにすると変更されません。</string>
+
+    <!-- Editor: auth methods -->
+    <string name="destinations_auth_none">なし</string>
+    <string name="destinations_auth_password">パスワード</string>
+    <string name="destinations_auth_private_key">秘密鍵</string>
+    <string name="destinations_auth_none_hint">資格情報を送信しません（匿名またはゲストアクセス）。</string>
+
+    <!-- Editor: choices -->
+    <string name="destinations_ftps_explicit">明示的（AUTH TLS）</string>
+    <string name="destinations_ftps_implicit">暗黙的</string>
+    <string name="destinations_scheme_https">HTTPS</string>
+    <string name="destinations_scheme_http">HTTP（暗号化なし）</string>
+
+    <!-- Editor: folder / USB -->
+    <string name="destinations_no_folder">フォルダが選択されていません。</string>
+    <string name="destinations_folder_selected">選択済み：%1$s</string>
+    <string name="destinations_choose_folder">フォルダを選択</string>
+    <string name="destinations_usb_none">USB ドライブが接続されていません。接続して「更新」をタップしてください。</string>
+    <string name="destinations_usb_refresh">更新</string>
+    <string name="destinations_usb_read_only">%1$s（読み取り専用）</string>
+    <string name="destinations_usb_not_connected">%1$s（未接続）</string>
+
+    <!-- Editor: rclone -->
+    <string name="destinations_rclone_no_remotes">rclone リモートがまだ設定されていません。</string>
+    <string name="destinations_rclone_unreadable">rclone の設定を読み取れませんでした。</string>
+    <string name="destinations_rclone_new_remote">リモートを設定</string>
+
+    <!-- Editor: SSH host key -->
+    <string name="destinations_host_key_explain">サーバーが提示した ID 鍵が、初回接続時に保存したものと異なります。サーバーを再インストールした、または鍵を再生成したと分かっている場合のみ続行してください。</string>
+    <string name="destinations_host_key_forget">保存済みホスト鍵を削除</string>
+    <string name="destinations_host_key_confirm">次回 %1$s に接続する際、提示された鍵をそのまま信頼します。続行しますか？</string>
+    <string name="destinations_host_key_forgotten">保存済みホスト鍵を削除しました。もう一度接続をテストしてください。</string>
+    <string name="destinations_host_key_none">このサーバーの保存済みホスト鍵は見つかりませんでした。</string>
+
+    <!-- Editor: validation errors -->
+    <string name="destinations_error_required">必須</string>
+    <string name="destinations_error_too_long">長すぎます</string>
+    <string name="destinations_error_invalid_host">有効なホスト名または IP アドレスではありません</string>
+    <string name="destinations_error_invalid_url">有効なアドレスではありません</string>
+    <string name="destinations_error_invalid_port">ポートは 1～65535 の数値にしてください</string>
+    <string name="destinations_error_path_traversal">パスに「..」を含めることはできません</string>
+    <string name="destinations_error_path_not_absolute">パスは / で始めてください</string>
+    <string name="destinations_error_invalid_characters">ここでは使用できない文字が含まれています</string>
+    <string name="destinations_error_invalid_timeout">1～3600 の秒数を入力してください</string>
+    <string name="destinations_error_invalid_pin">16 進数 64 桁にしてください（コロン可）</string>
+    <string name="destinations_error_invalid_remote_name">使用できるのは英数字、スペース、_ - . + @ のみ。先頭に - やスペースは使えません</string>
+    <string name="destinations_error_unknown_remote">rclone.conf にこの名前のリモートはありません</string>
+    <string name="destinations_error_invalid_key">秘密鍵ではないようです</string>
+    <string name="destinations_error_needs_share">/share/folder を入力するか、詳細設定で共有名を指定してください</string>
+    <string name="destinations_error_needs_export">/ で始まるエクスポートパスを入力してください</string>
+    <string name="destinations_error_unsafe_mount_options">使用できるのは英数字と _ . : = , / + - [ ] のみです</string>
+    <string name="destinations_error_volume_mismatch">このフォルダは選択した USB ドライブ上にありません</string>
+    <string name="destinations_error_invalid_email">有効なメールアドレスではありません</string>
+    <string name="destinations_error_needs_bucket">バケット名を入力してください</string>
+    <string name="destinations_error_invalid_choice">提示された値から選んでください</string>
+
+    <!-- rclone guided setup -->
+    <string name="rclone_setup_title">rclone のセットアップ</string>
+    <string name="rclone_setup_pick_provider">プロバイダを選択</string>
+    <string name="rclone_setup_tool_missing">このデバイスでは rclone を利用できません。パスワードのエンコードが不要なリモートの保存と rclone.conf の編集は可能ですが、rclone をインストールするまで接続は失敗します。</string>
+    <string name="rclone_setup_tool_ok">%1$s を使用中</string>
+    <string name="rclone_setup_existing_title">設定済みのリモート</string>
+    <string name="rclone_setup_existing_hint">シークレットはここには表示されません。</string>
+    <string name="rclone_setup_use_remote">保存先として使用</string>
+    <string name="rclone_setup_steps_title">手順</string>
+    <string name="rclone_setup_step_number">%1$d.</string>
+    <string name="rclone_setup_authorize_label">コンピューターで実行するコマンド</string>
+    <string name="rclone_setup_copy">コマンドをコピー</string>
+    <string name="rclone_setup_fields_title">設定</string>
+    <string name="rclone_setup_name_hint">DFTB と rclone がこのリモートに使う名前</string>
+    <string name="rclone_setup_name_taken">同名のリモートが存在します。置き換えられます</string>
+    <string name="rclone_setup_optional">%1$s（任意）</string>
+    <string name="rclone_setup_save">リモートを保存</string>
+    <string name="rclone_setup_saved">リモートを保存しました</string>
+    <string name="rclone_setup_fix_errors">強調表示された項目を先に修正してください。</string>
+    <string name="rclone_setup_error_obscure_tool">このプロバイダのパスワードは rclone によるエンコードが必要ですが、rclone を利用できません。rclone をインストールして再試行してください。</string>
+    <string name="rclone_setup_error_not_number">数値を入力してください</string>
+    <string name="rclone_setup_error_token">貼り付けたトークンは無効です</string>
+    <string name="rclone_setup_error_need_one_of">いずれか 1 つ以上を入力してください</string>
+    <string name="rclone_setup_error_unknown_field">不明な設定</string>
+    <string name="rclone_setup_warnings_title">警告</string>
+    <string name="rclone_setup_warning_no_refresh">このトークンにはリフレッシュトークンがないため、期限が切れるとリモートは動作しなくなります。</string>
+    <string name="rclone_setup_offer_destination">「%1$s」を使用するバックアップ保存先を今すぐ作成しますか？</string>
+    <string name="rclone_setup_create_destination">保存先を作成</string>
+    <string name="rclone_setup_not_now">今はしない</string>
+    <string name="rclone_setup_destination_for">rclone リモート「%1$s」の保存先</string>
+    <string name="rclone_setup_create">作成</string>
+
+    <!-- rclone token check -->
+    <string name="rclone_token_valid">トークンは有効なようです。</string>
+    <string name="rclone_token_expiry">アクセストークンの有効期限：%1$s</string>
+    <string name="rclone_token_empty">先にトークンを貼り付けてください。</string>
+    <string name="rclone_token_not_json">rclone authorize が出力した JSON ブロックではありません。</string>
+    <string name="rclone_token_missing_access">トークンに access_token がありません。</string>
+    <string name="rclone_token_missing_type">トークンに token_type がありません。</string>
+    <string name="rclone_token_bad_expiry">トークンの有効期限を読み取れません。</string>
+
+    <!-- Raw rclone.conf editor -->
+    <string name="rclone_editor_title">rclone.conf を編集</string>
+    <string name="rclone_editor_label">rclone.conf</string>
+    <string name="rclone_editor_placeholder">[myremote]\ntype = s3\n…</string>
+    <string name="rclone_editor_secrets_warning">編集中はパスワードとトークンが平文で表示されます。この画面ではスクリーンショットと画面録画が無効です。</string>
+    <string name="rclone_editor_unsaved">未保存の変更あり</string>
+    <string name="rclone_editor_validate">検証</string>
+    <string name="rclone_editor_save">保存</string>
+    <string name="rclone_editor_restore">前のバージョンに戻す</string>
+    <string name="rclone_editor_restore_message">現在の設定を、直前の変更前に保存されたバージョンに置き換えますか？未保存の編集は失われます。</string>
+    <string name="rclone_editor_restored">前のバージョンを復元しました。</string>
+    <string name="rclone_editor_no_previous">復元できる前のバージョンがありません。</string>
+    <string name="rclone_editor_valid">エラーは見つかりませんでした。</string>
+    <string name="rclone_editor_invalid">設定にエラーがあるため保存されませんでした。</string>
+    <string name="rclone_editor_saved">rclone.conf を保存しました。</string>
+    <string name="rclone_editor_load_failed">セキュアストアから rclone の設定を読み込めませんでした。</string>
+    <string name="rclone_editor_retry">再試行</string>
+    <string name="rclone_editor_no_issues">問題は見つかりませんでした。</string>
+    <string name="rclone_editor_issue_summary">エラー：%1$d · 警告：%2$d</string>
+    <string name="rclone_editor_issue_line">%1$d 行目：%2$s</string>
+    <string name="rclone_editor_error">エラー</string>
+    <string name="rclone_editor_warning">警告</string>
+    <string name="rclone_editor_discard_title">変更を破棄しますか？</string>
+    <string name="rclone_editor_discard_message">rclone.conf への編集は保存されていません。</string>
+    <string name="rclone_editor_discard">破棄</string>
+    <string name="rclone_editor_keep_editing">編集を続ける</string>
+
+    <!-- rclone.conf issue codes (RcloneIniIssue.Code) -->
+    <string name="rclone_issue_malformed_line">[section]、key = value、コメント行のいずれでもありません</string>
+    <string name="rclone_issue_key_outside_section">[section] より前に設定があります</string>
+    <string name="rclone_issue_invalid_section_name">リモート名が無効です</string>
+    <string name="rclone_issue_duplicate_section">このリモートが 2 回定義されています</string>
+    <string name="rclone_issue_duplicate_key">この設定がリモート内に 2 回あります</string>
+    <string name="rclone_issue_empty_key">設定に名前がありません</string>
+    <string name="rclone_issue_missing_type">リモートに type = 行がありません</string>
+    <string name="rclone_issue_unknown_type">不明なバックエンドタイプ（お使いの rclone がサポートしていれば問題ありません）</string>
+
+</resources>

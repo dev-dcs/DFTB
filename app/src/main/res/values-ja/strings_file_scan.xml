@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File discovery (core/discovery/files): filter validation, access blockers, warnings, walkers.
+     Mapped from enums/sealed types by FileScanText. -->
+<resources>
+
+    <!-- FilterProblem -->
+    <string name="file_scan_problem_include_regex">含めるパターンが有効な正規表現ではありません：%1$s</string>
+    <string name="file_scan_problem_exclude_regex">除外パターンが有効な正規表現ではありません：%1$s</string>
+    <string name="file_scan_problem_negative_min">最小サイズは負の値にできません。</string>
+    <string name="file_scan_problem_negative_max">最大サイズは負の値にできません。</string>
+    <string name="file_scan_problem_size_inverted">最小サイズが最大サイズより大きくなっています。</string>
+    <string name="file_scan_problem_date_empty">「この日以降に更新」の日付は「この日以前に更新」の日付より前にしてください。</string>
+    <string name="file_scan_problem_extension_conflict">これらの拡張子は含める設定と除外する設定の両方に指定されています：%1$s</string>
+
+    <!-- BlockReason -->
+    <string name="file_scan_block_all_files">このフォルダには「すべてのファイルへのアクセス」、または Shizuku/Root モードが必要です。</string>
+    <string name="file_scan_block_media_permission">このフォルダをスキャンするには、写真、動画、音声へのアクセスを許可してください。</string>
+    <string name="file_scan_block_non_media">ドキュメントなどのメディア以外のファイルには「すべてのファイルへのアクセス」、または Shizuku/Root モードが必要です。</string>
+    <string name="file_scan_block_app_sandbox">他のアプリの Android/data と Android/obb フォルダは、Shizuku または Root モードでのみ読み取れます。</string>
+    <string name="file_scan_block_root">この場所は Root モードでのみ読み取れます。</string>
+    <string name="file_scan_block_not_readable">アプリはこの場所を読み取れません。Shizuku または Root モードをお試しください。</string>
+    <string name="file_scan_block_saf">このフォルダへのアクセスが失われました。もう一度フォルダを選択してください。</string>
+
+    <!-- RootProblem -->
+    <string name="file_scan_root_not_found">フォルダが存在しません。</string>
+    <string name="file_scan_root_not_readable">フォルダを読み取れませんでした。</string>
+    <string name="file_scan_root_not_directory">この場所はフォルダではありません。</string>
+    <string name="file_scan_root_tool_failed">現在のモードでスキャンツールが失敗しました。</string>
+
+    <!-- ScanWarning -->
+    <string name="file_scan_warning_partial_media">選択した写真と動画のみ表示されます。すべて含めるにはフルアクセスを許可してください。</string>
+    <string name="file_scan_warning_find_exit">特権スキャンがエラーで終了しました。結果が不完全な可能性があります。</string>
+    <string name="file_scan_warning_unparseable">スキャン出力から一部のファイル名を読み取れませんでした（改行を含む名前など）。</string>
+    <string name="file_scan_warning_find_unsupported">デバイスのシェルに使用可能な \"find\" コマンドがありません。</string>
+
+    <!-- AccessRequirement -->
+    <string name="file_scan_req_all_files">「すべてのファイルへのアクセス」を許可</string>
+    <string name="file_scan_req_permission">メディア権限を許可</string>
+    <string name="file_scan_req_shizuku">Shizuku または Root モードに切り替え</string>
+    <string name="file_scan_req_root">Root モードに切り替え</string>
+    <string name="file_scan_req_saf">フォルダを再選択</string>
+
+    <!-- WalkerKind -->
+    <string name="file_scan_walker_nio">直接ファイルアクセス</string>
+    <string name="file_scan_walker_saf">ストレージアクセスフレームワーク</string>
+    <string name="file_scan_walker_find">特権シェル（find）</string>
+    <string name="file_scan_walker_media_store">メディアライブラリ</string>
+
+</resources>

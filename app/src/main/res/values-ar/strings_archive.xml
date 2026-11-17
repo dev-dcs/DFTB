@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Archive layer (core/pipeline/archive): user-facing explanations of ArchiveErrorKind,
+     mapped by ArchiveErrorKind.labelRes(). Technical detail stays in exception messages. -->
+<resources>
+    <string name="archive_error_unsafe_path">تم رفض عنصر لأن مساره غير آمن (مطلق أو يحتوي على \"..\" أو أحرف غير صالحة).</string>
+    <string name="archive_error_single_item">النسخ الخام ونسخ صور القرص الاحتياطية تحتوي على ملف واحد أو تدفق واحد فقط.</string>
+    <string name="archive_error_size_mismatch">تغيّر حجم ملف أثناء نسخه احتياطيًا.</string>
+    <string name="archive_error_codec_unavailable">أسلوب الضغط المحدد غير متاح على هذا الجهاز. اختر أسلوب ضغط آخر.</string>
+    <string name="archive_error_unsupported_format">لا يمكن فتح صيغة النسخة الاحتياطية هذه كأرشيف.</string>
+    <string name="archive_error_truncated">ملف النسخة الاحتياطية غير مكتمل. ربما لم ينتهِ رفعه أو نسخه.</string>
+    <string name="archive_error_writer_state">اكتمل الأرشيف أو أُغلق بالفعل.</string>
+</resources>

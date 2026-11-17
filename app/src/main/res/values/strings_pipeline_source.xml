@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup sources (core/pipeline/source): why a source cannot run, and what it had to leave out. -->
+<resources>
+
+    <!-- Source unavailable -->
+    <string name="pipeline_source_unavailable_root_required">This part of the backup needs Root mode. Switch the operating mode to Root in Settings.</string>
+    <string name="pipeline_source_unavailable_root_not_granted">Root mode is selected but superuser access is not granted right now. Grant DFTB root in your root manager and try again.</string>
+    <string name="pipeline_source_unavailable_nothing_selected">Nothing to back up for this part of the profile.</string>
+    <string name="pipeline_source_unavailable_invalid_filter">A file filter in this profile is invalid. Edit the profile and fix the highlighted filter.</string>
+    <string name="pipeline_source_unavailable_scan_failed">The file scan did not finish, so no files could be selected.</string>
+
+    <!-- Source warnings (%1$s = partition, package, folder or count) -->
+    <string name="pipeline_source_warn_partition_unresolved">Partition %1$s was not found on this device (or its slot could not be determined) and was skipped.</string>
+    <string name="pipeline_source_warn_partition_size_unknown">The size of partition %1$s is unknown; its image cannot be checked for completeness up front.</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s is not installed (or not visible to DFTB) and was skipped.</string>
+    <string name="pipeline_source_warn_app_invalid_package">\"%1$s\" is not a valid package name and was skipped.</string>
+    <string name="pipeline_source_warn_app_component_unavailable">%1$s cannot be captured in the current operating mode and was skipped.</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">An APK file of %1$s could not be read and was skipped.</string>
+    <string name="pipeline_source_warn_files_truncated">More files matched than can be backed up in one run; only the first %1$s are included.</string>
+    <string name="pipeline_source_warn_files_root_blocked">%1$s could not be read in the current mode and was skipped.</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">%1$s files or folders could not be read during the scan and are not included.</string>
+    <string name="pipeline_source_warn_nandroid_plan">%1$s cannot be included in the TWRP-compatible backup (see details).</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">Some entries of %1$s could not be listed; the TWRP backup may be incomplete.</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">Some files were deleted by Android while %1$s was being archived; they are not in the TWRP backup.</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">This Android version\'s tar cannot store SELinux labels inside %1$s archives; labels are saved in a separate listing instead.</string>
+</resources>

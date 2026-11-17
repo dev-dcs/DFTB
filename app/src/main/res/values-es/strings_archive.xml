@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="archive_error_unsafe_path">Un elemento tiene una ruta insegura (absoluta, \"..\" o caracteres no válidos) y se rechazó.</string>
+    <string name="archive_error_single_item">Las copias de seguridad de copia directa y de imagen de disco contienen exactamente un archivo o flujo.</string>
+    <string name="archive_error_size_mismatch">Un archivo cambió de tamaño mientras se copiaba.</string>
+    <string name="archive_error_codec_unavailable">La compresión seleccionada no está disponible en este dispositivo. Elige otro método de compresión.</string>
+    <string name="archive_error_unsupported_format">Este formato de copia de seguridad no se puede abrir como archivo comprimido.</string>
+    <string name="archive_error_truncated">El archivo de copia de seguridad está incompleto. Puede que no haya terminado de subirse o copiarse.</string>
+    <string name="archive_error_writer_state">El archivo ya estaba terminado o cerrado.</string>
+
+</resources>

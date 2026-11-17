@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore engine (core/restore): progress, results, failures and per-file problems shown in
+     notifications, History and the restore screens. Technical detail stays in English and is
+     appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="restore_engine_opening">جارٍ قراءة النسخة الاحتياطية…</string>
+    <string name="restore_engine_preflight">جارٍ التحقق مما يمكن استعادته…</string>
+    <string name="restore_engine_verifying">جارٍ التحقق من النسخة الاحتياطية قبل الاستعادة…</string>
+    <string name="restore_engine_restoring">جارٍ استعادة %1$s…</string>
+
+    <!-- Results -->
+    <plurals name="restore_engine_completed">
+        <item quantity="zero">لم تتم استعادة أي عنصر (%1$d).</item>
+        <item quantity="one">تمت استعادة عنصر واحد.</item>
+        <item quantity="two">تمت استعادة عنصرين.</item>
+        <item quantity="few">تمت استعادة %1$d عناصر.</item>
+        <item quantity="many">تمت استعادة %1$d عنصرًا.</item>
+        <item quantity="other">تمت استعادة %1$d عنصر.</item>
+    </plurals>
+    <plurals name="restore_engine_warning_count">
+        <item quantity="zero">لا توجد تحذيرات (%1$d).</item>
+        <item quantity="one">تحذير واحد.</item>
+        <item quantity="two">تحذيران.</item>
+        <item quantity="few">%1$d تحذيرات.</item>
+        <item quantity="many">%1$d تحذيرًا.</item>
+        <item quantity="other">%1$d تحذير.</item>
+    </plurals>
+    <string name="restore_engine_cancelled">توقفت الاستعادة. تم الاحتفاظ بالملفات المستعادة حتى الآن.</string>
+
+    <!-- Failures (RestoreErrorCode) -->
+    <string name="restore_engine_error_destination">وجهة هذه النسخة الاحتياطية لم تعد موجودة.</string>
+    <string name="restore_engine_error_open">تعذّرت قراءة النسخة الاحتياطية.</string>
+    <string name="restore_engine_error_key_required">هذه النسخة الاحتياطية مشفرة. أدخل عبارة المرور أو المفتاح.</string>
+    <string name="restore_engine_error_wrong_key">عبارة المرور أو المفتاح غير صحيح لهذه النسخة الاحتياطية.</string>
+    <string name="restore_engine_error_unsupported">أُنشئت هذه النسخة الاحتياطية بطريقة لا يستطيع هذا الإصدار من DFTB استعادتها.</string>
+    <string name="restore_engine_error_nothing">لم يتم تحديد أي شيء للاستعادة.</string>
+    <string name="restore_engine_error_blocked">لا يمكن استعادة أي من العناصر المحددة في الوضع الحالي.</string>
+    <string name="restore_engine_error_space">لا توجد مساحة فارغة كافية للاستعادة.</string>
+    <string name="restore_engine_error_verify">النسخة الاحتياطية تالفة؛ لم تتم استعادة أي شيء.</string>
+    <string name="restore_engine_error_all_failed">فشلت استعادة كل العناصر المحددة.</string>
+    <string name="restore_engine_error_internal">توقفت الاستعادة بسبب خطأ غير متوقع.</string>
+
+    <!-- Unit-level notices -->
+    <string name="restore_engine_no_app_restorer">استعادة التطبيقات غير متاحة في هذا الإصدار.</string>
+    <string name="restore_engine_no_partition_restorer">استعادة الأقسام غير متاحة في هذا الإصدار.</string>
+    <string name="restore_engine_unit_blocked">لا يمكن استعادة %1$s: %2$s</string>
+    <string name="restore_engine_space_unknown">المساحة الفارغة لـ %1$s غير معروفة؛ قد تنفد المساحة أثناء الاستعادة.</string>
+    <string name="restore_engine_space_overridden">%1$s: الاستعادة مستمرة رغم الحاجة إلى %2$s إضافية من المساحة.</string>
+    <string name="restore_engine_cross_device">هذه النسخة الاحتياطية من %1$s؛ وهذا الجهاز هو %2$s.</string>
+    <string name="restore_engine_resume_skipped">تمت استعادة %1$s بالفعل وتم تخطيه.</string>
+    <string name="restore_engine_partial_backup">لم تكتمل هذه النسخة الاحتياطية؛ لا يمكن استعادة سوى العناصر التي تحتويها.</string>
+    <string name="restore_engine_checkpoint_failed">تعذّر حفظ تقدم الاستعادة؛ ستبدأ الاستعادة المقطوعة من البداية.</string>
+    <plurals name="restore_engine_more_issues">
+        <item quantity="zero">…ولا مشكلات أخرى (%1$d).</item>
+        <item quantity="one">…ومشكلة أخرى واحدة.</item>
+        <item quantity="two">…ومشكلتان أخريان.</item>
+        <item quantity="few">…و%1$d مشكلات أخرى.</item>
+        <item quantity="many">…و%1$d مشكلة أخرى.</item>
+        <item quantity="other">…و%1$d مشكلة أخرى.</item>
+    </plurals>
+    <plurals name="restore_engine_unmapped">
+        <item quantity="zero">%1$d ملف بلا موقع أصلي معروف ولم تتم استعادته. استعده إلى مجلد بدلًا من ذلك.</item>
+        <item quantity="one">ملف واحد بلا موقع أصلي معروف ولم تتم استعادته. استعده إلى مجلد بدلًا من ذلك.</item>
+        <item quantity="two">ملفان بلا موقع أصلي معروف ولم تتم استعادتهما. استعدهما إلى مجلد بدلًا من ذلك.</item>
+        <item quantity="few">%1$d ملفات بلا موقع أصلي معروف ولم تتم استعادتها. استعدها إلى مجلد بدلًا من ذلك.</item>
+        <item quantity="many">%1$d ملفًا بلا موقع أصلي معروف ولم تتم استعادتها. استعدها إلى مجلد بدلًا من ذلك.</item>
+        <item quantity="other">%1$d ملف بلا موقع أصلي معروف ولم تتم استعادتها. استعدها إلى مجلد بدلًا من ذلك.</item>
+    </plurals>
+    <plurals name="restore_engine_kept_existing">
+        <item quantity="zero">لم يُحتفظ بأي ملف موجود (%1$d).</item>
+        <item quantity="one">تم الاحتفاظ بملف موجود واحد.</item>
+        <item quantity="two">تم الاحتفاظ بملفين موجودين.</item>
+        <item quantity="few">تم الاحتفاظ بـ %1$d ملفات موجودة.</item>
+        <item quantity="many">تم الاحتفاظ بـ %1$d ملفًا موجودًا.</item>
+        <item quantity="other">تم الاحتفاظ بـ %1$d ملف موجود.</item>
+    </plurals>
+
+    <!-- File unit failures (FileRestoreError) -->
+    <string name="restore_file_error_original_unknown">لا تسجّل النسخة الاحتياطية مصدر هذه الملفات. استعدها إلى مجلد.</string>
+    <string name="restore_file_error_target">تعذّر فتح مجلد الاستعادة.</string>
+    <string name="restore_file_error_no_privilege">لا يستطيع DFTB الكتابة في هذا المجلد في الوضع الحالي. اختر مجلدًا آخر أو بدّل إلى Shizuku أو root.</string>
+    <string name="restore_file_error_saf">أُزيل الوصول إلى المجلد المحدد. اخترْه مرة أخرى.</string>
+    <string name="restore_file_error_twrp_folder">لا يمكن فك أرشيفات TWRP إلا إلى مجلد محدد، وليس فوق النظام العامل أبدًا.</string>
+    <string name="restore_file_error_corrupt">بيانات النسخة الاحتياطية تالفة.</string>
+    <string name="restore_file_error_no_space">مجلد الاستعادة ممتلئ.</string>
+    <string name="restore_file_error_archive">تعذّرت قراءة الأرشيف.</string>
+    <string name="restore_file_error_storage">تعذّرت قراءة الوجهة.</string>
+
+    <!-- Per-file problems (ExtractIssueCode) -->
+    <string name="restore_issue_unsafe_path">تم رفض مسار غير آمن</string>
+    <string name="restore_issue_through_symlink">تم الرفض: كان سيُكتب عبر رابط رمزي</string>
+    <string name="restore_issue_parent_not_dir">ملف يعترض طريق مجلده</string>
+    <string name="restore_issue_directory_in_the_way">يوجد مجلد بالاسم نفسه</string>
+    <string name="restore_issue_skipped_existing">تم الاحتفاظ بالملف الموجود</string>
+    <string name="restore_issue_symlink_unsupported">الروابط الرمزية غير مدعومة في هذا المجلد</string>
+    <string name="restore_issue_hardlink_unsupported">الروابط الصلبة غير مدعومة في هذا المجلد</string>
+    <string name="restore_issue_hardlink_missing">لم تتم استعادة الملف الذي يشير إليه هذا الرابط</string>
+    <string name="restore_issue_special_skipped">تم تخطي ملف خاص (أنبوب أو جهاز)</string>
+    <string name="restore_issue_digest_mismatch">البايتات المستعادة لا تطابق النسخة الاحتياطية؛ لم يُكتب الملف</string>
+    <string name="restore_issue_write_failed">تعذّرت الكتابة</string>
+    <string name="restore_issue_metadata_failed">تعذّرت استعادة التاريخ أو المالك أو الأذونات</string>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Readiness verdicts -->
+    <string name="diag_readiness_ready">Έτοιμο</string>
+    <string name="diag_readiness_degraded">Έτοιμο με προειδοποιήσεις</string>
+    <string name="diag_readiness_unavailable">Μη διαθέσιμο</string>
+    <string name="diag_mode_requires_root">Αυτή η λειτουργία απαιτεί συσκευή με root και διαχειριστή root που παραχωρεί στο DFTB πρόσβαση υπερχρήστη.</string>
+
+    <!-- Check status labels -->
+    <string name="diag_status_pass">Εντάξει</string>
+    <string name="diag_status_warn">Προειδοποίηση</string>
+    <string name="diag_status_fail">Απέτυχε</string>
+    <string name="diag_status_info">Πληροφορία</string>
+
+    <!-- Fix-button labels -->
+    <string name="diag_action_grant_shizuku_permission">Παραχώρηση πρόσβασης Shizuku</string>
+    <string name="diag_action_open_all_files_access">Να επιτρέπεται η πρόσβαση σε όλα τα αρχεία</string>
+    <string name="diag_action_request_legacy_storage">Παραχώρηση δικαιώματος αποθήκευσης</string>
+    <string name="diag_action_request_notifications">Ενεργοποίηση ειδοποιήσεων</string>
+    <string name="diag_action_open_battery_settings">Απενεργοποίηση βελτιστοποίησης μπαταρίας</string>
+    <string name="diag_action_install_shizuku">Εγκατάσταση Shizuku</string>
+    <string name="diag_action_open_root_manager">Άνοιγμα διαχειριστή root</string>
+    <string name="diag_action_install_companion_module">Εγκατάσταση συνοδευτικής μονάδας</string>
+
+    <!-- Generic outcomes -->
+    <string name="diag_probe_title">Μηχανή διαγνωστικών</string>
+    <string name="diag_probe_hint">Η ίδια η εκτέλεση των διαγνωστικών απέτυχε απρόσμενα. Επαναλάβετε· αν επιμένει, κοινοποιήστε το αρχείο καταγραφής από την Επισκόπηση συστήματος.</string>
+    <string name="diag_check_timed_out_hint">Ο έλεγχος δεν ολοκληρώθηκε εγκαίρως. Συνήθης αιτία είναι μια εκκρεμής προτροπή υπερχρήστη ή μια υπηρεσία που δεν αποκρίνεται· απαντήστε σε τυχόν προτροπή και επαναλάβετε.</string>
+    <string name="diag_check_failed_hint">Ο έλεγχος κατέρρευσε πριν παράγει αποτέλεσμα. Το ακατέργαστο σφάλμα εμφανίζεται παραπάνω.</string>
+
+    <!-- Standard (all modes) -->
+    <string name="diag_sdk_level_title">Έκδοση Android</string>
+    <string name="diag_all_files_access_title">Πρόσβαση σε όλα τα αρχεία</string>
+    <string name="diag_all_files_access_hint">Το DFTB πρέπει να διαβάζει και να γράφει ολόκληρο τον κοινόχρηστο χώρο για να δημιουργεί αντίγραφα αρχείων και να γράφει αρχειοθήκες. Παραχωρήστε \"Πρόσβαση σε όλα τα αρχεία\" στη σελίδα ρυθμίσεων συστήματος.</string>
+    <string name="diag_all_files_access_optional_hint">Δεν παραχωρήθηκε. Το κέλυφος root μπορεί να διαβάζει τα πάντα, αλλά η περιήγηση στον κοινόχρηστο χώρο χωρίς SAF δεν θα είναι διαθέσιμη.</string>
+    <string name="diag_legacy_storage_title">Δικαίωμα αποθήκευσης</string>
+    <string name="diag_legacy_storage_hint">Στο Android 10, η ανάγνωση και εγγραφή στον κοινόχρηστο χώρο απαιτεί το δικαίωμα αποθήκευσης κατά την εκτέλεση.</string>
+    <string name="diag_legacy_storage_optional_hint">Δεν παραχωρήθηκε. Το κέλυφος root μπορεί να διαβάζει τα πάντα, αλλά η απευθείας περιήγηση στον κοινόχρηστο χώρο δεν θα είναι διαθέσιμη.</string>
+    <string name="diag_notifications_title">Ειδοποιήσεις</string>
+    <string name="diag_notifications_hint">Χωρίς ειδοποιήσεις, ένα αντίγραφο σε εξέλιξη δεν μπορεί να εμφανίσει πρόοδο ή να αναφέρει αποτυχία όταν η εφαρμογή είναι στο παρασκήνιο.</string>
+    <string name="diag_saf_title">Επιλογέας εγγράφων (SAF)</string>
+    <string name="diag_saf_hint">Καμία εφαρμογή δεν χειρίζεται τον επιλογέα φακέλων. Προορισμοί σε κάρτες SD και μονάδες USB δεν μπορούν να επιλεγούν σε αυτήν τη συσκευή.</string>
+    <string name="diag_battery_title">Βελτιστοποίηση μπαταρίας</string>
+    <string name="diag_battery_hint">Μεγάλα αντίγραφα σε αργές συνδέσεις μπορεί να τερματιστούν από το Doze. Η εξαίρεση του DFTB κρατά ζωντανές τις προγραμματισμένες και συνεχιζόμενες εργασίες.</string>
+    <string name="diag_free_space_title">Ελεύθερος χώρος (χώρος εφαρμογής)</string>
+    <string name="diag_free_space_hint">Λιγότερα από 500 MB ελεύθερα. Εδώ βρίσκονται οι προσωρινές αρχειοθήκες και το ημερολόγιο εργασιών· ελευθερώστε χώρο πριν δημιουργήσετε αντίγραφο.</string>
+
+    <!-- Shizuku -->
+    <string name="diag_shizuku_installed_title">Το Shizuku είναι εγκατεστημένο</string>
+    <string name="diag_shizuku_installed_hint">Εγκαταστήστε το Shizuku (ή το Sui) και ξεκινήστε το μέσω ασύρματου εντοπισμού σφαλμάτων ή root, και μετά επαναλάβετε.</string>
+    <string name="diag_shizuku_binder_title">Η υπηρεσία Shizuku εκτελείται</string>
+    <string name="diag_shizuku_binder_hint">Το Shizuku είναι εγκατεστημένο αλλά η υπηρεσία του δεν εκτελείται. Ανοίξτε την εφαρμογή Shizuku και ξεκινήστε την, και επιστρέψτε εδώ.</string>
+    <string name="diag_shizuku_version_supported_title">Έκδοση API του Shizuku</string>
+    <string name="diag_shizuku_version_supported_hint">Αυτό το Shizuku είναι παλαιότερο από την έκδοση 11 και δεν μπορεί να χρησιμοποιηθεί. Ενημερώστε το Shizuku.</string>
+    <string name="diag_shizuku_permission_title">Παραχωρήθηκε πρόσβαση Shizuku</string>
+    <string name="diag_shizuku_permission_hint">Επιτρέψτε το DFTB στην προτροπή του Shizuku. Αν επιλέξατε \"Να μην ερωτηθώ ξανά\", ενεργοποιήστε το ξανά από τη λίστα εξουσιοδοτημένων εφαρμογών του Shizuku.</string>
+    <string name="diag_shizuku_version_title">Έκδοση διακομιστή Shizuku</string>
+    <string name="diag_shizuku_uid_title">Ταυτότητα Shizuku</string>
+    <string name="diag_shizuku_uid_root_hint">Το Shizuku εκτελείται ως root· τα δεδομένα εφαρμογών κάθε πακέτου είναι προσβάσιμα.</string>
+    <string name="diag_shizuku_uid_adb_hint">Το Shizuku εκτελείται ως χρήστης κελύφους ADB· ορισμένοι κατάλογοι δεδομένων εφαρμογών δεν θα είναι αναγνώσιμοι.</string>
+    <string name="diag_shizuku_selinux_title">Περιβάλλον SELinux του Shizuku</string>
+
+    <!-- Root -->
+    <string name="diag_su_binary_title">Εκτελέσιμο su</string>
+    <string name="diag_su_binary_hint">Κανένα εκτελέσιμο su δεν είναι ορατό σε αυτήν την εφαρμογή. Το KernelSU και το APatch το κρύβουν μέχρι να παραχωρηθεί πρόσβαση, οπότε αυτό από μόνο του δεν είναι αποτυχία.</string>
+    <string name="diag_root_manager_title">Εφαρμογή διαχειριστή root</string>
+    <string name="diag_root_manager_hint">Δεν εντοπίστηκε διαχειριστής Magisk, KernelSU ή APatch.</string>
+    <string name="diag_root_granted_title">Πρόσβαση υπερχρήστη</string>
+    <string name="diag_root_granted_hint">Ανοίξτε τον διαχειριστή root σας και επιτρέψτε την πρόσβαση υπερχρήστη για το DFTB, και μετά επαναλάβετε.</string>
+    <string name="diag_root_granted_shell_mount_master">root (mount master)</string>
+    <string name="diag_root_granted_shell_root">root</string>
+    <string name="diag_root_granted_shell_non_root">sh</string>
+    <string name="diag_root_granted_shell_unknown">άγνωστο</string>
+    <string name="diag_shell_identity_title">Ταυτότητα κελύφους</string>
+    <string name="diag_selinux_title">SELinux</string>
+    <string name="diag_root_implementation_title">Υλοποίηση root</string>
+    <string name="diag_root_implementation_hint">Δεν ήταν δυνατή η αναγνώριση Magisk, KernelSU ή APatch από το κέλυφος.</string>
+    <string name="diag_busybox_title">BusyBox</string>
+    <string name="diag_busybox_hint">Δεν βρέθηκε στο PATH. Θα χρησιμοποιηθεί το αντίγραφο που συνοδεύει το DFTB.</string>
+    <string name="diag_nsenter_title">nsenter</string>
+    <string name="diag_nsenter_hint">Δεν βρέθηκε. Η είσοδος στον καθολικό χώρο ονομάτων προσάρτησης (προχωρημένη λειτουργία root) βασίζεται σε αυτό.</string>
+
+    <!-- Companion module (Tier 4) -->
+    <string name="diag_module_requires_root_hint">Δεν παραχωρήθηκε πρόσβαση υπερχρήστη, οπότε δεν ήταν δυνατή η επιθεώρηση της συνοδευτικής μονάδας.</string>
+    <string name="diag_module_installed_title">Η συνοδευτική μονάδα είναι εγκατεστημένη</string>
+    <string name="diag_module_installed_hint">Εγκαταστήστε τη συνοδευτική μονάδα DFTB από τον διαχειριστή root σας και επανεκκινήστε.</string>
+    <string name="diag_module_enabled_title">Η συνοδευτική μονάδα είναι ενεργοποιημένη</string>
+    <string name="diag_module_enabled_hint">Η μονάδα είναι απενεργοποιημένη ή προγραμματισμένη για αφαίρεση. Ενεργοποιήστε την ξανά στον διαχειριστή root σας και επανεκκινήστε.</string>
+    <string name="diag_module_tool_rclone_title">rclone συστήματος</string>
+    <string name="diag_module_tool_busybox_title">BusyBox συστήματος</string>
+    <string name="diag_module_tool_zstd_title">zstd συστήματος</string>
+    <string name="diag_module_tool_tar_title">tar συστήματος</string>
+    <string name="diag_module_tool_missing_hint">Δεν βρίσκεται στο PATH. Η μονάδα είναι εγκατεστημένη αλλά τα αρχεία της δεν έχουν προσαρτηθεί ακόμη· μια επανεκκίνηση συνήθως το διορθώνει.</string>
+    <string name="diag_module_service_title">Σενάριο υπηρεσίας εκκίνησης</string>
+    <string name="diag_module_journal_title">Κατάλογος ημερολογίου εκκίνησης</string>
+    <string name="diag_module_journal_hint">Δημιουργείται στην πρώτη εκκίνηση μετά την εγκατάσταση της μονάδας· τα προγραμματισμένα και συνεχιζόμενα αντίγραφα καταγράφουν εδώ την κατάστασή τους.</string>
+
+    <!-- Credential vault -->
+    <string name="diag_vault_key_lost">Το ασφαλές κλειδί που προστατεύει τα αποθηκευμένα διαπιστευτήριά σας χάθηκε, αλλά οι κρυπτογραφημένες καταχωρίσεις παραμένουν σε αυτήν τη συσκευή. Δεν μπορούν πλέον να αποκρυπτογραφηθούν· εισαγάγετε ξανά τα επηρεαζόμενα διαπιστευτήρια για να τα αναδημιουργήσετε.</string>
+
+    <string name="diag_module_tool_nsenter_title">nsenter συστήματος</string>
+</resources>

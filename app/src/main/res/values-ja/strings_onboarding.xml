@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Wizard chrome ===================== -->
+    <string name="onboarding_title">DFTB へようこそ</string>
+    <string name="onboarding_step_counter">ステップ %1$d / %2$d</string>
+    <string name="onboarding_back">戻る</string>
+    <string name="onboarding_next">次へ</string>
+    <string name="onboarding_finish">完了</string>
+    <string name="onboarding_finishing">選択内容を保存しています…</string>
+    <string name="onboarding_no_app_for_link">このデバイスには、そのリンクを開けるアプリがありません。</string>
+    <string name="onboarding_no_app_for_action">このデバイスには、この操作に使用できるシステム画面がありません。</string>
+    <string name="onboarding_finish_requires_mode">完了する前に、このデバイスで利用可能な動作モードを選択してください。</string>
+    <string name="onboarding_finish_error">選択内容を保存できませんでした。もう一度お試しください。</string>
+
+    <!-- ===================== Step 1: language ===================== -->
+    <string name="onboarding_language_title">言語を選択</string>
+    <string name="onboarding_language_description">アプリ全体が即座に切り替わります。この設定は後でシステム概要または設定から変更できます。</string>
+    <string name="onboarding_language_suggested">デバイスの設定からの候補：%1$s</string>
+    <string name="onboarding_language_use_suggested">%1$s を使用</string>
+
+    <!-- ===================== Step 2: overview ===================== -->
+    <string name="onboarding_overview_title">DFTB でできること</string>
+    <string name="onboarding_overview_description">あなたが所有するデバイスのための、オープンソースのバックアップおよび災害復旧ツールキットです。以下はすべて任意です。何を保護し、どこに保存するかはあなたが決めます。</string>
+    <string name="onboarding_feature_partitions_title">パーティションイメージ</string>
+    <string name="onboarding_feature_partitions_desc">boot、vendor_boot、dtbo、persist などのパーティションのブロックレベルイメージ。アクティブ／非アクティブな A/B スロットを含みます（root モード）。</string>
+    <string name="onboarding_feature_apps_title">アプリ</string>
+    <string name="onboarding_feature_apps_desc">APK および分割 APK、内部データ、外部データ、OBB 拡張ファイル、キャッシュを、アプリごとに選択してバックアップします。</string>
+    <string name="onboarding_feature_files_title">ファイルとカテゴリ</string>
+    <string name="onboarding_feature_files_desc">任意のフォルダーに加え、写真・動画・ドキュメント・データベースなどのスマートカテゴリを、サイズ・日付・パターンフィルターで絞り込めます。</string>
+    <string name="onboarding_feature_destinations_title">保存先</string>
+    <string name="onboarding_feature_destinations_desc">ローカルストレージ、USB OTG ドライブ、FTP/FTPS、SFTP/SSH、SMB、WebDAV、NFS サーバー、および rclone 経由で到達できるあらゆるクラウドプロバイダー。</string>
+    <string name="onboarding_feature_pipelines_title">柔軟なパイプライン</string>
+    <string name="onboarding_feature_pipelines_desc">zstd、xz、gzip、bzip2 圧縮を使用した tar または zip コンテナ、ファイル名マスキング付きの AES-256 暗号化、チェックサムマニフェスト、保存先への直接ストリーミング。</string>
+    <string name="onboarding_feature_twrp_title">リカバリ互換バックアップ</string>
+    <string name="onboarding_feature_twrp_desc">任意の TWRP および OrangeFox 互換レイアウトにより、カスタムリカバリからもバックアップを復元できます。</string>
+    <string name="onboarding_feature_restore_title">完全対称の復元</string>
+    <string name="onboarding_feature_restore_desc">DFTB がバックアップするものはすべて復元できます。プロファイル全体、単一アプリ、選択したファイル、1 つのパーティションイメージを、まず整合性を検証したうえで復元します。</string>
+    <string name="onboarding_feature_scheduling_title">スケジュール、保持、再開</string>
+    <string name="onboarding_feature_scheduling_desc">Wi‑Fi、充電、バッテリー条件付きの毎日・毎週・間隔スケジュール。古いバックアップの自動削除。中断されたジョブは最後のチェックポイントから再開します。</string>
+
+    <!-- ===================== Step 3: responsibility ===================== -->
+    <string name="onboarding_disclaimer_title">あなたの責任</string>
+    <string name="onboarding_disclaimer_description">DFTB は、あなた自身のデバイスに対する強力で低レベルの制御を提供します。続行する前に、これらの点をお読みください。</string>
+    <string name="onboarding_disclaimer_partitions">パーティションへの書き込みは、デバイスを起動不能にする可能性があります。パーティションイメージは、まさにこのデバイスとファームウェアで作成したものだけを復元してください。</string>
+    <string name="onboarding_disclaimer_verify">常にバックアップを検証し、別のメディアに 2 つ目のコピーを保管してください。一度もテストしていないバックアップは、バックアップではありません。</string>
+    <string name="onboarding_disclaimer_passwords">暗号化のパスワードと鍵は復元できません。紛失すると、暗号化されたバックアップも失われます。</string>
+    <string name="onboarding_disclaimer_elevation">root または Shizuku アクセスの許可、およびそれを用いて行うことはすべて、あなたの判断と責任です。DFTB は、あなたが開始またはスケジュールした操作にのみそれを使用します。</string>
+    <string name="onboarding_disclaimer_cloud">クラウドおよびネットワークストレージは、プロバイダーの規約、可用性、料金の対象となります。DFTB はサードパーティのサービスを制御しません。</string>
+    <string name="onboarding_disclaimer_warranty">DFTB は無料のオープンソースソフトウェアであり、そのオープンソースライセンスの条件の下、いかなる保証もなく提供されます。</string>
+    <string name="onboarding_disclaimer_accept">理解し、同意します</string>
+
+    <!-- ===================== Step 4: licenses ===================== -->
+    <string name="onboarding_licenses_title">オープンソースライセンスとクレジット</string>
+    <string name="onboarding_licenses_description">DFTB はこれらのプロジェクトの上に成り立っています。項目をタップすると詳細が表示されます。「ソース」と「ライセンス」ボタンはプロジェクトをブラウザーで開きます。</string>
+    <string name="licenses_title">オープンソースライセンス</string>
+    <string name="licenses_source">ソース</string>
+    <string name="licenses_license">ライセンス</string>
+    <string name="licenses_website">ウェブサイト</string>
+    <string name="licenses_version">v%1$s</string>
+    <string name="licenses_expand">詳細を表示</string>
+    <string name="licenses_collapse">詳細を非表示</string>
+
+    <!-- ===================== Step 5: operating mode ===================== -->
+    <string name="onboarding_mode_title">動作モード</string>
+    <string name="onboarding_mode_description">DFTB がデバイスにアクセスする方法を選択します。各選択肢はリアルタイムで確認されます。モードは後で設定から切り替えられます。</string>
+    <string name="onboarding_mode_select_hint">診断を実行するには、上のモードを選択してください。</string>
+    <string name="onboarding_mode_selected">選択済み</string>
+    <string name="onboarding_diagnostics_running">%1$s を確認中… スーパーユーザーの確認待ちがある場合は数秒かかることがあります。</string>
+    <string name="onboarding_diagnostics_failed">診断を完了できませんでした。</string>
+    <string name="onboarding_diagnostics_rerun">チェックを再実行</string>
+    <string name="onboarding_diagnostics_duration">%2$d ミリ秒で %1$d 件のチェック</string>
+    <string name="onboarding_readiness_ready_desc">このモードに必要なものはすべて揃っています。</string>
+    <string name="onboarding_readiness_degraded_desc">このモードは動作しますが、以下の警告が解決されるまで一部の任意機能が制限されます。</string>
+    <string name="onboarding_readiness_unavailable_desc">必須のチェックが失敗したため、このモードはまだ選択できません。以下の項目を修正して再実行するか、別のモードを選択してください。</string>
+    <string name="onboarding_shizuku_denied">Shizuku アクセスが許可されませんでした。Shizuku サービスを起動し、プロンプトが表示されたら DFTB を許可してください。</string>
+    <string name="onboarding_module_dialog_title">コンパニオンモジュール</string>
+    <string name="onboarding_module_dialog_text">DFTB コンパニオンモジュールは、アプリ自体によってこのデバイス上でビルドされ、root マネージャーを通じてフラッシュされます。まずセットアップを完了してください。モジュールインストーラーはその後、設定から利用できます。それまでは、高度な root モードはモジュールを未検出として報告します。</string>
+    <string name="onboarding_module_dialog_ok">了解</string>
+
+    <!-- ===================== Step 6: baseline ===================== -->
+    <string name="onboarding_baseline_title">基本設定</string>
+    <string name="onboarding_baseline_description">すべての新しいバックアッププロファイルの既定値です。各プロファイルで上書きできます。</string>
+    <string name="onboarding_destination_title">既定の保存先</string>
+    <string name="onboarding_destination_choose_folder">フォルダーを選択</string>
+    <string name="onboarding_destination_app_storage">アプリストレージ</string>
+    <string name="onboarding_destination_decide_later">後で決める</string>
+    <string name="onboarding_destination_none">既定の保存先はありません。プロファイル作成時に選択します。</string>
+    <string name="onboarding_destination_current">既定の保存先：%1$s（%2$s）</string>
+    <string name="onboarding_destination_app_storage_name">アプリストレージ（バックアップ）</string>
+    <string name="onboarding_destination_folder_fallback_name">選択したフォルダー</string>
+    <string name="onboarding_destination_error">フォルダーを保存先として保存できませんでした。もう一度選択してください。</string>
+    <string name="onboarding_destination_app_storage_hint">アプリストレージは Android/data 以下にあり、DFTB をアンインストールすると削除されます。任意のフォルダーやネットワークの保存先の方が安全です。</string>
+    <string name="onboarding_format_title">既定のアーカイブ形式</string>
+    <string name="onboarding_compression_title">圧縮レベル</string>
+    <string name="onboarding_compression_value">レベル %1$d · %2$s</string>
+    <string name="onboarding_checksum_title">チェックサムアルゴリズム</string>
+    <string name="onboarding_notifications_title">通知</string>
+    <string name="onboarding_notifications_desc">DFTB がバックグラウンドにある間、ライブ進行状況を表示し、完了または失敗したジョブを報告するために必要です。</string>
+    <string name="onboarding_notifications_granted">通知が有効になっています。</string>
+    <string name="onboarding_notifications_request">通知を有効にする</string>
+    <string name="onboarding_battery_title">バッテリー最適化</string>
+    <string name="onboarding_battery_desc">任意。DFTB をバッテリー最適化から除外すると、画面がオフの間も長時間またはスケジュールされたバックアップが継続されます。</string>
+    <string name="onboarding_battery_granted">DFTB はバッテリー最適化から除外されています。</string>
+    <string name="onboarding_battery_request">除外をリクエスト</string>
+
+    <!-- ===================== Compression level labels ===================== -->
+    <string name="compression_level_store">無圧縮</string>
+    <string name="compression_level_fast">高速</string>
+    <string name="compression_level_balanced">バランス</string>
+    <string name="compression_level_maximum">最大</string>
+    <string name="compression_level_ultra">ウルトラ</string>
+
+    <!-- ===================== ArchiveFormat ===================== -->
+    <string name="format_tar">tar（無圧縮）</string>
+    <string name="format_tar_gz">tar + gzip</string>
+    <string name="format_tar_xz">tar + xz</string>
+    <string name="format_tar_zst">tar + zstd</string>
+    <string name="format_tar_bz2">tar + bzip2</string>
+    <string name="format_zip">zip</string>
+    <string name="format_7z">7z</string>
+    <string name="format_raw_copy">そのままコピー</string>
+    <string name="format_dd_image">パーティションイメージ</string>
+
+    <!-- ===================== ChecksumAlgorithm ===================== -->
+    <string name="checksum_md5">MD5</string>
+    <string name="checksum_sha1">SHA-1</string>
+    <string name="checksum_sha256">SHA-256</string>
+    <string name="checksum_sha512">SHA-512</string>
+    <string name="checksum_blake3">BLAKE3</string>
+
+    <!-- ===================== CompressionCodec ===================== -->
+    <string name="codec_none">なし</string>
+    <string name="codec_gzip">gzip</string>
+    <string name="codec_xz">xz</string>
+    <string name="codec_zstd">zstd</string>
+    <string name="codec_bzip2">bzip2</string>
+
+    <!-- ===================== EncryptionMode ===================== -->
+    <string name="encryption_none">なし</string>
+    <string name="encryption_aes_256_gcm">AES-256-GCM</string>
+    <string name="encryption_zip_aes">ZIP AES</string>
+    <string name="encryption_openssl">OpenSSL（AES-256-CBC）</string>
+    <string name="encryption_gpg">OpenPGP（GPG）</string>
+
+    <!-- ===================== StructureMode ===================== -->
+    <string name="structure_preserve_hierarchy">フォルダー階層を保持</string>
+    <string name="structure_categorized">カテゴリに振り分け</string>
+
+    <!-- ===================== TransferMode ===================== -->
+    <string name="transfer_local_staging">ローカルでビルドしてからアップロード</string>
+    <string name="transfer_direct_stream">保存先へ直接ストリーミング</string>
+    <string name="transfer_remote_compress">リモートホストで圧縮</string>
+
+    <!-- ===================== DestinationType ===================== -->
+    <string name="destination_type_local_internal">アプリストレージ</string>
+    <string name="destination_type_local_saf">フォルダー</string>
+    <string name="destination_type_usb_otg">USB OTG ドライブ</string>
+    <string name="destination_type_ftp">FTP</string>
+    <string name="destination_type_ftps">FTPS</string>
+    <string name="destination_type_sftp">SFTP</string>
+    <string name="destination_type_ssh">SSH</string>
+    <string name="destination_type_smb">SMB 共有</string>
+    <string name="destination_type_webdav">WebDAV</string>
+    <string name="destination_type_nfs">NFS</string>
+    <string name="destination_type_rclone">rclone リモート</string>
+    <string name="destination_type_s3">S3 互換</string>
+    <string name="destination_type_mega">MEGA</string>
+    <string name="destination_type_pcloud">pCloud</string>
+
+    <!-- ===================== Readiness ===================== -->
+    <string name="readiness_ready">準備完了</string>
+    <string name="readiness_degraded">警告ありで準備完了</string>
+    <string name="readiness_unavailable">利用不可</string>
+
+</resources>

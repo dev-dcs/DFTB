@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup engine (core/pipeline/engine): progress messages, results, failures and warnings that
+     appear in notifications, History and the live terminal. Technical detail stays in English
+     and is appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="backup_engine_planning">Preparing the backup…</string>
+    <string name="backup_engine_preflight">Checking free space…</string>
+    <string name="backup_engine_uploading">Uploading %1$s…</string>
+    <string name="backup_engine_verifying">Verifying %1$s…</string>
+    <string name="backup_engine_writing_manifest">Writing the backup index…</string>
+
+    <!-- Results -->
+    <plurals name="backup_engine_completed">
+        <item quantity="one">%1$d artifact backed up.</item>
+        <item quantity="other">%1$d artifacts backed up.</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="one">%1$d warning.</item>
+        <item quantity="other">%1$d warnings.</item>
+    </plurals>
+    <string name="backup_engine_cancelled">Backup cancelled. Partial files were removed.</string>
+
+    <!-- Failures (BackupErrorCode) -->
+    <string name="backup_engine_error_no_destination">This profile has no destination. Choose where to save backups.</string>
+    <string name="backup_engine_error_destination_not_found">The profile\'s destination no longer exists.</string>
+    <string name="backup_engine_error_nothing">Nothing is selected to back up.</string>
+    <string name="backup_engine_error_sources_unavailable">None of the selected data can be backed up in the current mode.</string>
+    <string name="backup_engine_error_twrp_encryption">TWRP-compatible backups cannot be encrypted. Turn off encryption or TWRP compatibility.</string>
+    <string name="backup_engine_error_masking_needs_encryption">Hiding file names requires encryption. Turn on AES-256-GCM encryption or turn off name hiding.</string>
+    <string name="backup_engine_error_resume_folder">The backup folder to resume has an invalid name.</string>
+    <string name="backup_engine_error_destination_space">The destination does not have enough free space for this backup.</string>
+    <string name="backup_engine_error_staging_space">This device does not have enough free space to prepare the backup locally.</string>
+    <string name="backup_engine_error_encryption_unsupported">This encryption mode is not supported yet. Use AES-256-GCM.</string>
+    <string name="backup_engine_error_key_missing">The encryption key or passphrase for this profile is missing.</string>
+    <string name="backup_engine_error_transfer_unsupported">The selected transfer mode is not available for this destination.</string>
+    <string name="backup_engine_error_source">Some data could not be read.</string>
+    <string name="backup_engine_error_source_shape">A partition source produced more than one image.</string>
+    <string name="backup_engine_error_storage">Writing to the destination failed.</string>
+    <string name="backup_engine_error_verify">A stored file does not match what was written. It may be corrupted.</string>
+    <string name="backup_engine_error_manifest">The backup index could not be written.</string>
+    <string name="backup_engine_error_all_failed">No part of the backup could be completed.</string>
+    <string name="backup_engine_error_internal">The backup stopped because of an unexpected error.</string>
+
+    <!-- Warnings (BackupWarningCode) -->
+    <string name="backup_engine_warning_space_unknown">Free space could not be checked.</string>
+    <string name="backup_engine_warning_space_overridden">Started despite low free space.</string>
+    <string name="backup_engine_warning_format_substituted">The chosen format does not apply here; a compatible one was used.</string>
+    <string name="backup_engine_warning_source_unavailable">Skipped: not available in the current mode.</string>
+    <string name="backup_engine_warning_source_partial">Backed up only partly.</string>
+    <string name="backup_engine_warning_twrp_verbatim">The TWRP folder is stored uncompressed and with readable names so TWRP can restore it.</string>
+    <string name="backup_engine_warning_twrp_not_device">TWRP can only restore from device storage or USB. Copy the TWRP folder there before restoring.</string>
+    <string name="backup_engine_warning_estimate_failed">The size could not be estimated in advance.</string>
+    <string name="backup_engine_warning_size_mismatch">The data changed size while it was being read.</string>
+    <string name="backup_engine_warning_artifact_failed">This part of the backup failed.</string>
+    <string name="backup_engine_warning_hash_records">Per-file checksums could not be saved to the catalogue.</string>
+    <string name="backup_engine_warning_checkpoint">Resume information could not be saved.</string>
+    <string name="backup_engine_warning_cleanup">A temporary file could not be removed.</string>
+    <string name="backup_engine_warning_resume_skipped">Already completed by an earlier attempt; skipped.</string>
+    <string name="backup_engine_warning_resume_unindexed">Completed earlier, but no earlier backup index describes it.</string>
+    <string name="backup_engine_warning_prior_manifest">An earlier backup index in this folder could not be read.</string>
+</resources>

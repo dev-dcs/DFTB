@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">Πίσω</string>
+    <string name="restore_ui_back_step">Πίσω</string>
+    <string name="restore_ui_next">Επόμενο</string>
+    <string name="restore_ui_cancel">Ακύρωση</string>
+    <string name="restore_ui_retry">Επανάληψη</string>
+    <string name="restore_ui_refresh">Ανανέωση</string>
+    <string name="restore_ui_yes">Ναι</string>
+    <string name="restore_ui_date_unknown">Άγνωστη ημερομηνία</string>
+    <string name="restore_ui_destination_label">Προορισμός</string>
+    <string name="restore_ui_intent_failed">Αυτή η οθόνη δεν ήταν δυνατό να ανοίξει σε αυτή τη συσκευή.</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%1$s από %2$s (%3$d%%)</string>
+    <string name="restore_ui_progress_bytes_only">%1$s επεξεργάστηκαν</string>
+    <string name="restore_ui_progress_speed">%1$s/s</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/s · απομένουν περίπου %2$s</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="one">%1$d προειδοποίηση</item>
+        <item quantity="other">%1$d προειδοποιήσεις</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">Επαναφορά</string>
+    <string name="restore_ui_twrp_open">Εισαγωγή αντιγράφου TWRP</string>
+    <string name="restore_ui_twrp_link">Εισαγωγή αντιγράφου TWRP ή OrangeFox</string>
+    <string name="restore_ui_no_destinations_title">Δεν υπάρχει ακόμη προορισμός</string>
+    <string name="restore_ui_no_destinations_body">Τα αντίγραφα ασφαλείας διαβάζονται από έναν προορισμό. Προσθέστε πρώτα τον προορισμό που περιέχει τα αντίγραφά σας.</string>
+    <string name="restore_ui_add_destination">Προσθήκη προορισμού</string>
+    <string name="restore_ui_list_failed">Δεν ήταν δυνατή η ανάγνωση του προορισμού</string>
+    <string name="restore_ui_no_backups_title">Δεν υπάρχουν αντίγραφα εδώ</string>
+    <string name="restore_ui_no_backups_body">Αυτός ο προορισμός δεν περιέχει φάκελο αντιγράφων DFTB. Τραβήξτε προς τα κάτω για να ελέγξετε ξανά ή επιλέξτε άλλον προορισμό.</string>
+    <string name="restore_ui_badge_encrypted">Κρυπτογραφημένο</string>
+    <string name="restore_ui_badge_locked">Κλειδωμένο</string>
+    <string name="restore_ui_badge_partial">Ημιτελές</string>
+    <string name="restore_ui_badge_critical">Δεδομένα ταυτότητας</string>
+    <string name="restore_ui_badge_logical">Λογικό</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">Ανάγνωση του αντιγράφου ασφαλείας…</string>
+    <string name="restore_ui_open_failed">Δεν ήταν δυνατό το άνοιγμα του αντιγράφου ασφαλείας</string>
+    <string name="restore_ui_locked_title">Αυτό το αντίγραφο ασφαλείας είναι κρυπτογραφημένο</string>
+    <string name="restore_ui_locked_body">Εισαγάγετε τη φράση πρόσβασης με την οποία δημιουργήθηκε για να δείτε το περιεχόμενό του και να το επαναφέρετε.</string>
+    <string name="restore_ui_locked_vault_problem">Το αποθηκευμένο κλειδί του προφίλ δεν μπόρεσε να χρησιμοποιηθεί (%1$s). Εισαγάγετε τη φράση πρόσβασης.</string>
+    <string name="restore_ui_enter_passphrase">Εισαγωγή φράσης πρόσβασης</string>
+    <string name="restore_ui_passphrase_title">Ξεκλείδωμα αντιγράφου</string>
+    <string name="restore_ui_passphrase_body">Η φράση πρόσβασης παραμένει στη μνήμη μόνο όσο είναι ανοιχτή αυτή η οθόνη και δεν αποθηκεύεται ποτέ.</string>
+    <string name="restore_ui_passphrase_label">Φράση πρόσβασης</string>
+    <string name="restore_ui_passphrase_unlock">Ξεκλείδωμα</string>
+    <string name="restore_ui_passphrase_show">Εμφάνιση φράσης πρόσβασης</string>
+    <string name="restore_ui_passphrase_hide">Απόκρυψη φράσης πρόσβασης</string>
+    <string name="restore_ui_unlocked_vault">άνοιξε με το αποθηκευμένο κλειδί</string>
+    <string name="restore_ui_unlocked_passphrase">άνοιξε με τη φράση πρόσβασής σας</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">Αυτός ο φάκελος δεν περιέχει ευρετήριο αντιγράφου DFTB.</string>
+    <string name="restore_ui_catalog_key_required">Αυτό το τμήμα είναι κρυπτογραφημένο· ξεκλειδώστε πρώτα το αντίγραφο.</string>
+    <string name="restore_ui_catalog_corrupt_manifest">Το ευρετήριο του αντιγράφου είναι κατεστραμμένο και δεν μπορεί να διαβαστεί.</string>
+    <string name="restore_ui_catalog_unsupported_schema">Αυτό το αντίγραφο δημιουργήθηκε από νεότερη έκδοση του DFTB.</string>
+    <string name="restore_ui_catalog_inconsistent_runs">Οι εκτελέσεις αυτού του αντιγράφου που συνεχίστηκε δεν ανήκουν μαζί.</string>
+    <string name="restore_ui_catalog_unsupported_encryption">Αυτό το αντίγραφο χρησιμοποιεί κρυπτογράφηση που αυτή η έκδοση δεν μπορεί να διαβάσει.</string>
+    <string name="restore_ui_catalog_missing_file">Λείπει ένα αποθηκευμένο αρχείο από τον προορισμό.</string>
+    <string name="restore_ui_catalog_size_mismatch">Ένα αποθηκευμένο αρχείο έχει λάθος μέγεθος.</string>
+    <string name="restore_ui_catalog_digest_mismatch">Ένα αποθηκευμένο αρχείο δεν ταιριάζει με το άθροισμα ελέγχου του.</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">Ένα αρχείο μέσα στην αρχειοθήκη δεν ταιριάζει με το άθροισμα ελέγχου του.</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">Το αρχείο αθροίσματος ελέγχου λείπει ή διαφωνεί με τα αποθηκευμένα δεδομένα.</string>
+    <string name="restore_ui_catalog_not_single_stream">Αυτό το στοιχείο είναι αποθηκευμένο ως ξεχωριστά αρχεία.</string>
+    <string name="restore_ui_problem_io">Σφάλμα ανάγνωσης</string>
+    <string name="restore_ui_problem_more">%1$s (και ακόμη %2$d)</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">Λεπτομέρειες αντιγράφου</string>
+    <string name="restore_ui_detail_created">Έναρξη</string>
+    <string name="restore_ui_detail_finished">Ολοκλήρωση</string>
+    <string name="restore_ui_detail_size">Αποθηκευμένο μέγεθος</string>
+    <string name="restore_ui_detail_device">Δημιουργήθηκε σε</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">Επίπεδο API %1$d</string>
+    <string name="restore_ui_detail_slot">Ενεργή υποδοχή τότε</string>
+    <string name="restore_ui_detail_build">Έκδοση build</string>
+    <string name="restore_ui_detail_app">Δημιουργήθηκε με</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">Μορφή</string>
+    <string name="restore_ui_detail_encryption">Κρυπτογράφηση</string>
+    <string name="restore_ui_detail_checksum">Άθροισμα ελέγχου</string>
+    <string name="restore_ui_detail_structure">Διάταξη φακέλων</string>
+    <string name="restore_ui_detail_twrp">Συμβατό με TWRP</string>
+    <string name="restore_ui_detail_selection">Επιλογή προφίλ</string>
+    <string name="restore_ui_detail_runs">Συγχωνευμένες εκτελέσεις</string>
+    <string name="restore_ui_backup_warnings">Προειδοποιήσεις που καταγράφηκαν κατά το αντίγραφο</string>
+    <string name="restore_ui_partial_title">Αυτό το αντίγραφο δεν ολοκληρώθηκε</string>
+    <string name="restore_ui_partial_body">Διακόπηκε ή συνεχίζεται ακόμη. Περιέχει μόνο τα στοιχεία που αναφέρονται παρακάτω· μπορούν να επαληθευτούν και να επαναφερθούν.</string>
+    <string name="restore_ui_cross_device_title">Δημιουργήθηκε σε άλλη συσκευή</string>
+    <string name="restore_ui_cross_device_body">Αυτό το αντίγραφο προέρχεται από %1$s· αυτή η συσκευή είναι %2$s. Οι εφαρμογές και τα αρχεία συνήθως επαναφέρονται κανονικά· οι εικόνες κατατμήσεων από άλλη συσκευή μπορεί να εμποδίσουν την εκκίνηση αυτής.</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="one">%1$d κατάτμηση</item>
+        <item quantity="other">%1$d κατατμήσεις</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="one">%1$d εφαρμογή</item>
+        <item quantity="other">%1$d εφαρμογές</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="one">%1$d φάκελος</item>
+        <item quantity="other">%1$d φάκελοι</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="one">%1$d κατηγορία αρχείων</item>
+        <item quantity="other">%1$d κατηγορίες αρχείων</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">Περιεχόμενο</string>
+    <string name="restore_ui_units_empty">Αυτό το αντίγραφο δεν περιέχει τίποτα προς επαναφορά.</string>
+    <string name="restore_ui_group_apps">Εφαρμογές</string>
+    <string name="restore_ui_group_partitions">Κατατμήσεις</string>
+    <string name="restore_ui_group_files">Αρχεία</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">Επαλήθευση</string>
+    <string name="restore_ui_verify_subtitle">Ελέγξτε ότι τα αποθηκευμένα δεδομένα είναι ακέραια πριν βασιστείτε σε αυτά.</string>
+    <string name="restore_ui_verify_quick">Γρήγορη επαλήθευση</string>
+    <string name="restore_ui_verify_deep">Βαθιά επαλήθευση</string>
+    <string name="restore_ui_verify_hint">Η γρήγορη συγκρίνει τα αποθηκευμένα αρχεία με τα αθροίσματα ελέγχου τους. Η βαθιά αποκρυπτογραφεί και αποσυμπιέζει τα πάντα και ελέγχει κάθε αρχείο μέσα τους· διαβάζει ολόκληρο το αντίγραφο.</string>
+    <string name="restore_ui_verify_running_quick">Έλεγχος αποθηκευμένων αρχείων…</string>
+    <string name="restore_ui_verify_running_deep">Αποκωδικοποίηση και έλεγχος κάθε αρχείου…</string>
+    <string name="restore_ui_verify_all_ok">Και τα %1$d αποθηκευμένα στοιχεία είναι ακέραια.</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="one">%1$d από %2$d αποθηκευμένα στοιχεία είναι κατεστραμμένο ή λείπει.</item>
+        <item quantity="other">%1$d από %2$d αποθηκευμένα στοιχεία είναι κατεστραμμένα ή λείπουν.</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">Ακέραιο</string>
+    <string name="restore_ui_verify_bad_cd">Πρόβλημα</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">Επαναφορά</string>
+    <string name="restore_ui_start_subtitle">Επιλέξτε τι θα επαναφερθεί και πώς, και ελέγξτε το πριν γραφτεί οτιδήποτε.</string>
+    <string name="restore_ui_start_wizard">Επαναφορά…</string>
+    <string name="restore_ui_start_busy">Μια επαναφορά αυτού του αντιγράφου βρίσκεται σε εξέλιξη.</string>
+    <string name="restore_ui_start">Έναρξη επαναφοράς</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">Βήμα %1$d από %2$d · %3$s</string>
+    <string name="restore_ui_step_select">Επιλογή στοιχείων</string>
+    <string name="restore_ui_step_options">Επιλογές</string>
+    <string name="restore_ui_step_preflight">Έλεγχος</string>
+    <string name="restore_ui_select_all">Επιλογή όλων</string>
+    <string name="restore_ui_select_none">Καμία επιλογή</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="one">%1$d από %2$d στοιχείο επιλέχθηκε · %3$s</item>
+        <item quantity="other">%1$d από %2$d στοιχεία επιλέχθηκαν · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">Γενικά</string>
+    <string name="restore_ui_conflict_title">Όταν κάτι υπάρχει ήδη</string>
+    <string name="restore_ui_conflict_skip">Διατήρηση υπαρχόντων</string>
+    <string name="restore_ui_conflict_overwrite">Αντικατάσταση</string>
+    <string name="restore_ui_conflict_keep_both">Διατήρηση και των δύο</string>
+    <string name="restore_ui_conflict_skip_desc">τα υπάρχοντα αρχεία διατηρούνται και δεν αντικαθίστανται</string>
+    <string name="restore_ui_conflict_overwrite_desc">τα υπάρχοντα αρχεία αντικαθίστανται από την έκδοση του αντιγράφου</string>
+    <string name="restore_ui_conflict_keep_both_desc">η έκδοση του αντιγράφου γράφεται δίπλα στο υπάρχον αρχείο με νέο όνομα</string>
+    <string name="restore_ui_verify_first">Επαλήθευση πριν από την επαναφορά</string>
+    <string name="restore_ui_verify_first_hint">Διαβάζει πρώτα για άλλη μία φορά κάθε επιλεγμένο στοιχείο· δεν γράφεται τίποτα αν κάποιο είναι κατεστραμμένο.</string>
+    <string name="restore_ui_metadata">Επαναφορά ημερομηνιών και δικαιωμάτων</string>
+    <string name="restore_ui_metadata_hint">Οι ημερομηνίες τροποποίησης πάντα· ιδιοκτήτης, λειτουργία και ετικέτες SELinux όταν το επιτρέπει η τρέχουσα λειτουργία.</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">Αρχεία</string>
+    <string name="restore_ui_target_title">Επαναφορά αρχείων σε</string>
+    <string name="restore_ui_target_original">Αρχική θέση</string>
+    <string name="restore_ui_target_folder">Διαδρομή φακέλου</string>
+    <string name="restore_ui_target_saf">Επιλεγμένος φάκελος</string>
+    <string name="restore_ui_target_original_hint">Τα αρχεία επιστρέφουν εκεί από όπου αντιγράφηκαν. Οι φάκελοι στους οποίους το DFTB δεν μπορεί να γράψει στην τρέχουσα λειτουργία αναφέρονται στο βήμα ελέγχου.</string>
+    <string name="restore_ui_folder_label">Φάκελος</string>
+    <string name="restore_ui_folder_hint">Μια απόλυτη διαδρομή, για παράδειγμα /storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">Δεν έχει επιλεγεί ακόμη φάκελος</string>
+    <string name="restore_ui_tree_pick">Επιλογή φακέλου</string>
+    <string name="restore_ui_tree_grant_failed">Το DFTB δεν μπόρεσε να διατηρήσει την πρόσβαση σε αυτόν τον φάκελο. Επιλέξτε άλλον.</string>
+    <string name="restore_ui_twrp_mode_title">Φάκελος αντιγράφου TWRP</string>
+    <string name="restore_ui_twrp_copy">Αντιγραφή του φακέλου</string>
+    <string name="restore_ui_twrp_extract">Αποσυμπίεση των αρχείων</string>
+    <string name="restore_ui_twrp_copy_desc">Αντιγράφει τον φάκελο TWRP ως έχει, ώστε το TWRP ή το OrangeFox να μπορεί να τον επαναφέρει στο recovery.</string>
+    <string name="restore_ui_twrp_extract_desc">Αποσυμπιέζει τα αρχεία μέσα στις αρχειοθήκες TWRP στον επιλεγμένο φάκελο. Ποτέ πάνω στο σύστημα που εκτελείται.</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">Εφαρμογές</string>
+    <string name="restore_ui_apps_standard_hint">Στην Τυπική λειτουργία το Android σας ζητά να επιβεβαιώσετε κάθε εγκατάσταση και τα δεδομένα εφαρμογών δεν μπορούν να επαναφερθούν. Το Shizuku επαναφέρει δεδομένα κοινόχρηστου αποθηκευτικού χώρου· το root επαναφέρει τα πάντα.</string>
+    <string name="restore_ui_apps_apks">Εγκατάσταση των εφαρμογών</string>
+    <string name="restore_ui_apps_data">Επαναφορά δεδομένων εφαρμογών</string>
+    <string name="restore_ui_apps_data_hint">Τα ιδιωτικά δεδομένα απαιτούν root· τα Android/data και Android/media απαιτούν Shizuku ή root.</string>
+    <string name="restore_ui_version_title">Όταν η εφαρμογή είναι ήδη εγκατεστημένη</string>
+    <string name="restore_ui_version_auto">Αυτόματα</string>
+    <string name="restore_ui_version_reinstall">Πάντα επανεγκατάσταση</string>
+    <string name="restore_ui_version_data_only">Μόνο δεδομένα</string>
+    <string name="restore_ui_version_auto_desc">Εγκαθιστά όταν η εφαρμογή λείπει ή το αντίγραφο είναι νεότερο· διαφορετικά επαναφέρονται μόνο τα δεδομένα.</string>
+    <string name="restore_ui_version_reinstall_desc">Εγκαθιστά την έκδοση του αντιγράφου ακόμη και πάνω από την ίδια έκδοση.</string>
+    <string name="restore_ui_version_data_only_desc">Δεν εγκαθιστά ποτέ· επαναφέρει δεδομένα στην ήδη εγκατεστημένη έκδοση.</string>
+    <string name="restore_ui_apps_external">Επαναφορά Android/data και Android/media</string>
+    <string name="restore_ui_apps_obb">Επαναφορά Android/obb</string>
+    <string name="restore_ui_apps_permissions">Επαναχορήγηση των καταγεγραμμένων αδειών</string>
+    <string name="restore_ui_apps_permissions_hint">Άδειες χρόνου εκτέλεσης που είχε η εφαρμογή όταν έγινε το αντίγραφο (Shizuku ή root).</string>
+    <string name="restore_ui_apps_user">Επαναφορά για τον χρήστη</string>
+    <string name="restore_ui_apps_user_self">Χρήστης %1$d (εσείς)</string>
+    <string name="restore_ui_apps_user_other">Χρήστης %1$d</string>
+    <string name="restore_ui_apps_advanced">Για προχωρημένους</string>
+    <string name="restore_ui_apps_cache">Επαναφορά φακέλων προσωρινής μνήμης</string>
+    <string name="restore_ui_apps_installer">Επαναφορά του καταγεγραμμένου προγράμματος εγκατάστασης</string>
+    <string name="restore_ui_apps_installer_hint">Επισημαίνει την εφαρμογή ως εγκατεστημένη από το κατάστημα από το οποίο προήλθε (Shizuku ή root).</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">Κατατμήσεις</string>
+    <string name="restore_ui_partitions_need_root">Απαιτείται root</string>
+    <string name="restore_ui_partitions_need_root_body">Οι κατατμήσεις μπορούν να γραφτούν μόνο με root. Μεταβείτε στη λειτουργία Root ή επαναφέρετε αυτές τις εικόνες από recovery ή fastboot.</string>
+    <string name="restore_ui_partitions_hint">Κάθε εικόνα επαληθεύεται πριν γραφτεί και διαβάζεται ξανά μετά. Οι προσαρτημένες ή σε χρήση κατατμήσεις απορρίπτονται πάντα.</string>
+    <string name="restore_ui_critical_selected_title">Επιλέχθηκαν κατατμήσεις ταυτότητας</string>
+    <string name="restore_ui_critical_selected_body">Το %1$s περιέχει δεδομένα μοναδικά για μία συσκευή (IMEI, βαθμονόμηση, DRM, προστασία επαναφοράς εργοστασιακών ρυθμίσεων). Η εγγραφή λάθος αντιγράφου μπορεί να χαλάσει οριστικά αυτή τη συσκευή. Απορρίπτονται εκτός αν το επιτρέψετε παρακάτω.</string>
+    <string name="restore_ui_slot_title">Υποδοχή εγγραφής</string>
+    <string name="restore_ui_slot_same_role">Ίδιος ρόλος</string>
+    <string name="restore_ui_slot_active">Ενεργή υποδοχή</string>
+    <string name="restore_ui_slot_inactive">Ανενεργή υποδοχή</string>
+    <string name="restore_ui_slot_recorded">Ίδιο γράμμα</string>
+    <string name="restore_ui_slot_same_role_desc">Γράφει στην υποδοχή που έχει τώρα τον ρόλο (ενεργή ή ανενεργή) που είχε η υποδοχή της εικόνας. Συνιστάται: οι υποδοχές εναλλάσσονται μετά από κάθε ενημέρωση.</string>
+    <string name="restore_ui_slot_active_desc">Γράφει στην υποδοχή από την οποία ξεκίνησε τώρα η συσκευή.</string>
+    <string name="restore_ui_slot_inactive_desc">Γράφει στην υποδοχή από την οποία δεν ξεκίνησε η συσκευή.</string>
+    <string name="restore_ui_slot_recorded_desc">Γράφει πίσω στο ίδιο γράμμα υποδοχής που απεικονίστηκε (boot_a σε boot_a).</string>
+    <string name="restore_ui_overrides_title">Έλεγχοι ασφαλείας</string>
+    <string name="restore_ui_overrides_hint">Αυτοί οι έλεγχοι απορρίπτουν επικίνδυνες εγγραφές. Καθένας μπορεί να απενεργοποιηθεί μόνο αφού επιβεβαιώσετε τι μπορεί να πάει στραβά.</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">Κατανοώ, να επιτρέπεται</string>
+    <string name="restore_ui_risky_active_title">Έλεγχοι ασφαλείας που απενεργοποιήσατε</string>
+    <string name="restore_ui_risky_space">Επαναφορά χωρίς αρκετό ελεύθερο χώρο</string>
+    <string name="restore_ui_risky_space_hint">Συνέχεια ακόμη κι αν ένας στόχος αναφέρει πολύ λίγο ελεύθερο χώρο.</string>
+    <string name="restore_ui_risky_space_consequence">Ο στόχος μπορεί να γεμίσει κατά την επαναφορά. Τα αρχεία που έχουν γραφτεί μέχρι τότε παραμένουν· τα υπόλοιπα αποτυγχάνουν και οι εφαρμογές σε αυτή τη συσκευή μπορεί να σταματήσουν να λειτουργούν μέχρι να ελευθερωθεί χώρος.</string>
+    <string name="restore_ui_risky_downgrade">Να επιτρέπονται παλαιότερες εκδόσεις εφαρμογών</string>
+    <string name="restore_ui_risky_downgrade_hint">Εγκατάσταση έκδοσης του αντιγράφου που είναι παλαιότερη από την εγκατεστημένη (Shizuku ή root).</string>
+    <string name="restore_ui_risky_downgrade_consequence">Μια παλαιότερη έκδοση εφαρμογής μπορεί να μην καταλαβαίνει δεδομένα που γράφτηκαν από τη νεότερη. Η εφαρμογή μπορεί να καταρρεύσει ή να χάσει τα δεδομένα της. Το Android μπορεί να απορρίψει την υποβάθμιση για ορισμένες εφαρμογές.</string>
+    <string name="restore_ui_risky_cross_slot">Να επιτρέπεται η εγγραφή στην άλλη υποδοχή</string>
+    <string name="restore_ui_risky_cross_slot_hint">Η επιλεγμένη υποδοχή διαφέρει από την υποδοχή που απεικονίστηκε.</string>
+    <string name="restore_ui_risky_cross_slot_consequence">Οι κατατμήσεις της άλλης υποδοχής αντικαθίστανται. Αν οι εικόνες δεν ταιριάζουν με το υπόλοιπο αυτής της υποδοχής, η συσκευή μπορεί να αποτύχει να ξεκινήσει από αυτήν· στην επόμενη ενημέρωση μπορεί επίσης να αλλάξει σε αυτή την υποδοχή.</string>
+    <string name="restore_ui_risky_other_device">Να επιτρέπονται εικόνες από άλλη συσκευή</string>
+    <string name="restore_ui_risky_other_device_hint">Οι εικόνες ελήφθησαν σε διαφορετικό μοντέλο συσκευής ή η προέλευσή τους δεν μπορεί να αποδειχθεί.</string>
+    <string name="restore_ui_risky_other_device_consequence">Οι εικόνες κατατμήσεων είναι ειδικές για ένα μοντέλο συσκευής. Η εγγραφή εικόνας άλλης συσκευής μπορεί να κάνει αυτή τη συσκευή hard-brick, ώστε να ανακτάται μόνο με εργαλείο εργοστασιακού flash.</string>
+    <string name="restore_ui_risky_other_build">Να επιτρέπονται εικόνες από άλλο build</string>
+    <string name="restore_ui_risky_other_build_hint">Ίδια συσκευή, αλλά διαφορετικό build συστήματος (για παράδειγμα πριν από μια ενημέρωση).</string>
+    <string name="restore_ui_risky_other_build_consequence">Η ανάμειξη κατατμήσεων από διαφορετικά builds μπορεί να προκαλέσει boot loops ή δυσλειτουργίες (κάμερα, ραδιόφωνο, κρυπτογράφηση). Επαναφέρετε όλες τις κατατμήσεις αυτού του build μαζί.</string>
+    <string name="restore_ui_risky_smaller_image">Να επιτρέπονται εικόνες μικρότερες από την κατάτμηση</string>
+    <string name="restore_ui_risky_smaller_image_hint">Το τέλος της κατάτμησης μένει ως έχει.</string>
+    <string name="restore_ui_risky_smaller_image_consequence">Η κατάτμηση διατηρεί παλιά δεδομένα μετά την εικόνα. Αυτό είναι ακίνδυνο για ορισμένες κατατμήσεις και χαλά άλλες (για παράδειγμα όσες έχουν footer ή υπογραφή στο τέλος).</string>
+    <string name="restore_ui_risky_identity">Να επιτρέπεται η εγγραφή κατατμήσεων ταυτότητας</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV, βαθμονόμηση modem, persist, προστασία επαναφοράς εργοστασιακών ρυθμίσεων και παρόμοια.</string>
+    <string name="restore_ui_risky_identity_consequence">Αυτές οι κατατμήσεις είναι μοναδικές για μία φυσική συσκευή. Ένα αντίγραφο από άλλη συσκευή, ένα παλιό αντίγραφο ή ένα κατεστραμμένο μπορεί να χαλάσει οριστικά τις κλήσεις, τα δεδομένα κινητής, το Wi-Fi, το DRM ή τον bootloader. Δεν υπάρχει αναίρεση.</string>
+    <string name="restore_ui_confirm_type_word">Πληκτρολογήστε %1$s για επιβεβαίωση.</string>
+    <string name="restore_ui_confirm_word_label">Επιβεβαίωση</string>
+    <string name="restore_ui_confirm_word_device">ΑΛΛΗ ΣΥΣΚΕΥΗ</string>
+    <string name="restore_ui_confirm_word_identity">ΤΑΥΤΟΤΗΤΑ</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">Επιλέξτε τουλάχιστον ένα στοιχείο προς επαναφορά.</string>
+    <string name="restore_ui_problem_folder_required">Εισαγάγετε τον φάκελο προς τον οποίο θα γίνει η επαναφορά.</string>
+    <string name="restore_ui_problem_folder_absolute">Χρησιμοποιήστε απόλυτη διαδρομή που ξεκινά με /.</string>
+    <string name="restore_ui_problem_folder_traversal">Η διαδρομή δεν επιτρέπεται να περιέχει τμήματα . ή ..</string>
+    <string name="restore_ui_problem_folder_protected">Αυτή είναι θέση συστήματος. Επιλέξτε έναν φάκελο στον αποθηκευτικό σας χώρο.</string>
+    <string name="restore_ui_problem_tree_required">Επιλέξτε έναν φάκελο.</string>
+    <string name="restore_ui_problem_twrp_folder">Η αποσυμπίεση αρχειοθηκών TWRP απαιτεί φάκελο· δεν γίνεται ποτέ πάνω στο σύστημα που εκτελείται.</string>
+    <string name="restore_ui_problem_app_nothing">Χωρίς επιλογή εγκατάστασης ή δεδομένων, δεν υπάρχει τίποτα προς επαναφορά για τις εφαρμογές.</string>
+    <string name="restore_ui_problem_downgrade_ignored">Οι παλαιότερες εκδόσεις έχουν σημασία μόνο όταν εγκαθίστανται εφαρμογές· αυτή η επιλογή δεν έχει τώρα αποτέλεσμα.</string>
+    <string name="restore_ui_problem_folder_app_data">Αυτός ο φάκελος βρίσκεται μέσα σε δεδομένα εφαρμογών. Η εγγραφή εκεί μπορεί να χαλάσει τις εγκατεστημένες εφαρμογές.</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">Δεν έχει γραφτεί ακόμη τίποτα. Αυτά μπορούν να επαναφερθούν στην τρέχουσα λειτουργία.</string>
+    <string name="restore_ui_preflight_running">Έλεγχος κάθε στοιχείου…</string>
+    <string name="restore_ui_preflight_failed">Δεν ήταν δυνατή η ολοκλήρωση του ελέγχου</string>
+    <string name="restore_ui_preflight_run">Εκτέλεση του ελέγχου</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="one">%1$d από %2$d στοιχεία μπορεί να επαναφερθεί</item>
+        <item quantity="other">%1$d από %2$d στοιχεία μπορούν να επαναφερθούν</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">Μπορεί να επαναφερθεί</string>
+    <string name="restore_ui_preflight_blocked_cd">Δεν μπορεί να επαναφερθεί</string>
+    <string name="restore_ui_preflight_space">Απαιτεί %1$s · %2$s ελεύθερα</string>
+    <string name="restore_ui_preflight_space_needed">Απαιτεί %1$s</string>
+    <string name="restore_ui_preflight_shortfall">Χρειάζονται άλλα %1$s χώρου.</string>
+    <string name="restore_ui_tier_none">Δεν απαιτούνται δικαιώματα</string>
+    <string name="restore_ui_tier_shizuku">Απαιτεί Shizuku ή root</string>
+    <string name="restore_ui_tier_root">Απαιτεί root</string>
+    <string name="restore_ui_space_not_needed">Δεν απαιτείται χώρος</string>
+    <string name="restore_ui_space_ok">Επαρκής χώρος</string>
+    <string name="restore_ui_space_unknown">Άγνωστος ελεύθερος χώρος</string>
+    <string name="restore_ui_space_insufficient">Ανεπαρκής χώρος</string>
+    <string name="restore_ui_blocker_nothing">Κανένα από τα επιλεγμένα στοιχεία δεν μπορεί να επαναφερθεί τώρα. Αλλάξτε τις επιλογές ή τη λειτουργία εκτέλεσης.</string>
+    <string name="restore_ui_blocker_space">Ένα στοιχείο δεν χωράει στον στόχο του. Ελευθερώστε χώρο, αποεπιλέξτε το ή επιτρέψτε την επαναφορά χωρίς αρκετό ελεύθερο χώρο.</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">Επαναφορά τώρα;</string>
+    <string name="restore_ui_confirm_body">Το DFTB θα γράψει δεδομένα από το %1$s σε αυτή τη συσκευή:</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="one">%1$d σύνολο αρχείων προς %2$s· %3$s.</item>
+        <item quantity="other">%1$d σύνολα αρχείων προς %2$s· %3$s.</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="one">%1$d εφαρμογή μπορεί να επανεγκατασταθεί και τα δεδομένα της να αντικατασταθούν.</item>
+        <item quantity="other">%1$d εφαρμογές μπορεί να επανεγκατασταθούν και τα δεδομένα τους να αντικατασταθούν.</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">Αυτές οι κατατμήσεις αντικαθίστανται μπλοκ προς μπλοκ: %1$s. Αυτό δεν μπορεί να αναιρεθεί και μια αποτυχημένη εγγραφή μπορεί να αφήσει τη συσκευή ανίκανη να ξεκινήσει.</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">Επαναφορά</string>
+    <string name="restore_ui_run_started">Η επαναφορά ξεκίνησε. Συνεχίζεται αν φύγετε από αυτή την οθόνη.</string>
+    <string name="restore_ui_run_running">Επαναφορά…</string>
+    <string name="restore_ui_run_cancelling">Διακοπή…</string>
+    <string name="restore_ui_run_completed">Ολοκληρώθηκε</string>
+    <string name="restore_ui_run_completed_warnings">Ολοκληρώθηκε με προειδοποιήσεις</string>
+    <string name="restore_ui_run_cancelled">Διακόπηκε</string>
+    <string name="restore_ui_run_failed">Απέτυχε</string>
+    <string name="restore_ui_run_cancel">Διακοπή επαναφοράς</string>
+    <string name="restore_ui_run_done">Τέλος</string>
+    <string name="restore_ui_run_summary">%1$d επαναφέρθηκαν · %2$d απέτυχαν · %3$d δεν επαναφέρθηκαν</string>
+    <string name="restore_ui_run_units">Στοιχεία</string>
+    <string name="restore_ui_run_warnings">Προειδοποιήσεις</string>
+    <string name="restore_ui_unit_waiting">Αναμονή</string>
+    <string name="restore_ui_unit_running">Επαναφορά</string>
+    <string name="restore_ui_unit_restored">Επαναφέρθηκε</string>
+    <string name="restore_ui_unit_failed">Απέτυχε</string>
+    <string name="restore_ui_unit_blocked">Δεν μπορεί να επαναφερθεί εδώ</string>
+    <string name="restore_ui_unit_not_run">Δεν επαναφέρθηκε</string>
+    <string name="restore_ui_cancel_title">Διακοπή της επαναφοράς;</string>
+    <string name="restore_ui_cancel_body">Τα στοιχεία που έχουν ήδη επαναφερθεί παραμένουν επαναφερμένα. Μια κατάτμηση που γράφεται ολοκληρώνεται και ελέγχεται πρώτα, επομένως η διακοπή μπορεί να χρειαστεί λίγο.</string>
+    <string name="restore_ui_writing_partition_title">Εγγραφή κατάτμησης</string>
+    <string name="restore_ui_writing_partition_body">Μην κάνετε επανεκκίνηση, μην απενεργοποιήσετε τη συσκευή και μην αφήσετε την μπαταρία να αδειάσει μέχρι να γραφτεί και να ελεγχθεί αυτή η κατάτμηση.</string>
+    <string name="restore_ui_do_not_reboot_title">Μην κάνετε επανεκκίνηση</string>
+    <string name="restore_ui_do_not_reboot_body">Μια εγγραφή κατάτμησης δεν ολοκληρώθηκε με επιτυχία, επομένως η κατάτμηση μπορεί να έχει γραφτεί μερικώς. Μην κάνετε επανεκκίνηση μέχρι να επαναφερθεί σωστά: επαναλάβετε την επαναφορά ή κάντε flash μια σωστή εικόνα από recovery ή fastboot.</string>
+    <string name="restore_ui_install_pending_title">Αναμονή επιβεβαίωσης εγκατάστασης</string>
+    <string name="restore_ui_install_pending_body">Το Android σας ζητά να επιβεβαιώσετε κάθε εγκατάσταση εφαρμογής. Το παράθυρο συνήθως ανοίγει από μόνο του· αν δεν το βλέπετε, ανοίξτε το από εδώ.</string>
+    <string name="restore_ui_install_open">Άνοιγμα παραθύρου</string>
+    <string name="restore_ui_install_permission_title">Το DFTB ίσως να μην μπορεί να εγκαταστήσει εφαρμογές</string>
+    <string name="restore_ui_install_permission_body">Επιτρέψτε στο DFTB να εγκαθιστά άγνωστες εφαρμογές και μετά κάντε ξανά επαναφορά: %1$s</string>
+    <string name="restore_ui_install_permission_open">Άνοιγμα ρύθμισης</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">Εισαγωγή αντιγράφου TWRP</string>
+    <string name="restore_ui_twrp_intro">Βρείτε έναν φάκελο αντιγράφου TWRP ή OrangeFox σε έναν προορισμό. Οι ακατέργαστες εικόνες κατατμήσεων μπορούν να γραφτούν πίσω εδώ με root· οι αρχειοθήκες συστημάτων αρχείων μπορούν να αποσυμπιεστούν σε φάκελο.</string>
+    <string name="restore_ui_twrp_root_label">Αναζήτηση σε</string>
+    <string name="restore_ui_twrp_root_hint">Φάκελος στον προορισμό, για παράδειγμα TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">Αναζήτηση</string>
+    <string name="restore_ui_twrp_searching">Αναζήτηση αντιγράφων…</string>
+    <string name="restore_ui_twrp_search_incomplete">Η αναζήτηση ήταν ελλιπής</string>
+    <string name="restore_ui_twrp_none_found">Δεν βρέθηκε φάκελος αντιγράφου TWRP εκεί.</string>
+    <string name="restore_ui_twrp_pick_backup">Επιλέξτε ένα αντίγραφο για να δείτε τις κατατμήσεις του.</string>
+    <string name="restore_ui_twrp_selected">Επιλεγμένο</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="one">%1$d κατάτμηση · %2$s</item>
+        <item quantity="other">%1$d κατατμήσεις · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">Έχει προβλήματα</string>
+    <string name="restore_ui_twrp_device_folder">Φάκελος σειριακού αριθμού συσκευής</string>
+    <string name="restore_ui_twrp_device_unknown">Δεν έχει καταγραφεί</string>
+    <string name="restore_ui_twrp_device_unknown_hint">Ο φάκελος δεν βρίσκεται κάτω από TWRP/BACKUPS/&lt;serial&gt;, επομένως το DFTB δεν μπορεί να καταλάβει ποια συσκευή τον δημιούργησε.</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s: λείπει ένα τμήμα του διαιρεμένου αρχείου.</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s: υπάρχουν και ενιαίο αρχείο και διαιρεμένα τμήματα· χρησιμοποιείται το ενιαίο αρχείο.</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s: αρχείο αθροίσματος ελέγχου χωρίς την αρχειοθήκη του.</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s: πολλά αρχεία αθροίσματος ελέγχου· χρησιμοποιείται το ισχυρότερο.</string>
+    <string name="restore_ui_twrp_verify_title">Αθροίσματα ελέγχου</string>
+    <string name="restore_ui_twrp_verify_subtitle">Συγκρίνει κάθε αποθηκευμένο αρχείο με το αρχείο αθροίσματος ελέγχου που έγραψε το TWRP δίπλα του.</string>
+    <string name="restore_ui_twrp_verify">Επαλήθευση αθροισμάτων ελέγχου</string>
+    <string name="restore_ui_twrp_verify_summary">%1$d από %2$d αρχεία ταιριάζουν · %3$d δεν ταιριάζουν · %4$d χωρίς άθροισμα ελέγχου · %5$d μη αναγνώσιμα</string>
+    <string name="restore_ui_twrp_verify_damaged">Τα κατεστραμμένα αρχεία δεν πρέπει να επαναφέρονται.</string>
+    <string name="restore_ui_twrp_check_ok">ταιριάζει</string>
+    <string name="restore_ui_twrp_check_mismatch">δεν ταιριάζει με το άθροισμα ελέγχου του</string>
+    <string name="restore_ui_twrp_check_no_sidecar">χωρίς αρχείο αθροίσματος ελέγχου</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">το αρχείο αθροίσματος ελέγχου δεν είναι αναγνώσιμο</string>
+    <string name="restore_ui_twrp_check_read_failed">δεν ήταν δυνατή η ανάγνωση</string>
+    <string name="restore_ui_twrp_partitions_title">Κατατμήσεις</string>
+    <string name="restore_ui_twrp_kind_image">Ακατέργαστη εικόνα</string>
+    <string name="restore_ui_twrp_kind_archive">Αρχειοθήκη αρχείων</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">κρυπτογραφημένο από TWRP</string>
+    <string name="restore_ui_twrp_format_raw">ακατέργαστο</string>
+    <string name="restore_ui_twrp_format_unknown">άγνωστη μορφή</string>
+    <string name="restore_ui_twrp_format_empty">κενό</string>
+    <string name="restore_ui_twrp_format_unreadable">μη αναγνώσιμη μορφή</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="one">%1$d τμήμα</item>
+        <item quantity="other">%1$d τμήματα</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">Χωρίς άθροισμα ελέγχου</string>
+    <string name="restore_ui_twrp_action_restore">Εγγραφή σε κατάτμηση</string>
+    <string name="restore_ui_twrp_action_extract">Αποσυμπίεση σε φάκελο</string>
+    <string name="restore_ui_twrp_target_partition">Κατάτμηση-στόχος</string>
+    <string name="restore_ui_twrp_target_partition_hint">Αφήστε κενό για εγγραφή στο %1$s.</string>
+    <string name="restore_ui_twrp_device_check_hint">Το TWRP καταγράφει μόνο τον σειριακό αριθμό της συσκευής. Αν ο φάκελος του αντιγράφου δεν φέρει τον σειριακό αριθμό αυτής της συσκευής, η εγγραφή απορρίπτεται μέχρι να επιτρέψετε εικόνες από άλλη συσκευή.</string>
+    <string name="restore_ui_twrp_extract_hint">Αρχεία και φάκελοι γράφονται στον προορισμό· σύνδεσμοι, κόμβοι συσκευών, ιδιοκτήτες και ετικέτες SELinux όχι. Τα υπάρχοντα αρχεία με τα ίδια ονόματα αντικαθίστανται.</string>
+    <string name="restore_ui_twrp_extract_destination">Αποσυμπίεση στον προορισμό</string>
+    <string name="restore_ui_twrp_extract_folder">Φάκελος σε αυτόν τον προορισμό</string>
+    <string name="restore_ui_twrp_extract_folder_hint">Δημιουργείται αν δεν υπάρχει.</string>
+    <string name="restore_ui_twrp_draft_not_image">Μόνο ακατέργαστες εικόνες μπορούν να γραφτούν σε κατάτμηση.</string>
+    <string name="restore_ui_twrp_draft_split">Οι διαιρεμένες εικόνες δεν μπορούν να γραφτούν από το Android.</string>
+    <string name="restore_ui_twrp_draft_not_archive">Μόνο αρχειοθήκες αρχείων μπορούν να αποσυμπιεστούν.</string>
+    <string name="restore_ui_twrp_draft_encrypted">Αυτή η αρχειοθήκη είναι κρυπτογραφημένη από το TWRP· το DFTB δεν μπορεί να την αποκρυπτογραφήσει. Επαναφέρετέ την μέσω TWRP.</string>
+    <string name="restore_ui_twrp_draft_unknown_format">Αυτό το αρχείο δεν είναι αναγνώσιμη αρχειοθήκη.</string>
+    <string name="restore_ui_twrp_draft_partition_name">Χρησιμοποιήστε όνομα κατάτμησης με γράμματα, ψηφία, τελείες, παύλες και κάτω παύλες.</string>
+    <string name="restore_ui_twrp_draft_destination">Επιλέξτε τον προορισμό για την αποσυμπίεση.</string>
+    <string name="restore_ui_twrp_draft_traversal">Ο φάκελος δεν επιτρέπεται να περιέχει τμήματα . ή ..</string>
+    <string name="restore_ui_twrp_confirm_restore_title">Εγγραφή αυτής της εικόνας;</string>
+    <string name="restore_ui_twrp_confirm_restore_body">Το %1$s θα αντικαταστήσει την κατάτμηση %2$s αυτής της συσκευής. Η εικόνα ελέγχεται πρώτα και η κατάτμηση διαβάζεται ξανά μετά, αλλά το παλιό περιεχόμενο δεν μπορεί να ανακτηθεί και μια αποτυχημένη εγγραφή μπορεί να αφήσει τη συσκευή ανίκανη να ξεκινήσει.</string>
+    <string name="restore_ui_twrp_confirm_extract_title">Αποσυμπίεση αυτής της αρχειοθήκης;</string>
+    <string name="restore_ui_twrp_confirm_extract_body">Τα αρχεία του %1$s θα γραφτούν στο %2$s στον προορισμό %3$s. Τα υπάρχοντα αρχεία με τα ίδια ονόματα αντικαθίστανται.</string>
+    <string name="restore_ui_twrp_task_target">%1$s → %2$s</string>
+    <string name="restore_ui_twrp_extract_result">%1$d αρχεία και %2$d φάκελοι γράφτηκαν (%3$s).</string>
+    <string name="restore_ui_cd_error">Σφάλμα</string>
+    <string name="restore_ui_cd_warning">Προειδοποίηση</string>
+</resources>

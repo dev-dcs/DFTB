@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="net_storage_ftps_mode_label">Mode FTPS</string>
+    <string name="net_storage_ftps_mode_explicit">Explicite (AUTH TLS, généralement port 21)</string>
+    <string name="net_storage_ftps_mode_implicit">Implicite (TLS dès la connexion, généralement port 990)</string>
+    <string name="net_storage_webdav_scheme_label">Protocole</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS (chiffré)</string>
+    <string name="net_storage_webdav_scheme_http">HTTP (non chiffré)</string>
+    <string name="net_storage_webdav_host_hint">Nom du serveur, ou URL complète comme https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">Votre mot de passe sera envoyé sans chiffrement. Utilisez HTTPS sauf si ce serveur se trouve sur un réseau en lequel vous avez entièrement confiance.</string>
+    <string name="net_storage_webdav_auth_note">Connectez-vous avec un nom d\'utilisateur et un mot de passe (HTTP Basic) ou un jeton d\'application. L\'authentification Digest n\'est pas prise en charge.</string>
+    <string name="net_storage_connect_timeout_label">Délai de connexion (secondes)</string>
+    <string name="net_storage_io_timeout_label">Délai de transfert (secondes)</string>
+    <string name="net_storage_tls_pin_label">Empreinte du certificat de confiance (SHA-256)</string>
+    <string name="net_storage_tls_pin_hint">Facultatif. Collez l\'empreinte SHA-256 du certificat du serveur pour faire confiance à un certificat auto-signé.</string>
+    <string name="net_storage_tls_pin_invalid">L\'empreinte doit comporter 64 caractères hexadécimaux.</string>
+    <string name="net_storage_ftps_session_reuse_hint">Le serveur a rejeté la connexion de données chiffrée. S\'il exige la réutilisation de session TLS (par exemple vsftpd require_ssl_reuse), désactivez cette option sur le serveur.</string>
+
+</resources>

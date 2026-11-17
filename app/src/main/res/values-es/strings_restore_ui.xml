@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">Atrás</string>
+    <string name="restore_ui_back_step">Atrás</string>
+    <string name="restore_ui_next">Siguiente</string>
+    <string name="restore_ui_cancel">Cancelar</string>
+    <string name="restore_ui_retry">Reintentar</string>
+    <string name="restore_ui_refresh">Actualizar</string>
+    <string name="restore_ui_yes">Sí</string>
+    <string name="restore_ui_date_unknown">Fecha desconocida</string>
+    <string name="restore_ui_destination_label">Destino</string>
+    <string name="restore_ui_intent_failed">No se pudo abrir esta pantalla en este dispositivo.</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%1$s de %2$s (%3$d%%)</string>
+    <string name="restore_ui_progress_bytes_only">%1$s procesados</string>
+    <string name="restore_ui_progress_speed">%1$s/s</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/s · quedan unos %2$s</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="one">%1$d advertencia</item>
+        <item quantity="other">%1$d advertencias</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">Restaurar</string>
+    <string name="restore_ui_twrp_open">Importar una copia de seguridad de TWRP</string>
+    <string name="restore_ui_twrp_link">Importar una copia de seguridad de TWRP u OrangeFox</string>
+    <string name="restore_ui_no_destinations_title">Aún no hay destino</string>
+    <string name="restore_ui_no_destinations_body">Las copias de seguridad se leen desde un destino. Añade primero el destino que contiene tus copias de seguridad.</string>
+    <string name="restore_ui_add_destination">Añadir un destino</string>
+    <string name="restore_ui_list_failed">No se pudo leer el destino</string>
+    <string name="restore_ui_no_backups_title">No hay copias de seguridad aquí</string>
+    <string name="restore_ui_no_backups_body">Este destino no contiene ninguna carpeta de copias de seguridad de DFTB. Desliza hacia abajo para comprobar de nuevo o elige otro destino.</string>
+    <string name="restore_ui_badge_encrypted">Cifrada</string>
+    <string name="restore_ui_badge_locked">Bloqueada</string>
+    <string name="restore_ui_badge_partial">Incompleta</string>
+    <string name="restore_ui_badge_critical">Datos de identidad</string>
+    <string name="restore_ui_badge_logical">Lógica</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">Leyendo la copia de seguridad…</string>
+    <string name="restore_ui_open_failed">No se pudo abrir la copia de seguridad</string>
+    <string name="restore_ui_locked_title">Esta copia de seguridad está cifrada</string>
+    <string name="restore_ui_locked_body">Introduce la frase de contraseña con la que se creó para ver su contenido y restaurarla.</string>
+    <string name="restore_ui_locked_vault_problem">No se pudo usar la clave guardada del perfil (%1$s). Introduce la frase de contraseña.</string>
+    <string name="restore_ui_enter_passphrase">Introducir frase de contraseña</string>
+    <string name="restore_ui_passphrase_title">Desbloquear copia de seguridad</string>
+    <string name="restore_ui_passphrase_body">La frase de contraseña permanece en memoria solo mientras esta pantalla está abierta y nunca se guarda.</string>
+    <string name="restore_ui_passphrase_label">Frase de contraseña</string>
+    <string name="restore_ui_passphrase_unlock">Desbloquear</string>
+    <string name="restore_ui_passphrase_show">Mostrar frase de contraseña</string>
+    <string name="restore_ui_passphrase_hide">Ocultar frase de contraseña</string>
+    <string name="restore_ui_unlocked_vault">abierta con la clave guardada</string>
+    <string name="restore_ui_unlocked_passphrase">abierta con tu frase de contraseña</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">Esta carpeta no contiene ningún índice de copia de seguridad de DFTB.</string>
+    <string name="restore_ui_catalog_key_required">Esta parte está cifrada; desbloquea primero la copia de seguridad.</string>
+    <string name="restore_ui_catalog_corrupt_manifest">El índice de la copia de seguridad está dañado y no se puede leer.</string>
+    <string name="restore_ui_catalog_unsupported_schema">Esta copia de seguridad la creó una versión más reciente de DFTB.</string>
+    <string name="restore_ui_catalog_inconsistent_runs">Las ejecuciones de esta copia de seguridad reanudada no corresponden entre sí.</string>
+    <string name="restore_ui_catalog_unsupported_encryption">Esta copia de seguridad usa un cifrado que esta versión no puede leer.</string>
+    <string name="restore_ui_catalog_missing_file">Falta un archivo almacenado en el destino.</string>
+    <string name="restore_ui_catalog_size_mismatch">Un archivo almacenado tiene un tamaño incorrecto.</string>
+    <string name="restore_ui_catalog_digest_mismatch">Un archivo almacenado no coincide con su suma de verificación.</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">Un archivo dentro del archivo comprimido no coincide con su suma de verificación.</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">Falta el archivo de suma de verificación o no concuerda con los datos almacenados.</string>
+    <string name="restore_ui_catalog_not_single_stream">Este elemento se almacena como archivos separados.</string>
+    <string name="restore_ui_problem_io">Error de lectura</string>
+    <string name="restore_ui_problem_more">%1$s (y %2$d más)</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">Detalles de la copia de seguridad</string>
+    <string name="restore_ui_detail_created">Inicio</string>
+    <string name="restore_ui_detail_finished">Fin</string>
+    <string name="restore_ui_detail_size">Tamaño almacenado</string>
+    <string name="restore_ui_detail_device">Creada en</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">Nivel de API %1$d</string>
+    <string name="restore_ui_detail_slot">Ranura activa entonces</string>
+    <string name="restore_ui_detail_build">Compilación</string>
+    <string name="restore_ui_detail_app">Creada con</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">Formato</string>
+    <string name="restore_ui_detail_encryption">Cifrado</string>
+    <string name="restore_ui_detail_checksum">Suma de verificación</string>
+    <string name="restore_ui_detail_structure">Estructura de carpetas</string>
+    <string name="restore_ui_detail_twrp">Compatible con TWRP</string>
+    <string name="restore_ui_detail_selection">Selección del perfil</string>
+    <string name="restore_ui_detail_runs">Ejecuciones combinadas</string>
+    <string name="restore_ui_backup_warnings">Advertencias registradas durante la copia de seguridad</string>
+    <string name="restore_ui_partial_title">Esta copia de seguridad no terminó</string>
+    <string name="restore_ui_partial_body">Se interrumpió o aún se está reanudando. Solo contiene los elementos que se listan abajo; se pueden verificar y restaurar.</string>
+    <string name="restore_ui_cross_device_title">Creada en otro dispositivo</string>
+    <string name="restore_ui_cross_device_body">Esta copia de seguridad procede de un %1$s; este dispositivo es un %2$s. Las apps y los archivos suelen restaurarse sin problema; las imágenes de particiones de otro dispositivo pueden impedir que este arranque.</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="one">%1$d partición</item>
+        <item quantity="other">%1$d particiones</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="one">%1$d app</item>
+        <item quantity="other">%1$d apps</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="one">%1$d carpeta</item>
+        <item quantity="other">%1$d carpetas</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="one">%1$d categoría de archivos</item>
+        <item quantity="other">%1$d categorías de archivos</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">Contenido</string>
+    <string name="restore_ui_units_empty">Esta copia de seguridad no contiene nada que restaurar.</string>
+    <string name="restore_ui_group_apps">Apps</string>
+    <string name="restore_ui_group_partitions">Particiones</string>
+    <string name="restore_ui_group_files">Archivos</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">Verificar</string>
+    <string name="restore_ui_verify_subtitle">Comprueba que los datos almacenados estén intactos antes de depender de ellos.</string>
+    <string name="restore_ui_verify_quick">Verificación rápida</string>
+    <string name="restore_ui_verify_deep">Verificación profunda</string>
+    <string name="restore_ui_verify_hint">La rápida compara los archivos almacenados con sus sumas de verificación. La profunda además descifra y descomprime todo y comprueba cada archivo interno; lee la copia de seguridad completa.</string>
+    <string name="restore_ui_verify_running_quick">Comprobando los archivos almacenados…</string>
+    <string name="restore_ui_verify_running_deep">Decodificando y comprobando cada archivo…</string>
+    <string name="restore_ui_verify_all_ok">Los %1$d elementos almacenados están intactos.</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="one">%1$d de %2$d elementos almacenados está dañado o falta.</item>
+        <item quantity="other">%1$d de %2$d elementos almacenados están dañados o faltan.</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">Intacto</string>
+    <string name="restore_ui_verify_bad_cd">Problema</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">Restaurar</string>
+    <string name="restore_ui_start_subtitle">Elige qué restaurar y cómo, y compruébalo antes de que se escriba nada.</string>
+    <string name="restore_ui_start_wizard">Restaurar…</string>
+    <string name="restore_ui_start_busy">Se está ejecutando una restauración de esta copia de seguridad.</string>
+    <string name="restore_ui_start">Iniciar restauración</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">Paso %1$d de %2$d · %3$s</string>
+    <string name="restore_ui_step_select">Elegir elementos</string>
+    <string name="restore_ui_step_options">Opciones</string>
+    <string name="restore_ui_step_preflight">Comprobación</string>
+    <string name="restore_ui_select_all">Seleccionar todo</string>
+    <string name="restore_ui_select_none">No seleccionar nada</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="one">%1$d de %2$d elemento seleccionado · %3$s</item>
+        <item quantity="other">%1$d de %2$d elementos seleccionados · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">General</string>
+    <string name="restore_ui_conflict_title">Cuando algo ya existe</string>
+    <string name="restore_ui_conflict_skip">Conservar lo existente</string>
+    <string name="restore_ui_conflict_overwrite">Sobrescribir</string>
+    <string name="restore_ui_conflict_keep_both">Conservar ambos</string>
+    <string name="restore_ui_conflict_skip_desc">los archivos existentes se conservan y no se reemplazan</string>
+    <string name="restore_ui_conflict_overwrite_desc">los archivos existentes se reemplazan por la versión de la copia de seguridad</string>
+    <string name="restore_ui_conflict_keep_both_desc">la versión de la copia de seguridad se escribe junto al archivo existente con un nombre nuevo</string>
+    <string name="restore_ui_verify_first">Verificar antes de restaurar</string>
+    <string name="restore_ui_verify_first_hint">Primero vuelve a leer una vez más cada elemento seleccionado; no se escribe nada si alguno está dañado.</string>
+    <string name="restore_ui_metadata">Restaurar fechas y permisos</string>
+    <string name="restore_ui_metadata_hint">Las fechas de modificación siempre; el propietario, el modo y las etiquetas SELinux cuando el modo actual lo permita.</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">Archivos</string>
+    <string name="restore_ui_target_title">Restaurar archivos en</string>
+    <string name="restore_ui_target_original">Ubicación original</string>
+    <string name="restore_ui_target_folder">Una ruta de carpeta</string>
+    <string name="restore_ui_target_saf">Una carpeta elegida</string>
+    <string name="restore_ui_target_original_hint">Los archivos vuelven al lugar del que se copiaron. Las carpetas en las que DFTB no puede escribir en el modo actual se indican en el paso de comprobación.</string>
+    <string name="restore_ui_folder_label">Carpeta</string>
+    <string name="restore_ui_folder_hint">Una ruta absoluta, por ejemplo /storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">Aún no se ha elegido ninguna carpeta</string>
+    <string name="restore_ui_tree_pick">Elegir carpeta</string>
+    <string name="restore_ui_tree_grant_failed">DFTB no pudo conservar el acceso a esa carpeta. Elige otra.</string>
+    <string name="restore_ui_twrp_mode_title">Carpeta de copia de seguridad de TWRP</string>
+    <string name="restore_ui_twrp_copy">Copiar la carpeta</string>
+    <string name="restore_ui_twrp_extract">Descomprimir los archivos</string>
+    <string name="restore_ui_twrp_copy_desc">Copia la carpeta de TWRP tal cual, para que TWRP u OrangeFox pueda restaurarla en recovery.</string>
+    <string name="restore_ui_twrp_extract_desc">Descomprime los archivos de los archivos comprimidos de TWRP en la carpeta elegida. Nunca sobre el sistema en ejecución.</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">Apps</string>
+    <string name="restore_ui_apps_standard_hint">En modo Estándar, Android te pide confirmar cada instalación y no se pueden restaurar los datos de las apps. Shizuku restaura los datos del almacenamiento compartido; root restaura todo.</string>
+    <string name="restore_ui_apps_apks">Instalar las apps</string>
+    <string name="restore_ui_apps_data">Restaurar los datos de las apps</string>
+    <string name="restore_ui_apps_data_hint">Los datos privados requieren root; Android/data y Android/media requieren Shizuku o root.</string>
+    <string name="restore_ui_version_title">Cuando la app ya está instalada</string>
+    <string name="restore_ui_version_auto">Automático</string>
+    <string name="restore_ui_version_reinstall">Reinstalar siempre</string>
+    <string name="restore_ui_version_data_only">Solo datos</string>
+    <string name="restore_ui_version_auto_desc">Instala cuando falta la app o la copia de seguridad es más reciente; en otro caso solo se restauran los datos.</string>
+    <string name="restore_ui_version_reinstall_desc">Instala la versión de la copia de seguridad incluso sobre la misma versión.</string>
+    <string name="restore_ui_version_data_only_desc">Nunca instala; restaura los datos sobre la versión ya instalada.</string>
+    <string name="restore_ui_apps_external">Restaurar Android/data y Android/media</string>
+    <string name="restore_ui_apps_obb">Restaurar Android/obb</string>
+    <string name="restore_ui_apps_permissions">Volver a conceder los permisos registrados</string>
+    <string name="restore_ui_apps_permissions_hint">Permisos de tiempo de ejecución que tenía la app cuando se copió (Shizuku o root).</string>
+    <string name="restore_ui_apps_user">Restaurar para el usuario</string>
+    <string name="restore_ui_apps_user_self">Usuario %1$d (tú)</string>
+    <string name="restore_ui_apps_user_other">Usuario %1$d</string>
+    <string name="restore_ui_apps_advanced">Avanzado</string>
+    <string name="restore_ui_apps_cache">Restaurar carpetas de caché</string>
+    <string name="restore_ui_apps_installer">Restaurar el instalador registrado</string>
+    <string name="restore_ui_apps_installer_hint">Marca la app como instalada por la tienda de la que procede (Shizuku o root).</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">Particiones</string>
+    <string name="restore_ui_partitions_need_root">Se requiere root</string>
+    <string name="restore_ui_partitions_need_root_body">Las particiones solo se pueden escribir con root. Cambia al modo Root o restaura estas imágenes desde recovery o fastboot.</string>
+    <string name="restore_ui_partitions_hint">Cada imagen se verifica antes de escribirla y se vuelve a leer después. Las particiones montadas o en uso siempre se rechazan.</string>
+    <string name="restore_ui_critical_selected_title">Particiones de identidad seleccionadas</string>
+    <string name="restore_ui_critical_selected_body">%1$s contiene datos únicos de un dispositivo (IMEI, calibración, DRM, protección contra restablecimiento de fábrica). Escribir una copia equivocada puede inutilizar este dispositivo de forma permanente. Se rechazan a menos que lo permitas abajo.</string>
+    <string name="restore_ui_slot_title">Ranura donde escribir</string>
+    <string name="restore_ui_slot_same_role">Mismo rol</string>
+    <string name="restore_ui_slot_active">Ranura activa</string>
+    <string name="restore_ui_slot_inactive">Ranura inactiva</string>
+    <string name="restore_ui_slot_recorded">Misma letra</string>
+    <string name="restore_ui_slot_same_role_desc">Escribe en la ranura que ahora tiene el rol (activa o inactiva) que tenía la ranura de la imagen. Recomendado: las ranuras se intercambian tras cada actualización.</string>
+    <string name="restore_ui_slot_active_desc">Escribe en la ranura desde la que arrancó ahora el dispositivo.</string>
+    <string name="restore_ui_slot_inactive_desc">Escribe en la ranura desde la que no arrancó el dispositivo.</string>
+    <string name="restore_ui_slot_recorded_desc">Escribe de vuelta en la misma letra de ranura de la que se creó la imagen (boot_a en boot_a).</string>
+    <string name="restore_ui_overrides_title">Comprobaciones de seguridad</string>
+    <string name="restore_ui_overrides_hint">Estas comprobaciones rechazan escrituras arriesgadas. Cada una solo se puede desactivar después de que confirmes lo que puede salir mal.</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">Lo entiendo, permitirlo</string>
+    <string name="restore_ui_risky_active_title">Comprobaciones de seguridad que desactivaste</string>
+    <string name="restore_ui_risky_space">Restaurar sin espacio libre suficiente</string>
+    <string name="restore_ui_risky_space_hint">Continuar aunque un destino indique muy poco espacio libre.</string>
+    <string name="restore_ui_risky_space_consequence">El destino podría llenarse durante la restauración. Los archivos escritos hasta entonces permanecen; los restantes fallan, y las apps de este dispositivo pueden dejar de funcionar hasta que se libere espacio.</string>
+    <string name="restore_ui_risky_downgrade">Permitir versiones antiguas de apps</string>
+    <string name="restore_ui_risky_downgrade_hint">Instalar una versión de la copia de seguridad más antigua que la instalada (Shizuku o root).</string>
+    <string name="restore_ui_risky_downgrade_consequence">Una versión antigua de una app puede no entender los datos escritos por la más nueva. La app puede cerrarse inesperadamente o perder sus datos. Android puede rechazar la degradación en algunas apps.</string>
+    <string name="restore_ui_risky_cross_slot">Permitir escribir en la otra ranura</string>
+    <string name="restore_ui_risky_cross_slot_hint">La ranura elegida difiere de la ranura de la que se creó la imagen.</string>
+    <string name="restore_ui_risky_cross_slot_consequence">Se reemplazan las particiones de la otra ranura. Si las imágenes no coinciden con el resto de esa ranura, el dispositivo puede no arrancar desde ella; en la siguiente actualización también podría cambiar a esa ranura.</string>
+    <string name="restore_ui_risky_other_device">Permitir imágenes de otro dispositivo</string>
+    <string name="restore_ui_risky_other_device_hint">Las imágenes se tomaron en un modelo de dispositivo distinto o no se puede demostrar su origen.</string>
+    <string name="restore_ui_risky_other_device_consequence">Las imágenes de particiones son específicas de un modelo de dispositivo. Escribir la imagen de otro dispositivo puede dejar este inutilizable (hard brick), de modo que solo una herramienta de flasheo de fábrica podría recuperarlo.</string>
+    <string name="restore_ui_risky_other_build">Permitir imágenes de otra compilación</string>
+    <string name="restore_ui_risky_other_build_hint">El mismo dispositivo, pero otra compilación del sistema (por ejemplo, antes de una actualización).</string>
+    <string name="restore_ui_risky_other_build_consequence">Mezclar particiones de distintas compilaciones puede causar bucles de arranque o funciones rotas (cámara, radio, cifrado). Restaura juntas todas las particiones de esa compilación.</string>
+    <string name="restore_ui_risky_smaller_image">Permitir imágenes más pequeñas que la partición</string>
+    <string name="restore_ui_risky_smaller_image_hint">El final de la partición se deja como está.</string>
+    <string name="restore_ui_risky_smaller_image_consequence">La partición conserva datos antiguos después de la imagen. Eso es inofensivo en algunas particiones y rompe otras (por ejemplo, las que tienen un pie o una firma al final).</string>
+    <string name="restore_ui_risky_identity">Permitir escribir particiones de identidad</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV, calibración del módem, persist, protección contra restablecimiento de fábrica y similares.</string>
+    <string name="restore_ui_risky_identity_consequence">Estas particiones son únicas de un dispositivo físico. Una copia de otro dispositivo, una copia antigua o una dañada puede inutilizar de forma permanente las llamadas, los datos móviles, el Wi-Fi, el DRM o el bootloader. No hay forma de deshacerlo.</string>
+    <string name="restore_ui_confirm_type_word">Escribe %1$s para confirmar.</string>
+    <string name="restore_ui_confirm_word_label">Confirmación</string>
+    <string name="restore_ui_confirm_word_device">OTRO DISPOSITIVO</string>
+    <string name="restore_ui_confirm_word_identity">IDENTIDAD</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">Selecciona al menos un elemento que restaurar.</string>
+    <string name="restore_ui_problem_folder_required">Introduce la carpeta en la que restaurar.</string>
+    <string name="restore_ui_problem_folder_absolute">Usa una ruta absoluta que empiece por /.</string>
+    <string name="restore_ui_problem_folder_traversal">La ruta no puede contener segmentos . o ..</string>
+    <string name="restore_ui_problem_folder_protected">Es una ubicación del sistema. Elige una carpeta de tu almacenamiento.</string>
+    <string name="restore_ui_problem_tree_required">Elige una carpeta.</string>
+    <string name="restore_ui_problem_twrp_folder">Descomprimir archivos de TWRP requiere una carpeta; nunca se hace sobre el sistema en ejecución.</string>
+    <string name="restore_ui_problem_app_nothing">Sin instalación ni datos seleccionados, no hay nada que restaurar de las apps.</string>
+    <string name="restore_ui_problem_downgrade_ignored">Las versiones antiguas solo importan cuando se instalan apps; esta opción no tiene efecto ahora.</string>
+    <string name="restore_ui_problem_folder_app_data">Esta carpeta está dentro de los datos de las apps. Escribir ahí puede dañar las apps instaladas.</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">Aún no se ha escrito nada. Esto es lo que se puede restaurar en el modo actual.</string>
+    <string name="restore_ui_preflight_running">Comprobando cada elemento…</string>
+    <string name="restore_ui_preflight_failed">No se pudo completar la comprobación</string>
+    <string name="restore_ui_preflight_run">Ejecutar la comprobación</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="one">Se puede restaurar %1$d de %2$d elemento</item>
+        <item quantity="other">Se pueden restaurar %1$d de %2$d elementos</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">Se puede restaurar</string>
+    <string name="restore_ui_preflight_blocked_cd">No se puede restaurar</string>
+    <string name="restore_ui_preflight_space">Requiere %1$s · %2$s libres</string>
+    <string name="restore_ui_preflight_space_needed">Requiere %1$s</string>
+    <string name="restore_ui_preflight_shortfall">Se necesitan %1$s más de espacio.</string>
+    <string name="restore_ui_tier_none">No requiere privilegios</string>
+    <string name="restore_ui_tier_shizuku">Requiere Shizuku o root</string>
+    <string name="restore_ui_tier_root">Requiere root</string>
+    <string name="restore_ui_space_not_needed">No requiere espacio</string>
+    <string name="restore_ui_space_ok">Espacio suficiente</string>
+    <string name="restore_ui_space_unknown">Espacio libre desconocido</string>
+    <string name="restore_ui_space_insufficient">Espacio insuficiente</string>
+    <string name="restore_ui_blocker_nothing">Ninguno de los elementos seleccionados se puede restaurar ahora. Cambia las opciones o el modo de funcionamiento.</string>
+    <string name="restore_ui_blocker_space">Un elemento no cabe en su destino. Libera espacio, deselecciónalo o permite restaurar sin espacio libre suficiente.</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">¿Restaurar ahora?</string>
+    <string name="restore_ui_confirm_body">DFTB escribirá datos de %1$s en este dispositivo:</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="one">%1$d conjunto de archivos en %2$s; %3$s.</item>
+        <item quantity="other">%1$d conjuntos de archivos en %2$s; %3$s.</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="one">%1$d app puede reinstalarse y sus datos reemplazarse.</item>
+        <item quantity="other">%1$d apps pueden reinstalarse y sus datos reemplazarse.</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">Estas particiones se sobrescriben bloque a bloque: %1$s. Esto no se puede deshacer, y una escritura fallida puede dejar el dispositivo sin poder arrancar.</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">Restaurar</string>
+    <string name="restore_ui_run_started">Restauración iniciada. Continúa si sales de esta pantalla.</string>
+    <string name="restore_ui_run_running">Restaurando…</string>
+    <string name="restore_ui_run_cancelling">Deteniendo…</string>
+    <string name="restore_ui_run_completed">Completada</string>
+    <string name="restore_ui_run_completed_warnings">Completada con advertencias</string>
+    <string name="restore_ui_run_cancelled">Detenida</string>
+    <string name="restore_ui_run_failed">Fallida</string>
+    <string name="restore_ui_run_cancel">Detener restauración</string>
+    <string name="restore_ui_run_done">Hecho</string>
+    <string name="restore_ui_run_summary">%1$d restaurados · %2$d fallidos · %3$d sin restaurar</string>
+    <string name="restore_ui_run_units">Elementos</string>
+    <string name="restore_ui_run_warnings">Advertencias</string>
+    <string name="restore_ui_unit_waiting">En espera</string>
+    <string name="restore_ui_unit_running">Restaurando</string>
+    <string name="restore_ui_unit_restored">Restaurado</string>
+    <string name="restore_ui_unit_failed">Fallido</string>
+    <string name="restore_ui_unit_blocked">No se puede restaurar aquí</string>
+    <string name="restore_ui_unit_not_run">Sin restaurar</string>
+    <string name="restore_ui_cancel_title">¿Detener la restauración?</string>
+    <string name="restore_ui_cancel_body">Los elementos ya restaurados permanecen restaurados. Una partición que se está escribiendo se termina y se comprueba primero, por lo que detenerla puede tardar un momento.</string>
+    <string name="restore_ui_writing_partition_title">Escribiendo una partición</string>
+    <string name="restore_ui_writing_partition_body">No reinicies, no apagues ni dejes que se agote la batería hasta que esta partición se haya escrito y comprobado.</string>
+    <string name="restore_ui_do_not_reboot_title">No reinicies</string>
+    <string name="restore_ui_do_not_reboot_body">La escritura de una partición no terminó correctamente, por lo que la partición puede estar escrita parcialmente. No reinicies hasta que se haya restaurado correctamente: reintenta la restauración o flashea una imagen válida desde recovery o fastboot.</string>
+    <string name="restore_ui_install_pending_title">Esperando la confirmación de instalación</string>
+    <string name="restore_ui_install_pending_body">Android te pide confirmar la instalación de cada app. El aviso suele abrirse solo; si no lo ves, ábrelo aquí.</string>
+    <string name="restore_ui_install_open">Abrir aviso</string>
+    <string name="restore_ui_install_permission_title">Es posible que DFTB no pueda instalar apps</string>
+    <string name="restore_ui_install_permission_body">Permite a DFTB instalar apps desconocidas y vuelve a restaurar: %1$s</string>
+    <string name="restore_ui_install_permission_open">Abrir ajuste</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">Importar copia de seguridad de TWRP</string>
+    <string name="restore_ui_twrp_intro">Busca una carpeta de copia de seguridad de TWRP u OrangeFox en un destino. Las imágenes de particiones sin procesar se pueden volver a escribir aquí con root; los archivos comprimidos del sistema de archivos se pueden descomprimir en una carpeta.</string>
+    <string name="restore_ui_twrp_root_label">Buscar en</string>
+    <string name="restore_ui_twrp_root_hint">Carpeta del destino, por ejemplo TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">Buscar</string>
+    <string name="restore_ui_twrp_searching">Buscando copias de seguridad…</string>
+    <string name="restore_ui_twrp_search_incomplete">La búsqueda quedó incompleta</string>
+    <string name="restore_ui_twrp_none_found">No se encontró ninguna carpeta de copia de seguridad de TWRP allí.</string>
+    <string name="restore_ui_twrp_pick_backup">Elige una copia de seguridad para ver sus particiones.</string>
+    <string name="restore_ui_twrp_selected">Seleccionada</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="one">%1$d partición · %2$s</item>
+        <item quantity="other">%1$d particiones · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">Tiene problemas</string>
+    <string name="restore_ui_twrp_device_folder">Carpeta del número de serie del dispositivo</string>
+    <string name="restore_ui_twrp_device_unknown">No registrado</string>
+    <string name="restore_ui_twrp_device_unknown_hint">La carpeta no está bajo TWRP/BACKUPS/&lt;serial&gt;, por lo que DFTB no puede saber qué dispositivo la creó.</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s: falta una parte dividida.</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s: existen tanto un archivo único como partes divididas; se usa el archivo único.</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s: archivo de suma de verificación sin su archivo comprimido.</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s: varios archivos de suma de verificación; se usa el más fuerte.</string>
+    <string name="restore_ui_twrp_verify_title">Sumas de verificación</string>
+    <string name="restore_ui_twrp_verify_subtitle">Compara cada archivo almacenado con el archivo de suma de verificación que TWRP escribió junto a él.</string>
+    <string name="restore_ui_twrp_verify">Verificar sumas de verificación</string>
+    <string name="restore_ui_twrp_verify_summary">%1$d de %2$d archivos coinciden · %3$d no coinciden · %4$d sin suma de verificación · %5$d ilegibles</string>
+    <string name="restore_ui_twrp_verify_damaged">Los archivos dañados no deben restaurarse.</string>
+    <string name="restore_ui_twrp_check_ok">coincide</string>
+    <string name="restore_ui_twrp_check_mismatch">no coincide con su suma de verificación</string>
+    <string name="restore_ui_twrp_check_no_sidecar">sin archivo de suma de verificación</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">archivo de suma de verificación ilegible</string>
+    <string name="restore_ui_twrp_check_read_failed">no se pudo leer</string>
+    <string name="restore_ui_twrp_partitions_title">Particiones</string>
+    <string name="restore_ui_twrp_kind_image">Imagen sin procesar</string>
+    <string name="restore_ui_twrp_kind_archive">Archivo comprimido de archivos</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">cifrado por TWRP</string>
+    <string name="restore_ui_twrp_format_raw">sin procesar</string>
+    <string name="restore_ui_twrp_format_unknown">formato desconocido</string>
+    <string name="restore_ui_twrp_format_empty">vacío</string>
+    <string name="restore_ui_twrp_format_unreadable">formato ilegible</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="one">%1$d parte</item>
+        <item quantity="other">%1$d partes</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">Sin suma de verificación</string>
+    <string name="restore_ui_twrp_action_restore">Escribir en partición</string>
+    <string name="restore_ui_twrp_action_extract">Descomprimir en una carpeta</string>
+    <string name="restore_ui_twrp_target_partition">Partición de destino</string>
+    <string name="restore_ui_twrp_target_partition_hint">Déjalo vacío para escribir en %1$s.</string>
+    <string name="restore_ui_twrp_device_check_hint">TWRP solo registra el número de serie del dispositivo. Si la carpeta de la copia de seguridad no indica el número de serie de este dispositivo, la escritura se rechaza hasta que permitas imágenes de otro dispositivo.</string>
+    <string name="restore_ui_twrp_extract_hint">Se escriben los archivos y las carpetas en el destino; los enlaces, los nodos de dispositivo, los propietarios y las etiquetas SELinux no. Los archivos existentes con los mismos nombres se sobrescriben.</string>
+    <string name="restore_ui_twrp_extract_destination">Descomprimir en el destino</string>
+    <string name="restore_ui_twrp_extract_folder">Carpeta en ese destino</string>
+    <string name="restore_ui_twrp_extract_folder_hint">Se crea si no existe.</string>
+    <string name="restore_ui_twrp_draft_not_image">Solo se pueden escribir imágenes sin procesar en una partición.</string>
+    <string name="restore_ui_twrp_draft_split">Las imágenes divididas no se pueden escribir desde Android.</string>
+    <string name="restore_ui_twrp_draft_not_archive">Solo se pueden descomprimir archivos comprimidos de archivos.</string>
+    <string name="restore_ui_twrp_draft_encrypted">Este archivo comprimido está cifrado por TWRP; DFTB no puede descifrarlo. Restáuralo en TWRP.</string>
+    <string name="restore_ui_twrp_draft_unknown_format">Este archivo no es un archivo comprimido legible.</string>
+    <string name="restore_ui_twrp_draft_partition_name">Usa un nombre de partición con letras, dígitos, puntos, guiones y guiones bajos.</string>
+    <string name="restore_ui_twrp_draft_destination">Elige el destino en el que descomprimir.</string>
+    <string name="restore_ui_twrp_draft_traversal">La carpeta no puede contener segmentos . o ..</string>
+    <string name="restore_ui_twrp_confirm_restore_title">¿Escribir esta imagen?</string>
+    <string name="restore_ui_twrp_confirm_restore_body">%1$s sobrescribirá la partición %2$s de este dispositivo. La imagen se comprueba primero y la partición se vuelve a leer después, pero el contenido anterior no se puede recuperar, y una escritura fallida puede dejar el dispositivo sin poder arrancar.</string>
+    <string name="restore_ui_twrp_confirm_extract_title">¿Descomprimir este archivo?</string>
+    <string name="restore_ui_twrp_confirm_extract_body">Los archivos de %1$s se escribirán en %2$s de %3$s. Los archivos existentes con los mismos nombres se sobrescriben.</string>
+    <string name="restore_ui_twrp_task_target">%1$s → %2$s</string>
+    <string name="restore_ui_twrp_extract_result">%1$d archivos y %2$d carpetas escritos (%3$s).</string>
+    <string name="restore_ui_cd_error">Error</string>
+    <string name="restore_ui_cd_warning">Advertencia</string>
+</resources>

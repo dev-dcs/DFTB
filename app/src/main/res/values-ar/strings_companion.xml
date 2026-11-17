@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Companion module builder and reboot-resume strings -->
+<resources>
+    <string name="companion_builder_title">الوحدة المصاحبة</string>
+    <string name="companion_builder_subtitle">أنشئ وحدة Magisk/KernelSU من نوع systemless تضم أدوات سطر الأوامر الخاصة بـ DFTB وخدمة إقلاع لاستئناف المهام بعد إعادة التشغيل.</string>
+    <string name="companion_builder_build_action">إنشاء ملف ZIP للوحدة</string>
+    <string name="companion_builder_building">جارٍ إنشاء الوحدة…</string>
+    <string name="companion_builder_share_action">مشاركة ملف ZIP</string>
+    <string name="companion_builder_flash_hint">بعد الإنشاء، ثبّت ملف ZIP في Magisk أو KernelSU أو APatch ثم أعد التشغيل.</string>
+    <string name="companion_result_complete">تم إنشاء الوحدة: %1$s</string>
+    <string name="companion_result_partial">تم إنشاء الوحدة مع نقص %1$d من الأدوات</string>
+    <string name="companion_result_failed">تعذّر إنشاء الوحدة المصاحبة</string>
+    <string name="companion_result_size">الحجم: %1$s</string>
+    <string name="companion_result_included_tools">الأدوات المضمّنة: %1$s</string>
+    <string name="companion_result_missing_tools">الأدوات الناقصة: %1$s</string>
+    <string name="companion_result_no_tools">لا توجد أدوات سطر أوامر متاحة لمعمارية هذا الجهاز.</string>
+    <string name="companion_resume_title">استئناف المهام المتوقفة</string>
+    <string name="companion_resume_pending">في انتظار الاستئناف بعد إعادة التشغيل</string>
+    <string name="companion_resume_found">%1$d من المهام المتوقفة جاهزة للاستئناف</string>
+    <string name="companion_resume_none">لا توجد مهام متوقفة للاستئناف</string>
+    <string name="companion_requires_magisk">يتطلب Magisk الإصدار v20.4 أو أحدث، أو تثبيت KernelSU/APatch متوافقًا.</string>
+    <string name="companion_requires_root">يتطلب تثبيت وحدة systemless صلاحية root (Magisk أو KernelSU أو APatch).</string>
+</resources>

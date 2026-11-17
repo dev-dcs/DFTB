@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Destinations manager, destination editor, guided rclone setup and raw rclone.conf editor
+     (ui/destinations, ui/rclone). -->
+<resources>
+
+    <!-- Common -->
+    <string name="destinations_back">Back</string>
+    <string name="destinations_cancel">Cancel</string>
+    <string name="destinations_more">More options</string>
+    <string name="destinations_expand">Expand</string>
+    <string name="destinations_collapse">Collapse</string>
+    <string name="destinations_secret_show">Show</string>
+    <string name="destinations_secret_hide">Hide</string>
+
+    <!-- System overview entry point -->
+    <string name="destinations_entry_subtitle">Where backups are stored: folders, USB drives, servers and cloud accounts.</string>
+    <string name="destinations_entry_open">Manage destinations</string>
+
+    <!-- Destinations list -->
+    <string name="destinations_title">Destinations</string>
+    <string name="destinations_add">Add destination</string>
+    <string name="destinations_empty">No destinations yet. Add one to choose where backups go.</string>
+    <string name="destinations_never_verified">Never verified</string>
+    <string name="destinations_last_verified">Last verified %1$s</string>
+    <string name="destinations_space">%1$s free of %2$s</string>
+    <string name="destinations_space_free_only">%1$s free</string>
+    <string name="destinations_test">Test</string>
+    <string name="destinations_edit">Edit</string>
+    <string name="destinations_delete">Delete</string>
+    <string name="destinations_delete_title">Delete destination?</string>
+    <string name="destinations_delete_message">\"%1$s\" and its saved password or key will be removed from this device. Backups already stored there are not deleted.</string>
+    <string name="destinations_deleted">Deleted \"%1$s\".</string>
+    <string name="destinations_delete_failed">The destination could not be deleted.</string>
+
+    <!-- Editor: flow -->
+    <string name="destinations_add_title">Add destination</string>
+    <string name="destinations_edit_title">Edit destination</string>
+    <string name="destinations_not_found">This destination no longer exists.</string>
+    <string name="destinations_pick_type">What kind of destination?</string>
+    <string name="destinations_more_providers_title">Google Drive, OneDrive, Dropbox, pCloud and more</string>
+    <string name="destinations_more_providers_text">Cloud providers are connected through rclone. Set up a remote first, then add it as an rclone destination.</string>
+    <string name="destinations_fix_errors">Fix the highlighted fields first.</string>
+    <string name="destinations_test_connection">Test connection</string>
+    <string name="destinations_save">Save</string>
+    <string name="destinations_error_save">The destination could not be saved.</string>
+    <string name="destinations_error_test">The connection test could not be started.</string>
+    <string name="destinations_error_vault">The secure credential store is unavailable. The password or key was not saved.</string>
+    <string name="destinations_error_tree_grant">Access to that folder could not be kept. Pick it again.</string>
+    <string name="destinations_error_no_picker">No folder picker is available on this device.</string>
+
+    <!-- Editor: type descriptions -->
+    <string name="destinations_type_desc_local_internal">A folder on this device that the app can write to directly.</string>
+    <string name="destinations_type_desc_local_saf">Any folder you pick: internal storage, SD card or a document provider.</string>
+    <string name="destinations_type_desc_usb_otg">A folder on a USB drive connected to this device.</string>
+    <string name="destinations_type_desc_ftp">Unencrypted FTP, for routers and NAS boxes on a trusted network.</string>
+    <string name="destinations_type_desc_ftps">FTP over TLS (explicit or implicit).</string>
+    <string name="destinations_type_desc_sftp">SFTP on any SSH server, with a password or private key.</string>
+    <string name="destinations_type_desc_ssh">SSH server; uses SFTP when offered, otherwise shell commands.</string>
+    <string name="destinations_type_desc_smb">Windows share, Samba or NAS (SMB 2/3).</string>
+    <string name="destinations_type_desc_webdav">WebDAV server such as Nextcloud, ownCloud or a NAS.</string>
+    <string name="destinations_type_desc_nfs">NFS export, mounted by the kernel. Requires Root mode.</string>
+    <string name="destinations_type_desc_rclone">A remote configured in rclone: any of its 50+ cloud providers.</string>
+    <string name="destinations_type_desc_s3">Amazon S3 or any S3-compatible object storage.</string>
+    <string name="destinations_type_desc_mega">MEGA cloud storage account.</string>
+    <string name="destinations_type_desc_pcloud">pCloud, connected through an rclone remote.</string>
+
+    <!-- Editor: sections -->
+    <string name="destinations_section_folder">Folder</string>
+    <string name="destinations_section_rclone">rclone remote</string>
+    <string name="destinations_section_location">Location</string>
+    <string name="destinations_section_credentials">Sign-in</string>
+    <string name="destinations_section_advanced">Advanced</string>
+    <string name="destinations_section_advanced_hint">Optional protocol settings. The defaults suit most servers.</string>
+
+    <!-- Editor: fields -->
+    <string name="destinations_field_name">Name</string>
+    <string name="destinations_field_host">Server</string>
+    <string name="destinations_field_server_url">Server address or URL</string>
+    <string name="destinations_field_port">Port</string>
+    <string name="destinations_field_base_path">Folder on the server</string>
+    <string name="destinations_field_local_path">Folder path</string>
+    <string name="destinations_field_subfolder">Subfolder (optional)</string>
+    <string name="destinations_field_smb_path">Share and folder</string>
+    <string name="destinations_field_nfs_path">Export path</string>
+    <string name="destinations_field_bucket_path">Bucket and folder</string>
+    <string name="destinations_field_username">Username</string>
+    <string name="destinations_field_access_key_id">Access key ID</string>
+    <string name="destinations_field_email">E-mail</string>
+    <string name="destinations_field_password">Password</string>
+    <string name="destinations_field_secret_access_key">Secret access key</string>
+    <string name="destinations_field_private_key">Private key</string>
+    <string name="destinations_field_passphrase">Key passphrase (optional)</string>
+    <string name="destinations_field_auth">Sign in with</string>
+    <string name="destinations_field_remote_name">Remote name</string>
+    <string name="destinations_field_folder">Folder</string>
+    <string name="destinations_field_usb_volume">USB drive</string>
+    <string name="destinations_field_ftps_mode">TLS mode</string>
+    <string name="destinations_field_connect_timeout">Connect timeout (seconds)</string>
+    <string name="destinations_field_data_timeout">Data timeout (seconds)</string>
+    <string name="destinations_field_io_timeout">Read/write timeout (seconds)</string>
+    <string name="destinations_field_tls_pin">Pinned certificate (SHA-256)</string>
+    <string name="destinations_field_scheme">Protocol</string>
+    <string name="destinations_field_smb_share">Share name</string>
+    <string name="destinations_field_smb_domain">Domain / workgroup</string>
+    <string name="destinations_field_smb_encrypt">Require encryption</string>
+    <string name="destinations_field_smb_guest">Guest access</string>
+    <string name="destinations_field_nfs_export">Export</string>
+    <string name="destinations_field_nfs_mount_options">Mount options</string>
+    <string name="destinations_field_s3_provider">Provider</string>
+    <string name="destinations_field_s3_region">Region</string>
+    <string name="destinations_field_s3_endpoint">Endpoint</string>
+
+    <!-- Editor: hints -->
+    <string name="destinations_hint_host">Host name or IP address, without protocol or port</string>
+    <string name="destinations_hint_webdav_url">e.g. https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="destinations_hint_port_default">Leave empty for the default (%1$d)</string>
+    <string name="destinations_hint_base_path">e.g. /backups/phone. Empty means the top level.</string>
+    <string name="destinations_hint_local_path">Absolute path. Empty uses the app\'s own storage folder.</string>
+    <string name="destinations_hint_subfolder">Created inside the chosen folder if missing</string>
+    <string name="destinations_hint_smb_path">/share/folder, or only the folder if the share is set under Advanced</string>
+    <string name="destinations_hint_nfs_path">Exported path on the server, e.g. /srv/backups</string>
+    <string name="destinations_hint_bucket_path">bucket or bucket/folder</string>
+    <string name="destinations_hint_timeout">1 to 3600; empty uses the default</string>
+    <string name="destinations_hint_tls_pin">64 hex digits. Trusts exactly this certificate, e.g. a self-signed one.</string>
+    <string name="destinations_hint_smb_share">When set, the path above is a folder inside this share</string>
+    <string name="destinations_hint_smb_encrypt">Refuse servers that cannot encrypt the session (SMB 3)</string>
+    <string name="destinations_hint_smb_guest">Connect as guest when no password is saved</string>
+    <string name="destinations_hint_nfs_export">When set, the path above is a folder inside this export</string>
+    <string name="destinations_hint_nfs_mount_options">Merged over vers=3,nolock,proto=tcp,soft,timeo=600</string>
+    <string name="destinations_hint_s3_provider">e.g. AWS, Minio, Wasabi, Cloudflare, Other</string>
+    <string name="destinations_hint_s3_region">e.g. us-east-1 (optional for most S3-compatible services)</string>
+    <string name="destinations_hint_s3_endpoint">Leave empty for AWS. e.g. https://s3.example.com</string>
+    <string name="destinations_hint_private_key">Paste an OpenSSH, PEM or PuTTY private key</string>
+    <string name="destinations_secret_stored_hint">Saved securely. Leave empty to keep it.</string>
+
+    <!-- Editor: auth methods -->
+    <string name="destinations_auth_none">None</string>
+    <string name="destinations_auth_password">Password</string>
+    <string name="destinations_auth_private_key">Private key</string>
+    <string name="destinations_auth_none_hint">No credential is sent (anonymous or guest access).</string>
+
+    <!-- Editor: choices -->
+    <string name="destinations_ftps_explicit">Explicit (AUTH TLS)</string>
+    <string name="destinations_ftps_implicit">Implicit</string>
+    <string name="destinations_scheme_https">HTTPS</string>
+    <string name="destinations_scheme_http">HTTP (unencrypted)</string>
+
+    <!-- Editor: folder / USB -->
+    <string name="destinations_no_folder">No folder selected.</string>
+    <string name="destinations_folder_selected">Selected: %1$s</string>
+    <string name="destinations_choose_folder">Choose folder</string>
+    <string name="destinations_usb_none">No USB drive is connected. Plug one in and tap Refresh.</string>
+    <string name="destinations_usb_refresh">Refresh</string>
+    <string name="destinations_usb_read_only">%1$s (read-only)</string>
+    <string name="destinations_usb_not_connected">%1$s (not connected)</string>
+
+    <!-- Editor: rclone -->
+    <string name="destinations_rclone_no_remotes">No rclone remotes are configured yet.</string>
+    <string name="destinations_rclone_unreadable">The rclone configuration could not be read.</string>
+    <string name="destinations_rclone_new_remote">Set up a remote</string>
+
+    <!-- Editor: SSH host key -->
+    <string name="destinations_host_key_explain">The server presented a different identity key than the one saved on first contact. Only continue if you know the server was reinstalled or re-keyed.</string>
+    <string name="destinations_host_key_forget">Forget saved host key</string>
+    <string name="destinations_host_key_confirm">The next connection to %1$s will trust whatever key it presents. Continue?</string>
+    <string name="destinations_host_key_forgotten">Saved host key removed. Test the connection again.</string>
+    <string name="destinations_host_key_none">No saved host key was found for this server.</string>
+
+    <!-- Editor: validation errors -->
+    <string name="destinations_error_required">Required</string>
+    <string name="destinations_error_too_long">Too long</string>
+    <string name="destinations_error_invalid_host">Not a valid host name or IP address</string>
+    <string name="destinations_error_invalid_url">Not a valid address</string>
+    <string name="destinations_error_invalid_port">Port must be a number from 1 to 65535</string>
+    <string name="destinations_error_path_traversal">The path must not contain \"..\"</string>
+    <string name="destinations_error_path_not_absolute">The path must start with /</string>
+    <string name="destinations_error_invalid_characters">Contains characters that are not allowed here</string>
+    <string name="destinations_error_invalid_timeout">Enter a number of seconds from 1 to 3600</string>
+    <string name="destinations_error_invalid_pin">Must be 64 hexadecimal digits (colons allowed)</string>
+    <string name="destinations_error_invalid_remote_name">Letters, digits, space and _ - . + @ only; must not start with - or a space</string>
+    <string name="destinations_error_unknown_remote">No remote with this name in rclone.conf</string>
+    <string name="destinations_error_invalid_key">This does not look like a private key</string>
+    <string name="destinations_error_needs_share">Enter /share/folder or set the share name under Advanced</string>
+    <string name="destinations_error_needs_export">Enter the exported path, starting with /</string>
+    <string name="destinations_error_unsafe_mount_options">Only letters, digits and _ . : = , / + - [ ] are allowed</string>
+    <string name="destinations_error_volume_mismatch">This folder is not on the selected USB drive</string>
+    <string name="destinations_error_invalid_email">Not a valid e-mail address</string>
+    <string name="destinations_error_needs_bucket">Enter the bucket name</string>
+    <string name="destinations_error_invalid_choice">Pick one of the offered values</string>
+
+    <!-- rclone guided setup -->
+    <string name="rclone_setup_title">rclone setup</string>
+    <string name="rclone_setup_pick_provider">Choose a provider</string>
+    <string name="rclone_setup_tool_missing">rclone is not available on this device. You can still save remotes that need no password encoding, and edit rclone.conf, but connections will fail until rclone is installed.</string>
+    <string name="rclone_setup_tool_ok">Using %1$s</string>
+    <string name="rclone_setup_existing_title">Configured remotes</string>
+    <string name="rclone_setup_existing_hint">Secrets are never shown here.</string>
+    <string name="rclone_setup_use_remote">Use as destination</string>
+    <string name="rclone_setup_steps_title">Steps</string>
+    <string name="rclone_setup_step_number">%1$d.</string>
+    <string name="rclone_setup_authorize_label">Command to run on a computer</string>
+    <string name="rclone_setup_copy">Copy command</string>
+    <string name="rclone_setup_fields_title">Settings</string>
+    <string name="rclone_setup_name_hint">The name DFTB and rclone use for this remote</string>
+    <string name="rclone_setup_name_taken">A remote with this name exists and will be replaced</string>
+    <string name="rclone_setup_optional">%1$s (optional)</string>
+    <string name="rclone_setup_save">Save remote</string>
+    <string name="rclone_setup_saved">Remote saved</string>
+    <string name="rclone_setup_fix_errors">Fix the highlighted fields first.</string>
+    <string name="rclone_setup_error_obscure_tool">This provider\'s password must be encoded by rclone, which is not available. Install rclone and try again.</string>
+    <string name="rclone_setup_error_not_number">Enter a number</string>
+    <string name="rclone_setup_error_token">The pasted token is not valid</string>
+    <string name="rclone_setup_error_need_one_of">Fill in at least one of these</string>
+    <string name="rclone_setup_error_unknown_field">Unknown setting</string>
+    <string name="rclone_setup_warnings_title">Warnings</string>
+    <string name="rclone_setup_warning_no_refresh">This token has no refresh token, so the remote stops working when it expires.</string>
+    <string name="rclone_setup_offer_destination">Create a backup destination that uses \"%1$s\" now?</string>
+    <string name="rclone_setup_create_destination">Create destination</string>
+    <string name="rclone_setup_not_now">Not now</string>
+    <string name="rclone_setup_destination_for">Destination for rclone remote \"%1$s\"</string>
+    <string name="rclone_setup_create">Create</string>
+
+    <!-- rclone token check -->
+    <string name="rclone_token_valid">Token looks valid.</string>
+    <string name="rclone_token_expiry">Access token expiry: %1$s</string>
+    <string name="rclone_token_empty">Paste the token first.</string>
+    <string name="rclone_token_not_json">This is not the JSON block printed by rclone authorize.</string>
+    <string name="rclone_token_missing_access">The token has no access_token.</string>
+    <string name="rclone_token_missing_type">The token has no token_type.</string>
+    <string name="rclone_token_bad_expiry">The token\'s expiry date cannot be read.</string>
+
+    <!-- Raw rclone.conf editor -->
+    <string name="rclone_editor_title">Edit rclone.conf</string>
+    <string name="rclone_editor_label">rclone.conf</string>
+    <string name="rclone_editor_placeholder">[myremote]\ntype = s3\n…</string>
+    <string name="rclone_editor_secrets_warning">Passwords and tokens are visible in clear text while editing. Screenshots and screen recording are blocked on this screen.</string>
+    <string name="rclone_editor_unsaved">Unsaved changes</string>
+    <string name="rclone_editor_validate">Validate</string>
+    <string name="rclone_editor_save">Save</string>
+    <string name="rclone_editor_restore">Revert to previous</string>
+    <string name="rclone_editor_restore_message">Replace the current configuration with the version saved before the last change? Unsaved edits are lost.</string>
+    <string name="rclone_editor_restored">Previous version restored.</string>
+    <string name="rclone_editor_no_previous">There is no previous version to restore.</string>
+    <string name="rclone_editor_valid">No errors found.</string>
+    <string name="rclone_editor_invalid">The configuration has errors and was not saved.</string>
+    <string name="rclone_editor_saved">rclone.conf saved.</string>
+    <string name="rclone_editor_load_failed">The rclone configuration could not be loaded from the secure store.</string>
+    <string name="rclone_editor_retry">Retry</string>
+    <string name="rclone_editor_no_issues">No problems found.</string>
+    <string name="rclone_editor_issue_summary">Errors: %1$d · Warnings: %2$d</string>
+    <string name="rclone_editor_issue_line">Line %1$d: %2$s</string>
+    <string name="rclone_editor_error">Error</string>
+    <string name="rclone_editor_warning">Warning</string>
+    <string name="rclone_editor_discard_title">Discard changes?</string>
+    <string name="rclone_editor_discard_message">Your edits to rclone.conf have not been saved.</string>
+    <string name="rclone_editor_discard">Discard</string>
+    <string name="rclone_editor_keep_editing">Keep editing</string>
+
+    <!-- rclone.conf issue codes (RcloneIniIssue.Code) -->
+    <string name="rclone_issue_malformed_line">Not a [section], key = value or comment line</string>
+    <string name="rclone_issue_key_outside_section">Setting appears before any [section]</string>
+    <string name="rclone_issue_invalid_section_name">Invalid remote name</string>
+    <string name="rclone_issue_duplicate_section">This remote is defined twice</string>
+    <string name="rclone_issue_duplicate_key">This setting appears twice in the remote</string>
+    <string name="rclone_issue_empty_key">Setting has no name</string>
+    <string name="rclone_issue_missing_type">Remote has no type = line</string>
+    <string name="rclone_issue_unknown_type">Unknown backend type (fine if your rclone build supports it)</string>
+
+</resources>

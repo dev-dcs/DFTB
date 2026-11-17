@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Open-source credits (onboarding step 4, Settings > About) -->
+
+    <!-- Bundle kinds -->
+    <string name="bundle_kind_native_binary">同梱のコマンドラインツール</string>
+    <string name="bundle_kind_jvm_library">ライブラリ</string>
+    <string name="bundle_kind_android_library">Android ライブラリ</string>
+    <string name="bundle_kind_format_compatibility">互換形式とプロジェクト</string>
+    <string name="bundle_kind_build_toolchain">ビルドツール</string>
+
+    <!-- License names -->
+    <string name="license_apache_2_0_name">Apache License 2.0</string>
+    <string name="license_mit_name">MIT License</string>
+    <string name="license_gpl_2_0_only_name">GNU General Public License v2.0 only</string>
+    <string name="license_gpl_3_0_name">GNU General Public License v3.0 or later</string>
+    <string name="license_lgpl_2_1_name">GNU Lesser General Public License v2.1 or later</string>
+    <string name="license_bsd_3_clause_name">BSD 3-Clause License</string>
+    <string name="license_zero_bsd_name">Zero-Clause BSD License (0BSD)</string>
+    <string name="license_zlib_name">zlib License</string>
+    <string name="license_openssl_apache_2_0_name">Apache License 2.0 (OpenSSL 3.x)</string>
+    <string name="license_dual_bsd_gpl_name">BSD 3-Clause or GNU GPL v2.0 (dual licensed)</string>
+    <string name="license_lgpl_2_1_with_unrar_restriction_name">GNU LGPL v2.1 with unRAR restriction</string>
+    <string name="license_cc0_or_apache_2_0_name">CC0 1.0 or Apache License 2.0 (dual licensed)</string>
+
+    <!-- Credit descriptions: native binaries -->
+    <string name="credit_rclone_desc">数十のクラウドおよびネットワークストレージプロバイダーとファイルを同期するコマンドラインプログラムです。DFTB はこれを実行して、リモートの保存先でバックアップのアップロード、ダウンロード、検証を行います。</string>
+    <string name="credit_busybox_desc">数百の Unix ユーティリティを提供する単一の実行ファイルです。DFTB は root モードでの動作時に、デバイスベンダーのバイナリに依存しない一貫したシェルツールセットとしてこれを使用します。</string>
+    <string name="credit_zstd_desc">Meta による高速なロスレス圧縮アルゴリズムおよびツールです。DFTB の既定のアーカイブ形式（.tar.zst）と圧縮パーティションイメージでこれを使用します。</string>
+    <string name="credit_xz_desc">LZMA2 ベースの圧縮ユーティリティと liblzma ライブラリです。DFTB は高圧縮率の .tar.xz アーカイブと .xz イメージ圧縮に xz ツールを使用します。</string>
+    <string name="credit_pigz_desc">すべての CPU コアを使用する gzip の並列実装です。DFTB はマルチコアデバイスで標準の .gz 出力を高速に生成するために使用します。</string>
+    <string name="credit_openssl_desc">暗号化および TLS ツールキットです。DFTB は root モードで、アーカイブのストリーミング AES 暗号化とチェックサム生成に openssl ツールを呼び出します。</string>
+    <string name="credit_gnu_tar_desc">GNU のアーカイブユーティリティです。DFTB は、所有権、権限、SELinux コンテキスト、拡張属性を保持する tar アーカイブの作成と展開にこれを使用します。</string>
+    <string name="credit_rsync_desc">高速な増分ファイル転送ツールです。DFTB は 1:1 ミラーバックアップと、ローカルおよび SSH 保存先への差分同期にこれを使用します。</string>
+
+    <!-- Credit descriptions: Android libraries -->
+    <string name="credit_libsu_desc">topjohnwu による Android ライブラリで、root シェルでのコマンド実行と root としてのファイルアクセスを行います。DFTB の root およびモジュール層はこの上に構築されています。</string>
+    <string name="credit_shizuku_api_desc">Shizuku サービスのクライアントライブラリです。DFTB は、ユーザーが Shizuku を有効にしている場合に、ADB レベルの権限で特権ファイル操作を実行するために使用します。</string>
+    <string name="credit_androidx_compose_desc">Android の宣言的 UI ツールキットです。DFTB のすべての画面は Compose と Material 3 で構築されています。</string>
+    <string name="credit_androidx_room_desc">SQLite 上の永続化ライブラリです。DFTB はバックアッププロファイル、ジョブ履歴、保存先設定を Room データベースに保存します。</string>
+    <string name="credit_androidx_work_desc">遅延可能なバックグラウンド作業のスケジューラーです。DFTB はスケジュールされ、制約を考慮したバックアップの実行に使用します。</string>
+    <string name="credit_androidx_datastore_desc">型付きの非同期キー値ストレージです。DFTB は言語、テーマ、動作モードなどのアプリ設定を DataStore に保持します。</string>
+    <string name="credit_androidx_navigation_desc">Compose 向けのナビゲーションフレームワークです。DFTB は画面間の移動に型安全なルートを使用します。</string>
+    <string name="credit_hilt_desc">Dagger を基盤とした Android 向けの依存性注入フレームワークです。DFTB はリポジトリ、エンジン、ビューモデルを結び付けるために使用します。</string>
+    <string name="credit_material_components_desc">Google の Material Design コンポーネントライブラリとテーマシステムです。DFTB のビジュアルデザイン、配色、ダイナミックテーマは Material 3 に従います。</string>
+    <string name="credit_material_symbols_desc">Google のオープンソースアイコンセットです。DFTB のすべてのアイコンは Material Symbols および Material Icons です。</string>
+
+    <!-- Credit descriptions: JVM libraries -->
+    <string name="credit_kotlin_desc">JetBrains によるプログラミング言語と標準ライブラリです。DFTB は完全に Kotlin で書かれています。</string>
+    <string name="credit_kotlinx_coroutines_desc">Kotlin コルーチンによる非同期プログラミングのためのライブラリです。DFTB はすべてのバックグラウンド作業とストリーミング作業に使用します。</string>
+    <string name="credit_kotlinx_serialization_desc">マルチプラットフォーム対応のシリアライゼーションライブラリです。DFTB はバックアップマニフェスト、エクスポートされた設定、型安全なナビゲーションルートに使用します。</string>
+    <string name="credit_commons_compress_desc">tar、zip、7z、gzip、bzip2、xz、zstd アーカイブのための Java ライブラリです。DFTB は root のないデバイスで、純粋な Kotlin のアーカイブエンジンに使用します。</string>
+    <string name="credit_commons_io_desc">ストリームとファイル操作のためのユーティリティライブラリです。DFTB は堅牢なコピー、ハッシュ化、一時ファイルの処理に使用します。</string>
+    <string name="credit_commons_net_desc">ネットワークプロトコルのクライアント実装です。DFTB は FTP および FTPS 保存先に使用します。</string>
+    <string name="credit_xz_java_desc">XZ および LZMA 圧縮の純粋な Java 実装です。DFTB はネイティブツールなしで .xz アーカイブの読み書きに使用します。</string>
+    <string name="credit_sshj_desc">Java 向けの SSHv2 ライブラリです。DFTB は SFTP 保存先と SSH 経由のストリーミングバックアップに使用します。</string>
+    <string name="credit_smbj_desc">SMB2 および SMB3 クライアントライブラリです。DFTB は Windows 共有と NAS デバイスへのバックアップに使用します。</string>
+    <string name="credit_okhttp_desc">JVM および Android 向けの HTTP クライアントです。DFTB は WebDAV、S3 その他の HTTP ベースの保存先に使用します。</string>
+    <string name="credit_okio_desc">OkHttp を支える効率的な I/O ライブラリです。DFTB はストリーミングパイプラインにそのバッファ付きソースとシンクを使用します。</string>
+    <string name="credit_bouncycastle_desc">Java 向けの暗号化プロバイダーです。DFTB は OpenPGP 暗号化と、Android プラットフォームで利用できないアルゴリズムに使用します。</string>
+
+    <!-- Credit descriptions: compatible formats and projects -->
+    <string name="credit_seven_zip_desc">7z 形式のファイルアーカイバーで、p7zip がその POSIX 移植版です。DFTB は 7-Zip 互換の .7z アーカイブを読み書きします。ツール自体は同梱されていません。</string>
+    <string name="credit_shizuku_desc">RikkaApps によるアプリで、ユーザーが承認した他のアプリに ADB または root 権限でシステム API を公開します。DFTB の Shizuku 層は、インストールされていると接続します。</string>
+    <string name="credit_magisk_desc">Android 向けのシステムレス root ソリューションです。DFTB のコンパニオンモジュールは Magisk モジュール形式を使用し、インストール済みモジュールのバックアップと復元ができます。</string>
+    <string name="credit_kernelsu_desc">Android 向けのカーネルベース root ソリューションです。DFTB のコンパニオンモジュールは KernelSU のモジュール形式と互換性があります。</string>
+    <string name="credit_apatch_desc">Android 向けのカーネルパッチ型 root ソリューションです。DFTB のコンパニオンモジュールは APatch のモジュール形式と互換性があります。</string>
+    <string name="credit_twrp_desc">Android 向けのカスタムリカバリである Team Win Recovery Project です。DFTB は TWRP が復元できる nandroid 形式のレイアウトでパーティションバックアップを書き込めます。</string>
+    <string name="credit_orangefox_desc">TWRP をベースとしたカスタムリカバリです。DFTB のパーティションバックアップは OrangeFox の復元と互換性のあるレイアウトに従います。</string>
+    <string name="credit_blake3_desc">高速な暗号学的ハッシュ関数です。DFTB はチェックサムファイルと検証のために、独自の BLAKE3 仕様の実装を同梱しています。</string>
+
+    <!-- Credit descriptions: build toolchain -->
+    <string name="credit_ksp_desc">Google による Kotlin Symbol Processing API です。ビルド時に Room と Hilt のコードを生成するために使用され、アプリにはこれ由来のものは含まれません。</string>
+    <string name="credit_gradle_desc">ビルド自動化ツールと Android Gradle Plugin です。DFTB のコンパイルとパッケージ化に使用され、アプリにはこれら由来のものは含まれません。</string>
+</resources>

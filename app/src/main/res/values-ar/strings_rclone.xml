@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rclone storage (core/storage/rclone): guided provider setup (ProviderGuides) and its field
+     labels/hints. Steps may contain %1$s = the rclone backend type (e.g. "drive"). -->
+<resources>
+
+    <!-- Shared OAuth steps -->
+    <string name="rclone_guide_oauth_step_install">على حاسوب يحتوي على متصفح ويب، ثبّت rclone من rclone.org/downloads.</string>
+    <string name="rclone_guide_oauth_step_authorize">في طرفية ذلك الحاسوب شغّل: rclone authorize \"%1$s\" — ثم سجّل الدخول وامنح الإذن في نافذة المتصفح التي تُفتح.</string>
+    <string name="rclone_guide_oauth_step_paste">انسخ نص JSON الذي يطبعه rclone بين الأسهم (يبدأ بـ { وينتهي بـ }) والصقه في حقل «الرمز» أدناه.</string>
+
+    <!-- S3: shared -->
+    <string name="rclone_guide_s3_step_bucket">بعد الحفظ، اجعل مجلد الوجهة يبدأ باسم الحاوية (bucket)، مثال: my-bucket/phone-backups.</string>
+
+    <!-- S3: AWS -->
+    <string name="rclone_guide_s3_aws_title">Amazon S3</string>
+    <string name="rclone_guide_s3_aws_summary">احفظ النسخ الاحتياطية في حاوية Amazon Web Services S3 باستخدام مفتاح وصول.</string>
+    <string name="rclone_guide_s3_aws_step1">في وحدة تحكم AWS، أنشئ مستخدم IAM مقصورًا على حاوية النسخ الاحتياطي (s3:ListBucket وs3:GetObject وs3:PutObject وs3:DeleteObject).</string>
+    <string name="rclone_guide_s3_aws_step2">أنشئ مفتاح وصول لذلك المستخدم وانسخ معرّف مفتاح الوصول ومفتاح الوصول السري.</string>
+
+    <!-- S3: MinIO -->
+    <string name="rclone_guide_s3_minio_title">MinIO (S3 مستضاف ذاتيًا)</string>
+    <string name="rclone_guide_s3_minio_summary">احفظ النسخ الاحتياطية على خادم MinIO الخاص بك أو أي تخزين متوافق مع S3 تشغّله.</string>
+    <string name="rclone_guide_s3_minio_step1">في وحدة تحكم MinIO، أنشئ مفتاح وصول لمستخدم يمكنه الكتابة في حاوية النسخ الاحتياطي، ودوّن عنوان API الخاص بالخادم.</string>
+
+    <!-- S3: Wasabi -->
+    <string name="rclone_guide_s3_wasabi_title">Wasabi</string>
+    <string name="rclone_guide_s3_wasabi_summary">احفظ النسخ الاحتياطية في تخزين Wasabi السحابي الساخن عبر واجهة S3 API.</string>
+    <string name="rclone_guide_s3_wasabi_step1">في وحدة تحكم Wasabi افتح Access Keys وأنشئ مفتاحًا جديدًا وانسخ الجزأين. استخدم عنوان الخدمة لمنطقة الحاوية كنقطة نهاية.</string>
+
+    <!-- S3: Cloudflare R2 -->
+    <string name="rclone_guide_s3_r2_title">Cloudflare R2</string>
+    <string name="rclone_guide_s3_r2_summary">احفظ النسخ الاحتياطية في تخزين كائنات Cloudflare R2 دون رسوم خروج البيانات عند الاستعادة.</string>
+    <string name="rclone_guide_s3_r2_step1">في لوحة تحكم Cloudflare افتح R2 واختر Manage R2 API Tokens. أنشئ رمزًا بصلاحية Object Read &amp; Write.</string>
+    <string name="rclone_guide_s3_r2_step2">انسخ معرّف مفتاح الوصول ومفتاح الوصول السري ونقطة نهاية S3 المعروضة لحسابك.</string>
+
+    <!-- Backblaze B2 -->
+    <string name="rclone_guide_b2_title">Backblaze B2</string>
+    <string name="rclone_guide_b2_summary">احفظ النسخ الاحتياطية في تخزين Backblaze B2 السحابي باستخدام مفتاح تطبيق.</string>
+    <string name="rclone_guide_b2_step1">في حساب Backblaze افتح Application Keys وأضف مفتاحًا جديدًا، ويُفضَّل أن يكون مقصورًا على حاوية النسخ الاحتياطي.</string>
+    <string name="rclone_guide_b2_step2">انسخ keyID وapplicationKey فورًا؛ إذ يعرض Backblaze المفتاح مرة واحدة فقط.</string>
+
+    <!-- Google Drive -->
+    <string name="rclone_guide_drive_title">Google Drive</string>
+    <string name="rclone_guide_drive_summary">احفظ النسخ الاحتياطية في Google Drive الخاص بك. يتم تسجيل الدخول مرة واحدة على حاسوب.</string>
+    <string name="rclone_guide_drive_step_scope">اختر \"drive\" للوصول الكامل، أو \"drive.file\" ليرى DFTB الملفات التي أنشأها فقط.</string>
+
+    <!-- OneDrive -->
+    <string name="rclone_guide_onedrive_title">Microsoft OneDrive</string>
+    <string name="rclone_guide_onedrive_summary">احفظ النسخ الاحتياطية في OneDrive الشخصي أو OneDrive for Business أو SharePoint.</string>
+    <string name="rclone_guide_onedrive_step_drive">يحتاج OneDrive أيضًا إلى معرّف المحرك: على الحاسوب أنشئ remote باستخدام rclone config ثم شغّل rclone config show وانسخ drive_id وdrive_type.</string>
+
+    <!-- Dropbox -->
+    <string name="rclone_guide_dropbox_title">Dropbox</string>
+    <string name="rclone_guide_dropbox_summary">احفظ النسخ الاحتياطية في Dropbox الخاص بك. يتم تسجيل الدخول مرة واحدة على حاسوب.</string>
+
+    <!-- MEGA -->
+    <string name="rclone_guide_mega_title">MEGA</string>
+    <string name="rclone_guide_mega_summary">احفظ النسخ الاحتياطية في حساب MEGA بتخزينه المشفر من طرف إلى طرف.</string>
+    <string name="rclone_guide_mega_step1">أدخل البريد الإلكتروني وكلمة مرور حساب MEGA.</string>
+    <string name="rclone_guide_mega_step2">إذا كان تسجيل الدخول بخطوتين مفعّلًا للحساب فقد يرفض MEGA تسجيل الدخول؛ عطّله لهذا الحساب أو استخدم حساب MEGA منفصلًا للنسخ الاحتياطي.</string>
+
+    <!-- pCloud -->
+    <string name="rclone_guide_pcloud_title">pCloud</string>
+    <string name="rclone_guide_pcloud_summary">احفظ النسخ الاحتياطية في تخزين pCloud الخاص بك. يتم تسجيل الدخول مرة واحدة على حاسوب.</string>
+    <string name="rclone_guide_pcloud_step_region">اختر eapi.pcloud.com إذا كان حسابك في منطقة الاتحاد الأوروبي، وإلا فأبقِ api.pcloud.com.</string>
+
+    <!-- Box -->
+    <string name="rclone_guide_box_title">Box</string>
+    <string name="rclone_guide_box_summary">احفظ النسخ الاحتياطية في Box. يتم تسجيل الدخول مرة واحدة على حاسوب.</string>
+    <string name="rclone_guide_box_step_rotation">يستبدل Box رمز التحديث في كل استخدام. بعد أن يستخدم DFTB هذا الـ remote، لا تعيد استخدام الرمز نفسه على الحاسوب.</string>
+
+    <!-- SFTP via rclone -->
+    <string name="rclone_guide_sftp_title">SFTP (عبر rclone)</string>
+    <string name="rclone_guide_sftp_summary">الوصول إلى خادم SSH عبر rclone، مثلًا لمشاركة تعريف remote واحد مع حاسوبك المكتبي.</string>
+    <string name="rclone_guide_sftp_step1">أدخل عنوان الخادم واسم حسابك.</string>
+    <string name="rclone_guide_sftp_step2">سجّل الدخول بكلمة مرور، أو الصق مفتاحًا خاصًا (بصيغة PEM أو OpenSSH) مع عبارة المرور إن وُجدت. أحدهما مطلوب.</string>
+
+    <!-- WebDAV: Nextcloud -->
+    <string name="rclone_guide_nextcloud_title">Nextcloud (WebDAV)</string>
+    <string name="rclone_guide_nextcloud_summary">احفظ النسخ الاحتياطية على خادم Nextcloud عبر WebDAV.</string>
+    <string name="rclone_guide_nextcloud_step1">في Nextcloud افتح الإعدادات ثم الأمان وأنشئ كلمة مرور تطبيق لـ DFTB.</string>
+    <string name="rclone_guide_nextcloud_step2">استخدم عنوان WebDAV المعروض ضمن إعدادات الملفات، وشكله https://cloud.example.com/remote.php/dav/files/USERNAME/.</string>
+
+    <!-- Field labels -->
+    <string name="rclone_field_access_key_id">معرّف مفتاح الوصول</string>
+    <string name="rclone_field_secret_access_key">مفتاح الوصول السري</string>
+    <string name="rclone_field_region">المنطقة</string>
+    <string name="rclone_field_endpoint">نقطة النهاية</string>
+    <string name="rclone_field_b2_account">معرّف المفتاح</string>
+    <string name="rclone_field_b2_key">مفتاح التطبيق</string>
+    <string name="rclone_field_token">الرمز</string>
+    <string name="rclone_field_client_id">معرّف العميل (اختياري)</string>
+    <string name="rclone_field_client_secret">سر العميل (اختياري)</string>
+    <string name="rclone_field_scope">نطاق الوصول</string>
+    <string name="rclone_field_root_folder_id">معرّف المجلد الجذر (اختياري)</string>
+    <string name="rclone_field_drive_id">معرّف المحرك</string>
+    <string name="rclone_field_drive_type">نوع المحرك</string>
+    <string name="rclone_field_email">البريد الإلكتروني</string>
+    <string name="rclone_field_password">كلمة المرور</string>
+    <string name="rclone_field_pcloud_hostname">منطقة pCloud</string>
+    <string name="rclone_field_box_sub_type">نوع الحساب</string>
+    <string name="rclone_field_host">الخادم</string>
+    <string name="rclone_field_port">المنفذ</string>
+    <string name="rclone_field_username">اسم المستخدم</string>
+    <string name="rclone_field_key_pem">المفتاح الخاص</string>
+    <string name="rclone_field_key_passphrase">عبارة مرور المفتاح</string>
+    <string name="rclone_field_url">العنوان</string>
+
+    <!-- Field hints -->
+    <string name="rclone_hint_access_key_id">مثال: AKIAIOSFODNN7EXAMPLE</string>
+    <string name="rclone_hint_secret_access_key">يُخزَّن مشفرًا على هذا الجهاز فقط</string>
+    <string name="rclone_hint_region_aws">منطقة الحاوية، مثال: us-east-1 أو eu-central-1</string>
+    <string name="rclone_hint_region_optional">اتركه فارغًا ما لم يطلبه المزوّد</string>
+    <string name="rclone_hint_endpoint_minio">مثال: https://minio.example.com:9000</string>
+    <string name="rclone_hint_endpoint_wasabi">مثال: s3.eu-central-1.wasabisys.com</string>
+    <string name="rclone_hint_endpoint_r2">https://ACCOUNT_ID.r2.cloudflarestorage.com</string>
+    <string name="rclone_hint_b2_account">keyID الذي ظهر عند إنشاء المفتاح</string>
+    <string name="rclone_hint_b2_key">applicationKey الذي ظهر مرة واحدة عند إنشاء المفتاح</string>
+    <string name="rclone_hint_token">الصق JSON الذي طبعه rclone authorize</string>
+    <string name="rclone_hint_client_id">فقط إذا سجّلت تطبيقك الخاص لدى المزوّد</string>
+    <string name="rclone_hint_drive_scope">drive = وصول كامل، drive.file = الملفات التي ينشئها DFTB فقط</string>
+    <string name="rclone_hint_root_folder_id">معرّف مجلد يُستخدم كمستوى أعلى</string>
+    <string name="rclone_hint_drive_id">drive_id من rclone config show</string>
+    <string name="rclone_hint_drive_type">drive_type من rclone config show</string>
+    <string name="rclone_hint_mega_user">البريد الإلكتروني الذي تسجّل به الدخول إلى MEGA</string>
+    <string name="rclone_hint_password">يُخزَّن مشفرًا على هذا الجهاز فقط</string>
+    <string name="rclone_hint_pcloud_hostname">eapi.pcloud.com لحسابات الاتحاد الأوروبي</string>
+    <string name="rclone_hint_box_sub_type">استخدم enterprise لحسابات Box المؤسسية فقط</string>
+    <string name="rclone_hint_host">اسم المضيف أو عنوان IP</string>
+    <string name="rclone_hint_port">عادةً 22</string>
+    <string name="rclone_hint_username">اسم حسابك على الخادم</string>
+    <string name="rclone_hint_sftp_password">اتركه فارغًا عند تسجيل الدخول بمفتاح</string>
+    <string name="rclone_hint_key_pem">الصق المفتاح كاملًا بما في ذلك سطري BEGIN وEND</string>
+    <string name="rclone_hint_key_passphrase">اتركه فارغًا إذا لم يكن للمفتاح عبارة مرور</string>
+    <string name="rclone_hint_nextcloud_url">https://cloud.example.com/remote.php/dav/files/USERNAME/</string>
+    <string name="rclone_hint_nextcloud_password">كلمة مرور تطبيق أُنشئت في إعدادات أمان Nextcloud</string>
+
+</resources>

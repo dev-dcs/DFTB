@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="system_info_title">系统概览</string>
+
+    <string name="language_section_title">语言</string>
+    <string name="language_section_description">更改立即生效，无需重启应用。</string>
+
+    <string name="appearance_section_title">外观</string>
+    <string name="theme_mode_label">主题</string>
+    <string name="theme_mode_system">跟随系统</string>
+    <string name="theme_mode_light">浅色</string>
+    <string name="theme_mode_dark">深色</string>
+    <string name="dynamic_color_label">动态取色（Material You）</string>
+    <string name="dynamic_color_unsupported">需要 Android 12 或更高版本。</string>
+
+    <string name="mode_section_title">运行模式</string>
+    <string name="mode_not_selected">尚未配置。请完成设置向导以选择模式。</string>
+    <string name="mode_standard">标准（无 Root）</string>
+    <string name="mode_standard_desc">使用 Storage Access Framework、MediaStore 和纯 Kotlin/JNI 引擎，无提权访问。</string>
+    <string name="mode_shizuku">Shizuku</string>
+    <string name="mode_shizuku_desc">通过 Shizuku 服务获得用户授权的 ADB 级访问，用于应用数据和 Android/data 目录。</string>
+    <string name="mode_root">Root</string>
+    <string name="mode_root_desc">通过 libsu 获取超级用户 Shell，内置 tar、zstd、busybox 与 rclone，支持分区镜像。</string>
+    <string name="mode_module">高级 Root（伴随模块）</string>
+    <string name="mode_module_desc">Root 加 Magisk/KernelSU 模块，提供系统级工具与开机服务，用于定时备份与任务恢复。</string>
+
+    <string name="device_section_title">设备</string>
+    <string name="device_model">型号</string>
+    <string name="android_version">Android 版本</string>
+    <string name="api_level">API 级别</string>
+    <string name="security_patch">安全补丁</string>
+    <string name="supported_abis">支持的 ABI</string>
+    <string name="kernel_version">内核</string>
+
+    <string name="storage_section_title">存储</string>
+    <string name="storage_internal">内部存储（应用数据）</string>
+    <string name="storage_external">共享存储</string>
+    <string name="storage_free_of_total">可用 %1$s / 共 %2$s</string>
+    <string name="storage_unavailable">不可用</string>
+
+    <string name="native_section_title">原生辅助库</string>
+    <string name="native_loaded">libdftb_native 已加载</string>
+    <string name="native_not_loaded">无法加载 libdftb_native</string>
+    <string name="native_version">版本</string>
+    <string name="process_uid">进程 UID</string>
+
+    <string name="app_section_title">关于 DFTB</string>
+    <string name="app_version">版本</string>
+    <string name="app_package">包名</string>
+    <string name="app_build_type">构建类型</string>
+
+    <string name="usb_device_attached">已连接 USB 设备：%1$s</string>
+
+    <string name="notification_channel_jobs_name">正在运行的任务</string>
+    <string name="notification_channel_jobs_desc">备份、还原与校验的实时进度。</string>
+    <string name="notification_channel_alerts_name">结果与提醒</string>
+    <string name="notification_channel_alerts_desc">任务完成或失败、空间不足、完整性校验不匹配。</string>
+    <string name="notification_channel_scheduler_name">定时备份</string>
+    <string name="notification_channel_scheduler_desc">提醒以及等待 Wi‑Fi、充电或空闲状态。</string>
+
+    <string name="notification_jobs_summary_title">DFTB 正在运行</string>
+    <string name="notification_idle_text">正在准备…</string>
+    <plurals name="notification_active_jobs">
+        <item quantity="other">%1$d 个任务正在运行</item>
+    </plurals>
+    <string name="notification_action_cancel">取消</string>
+    <string name="notification_progress_bytes">%1$s / %2$s</string>
+    <string name="notification_progress_items">%1$d / %2$d 项</string>
+
+    <string name="job_kind_backup">备份</string>
+    <string name="job_kind_restore">还原</string>
+    <string name="job_kind_verify">校验</string>
+    <string name="job_kind_sync">同步</string>
+    <string name="job_phase_queued">排队中</string>
+    <string name="job_phase_preflight">预检</string>
+    <string name="job_phase_running">运行中</string>
+    <string name="job_phase_finalizing">正在完成</string>
+    <string name="job_phase_completed">已完成</string>
+    <string name="job_phase_failed">失败</string>
+    <string name="job_phase_cancelled">已取消</string>
+</resources>

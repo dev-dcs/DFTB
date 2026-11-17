@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning (core/provision). Tool purposes and capability labels shown in the
+     tools/diagnostics UI. Raw data (resolved paths, version strings) is intentionally not here. -->
+<resources>
+
+    <!-- Capability groups (ToolFeature) -->
+    <string name="provision_feature_remote_sync">Remote sync</string>
+    <string name="provision_feature_archiving">Archiving</string>
+    <string name="provision_feature_compression">Compression</string>
+    <string name="provision_feature_encryption">Encryption</string>
+    <string name="provision_feature_core_utilities">Core utilities</string>
+    <string name="provision_feature_integrity">Integrity</string>
+
+    <!-- Tool purposes (BundledTool) -->
+    <string name="provision_tool_rclone_purpose">Syncs backups to and from cloud and network remotes such as S3, WebDAV and SFTP.</string>
+    <string name="provision_tool_busybox_purpose">Provides POSIX core utilities with consistent options across devices.</string>
+    <string name="provision_tool_nsenter_purpose">Enters the host mount, PID and other namespaces so backups see the real system mounts under root.</string>
+    <string name="provision_tool_zstd_purpose">Fast Zstandard compression and decompression for archives.</string>
+    <string name="provision_tool_xz_purpose">High-ratio XZ/LZMA compression for archives.</string>
+    <string name="provision_tool_pigz_purpose">Parallel gzip compression that uses multiple CPU cores.</string>
+    <string name="provision_tool_openssl_purpose">Encrypts and decrypts backup archives with a symmetric cipher.</string>
+    <string name="provision_tool_tar_purpose">Streams files into and out of POSIX tar archives, preserving metadata.</string>
+    <string name="provision_tool_dftbtool_purpose">Built-in helper that hashes and copies files, proving the extract-and-exec pipeline works on this device.</string>
+
+</resources>

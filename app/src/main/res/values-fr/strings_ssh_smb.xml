@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_net_missing_host">Aucun nom d\'hôte n\'est configuré pour la destination.</string>
+    <string name="storage_net_missing_credential">Aucun identifiant n\'est enregistré pour la destination.</string>
+    <string name="storage_net_credential_not_found">Les identifiants enregistrés pour cette destination sont introuvables.</string>
+    <string name="storage_net_credential_wrong_kind">Le type d\'identifiant enregistré n\'est pas pris en charge par ce protocole.</string>
+    <string name="storage_net_missing_username">Aucun nom d\'utilisateur n\'est configuré pour la destination.</string>
+    <string name="storage_net_connect_failed">Impossible de se connecter à %1$s : %2$s</string>
+    <string name="storage_net_op_failed">Échec de l\'opération distante (%1$s) : %2$s</string>
+    <string name="storage_net_not_a_directory">« %1$s » n\'est pas un dossier de la destination.</string>
+    <string name="storage_net_transfer_timeout">Le transfert n\'a pas démarré à temps (%1$s).</string>
+    <string name="storage_ssh_auth_failed">Le serveur SSH a rejeté le nom d\'utilisateur, le mot de passe ou la clé.</string>
+    <string name="storage_ssh_key_unreadable">Impossible de lire la clé privée enregistrée. Vérifiez le format de la clé et la phrase secrète.</string>
+    <string name="storage_ssh_host_key_changed">La clé d\'hôte SSH de %1$s a changé (désormais %2$s). La connexion a été refusée pour protéger vos données. Si le serveur a été réinstallé volontairement, oubliez sa clé enregistrée et reconnectez-vous.</string>
+    <string name="storage_ssh_no_shell">Le serveur SSH ne propose pas SFTP et a refusé le repli sur les commandes shell.</string>
+    <string name="storage_smb_missing_share">Aucun partage n\'est configuré. Placez le nom du partage comme premier dossier du chemin, ou définissez l\'option de partage.</string>
+    <string name="storage_smb_not_disk_share">« %1$s » n\'est pas un partage de fichiers.</string>
+    <string name="storage_smb_encryption_unsupported">Le chiffrement a été demandé mais le serveur ne prend pas en charge le chiffrement SMB 3.</string>
+    <string name="storage_smb_auth_failed">Le serveur SMB a rejeté le nom d\'utilisateur ou le mot de passe.</string>
+    <string name="storage_nfs_requires_root">NFS nécessite le mode Root : Android ne peut pas monter de partages réseau pour les applications normales. Passez en mode Root dans les Paramètres pour utiliser cette destination.</string>
+    <string name="storage_nfs_root_unavailable">L\'accès root n\'est pas accordé pour le moment, le partage NFS ne peut donc pas être monté.</string>
+    <string name="storage_nfs_kernel_unsupported">Le noyau de cet appareil n\'a pas de client NFS, les partages NFS ne peuvent donc pas être montés.</string>
+    <string name="storage_nfs_missing_export">Aucun chemin d\'export NFS n\'est configuré (par exemple /srv/backups).</string>
+    <string name="storage_nfs_bad_options">Les options de montage NFS contiennent des caractères non pris en charge.</string>
+    <string name="storage_nfs_mount_failed">Échec du montage de %1$s : %2$s</string>
+
+</resources>

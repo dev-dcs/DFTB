@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="system_info_title">نظرة عامة على النظام</string>
+
+    <string name="language_section_title">اللغة</string>
+    <string name="language_section_description">تُطبَّق التغييرات فورًا دون إعادة تشغيل التطبيق.</string>
+
+    <string name="appearance_section_title">المظهر</string>
+    <string name="theme_mode_label">السمة</string>
+    <string name="theme_mode_system">النظام</string>
+    <string name="theme_mode_light">فاتح</string>
+    <string name="theme_mode_dark">داكن</string>
+    <string name="dynamic_color_label">الألوان الديناميكية (Material You)</string>
+    <string name="dynamic_color_unsupported">يتطلب Android 12 أو أحدث.</string>
+
+    <string name="mode_section_title">وضع التشغيل</string>
+    <string name="mode_not_selected">لم يتم الإعداد بعد. أكمل معالج الإعداد لاختيار وضع.</string>
+    <string name="mode_standard">قياسي (بدون روت)</string>
+    <string name="mode_standard_desc">إطار الوصول إلى التخزين وMediaStore ومحركات Kotlin/JNI خالصة. بدون صلاحيات مرتفعة.</string>
+    <string name="mode_shizuku">Shizuku</string>
+    <string name="mode_shizuku_desc">وصول بمستوى ADB مُصرَّح به من المستخدم عبر خدمة Shizuku لبيانات التطبيقات ومجلدات Android/data.</string>
+    <string name="mode_root">روت</string>
+    <string name="mode_root_desc">صدفة المستخدم الجذر عبر libsu مع أدوات tar وzstd وbusybox وrclone المضمّنة. صور الأقسام متاحة.</string>
+    <string name="mode_module">روت متقدم (وحدة مصاحبة)</string>
+    <string name="mode_module_desc">روت بالإضافة إلى وحدة Magisk/KernelSU توفّر أدوات على مستوى النظام وخدمة إقلاع للنسخ المجدولة والمستأنَفة.</string>
+
+    <string name="device_section_title">الجهاز</string>
+    <string name="device_model">الطراز</string>
+    <string name="android_version">إصدار Android</string>
+    <string name="api_level">مستوى API</string>
+    <string name="security_patch">تصحيح الأمان</string>
+    <string name="supported_abis">بنى ABI المدعومة</string>
+    <string name="kernel_version">النواة</string>
+
+    <string name="storage_section_title">التخزين</string>
+    <string name="storage_internal">التخزين الداخلي (بيانات التطبيق)</string>
+    <string name="storage_external">التخزين المشترك</string>
+    <string name="storage_free_of_total">‏%1$s متاح من %2$s</string>
+    <string name="storage_unavailable">غير متاح</string>
+
+    <string name="native_section_title">مكتبة المساعدة الأصلية</string>
+    <string name="native_loaded">تم تحميل libdftb_native</string>
+    <string name="native_not_loaded">تعذّر تحميل libdftb_native</string>
+    <string name="native_version">الإصدار</string>
+    <string name="process_uid">معرّف المستخدم للعملية (UID)</string>
+
+    <string name="app_section_title">حول DFTB</string>
+    <string name="app_version">الإصدار</string>
+    <string name="app_package">الحزمة</string>
+    <string name="app_build_type">نوع البناء</string>
+
+    <string name="usb_device_attached">تم توصيل جهاز USB: %1$s</string>
+
+    <string name="notification_channel_jobs_name">المهام الجارية</string>
+    <string name="notification_channel_jobs_desc">التقدّم المباشر للنسخ الاحتياطي والاستعادة والتحقق.</string>
+    <string name="notification_channel_alerts_name">النتائج والتنبيهات</string>
+    <string name="notification_channel_alerts_desc">المهام المكتملة أو الفاشلة، المساحة غير الكافية، عدم تطابق السلامة.</string>
+    <string name="notification_channel_scheduler_name">النسخ الاحتياطي المجدول</string>
+    <string name="notification_channel_scheduler_desc">التذكيرات وانتظار Wi‑Fi أو الشحن أو الخمول.</string>
+
+    <string name="notification_jobs_summary_title">DFTB يعمل</string>
+    <string name="notification_idle_text">جارٍ التحضير…</string>
+    <plurals name="notification_active_jobs">
+        <item quantity="zero">لا توجد مهام جارية</item>
+        <item quantity="one">مهمة واحدة جارية</item>
+        <item quantity="two">مهمتان جاريتان</item>
+        <item quantity="few">%1$d مهام جارية</item>
+        <item quantity="many">%1$d مهمة جارية</item>
+        <item quantity="other">%1$d مهمة جارية</item>
+    </plurals>
+    <string name="notification_action_cancel">إلغاء</string>
+    <string name="notification_progress_bytes">‏%1$s من %2$s</string>
+    <string name="notification_progress_items">‏%1$d من %2$d عنصرًا</string>
+
+    <string name="job_kind_backup">نسخ احتياطي</string>
+    <string name="job_kind_restore">استعادة</string>
+    <string name="job_kind_verify">تحقق</string>
+    <string name="job_kind_sync">مزامنة</string>
+    <string name="job_phase_queued">في الانتظار</string>
+    <string name="job_phase_preflight">فحوصات أولية</string>
+    <string name="job_phase_running">قيد التنفيذ</string>
+    <string name="job_phase_finalizing">جارٍ الإنهاء</string>
+    <string name="job_phase_completed">مكتمل</string>
+    <string name="job_phase_failed">فشل</string>
+    <string name="job_phase_cancelled">أُلغي</string>
+</resources>

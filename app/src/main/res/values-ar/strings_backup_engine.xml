@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup engine (core/pipeline/engine): progress messages, results, failures and warnings that
+     appear in notifications, History and the live terminal. Technical detail stays in English
+     and is appended in parentheses. -->
+<resources>
+
+    <!-- Progress -->
+    <string name="backup_engine_planning">جارٍ تجهيز النسخة الاحتياطية…</string>
+    <string name="backup_engine_preflight">جارٍ التحقق من المساحة الفارغة…</string>
+    <string name="backup_engine_uploading">جارٍ رفع %1$s…</string>
+    <string name="backup_engine_verifying">جارٍ التحقق من %1$s…</string>
+    <string name="backup_engine_writing_manifest">جارٍ كتابة فهرس النسخة الاحتياطية…</string>
+
+    <!-- Results -->
+    <plurals name="backup_engine_completed">
+        <item quantity="zero">لم يُنسخ أي عنصر (%1$d).</item>
+        <item quantity="one">تم نسخ عنصر واحد احتياطيًا.</item>
+        <item quantity="two">تم نسخ عنصرين احتياطيًا.</item>
+        <item quantity="few">تم نسخ %1$d عناصر احتياطيًا.</item>
+        <item quantity="many">تم نسخ %1$d عنصرًا احتياطيًا.</item>
+        <item quantity="other">تم نسخ %1$d عنصر احتياطيًا.</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="zero">لا توجد تحذيرات (%1$d).</item>
+        <item quantity="one">تحذير واحد.</item>
+        <item quantity="two">تحذيران.</item>
+        <item quantity="few">%1$d تحذيرات.</item>
+        <item quantity="many">%1$d تحذيرًا.</item>
+        <item quantity="other">%1$d تحذير.</item>
+    </plurals>
+    <string name="backup_engine_cancelled">أُلغيت النسخة الاحتياطية. أُزيلت الملفات الجزئية.</string>
+
+    <!-- Failures (BackupErrorCode) -->
+    <string name="backup_engine_error_no_destination">ليس لهذا الملف الشخصي وجهة. اختر مكان حفظ النسخ الاحتياطية.</string>
+    <string name="backup_engine_error_destination_not_found">وجهة الملف الشخصي لم تعد موجودة.</string>
+    <string name="backup_engine_error_nothing">لم يتم تحديد أي شيء للنسخ الاحتياطي.</string>
+    <string name="backup_engine_error_sources_unavailable">لا يمكن نسخ أي من البيانات المحددة احتياطيًا في الوضع الحالي.</string>
+    <string name="backup_engine_error_twrp_encryption">لا يمكن تشفير النسخ الاحتياطية المتوافقة مع TWRP. أوقف التشفير أو التوافق مع TWRP.</string>
+    <string name="backup_engine_error_masking_needs_encryption">يتطلب إخفاء أسماء الملفات التشفير. فعّل تشفير AES-256-GCM أو أوقف إخفاء الأسماء.</string>
+    <string name="backup_engine_error_destination_space">لا تملك الوجهة مساحة فارغة كافية لهذه النسخة الاحتياطية.</string>
+    <string name="backup_engine_error_staging_space">لا يملك هذا الجهاز مساحة فارغة كافية لتجهيز النسخة الاحتياطية محليًا.</string>
+    <string name="backup_engine_error_encryption_unsupported">وضع التشفير هذا غير مدعوم بعد. استخدم AES-256-GCM.</string>
+    <string name="backup_engine_error_key_missing">مفتاح التشفير أو عبارة المرور لهذا الملف الشخصي مفقودة.</string>
+    <string name="backup_engine_error_transfer_unsupported">وضع النقل المحدد غير متاح لهذه الوجهة.</string>
+    <string name="backup_engine_error_source">تعذّرت قراءة بعض البيانات.</string>
+    <string name="backup_engine_error_source_shape">أنتج مصدر قسم أكثر من صورة واحدة.</string>
+    <string name="backup_engine_error_storage">فشلت الكتابة إلى الوجهة.</string>
+    <string name="backup_engine_error_verify">ملف مخزَّن لا يطابق ما كُتب. قد يكون تالفًا.</string>
+    <string name="backup_engine_error_manifest">تعذّرت كتابة فهرس النسخة الاحتياطية.</string>
+    <string name="backup_engine_error_all_failed">تعذّر إكمال أي جزء من النسخة الاحتياطية.</string>
+    <string name="backup_engine_error_internal">توقفت النسخة الاحتياطية بسبب خطأ غير متوقع.</string>
+
+    <!-- Warnings (BackupWarningCode) -->
+    <string name="backup_engine_warning_space_unknown">تعذّر التحقق من المساحة الفارغة.</string>
+    <string name="backup_engine_warning_space_overridden">بدأت العملية رغم قلة المساحة الفارغة.</string>
+    <string name="backup_engine_warning_format_substituted">الصيغة المختارة لا تنطبق هنا؛ استُخدمت صيغة متوافقة.</string>
+    <string name="backup_engine_warning_source_unavailable">تم التخطي: غير متاح في الوضع الحالي.</string>
+    <string name="backup_engine_warning_source_partial">نُسخ جزء منه فقط.</string>
+    <string name="backup_engine_warning_twrp_verbatim">يُخزَّن مجلد TWRP دون ضغط وبأسماء مقروءة ليتمكن TWRP من استعادته.</string>
+    <string name="backup_engine_warning_twrp_not_device">لا يستطيع TWRP الاستعادة إلا من تخزين الجهاز أو USB. انسخ مجلد TWRP إلى هناك قبل الاستعادة.</string>
+    <string name="backup_engine_warning_estimate_failed">تعذّر تقدير الحجم مسبقًا.</string>
+    <string name="backup_engine_warning_size_mismatch">تغيّر حجم البيانات أثناء قراءتها.</string>
+    <string name="backup_engine_warning_artifact_failed">فشل هذا الجزء من النسخة الاحتياطية.</string>
+    <string name="backup_engine_warning_hash_records">تعذّر حفظ المجاميع الاختبارية لكل ملف في الفهرس.</string>
+    <string name="backup_engine_warning_checkpoint">تعذّر حفظ معلومات الاستئناف.</string>
+    <string name="backup_engine_warning_cleanup">تعذّرت إزالة ملف مؤقت.</string>
+    <string name="backup_engine_warning_resume_skipped">اكتمل في محاولة سابقة؛ تم التخطي.</string>
+    <string name="backup_engine_error_resume_folder">اسم مجلد النسخة الاحتياطية المراد استئنافها غير صالح.</string>
+    <string name="backup_engine_warning_resume_unindexed">اكتمل سابقًا، لكن لا يوجد فهرس نسخة احتياطية سابق يصفه.</string>
+    <string name="backup_engine_warning_prior_manifest">تعذّرت قراءة فهرس نسخة احتياطية سابق في هذا المجلد.</string>
+</resources>

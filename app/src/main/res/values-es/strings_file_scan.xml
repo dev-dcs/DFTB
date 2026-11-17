@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="file_scan_problem_include_regex">El patrón de inclusión no es una expresión regular válida: %1$s</string>
+    <string name="file_scan_problem_exclude_regex">El patrón de exclusión no es una expresión regular válida: %1$s</string>
+    <string name="file_scan_problem_negative_min">El tamaño mínimo no puede ser negativo.</string>
+    <string name="file_scan_problem_negative_max">El tamaño máximo no puede ser negativo.</string>
+    <string name="file_scan_problem_size_inverted">El tamaño mínimo es mayor que el máximo.</string>
+    <string name="file_scan_problem_date_empty">La fecha \"modificado después de\" debe ser anterior a la fecha \"modificado antes de\".</string>
+    <string name="file_scan_problem_extension_conflict">Estas extensiones están incluidas y excluidas a la vez: %1$s</string>
+    <string name="file_scan_block_all_files">Esta carpeta requiere \"Acceso a todos los archivos\" o el modo Shizuku/Root.</string>
+    <string name="file_scan_block_media_permission">Permite el acceso a fotos, vídeos o audio para analizar esta carpeta.</string>
+    <string name="file_scan_block_non_media">Los documentos y otros archivos que no son multimedia requieren \"Acceso a todos los archivos\" o el modo Shizuku/Root.</string>
+    <string name="file_scan_block_app_sandbox">Las carpetas Android/data y Android/obb de otras apps solo se pueden leer en modo Shizuku o Root.</string>
+    <string name="file_scan_block_root">Esta ubicación solo se puede leer en modo Root.</string>
+    <string name="file_scan_block_not_readable">La app no puede leer esta ubicación. Prueba el modo Shizuku o Root.</string>
+    <string name="file_scan_block_saf">Se perdió el acceso a esta carpeta. Selecciónala de nuevo.</string>
+    <string name="file_scan_root_not_found">La carpeta no existe.</string>
+    <string name="file_scan_root_not_readable">No se pudo leer la carpeta.</string>
+    <string name="file_scan_root_not_directory">La ubicación no es una carpeta.</string>
+    <string name="file_scan_root_tool_failed">La herramienta de análisis falló en el modo actual.</string>
+    <string name="file_scan_warning_partial_media">Solo son visibles las fotos y vídeos que seleccionaste. Permite el acceso completo para incluirlos todos.</string>
+    <string name="file_scan_warning_find_exit">El análisis con privilegios terminó con un error; los resultados pueden estar incompletos.</string>
+    <string name="file_scan_warning_unparseable">No se pudieron leer algunos nombres de archivo de la salida del análisis (por ejemplo, nombres con saltos de línea).</string>
+    <string name="file_scan_warning_find_unsupported">El shell del dispositivo no tiene un comando \"find\" utilizable.</string>
+    <string name="file_scan_req_all_files">Conceder \"Acceso a todos los archivos\"</string>
+    <string name="file_scan_req_permission">Conceder permiso multimedia</string>
+    <string name="file_scan_req_shizuku">Cambiar al modo Shizuku o Root</string>
+    <string name="file_scan_req_root">Cambiar al modo Root</string>
+    <string name="file_scan_req_saf">Seleccionar de nuevo la carpeta</string>
+    <string name="file_scan_walker_nio">Acceso directo a archivos</string>
+    <string name="file_scan_walker_saf">Storage Access Framework</string>
+    <string name="file_scan_walker_find">Shell con privilegios (find)</string>
+    <string name="file_scan_walker_media_store">Biblioteca multimedia</string>
+
+</resources>

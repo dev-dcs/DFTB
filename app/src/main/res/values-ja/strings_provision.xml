@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">リモート同期</string>
+    <string name="provision_feature_archiving">アーカイブ</string>
+    <string name="provision_feature_compression">圧縮</string>
+    <string name="provision_feature_encryption">暗号化</string>
+    <string name="provision_feature_core_utilities">コアユーティリティ</string>
+    <string name="provision_feature_integrity">整合性</string>
+    <string name="provision_tool_rclone_purpose">S3、WebDAV、SFTP などのクラウドやネットワーク上のリモートとバックアップを同期します。</string>
+    <string name="provision_tool_busybox_purpose">POSIX コアユーティリティを、デバイス間で共通のオプションで提供します。</string>
+    <string name="provision_tool_zstd_purpose">アーカイブ向けの高速な Zstandard 圧縮・展開。</string>
+    <string name="provision_tool_xz_purpose">アーカイブ向けの高圧縮率な XZ/LZMA 圧縮。</string>
+    <string name="provision_tool_pigz_purpose">複数の CPU コアを使う並列 gzip 圧縮。</string>
+    <string name="provision_tool_openssl_purpose">共通鍵暗号でバックアップアーカイブを暗号化・復号します。</string>
+    <string name="provision_tool_tar_purpose">メタデータを保持したまま、POSIX tar アーカイブへファイルをストリーム書き込み・読み出しします。</string>
+    <string name="provision_tool_dftbtool_purpose">ファイルのハッシュ計算とコピーを行う内蔵ヘルパー。このデバイスで展開・実行の仕組みが動作することを確認します。</string>
+    <string name="provision_tool_nsenter_purpose">ホストのマウント、PID などの名前空間に入り、root 権限でバックアップが実際のシステムマウントを参照できるようにします。</string>
+</resources>

@@ -1,0 +1,7 @@
+id=dftb_companion
+name=DFTB Companion
+version=v0.0.0
+versionCode=0
+author=@Dev_DcS
+description=Systemless CLI tools, partition backup/restore with a WebUI, and a reboot-resume boot service for the DFTB backup app. Removable from the root manager.
+updateJson=https://raw.githubusercontent.com/dev-dcs/DFTB/main/companion/update.json

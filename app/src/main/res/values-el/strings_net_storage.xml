@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="net_storage_ftps_mode_label">Λειτουργία FTPS</string>
+    <string name="net_storage_ftps_mode_explicit">Ρητό (AUTH TLS, συνήθως θύρα 21)</string>
+    <string name="net_storage_ftps_mode_implicit">Υπονοούμενο (TLS από τη σύνδεση, συνήθως θύρα 990)</string>
+    <string name="net_storage_webdav_scheme_label">Πρωτόκολλο</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS (κρυπτογραφημένο)</string>
+    <string name="net_storage_webdav_scheme_http">HTTP (χωρίς κρυπτογράφηση)</string>
+    <string name="net_storage_webdav_host_hint">Όνομα διακομιστή ή πλήρες URL όπως https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">Ο κωδικός σας θα σταλεί χωρίς κρυπτογράφηση. Χρησιμοποιήστε HTTPS εκτός αν αυτός ο διακομιστής βρίσκεται σε δίκτυο που εμπιστεύεστε πλήρως.</string>
+    <string name="net_storage_webdav_auth_note">Συνδεθείτε με όνομα χρήστη και κωδικό (HTTP Basic) ή με token εφαρμογής. Η πιστοποίηση Digest δεν υποστηρίζεται.</string>
+    <string name="net_storage_connect_timeout_label">Χρονικό όριο σύνδεσης (δευτερόλεπτα)</string>
+    <string name="net_storage_io_timeout_label">Χρονικό όριο μεταφοράς (δευτερόλεπτα)</string>
+    <string name="net_storage_tls_pin_label">Αποτύπωμα αξιόπιστου πιστοποιητικού (SHA-256)</string>
+    <string name="net_storage_tls_pin_hint">Προαιρετικό. Επικολλήστε το αποτύπωμα SHA-256 του πιστοποιητικού του διακομιστή για να εμπιστευτείτε ένα αυτο-υπογεγραμμένο πιστοποιητικό.</string>
+    <string name="net_storage_tls_pin_invalid">Το αποτύπωμα πρέπει να έχει 64 δεκαεξαδικούς χαρακτήρες.</string>
+    <string name="net_storage_ftps_session_reuse_hint">Ο διακομιστής απέρριψε την κρυπτογραφημένη σύνδεση δεδομένων. Αν απαιτεί επαναχρησιμοποίηση συνεδρίας TLS (για παράδειγμα vsftpd require_ssl_reuse), απενεργοποιήστε αυτήν την επιλογή στον διακομιστή.</string>
+
+</resources>

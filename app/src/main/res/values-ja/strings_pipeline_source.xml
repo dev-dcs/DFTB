@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup sources (core/pipeline/source): why a source cannot run, and what it had to leave out. -->
+<resources>
+
+    <!-- Source unavailable -->
+    <string name="pipeline_source_unavailable_root_required">バックアップのこの部分には Root モードが必要です。設定で動作モードを Root に切り替えてください。</string>
+    <string name="pipeline_source_unavailable_root_not_granted">Root モードが選択されていますが、現在スーパーユーザー権限が付与されていません。root マネージャーで DFTB に root を許可してから再試行してください。</string>
+    <string name="pipeline_source_unavailable_nothing_selected">プロファイルのこの部分にはバックアップ対象がありません。</string>
+    <string name="pipeline_source_unavailable_invalid_filter">このプロファイルのファイルフィルタが無効です。プロファイルを編集し、強調表示されたフィルタを修正してください。</string>
+    <string name="pipeline_source_unavailable_scan_failed">ファイルスキャンが完了しなかったため、ファイルを選択できませんでした。</string>
+
+    <!-- Source warnings (%1$s = partition, package, folder or count) -->
+    <string name="pipeline_source_warn_partition_unresolved">パーティション %1$s がこのデバイスで見つからない（または slot を特定できない）ため、スキップしました。</string>
+    <string name="pipeline_source_warn_partition_size_unknown">パーティション %1$s のサイズが不明なため、イメージの完全性を事前に確認できません。</string>
+    <string name="pipeline_source_warn_app_not_installed">%1$s はインストールされていない（または DFTB から見えない）ため、スキップしました。</string>
+    <string name="pipeline_source_warn_app_invalid_package">「%1$s」は有効なパッケージ名ではないため、スキップしました。</string>
+    <string name="pipeline_source_warn_app_component_unavailable">現在の動作モードでは %1$s を取得できないため、スキップしました。</string>
+    <string name="pipeline_source_warn_app_apk_unreadable">%1$s の APK ファイルを読み取れなかったため、スキップしました。</string>
+    <string name="pipeline_source_warn_files_truncated">一致したファイルが 1 回で処理できる数を超えたため、最初の %1$s 件のみ含まれます。</string>
+    <string name="pipeline_source_warn_files_root_blocked">現在のモードでは %1$s を読み取れないため、スキップしました。</string>
+    <string name="pipeline_source_warn_files_unreadable_entries">スキャン中に %1$s 件のファイルまたはフォルダを読み取れなかったため、含まれていません。</string>
+    <string name="pipeline_source_warn_nandroid_plan">%1$s は TWRP 互換バックアップに含められません（詳細を参照）。</string>
+    <string name="pipeline_source_warn_nandroid_inventory_partial">%1$s の一部の項目を一覧表示できませんでした。TWRP バックアップが不完全な可能性があります。</string>
+    <string name="pipeline_source_warn_nandroid_files_vanished">%1$s のアーカイブ中に一部のファイルが Android によって削除されました。これらは TWRP バックアップに含まれません。</string>
+    <string name="pipeline_source_warn_selinux_tar_unsupported">この Android バージョンの tar は %1$s アーカイブ内に SELinux ラベルを保存できないため、ラベルは別のリストに保存されます。</string>
+</resources>

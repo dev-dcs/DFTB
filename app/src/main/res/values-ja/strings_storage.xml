@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Storage layer (core/storage): user-facing explanations of StorageException.Reason and
+     free-space preflight outcomes. Technical detail strings stay in exception messages. -->
+<resources>
+
+    <!-- StorageException.Reason, mapped by StorageException.Reason.labelRes() -->
+    <string name="storage_reason_auth">サインインに失敗しました。ユーザー名、パスワード、または鍵を確認してください。</string>
+    <string name="storage_reason_host_key">サーバーの ID 鍵が変更されたか、信頼されていません。</string>
+    <string name="storage_reason_network">ネットワーク経由で保存先に到達できませんでした。</string>
+    <string name="storage_reason_timeout">保存先の応答に時間がかかりすぎました。</string>
+    <string name="storage_reason_not_found">保存先のフォルダまたはドライブが見つかりません。</string>
+    <string name="storage_reason_permission">アプリにこの保存先への書き込み権限がありません。</string>
+    <string name="storage_reason_no_space">保存先の空き容量が不足しています。</string>
+    <string name="storage_reason_unsupported">この保存先は要求された操作に対応していません。</string>
+    <string name="storage_reason_misconfigured">保存先の設定が不完全または無効です。</string>
+    <string name="storage_reason_tool_missing">必要なヘルパーツールがインストールされていません。</string>
+    <string name="storage_reason_protocol">保存先から予期しないエラーが返されました。もう一度お試しください。</string>
+
+    <!-- Free-space preflight (FreeSpaceVerifier) -->
+    <string name="storage_preflight_sufficient">空き容量は十分です（空き %1$s）。</string>
+    <string name="storage_preflight_insufficient">空き容量が不足しています。%1$s を空けてからもう一度お試しください。</string>
+    <string name="storage_preflight_unknown">この保存先の空き容量を確認できませんでした。</string>
+
+    <!-- Connection test (ConnectionTester) -->
+    <string name="storage_test_ok">%1$d ms で接続しました。</string>
+    <string name="storage_test_failed">接続に失敗しました。</string>
+
+</resources>

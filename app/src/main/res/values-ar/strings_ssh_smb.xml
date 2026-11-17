@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SFTP/SSH, SMB and NFS storage backends (core/storage/{ssh,smb,nfs}). These become
+     StorageException messages shown when a destination connection test or transfer fails.
+     Technical detail (server error text, fingerprints, paths) is passed in as format arguments. -->
+<resources>
+
+    <!-- Shared -->
+    <string name="storage_net_missing_host">لم يتم ضبط اسم مضيف للوجهة.</string>
+    <string name="storage_net_missing_credential">لا توجد بيانات اعتماد محفوظة للوجهة.</string>
+    <string name="storage_net_credential_not_found">تعذّر العثور على بيانات الاعتماد المحفوظة لهذه الوجهة.</string>
+    <string name="storage_net_credential_wrong_kind">نوع بيانات الاعتماد المحفوظ غير مدعوم في هذا البروتوكول.</string>
+    <string name="storage_net_missing_username">لم يتم ضبط اسم مستخدم للوجهة.</string>
+    <string name="storage_net_connect_failed">تعذّر الاتصال بـ %1$s: %2$s</string>
+    <string name="storage_net_op_failed">فشلت العملية عن بُعد (%1$s): %2$s</string>
+    <string name="storage_net_not_a_directory">\"%1$s\" ليس مجلدًا على الوجهة.</string>
+    <string name="storage_net_transfer_timeout">لم يبدأ النقل في الوقت المناسب (%1$s).</string>
+
+    <!-- SFTP / SSH -->
+    <string name="storage_ssh_auth_failed">رفض خادم SSH اسم المستخدم أو كلمة المرور أو المفتاح.</string>
+    <string name="storage_ssh_key_unreadable">تعذّرت قراءة المفتاح الخاص المحفوظ. تحقق من صيغة المفتاح وعبارة المرور.</string>
+    <string name="storage_ssh_host_key_changed">تغيّر مفتاح مضيف SSH لـ %1$s (الآن %2$s). تم رفض الاتصال لحماية بياناتك. إذا أُعيد تثبيت الخادم عمدًا، فانسَ مفتاحه المحفوظ ثم اتصل مجددًا.</string>
+    <string name="storage_ssh_no_shell">لا يوفّر خادم SSH خدمة SFTP ورفض الرجوع إلى أوامر shell.</string>
+
+    <!-- SMB -->
+    <string name="storage_smb_missing_share">لم يتم ضبط مشاركة. ضع اسم المشاركة كأول مجلد في المسار أو عيّن خيار المشاركة.</string>
+    <string name="storage_smb_not_disk_share">\"%1$s\" ليست مشاركة ملفات.</string>
+    <string name="storage_smb_encryption_unsupported">طُلب التشفير لكن الخادم لا يدعم تشفير SMB 3.</string>
+    <string name="storage_smb_auth_failed">رفض خادم SMB اسم المستخدم أو كلمة المرور.</string>
+
+    <!-- NFS -->
+    <string name="storage_nfs_requires_root">يتطلب NFS وضع Root: لا يستطيع Android تركيب مشاركات الشبكة للتطبيقات العادية. بدّل إلى وضع Root في الإعدادات لاستخدام هذه الوجهة.</string>
+    <string name="storage_nfs_root_unavailable">لم يتم منح صلاحية Root حاليًا، لذا لا يمكن تركيب مشاركة NFS.</string>
+    <string name="storage_nfs_kernel_unsupported">نواة هذا الجهاز لا تدعم عميل NFS، لذا لا يمكن تركيب مشاركات NFS.</string>
+    <string name="storage_nfs_missing_export">لم يتم ضبط مسار تصدير NFS (مثال: /srv/backups).</string>
+    <string name="storage_nfs_bad_options">تحتوي خيارات تركيب NFS على أحرف غير مدعومة.</string>
+    <string name="storage_nfs_mount_failed">فشل تركيب %1$s: %2$s</string>
+</resources>

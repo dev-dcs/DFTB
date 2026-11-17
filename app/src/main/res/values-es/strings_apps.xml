@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="apps_kind_user">App de usuario</string>
+    <string name="apps_kind_system">App del sistema</string>
+    <string name="apps_kind_updated_system">App del sistema actualizada</string>
+    <string name="apps_size_source_stats">Tamaños informados por las estadísticas de almacenamiento de Android</string>
+    <string name="apps_size_source_du">Tamaños medidos en disco</string>
+    <string name="apps_size_source_apk_only">Solo se conocen los tamaños de los APK</string>
+    <string name="apps_avail_available">Disponible</string>
+    <string name="apps_avail_needs_root">Requiere el modo Root</string>
+    <string name="apps_avail_shizuku_adb_private">Shizuku se ejecuta mediante ADB, que no puede leer los datos privados de las apps. Usa el modo Root o inicia Shizuku con root.</string>
+    <string name="apps_avail_needs_shizuku_or_root">Requiere Shizuku o el modo Root en Android 11 y posteriores</string>
+    <string name="apps_avail_needs_legacy_storage">Requiere el permiso de almacenamiento con acceso al almacenamiento heredado</string>
+    <string name="apps_avail_needs_install_all_files">Requiere \"Instalar apps desconocidas\" y \"Acceso a todos los archivos\" para DFTB, o Shizuku o el modo Root</string>
+    <string name="apps_avail_elevation_unavailable">El modo Shizuku o Root seleccionado no está disponible ahora mismo</string>
+    <string name="apps_warn_limited_visibility">DFTB no puede ver todas las apps instaladas en este dispositivo; la lista puede estar incompleta.</string>
+    <string name="apps_warn_usage_access">No se ha concedido el acceso de uso, así que solo se muestran los tamaños de los APK. Concédelo en Ajustes para ver el tamaño de los datos.</string>
+    <string name="apps_warn_list_failed">No se pudo leer la lista de apps instaladas.</string>
+    <string name="apps_warn_package_failed">No se pudieron leer los detalles de %1$s.</string>
+    <string name="apps_warn_stats_failed">No se pudieron leer las estadísticas de almacenamiento de %1$s.</string>
+    <string name="apps_warn_shell_unavailable">El shell de Shizuku o Root no está disponible; los tamaños vuelven a lo que informa Android.</string>
+    <string name="apps_warn_shell_failed">Falló la medición de los datos de las apps mediante el shell.</string>
+    <string name="apps_warn_data_unreadable">No se pudieron leer algunas carpetas de datos de %1$s.</string>
+    <string name="apps_flag_split">APK dividido</string>
+    <string name="apps_flag_obb">Tiene archivos OBB</string>
+    <string name="apps_flag_self">Esta es DFTB</string>
+    <string name="apps_flag_root_manager">Gestor de root: restaurar sus datos puede romper el root</string>
+    <string name="apps_flag_critical_system">Paquete esencial del sistema: restaurar sus datos puede dejar el dispositivo inestable</string>
+    <string name="apps_flag_no_allow_backup">El desarrollador ha desactivado las copias de seguridad</string>
+    <string name="apps_flag_debuggable">Compilación depurable</string>
+    <string name="apps_flag_apex">Módulo del sistema (APEX)</string>
+
+</resources>

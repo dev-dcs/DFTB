@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Destinations manager, destination editor, guided rclone setup and raw rclone.conf editor
+     (ui/destinations, ui/rclone). -->
+<resources>
+
+    <!-- Common -->
+    <string name="destinations_back">رجوع</string>
+    <string name="destinations_cancel">إلغاء</string>
+    <string name="destinations_more">خيارات إضافية</string>
+    <string name="destinations_expand">توسيع</string>
+    <string name="destinations_collapse">طيّ</string>
+    <string name="destinations_secret_show">إظهار</string>
+    <string name="destinations_secret_hide">إخفاء</string>
+
+    <!-- System overview entry point -->
+    <string name="destinations_entry_subtitle">أماكن تخزين النسخ الاحتياطية: المجلدات ومحركات USB والخوادم وحسابات السحابة.</string>
+    <string name="destinations_entry_open">إدارة الوجهات</string>
+
+    <!-- Destinations list -->
+    <string name="destinations_title">الوجهات</string>
+    <string name="destinations_add">إضافة وجهة</string>
+    <string name="destinations_empty">لا توجد وجهات بعد. أضف وجهة لاختيار مكان حفظ النسخ الاحتياطية.</string>
+    <string name="destinations_never_verified">لم يتم التحقق أبدًا</string>
+    <string name="destinations_last_verified">آخر تحقق: %1$s</string>
+    <string name="destinations_space">المتاح %1$s من %2$s</string>
+    <string name="destinations_space_free_only">المتاح %1$s</string>
+    <string name="destinations_test">اختبار</string>
+    <string name="destinations_edit">تعديل</string>
+    <string name="destinations_delete">حذف</string>
+    <string name="destinations_delete_title">حذف الوجهة؟</string>
+    <string name="destinations_delete_message">ستتم إزالة \"%1$s\" وكلمة المرور أو المفتاح المحفوظ من هذا الجهاز. لن يتم حذف النسخ الاحتياطية المخزنة هناك.</string>
+    <string name="destinations_deleted">تم حذف \"%1$s\".</string>
+    <string name="destinations_delete_failed">تعذّر حذف الوجهة.</string>
+
+    <!-- Editor: flow -->
+    <string name="destinations_add_title">إضافة وجهة</string>
+    <string name="destinations_edit_title">تعديل الوجهة</string>
+    <string name="destinations_not_found">هذه الوجهة لم تعد موجودة.</string>
+    <string name="destinations_pick_type">ما نوع الوجهة؟</string>
+    <string name="destinations_more_providers_title">Google Drive وOneDrive وDropbox وpCloud وغيرها</string>
+    <string name="destinations_more_providers_text">تتم موصلة مزودي السحابة عبر rclone. أعدّ وحدة تحكم عن بُعد (remote) أولًا ثم أضفها كوجهة rclone.</string>
+    <string name="destinations_fix_errors">أصلح الحقول المميّزة أولًا.</string>
+    <string name="destinations_test_connection">اختبار الاتصال</string>
+    <string name="destinations_save">حفظ</string>
+    <string name="destinations_error_save">تعذّر حفظ الوجهة.</string>
+    <string name="destinations_error_test">تعذّر بدء اختبار الاتصال.</string>
+    <string name="destinations_error_vault">مخزن بيانات الاعتماد الآمن غير متاح. لم يتم حفظ كلمة المرور أو المفتاح.</string>
+    <string name="destinations_error_tree_grant">تعذّر الاحتفاظ بإمكانية الوصول إلى هذا المجلد. اخترْه مرة أخرى.</string>
+    <string name="destinations_error_no_picker">لا تتوفر أداة اختيار مجلدات على هذا الجهاز.</string>
+
+    <!-- Editor: type descriptions -->
+    <string name="destinations_type_desc_local_internal">مجلد على هذا الجهاز يمكن للتطبيق الكتابة فيه مباشرة.</string>
+    <string name="destinations_type_desc_local_saf">أي مجلد تختاره: التخزين الداخلي أو بطاقة SD أو مزوّد مستندات.</string>
+    <string name="destinations_type_desc_usb_otg">مجلد على محرك USB متصل بهذا الجهاز.</string>
+    <string name="destinations_type_desc_ftp">FTP غير مشفر، للموجّهات وأجهزة NAS في شبكة موثوقة.</string>
+    <string name="destinations_type_desc_ftps">FTP عبر TLS (صريح أو ضمني).</string>
+    <string name="destinations_type_desc_sftp">SFTP على أي خادم SSH، بكلمة مرور أو مفتاح خاص.</string>
+    <string name="destinations_type_desc_ssh">خادم SSH؛ يستخدم SFTP عند توفره وإلا أوامر shell.</string>
+    <string name="destinations_type_desc_smb">مشاركة Windows أو Samba أو NAS (‏SMB 2/3).</string>
+    <string name="destinations_type_desc_webdav">خادم WebDAV مثل Nextcloud أو ownCloud أو NAS.</string>
+    <string name="destinations_type_desc_nfs">مشاركة NFS يركّبها النواة. تتطلب وضع Root.</string>
+    <string name="destinations_type_desc_rclone">وحدة تحكم عن بُعد مضبوطة في rclone: أي من أكثر من 50 مزود سحابة.</string>
+    <string name="destinations_type_desc_s3">Amazon S3 أو أي تخزين كائنات متوافق مع S3.</string>
+    <string name="destinations_type_desc_mega">حساب تخزين MEGA السحابي.</string>
+    <string name="destinations_type_desc_pcloud">pCloud، متصل عبر rclone remote.</string>
+
+    <!-- Editor: sections -->
+    <string name="destinations_section_folder">المجلد</string>
+    <string name="destinations_section_rclone">rclone remote</string>
+    <string name="destinations_section_location">الموقع</string>
+    <string name="destinations_section_credentials">تسجيل الدخول</string>
+    <string name="destinations_section_advanced">متقدم</string>
+    <string name="destinations_section_advanced_hint">إعدادات بروتوكول اختيارية. تناسب القيم الافتراضية معظم الخوادم.</string>
+
+    <!-- Editor: fields -->
+    <string name="destinations_field_name">الاسم</string>
+    <string name="destinations_field_host">الخادم</string>
+    <string name="destinations_field_server_url">عنوان الخادم أو URL</string>
+    <string name="destinations_field_port">المنفذ</string>
+    <string name="destinations_field_base_path">المجلد على الخادم</string>
+    <string name="destinations_field_local_path">مسار المجلد</string>
+    <string name="destinations_field_subfolder">مجلد فرعي (اختياري)</string>
+    <string name="destinations_field_smb_path">المشاركة والمجلد</string>
+    <string name="destinations_field_nfs_path">مسار التصدير</string>
+    <string name="destinations_field_bucket_path">الحاوية (bucket) والمجلد</string>
+    <string name="destinations_field_username">اسم المستخدم</string>
+    <string name="destinations_field_access_key_id">معرّف مفتاح الوصول</string>
+    <string name="destinations_field_email">البريد الإلكتروني</string>
+    <string name="destinations_field_password">كلمة المرور</string>
+    <string name="destinations_field_secret_access_key">مفتاح الوصول السري</string>
+    <string name="destinations_field_private_key">المفتاح الخاص</string>
+    <string name="destinations_field_passphrase">عبارة مرور المفتاح (اختياري)</string>
+    <string name="destinations_field_auth">تسجيل الدخول بواسطة</string>
+    <string name="destinations_field_remote_name">اسم الـ remote</string>
+    <string name="destinations_field_folder">المجلد</string>
+    <string name="destinations_field_usb_volume">محرك USB</string>
+    <string name="destinations_field_ftps_mode">وضع TLS</string>
+    <string name="destinations_field_connect_timeout">مهلة الاتصال (ثوانٍ)</string>
+    <string name="destinations_field_data_timeout">مهلة البيانات (ثوانٍ)</string>
+    <string name="destinations_field_io_timeout">مهلة القراءة/الكتابة (ثوانٍ)</string>
+    <string name="destinations_field_tls_pin">الشهادة المثبّتة (SHA-256)</string>
+    <string name="destinations_field_scheme">البروتوكول</string>
+    <string name="destinations_field_smb_share">اسم المشاركة</string>
+    <string name="destinations_field_smb_domain">النطاق / مجموعة العمل</string>
+    <string name="destinations_field_smb_encrypt">اشتراط التشفير</string>
+    <string name="destinations_field_smb_guest">وصول الضيف</string>
+    <string name="destinations_field_nfs_export">التصدير</string>
+    <string name="destinations_field_nfs_mount_options">خيارات التركيب</string>
+    <string name="destinations_field_s3_provider">المزوّد</string>
+    <string name="destinations_field_s3_region">المنطقة</string>
+    <string name="destinations_field_s3_endpoint">نقطة النهاية</string>
+
+    <!-- Editor: hints -->
+    <string name="destinations_hint_host">اسم المضيف أو عنوان IP، بدون البروتوكول أو المنفذ</string>
+    <string name="destinations_hint_webdav_url">مثال: https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="destinations_hint_port_default">اتركه فارغًا للقيمة الافتراضية (%1$d)</string>
+    <string name="destinations_hint_base_path">مثال: /backups/phone. الفراغ يعني المستوى الأعلى.</string>
+    <string name="destinations_hint_local_path">مسار مطلق. الفراغ يستخدم مجلد تخزين التطبيق نفسه.</string>
+    <string name="destinations_hint_subfolder">يُنشأ داخل المجلد المختار إن لم يكن موجودًا</string>
+    <string name="destinations_hint_smb_path">/share/folder، أو المجلد فقط إذا حُدّدت المشاركة ضمن «متقدم»</string>
+    <string name="destinations_hint_nfs_path">المسار المُصدَّر على الخادم، مثال: /srv/backups</string>
+    <string name="destinations_hint_bucket_path">bucket أو bucket/folder</string>
+    <string name="destinations_hint_timeout">من 1 إلى 3600؛ الفراغ يستخدم القيمة الافتراضية</string>
+    <string name="destinations_hint_tls_pin">64 رقمًا سداسيًا عشريًا. يثق بهذه الشهادة بالذات، مثل شهادة موقّعة ذاتيًا.</string>
+    <string name="destinations_hint_smb_share">عند تعيينه، يكون المسار أعلاه مجلدًا داخل هذه المشاركة</string>
+    <string name="destinations_hint_smb_encrypt">رفض الخوادم التي لا تستطيع تشفير الجلسة (SMB 3)</string>
+    <string name="destinations_hint_smb_guest">الاتصال كضيف عند عدم حفظ كلمة مرور</string>
+    <string name="destinations_hint_nfs_export">عند تعيينه، يكون المسار أعلاه مجلدًا داخل هذا التصدير</string>
+    <string name="destinations_hint_nfs_mount_options">تُدمج فوق vers=3,nolock,proto=tcp,soft,timeo=600</string>
+    <string name="destinations_hint_s3_provider">مثال: AWS وMinio وWasabi وCloudflare وOther</string>
+    <string name="destinations_hint_s3_region">مثال: us-east-1 (اختياري لمعظم الخدمات المتوافقة مع S3)</string>
+    <string name="destinations_hint_s3_endpoint">اتركه فارغًا لـ AWS. مثال: https://s3.example.com</string>
+    <string name="destinations_hint_private_key">الصق مفتاحًا خاصًا بصيغة OpenSSH أو PEM أو PuTTY</string>
+    <string name="destinations_secret_stored_hint">محفوظ بأمان. اتركه فارغًا للاحتفاظ به.</string>
+
+    <!-- Editor: auth methods -->
+    <string name="destinations_auth_none">بدون</string>
+    <string name="destinations_auth_password">كلمة المرور</string>
+    <string name="destinations_auth_private_key">المفتاح الخاص</string>
+    <string name="destinations_auth_none_hint">لا يُرسل أي اعتماد (وصول مجهول أو كضيف).</string>
+
+    <!-- Editor: choices -->
+    <string name="destinations_ftps_explicit">صريح (AUTH TLS)</string>
+    <string name="destinations_ftps_implicit">ضمني</string>
+    <string name="destinations_scheme_https">HTTPS</string>
+    <string name="destinations_scheme_http">HTTP (غير مشفر)</string>
+
+    <!-- Editor: folder / USB -->
+    <string name="destinations_no_folder">لم يتم اختيار مجلد.</string>
+    <string name="destinations_folder_selected">المحدد: %1$s</string>
+    <string name="destinations_choose_folder">اختيار مجلد</string>
+    <string name="destinations_usb_none">لا يوجد محرك USB متصل. وصّل واحدًا واضغط «تحديث».</string>
+    <string name="destinations_usb_refresh">تحديث</string>
+    <string name="destinations_usb_read_only">%1$s (للقراءة فقط)</string>
+    <string name="destinations_usb_not_connected">%1$s (غير متصل)</string>
+
+    <!-- Editor: rclone -->
+    <string name="destinations_rclone_no_remotes">لم يتم ضبط أي rclone remote بعد.</string>
+    <string name="destinations_rclone_unreadable">تعذّرت قراءة إعدادات rclone.</string>
+    <string name="destinations_rclone_new_remote">إعداد remote</string>
+
+    <!-- Editor: SSH host key -->
+    <string name="destinations_host_key_explain">قدّم الخادم مفتاح هوية مختلفًا عن المحفوظ عند أول اتصال. تابع فقط إذا كنت تعلم أن الخادم أُعيد تثبيته أو أُعيد توليد مفاتيحه.</string>
+    <string name="destinations_host_key_forget">نسيان مفتاح المضيف المحفوظ</string>
+    <string name="destinations_host_key_confirm">سيثق الاتصال التالي بـ %1$s بأي مفتاح يقدمه. هل تريد المتابعة؟</string>
+    <string name="destinations_host_key_forgotten">تمت إزالة مفتاح المضيف المحفوظ. اختبر الاتصال مرة أخرى.</string>
+    <string name="destinations_host_key_none">لم يُعثر على مفتاح مضيف محفوظ لهذا الخادم.</string>
+
+    <!-- Editor: validation errors -->
+    <string name="destinations_error_required">مطلوب</string>
+    <string name="destinations_error_too_long">طويل جدًا</string>
+    <string name="destinations_error_invalid_host">اسم مضيف أو عنوان IP غير صالح</string>
+    <string name="destinations_error_invalid_url">عنوان غير صالح</string>
+    <string name="destinations_error_invalid_port">يجب أن يكون المنفذ رقمًا من 1 إلى 65535</string>
+    <string name="destinations_error_path_traversal">يجب ألا يحتوي المسار على \"..\"</string>
+    <string name="destinations_error_path_not_absolute">يجب أن يبدأ المسار بـ /</string>
+    <string name="destinations_error_invalid_characters">يحتوي على أحرف غير مسموح بها هنا</string>
+    <string name="destinations_error_invalid_timeout">أدخل عدد ثوانٍ من 1 إلى 3600</string>
+    <string name="destinations_error_invalid_pin">يجب أن يكون 64 رقمًا سداسيًا عشريًا (يُسمح بالنقطتين)</string>
+    <string name="destinations_error_invalid_remote_name">أحرف وأرقام ومسافة و _ - . + @ فقط؛ ولا يجوز أن يبدأ بـ - أو مسافة</string>
+    <string name="destinations_error_unknown_remote">لا يوجد remote بهذا الاسم في rclone.conf</string>
+    <string name="destinations_error_invalid_key">لا يبدو هذا مفتاحًا خاصًا</string>
+    <string name="destinations_error_needs_share">أدخل /share/folder أو عيّن اسم المشاركة ضمن «متقدم»</string>
+    <string name="destinations_error_needs_export">أدخل المسار المُصدَّر بدءًا بـ /</string>
+    <string name="destinations_error_unsafe_mount_options">يُسمح فقط بالأحرف والأرقام و _ . : = , / + - [ ]</string>
+    <string name="destinations_error_volume_mismatch">هذا المجلد ليس على محرك USB المحدد</string>
+    <string name="destinations_error_invalid_email">عنوان بريد إلكتروني غير صالح</string>
+    <string name="destinations_error_needs_bucket">أدخل اسم الحاوية (bucket)</string>
+    <string name="destinations_error_invalid_choice">اختر إحدى القيم المعروضة</string>
+
+    <!-- rclone guided setup -->
+    <string name="rclone_setup_title">إعداد rclone</string>
+    <string name="rclone_setup_pick_provider">اختر مزوّدًا</string>
+    <string name="rclone_setup_tool_missing">rclone غير متاح على هذا الجهاز. لا يزال بإمكانك حفظ الـ remotes التي لا تحتاج ترميز كلمة المرور وتعديل rclone.conf، لكن الاتصالات ستفشل حتى يتم تثبيت rclone.</string>
+    <string name="rclone_setup_tool_ok">استخدام %1$s</string>
+    <string name="rclone_setup_existing_title">الـ remotes المضبوطة</string>
+    <string name="rclone_setup_existing_hint">لا تُعرض الأسرار هنا أبدًا.</string>
+    <string name="rclone_setup_use_remote">استخدام كوجهة</string>
+    <string name="rclone_setup_steps_title">الخطوات</string>
+    <string name="rclone_setup_step_number">%1$d.</string>
+    <string name="rclone_setup_authorize_label">الأمر المطلوب تشغيله على الحاسوب</string>
+    <string name="rclone_setup_copy">نسخ الأمر</string>
+    <string name="rclone_setup_fields_title">الإعدادات</string>
+    <string name="rclone_setup_name_hint">الاسم الذي يستخدمه DFTB وrclone لهذا الـ remote</string>
+    <string name="rclone_setup_name_taken">يوجد remote بهذا الاسم وسيتم استبداله</string>
+    <string name="rclone_setup_optional">%1$s (اختياري)</string>
+    <string name="rclone_setup_save">حفظ remote</string>
+    <string name="rclone_setup_saved">تم حفظ remote</string>
+    <string name="rclone_setup_fix_errors">أصلح الحقول المميّزة أولًا.</string>
+    <string name="rclone_setup_error_obscure_tool">يجب ترميز كلمة مرور هذا المزوّد بواسطة rclone وهو غير متاح. ثبّت rclone وحاول مرة أخرى.</string>
+    <string name="rclone_setup_error_not_number">أدخل رقمًا</string>
+    <string name="rclone_setup_error_token">الرمز الملصق غير صالح</string>
+    <string name="rclone_setup_error_need_one_of">املأ واحدًا منها على الأقل</string>
+    <string name="rclone_setup_error_unknown_field">إعداد غير معروف</string>
+    <string name="rclone_setup_warnings_title">تحذيرات</string>
+    <string name="rclone_setup_warning_no_refresh">لا يحتوي هذا الرمز على رمز تحديث، لذا سيتوقف الـ remote عن العمل عند انتهاء صلاحيته.</string>
+    <string name="rclone_setup_offer_destination">هل تريد إنشاء وجهة نسخ احتياطي تستخدم \"%1$s\" الآن؟</string>
+    <string name="rclone_setup_create_destination">إنشاء وجهة</string>
+    <string name="rclone_setup_not_now">ليس الآن</string>
+    <string name="rclone_setup_destination_for">وجهة rclone remote \"%1$s\"</string>
+    <string name="rclone_setup_create">إنشاء</string>
+
+    <!-- rclone token check -->
+    <string name="rclone_token_valid">يبدو الرمز صالحًا.</string>
+    <string name="rclone_token_expiry">انتهاء صلاحية رمز الوصول: %1$s</string>
+    <string name="rclone_token_empty">الصق الرمز أولًا.</string>
+    <string name="rclone_token_not_json">هذه ليست كتلة JSON التي يطبعها rclone authorize.</string>
+    <string name="rclone_token_missing_access">الرمز لا يحتوي على access_token.</string>
+    <string name="rclone_token_missing_type">الرمز لا يحتوي على token_type.</string>
+    <string name="rclone_token_bad_expiry">تعذّرت قراءة تاريخ انتهاء صلاحية الرمز.</string>
+
+    <!-- Raw rclone.conf editor -->
+    <string name="rclone_editor_title">تعديل rclone.conf</string>
+    <string name="rclone_editor_label">rclone.conf</string>
+    <string name="rclone_editor_placeholder">[myremote]\ntype = s3\n…</string>
+    <string name="rclone_editor_secrets_warning">تظهر كلمات المرور والرموز كنص واضح أثناء التعديل. لقطات الشاشة وتسجيل الشاشة محظوران في هذه الشاشة.</string>
+    <string name="rclone_editor_unsaved">تغييرات غير محفوظة</string>
+    <string name="rclone_editor_validate">تحقق</string>
+    <string name="rclone_editor_save">حفظ</string>
+    <string name="rclone_editor_restore">استرجاع النسخة السابقة</string>
+    <string name="rclone_editor_restore_message">هل تريد استبدال الإعدادات الحالية بالنسخة المحفوظة قبل آخر تغيير؟ ستفقد التعديلات غير المحفوظة.</string>
+    <string name="rclone_editor_restored">تم استرجاع النسخة السابقة.</string>
+    <string name="rclone_editor_no_previous">لا توجد نسخة سابقة للاسترجاع.</string>
+    <string name="rclone_editor_valid">لم يُعثر على أخطاء.</string>
+    <string name="rclone_editor_invalid">الإعدادات تحتوي على أخطاء ولم تُحفظ.</string>
+    <string name="rclone_editor_saved">تم حفظ rclone.conf.</string>
+    <string name="rclone_editor_load_failed">تعذّر تحميل إعدادات rclone من المخزن الآمن.</string>
+    <string name="rclone_editor_retry">إعادة المحاولة</string>
+    <string name="rclone_editor_no_issues">لم يُعثر على مشكلات.</string>
+    <string name="rclone_editor_issue_summary">الأخطاء: %1$d · التحذيرات: %2$d</string>
+    <string name="rclone_editor_issue_line">السطر %1$d: %2$s</string>
+    <string name="rclone_editor_error">خطأ</string>
+    <string name="rclone_editor_warning">تحذير</string>
+    <string name="rclone_editor_discard_title">تجاهل التغييرات؟</string>
+    <string name="rclone_editor_discard_message">لم يتم حفظ تعديلاتك على rclone.conf.</string>
+    <string name="rclone_editor_discard">تجاهل</string>
+    <string name="rclone_editor_keep_editing">متابعة التعديل</string>
+
+    <!-- rclone.conf issue codes (RcloneIniIssue.Code) -->
+    <string name="rclone_issue_malformed_line">ليس سطر [section] أو key = value أو تعليقًا</string>
+    <string name="rclone_issue_key_outside_section">يظهر الإعداد قبل أي [section]</string>
+    <string name="rclone_issue_invalid_section_name">اسم remote غير صالح</string>
+    <string name="rclone_issue_duplicate_section">تم تعريف هذا الـ remote مرتين</string>
+    <string name="rclone_issue_duplicate_key">يظهر هذا الإعداد مرتين في الـ remote</string>
+    <string name="rclone_issue_empty_key">الإعداد بلا اسم</string>
+    <string name="rclone_issue_missing_type">لا يحتوي remote على سطر type =</string>
+    <string name="rclone_issue_unknown_type">نوع واجهة خلفية غير معروف (لا مشكلة إن كان إصدار rclone لديك يدعمه)</string>
+
+</resources>

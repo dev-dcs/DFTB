@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Partition discovery (core/discovery/partition): categories, risk levels, views, scan
+     availability, scan warnings and target resolution failures. -->
+<resources>
+
+    <!-- Views -->
+    <string name="partition_view_standard">قياسي</string>
+    <string name="partition_view_standard_summary">الأقسام التي ينسخها معظم الناس: صور الإقلاع وبيانات الإقلاع الموثَّق والمودم وهوية الجهاز.</string>
+    <string name="partition_view_advanced">متقدم</string>
+    <string name="partition_view_advanced_summary">كل الأقسام على الجهاز بما فيها أقسام النظام المنطقية. راجع كل تسمية خطورة قبل الاختيار.</string>
+
+    <!-- Slots -->
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">بدون slot</string>
+    <string name="partition_slot_active_marker">نشط</string>
+
+    <!-- Categories -->
+    <string name="partition_category_boot_chain">سلسلة الإقلاع</string>
+    <string name="partition_category_firmware">البرنامج الثابت</string>
+    <string name="partition_category_modem">المودم</string>
+    <string name="partition_category_userdata">بيانات المستخدم</string>
+    <string name="partition_category_system_logical">النظام (منطقي)</string>
+    <string name="partition_category_persist_identity">هوية الجهاز والمعايرة</string>
+    <string name="partition_category_other">أخرى</string>
+
+    <!-- Risk -->
+    <string name="partition_risk_safe">آمن لإنشاء صورة منه</string>
+    <string name="partition_risk_huge">كبير جدًا</string>
+    <string name="partition_risk_huge_summary">هذا القسم بحجم عدة غيغابايت. تأكد من أن الوجهة تملك مساحة كافية.</string>
+    <string name="partition_risk_critical">فريد لهذا الجهاز</string>
+    <string name="partition_risk_critical_summary">يحتوي على بيانات هوية أو معايرة (IMEI والراديو والمفاتيح). احتفظ بهذه النسخة بأمان ولا تستعدها أبدًا على جهاز مختلف.</string>
+    <string name="partition_logical_badge">منطقي</string>
+
+    <!-- Unavailable -->
+    <string name="partition_unavailable_root_required">تتطلب نسخ الأقسام الاحتياطي وضع Root. بدّل إلى وضع Root في الإعدادات لمسح الأقسام.</string>
+    <string name="partition_unavailable_root_not_granted">لم يُمنح وصول Root حاليًا. امنح DFTB صلاحية المستخدم المتميز ثم أعد المسح.</string>
+    <string name="partition_unavailable_scan_failed">تعذّر تشغيل مسح الأقسام. حاول مرة أخرى.</string>
+    <string name="partition_unavailable_none_found">لم يُعثر على أي أقسام على هذا الجهاز.</string>
+
+    <!-- Warnings -->
+    <string name="partition_warning_no_by_name">لم يُعثر على دليل أقسام by-name؛ تُعرض الأقسام المنطقية فقط.</string>
+    <string name="partition_warning_by_name_conflict">تشير بعض أسماء الأقسام إلى أجهزة مختلفة في أدلة مختلفة: %1$s</string>
+    <string name="partition_warning_sizes_incomplete">تعذّرت قراءة حجم بعض الأقسام: %1$s</string>
+    <string name="partition_warning_active_slot_unknown">هذا جهاز A/B لكن تعذّر تحديد الـ slot النشط.</string>
+    <string name="partition_warning_dm_names_unavailable">يستخدم هذا الجهاز أقسامًا ديناميكية لكن تعذّرت قراءة أسمائها المنطقية.</string>
+    <string name="partition_warning_script_partial">أبلغ المسح عن أخطاء؛ قد تكون القائمة ناقصة.</string>
+    <string name="partition_warning_unresolved_links">تعذّر حل بعض روابط الأقسام: %1$s</string>
+
+    <!-- Resolution failures -->
+    <string name="partition_resolution_not_found">القسم %1$s غير موجود على هذا الجهاز.</string>
+    <string name="partition_resolution_active_slot_unknown">لا يمكن اختيار slot لـ %1$s لأن الـ slot النشط غير معروف.</string>
+    <string name="partition_resolution_slot_missing">الـ slot المطلوب لـ %1$s غير موجود على هذا الجهاز.</string>
+
+    <!-- Scan status -->
+    <string name="partition_scan_rescan">مسح مرة أخرى</string>
+</resources>

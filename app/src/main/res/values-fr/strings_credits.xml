@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Bundle kinds -->
+    <string name="bundle_kind_native_binary">Outils en ligne de commande intégrés</string>
+    <string name="bundle_kind_jvm_library">Bibliothèques</string>
+    <string name="bundle_kind_android_library">Bibliothèques Android</string>
+    <string name="bundle_kind_format_compatibility">Formats et projets compatibles</string>
+    <string name="bundle_kind_build_toolchain">Outils de compilation</string>
+
+    <!-- License names -->
+    <string name="license_apache_2_0_name">Licence Apache 2.0</string>
+    <string name="license_mit_name">Licence MIT</string>
+    <string name="license_gpl_2_0_only_name">Licence publique générale GNU v2.0 uniquement</string>
+    <string name="license_gpl_3_0_name">Licence publique générale GNU v3.0 ou ultérieure</string>
+    <string name="license_lgpl_2_1_name">Licence publique générale limitée GNU v2.1 ou ultérieure</string>
+    <string name="license_bsd_3_clause_name">Licence BSD 3-Clause</string>
+    <string name="license_zero_bsd_name">Licence BSD Zéro-Clause (0BSD)</string>
+    <string name="license_zlib_name">Licence zlib</string>
+    <string name="license_openssl_apache_2_0_name">Licence Apache 2.0 (OpenSSL 3.x)</string>
+    <string name="license_dual_bsd_gpl_name">BSD 3-Clause ou GNU GPL v2.0 (double licence)</string>
+    <string name="license_lgpl_2_1_with_unrar_restriction_name">GNU LGPL v2.1 avec restriction unRAR</string>
+    <string name="license_cc0_or_apache_2_0_name">CC0 1.0 ou Licence Apache 2.0 (double licence)</string>
+
+    <!-- Credit descriptions: native binaries -->
+    <string name="credit_rclone_desc">Programme en ligne de commande pour synchroniser des fichiers avec des dizaines de fournisseurs de stockage cloud et réseau. DFTB l\'exécute pour téléverser, télécharger et vérifier les sauvegardes sur des destinations distantes.</string>
+    <string name="credit_busybox_desc">Exécutable unique fournissant des centaines d\'utilitaires Unix. DFTB l\'utilise pour disposer d\'un jeu d\'outils shell cohérent en mode root, indépendamment des binaires du fabricant de l\'appareil.</string>
+    <string name="credit_zstd_desc">Algorithme et outil de compression sans perte rapide de Meta. Le format d\'archive par défaut de DFTB (.tar.zst) et les images de partitions compressées l\'utilisent.</string>
+    <string name="credit_xz_desc">Utilitaires de compression basés sur LZMA2 et la bibliothèque liblzma. DFTB utilise l\'outil xz pour les archives .tar.xz à fort taux et la compression d\'images .xz.</string>
+    <string name="credit_pigz_desc">Implémentation parallèle de gzip qui exploite chaque cœur de processeur. DFTB l\'utilise pour produire rapidement une sortie .gz standard sur les appareils multicœurs.</string>
+    <string name="credit_openssl_desc">Boîte à outils de cryptographie et TLS. DFTB invoque l\'outil openssl pour le chiffrement AES en flux des archives et la génération de sommes de contrôle en mode root.</string>
+    <string name="credit_gnu_tar_desc">L\'utilitaire d\'archivage GNU. DFTB l\'utilise pour créer et extraire des archives tar qui préservent la propriété, les permissions, les contextes SELinux et les attributs étendus.</string>
+    <string name="credit_rsync_desc">Outil de transfert de fichiers incrémentiel rapide. DFTB l\'utilise pour les sauvegardes miroir 1:1 et la synchronisation delta vers des destinations locales et SSH.</string>
+
+    <!-- Credit descriptions: Android libraries -->
+    <string name="credit_libsu_desc">Bibliothèque Android de topjohnwu pour exécuter des commandes dans un shell root et accéder aux fichiers en tant que root. Les niveaux root et module de DFTB reposent dessus.</string>
+    <string name="credit_shizuku_api_desc">Bibliothèque cliente du service Shizuku. DFTB l\'utilise pour exécuter des opérations de fichiers privilégiées avec des permissions de niveau ADB lorsque l\'utilisateur a activé Shizuku.</string>
+    <string name="credit_androidx_compose_desc">La boîte à outils d\'interface déclarative d\'Android. Chaque écran de DFTB est construit avec Compose et Material 3.</string>
+    <string name="credit_androidx_room_desc">Bibliothèque de persistance au-dessus de SQLite. DFTB stocke les profils de sauvegarde, l\'historique des tâches et les paramètres de destination dans une base de données Room.</string>
+    <string name="credit_androidx_work_desc">Planificateur de travaux en arrière-plan différables. DFTB l\'utilise pour exécuter des sauvegardes planifiées et soumises à des contraintes.</string>
+    <string name="credit_androidx_datastore_desc">Stockage clé-valeur typé et asynchrone. DFTB conserve les préférences de l\'application telles que la langue, le thème et le mode de fonctionnement dans DataStore.</string>
+    <string name="credit_androidx_navigation_desc">Framework de navigation pour Compose. DFTB utilise ses routes typées pour passer d\'un écran à l\'autre.</string>
+    <string name="credit_hilt_desc">Framework d\'injection de dépendances pour Android basé sur Dagger. DFTB l\'utilise pour câbler les dépôts, les moteurs et les view models.</string>
+    <string name="credit_material_components_desc">La bibliothèque de composants Material Design de Google et son système de thèmes. Le design visuel, les couleurs et les thèmes dynamiques de DFTB suivent Material 3.</string>
+    <string name="credit_material_symbols_desc">Le jeu d\'icônes open-source de Google. Toutes les icônes de DFTB sont des Material Symbols et Material Icons.</string>
+
+    <!-- Credit descriptions: JVM libraries -->
+    <string name="credit_kotlin_desc">Langage de programmation et bibliothèque standard de JetBrains. DFTB est entièrement écrit en Kotlin.</string>
+    <string name="credit_kotlinx_coroutines_desc">Bibliothèque de programmation asynchrone avec les coroutines Kotlin. DFTB l\'utilise pour tout le travail en arrière-plan et en flux.</string>
+    <string name="credit_kotlinx_serialization_desc">Bibliothèque de sérialisation multiplateforme. DFTB l\'utilise pour les manifestes de sauvegarde, les paramètres exportés et les routes de navigation typées.</string>
+    <string name="credit_commons_compress_desc">Bibliothèque Java pour les archives tar, zip, 7z, gzip, bzip2, xz et zstd. DFTB l\'utilise pour le moteur d\'archivage en Kotlin pur sur les appareils sans root.</string>
+    <string name="credit_commons_io_desc">Bibliothèque utilitaire pour les flux et les opérations de fichiers. DFTB l\'utilise pour une copie, un hachage et une gestion des fichiers temporaires robustes.</string>
+    <string name="credit_commons_net_desc">Implémentations clientes de protocoles réseau. DFTB l\'utilise pour les destinations FTP et FTPS.</string>
+    <string name="credit_xz_java_desc">Implémentation Java pure de la compression XZ et LZMA. DFTB l\'utilise pour lire et écrire des archives .xz sans outils natifs.</string>
+    <string name="credit_sshj_desc">Bibliothèque SSHv2 pour Java. DFTB l\'utilise pour les destinations SFTP et la diffusion de sauvegardes via SSH.</string>
+    <string name="credit_smbj_desc">Bibliothèque cliente SMB2 et SMB3. DFTB l\'utilise pour sauvegarder vers des partages Windows et des NAS.</string>
+    <string name="credit_okhttp_desc">Client HTTP pour la JVM et Android. DFTB l\'utilise pour les destinations WebDAV, S3 et autres destinations basées sur HTTP.</string>
+    <string name="credit_okio_desc">Bibliothèque d\'E/S efficace qui sous-tend OkHttp. DFTB utilise ses sources et puits tamponnés pour les pipelines en flux.</string>
+    <string name="credit_bouncycastle_desc">Fournisseur de cryptographie pour Java. DFTB l\'utilise pour le chiffrement OpenPGP et les algorithmes indisponibles dans la plateforme Android.</string>
+
+    <!-- Credit descriptions: compatible formats and projects -->
+    <string name="credit_seven_zip_desc">Archiveur de fichiers avec le format 7z, avec p7zip comme portage POSIX. DFTB lit et écrit des archives .7z compatibles avec 7-Zip ; l\'outil lui-même n\'est pas intégré.</string>
+    <string name="credit_shizuku_desc">Application de RikkaApps qui expose des API système avec des privilèges ADB ou root à d\'autres applications autorisées par l\'utilisateur. Le niveau Shizuku de DFTB s\'y connecte lorsqu\'elle est installée.</string>
+    <string name="credit_magisk_desc">Solution de root sans système pour Android. Le module compagnon de DFTB utilise le format de module Magisk et peut sauvegarder et restaurer les modules installés.</string>
+    <string name="credit_kernelsu_desc">Solution de root basée sur le noyau pour Android. Le module compagnon de DFTB est compatible avec le format de module de KernelSU.</string>
+    <string name="credit_apatch_desc">Solution de root par correctif de noyau pour Android. Le module compagnon de DFTB est compatible avec le format de module d\'APatch.</string>
+    <string name="credit_twrp_desc">Team Win Recovery Project, un recovery personnalisé pour Android. DFTB peut écrire des sauvegardes de partitions dans une disposition de type nandroid que TWRP peut restaurer.</string>
+    <string name="credit_orangefox_desc">Recovery personnalisé basé sur TWRP. Les sauvegardes de partitions de DFTB suivent une disposition compatible avec les restaurations OrangeFox.</string>
+    <string name="credit_blake3_desc">Fonction de hachage cryptographique rapide. DFTB embarque sa propre implémentation de la spécification BLAKE3 pour les fichiers de sommes de contrôle et la vérification.</string>
+
+    <!-- Credit descriptions: build toolchain -->
+    <string name="credit_ksp_desc">L\'API Kotlin Symbol Processing de Google. Utilisée au moment de la compilation pour générer le code Room et Hilt ; rien n\'en est inclus dans l\'application.</string>
+    <string name="credit_gradle_desc">Outil d\'automatisation de build et l\'Android Gradle Plugin. Utilisés pour compiler et empaqueter DFTB ; rien n\'en est inclus dans l\'application.</string>
+</resources>

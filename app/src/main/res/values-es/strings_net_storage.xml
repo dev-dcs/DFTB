@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="net_storage_ftps_mode_label">Modo FTPS</string>
+    <string name="net_storage_ftps_mode_explicit">Explícito (AUTH TLS, normalmente puerto 21)</string>
+    <string name="net_storage_ftps_mode_implicit">Implícito (TLS desde la conexión, normalmente puerto 990)</string>
+    <string name="net_storage_webdav_scheme_label">Protocolo</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS (cifrado)</string>
+    <string name="net_storage_webdav_scheme_http">HTTP (sin cifrar)</string>
+    <string name="net_storage_webdav_host_hint">Nombre del servidor o una URL completa como https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">Tu contraseña se enviará sin cifrar. Usa HTTPS a menos que este servidor esté en una red en la que confíes plenamente.</string>
+    <string name="net_storage_webdav_auth_note">Inicia sesión con usuario y contraseña (HTTP Basic) o con un token de aplicación. No se admite la autenticación Digest.</string>
+    <string name="net_storage_connect_timeout_label">Tiempo de espera de conexión (segundos)</string>
+    <string name="net_storage_io_timeout_label">Tiempo de espera de transferencia (segundos)</string>
+    <string name="net_storage_tls_pin_label">Huella del certificado de confianza (SHA-256)</string>
+    <string name="net_storage_tls_pin_hint">Opcional. Pega la huella SHA-256 del certificado del servidor para confiar en un certificado autofirmado.</string>
+    <string name="net_storage_tls_pin_invalid">La huella debe tener 64 caracteres hexadecimales.</string>
+    <string name="net_storage_ftps_session_reuse_hint">El servidor rechazó la conexión de datos cifrada. Si exige reutilizar la sesión TLS (por ejemplo vsftpd require_ssl_reuse), desactiva esa opción en el servidor.</string>
+
+</resources>

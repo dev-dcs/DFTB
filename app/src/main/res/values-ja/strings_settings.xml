@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">設定</string>
+    <string name="settings_back">戻る</string>
+    <string name="settings_cancel">キャンセル</string>
+    <string name="settings_ok">OK</string>
+    <string name="settings_retry">再試行</string>
+    <string name="settings_dismiss">閉じる</string>
+    <string name="settings_save_failed">設定を保存できませんでした。もう一度お試しください。</string>
+    <string name="settings_unknown_section">この設定ページ（\"%1$s\"）は存在しません。戻って、一覧からセクションを選択してください。</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">一般</string>
+    <string name="settings_category_backup">バックアップ</string>
+    <string name="settings_category_security">プライバシーとセキュリティ</string>
+    <string name="settings_category_system">システム</string>
+    <string name="settings_category_about">情報</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">言語</string>
+    <string name="settings_language_summary">アプリの言語</string>
+    <string name="settings_appearance_title">外観</string>
+    <string name="settings_appearance_summary">テーマと色</string>
+    <string name="settings_mode_title">動作モード</string>
+    <string name="settings_mode_summary">標準、Shizuku、root、またはコンパニオンモジュール</string>
+    <string name="settings_defaults_title">バックアップの既定値</string>
+    <string name="settings_defaults_summary">新規プロファイルの形式、圧縮、チェックサム、保存先</string>
+    <string name="settings_security_title">セキュリティ</string>
+    <string name="settings_security_summary">暗号化キー、SSH ホストキー、rclone リモート</string>
+    <string name="settings_notifications_title">通知</string>
+    <string name="settings_notifications_summary">権限と通知チャンネル</string>
+    <string name="settings_storage_title">ストレージとログ</string>
+    <string name="settings_storage_summary">一時ファイルと診断ログのエクスポート</string>
+    <string name="settings_about_title">情報</string>
+    <string name="settings_about_summary">バージョン、ライセンス、ソースコード</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">現在の言語</string>
+    <string name="settings_language_current">%1$s（%2$s）</string>
+    <string name="settings_language_rtl_active">この言語では右から左へのレイアウトが有効です。</string>
+    <string name="settings_language_scope_note">アプリを再起動せずに、すべての画面と通知に即座に反映されます。</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">「システム」はデバイスのダークテーマ設定に従います。</string>
+    <string name="settings_appearance_color_title">色</string>
+    <string name="settings_appearance_dynamic_hint">DFTB のパレットの代わりに、壁紙の色を使用します。</string>
+    <string name="settings_appearance_preview_title">プレビュー</string>
+    <string name="settings_appearance_preview_subtitle">この設定でのアプリの見た目を、ライトとダークで確認できます。</string>
+    <string name="settings_appearance_preview_button">今すぐバックアップ</string>
+    <string name="settings_appearance_preview_in_use">使用中</string>
+    <string name="settings_appearance_preview_cd">%1$s テーマのプレビュー</string>
+    <string name="settings_appearance_preview_active_cd">%1$s テーマのプレビュー（現在使用中）</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">未設定</string>
+    <string name="settings_mode_current_title">現在のモード</string>
+    <string name="settings_mode_current_badge">現在のモード</string>
+    <string name="settings_mode_selected_cd">確認対象として選択中</string>
+    <string name="settings_mode_pick_hint">モードを選択すると、このデバイスがそのモードに対応しているか確認します。切り替えは、必須チェックにすべて合格した場合のみ可能です。</string>
+    <string name="settings_mode_jobs_running_title">ジョブを実行中です</string>
+    <string name="settings_mode_jobs_running_body">バックアップまたは復元の実行中は、動作モードを変更できません。実行中のジョブが使用しているコマンドにアクセスできなくなるためです。完了するまで待つか、先にキャンセルしてください。</string>
+    <string name="settings_mode_readiness">%1$s：%2$s</string>
+    <string name="settings_mode_switch_to">%1$s に切り替え</string>
+    <string name="settings_mode_reason_same">これは現在のモードです。</string>
+    <string name="settings_mode_reason_no_diagnostics">このモードのチェックが完了するまでお待ちください。</string>
+    <string name="settings_mode_reason_unavailable">必須チェックに失敗したため、このモードはまだ使用できません。上の項目を修正してから、チェックを再実行してください。</string>
+    <string name="settings_mode_blocked_jobs">バックアップまたは復元の実行中は利用できません。</string>
+    <string name="settings_mode_confirm_title">%1$s に切り替えますか？</string>
+    <string name="settings_mode_confirm_message">DFTB のモードを %1$s から %2$s に変更します。変更内容は次のとおりです。</string>
+    <string name="settings_mode_confirm_action">モードを切り替え</string>
+    <string name="settings_mode_changed">動作モードを %1$s に変更しました。</string>
+    <string name="settings_mode_effect_immediate">今後の新規バックアップ、復元、スケジュール実行は新しいモードを使用します。プロファイル、保存先、既存のバックアップは変更されません。</string>
+    <string name="settings_mode_effect_loses_partitions">パーティションイメージ、TWRP 形式のバックアップ、パーティションの復元には root が必要なため、実行できなくなります。</string>
+    <string name="settings_mode_effect_loses_app_data">アプリのプライベートデータと Android/data フォルダーの読み取りや復元ができなくなります。これらを含むプロファイルでは、該当項目がスキップされるか失敗します。</string>
+    <string name="settings_mode_effect_needs_shizuku">すべてのバックアップで Shizuku が実行中である必要があります。Shizuku は再起動のたびに停止し、再度起動しない限り、実行されていない間はスケジュールされたバックアップが失敗します。</string>
+    <string name="settings_mode_effect_root_prompts">root 管理アプリから、DFTB にスーパーユーザー権限を付与するよう求められます。スケジュールされたバックアップを無人で実行できるよう、永続的に許可してください。</string>
+    <string name="settings_mode_effect_module_needed">システム全体のツールと起動時サービスのため、コンパニオンモジュールを root 管理アプリにインストールし、有効にしたままにしておく必要があります。</string>
+    <string name="settings_mode_effect_module_left">コンパニオンモジュールは、root 管理アプリで削除するまでインストールされたままになります。DFTB は、再起動時再開ジャーナルのモジュールへのミラーリングを停止します。</string>
+    <string name="settings_mode_effect_degraded">このモードのチェックの一部で警告または失敗が発生しました。修正するまで、それらに依存する機能が動作しない場合があります。</string>
+    <string name="settings_mode_shizuku_title">Shizuku アクセス</string>
+    <string name="settings_mode_shizuku_subtitle">Shizuku に DFTB の認可を要求します。Shizuku サービスが実行中である必要があります。</string>
+    <string name="settings_mode_shizuku_granted">Shizuku アクセスが許可されました。</string>
+    <string name="settings_mode_discovery_title">ディスカバリー</string>
+    <string name="settings_mode_discovery_subtitle">このモードで、このデバイスのどのパーティション、アプリ、フォルダーにアクセスできるかを確認します。</string>
+    <string name="settings_mode_discovery_open">ディスカバリーを開く</string>
+    <string name="settings_mode_module_tools_note">rclone と BusyBox はこのビルドにはまだ同梱されていないため、現時点で作成したモジュールには、このデバイスのビルドに含まれるツールのみが入ります。結果には、含まれたものと不足しているものが正確に一覧表示されます。</string>
+    <string name="settings_mode_module_saved_as">%1$s として保存しました</string>
+    <string name="settings_mode_module_build_failed">モジュールファイルを作成できませんでした。理由は下の技術的な詳細をご確認ください。</string>
+    <string name="settings_mode_module_write_failed">選択した場所にモジュールを書き込めませんでした。別のフォルダーを選択して、もう一度お試しください。</string>
+    <string name="settings_mode_module_details">技術的な詳細</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">新規のバックアッププロファイルは、この設定で開始されます。既存のプロファイルは、それぞれの設定を保持します。</string>
+    <string name="settings_defaults_issues_title">無効になった既定値があります</string>
+    <string name="settings_defaults_issue_format">保存されている形式はアーカイブ形式ではないため、プロファイルの既定値にできません。</string>
+    <string name="settings_defaults_issue_level">保存されている圧縮レベルが、選択した形式の範囲外です。</string>
+    <string name="settings_defaults_issue_destination">既定の保存先が削除されました。別の保存先を選択するまで、新規プロファイルでは保存先を確認します。</string>
+    <string name="settings_defaults_repair">自動修正</string>
+    <string name="settings_defaults_repaired">既定値を修正しました。</string>
+    <string name="settings_defaults_extension">ファイル拡張子：%1$s</string>
+    <string name="settings_defaults_7z_staging">7z は、アップロード前にアーカイブ全体をローカルの一時ストレージに作成するため、このデバイスにアーカイブ全体分の空き容量が必要です。</string>
+    <string name="settings_defaults_level_not_applicable">%1$s は圧縮を行わないため、選択できるレベルはありません。</string>
+    <string name="settings_defaults_level_range">この形式で指定できるレベル：%1$d～%2$d</string>
+    <string name="settings_defaults_checksum_hint">すべてのアーティファクトを、書き込み後および復元前に検証するために使用します。</string>
+    <string name="settings_defaults_destination_title">既定の保存先</string>
+    <string name="settings_defaults_destination_subtitle">別途選択しない限り、新規プロファイルがバックアップを送信する保存先です。</string>
+    <string name="settings_defaults_destination_ask">毎回確認</string>
+    <string name="settings_defaults_destination_ask_hint">新規プロファイルごとに保存先を確認します。</string>
+    <string name="settings_defaults_destination_none">保存先がまだ設定されていません。保存先画面から追加してください。</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">暗号化キー</string>
+    <string name="settings_security_keys_subtitle">このデバイスのセキュアな保管庫に保存されたランダムなキーです。デバイス外に出ることはなく、バックアップにも含まれません。</string>
+    <string name="settings_security_keys_empty">保存されている暗号化キーはありません。</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="other">%1$d 個のキー</item>
+    </plurals>
+    <string name="settings_security_key_created">%1$s に作成</string>
+    <string name="settings_security_key_unused">どのプロファイルでも使用されていません</string>
+    <string name="settings_security_key_used_by">使用中のプロファイル：%1$s</string>
+    <string name="settings_security_key_delete_cd">キーを削除</string>
+    <string name="settings_security_key_delete_blocked_cd">キーを削除（プロファイルが使用中のため利用できません）</string>
+    <string name="settings_security_key_delete_title">この暗号化キーを削除しますか？</string>
+    <string name="settings_security_key_delete_message">キー %1$s を保管庫から完全に消去します。</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">このキーで暗号化されたバックアップは、どの保存先にあるものも含め、完全に復旧できなくなります。</string>
+    <string name="settings_security_key_delete_consequence_no_copy">他にコピーはありません。キーはこのデバイスの保管庫にのみ存在し、DFTB の開発者を含め、誰も再作成できません。</string>
+    <string name="settings_security_key_delete_consequence_restore">これらのバックアップの復元や検証は、以後失敗します。</string>
+    <string name="settings_security_key_delete_ack">このキーで暗号化されたバックアップが永久に失われることを理解しました。</string>
+    <string name="settings_security_key_delete_confirm">キーを完全に削除</string>
+    <string name="settings_security_key_deleted">暗号化キーを削除しました。</string>
+    <string name="settings_security_key_already_gone">このキーはすでに保管庫から削除されています。</string>
+    <string name="settings_security_key_delete_failed">キーを削除できませんでした。何も変更されていません。</string>
+    <string name="settings_security_key_in_use">削除しませんでした：このキーは %1$s で使用中です。先にそれらのプロファイルを変更してください。</string>
+    <string name="settings_security_key_in_use_title">キーは使用中です</string>
+    <string name="settings_security_key_in_use_message">これらのプロファイルが使用している間は、このキーを削除できません。先にプロファイルを編集して別のキーを使用するか、プロファイルを削除してください。</string>
+    <string name="settings_security_vault_key_gone">保管庫のデバイスキーが利用できなくなったため、このデバイスでは保存されたシークレットを読み取れません。</string>
+    <string name="settings_security_vault_keystore">Android のセキュアキーストアが現在利用できません。</string>
+    <string name="settings_security_vault_unreadable">保管庫を読み取れませんでした。</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">信頼済みの SSH サーバー</string>
+    <string name="settings_security_hosts_subtitle">DFTB が各 SFTP または SSH サーバーに初めて接続したときに固定されたホストキーです。</string>
+    <string name="settings_security_hosts_empty">まだ接続した SSH サーバーはありません。</string>
+    <string name="settings_security_hosts_unreadable">信頼済みサーバーのファイルが読み取れないか、破損しています。なりすましサーバーから保護するため、修正されるまで SSH 接続は拒否されます。</string>
+    <string name="settings_security_hosts_tofu_note">異なるキーを提示するサーバーは常に拒否されます。キーが意図的に変更されたことが確実な場合にのみ、サーバーを削除してください。</string>
+    <string name="settings_security_host_forget">削除</string>
+    <string name="settings_security_host_forget_title">このサーバーのキーを削除しますか？</string>
+    <string name="settings_security_host_forget_message">%1$s の固定済みキーを削除します。</string>
+    <string name="settings_security_host_forget_consequence_repin">次回の接続では、サーバーが提示するキーをそのまま信頼し、再び固定します。</string>
+    <string name="settings_security_host_forget_consequence_verify">その時点で誰かがサーバーになりすましていると、DFTB はその相手を信頼してしまいます。新しいフィンガープリントは、サーバーの管理者に確認してください。</string>
+    <string name="settings_security_host_forget_confirm">キーを削除</string>
+    <string name="settings_security_host_forgotten">%1$s のキーを削除しました。</string>
+    <string name="settings_security_host_already_gone">そのサーバーはすでに一覧にありません。</string>
+    <string name="settings_security_host_unparsable">サーバーアドレスの形式が正しくないため、このエントリはここから削除できません。</string>
+    <string name="settings_security_hosts_write_failed">信頼済みサーバーのファイルを更新できませんでした。何も変更されていません。</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">rclone リモート</string>
+    <string name="settings_security_rclone_subtitle">クラウドリモートの定義は、暗号化されて保管庫に保存されます。</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">通知へのアクセス</string>
+    <string name="settings_notifications_permission_not_required">このバージョンの Android では、通知の権限は要求されません。</string>
+    <string name="settings_notifications_permission_granted">通知の権限が許可されています。</string>
+    <string name="settings_notifications_permission_denied">通知の権限が拒否されています。ジョブの進行状況や失敗のアラートは表示されません。</string>
+    <string name="settings_notifications_app_enabled">DFTB の通知はオンです。</string>
+    <string name="settings_notifications_app_disabled">システム設定で DFTB の通知がオフになっています。</string>
+    <string name="settings_notifications_open_settings">通知設定を開く</string>
+    <string name="settings_notifications_channels_title">カテゴリ</string>
+    <string name="settings_notifications_channels_subtitle">各カテゴリは、システム設定で個別にミュートできます。</string>
+    <string name="settings_notifications_channel_on">オン</string>
+    <string name="settings_notifications_channel_blocked">ブロック中</string>
+    <string name="settings_notifications_channel_missing">未作成</string>
+    <string name="settings_notifications_channel_open">設定</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">一時ファイル</string>
+    <string name="settings_storage_cache_subtitle">バックアップの作成や読み取り中に DFTB がこのデバイスで使用する容量です。</string>
+    <string name="settings_storage_staging">アーカイブのステージング</string>
+    <string name="settings_storage_other_cache">その他の一時ファイル</string>
+    <string name="settings_storage_total_cache">合計</string>
+    <string name="settings_storage_staging_hint">ステージングには、作成中の 7z アーカイブやサイズ不明のストリームが保持されます。中断されたジョブの残骸は安全に消去できます。</string>
+    <string name="settings_storage_clear_staging">ステージングを消去</string>
+    <string name="settings_storage_clear_all">すべての一時ファイルを消去</string>
+    <string name="settings_storage_recalculate">再計算</string>
+    <string name="settings_storage_clear_blocked">バックアップまたは復元の実行中は、一時ファイルを消去できません。</string>
+    <string name="settings_storage_clear_staging_title">アーカイブのステージングを消去しますか？</string>
+    <string name="settings_storage_clear_all_title">すべての一時ファイルを消去しますか？</string>
+    <string name="settings_storage_clear_staging_consequence">中断されたジョブが残した、作成途中のアーカイブとスプールファイルが削除されます。</string>
+    <string name="settings_storage_clear_all_consequence">DFTB のキャッシュがすべて削除されます。ステージング、スプールファイル、以前に共有したログファイルが対象です。</string>
+    <string name="settings_storage_clear_backups_safe">保存先にあるバックアップ、プロファイル、設定には影響しません。</string>
+    <string name="settings_storage_clear_confirm">消去</string>
+    <string name="settings_storage_cleared">一時ファイルを消去しました。</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="other">一時ファイルを消去しました。%1$s 件は削除できませんでした（root ヘルパーに属している可能性があります）。</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">一時ファイルを消去できませんでした。</string>
+    <string name="settings_storage_log_title">診断ログ</string>
+    <string name="settings_storage_log_subtitle">アプリの起動以降、メモリ内に記録された最近のアクティビティです。バグ報告に役立ちます。</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="other">%1$d 行を記録済み</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">ログには、ファイルパス、保存先の名前、サーバーアドレスが含まれる場合があります。DFTB はパスワード、キー、トークンを記録しない設計です。公開して共有する前に内容を確認してください。</string>
+    <string name="settings_storage_log_share">共有</string>
+    <string name="settings_storage_log_save">ファイルに保存</string>
+    <string name="settings_storage_log_share_title">DFTB ログを共有</string>
+    <string name="settings_storage_log_saved">ログを保存しました。</string>
+    <string name="settings_storage_log_export_failed">ログをエクスポートできませんでした。</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">オープンソースで、ユーザーが許可する Android バックアップ。</string>
+    <string name="settings_about_version_value">%1$s（%2$d）</string>
+    <string name="settings_about_sources_title">クレジット掲載プロジェクトのソースコード</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="other">%1$d 件のプロジェクト</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">%1$s のソースリポジトリを開く</string>
+    <string name="settings_storage_measure_failed">キャッシュサイズを測定できませんでした。</string>
+    <string name="settings_storage_measure_retry">再試行</string>
+</resources>

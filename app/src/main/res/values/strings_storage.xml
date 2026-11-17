@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Storage layer (core/storage): user-facing explanations of StorageException.Reason and
+     free-space preflight outcomes. Technical detail strings stay in exception messages. -->
+<resources>
+
+    <!-- StorageException.Reason, mapped by StorageException.Reason.labelRes() -->
+    <string name="storage_reason_auth">Sign-in failed. Check the username, password or key.</string>
+    <string name="storage_reason_host_key">The server\'s identity key changed or is not trusted.</string>
+    <string name="storage_reason_network">The destination could not be reached over the network.</string>
+    <string name="storage_reason_timeout">The destination took too long to respond.</string>
+    <string name="storage_reason_not_found">The destination folder or drive was not found.</string>
+    <string name="storage_reason_permission">The app is not allowed to write to this destination.</string>
+    <string name="storage_reason_no_space">The destination is out of space.</string>
+    <string name="storage_reason_unsupported">This destination does not support the requested operation.</string>
+    <string name="storage_reason_misconfigured">The destination settings are incomplete or invalid.</string>
+    <string name="storage_reason_tool_missing">A required helper tool is not installed.</string>
+    <string name="storage_reason_protocol">The destination returned an unexpected error. Try again.</string>
+
+    <!-- Free-space preflight (FreeSpaceVerifier) -->
+    <string name="storage_preflight_sufficient">Enough free space (%1$s available).</string>
+    <string name="storage_preflight_insufficient">Not enough free space. Free up %1$s and try again.</string>
+    <string name="storage_preflight_unknown">Free space could not be checked for this destination.</string>
+
+    <!-- Connection test (ConnectionTester) -->
+    <string name="storage_test_ok">Connected in %1$d ms.</string>
+    <string name="storage_test_failed">Connection failed.</string>
+
+</resources>

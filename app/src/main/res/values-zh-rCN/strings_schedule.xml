@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for scheduled backups, the background backup worker, checkpoint resume
+  and retention. Kept in their own file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Foreground notification of the backup worker -->
+    <string name="schedule_fg_title">正在备份 %1$s</string>
+    <string name="schedule_fg_text_scheduled">计划备份进行中</string>
+    <string name="schedule_fg_text_manual">备份进行中</string>
+    <string name="schedule_fg_text_resume">正在继续被中断的备份</string>
+
+    <!-- Unattended runs that need the user -->
+    <string name="schedule_passphrase_title">“%1$s”需要口令</string>
+    <string name="schedule_passphrase_text">此备份使用 DFTB 不会保存的口令加密，因此无法无人值守运行。请打开 DFTB 输入口令并继续。</string>
+    <string name="schedule_failed_title">“%1$s”的计划备份失败</string>
+    <string name="schedule_failed_text_generic">无法运行备份。请打开 DFTB 查看详情。</string>
+
+    <!-- Interrupted jobs found after a reboot -->
+    <string name="schedule_restore_interrupted_title">恢复被中断</string>
+    <string name="schedule_restore_interrupted_text">恢复在完成前停止了。恢复绝不会自动重新开始；请打开 DFTB 再次运行。</string>
+    <string name="schedule_job_interrupted_title">%1$s 已中断</string>
+    <string name="schedule_job_interrupted_text">此任务在完成前停止了。请打开 DFTB 再次运行。</string>
+</resources>

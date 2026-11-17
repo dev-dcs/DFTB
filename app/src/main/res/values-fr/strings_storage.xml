@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="storage_reason_auth">Échec de la connexion. Vérifiez le nom d\'utilisateur, le mot de passe ou la clé.</string>
+    <string name="storage_reason_host_key">La clé d\'identité du serveur a changé ou n\'est pas approuvée.</string>
+    <string name="storage_reason_network">Impossible d\'atteindre la destination via le réseau.</string>
+    <string name="storage_reason_timeout">La destination a mis trop de temps à répondre.</string>
+    <string name="storage_reason_not_found">Le dossier ou le disque de destination est introuvable.</string>
+    <string name="storage_reason_permission">L\'application n\'a pas le droit d\'écrire dans cette destination.</string>
+    <string name="storage_reason_no_space">La destination n\'a plus d\'espace.</string>
+    <string name="storage_reason_unsupported">Cette destination ne prend pas en charge l\'opération demandée.</string>
+    <string name="storage_reason_misconfigured">Les paramètres de la destination sont incomplets ou non valides.</string>
+    <string name="storage_reason_tool_missing">Un outil auxiliaire requis n\'est pas installé.</string>
+    <string name="storage_reason_protocol">La destination a renvoyé une erreur inattendue. Réessayez.</string>
+    <string name="storage_preflight_sufficient">Espace libre suffisant (%1$s disponibles).</string>
+    <string name="storage_preflight_insufficient">Espace libre insuffisant. Libérez %1$s et réessayez.</string>
+    <string name="storage_preflight_unknown">Impossible de vérifier l\'espace libre de cette destination.</string>
+    <string name="storage_test_ok">Connecté en %1$d ms.</string>
+    <string name="storage_test_failed">Échec de la connexion.</string>
+
+</resources>

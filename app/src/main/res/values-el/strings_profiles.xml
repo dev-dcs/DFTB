@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings of the backup profiles feature (ui/profiles): profiles list, the six-step
+  profile wizard, the schedules & retention overview, and the passphrase prompt. Kept in their own
+  file per project convention (never strings.xml).
+-->
+<resources>
+    <!-- Common -->
+    <string name="profiles_cancel">Ακύρωση</string>
+    <string name="profiles_ok">OK</string>
+    <string name="profiles_done">Τέλος</string>
+    <string name="profiles_back">Πίσω</string>
+    <string name="profiles_yes">Ναι</string>
+    <string name="profiles_no">Όχι</string>
+    <string name="profiles_unknown_error">Άγνωστο σφάλμα</string>
+    <string name="profiles_cd_error">Σφάλμα</string>
+    <string name="profiles_cd_warning">Προειδοποίηση</string>
+    <string name="profiles_cd_unavailable">Μη διαθέσιμο στην τρέχουσα λειτουργία</string>
+    <string name="profiles_cd_step_done">Ολοκληρώθηκε</string>
+    <string name="profiles_cd_step_errors">Έχει προβλήματα προς διόρθωση</string>
+    <string name="profiles_cd_step_todo">Δεν έχει ολοκληρωθεί ακόμη</string>
+
+    <!-- Profiles list -->
+    <string name="profiles_title">Προφίλ αντιγράφων ασφαλείας</string>
+    <string name="profiles_open_schedules">Χρονοπρογραμματισμοί και διατήρηση</string>
+    <string name="profiles_new">Νέο προφίλ</string>
+    <string name="profiles_empty_title">Δεν υπάρχουν ακόμη προφίλ αντιγράφων ασφαλείας</string>
+    <string name="profiles_empty_body">Ένα προφίλ ορίζει τι θα αντιγραφεί, πού θα αποθηκευτεί και πότε. Πατήστε “Νέο προφίλ” για να δημιουργήσετε το πρώτο σας.</string>
+    <string name="profiles_more_actions">Περισσότερες ενέργειες για το %1$s</string>
+    <string name="profiles_action_edit">Επεξεργασία</string>
+    <string name="profiles_action_duplicate">Διπλασιασμός</string>
+    <string name="profiles_action_delete">Διαγραφή</string>
+    <string name="profiles_action_run_now">Δημιουργία αντιγράφου τώρα</string>
+    <string name="profiles_action_view_progress">Προβολή προόδου</string>
+    <string name="profiles_badge_encrypted">Κρυπτογραφημένο</string>
+    <string name="profiles_badge_twrp">Συμβατό με TWRP</string>
+    <string name="profiles_badge_paused">Σε παύση</string>
+    <string name="profiles_badge_needs_passphrase">Απαιτείται φράση πρόσβασης</string>
+    <string name="profiles_hint_scheduled_passphrase">Οι προγραμματισμένες εκτελέσεις αυτού του προφίλ περιμένουν να πληκτρολογήσετε τη φράση πρόσβασής του.</string>
+    <string name="profiles_resume_available">Ένα διακοπέν αντίγραφο ασφαλείας μπορεί να συνεχιστεί από το σημείο που σταμάτησε.</string>
+    <string name="profiles_resume_needs_passphrase">Ένα διακοπέν αντίγραφο ασφαλείας μπορεί να συνεχιστεί από το σημείο που σταμάτησε μόλις εισαγάγετε τη φράση πρόσβασής του.</string>
+    <string name="profiles_resume_action">Συνέχιση</string>
+    <string name="profiles_no_destination">Δεν έχει επιλεγεί προορισμός</string>
+    <string name="profiles_next_run">Επόμενη εκτέλεση: %1$s</string>
+    <string name="profiles_last_run">Τελευταίο αντίγραφο: %1$s, %2$s</string>
+    <string name="profiles_last_run_never">Δεν έχει γίνει ποτέ αντίγραφο</string>
+    <string name="profiles_schedule_on">Χρονοπρογραμματισμός ενεργός</string>
+    <string name="profiles_schedule_off">Χρονοπρογραμματισμός σε παύση</string>
+    <string name="profiles_add_schedule">Ρύθμιση χρονοπρογραμματισμού</string>
+    <string name="profiles_copy_name">Αντίγραφο του %1$s</string>
+    <string name="profiles_targets_none">Δεν έχει επιλεγεί τίποτα</string>
+    <plurals name="profiles_count_partitions">
+        <item quantity="one">%d κατάτμηση</item>
+        <item quantity="other">%d κατατμήσεις</item>
+    </plurals>
+    <plurals name="profiles_count_apps">
+        <item quantity="one">%d εφαρμογή</item>
+        <item quantity="other">%d εφαρμογές</item>
+    </plurals>
+    <plurals name="profiles_count_folders">
+        <item quantity="one">%d φάκελος</item>
+        <item quantity="other">%d φάκελοι</item>
+    </plurals>
+
+    <!-- Snackbars -->
+    <string name="profiles_event_queued">Το αντίγραφο ασφαλείας του “%1$s” μπήκε στην ουρά</string>
+    <string name="profiles_event_resume_queued">Συνέχιση του διακοπέντος αντιγράφου ασφαλείας του “%1$s”</string>
+    <string name="profiles_event_started">Το αντίγραφο ασφαλείας του “%1$s” ξεκίνησε</string>
+    <string name="profiles_event_already_running">Το “%1$s” δημιουργεί ήδη αντίγραφο</string>
+    <string name="profiles_event_duplicated">Δημιουργήθηκε το “%1$s”. Ένας χρονοπρογραμματισμός που αντιγράφηκε ξεκινά σε παύση.</string>
+    <string name="profiles_event_deleted">Το “%1$s” διαγράφηκε</string>
+    <string name="profiles_event_schedule_on">Ο χρονοπρογραμματισμός του “%1$s” συνεχίστηκε</string>
+    <string name="profiles_event_schedule_off">Ο χρονοπρογραμματισμός του “%1$s” τέθηκε σε παύση</string>
+    <string name="profiles_event_finished">Αντίγραφο ασφαλείας του “%1$s”: %2$s</string>
+    <string name="profiles_event_finished_detail">%1$s. %2$s</string>
+    <string name="profiles_event_failed">Δεν λειτούργησε. Η καταγραφή περιέχει τις λεπτομέρειες.</string>
+
+    <!-- Delete -->
+    <string name="profiles_delete_title">Διαγραφή του “%1$s”;</string>
+    <string name="profiles_delete_consequence">Το προφίλ “%1$s” και ο χρονοπρογραμματισμός του θα αφαιρεθούν και ένα διακοπέν αντίγραφο ασφαλείας του δεν μπορεί πλέον να συνεχιστεί. Αυτή η ενέργεια δεν μπορεί να αναιρεθεί.</string>
+    <string name="profiles_delete_backups_kept">Τα αντίγραφα που είναι ήδη αποθηκευμένα στο %1$s διατηρούνται, μαζί με τις καταχωρίσεις ιστορικού τους, ώστε να μπορείτε ακόμη να τα επαναφέρετε. Το DFTB δεν μπορεί ακόμη να διαγράψει για εσάς τα αποθηκευμένα αντίγραφα ενός προφίλ· αφαιρέστε τα μόνοι σας από τον προορισμό αν δεν τα χρειάζεστε πια.</string>
+    <string name="profiles_delete_backups_kept_generic">Τα αντίγραφα που είναι ήδη αποθηκευμένα διατηρούνται, μαζί με τις καταχωρίσεις ιστορικού τους, ώστε να μπορείτε ακόμη να τα επαναφέρετε. Το DFTB δεν μπορεί ακόμη να διαγράψει για εσάς τα αποθηκευμένα αντίγραφα ενός προφίλ· αφαιρέστε τα μόνοι σας από τον προορισμό αν δεν τα χρειάζεστε πια.</string>
+    <string name="profiles_delete_key_kept">Το κλειδί κρυπτογράφησης παραμένει στο θησαυροφυλάκιο αυτής της συσκευής ώστε αυτά τα αντίγραφα να παραμένουν αναγνώσιμα.</string>
+    <string name="profiles_delete_confirm">Διαγραφή προφίλ</string>
+
+    <!-- Job status -->
+    <string name="profiles_status_running">σε εξέλιξη</string>
+    <string name="profiles_status_interrupted">διακόπηκε</string>
+    <string name="profiles_status_completed">ολοκληρώθηκε</string>
+    <string name="profiles_status_warnings">ολοκληρώθηκε με προειδοποιήσεις</string>
+    <string name="profiles_status_failed">απέτυχε</string>
+    <string name="profiles_status_cancelled">ακυρώθηκε</string>
+
+    <!-- Passphrase prompt -->
+    <string name="profiles_passphrase_title">Φράση πρόσβασης για το “%1$s”</string>
+    <string name="profiles_passphrase_body">Αυτό το προφίλ κρυπτογραφεί με φράση πρόσβασης που το DFTB δεν αποθηκεύει ποτέ. Χρησιμοποιείτε την ίδια φράση κάθε φορά: χωρίς αυτήν τα αντίγραφα δεν μπορούν να αποκρυπτογραφηθούν, ούτε από το DFTB.</string>
+    <string name="profiles_passphrase_field">Φράση πρόσβασης</string>
+    <string name="profiles_passphrase_confirm">Επανάληψη φράσης πρόσβασης</string>
+    <string name="profiles_passphrase_mismatch">Οι φράσεις πρόσβασης δεν ταιριάζουν</string>
+    <string name="profiles_passphrase_start">Έναρξη αντιγράφου</string>
+    <string name="profiles_passphrase_body_resume">Εισαγάγετε τη φράση πρόσβασης με την οποία ξεκίνησε αυτό το διακοπέν αντίγραφο. Το DFTB δεν την αποθηκεύει ποτέ· μια διαφορετική φράση θα άφηνε το αντίγραφο με τμήματα που δεν μπορούν να αποκρυπτογραφηθούν μαζί.</string>
+    <string name="profiles_passphrase_resume">Συνέχιση αντιγράφου</string>
+    <plurals name="profiles_passphrase_too_short">
+        <item quantity="one">Χρησιμοποιήστε τουλάχιστον %d χαρακτήρα</item>
+        <item quantity="other">Χρησιμοποιήστε τουλάχιστον %d χαρακτήρες</item>
+    </plurals>
+
+    <!-- Wizard frame -->
+    <string name="profiles_wizard_new_title">Νέο προφίλ αντιγράφων ασφαλείας</string>
+    <string name="profiles_wizard_edit_title">Επεξεργασία προφίλ αντιγράφων ασφαλείας</string>
+    <string name="profiles_wizard_close">Κλείσιμο</string>
+    <string name="profiles_wizard_back">Πίσω</string>
+    <string name="profiles_wizard_next">Επόμενο</string>
+    <string name="profiles_wizard_save">Αποθήκευση</string>
+    <string name="profiles_wizard_save_run">Αποθήκευση &amp; δημιουργία αντιγράφου τώρα</string>
+    <string name="profiles_wizard_not_found">Αυτό το προφίλ δεν υπάρχει πλέον.</string>
+    <string name="profiles_wizard_leave">Επιστροφή</string>
+    <string name="profiles_wizard_fix_errors">Διορθώστε πρώτα τα επισημασμένα προβλήματα</string>
+    <string name="profiles_wizard_key_failed">Δεν ήταν δυνατή η δημιουργία του κλειδιού κρυπτογράφησης στο θησαυροφυλάκιο της συσκευής. Δεν αποθηκεύτηκε τίποτα.</string>
+    <string name="profiles_wizard_save_failed">Δεν ήταν δυνατή η αποθήκευση του προφίλ.</string>
+    <string name="profiles_wizard_already_running">Το προφίλ αποθηκεύτηκε· δημιουργεί ήδη αντίγραφο.</string>
+    <string name="profiles_wizard_discard_title">Απόρριψη αλλαγών;</string>
+    <string name="profiles_wizard_discard_new">Αυτό το νέο προφίλ δεν έχει αποθηκευτεί· ό,τι έχετε εισαγάγει θα χαθεί.</string>
+    <string name="profiles_wizard_discard_edit">Οι αλλαγές σας δεν έχουν αποθηκευτεί και θα χαθούν. Το αποθηκευμένο προφίλ παραμένει όπως ήταν.</string>
+    <string name="profiles_wizard_discard_confirm">Απόρριψη</string>
+
+    <!-- Steps -->
+    <string name="profiles_step_name">Όνομα</string>
+    <string name="profiles_step_name_sub">Πώς θα ονομάσετε αυτό το προφίλ</string>
+    <string name="profiles_step_targets">Τι</string>
+    <string name="profiles_step_targets_sub">Κατατμήσεις, εφαρμογές και αρχεία προς αντιγραφή</string>
+    <string name="profiles_step_destination">Πού</string>
+    <string name="profiles_step_destination_sub">Ο προορισμός και ο ελεύθερος χώρος του</string>
+    <string name="profiles_step_options">Πώς</string>
+    <string name="profiles_step_options_sub">Μορφή, συμπίεση, κρυπτογράφηση, ακεραιότητα</string>
+    <string name="profiles_step_schedule">Πότε</string>
+    <string name="profiles_step_schedule_sub">Χρονοπρογραμματισμός, συνθήκες και διατήρηση</string>
+    <string name="profiles_step_review">Έλεγχος</string>
+    <string name="profiles_step_review_sub">Ελέγξτε τα πάντα και αποθηκεύστε</string>
+    <string name="profiles_step_numbered">%1$d. %2$s</string>
+    <string name="profiles_step_of">Βήμα %1$d από %2$d: %3$s</string>
+
+    <!-- (a) Name -->
+    <string name="profiles_field_name">Όνομα προφίλ</string>
+    <string name="profiles_field_name_placeholder">π.χ. Νυχτερινές φωτογραφίες</string>
+    <string name="profiles_field_name_hint">%1$d/%2$d χαρακτήρες</string>
+    <string name="profiles_field_description">Περιγραφή (προαιρετική)</string>
+
+    <!-- Problems -->
+    <string name="profiles_problem_name_blank">Δώστε ένα όνομα στο προφίλ.</string>
+    <string name="profiles_problem_name_too_long">Το όνομα είναι πολύ μεγάλο.</string>
+    <string name="profiles_problem_name_duplicate">Ένα άλλο προφίλ χρησιμοποιεί ήδη αυτό το όνομα.</string>
+    <string name="profiles_problem_description_too_long">Η περιγραφή είναι πολύ μεγάλη.</string>
+    <string name="profiles_problem_no_targets">Επιλέξτε τουλάχιστον μία κατάτμηση, εφαρμογή, φάκελο ή κατηγορία αρχείων.</string>
+    <string name="profiles_problem_app_no_components">Μια εφαρμογή δεν έχει επιλεγμένα στοιχεία· επιλέξτε τουλάχιστον ένα ή αφαιρέστε την εφαρμογή.</string>
+    <string name="profiles_problem_path_invalid">Ένας φάκελος πρέπει να είναι απόλυτη διαδρομή (που ξεκινά με /) ή φάκελος που επιλέχθηκε με τον επιλογέα του συστήματος.</string>
+    <string name="profiles_problem_path_duplicate">Ο ίδιος φάκελος αναφέρεται δύο φορές.</string>
+    <string name="profiles_problem_filter_invalid">Ένα φίλτρο φακέλου έχει σφάλμα· ανοίξτε το για να το διορθώσετε.</string>
+    <string name="profiles_problem_components_unavailable">Ορισμένα επιλεγμένα στοιχεία εφαρμογών δεν μπορούν να αντιγραφούν στην τρέχουσα λειτουργία· θα παραλειφθούν μέχρι να το επιτρέψει η λειτουργία.</string>
+    <string name="profiles_problem_partitions_need_root">Οι κατατμήσεις μπορούν να διαβαστούν μόνο σε λειτουργία Root· στην τρέχουσα λειτουργία θα παραλειφθούν.</string>
+    <string name="profiles_problem_no_destination">Επιλέξτε πού θα αποθηκεύονται τα αντίγραφα.</string>
+    <string name="profiles_problem_destination_gone">Ο επιλεγμένος προορισμός δεν υπάρχει πλέον· επιλέξτε άλλον.</string>
+    <string name="profiles_problem_encryption_unsupported">Αυτό το προφίλ χρησιμοποιούσε μέθοδο κρυπτογράφησης που το DFTB δεν μπορεί να εκτελέσει· επιλέξτε μια επιλογή κρυπτογράφησης.</string>
+    <string name="profiles_problem_transfer_unsupported">Η απομακρυσμένη συμπίεση δεν είναι διαθέσιμη για αυτόν τον προορισμό· επιλέξτε άλλη λειτουργία μεταφοράς.</string>
+    <string name="profiles_problem_vault_key_missing">Το κλειδί συσκευής αυτού του προφίλ λείπει από το θησαυροφυλάκιο. Η αποθήκευση δημιουργεί νέο κλειδί· τα αντίγραφα που έγιναν με το παλιό κλειδί δεν μπορούν να αποκρυπτογραφηθούν.</string>
+    <string name="profiles_problem_twrp_not_local">Τα TWRP και OrangeFox διαβάζουν μόνο τον αποθηκευτικό χώρο της συσκευής και μονάδες USB· αντιγράψτε αυτά τα αντίγραφα εκεί πριν από την επαναφορά από το recovery.</string>
+    <string name="profiles_problem_twrp_no_partitions">Η συμβατότητα TWRP αλλάζει μόνο τον τρόπο αποθήκευσης των κατατμήσεων και αυτό το προφίλ δεν έχει καμία.</string>
+    <string name="profiles_problem_interval_invalid">Εισαγάγετε το διάστημα ως ακέραιο αριθμό.</string>
+    <string name="profiles_problem_schedule_time">Η ώρα δεν είναι έγκυρη.</string>
+    <string name="profiles_problem_schedule_no_days">Επιλέξτε τουλάχιστον μία ημέρα.</string>
+    <string name="profiles_problem_schedule_invalid_day">Ο χρονοπρογραμματισμός περιέχει ημέρα που δεν υπάρχει.</string>
+    <string name="profiles_problem_schedule_interval_short">Το διάστημα πρέπει να είναι τουλάχιστον 15 λεπτά, το ελάχιστο του Android για επαναλαμβανόμενες εργασίες.</string>
+    <string name="profiles_problem_schedule_battery">Το επίπεδο μπαταρίας πρέπει να είναι μεταξύ 0 και 100 τοις εκατό.</string>
+    <string name="profiles_problem_keep_last">Εισαγάγετε πόσα αντίγραφα θα διατηρούνται (1 ή περισσότερα).</string>
+    <string name="profiles_problem_max_age">Εισαγάγετε τη μέγιστη ηλικία σε ακέραιες ημέρες (1 ή περισσότερες).</string>
+    <string name="profiles_problem_passphrase_scheduled">Οι προγραμματισμένες εκτελέσεις δεν μπορούν να πληκτρολογήσουν φράση πρόσβασης: κάθε μία περιμένει, με ειδοποίηση, μέχρι να την εισαγάγετε.</string>
+
+    <!-- Encryption key source -->
+    <string name="profiles_key_none">Χωρίς κρυπτογράφηση</string>
+    <string name="profiles_key_none_desc">Αποθηκεύονται ως απλά αρχεία: όποιος μπορεί να ανοίξει τον προορισμό μπορεί να τα διαβάσει.</string>
+    <string name="profiles_key_passphrase">Φράση πρόσβασης (AES-256-GCM)</string>
+    <string name="profiles_key_passphrase_desc">Την πληκτρολογείτε για κάθε αντίγραφο και επαναφορά. Δεν αποθηκεύεται ποτέ, επαναφέρεται σε οποιαδήποτε συσκευή.</string>
+    <string name="profiles_key_vault">Κλειδί συσκευής (AES-256-GCM)</string>
+    <string name="profiles_key_vault_desc">Ένα τυχαίο κλειδί που φυλάσσεται στο ασφαλές θησαυροφυλάκιο αυτής της συσκευής. Πλήρως αυτόματο, αλλά δεμένο με αυτή τη συσκευή.</string>
+    <string name="profiles_key_stored">Αποθηκευμένη φράση πρόσβασης (AES-256-GCM)</string>
+    <string name="profiles_key_stored_desc">Χρησιμοποιεί τη φράση πρόσβασης που είναι ήδη αποθηκευμένη στο θησαυροφυλάκιο για αυτό το προφίλ.</string>
+
+    <!-- Option blocks -->
+    <string name="profiles_block_twrp">Μη διαθέσιμο με συμβατότητα TWRP: το recovery μπορεί να διαβάσει μόνο απλά, μη κρυπτογραφημένα αρχεία.</string>
+    <string name="profiles_block_mask">Απαιτεί κρυπτογράφηση: χωρίς αυτήν το manifest θα έδειχνε τα πραγματικά ονόματα.</string>
+    <string name="profiles_block_remote_needs_ssh">Δυνατό μόνο με προορισμούς SSH ή SFTP.</string>
+    <string name="profiles_block_remote_unavailable">Δεν είναι ακόμη διαθέσιμο: η σύνδεση SSH δεν προσφέρει κανάλι απομακρυσμένων εντολών.</string>
+
+    <!-- Enums -->
+    <string name="profiles_freq_daily">Καθημερινά</string>
+    <string name="profiles_freq_weekly">Εβδομαδιαία</string>
+    <string name="profiles_freq_interval">Διάστημα</string>
+    <string name="profiles_unit_minutes">Λεπτά</string>
+    <string name="profiles_unit_hours">Ώρες</string>
+    <string name="profiles_slot_title">Υποδοχή A/B</string>
+    <string name="profiles_slot_active">Ενεργή</string>
+    <string name="profiles_slot_inactive">Ανενεργή</string>
+    <string name="profiles_slot_both">Και οι δύο</string>
+    <string name="profiles_slot_none">Χωρίς υποδοχή</string>
+    <string name="profiles_slot_active_desc">Δημιουργεί εικόνα της υποδοχής από την οποία ξεκίνησε η συσκευή· ακολουθεί αυτόματα τις ενημερώσεις OTA.</string>
+    <string name="profiles_slot_inactive_desc">Δημιουργεί εικόνα της άλλης υποδοχής, π.χ. του προηγούμενου συστήματος μετά από ενημέρωση.</string>
+    <string name="profiles_slot_both_desc">Δημιουργεί εικόνα και των δύο υποδοχών: διπλάσιο μέγεθος, διατηρεί πλήρη εφεδρεία.</string>
+    <string name="profiles_slot_none_desc">Για κατατμήσεις που δεν έχουν αντίγραφα A/B.</string>
+    <string name="profiles_structure_preserve_desc">Τα αρχεία διατηρούν τη δομή φακέλων τους.</string>
+    <string name="profiles_structure_categorized_desc">Τα αρχεία ταξινομούνται σε φακέλους ανά τύπο (εικόνες, βίντεο, έγγραφα…).</string>
+    <string name="profiles_transfer_staging_desc">Δημιουργεί πρώτα κάθε αρχείο σε αυτή τη συσκευή και μετά το μεταφορτώνει: συνεχίζεται μετά από διακοπή, απαιτεί τοπικό ελεύθερο χώρο.</string>
+    <string name="profiles_transfer_direct_desc">Μεταδίδει απευθείας στον προορισμό χωρίς προσωρινά αρχεία· μια διακοπείσα μεταφόρτωση ξεκινά ξανά από την αρχή του αρχείου.</string>
+    <string name="profiles_transfer_remote_desc">Στέλνει ακατέργαστα δεδομένα μέσω SSH και συμπιέζει στον διακομιστή.</string>
+
+    <!-- (b) Targets -->
+    <string name="profiles_targets_tab_count">%1$s (%2$d)</string>
+    <string name="profiles_targets_tab_partitions">Κατατμήσεις</string>
+    <string name="profiles_targets_tab_apps">Εφαρμογές</string>
+    <string name="profiles_targets_tab_files">Αρχεία</string>
+    <string name="profiles_components_title">Στοιχεία εφαρμογών</string>
+    <string name="profiles_components_subtitle">Οι νέες επιλεγμένες εφαρμογές λαμβάνουν: %1$s</string>
+    <string name="profiles_components_none">τίποτα</string>
+    <string name="profiles_components_apply_all">Εφαρμογή σε όλες τις επιλεγμένες</string>
+    <string name="profiles_components_per_app">Ανά εφαρμογή (%1$d)</string>
+    <string name="profiles_components_per_app_title">Στοιχεία ανά εφαρμογή</string>
+    <string name="profiles_components_per_app_empty">Δεν έχουν επιλεγεί ακόμη εφαρμογές.</string>
+    <string name="profiles_component_reason">%1$s: %2$s</string>
+    <string name="profiles_remove_app">Αφαίρεση %1$s</string>
+    <string name="profiles_files_add_title">Φάκελοι</string>
+    <string name="profiles_files_storage_root">Εσωτερικός αποθηκευτικός χώρος</string>
+    <string name="profiles_files_pick_folder">Επιλογή φακέλου…</string>
+    <string name="profiles_files_no_picker">Δεν υπάρχει διαθέσιμος επιλογέας φακέλων σε αυτή τη συσκευή.</string>
+    <string name="profiles_files_path_field">Διαδρομή φακέλου</string>
+    <string name="profiles_files_path_placeholder">/storage/emulated/0/…</string>
+    <string name="profiles_files_path_rejected">Εισαγάγετε μια απόλυτη διαδρομή που δεν υπάρχει ήδη στη λίστα.</string>
+    <string name="profiles_files_add">Προσθήκη</string>
+    <string name="profiles_files_none">Δεν έχουν επιλεγεί φάκελοι.</string>
+    <string name="profiles_files_saf_folder">Επιλέχθηκε με τον επιλογέα φακέλων του συστήματος</string>
+    <string name="profiles_files_remove">Αφαίρεση %1$s</string>
+    <string name="profiles_files_recursive">Συμπερίληψη υποφακέλων</string>
+    <string name="profiles_files_edit_filter">Φίλτρο</string>
+    <string name="profiles_files_readable">Αναγνώσιμο με %1$s</string>
+    <string name="profiles_files_tier_hint">Απαιτεί %1$s</string>
+    <string name="profiles_files_categories_title">Κατηγορίες αρχείων</string>
+    <string name="profiles_files_categories_sub">Αρχεία που ταιριάζουν από τους τυπικούς φακέλους (DCIM, Pictures, Music, Documents…)</string>
+    <string name="profiles_files_grant_failed">Το Android δεν διατήρησε την πρόσβαση σε αυτόν τον φάκελο· τα προγραμματισμένα αντίγραφα ίσως να μην μπορούν να τον διαβάσουν.</string>
+    <string name="profiles_files_already_added">Αυτός ο φάκελος υπάρχει ήδη στη λίστα.</string>
+    <string name="profiles_filter_none">Χωρίς φίλτρο: όλα τα αρχεία</string>
+    <string name="profiles_filter_only">μόνο %1$s</string>
+    <string name="profiles_filter_except">εκτός από %1$s</string>
+    <string name="profiles_filter_min">τουλάχιστον %1$s</string>
+    <string name="profiles_filter_max">το πολύ %1$s</string>
+    <string name="profiles_filter_after">τροποποιήθηκαν από %1$s</string>
+    <string name="profiles_filter_before">τροποποιήθηκαν πριν από %1$s</string>
+    <string name="profiles_filter_regex">μοτίβα διαδρομής</string>
+    <string name="profiles_filter_title">Φίλτρο για %1$s</string>
+    <string name="profiles_filter_save">Αποθήκευση φίλτρου</string>
+
+    <!-- (c) Destination and pre-flight -->
+    <string name="profiles_dest_empty_title">Δεν υπάρχουν ακόμη προορισμοί</string>
+    <string name="profiles_dest_empty_body">Προσθέστε έναν προορισμό: έναν φάκελο σε αυτή τη συσκευή, μια μονάδα USB, ένα κοινόχρηστο δίκτυο ή μια απομακρυσμένη θέση cloud.</string>
+    <string name="profiles_dest_add">Προσθήκη προορισμού</string>
+    <string name="profiles_dest_space">%1$s ελεύθερα από %2$s (τελευταίος έλεγχος)</string>
+    <string name="profiles_dest_space_free">%1$s ελεύθερα (τελευταίος έλεγχος)</string>
+    <string name="profiles_dest_space_unknown">Ο ελεύθερος χώρος δεν έχει ελεγχθεί ακόμη</string>
+    <string name="profiles_preflight_title">Μέγεθος και χώρος</string>
+    <string name="profiles_preflight_subtitle">Τι χρειάζεται αυτό το αντίγραφο και αν ο προορισμός έχει χώρο</string>
+    <string name="profiles_preflight_need_targets">Επιλέξτε πρώτα κάτι για αντιγραφή.</string>
+    <string name="profiles_preflight_running">Μέτρηση των επιλεγμένων πηγών…</string>
+    <string name="profiles_preflight_again">Νέα εκτίμηση</string>
+    <string name="profiles_preflight_failed">Η εκτίμηση απέτυχε: %1$s</string>
+    <string name="profiles_preflight_stale">Η επιλογή άλλαξε από την τελευταία εκτίμηση.</string>
+    <string name="profiles_preflight_run">Εκτίμηση μεγέθους</string>
+    <string name="profiles_preflight_size">Εκτιμώμενο μέγεθος</string>
+    <string name="profiles_preflight_size_approx">περίπου %1$s</string>
+    <string name="profiles_preflight_items">Στοιχεία</string>
+    <string name="profiles_preflight_artifacts">Αρχεία που γράφτηκαν</string>
+    <string name="profiles_preflight_unmeasured">Δεν ήταν δυνατή η μέτρηση: %1$s</string>
+    <string name="profiles_preflight_artifact_line">%1$s, %2$s</string>
+    <string name="profiles_preflight_issue">%1$s: %2$s</string>
+    <string name="profiles_preflight_no_destination">Επιλέξτε έναν προορισμό για να ελέγξετε τον ελεύθερο χώρο του.</string>
+    <string name="profiles_preflight_checking_space">Έλεγχος ελεύθερου χώρου στο %1$s…</string>
+    <string name="profiles_preflight_check_space">Έλεγχος ελεύθερου χώρου</string>
+    <string name="profiles_preflight_destination">Προορισμός: %1$s</string>
+    <string name="profiles_preflight_staging">Τοπική προσωρινή αποθήκευση (απαιτούνται %1$s)</string>
+    <string name="profiles_preflight_enough">Επαρκής χώρος: %1$s ελεύθερα</string>
+    <string name="profiles_preflight_enough_unknown_free">Επαρκής χώρος</string>
+    <string name="profiles_preflight_short">Ανεπαρκής χώρος: χρειάζονται άλλα %1$s (συμπεριλαμβάνεται περιθώριο ασφαλείας)</string>
+    <string name="profiles_preflight_unknown">Δεν ήταν δυνατός ο προσδιορισμός του ελεύθερου χώρου· το αντίγραφο θα προσπαθήσει παρ’ όλα αυτά.</string>
+    <string name="profiles_preflight_unknown_reason">Δεν ήταν δυνατός ο προσδιορισμός του ελεύθερου χώρου (%1$s)· το αντίγραφο θα προσπαθήσει παρ’ όλα αυτά.</string>
+    <plurals name="profiles_items">
+        <item quantity="one">%d στοιχείο</item>
+        <item quantity="other">%d στοιχεία</item>
+    </plurals>
+    <plurals name="profiles_artifacts">
+        <item quantity="one">%d αρχείο</item>
+        <item quantity="other">%d αρχεία</item>
+    </plurals>
+    <plurals name="profiles_preflight_more">
+        <item quantity="one">και ακόμη %d</item>
+        <item quantity="other">και ακόμη %d</item>
+    </plurals>
+
+    <!-- (d) Options -->
+    <string name="profiles_opt_twrp_title">Συμβατότητα με recovery</string>
+    <string name="profiles_opt_twrp">Συμβατό με TWRP</string>
+    <string name="profiles_opt_twrp_hint">Αποθηκεύει τις κατατμήσεις ως φάκελο αντιγράφου TWRP / OrangeFox ώστε να μπορούν να επαναφερθούν από το recovery χωρίς το DFTB.</string>
+    <string name="profiles_opt_twrp_forced">Επιβάλλεται από τη συμβατότητα TWRP: ακατέργαστα αντίγραφα, χωρίς συμπίεση, χωρίς κρυπτογράφηση, χωρίς κρυφά ονόματα. Το recovery διαβάζει μόνο απλά αρχεία.</string>
+    <string name="profiles_opt_format_title">Μορφή και συμπίεση</string>
+    <string name="profiles_opt_tree_format">Μορφή αρχειοθήκης (εφαρμογές και αρχεία)</string>
+    <string name="profiles_opt_7z_hint">Το 7z δημιουργεί ολόκληρη την αρχειοθήκη σε τοπικό χώρο πριν αποθηκευτεί.</string>
+    <string name="profiles_opt_raw_hint">Τα αρχεία αντιγράφονται ένα προς ένα, το καθένα συμπιεσμένο με τον κωδικοποιητή παρακάτω.</string>
+    <string name="profiles_opt_images_only">Οι κατατμήσεις αποθηκεύονται πάντα ως ακατέργαστες εικόνες· επιλέξτε τη συμπίεσή τους παρακάτω.</string>
+    <string name="profiles_opt_codec_images">Συμπίεση εικόνων (κατατμήσεις)</string>
+    <string name="profiles_opt_codec_files">Συμπίεση ανά αρχείο</string>
+    <string name="profiles_opt_level">Επίπεδο συμπίεσης</string>
+    <string name="profiles_opt_level_value">%1$d (%2$s)</string>
+    <string name="profiles_opt_level_none">Τίποτα από όσα έχουν επιλεγεί εδώ δεν συμπιέζεται, επομένως δεν υπάρχει επίπεδο για επιλογή.</string>
+    <string name="profiles_opt_level_tree_clamped">Οι αρχειοθήκες χρησιμοποιούν το επίπεδο %1$d, το υψηλότερο που υποστηρίζει η μορφή τους.</string>
+    <string name="profiles_opt_level_image_clamped">Οι εικόνες κατατμήσεων χρησιμοποιούν το επίπεδο %1$d, το υψηλότερο που υποστηρίζει ο κωδικοποιητής τους.</string>
+    <string name="profiles_opt_encryption_title">Κρυπτογράφηση</string>
+    <string name="profiles_opt_encryption_legacy">Αποθηκεύτηκε με “%1$s”, που το DFTB δεν μπορεί να εκτελέσει. Επιλέξτε μία από τις παρακάτω επιλογές.</string>
+    <string name="profiles_opt_passphrase_warning">Οι προγραμματισμένες εκτελέσεις θα σας χρειάζονται: το DFTB δεν μπορεί να πληκτρολογήσει τη φράση πρόσβασης, επομένως κάθε μία περιμένει μέχρι να την εισαγάγετε.</string>
+    <string name="profiles_opt_vault_warning">Δεμένο με τη συσκευή: αν αυτή η συσκευή επαναφερθεί στις εργοστασιακές ρυθμίσεις ή χαθεί, ή αφαιρεθεί η ασφαλής οθόνη κλειδώματός της, αυτά τα αντίγραφα δεν μπορούν πλέον να αποκρυπτογραφηθούν, ούτε σε αυτή ούτε σε άλλη συσκευή.</string>
+    <string name="profiles_opt_vault_reused">Αυτό το προφίλ διατηρεί το υπάρχον κλειδί συσκευής του, ώστε τα παλαιότερα αντίγραφα να παραμένουν αναγνώσιμα.</string>
+    <string name="profiles_opt_stored_hint">Η αποθηκευμένη φράση πρόσβασης παραμένει στο θησαυροφυλάκιο και χρησιμοποιείται για εκτελέσεις χωρίς επίβλεψη.</string>
+    <string name="profiles_opt_mask">Απόκρυψη ονομάτων αρχείων</string>
+    <string name="profiles_opt_mask_hint">Τα ονόματα κρυπτογραφούνται, ώστε ο προορισμός να βλέπει μόνο τυχαία ονόματα.</string>
+    <string name="profiles_opt_integrity_title">Ακεραιότητα</string>
+    <string name="profiles_opt_checksum">Άθροισμα ελέγχου</string>
+    <string name="profiles_opt_checksum_weak">Τα MD5 και SHA-1 εντοπίζουν τυχαία φθορά αλλά όχι σκόπιμη παραποίηση.</string>
+    <string name="profiles_opt_verify">Επαλήθευση μετά το αντίγραφο</string>
+    <string name="profiles_opt_verify_hint">Διαβάζει ξανά κάθε αποθηκευμένο αρχείο και συγκρίνει τα αθροίσματα ελέγχου.</string>
+    <string name="profiles_opt_layout_title">Διάταξη και μεταφορά</string>
+    <string name="profiles_opt_structure">Δομή φακέλων</string>
+    <string name="profiles_opt_transfer">Μεταφορά</string>
+    <string name="profiles_opt_staging_local">Με προορισμό σε αυτή τη συσκευή, τα αρχεία γράφονται επιτόπου (χωρίς επιπλέον αντίγραφο).</string>
+    <string name="profiles_opt_advanced">Για προχωρημένους</string>
+    <string name="profiles_opt_posix">Διατήρηση ιδιοκτητών και δικαιωμάτων</string>
+    <string name="profiles_opt_posix_hint">Καταγράφει τον ιδιοκτήτη, την ομάδα και τη λειτουργία POSIX κάθε αρχείου.</string>
+    <string name="profiles_opt_selinux">Διατήρηση ετικετών SELinux</string>
+    <string name="profiles_opt_selinux_hint">Καταγράφει τα περιβάλλοντα SELinux· απαραίτητο για τη σωστή επαναφορά δεδομένων εφαρμογών.</string>
+
+    <!-- (e) Schedule -->
+    <string name="profiles_sched_title">Χρονοπρογραμματισμός</string>
+    <string name="profiles_sched_enable">Αυτόματη εκτέλεση</string>
+    <string name="profiles_sched_enable_hint">Όταν είναι ανενεργό, το προφίλ εκτελείται μόνο όταν πατήσετε “Δημιουργία αντιγράφου τώρα”.</string>
+    <string name="profiles_sched_time">Ώρα</string>
+    <string name="profiles_sched_anchor">Έναρξη στις</string>
+    <string name="profiles_sched_change_time">Αλλαγή</string>
+    <string name="profiles_sched_pick_time">Ώρα αντιγράφου</string>
+    <string name="profiles_sched_days">Ημέρες</string>
+    <string name="profiles_sched_every">Κάθε</string>
+    <string name="profiles_sched_interval_min">Τουλάχιστον %1$d λεπτά.</string>
+    <string name="profiles_sched_conditions">Συνθήκες</string>
+    <string name="profiles_sched_unmetered">Μόνο σε δίκτυα χωρίς χρέωση δεδομένων</string>
+    <string name="profiles_sched_unmetered_hint">Περιμένει Wi-Fi ή Ethernet αντί να χρησιμοποιήσει δεδομένα κινητής.</string>
+    <string name="profiles_sched_local_no_network">Ο προορισμός βρίσκεται σε αυτή τη συσκευή, επομένως δεν χρειάζεται δίκτυο.</string>
+    <string name="profiles_sched_charging">Μόνο κατά τη φόρτιση</string>
+    <string name="profiles_sched_idle">Μόνο όταν η συσκευή είναι σε αδράνεια</string>
+    <string name="profiles_sched_idle_hint">Η αδράνεια μπορεί να χρειαστεί ώρες για να συμβεί, επομένως οι εκτελέσεις μπορεί να καθυστερήσουν πολύ.</string>
+    <string name="profiles_sched_battery">Ελάχιστο επίπεδο μπαταρίας</string>
+    <string name="profiles_sched_battery_value">Μπαταρία τουλάχιστον %1$d%%</string>
+    <string name="profiles_sched_catch_up">Αναπλήρωση χαμένων εκτελέσεων</string>
+    <string name="profiles_sched_catch_up_hint">Αν η συσκευή ήταν κλειστή την προγραμματισμένη ώρα, δημιουργεί αντίγραφο το συντομότερο δυνατό μετά.</string>
+
+    <!-- Schedule summaries -->
+    <string name="profiles_sched_day_range">%1$s–%2$s</string>
+    <string name="profiles_sched_every_day">κάθε ημέρα</string>
+    <string name="profiles_sched_weekdays">καθημερινές</string>
+    <string name="profiles_sched_weekends">Σαββατοκύριακα</string>
+    <string name="profiles_sched_daily">Καθημερινά στις %1$s</string>
+    <string name="profiles_sched_weekly">%1$s στις %2$s</string>
+    <string name="profiles_sched_hours_minutes">%1$s %2$s</string>
+    <string name="profiles_sched_interval">Κάθε %1$s από %2$s</string>
+    <string name="profiles_sched_cond_charging">κατά τη φόρτιση</string>
+    <string name="profiles_sched_cond_unmetered">σε δίκτυα χωρίς χρέωση δεδομένων</string>
+    <string name="profiles_sched_cond_idle">σε αδράνεια</string>
+    <string name="profiles_sched_cond_battery">μπαταρία τουλάχιστον %1$d%%</string>
+    <string name="profiles_sched_cond_catch_up">αναπληρώνει χαμένες εκτελέσεις</string>
+    <string name="profiles_sched_with_conditions">%1$s · %2$s</string>
+    <string name="profiles_sched_manual">Μόνο χειροκίνητα</string>
+    <string name="profiles_sched_paused">Σε παύση · %1$s</string>
+    <string name="profiles_sched_invalid">Ο χρονοπρογραμματισμός χρειάζεται διόρθωση</string>
+    <plurals name="profiles_sched_minutes">
+        <item quantity="one">%d λ.</item>
+        <item quantity="other">%d λ.</item>
+    </plurals>
+    <plurals name="profiles_sched_hours">
+        <item quantity="one">%d ώ.</item>
+        <item quantity="other">%d ώ.</item>
+    </plurals>
+
+    <!-- Retention -->
+    <string name="profiles_retention_title">Διατήρηση</string>
+    <string name="profiles_retention_keep_last_switch">Περιορισμός του αριθμού των αντιγράφων</string>
+    <string name="profiles_retention_keep_last_field">Αντίγραφα προς διατήρηση</string>
+    <string name="profiles_retention_max_age_switch">Διαγραφή αντιγράφων παλαιότερων από κάποιο αριθμό ημερών</string>
+    <string name="profiles_retention_max_age_field">Μέγιστη ηλικία σε ημέρες</string>
+    <string name="profiles_retention_note">Μετά από κάθε επιτυχημένο αντίγραφο, τα παλαιότερα αντίγραφα πέρα από αυτά τα όρια διαγράφονται από τον προορισμό. Το νεότερο επιτυχημένο αντίγραφο διατηρείται πάντα.</string>
+    <string name="profiles_retention_keep_all">Διατηρεί όλα τα αντίγραφα</string>
+    <string name="profiles_retention_both">%1$s, κανένα παλαιότερο από %2$s</string>
+    <plurals name="profiles_retention_keep_last">
+        <item quantity="one">Διατηρεί το τελευταίο αντίγραφο</item>
+        <item quantity="other">Διατηρεί τα τελευταία %d αντίγραφα</item>
+    </plurals>
+    <plurals name="profiles_retention_max_age">
+        <item quantity="one">Διατηρεί τα αντίγραφα για %d ημέρα</item>
+        <item quantity="other">Διατηρεί τα αντίγραφα για %d ημέρες</item>
+    </plurals>
+    <plurals name="profiles_retention_days">
+        <item quantity="one">%d ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
+    </plurals>
+    <string name="profiles_retention_apply">Εφαρμογή τώρα</string>
+    <string name="profiles_retention_preview_title">Εφαρμογή διατήρησης στο “%1$s”;</string>
+    <string name="profiles_retention_preview_changed">Η λίστα άλλαξε από την τελευταία φορά που τη δείτε (ένα αντίγραφο ολοκληρώθηκε ή αφαιρέθηκε). Ελέγξτε την ξανά.</string>
+    <string name="profiles_retention_preview_nothing">Δεν υπάρχει τίποτα προς διαγραφή: κάθε αποθηκευμένο αντίγραφο βρίσκεται εντός των ορίων.</string>
+    <string name="profiles_retention_preview_unlisted">Δεν ήταν δυνατή η απαρίθμηση του %1$s· τα αντίγραφα εκεί για τα οποία το DFTB δεν έχει εγγραφή δεν ελήφθησαν υπόψη.</string>
+    <string name="profiles_retention_preview_line">%1$s · %2$s</string>
+    <string name="profiles_retention_preview_history_only">Ο προορισμός αφαιρέθηκε από το DFTB: διαγράφεται μόνο η καταχώριση ιστορικού</string>
+    <string name="profiles_retention_preview_where">%1$s στο %2$s</string>
+    <string name="profiles_retention_preview_twrp">Διαγράφει επίσης: %1$s</string>
+    <string name="profiles_retention_reason_keep_last">πέρα από το όριο των τελευταίων αντιγράφων</string>
+    <string name="profiles_retention_reason_max_age">παλαιότερο από το όριο ηλικίας</string>
+    <string name="profiles_retention_hold_newest">Το νεότερο επιτυχημένο αντίγραφο διατηρείται πάντα.</string>
+    <string name="profiles_retention_hold_complete">Το νεότερο πλήρως ολοκληρωμένο αντίγραφο διατηρείται.</string>
+    <string name="profiles_retention_hold_active">Ένα αντίγραφο που εκτελείται ή μπορεί να συνεχιστεί γράφει ακόμη σε αυτό.</string>
+    <string name="profiles_retention_hold_unsafe">Η αποθηκευμένη διαδρομή του φαίνεται μη ασφαλής, γι’ αυτό δεν θίγεται.</string>
+    <string name="profiles_retention_hold_twrp">Δεν ήταν δυνατός ο προσδιορισμός του φακέλου TWRP του.</string>
+    <string name="profiles_retention_deleted_with_failures">%1$s· %2$s και θα επαναληφθεί μετά το επόμενο αντίγραφο.</string>
+    <plurals name="profiles_retention_preview_count">
+        <item quantity="one">Αυτό το αντίγραφο θα διαγραφεί οριστικά από τον προορισμό του:</item>
+        <item quantity="other">Αυτά τα %d αντίγραφα θα διαγραφούν οριστικά από τους προορισμούς τους:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_kept">
+        <item quantity="one">%d ληγμένο αντίγραφο διατηρείται:</item>
+        <item quantity="other">%d ληγμένα αντίγραφα διατηρούνται:</item>
+    </plurals>
+    <plurals name="profiles_retention_preview_confirm">
+        <item quantity="one">Διαγραφή %d αντιγράφου</item>
+        <item quantity="other">Διαγραφή %d αντιγράφων</item>
+    </plurals>
+    <plurals name="profiles_retention_deleted">
+        <item quantity="one">Διαγράφηκε %1$d αντίγραφο του “%2$s”</item>
+        <item quantity="other">Διαγράφηκαν %1$d αντίγραφα του “%2$s”</item>
+    </plurals>
+    <plurals name="profiles_retention_failed">
+        <item quantity="one">%d δεν ήταν δυνατό να διαγραφεί</item>
+        <item quantity="other">%d δεν ήταν δυνατό να διαγραφούν</item>
+    </plurals>
+
+    <!-- Schedules overview -->
+    <string name="profiles_schedules_title">Χρονοπρογραμματισμοί και διατήρηση</string>
+    <string name="profiles_schedules_empty">Δεν υπάρχουν ακόμη προφίλ.</string>
+    <string name="profiles_schedules_group_active">Προγραμματισμένα</string>
+    <string name="profiles_schedules_group_paused">Σε παύση</string>
+    <string name="profiles_schedules_group_manual">Μόνο χειροκίνητα</string>
+
+    <!-- (f) Review -->
+    <string name="profiles_review_errors">Διορθώστε αυτά πριν από την αποθήκευση</string>
+    <string name="profiles_review_warnings">Καλό είναι να γνωρίζετε</string>
+    <string name="profiles_review_edit">Επεξεργασία %1$s</string>
+    <string name="profiles_review_fix">Μετάβαση στο %1$s</string>
+    <string name="profiles_review_partitions">Κατατμήσεις</string>
+    <string name="profiles_review_components">Στοιχεία εφαρμογών</string>
+    <string name="profiles_review_codec">Συμπίεση ροής</string>
+    <string name="profiles_event_failed_reason">Αποτυχία: %1$s</string>
+    <string name="profiles_cd_ok">OK</string>
+    <string name="profiles_wizard_saved_not_scheduled">Αποθηκεύτηκε, αλλά δεν ήταν δυνατή η ρύθμιση του προγραμματισμού. Ανοίξτε ξανά το προφίλ για να δοκιμάσετε πάλι.</string>
+    <string name="profiles_wizard_saved_not_started">Αποθηκεύτηκε, αλλά δεν ήταν δυνατή η εκκίνηση του αντιγράφου. Χρησιμοποιήστε το «Δημιουργία αντιγράφου τώρα» στη λίστα.</string>
+</resources>

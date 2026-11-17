@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="partition_view_standard">Estándar</string>
+    <string name="partition_view_standard_summary">Las particiones que la mayoría respalda: imágenes de arranque, datos de arranque verificado, módem e identidad del dispositivo.</string>
+    <string name="partition_view_advanced">Avanzado</string>
+    <string name="partition_view_advanced_summary">Todas las particiones del dispositivo, incluidas las particiones lógicas del sistema. Revisa cada etiqueta de riesgo antes de seleccionar.</string>
+    <string name="partition_slot_a">Slot A</string>
+    <string name="partition_slot_b">Slot B</string>
+    <string name="partition_slot_none">Sin slot</string>
+    <string name="partition_slot_active_marker">Activo</string>
+    <string name="partition_category_boot_chain">Cadena de arranque</string>
+    <string name="partition_category_firmware">Firmware</string>
+    <string name="partition_category_modem">Módem</string>
+    <string name="partition_category_userdata">Datos de usuario</string>
+    <string name="partition_category_system_logical">Sistema (lógica)</string>
+    <string name="partition_category_persist_identity">Identidad y calibración del dispositivo</string>
+    <string name="partition_category_other">Otras</string>
+    <string name="partition_risk_safe">Segura de imaginar</string>
+    <string name="partition_risk_huge">Muy grande</string>
+    <string name="partition_risk_huge_summary">Esta partición ocupa muchos gigabytes. Asegúrate de que el destino tenga espacio suficiente.</string>
+    <string name="partition_risk_critical">Exclusiva de este dispositivo</string>
+    <string name="partition_risk_critical_summary">Contiene datos de identidad o calibración (IMEI, radio, claves). Guarda esta copia en un lugar seguro y no la restaures nunca en otro dispositivo.</string>
+    <string name="partition_logical_badge">Lógica</string>
+    <string name="partition_unavailable_root_required">Las copias de particiones requieren el modo Root. Cambia al modo Root en Ajustes para analizar las particiones.</string>
+    <string name="partition_unavailable_root_not_granted">El acceso root no está concedido ahora mismo. Concede acceso de superusuario a DFTB y vuelve a analizar.</string>
+    <string name="partition_unavailable_scan_failed">No se pudo ejecutar el análisis de particiones. Inténtalo de nuevo.</string>
+    <string name="partition_unavailable_none_found">No se encontró ninguna partición en este dispositivo.</string>
+    <string name="partition_warning_no_by_name">No se encontró ningún directorio de particiones by-name; solo se listan las particiones lógicas.</string>
+    <string name="partition_warning_by_name_conflict">Algunos nombres de partición apuntan a dispositivos distintos en directorios diferentes: %1$s</string>
+    <string name="partition_warning_sizes_incomplete">No se pudo leer el tamaño de algunas particiones: %1$s</string>
+    <string name="partition_warning_active_slot_unknown">Este es un dispositivo A/B, pero no se pudo determinar el slot activo.</string>
+    <string name="partition_warning_dm_names_unavailable">Este dispositivo usa particiones dinámicas, pero no se pudieron leer sus nombres lógicos.</string>
+    <string name="partition_warning_script_partial">El análisis informó de errores; la lista puede estar incompleta.</string>
+    <string name="partition_warning_unresolved_links">No se pudieron resolver algunos enlaces de particiones: %1$s</string>
+    <string name="partition_resolution_not_found">La partición %1$s no existe en este dispositivo.</string>
+    <string name="partition_resolution_active_slot_unknown">No se puede elegir un slot para %1$s porque se desconoce el slot activo.</string>
+    <string name="partition_resolution_slot_missing">El slot solicitado de %1$s no está presente en este dispositivo.</string>
+    <string name="partition_scan_rescan">Analizar de nuevo</string>
+
+</resources>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  User-visible strings for the Settings screens (ui/settings). Kept in their own file per project
+  convention (new user-facing strings never go in strings.xml). English base; translations live in
+  the per-locale values-* variants. Every key is prefixed settings_ to avoid collisions.
+-->
+<resources>
+    <!-- Root -->
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_back">Atrás</string>
+    <string name="settings_cancel">Cancelar</string>
+    <string name="settings_ok">Aceptar</string>
+    <string name="settings_retry">Reintentar</string>
+    <string name="settings_dismiss">Descartar</string>
+    <string name="settings_save_failed">No se pudo guardar el ajuste. Inténtalo de nuevo.</string>
+    <string name="settings_unknown_section">Esta página de ajustes (\"%1$s\") no existe. Vuelve atrás y elige una sección de la lista.</string>
+
+    <!-- Categories -->
+    <string name="settings_category_general">General</string>
+    <string name="settings_category_backup">Copias de seguridad</string>
+    <string name="settings_category_security">Privacidad y seguridad</string>
+    <string name="settings_category_system">Sistema</string>
+    <string name="settings_category_about">Acerca de</string>
+
+    <!-- Section titles and summaries -->
+    <string name="settings_language_title">Idioma</string>
+    <string name="settings_language_summary">Idioma de la app</string>
+    <string name="settings_appearance_title">Apariencia</string>
+    <string name="settings_appearance_summary">Tema y colores</string>
+    <string name="settings_mode_title">Modo de funcionamiento</string>
+    <string name="settings_mode_summary">Estándar, Shizuku, root o módulo complementario</string>
+    <string name="settings_defaults_title">Valores predeterminados de copia</string>
+    <string name="settings_defaults_summary">Formato, compresión, suma de verificación y destino de los perfiles nuevos</string>
+    <string name="settings_security_title">Seguridad</string>
+    <string name="settings_security_summary">Claves de cifrado, claves de host SSH, remotos de rclone</string>
+    <string name="settings_notifications_title">Notificaciones</string>
+    <string name="settings_notifications_summary">Permiso y canales de notificación</string>
+    <string name="settings_storage_title">Almacenamiento y registros</string>
+    <string name="settings_storage_summary">Archivos temporales y exportación del registro de diagnóstico</string>
+    <string name="settings_about_title">Acerca de</string>
+    <string name="settings_about_summary">Versión, licencias y código fuente</string>
+
+    <!-- Language -->
+    <string name="settings_language_current_title">Idioma actual</string>
+    <string name="settings_language_current">%1$s (%2$s)</string>
+    <string name="settings_language_rtl_active">El diseño de derecha a izquierda está activo para este idioma.</string>
+    <string name="settings_language_scope_note">Se aplica al instante a todas las pantallas y a las notificaciones, sin reiniciar la app.</string>
+
+    <!-- Appearance -->
+    <string name="settings_appearance_theme_hint">«Sistema» sigue el ajuste de tema oscuro del dispositivo.</string>
+    <string name="settings_appearance_color_title">Colores</string>
+    <string name="settings_appearance_dynamic_hint">Usa los colores de tu fondo de pantalla en lugar de la paleta de DFTB.</string>
+    <string name="settings_appearance_preview_title">Vista previa</string>
+    <string name="settings_appearance_preview_subtitle">Cómo se ve la app con estos ajustes en claro y oscuro.</string>
+    <string name="settings_appearance_preview_button">Copiar ahora</string>
+    <string name="settings_appearance_preview_in_use">En uso</string>
+    <string name="settings_appearance_preview_cd">Vista previa del tema %1$s</string>
+    <string name="settings_appearance_preview_active_cd">Vista previa del tema %1$s, actualmente en uso</string>
+
+    <!-- Operating mode -->
+    <string name="settings_mode_none">Sin configurar</string>
+    <string name="settings_mode_current_title">Modo actual</string>
+    <string name="settings_mode_current_badge">Modo actual</string>
+    <string name="settings_mode_selected_cd">Seleccionado para comprobar</string>
+    <string name="settings_mode_pick_hint">Selecciona un modo para comprobar si este dispositivo lo admite. Solo se puede cambiar cuando se superan las comprobaciones necesarias.</string>
+    <string name="settings_mode_jobs_running_title">Hay una tarea en ejecución</string>
+    <string name="settings_mode_jobs_running_body">El modo de funcionamiento no se puede cambiar mientras hay una copia de seguridad o una restauración en curso, porque la tarea en ejecución perdería el acceso a los comandos que usa. Espera a que termine o cancélala primero.</string>
+    <string name="settings_mode_readiness">%1$s: %2$s</string>
+    <string name="settings_mode_switch_to">Cambiar a %1$s</string>
+    <string name="settings_mode_reason_same">Este es el modo actual.</string>
+    <string name="settings_mode_reason_no_diagnostics">Esperando a que terminen las comprobaciones de este modo.</string>
+    <string name="settings_mode_reason_unavailable">Falló una comprobación necesaria, por lo que este modo aún no se puede usar. Corrige los elementos de arriba y vuelve a ejecutar las comprobaciones.</string>
+    <string name="settings_mode_blocked_jobs">No disponible mientras se ejecuta una copia de seguridad o una restauración.</string>
+    <string name="settings_mode_confirm_title">¿Cambiar a %1$s?</string>
+    <string name="settings_mode_confirm_message">DFTB pasará de %1$s a %2$s. Esto es lo que cambia:</string>
+    <string name="settings_mode_confirm_action">Cambiar modo</string>
+    <string name="settings_mode_changed">Modo de funcionamiento cambiado a %1$s.</string>
+    <string name="settings_mode_effect_immediate">Las nuevas copias de seguridad, restauraciones y ejecuciones programadas usarán el nuevo modo a partir de ahora. Tus perfiles, destinos y copias de seguridad existentes no cambian.</string>
+    <string name="settings_mode_effect_loses_partitions">Las imágenes de particiones, las copias de seguridad estilo TWRP y las restauraciones de particiones requieren root y ya no se ejecutarán.</string>
+    <string name="settings_mode_effect_loses_app_data">Los datos privados de las apps y las carpetas Android/data ya no se podrán leer ni restaurar; los perfiles que los incluyan omitirán esos elementos o fallarán.</string>
+    <string name="settings_mode_effect_needs_shizuku">Shizuku debe estar en ejecución para cada copia de seguridad. Se detiene tras cada reinicio salvo que se vuelva a iniciar, y las copias de seguridad programadas fallan mientras no esté en ejecución.</string>
+    <string name="settings_mode_effect_root_prompts">Tu gestor de root te pedirá que concedas acceso de superusuario a DFTB. Permítelo de forma permanente para que las copias de seguridad programadas se ejecuten sin supervisión.</string>
+    <string name="settings_mode_effect_module_needed">El módulo complementario debe permanecer instalado y activado en tu gestor de root para las herramientas de todo el sistema y el servicio de arranque.</string>
+    <string name="settings_mode_effect_module_left">El módulo complementario permanece instalado hasta que lo elimines en tu gestor de root. DFTB deja de reflejar en él su diario de reanudación tras reinicio.</string>
+    <string name="settings_mode_effect_degraded">Algunas comprobaciones de este modo dieron advertencias o fallaron. Las funciones que dependen de ellas pueden no funcionar hasta que se corrijan.</string>
+    <string name="settings_mode_shizuku_title">Acceso a Shizuku</string>
+    <string name="settings_mode_shizuku_subtitle">Pide a Shizuku que autorice a DFTB. El servicio Shizuku debe estar en ejecución.</string>
+    <string name="settings_mode_shizuku_granted">Acceso a Shizuku concedido.</string>
+    <string name="settings_mode_discovery_title">Detección</string>
+    <string name="settings_mode_discovery_subtitle">Consulta qué particiones, apps y carpetas puede alcanzar este modo en este dispositivo.</string>
+    <string name="settings_mode_discovery_open">Abrir Detección</string>
+    <string name="settings_mode_module_tools_note">rclone y BusyBox aún no se incluyen en esta compilación, por lo que un módulo creado ahora solo contiene las herramientas que incluye la compilación de este dispositivo. El resultado indica exactamente qué se incluyó y qué falta.</string>
+    <string name="settings_mode_module_saved_as">Guardado como %1$s</string>
+    <string name="settings_mode_module_build_failed">No se pudo generar ningún archivo de módulo. Los detalles técnicos de abajo explican el motivo.</string>
+    <string name="settings_mode_module_write_failed">No se pudo escribir el módulo en la ubicación elegida. Elige otra carpeta e inténtalo de nuevo.</string>
+    <string name="settings_mode_module_details">Detalles técnicos</string>
+
+    <!-- Defaults -->
+    <string name="settings_defaults_intro">Los nuevos perfiles de copia de seguridad empiezan con estos ajustes. Los perfiles existentes conservan los suyos.</string>
+    <string name="settings_defaults_issues_title">Algunos valores predeterminados ya no son válidos</string>
+    <string name="settings_defaults_issue_format">El formato guardado no es un formato de archivo comprimido y no puede ser el predeterminado de un perfil.</string>
+    <string name="settings_defaults_issue_level">El nivel de compresión guardado está fuera del rango del formato seleccionado.</string>
+    <string name="settings_defaults_issue_destination">El destino predeterminado se eliminó. Los perfiles nuevos pedirán un destino hasta que elijas otro.</string>
+    <string name="settings_defaults_repair">Corregir automáticamente</string>
+    <string name="settings_defaults_repaired">Valores predeterminados corregidos.</string>
+    <string name="settings_defaults_extension">Extensión de archivo: %1$s</string>
+    <string name="settings_defaults_7z_staging">7z construye el archivo completo en el almacenamiento temporal local antes de subirlo, por lo que este dispositivo necesita espacio libre para el archivo entero.</string>
+    <string name="settings_defaults_level_not_applicable">%1$s no comprime, por lo que no hay nivel que elegir.</string>
+    <string name="settings_defaults_level_range">Niveles permitidos para este formato: de %1$d a %2$d</string>
+    <string name="settings_defaults_checksum_hint">Se usa para verificar cada artefacto después de escribirlo y antes de restaurarlo.</string>
+    <string name="settings_defaults_destination_title">Destino predeterminado</string>
+    <string name="settings_defaults_destination_subtitle">Adónde envían sus copias de seguridad los perfiles nuevos, salvo que elijas otro destino.</string>
+    <string name="settings_defaults_destination_ask">Preguntar cada vez</string>
+    <string name="settings_defaults_destination_ask_hint">Cada perfil nuevo pide un destino.</string>
+    <string name="settings_defaults_destination_none">Aún no hay destinos configurados. Añade uno desde la pantalla Destinos.</string>
+
+    <!-- Security: encryption keys -->
+    <string name="settings_security_keys_title">Claves de cifrado</string>
+    <string name="settings_security_keys_subtitle">Claves aleatorias almacenadas en el almacén seguro de este dispositivo. Nunca salen de él y no forman parte de ninguna copia de seguridad.</string>
+    <string name="settings_security_keys_empty">No hay claves de cifrado almacenadas.</string>
+    <plurals name="settings_security_keys_count">
+        <item quantity="one">%1$d clave</item>
+        <item quantity="other">%1$d claves</item>
+    </plurals>
+    <string name="settings_security_key_created">Creada %1$s</string>
+    <string name="settings_security_key_unused">No la usa ningún perfil</string>
+    <string name="settings_security_key_used_by">Usada por: %1$s</string>
+    <string name="settings_security_key_delete_cd">Eliminar clave</string>
+    <string name="settings_security_key_delete_blocked_cd">Eliminar clave (no disponible mientras un perfil la use)</string>
+    <string name="settings_security_key_delete_title">¿Eliminar esta clave de cifrado?</string>
+    <string name="settings_security_key_delete_message">La clave %1$s se borrará del almacén de forma permanente.</string>
+    <string name="settings_security_key_delete_consequence_unrecoverable">Todas las copias de seguridad cifradas con esta clave serán irrecuperables de forma permanente, en todos los destinos.</string>
+    <string name="settings_security_key_delete_consequence_no_copy">No existe ninguna otra copia: la clave solo existe en el almacén de este dispositivo y nadie, ni siquiera los desarrolladores de DFTB, puede recrearla.</string>
+    <string name="settings_security_key_delete_consequence_restore">Restaurar o verificar esas copias de seguridad fallará a partir de ahora.</string>
+    <string name="settings_security_key_delete_ack">Entiendo que las copias de seguridad cifradas con esta clave se perderán para siempre.</string>
+    <string name="settings_security_key_delete_confirm">Eliminar clave para siempre</string>
+    <string name="settings_security_key_deleted">Clave de cifrado eliminada.</string>
+    <string name="settings_security_key_already_gone">La clave ya no estaba en el almacén.</string>
+    <string name="settings_security_key_delete_failed">No se pudo eliminar la clave. No se cambió nada.</string>
+    <string name="settings_security_key_in_use">No eliminada: la clave aún la usa %1$s. Cambia primero esos perfiles.</string>
+    <string name="settings_security_key_in_use_title">Clave en uso</string>
+    <string name="settings_security_key_in_use_message">Esta clave no se puede eliminar mientras la usen estos perfiles. Primero edítalos para que usen otra clave, o elimínalos.</string>
+    <string name="settings_security_vault_key_gone">La clave de dispositivo del almacén ya no está disponible, por lo que los secretos guardados no se pueden leer en este dispositivo.</string>
+    <string name="settings_security_vault_keystore">El almacén de claves seguro de Android no está disponible en este momento.</string>
+    <string name="settings_security_vault_unreadable">No se pudo leer el almacén.</string>
+
+    <!-- Security: SSH known hosts -->
+    <string name="settings_security_hosts_title">Servidores SSH de confianza</string>
+    <string name="settings_security_hosts_subtitle">Claves de host fijadas la primera vez que DFTB se conectó a cada servidor SFTP o SSH.</string>
+    <string name="settings_security_hosts_empty">Aún no se ha contactado con ningún servidor SSH.</string>
+    <string name="settings_security_hosts_unreadable">El archivo de servidores de confianza es ilegible o está dañado. Las conexiones SSH se rechazan hasta que se corrija, para protegerte de servidores impostores.</string>
+    <string name="settings_security_hosts_tofu_note">Un servidor que presente una clave distinta siempre se rechaza. Olvida un servidor solo si sabes que su clave se cambió a propósito.</string>
+    <string name="settings_security_host_forget">Olvidar</string>
+    <string name="settings_security_host_forget_title">¿Olvidar la clave de este servidor?</string>
+    <string name="settings_security_host_forget_message">Se eliminará la clave fijada de %1$s.</string>
+    <string name="settings_security_host_forget_consequence_repin">La próxima conexión confiará en la clave que presente el servidor y la fijará de nuevo.</string>
+    <string name="settings_security_host_forget_consequence_verify">Si alguien suplanta al servidor en ese momento, DFTB confiaría en él. Comprueba la nueva huella con el administrador del servidor.</string>
+    <string name="settings_security_host_forget_confirm">Olvidar clave</string>
+    <string name="settings_security_host_forgotten">Se olvidó la clave de %1$s.</string>
+    <string name="settings_security_host_already_gone">Ese servidor ya no estaba en la lista.</string>
+    <string name="settings_security_host_unparsable">Esta entrada no se puede eliminar desde aquí porque la dirección de su servidor es incorrecta.</string>
+    <string name="settings_security_hosts_write_failed">No se pudo actualizar el archivo de servidores de confianza. No se cambió nada.</string>
+
+    <!-- Security: rclone -->
+    <string name="settings_security_rclone_title">Remotos de rclone</string>
+    <string name="settings_security_rclone_subtitle">Las definiciones de remotos en la nube se guardan selladas en el almacén.</string>
+
+    <!-- Notifications -->
+    <string name="settings_notifications_status_title">Acceso a notificaciones</string>
+    <string name="settings_notifications_permission_not_required">Esta versión de Android no pide permiso de notificaciones.</string>
+    <string name="settings_notifications_permission_granted">Permiso de notificaciones concedido.</string>
+    <string name="settings_notifications_permission_denied">Permiso de notificaciones denegado. No se mostrarán el progreso de las tareas ni las alertas de fallo.</string>
+    <string name="settings_notifications_app_enabled">Las notificaciones están activadas para DFTB.</string>
+    <string name="settings_notifications_app_disabled">Las notificaciones están desactivadas para DFTB en los ajustes del sistema.</string>
+    <string name="settings_notifications_open_settings">Abrir ajustes de notificaciones</string>
+    <string name="settings_notifications_channels_title">Categorías</string>
+    <string name="settings_notifications_channels_subtitle">Cada categoría se puede silenciar por separado en los ajustes del sistema.</string>
+    <string name="settings_notifications_channel_on">Activada</string>
+    <string name="settings_notifications_channel_blocked">Bloqueada</string>
+    <string name="settings_notifications_channel_missing">Aún no creada</string>
+    <string name="settings_notifications_channel_open">Ajustes</string>
+
+    <!-- Storage and logs -->
+    <string name="settings_storage_cache_title">Archivos temporales</string>
+    <string name="settings_storage_cache_subtitle">Espacio que DFTB usa en este dispositivo al crear y leer copias de seguridad.</string>
+    <string name="settings_storage_staging">Preparación de archivos</string>
+    <string name="settings_storage_other_cache">Otros archivos temporales</string>
+    <string name="settings_storage_total_cache">Total</string>
+    <string name="settings_storage_staging_hint">La preparación contiene archivos 7z y flujos de tamaño desconocido mientras se crean. Los restos de una tarea interrumpida se pueden borrar sin riesgo.</string>
+    <string name="settings_storage_clear_staging">Borrar preparación</string>
+    <string name="settings_storage_clear_all">Borrar todos los archivos temporales</string>
+    <string name="settings_storage_recalculate">Recalcular</string>
+    <string name="settings_storage_clear_blocked">Los archivos temporales no se pueden borrar mientras se ejecuta una copia de seguridad o una restauración.</string>
+    <string name="settings_storage_clear_staging_title">¿Borrar la preparación de archivos?</string>
+    <string name="settings_storage_clear_all_title">¿Borrar todos los archivos temporales?</string>
+    <string name="settings_storage_clear_staging_consequence">Se eliminan los archivos creados parcialmente y los archivos de cola que dejaron las tareas interrumpidas.</string>
+    <string name="settings_storage_clear_all_consequence">Se elimina toda la caché de DFTB: preparación, archivos de cola y archivos de registro compartidos anteriormente.</string>
+    <string name="settings_storage_clear_backups_safe">Tus copias de seguridad en sus destinos, tus perfiles y tus ajustes no se tocan.</string>
+    <string name="settings_storage_clear_confirm">Borrar</string>
+    <string name="settings_storage_cleared">Archivos temporales borrados.</string>
+    <plurals name="settings_storage_cleared_partial">
+        <item quantity="one">Archivos temporales borrados; no se pudo eliminar %1$s elemento (puede pertenecer a un asistente root).</item>
+        <item quantity="other">Archivos temporales borrados; no se pudieron eliminar %1$s elementos (pueden pertenecer a un asistente root).</item>
+    </plurals>
+    <string name="settings_storage_clear_failed">No se pudieron borrar los archivos temporales.</string>
+    <string name="settings_storage_log_title">Registro de diagnóstico</string>
+    <string name="settings_storage_log_subtitle">Actividad reciente registrada en memoria desde que se inició la app. Útil para informes de errores.</string>
+    <plurals name="settings_storage_log_lines">
+        <item quantity="one">%1$d línea registrada</item>
+        <item quantity="other">%1$d líneas registradas</item>
+    </plurals>
+    <string name="settings_storage_log_privacy">El registro puede contener rutas de archivos, nombres de destinos y direcciones de servidores. DFTB está diseñado para no registrar nunca contraseñas, claves ni tokens. Revísalo antes de compartirlo públicamente.</string>
+    <string name="settings_storage_log_share">Compartir</string>
+    <string name="settings_storage_log_save">Guardar en archivo</string>
+    <string name="settings_storage_log_share_title">Compartir registro de DFTB</string>
+    <string name="settings_storage_log_saved">Registro guardado.</string>
+    <string name="settings_storage_log_export_failed">No se pudo exportar el registro.</string>
+
+    <!-- About -->
+    <string name="settings_about_tagline">Copias de seguridad de Android de código abierto y autorizadas por el usuario.</string>
+    <string name="settings_about_version_value">%1$s (%2$d)</string>
+    <string name="settings_about_sources_title">Código fuente de los proyectos acreditados</string>
+    <plurals name="settings_about_sources_count">
+        <item quantity="one">%1$d proyecto</item>
+        <item quantity="other">%1$d proyectos</item>
+    </plurals>
+    <string name="settings_about_source_open_cd">Abrir el repositorio de código fuente de %1$s</string>
+    <string name="settings_storage_measure_failed">No se pudo medir el tamaño de la caché.</string>
+    <string name="settings_storage_measure_retry">Reintentar</string>
+</resources>

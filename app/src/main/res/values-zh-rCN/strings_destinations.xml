@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Destinations manager, destination editor, guided rclone setup and raw rclone.conf editor
+     (ui/destinations, ui/rclone). -->
+<resources>
+
+    <!-- Common -->
+    <string name="destinations_back">返回</string>
+    <string name="destinations_cancel">取消</string>
+    <string name="destinations_more">更多选项</string>
+    <string name="destinations_expand">展开</string>
+    <string name="destinations_collapse">收起</string>
+    <string name="destinations_secret_show">显示</string>
+    <string name="destinations_secret_hide">隐藏</string>
+
+    <!-- System overview entry point -->
+    <string name="destinations_entry_subtitle">备份的存放位置：文件夹、USB 驱动器、服务器和云账户。</string>
+    <string name="destinations_entry_open">管理目标位置</string>
+
+    <!-- Destinations list -->
+    <string name="destinations_title">目标位置</string>
+    <string name="destinations_add">添加目标位置</string>
+    <string name="destinations_empty">还没有目标位置。添加一个来选择备份存放位置。</string>
+    <string name="destinations_never_verified">从未验证</string>
+    <string name="destinations_last_verified">上次验证：%1$s</string>
+    <string name="destinations_space">可用 %1$s，共 %2$s</string>
+    <string name="destinations_space_free_only">可用 %1$s</string>
+    <string name="destinations_test">测试</string>
+    <string name="destinations_edit">编辑</string>
+    <string name="destinations_delete">删除</string>
+    <string name="destinations_delete_title">删除目标位置？</string>
+    <string name="destinations_delete_message">将从此设备移除“%1$s”及其保存的密码或密钥。已存放在该处的备份不会被删除。</string>
+    <string name="destinations_deleted">已删除“%1$s”。</string>
+    <string name="destinations_delete_failed">无法删除该目标位置。</string>
+
+    <!-- Editor: flow -->
+    <string name="destinations_add_title">添加目标位置</string>
+    <string name="destinations_edit_title">编辑目标位置</string>
+    <string name="destinations_not_found">此目标位置已不存在。</string>
+    <string name="destinations_pick_type">选择哪种目标位置？</string>
+    <string name="destinations_more_providers_title">Google Drive、OneDrive、Dropbox、pCloud 等</string>
+    <string name="destinations_more_providers_text">云服务通过 rclone 连接。请先设置远程，再将其添加为 rclone 目标位置。</string>
+    <string name="destinations_fix_errors">请先修正高亮的字段。</string>
+    <string name="destinations_test_connection">测试连接</string>
+    <string name="destinations_save">保存</string>
+    <string name="destinations_error_save">无法保存该目标位置。</string>
+    <string name="destinations_error_test">无法启动连接测试。</string>
+    <string name="destinations_error_vault">安全凭据存储不可用。密码或密钥未保存。</string>
+    <string name="destinations_error_tree_grant">无法保持对该文件夹的访问权限。请重新选择。</string>
+    <string name="destinations_error_no_picker">此设备上没有可用的文件夹选择器。</string>
+
+    <!-- Editor: type descriptions -->
+    <string name="destinations_type_desc_local_internal">此设备上应用可直接写入的文件夹。</string>
+    <string name="destinations_type_desc_local_saf">你选择的任意文件夹：内部存储、SD 卡或文档提供程序。</string>
+    <string name="destinations_type_desc_usb_otg">连接到此设备的 USB 驱动器上的文件夹。</string>
+    <string name="destinations_type_desc_ftp">未加密的 FTP，适用于可信网络中的路由器和 NAS。</string>
+    <string name="destinations_type_desc_ftps">基于 TLS 的 FTP（显式或隐式）。</string>
+    <string name="destinations_type_desc_sftp">任意 SSH 服务器上的 SFTP，使用密码或私钥。</string>
+    <string name="destinations_type_desc_ssh">SSH 服务器；支持 SFTP 时使用 SFTP，否则使用 shell 命令。</string>
+    <string name="destinations_type_desc_smb">Windows 共享、Samba 或 NAS（SMB 2/3）。</string>
+    <string name="destinations_type_desc_webdav">WebDAV 服务器，如 Nextcloud、ownCloud 或 NAS。</string>
+    <string name="destinations_type_desc_nfs">由内核挂载的 NFS 导出。需要 Root 模式。</string>
+    <string name="destinations_type_desc_rclone">在 rclone 中配置的远程：支持其 50 多种云服务中的任意一种。</string>
+    <string name="destinations_type_desc_s3">Amazon S3 或任何兼容 S3 的对象存储。</string>
+    <string name="destinations_type_desc_mega">MEGA 云存储账户。</string>
+    <string name="destinations_type_desc_pcloud">pCloud，通过 rclone 远程连接。</string>
+
+    <!-- Editor: sections -->
+    <string name="destinations_section_folder">文件夹</string>
+    <string name="destinations_section_rclone">rclone 远程</string>
+    <string name="destinations_section_location">位置</string>
+    <string name="destinations_section_credentials">登录</string>
+    <string name="destinations_section_advanced">高级</string>
+    <string name="destinations_section_advanced_hint">可选的协议设置。默认值适用于大多数服务器。</string>
+
+    <!-- Editor: fields -->
+    <string name="destinations_field_name">名称</string>
+    <string name="destinations_field_host">服务器</string>
+    <string name="destinations_field_server_url">服务器地址或 URL</string>
+    <string name="destinations_field_port">端口</string>
+    <string name="destinations_field_base_path">服务器上的文件夹</string>
+    <string name="destinations_field_local_path">文件夹路径</string>
+    <string name="destinations_field_subfolder">子文件夹（可选）</string>
+    <string name="destinations_field_smb_path">共享和文件夹</string>
+    <string name="destinations_field_nfs_path">导出路径</string>
+    <string name="destinations_field_bucket_path">存储桶和文件夹</string>
+    <string name="destinations_field_username">用户名</string>
+    <string name="destinations_field_access_key_id">访问密钥 ID</string>
+    <string name="destinations_field_email">电子邮件</string>
+    <string name="destinations_field_password">密码</string>
+    <string name="destinations_field_secret_access_key">秘密访问密钥</string>
+    <string name="destinations_field_private_key">私钥</string>
+    <string name="destinations_field_passphrase">密钥口令（可选）</string>
+    <string name="destinations_field_auth">登录方式</string>
+    <string name="destinations_field_remote_name">远程名称</string>
+    <string name="destinations_field_folder">文件夹</string>
+    <string name="destinations_field_usb_volume">USB 驱动器</string>
+    <string name="destinations_field_ftps_mode">TLS 模式</string>
+    <string name="destinations_field_connect_timeout">连接超时（秒）</string>
+    <string name="destinations_field_data_timeout">数据超时（秒）</string>
+    <string name="destinations_field_io_timeout">读/写超时（秒）</string>
+    <string name="destinations_field_tls_pin">固定证书（SHA-256）</string>
+    <string name="destinations_field_scheme">协议</string>
+    <string name="destinations_field_smb_share">共享名称</string>
+    <string name="destinations_field_smb_domain">域 / 工作组</string>
+    <string name="destinations_field_smb_encrypt">要求加密</string>
+    <string name="destinations_field_smb_guest">访客访问</string>
+    <string name="destinations_field_nfs_export">导出</string>
+    <string name="destinations_field_nfs_mount_options">挂载选项</string>
+    <string name="destinations_field_s3_provider">提供商</string>
+    <string name="destinations_field_s3_region">区域</string>
+    <string name="destinations_field_s3_endpoint">终端节点</string>
+
+    <!-- Editor: hints -->
+    <string name="destinations_hint_host">主机名或 IP 地址，不含协议和端口</string>
+    <string name="destinations_hint_webdav_url">例如 https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="destinations_hint_port_default">留空使用默认值（%1$d）</string>
+    <string name="destinations_hint_base_path">例如 /backups/phone。留空表示顶层。</string>
+    <string name="destinations_hint_local_path">绝对路径。留空则使用应用自己的存储文件夹。</string>
+    <string name="destinations_hint_subfolder">若不存在，将在所选文件夹内创建</string>
+    <string name="destinations_hint_smb_path">/共享/文件夹；若已在“高级”中设置共享，则只填文件夹</string>
+    <string name="destinations_hint_nfs_path">服务器上的导出路径，例如 /srv/backups</string>
+    <string name="destinations_hint_bucket_path">bucket 或 bucket/folder</string>
+    <string name="destinations_hint_timeout">1 到 3600；留空使用默认值</string>
+    <string name="destinations_hint_tls_pin">64 位十六进制数字。仅信任此证书，例如自签名证书。</string>
+    <string name="destinations_hint_smb_share">设置后，上方路径为此共享内的文件夹</string>
+    <string name="destinations_hint_smb_encrypt">拒绝无法加密会话的服务器（SMB 3）</string>
+    <string name="destinations_hint_smb_guest">未保存密码时以访客身份连接</string>
+    <string name="destinations_hint_nfs_export">设置后，上方路径为此导出内的文件夹</string>
+    <string name="destinations_hint_nfs_mount_options">合并覆盖到 vers=3,nolock,proto=tcp,soft,timeo=600 之上</string>
+    <string name="destinations_hint_s3_provider">例如 AWS、Minio、Wasabi、Cloudflare、Other</string>
+    <string name="destinations_hint_s3_region">例如 us-east-1（大多数兼容 S3 的服务可不填）</string>
+    <string name="destinations_hint_s3_endpoint">AWS 请留空。例如 https://s3.example.com</string>
+    <string name="destinations_hint_private_key">粘贴 OpenSSH、PEM 或 PuTTY 私钥</string>
+    <string name="destinations_secret_stored_hint">已安全保存。留空则保持不变。</string>
+
+    <!-- Editor: auth methods -->
+    <string name="destinations_auth_none">无</string>
+    <string name="destinations_auth_password">密码</string>
+    <string name="destinations_auth_private_key">私钥</string>
+    <string name="destinations_auth_none_hint">不发送任何凭据（匿名或访客访问）。</string>
+
+    <!-- Editor: choices -->
+    <string name="destinations_ftps_explicit">显式（AUTH TLS）</string>
+    <string name="destinations_ftps_implicit">隐式</string>
+    <string name="destinations_scheme_https">HTTPS</string>
+    <string name="destinations_scheme_http">HTTP（未加密）</string>
+
+    <!-- Editor: folder / USB -->
+    <string name="destinations_no_folder">未选择文件夹。</string>
+    <string name="destinations_folder_selected">已选择：%1$s</string>
+    <string name="destinations_choose_folder">选择文件夹</string>
+    <string name="destinations_usb_none">未连接 USB 驱动器。请插入后点按“刷新”。</string>
+    <string name="destinations_usb_refresh">刷新</string>
+    <string name="destinations_usb_read_only">%1$s（只读）</string>
+    <string name="destinations_usb_not_connected">%1$s（未连接）</string>
+
+    <!-- Editor: rclone -->
+    <string name="destinations_rclone_no_remotes">尚未配置任何 rclone 远程。</string>
+    <string name="destinations_rclone_unreadable">无法读取 rclone 配置。</string>
+    <string name="destinations_rclone_new_remote">设置远程</string>
+
+    <!-- Editor: SSH host key -->
+    <string name="destinations_host_key_explain">服务器出示的身份密钥与首次连接时保存的不同。仅当你确定服务器已重装或更换了密钥时才继续。</string>
+    <string name="destinations_host_key_forget">忘记已保存的主机密钥</string>
+    <string name="destinations_host_key_confirm">下次连接 %1$s 时将信任其出示的任何密钥。要继续吗？</string>
+    <string name="destinations_host_key_forgotten">已移除保存的主机密钥。请再次测试连接。</string>
+    <string name="destinations_host_key_none">未找到此服务器已保存的主机密钥。</string>
+
+    <!-- Editor: validation errors -->
+    <string name="destinations_error_required">必填</string>
+    <string name="destinations_error_too_long">太长</string>
+    <string name="destinations_error_invalid_host">不是有效的主机名或 IP 地址</string>
+    <string name="destinations_error_invalid_url">不是有效的地址</string>
+    <string name="destinations_error_invalid_port">端口必须是 1 到 65535 之间的数字</string>
+    <string name="destinations_error_path_traversal">路径不能包含“..”</string>
+    <string name="destinations_error_path_not_absolute">路径必须以 / 开头</string>
+    <string name="destinations_error_invalid_characters">包含此处不允许的字符</string>
+    <string name="destinations_error_invalid_timeout">请输入 1 到 3600 之间的秒数</string>
+    <string name="destinations_error_invalid_pin">必须是 64 位十六进制数字（可含冒号）</string>
+    <string name="destinations_error_invalid_remote_name">仅限字母、数字、空格及 _ - . + @；不能以 - 或空格开头</string>
+    <string name="destinations_error_unknown_remote">rclone.conf 中没有此名称的远程</string>
+    <string name="destinations_error_invalid_key">这看起来不是私钥</string>
+    <string name="destinations_error_needs_share">请输入 /共享/文件夹，或在“高级”中设置共享名称</string>
+    <string name="destinations_error_needs_export">请输入以 / 开头的导出路径</string>
+    <string name="destinations_error_unsafe_mount_options">仅允许字母、数字及 _ . : = , / + - [ ]</string>
+    <string name="destinations_error_volume_mismatch">此文件夹不在所选 USB 驱动器上</string>
+    <string name="destinations_error_invalid_email">不是有效的电子邮件地址</string>
+    <string name="destinations_error_needs_bucket">请输入存储桶名称</string>
+    <string name="destinations_error_invalid_choice">请选择提供的值之一</string>
+
+    <!-- rclone guided setup -->
+    <string name="rclone_setup_title">rclone 设置</string>
+    <string name="rclone_setup_pick_provider">选择提供商</string>
+    <string name="rclone_setup_tool_missing">此设备上没有 rclone。你仍可保存无需密码编码的远程并编辑 rclone.conf，但在安装 rclone 之前连接会失败。</string>
+    <string name="rclone_setup_tool_ok">使用 %1$s</string>
+    <string name="rclone_setup_existing_title">已配置的远程</string>
+    <string name="rclone_setup_existing_hint">此处从不显示密钥。</string>
+    <string name="rclone_setup_use_remote">用作目标位置</string>
+    <string name="rclone_setup_steps_title">步骤</string>
+    <string name="rclone_setup_step_number">%1$d.</string>
+    <string name="rclone_setup_authorize_label">要在电脑上运行的命令</string>
+    <string name="rclone_setup_copy">复制命令</string>
+    <string name="rclone_setup_fields_title">设置</string>
+    <string name="rclone_setup_name_hint">DFTB 和 rclone 用于此远程的名称</string>
+    <string name="rclone_setup_name_taken">已存在同名远程，将被替换</string>
+    <string name="rclone_setup_optional">%1$s（可选）</string>
+    <string name="rclone_setup_save">保存远程</string>
+    <string name="rclone_setup_saved">远程已保存</string>
+    <string name="rclone_setup_fix_errors">请先修正高亮的字段。</string>
+    <string name="rclone_setup_error_obscure_tool">此提供商的密码必须由 rclone 编码，但 rclone 不可用。请安装 rclone 后重试。</string>
+    <string name="rclone_setup_error_not_number">请输入数字</string>
+    <string name="rclone_setup_error_token">粘贴的令牌无效</string>
+    <string name="rclone_setup_error_need_one_of">请至少填写其中一项</string>
+    <string name="rclone_setup_error_unknown_field">未知设置</string>
+    <string name="rclone_setup_warnings_title">警告</string>
+    <string name="rclone_setup_warning_no_refresh">此令牌没有刷新令牌，因此过期后该远程将停止工作。</string>
+    <string name="rclone_setup_offer_destination">现在创建使用“%1$s”的备份目标位置吗？</string>
+    <string name="rclone_setup_create_destination">创建目标位置</string>
+    <string name="rclone_setup_not_now">暂不</string>
+    <string name="rclone_setup_destination_for">rclone 远程“%1$s”的目标位置</string>
+    <string name="rclone_setup_create">创建</string>
+
+    <!-- rclone token check -->
+    <string name="rclone_token_valid">令牌看起来有效。</string>
+    <string name="rclone_token_expiry">访问令牌到期时间：%1$s</string>
+    <string name="rclone_token_empty">请先粘贴令牌。</string>
+    <string name="rclone_token_not_json">这不是 rclone authorize 输出的 JSON 块。</string>
+    <string name="rclone_token_missing_access">令牌缺少 access_token。</string>
+    <string name="rclone_token_missing_type">令牌缺少 token_type。</string>
+    <string name="rclone_token_bad_expiry">无法读取令牌的到期日期。</string>
+
+    <!-- Raw rclone.conf editor -->
+    <string name="rclone_editor_title">编辑 rclone.conf</string>
+    <string name="rclone_editor_label">rclone.conf</string>
+    <string name="rclone_editor_placeholder">[myremote]\ntype = s3\n…</string>
+    <string name="rclone_editor_secrets_warning">编辑时密码和令牌以明文显示。此界面已禁止截屏和录屏。</string>
+    <string name="rclone_editor_unsaved">有未保存的更改</string>
+    <string name="rclone_editor_validate">验证</string>
+    <string name="rclone_editor_save">保存</string>
+    <string name="rclone_editor_restore">还原为上一版本</string>
+    <string name="rclone_editor_restore_message">用上次更改前保存的版本替换当前配置吗？未保存的修改将丢失。</string>
+    <string name="rclone_editor_restored">已还原上一版本。</string>
+    <string name="rclone_editor_no_previous">没有可还原的上一版本。</string>
+    <string name="rclone_editor_valid">未发现错误。</string>
+    <string name="rclone_editor_invalid">配置有错误，未保存。</string>
+    <string name="rclone_editor_saved">rclone.conf 已保存。</string>
+    <string name="rclone_editor_load_failed">无法从安全存储加载 rclone 配置。</string>
+    <string name="rclone_editor_retry">重试</string>
+    <string name="rclone_editor_no_issues">未发现问题。</string>
+    <string name="rclone_editor_issue_summary">错误：%1$d · 警告：%2$d</string>
+    <string name="rclone_editor_issue_line">第 %1$d 行：%2$s</string>
+    <string name="rclone_editor_error">错误</string>
+    <string name="rclone_editor_warning">警告</string>
+    <string name="rclone_editor_discard_title">放弃更改？</string>
+    <string name="rclone_editor_discard_message">你对 rclone.conf 的修改尚未保存。</string>
+    <string name="rclone_editor_discard">放弃</string>
+    <string name="rclone_editor_keep_editing">继续编辑</string>
+
+    <!-- rclone.conf issue codes (RcloneIniIssue.Code) -->
+    <string name="rclone_issue_malformed_line">不是 [section]、key = value 或注释行</string>
+    <string name="rclone_issue_key_outside_section">设置出现在任何 [section] 之前</string>
+    <string name="rclone_issue_invalid_section_name">远程名称无效</string>
+    <string name="rclone_issue_duplicate_section">此远程被定义了两次</string>
+    <string name="rclone_issue_duplicate_key">此设置在该远程中出现了两次</string>
+    <string name="rclone_issue_empty_key">设置没有名称</string>
+    <string name="rclone_issue_missing_type">远程缺少 type = 行</string>
+    <string name="rclone_issue_unknown_type">未知的后端类型（若你的 rclone 版本支持则无妨）</string>
+
+</resources>

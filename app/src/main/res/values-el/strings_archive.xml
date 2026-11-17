@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="archive_error_unsafe_path">Ένα στοιχείο έχει μη ασφαλή διαδρομή (απόλυτη, \"..\" ή μη έγκυρους χαρακτήρες) και απορρίφθηκε.</string>
+    <string name="archive_error_single_item">Τα αντίγραφα ασφαλείας ωμής αντιγραφής και εικόνας δίσκου περιέχουν ακριβώς ένα αρχείο ή ροή.</string>
+    <string name="archive_error_size_mismatch">Ένα αρχείο άλλαξε μέγεθος κατά τη δημιουργία του αντιγράφου.</string>
+    <string name="archive_error_codec_unavailable">Η επιλεγμένη συμπίεση δεν είναι διαθέσιμη σε αυτήν τη συσκευή. Επιλέξτε άλλη μέθοδο συμπίεσης.</string>
+    <string name="archive_error_unsupported_format">Αυτή η μορφή αντιγράφου ασφαλείας δεν μπορεί να ανοιχτεί ως αρχείο συμπίεσης.</string>
+    <string name="archive_error_truncated">Το αρχείο αντιγράφου ασφαλείας είναι ελλιπές. Ίσως δεν ολοκληρώθηκε η μεταφόρτωση ή η αντιγραφή.</string>
+    <string name="archive_error_writer_state">Το αρχείο συμπίεσης είχε ήδη ολοκληρωθεί ή κλείσει.</string>
+
+</resources>

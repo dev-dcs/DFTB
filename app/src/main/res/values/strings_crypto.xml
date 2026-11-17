@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Backup encryption and checksums (core/pipeline/crypto, core/pipeline/checksum): user-facing
+     explanations of CipherIntegrityException.Reason and CipherKeyUnavailableException.Reason,
+     mapped by labelRes() in CipherErrorLabels.kt. Technical detail stays in exception messages. -->
+<resources>
+
+    <!-- CipherIntegrityException.Reason -->
+    <string name="crypto_reason_wrong_key">Wrong passphrase or key. The backup could not be unlocked.</string>
+    <string name="crypto_reason_key_type_mismatch">This backup was encrypted with a different kind of key (passphrase vs. saved key).</string>
+    <string name="crypto_reason_tampered">The encrypted backup is damaged or was modified.</string>
+    <string name="crypto_reason_truncated">The encrypted backup is incomplete; its end is missing.</string>
+    <string name="crypto_reason_trailing_data">The encrypted backup has unexpected extra data at its end.</string>
+    <string name="crypto_reason_bad_header">This file is not a DFTB encrypted backup, or its header is damaged.</string>
+    <string name="crypto_reason_insufficient_memory">This device does not have enough memory to unlock this backup.</string>
+    <string name="crypto_reason_unsupported_version">This backup was encrypted by a newer version of the app.</string>
+
+    <!-- CipherKeyUnavailableException.Reason -->
+    <string name="crypto_key_not_found">The saved encryption key for this backup is not on this device.</string>
+    <string name="crypto_key_invalid_entry">The saved encryption key is damaged or is not an encryption key.</string>
+    <string name="crypto_key_vault_error">The secure key store could not be read.</string>
+
+    <!-- Checksum verification -->
+    <string name="checksum_verified">Checksum verified (%1$s).</string>
+    <string name="checksum_mismatch">Checksum mismatch (%1$s). The file differs from what was backed up.</string>
+    <string name="checksum_sidecar_missing">No checksum file was found for this backup.</string>
+    <string name="checksum_sidecar_malformed">The checksum file could not be read.</string>
+</resources>

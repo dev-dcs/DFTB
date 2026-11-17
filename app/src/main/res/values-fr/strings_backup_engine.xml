@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="backup_engine_planning">Préparation de la sauvegarde…</string>
+    <string name="backup_engine_preflight">Vérification de l\'espace libre…</string>
+    <string name="backup_engine_uploading">Envoi de %1$s…</string>
+    <string name="backup_engine_verifying">Vérification de %1$s…</string>
+    <string name="backup_engine_writing_manifest">Écriture de l\'index de la sauvegarde…</string>
+    <plurals name="backup_engine_completed">
+        <item quantity="one">%1$d artefact sauvegardé.</item>
+        <item quantity="many">%1$d artefacts sauvegardés.</item>
+        <item quantity="other">%1$d artefacts sauvegardés.</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="one">%1$d avertissement.</item>
+        <item quantity="many">%1$d avertissements.</item>
+        <item quantity="other">%1$d avertissements.</item>
+    </plurals>
+    <string name="backup_engine_cancelled">Sauvegarde annulée. Les fichiers partiels ont été supprimés.</string>
+    <string name="backup_engine_error_no_destination">Ce profil n\'a pas de destination. Choisissez où enregistrer les sauvegardes.</string>
+    <string name="backup_engine_error_destination_not_found">La destination du profil n\'existe plus.</string>
+    <string name="backup_engine_error_nothing">Rien n\'est sélectionné pour la sauvegarde.</string>
+    <string name="backup_engine_error_sources_unavailable">Aucune des données sélectionnées ne peut être sauvegardée dans le mode actuel.</string>
+    <string name="backup_engine_error_twrp_encryption">Les sauvegardes compatibles TWRP ne peuvent pas être chiffrées. Désactivez le chiffrement ou la compatibilité TWRP.</string>
+    <string name="backup_engine_error_masking_needs_encryption">Masquer les noms de fichiers nécessite le chiffrement. Activez le chiffrement AES-256-GCM ou désactivez le masquage des noms.</string>
+    <string name="backup_engine_error_resume_folder">Le dossier de sauvegarde à reprendre a un nom non valide.</string>
+    <string name="backup_engine_error_destination_space">La destination n\'a pas assez d\'espace libre pour cette sauvegarde.</string>
+    <string name="backup_engine_error_staging_space">Cet appareil n\'a pas assez d\'espace libre pour préparer la sauvegarde localement.</string>
+    <string name="backup_engine_error_encryption_unsupported">Ce mode de chiffrement n\'est pas encore pris en charge. Utilisez AES-256-GCM.</string>
+    <string name="backup_engine_error_key_missing">La clé de chiffrement ou la phrase secrète de ce profil est introuvable.</string>
+    <string name="backup_engine_error_transfer_unsupported">Le mode de transfert sélectionné n\'est pas disponible pour cette destination.</string>
+    <string name="backup_engine_error_source">Certaines données n\'ont pas pu être lues.</string>
+    <string name="backup_engine_error_source_shape">Une source de partition a produit plus d\'une image.</string>
+    <string name="backup_engine_error_storage">L\'écriture vers la destination a échoué.</string>
+    <string name="backup_engine_error_verify">Un fichier stocké ne correspond pas à ce qui a été écrit. Il est peut-être corrompu.</string>
+    <string name="backup_engine_error_manifest">Impossible d\'écrire l\'index de la sauvegarde.</string>
+    <string name="backup_engine_error_all_failed">Aucune partie de la sauvegarde n\'a pu être terminée.</string>
+    <string name="backup_engine_error_internal">La sauvegarde s\'est arrêtée à cause d\'une erreur inattendue.</string>
+    <string name="backup_engine_warning_space_unknown">Impossible de vérifier l\'espace libre.</string>
+    <string name="backup_engine_warning_space_overridden">Démarré malgré le manque d\'espace libre.</string>
+    <string name="backup_engine_warning_format_substituted">Le format choisi ne s\'applique pas ici ; un format compatible a été utilisé.</string>
+    <string name="backup_engine_warning_source_unavailable">Ignoré : indisponible dans le mode actuel.</string>
+    <string name="backup_engine_warning_source_partial">Sauvegardé en partie seulement.</string>
+    <string name="backup_engine_warning_twrp_verbatim">Le dossier TWRP est stocké non compressé et avec des noms lisibles pour que TWRP puisse le restaurer.</string>
+    <string name="backup_engine_warning_twrp_not_device">TWRP ne peut restaurer qu\'à partir du stockage de l\'appareil ou d\'un support USB. Copiez-y le dossier TWRP avant la restauration.</string>
+    <string name="backup_engine_warning_estimate_failed">Impossible d\'estimer la taille à l\'avance.</string>
+    <string name="backup_engine_warning_size_mismatch">La taille des données a changé pendant leur lecture.</string>
+    <string name="backup_engine_warning_artifact_failed">Cette partie de la sauvegarde a échoué.</string>
+    <string name="backup_engine_warning_hash_records">Impossible d\'enregistrer les sommes de contrôle par fichier dans le catalogue.</string>
+    <string name="backup_engine_warning_checkpoint">Impossible d\'enregistrer les informations de reprise.</string>
+    <string name="backup_engine_warning_cleanup">Impossible de supprimer un fichier temporaire.</string>
+    <string name="backup_engine_warning_resume_skipped">Déjà terminé lors d\'une tentative précédente ; ignoré.</string>
+    <string name="backup_engine_warning_resume_unindexed">Terminé précédemment, mais aucun index de sauvegarde antérieur ne le décrit.</string>
+    <string name="backup_engine_warning_prior_manifest">Impossible de lire un index de sauvegarde antérieur de ce dossier.</string>
+
+</resources>

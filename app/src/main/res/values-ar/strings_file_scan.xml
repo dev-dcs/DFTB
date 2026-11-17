@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File discovery (core/discovery/files): filter validation, access blockers, warnings, walkers.
+     Mapped from enums/sealed types by FileScanText. -->
+<resources>
+
+    <!-- FilterProblem -->
+    <string name="file_scan_problem_include_regex">نمط التضمين ليس تعبيرًا نمطيًا صالحًا: %1$s</string>
+    <string name="file_scan_problem_exclude_regex">نمط الاستبعاد ليس تعبيرًا نمطيًا صالحًا: %1$s</string>
+    <string name="file_scan_problem_negative_min">لا يمكن أن يكون الحجم الأدنى سالبًا.</string>
+    <string name="file_scan_problem_negative_max">لا يمكن أن يكون الحجم الأقصى سالبًا.</string>
+    <string name="file_scan_problem_size_inverted">الحجم الأدنى أكبر من الحجم الأقصى.</string>
+    <string name="file_scan_problem_date_empty">يجب أن يسبق تاريخ «عُدّل بعد» تاريخ «عُدّل قبل».</string>
+    <string name="file_scan_problem_extension_conflict">هذه الامتدادات مضمّنة ومستبعدة معًا: %1$s</string>
+
+    <!-- BlockReason -->
+    <string name="file_scan_block_all_files">يتطلب هذا المجلد \"الوصول إلى جميع الملفات\" أو وضع Shizuku/Root.</string>
+    <string name="file_scan_block_media_permission">اسمح بالوصول إلى الصور أو الفيديو أو الصوت لمسح هذا المجلد.</string>
+    <string name="file_scan_block_non_media">تتطلب المستندات وغيرها من الملفات غير الوسائط \"الوصول إلى جميع الملفات\" أو وضع Shizuku/Root.</string>
+    <string name="file_scan_block_app_sandbox">لا يمكن قراءة مجلدي Android/data وAndroid/obb الخاصين بالتطبيقات الأخرى إلا في وضع Shizuku أو Root.</string>
+    <string name="file_scan_block_root">لا يمكن قراءة هذا الموقع إلا في وضع Root.</string>
+    <string name="file_scan_block_not_readable">لا يستطيع التطبيق قراءة هذا الموقع. جرّب وضع Shizuku أو Root.</string>
+    <string name="file_scan_block_saf">فُقد الوصول إلى هذا المجلد. اخترْه مرة أخرى.</string>
+
+    <!-- RootProblem -->
+    <string name="file_scan_root_not_found">المجلد غير موجود.</string>
+    <string name="file_scan_root_not_readable">تعذّرت قراءة المجلد.</string>
+    <string name="file_scan_root_not_directory">هذا الموقع ليس مجلدًا.</string>
+    <string name="file_scan_root_tool_failed">فشلت أداة المسح في الوضع الحالي.</string>
+
+    <!-- ScanWarning -->
+    <string name="file_scan_warning_partial_media">لا تظهر إلا الصور ومقاطع الفيديو التي اخترتها. اسمح بالوصول الكامل لتضمينها جميعًا.</string>
+    <string name="file_scan_warning_find_exit">انتهى المسح المميّز بخطأ؛ قد تكون النتائج ناقصة.</string>
+    <string name="file_scan_warning_unparseable">تعذّرت قراءة بعض أسماء الملفات من مخرجات المسح (مثل الأسماء التي تحتوي على فواصل أسطر).</string>
+    <string name="file_scan_warning_find_unsupported">صدفة الجهاز لا تحتوي على أمر \"find\" صالح للاستخدام.</string>
+
+    <!-- AccessRequirement -->
+    <string name="file_scan_req_all_files">منح \"الوصول إلى جميع الملفات\"</string>
+    <string name="file_scan_req_permission">منح إذن الوسائط</string>
+    <string name="file_scan_req_shizuku">التبديل إلى وضع Shizuku أو Root</string>
+    <string name="file_scan_req_root">التبديل إلى وضع Root</string>
+    <string name="file_scan_req_saf">اختيار المجلد مرة أخرى</string>
+
+    <!-- WalkerKind -->
+    <string name="file_scan_walker_nio">وصول مباشر إلى الملفات</string>
+    <string name="file_scan_walker_saf">إطار الوصول إلى التخزين</string>
+    <string name="file_scan_walker_find">صدفة مميّزة (find)</string>
+    <string name="file_scan_walker_media_store">مكتبة الوسائط</string>
+
+</resources>

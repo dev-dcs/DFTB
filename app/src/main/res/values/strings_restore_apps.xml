@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- App restore (core/restore/apps): refusals, skipped parts and warnings. %1$s is the app label or package name unless noted. -->
+<resources>
+
+    <!-- Unit-level refusals -->
+    <string name="restore_app_no_package">This backup unit does not contain an app.</string>
+    <string name="restore_app_multiple_packages">This app backup contains several packages; only single-app backups can be restored.</string>
+    <string name="restore_app_layout_unsupported">This app backup is stored in a form apps cannot be restored from (only archive and file-copy app backups can).</string>
+    <string name="restore_app_no_manifest">The backup of %1$s has no app manifest, so it cannot be restored.</string>
+    <string name="restore_app_manifest_unreadable">The app manifest of %1$s could not be read: %2$s</string>
+    <string name="restore_app_manifest_mismatch">The app manifest belongs to %2$s, not %1$s; nothing was restored.</string>
+    <string name="restore_app_refused_self">DFTB does not restore itself (%1$s) unless protected packages are explicitly allowed.</string>
+    <string name="restore_app_refused_privilege_provider">%1$s provides root or Shizuku access. Restoring it is blocked unless protected packages are explicitly allowed.</string>
+    <string name="restore_app_warn_system">%1$s is a system component. Restoring it can make the system unstable.</string>
+    <string name="restore_app_signature_mismatch">The installed %1$s is signed with a different key than the backup. The restore was refused; allow a signature mismatch to restore only its data.</string>
+    <string name="restore_app_signature_mismatch_override">%1$s is signed with a different key than the backup. Its APK was not installed and only its data was restored, as you allowed.</string>
+    <string name="restore_app_signature_unknown">The signing key of %1$s could not be compared with the backup.</string>
+    <string name="restore_app_user_needs_privilege">Restoring into Android user %1$d needs Root or Shizuku mode.</string>
+    <string name="restore_app_user_missing">Android user %1$d does not exist on this device.</string>
+    <string name="restore_app_unexpected">Restoring %1$s failed: %2$s</string>
+    <string name="restore_app_nothing_restorable">Nothing of %1$s can be restored in the current mode with the selected options.</string>
+
+    <!-- APK -->
+    <string name="restore_app_install_permission">DFTB is not allowed to install apps. Allow \"Install unknown apps\" for DFTB, then restore %1$s again.</string>
+    <string name="restore_app_install_failed">Installing %1$s failed: %2$s</string>
+    <string name="restore_app_install_declined">Installing %1$s was declined.</string>
+    <string name="restore_app_install_timeout">Nobody confirmed the installation of %1$s in time.</string>
+    <string name="restore_app_apk_missing_parts">The backup of %1$s lacks APK parts (%2$s); the APK was not installed.</string>
+    <string name="restore_app_same_version">%1$s %2$s is already installed; its APK was not reinstalled.</string>
+    <string name="restore_app_installed_newer">A newer version of %1$s is installed than the one in the backup. The installed APK was kept and the older data is restored onto it.</string>
+    <string name="restore_app_not_installed">%1$s is not installed, so its data cannot be restored.</string>
+    <string name="restore_app_data_skipped_after_install_failure">Because installing %1$s failed, its data was not restored.</string>
+
+    <!-- Data -->
+    <string name="restore_app_data_needs_root">Private data of %1$s can only be restored in Root mode; it was skipped.</string>
+    <string name="restore_app_external_needs_privilege">Shared-storage data of %1$s (Android/data, media, obb) needs Root or Shizuku mode; it was skipped.</string>
+    <string name="restore_app_data_skipped_existing">%1$s already has %2$s; it was kept (conflict policy: skip).</string>
+    <string name="restore_app_data_merged">%2$s of %1$s was merged into the existing data (conflict policy: keep both); files the backup does not contain were left in place.</string>
+    <string name="restore_app_merge_refused_symlink">%2$s of %1$s contains symbolic links, so the backup cannot be merged into it safely; it was skipped. Restore with the overwrite policy instead.</string>
+    <string name="restore_app_data_dir_missing">%2$s of %1$s does not exist on this device (the user may be locked); that part was skipped.</string>
+    <string name="restore_app_data_failed">Restoring %2$s of %1$s failed: %3$s</string>
+    <string name="restore_app_owner_failed">Ownership of %2$s of %1$s could not be fixed: %3$s</string>
+    <string name="restore_app_owner_unknown">The owner of %2$s for %1$s could not be determined; files keep the owner recorded in the backup.</string>
+    <string name="restore_app_selinux_failed">Security labels of %2$s of %1$s could not be reset; the app may be unable to read that data.</string>
+    <string name="restore_app_selinux_fallback">restorecon is unavailable; labels of %2$s of %1$s were set from the backup with categories recomputed for the new uid.</string>
+    <string name="restore_app_special_dropped">%2$d device or pipe entries of %1$s were not restored.</string>
+
+    <!-- Permissions -->
+    <string name="restore_app_permissions_not_granted">%2$d permission(s) of %1$s could not be granted: %3$s</string>
+    <string name="restore_app_permissions_need_privilege">Permissions of %1$s cannot be re-granted in Standard mode; grant them in the system settings.</string>
+
+    <!-- Part names (used as %2$s above and as progress item names) -->
+    <string name="restore_app_part_apk">APK</string>
+    <string name="restore_app_part_ce">app data</string>
+    <string name="restore_app_part_de">device-protected data</string>
+    <string name="restore_app_part_cache">cache</string>
+    <string name="restore_app_part_external">Android/data</string>
+    <string name="restore_app_part_media">Android/media</string>
+    <string name="restore_app_part_obb">Android/obb</string>
+    <string name="restore_app_progress_item">%1$s: %2$s</string>
+
+    <!-- Preflight -->
+    <string name="restore_app_preflight_root_for_data">Private app data will only be restored in Root mode.</string>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ======================= App shell: navigation ======================= -->
+    <string name="shell_nav_dashboard">Dashboard</string>
+    <string name="shell_nav_profiles">Profiles</string>
+    <string name="shell_nav_restore">Restore</string>
+    <string name="shell_nav_destinations">Destinations</string>
+    <string name="shell_nav_settings">Settings</string>
+    <string name="shell_back">Back</string>
+    <string name="shell_more_options">More options</string>
+    <string name="shell_state_on">On</string>
+    <string name="shell_state_off">Off</string>
+
+    <!-- Install confirmations requested by an app restore -->
+    <string name="shell_install_waiting_one">%1$s is waiting for you to confirm its installation.</string>
+    <plurals name="shell_install_waiting_many">
+        <item quantity="one">%1$s and %2$d more app are waiting for you to confirm their installation.</item>
+        <item quantity="other">%1$s and %2$d more apps are waiting for you to confirm their installation.</item>
+    </plurals>
+    <string name="shell_install_review">Review</string>
+
+    <!-- ======================= Dashboard ======================= -->
+    <string name="shell_dashboard_title">Dashboard</string>
+    <string name="shell_open_job_monitor">Open job monitor</string>
+    <string name="shell_menu_system_info">System info</string>
+    <string name="shell_menu_discovery">Discovery</string>
+    <string name="shell_menu_schedules">Schedules</string>
+    <string name="shell_menu_licenses">Open-source licenses</string>
+
+    <string name="shell_section_active_jobs">Running now</string>
+    <string name="shell_section_profiles">Backup profiles</string>
+    <string name="shell_section_upcoming">Next scheduled runs</string>
+    <string name="shell_section_destinations">Destination health</string>
+
+    <string name="shell_action_new_profile">New profile</string>
+    <string name="shell_action_create_profile">Create a profile</string>
+    <string name="shell_action_restore">Restore</string>
+    <string name="shell_action_add_destination">Add destination</string>
+
+    <!-- Profiles card -->
+    <string name="shell_profiles_empty_title">No backup profiles yet</string>
+    <string name="shell_profiles_empty_body">A profile says what to back up, where it goes and when it runs. Create one to make your first backup.</string>
+    <plurals name="shell_profiles_show_more">
+        <item quantity="one">Show %1$d more profile</item>
+        <item quantity="other">Show %1$d more profiles</item>
+    </plurals>
+    <string name="shell_profiles_manage">Manage profiles</string>
+    <string name="shell_profile_destination">To %1$s</string>
+    <string name="shell_profile_destination_missing">Its destination was deleted</string>
+    <string name="shell_profile_no_destination">No destination selected</string>
+    <string name="shell_profile_disabled">Disabled</string>
+    <string name="shell_profile_next">Next: %1$s</string>
+    <string name="shell_back_up_now">Back up now</string>
+    <string name="shell_running">Running…</string>
+    <string name="shell_needs_passphrase">Needs passphrase</string>
+    <string name="shell_set_destination">Choose destination</string>
+    <string name="shell_open_profile">Open profile</string>
+    <string name="shell_open_profiles">Go to Profiles</string>
+
+    <string name="shell_status_never">Never backed up</string>
+    <string name="shell_status_running">Running</string>
+    <string name="shell_status_success">Succeeded</string>
+    <string name="shell_status_warnings">Completed with warnings</string>
+    <string name="shell_status_failed">Failed</string>
+    <string name="shell_status_cancelled">Cancelled</string>
+    <string name="shell_status_interrupted">Interrupted</string>
+
+    <string name="shell_backup_queued">Backup of %1$s queued. It starts as soon as its network requirement is met.</string>
+    <string name="shell_resume_queued">The backup of %1$s will continue where it stopped.</string>
+    <string name="shell_queue_failed">Could not queue the backup of %1$s. Try again.</string>
+
+    <!-- Upcoming card -->
+    <string name="shell_upcoming_empty">No backups are scheduled. Add a schedule to a profile to run it automatically.</string>
+    <string name="shell_upcoming_at">%1$s (%2$s)</string>
+    <string name="shell_upcoming_expected">Expected %1$s · not queued yet</string>
+    <string name="shell_upcoming_retry">Retrying %1$s (attempt %2$d)</string>
+    <string name="shell_upcoming_queued">Queued, waiting for its conditions</string>
+    <string name="shell_upcoming_see_schedules">See schedules</string>
+    <string name="shell_constraints">Needs: %1$s</string>
+    <string name="shell_constraint_unmetered">unmetered network</string>
+    <string name="shell_constraint_network">network</string>
+    <string name="shell_constraint_charging">charging</string>
+    <string name="shell_constraint_idle">device idle</string>
+
+    <!-- Destination health card -->
+    <string name="shell_destinations_empty">No destinations yet. Add one so your backups have somewhere to go.</string>
+    <string name="shell_destinations_manage">Manage destinations</string>
+    <string name="shell_destination_verified">Checked %1$s</string>
+    <string name="shell_destination_never_verified">Never checked. Run a connection test to see its free space.</string>
+    <string name="shell_destination_stale">Last checked %1$s. Test it again for current free space.</string>
+    <string name="shell_destination_space">%1$s free of %2$s</string>
+    <string name="shell_destination_space_free">%1$s free</string>
+    <string name="shell_destination_space_unknown">Capacity unknown</string>
+    <string name="shell_destination_low_space">Low on space</string>
+
+    <!-- Warnings -->
+    <string name="shell_warn_elevation_title">%1$s access is not available</string>
+    <string name="shell_warn_elevation_root_body">Root is not granted to DFTB right now. App data, partitions and other privileged items cannot be backed up or restored until it is.</string>
+    <string name="shell_warn_elevation_shizuku_body">The Shizuku service is not running or DFTB lost its permission. Start Shizuku (it stops at every reboot) to back up app data.</string>
+    <string name="shell_warn_check_again">Check again</string>
+    <string name="shell_warn_open_settings">Change mode</string>
+    <string name="shell_warn_notifications_title">Notifications are off</string>
+    <string name="shell_warn_notifications_body">You will not see backup progress, failures or requests for your passphrase while DFTB is closed.</string>
+    <string name="shell_warn_allow">Allow</string>
+    <string name="shell_warn_passphrase_title">%1$s is waiting for its passphrase</string>
+    <string name="shell_warn_passphrase_body">This profile encrypts with a passphrase that is never stored, so its interrupted backup cannot continue on its own. Back it up from Profiles and enter the passphrase when asked.</string>
+    <string name="shell_warn_interrupted_title">The backup of %1$s was interrupted</string>
+    <string name="shell_warn_interrupted_resumable">It can continue where it stopped instead of starting over.</string>
+    <string name="shell_warn_interrupted_stale">It can no longer be continued: %1$s. The next run starts a new backup.</string>
+    <string name="shell_skip_too_old">it stopped more than two days ago</string>
+    <string name="shell_skip_destination_missing">its destination was removed</string>
+    <string name="shell_skip_profile_disabled">the profile is disabled</string>
+    <string name="shell_skip_other">its saved progress cannot be used</string>
+    <string name="shell_warn_resume">Resume</string>
+    <string name="shell_warn_job_interrupted_title">%1$s interrupted</string>
+    <string name="shell_warn_restore_interrupted_body">Restores never continue on their own. Items restored before the interruption stay in place; start the restore again from Restore when you are ready.</string>
+    <string name="shell_warn_job_interrupted_body">This job does not continue on its own. Start it again when you are ready.</string>
+    <string name="shell_warn_failed_title">The last backup of %1$s failed</string>
+    <string name="shell_warn_failed_no_details">No details were recorded.</string>
+    <string name="shell_warn_retry">Retry</string>
+
+    <!-- ======================= Job progress ======================= -->
+    <string name="shell_job_title">%1$s · %2$s</string>
+    <string name="shell_job_percent">%1$d%%</string>
+    <string name="shell_job_cancelling">Cancelling…</string>
+    <string name="shell_job_progress_bytes">%1$s of %2$s</string>
+    <string name="shell_job_progress_items">%1$d of %2$d items</string>
+    <string name="shell_job_items_done">%1$d items done</string>
+    <string name="shell_job_rate">%1$s/s</string>
+    <string name="shell_job_eta">%1$s left</string>
+    <string name="shell_job_eta_unknown">Estimating time left…</string>
+    <string name="shell_job_elapsed">elapsed %1$s</string>
+    <string name="shell_job_current_item">Now: %1$s</string>
+    <string name="shell_duration_days">%1$d d %2$d h</string>
+    <string name="shell_duration_hours">%1$d h %2$d min</string>
+    <string name="shell_duration_minutes">%1$d min %2$d s</string>
+    <string name="shell_duration_seconds">%1$d s</string>
+
+    <!-- ======================= Job monitor ======================= -->
+    <string name="shell_monitor_title">Job monitor</string>
+    <string name="shell_monitor_title_all">All jobs</string>
+    <string name="shell_monitor_no_jobs">No jobs are running. Recent log lines from the app still appear below.</string>
+    <string name="shell_monitor_job_gone">This job is no longer running and no record of it was found.</string>
+    <string name="shell_monitor_finished">Finished %1$s</string>
+    <string name="shell_monitor_cancel">Cancel</string>
+    <string name="shell_monitor_filter_job">Show this job\'s log</string>
+
+    <string name="shell_record_started">Started</string>
+    <string name="shell_record_finished">Finished</string>
+    <string name="shell_record_duration">Duration</string>
+    <string name="shell_record_processed">Data processed</string>
+    <string name="shell_record_items">Items</string>
+    <string name="shell_record_stored">Stored on destination</string>
+    <string name="shell_record_average_rate">Average speed</string>
+
+    <string name="shell_cancel_backup_title">Cancel this backup?</string>
+    <string name="shell_cancel_backup_body">The backup of %1$s stops now and is recorded as cancelled. Items already written stay on the destination as an incomplete backup; the next run starts a new one.</string>
+    <string name="shell_cancel_restore_title">Cancel this restore?</string>
+    <string name="shell_cancel_restore_body">Restoring %1$s stops now. Items already restored stay on the device as they are; the remaining items are not restored. You can start the restore again later.</string>
+    <string name="shell_cancel_job_title">Cancel this job?</string>
+    <string name="shell_cancel_job_body">%1$s stops now and is recorded as cancelled. It does not continue on its own.</string>
+    <string name="shell_cancel_confirm">Cancel job</string>
+    <string name="shell_cancel_keep">Keep running</string>
+
+    <!-- Terminal -->
+    <string name="shell_terminal_title">Log</string>
+    <string name="shell_terminal_follow">Follow new log lines</string>
+    <string name="shell_terminal_jump">Jump to the latest line</string>
+    <string name="shell_terminal_copy">Copy log</string>
+    <string name="shell_terminal_copied">Log copied</string>
+    <string name="shell_terminal_share">Share log</string>
+    <string name="shell_terminal_share_subject">DFTB log: %1$s</string>
+    <string name="shell_terminal_share_failed">No app can receive the log.</string>
+    <string name="shell_terminal_empty">No log lines yet.</string>
+    <string name="shell_terminal_filter_job">This job</string>
+    <string name="shell_terminal_filter_all">All lines</string>
+    <string name="shell_terminal_level_debug">Debug</string>
+    <string name="shell_terminal_level_info">Info</string>
+    <string name="shell_terminal_level_warn">Warnings</string>
+    <string name="shell_log_header_job">Job %1$s (%2$s)</string>
+    <string name="shell_log_header_all">All jobs</string>
+    <string name="shell_progress_working">Working</string>
+    <string name="shell_loading">Loading</string>
+    <string name="shell_monitor_job_selected">Selected</string>
+    <string name="shell_warn_severity_error">Error</string>
+    <string name="shell_warn_severity_caution">Warning</string>
+    <string name="shell_warn_severity_info">Information</string>
+</resources>

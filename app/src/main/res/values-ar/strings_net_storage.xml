@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FTP/FTPS and WebDAV destination settings (core/storage/ftp, core/storage/webdav).
+     Labels for the protocol-specific DestinationConfig.options keys. -->
+<resources>
+
+    <!-- FTPS mode (option "ftps_mode") -->
+    <string name="net_storage_ftps_mode_label">وضع FTPS</string>
+    <string name="net_storage_ftps_mode_explicit">صريح (AUTH TLS، عادةً المنفذ 21)</string>
+    <string name="net_storage_ftps_mode_implicit">ضمني (TLS منذ الاتصال، عادةً المنفذ 990)</string>
+
+    <!-- WebDAV scheme (option "scheme") -->
+    <string name="net_storage_webdav_scheme_label">البروتوكول</string>
+    <string name="net_storage_webdav_scheme_https">HTTPS (مشفر)</string>
+    <string name="net_storage_webdav_scheme_http">HTTP (غير مشفر)</string>
+    <string name="net_storage_webdav_host_hint">اسم الخادم أو عنوان URL كاملًا مثل https://cloud.example.com/remote.php/dav/files/me</string>
+    <string name="net_storage_webdav_http_warning">سيتم إرسال كلمة المرور دون تشفير. استخدم HTTPS ما لم يكن هذا الخادم على شبكة تثق بها تمامًا.</string>
+    <string name="net_storage_webdav_auth_note">سجّل الدخول باسم مستخدم وكلمة مرور (HTTP Basic) أو برمز تطبيق. مصادقة Digest غير مدعومة.</string>
+
+    <!-- Timeouts (options "connect_timeout_s", "data_timeout_s", "io_timeout_s") -->
+    <string name="net_storage_connect_timeout_label">مهلة الاتصال (ثوانٍ)</string>
+    <string name="net_storage_io_timeout_label">مهلة النقل (ثوانٍ)</string>
+
+    <!-- Certificate pinning (option "tls_pin_sha256") -->
+    <string name="net_storage_tls_pin_label">بصمة الشهادة الموثوقة (SHA-256)</string>
+    <string name="net_storage_tls_pin_hint">اختياري. الصق بصمة SHA-256 لشهادة الخادم للوثوق بشهادة موقّعة ذاتيًا.</string>
+    <string name="net_storage_tls_pin_invalid">يجب أن تتكون البصمة من 64 حرفًا سداسيًا عشريًا.</string>
+
+    <!-- FTPS data-channel hint -->
+    <string name="net_storage_ftps_session_reuse_hint">رفض الخادم اتصال البيانات المشفر. إذا كان يشترط إعادة استخدام جلسة TLS (مثل require_ssl_reuse في vsftpd)، فأوقف هذا الخيار على الخادم.</string>
+</resources>

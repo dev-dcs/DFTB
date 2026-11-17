@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native CLI provisioning strings -->
+<resources>
+    <string name="provision_feature_remote_sync">المزامنة عن بُعد</string>
+    <string name="provision_feature_archiving">الأرشفة</string>
+    <string name="provision_feature_compression">الضغط</string>
+    <string name="provision_feature_encryption">التشفير</string>
+    <string name="provision_feature_core_utilities">الأدوات الأساسية</string>
+    <string name="provision_feature_integrity">السلامة</string>
+    <string name="provision_tool_rclone_purpose">يزامن النسخ الاحتياطية من وإلى مواقع بعيدة سحابية وشبكية مثل S3 وWebDAV وSFTP.</string>
+    <string name="provision_tool_busybox_purpose">يوفّر أدوات POSIX الأساسية بخيارات متسقة عبر الأجهزة.</string>
+    <string name="provision_tool_zstd_purpose">ضغط وفك ضغط Zstandard سريع للأرشيفات.</string>
+    <string name="provision_tool_xz_purpose">ضغط XZ/LZMA عالي النسبة للأرشيفات.</string>
+    <string name="provision_tool_pigz_purpose">ضغط gzip متوازٍ يستفيد من عدة أنوية في المعالج.</string>
+    <string name="provision_tool_openssl_purpose">يشفّر أرشيفات النسخ الاحتياطي ويفك تشفيرها بخوارزمية تشفير متماثل.</string>
+    <string name="provision_tool_tar_purpose">ينقل الملفات إلى أرشيفات POSIX tar ومنها كتدفق، مع الحفاظ على البيانات الوصفية.</string>
+    <string name="provision_tool_dftbtool_purpose">أداة مساعدة مضمّنة تحسب قيم التجزئة وتنسخ الملفات، وتثبت أن عملية الاستخراج والتنفيذ تعمل على هذا الجهاز.</string>
+    <string name="provision_tool_nsenter_purpose">يدخل إلى مساحات أسماء الربط (mount) ومعرّف العملية (PID) وغيرها الخاصة بالمضيف لكي ترى النسخ الاحتياطية عمليات ربط النظام الحقيقية تحت صلاحيات الجذر.</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- File discovery (core/discovery/files): filter validation, access blockers, warnings, walkers.
+     Mapped from enums/sealed types by FileScanText. -->
+<resources>
+
+    <!-- FilterProblem -->
+    <string name="file_scan_problem_include_regex">The include pattern is not a valid regular expression: %1$s</string>
+    <string name="file_scan_problem_exclude_regex">The exclude pattern is not a valid regular expression: %1$s</string>
+    <string name="file_scan_problem_negative_min">The minimum size cannot be negative.</string>
+    <string name="file_scan_problem_negative_max">The maximum size cannot be negative.</string>
+    <string name="file_scan_problem_size_inverted">The minimum size is larger than the maximum size.</string>
+    <string name="file_scan_problem_date_empty">The \"modified after\" date must be earlier than the \"modified before\" date.</string>
+    <string name="file_scan_problem_extension_conflict">These extensions are both included and excluded: %1$s</string>
+
+    <!-- BlockReason -->
+    <string name="file_scan_block_all_files">This folder needs \"All files access\", or Shizuku/Root mode.</string>
+    <string name="file_scan_block_media_permission">Allow access to photos, videos or audio to scan this folder.</string>
+    <string name="file_scan_block_non_media">Documents and other non-media files need \"All files access\", or Shizuku/Root mode.</string>
+    <string name="file_scan_block_app_sandbox">Other apps\' Android/data and Android/obb folders can only be read in Shizuku or Root mode.</string>
+    <string name="file_scan_block_root">This location can only be read in Root mode.</string>
+    <string name="file_scan_block_not_readable">This location is not readable by the app. Try Shizuku or Root mode.</string>
+    <string name="file_scan_block_saf">Access to this folder was lost. Pick the folder again.</string>
+
+    <!-- RootProblem -->
+    <string name="file_scan_root_not_found">The folder does not exist.</string>
+    <string name="file_scan_root_not_readable">The folder could not be read.</string>
+    <string name="file_scan_root_not_directory">The location is not a folder.</string>
+    <string name="file_scan_root_tool_failed">The scanning tool failed in the current mode.</string>
+
+    <!-- ScanWarning -->
+    <string name="file_scan_warning_partial_media">Only the photos and videos you selected are visible. Allow full access to include all of them.</string>
+    <string name="file_scan_warning_find_exit">The privileged scan ended with an error; the results may be incomplete.</string>
+    <string name="file_scan_warning_unparseable">Some file names could not be read from the scan output (for example names containing line breaks).</string>
+    <string name="file_scan_warning_find_unsupported">The device shell has no usable \"find\" command.</string>
+
+    <!-- AccessRequirement -->
+    <string name="file_scan_req_all_files">Grant \"All files access\"</string>
+    <string name="file_scan_req_permission">Grant media permission</string>
+    <string name="file_scan_req_shizuku">Switch to Shizuku or Root mode</string>
+    <string name="file_scan_req_root">Switch to Root mode</string>
+    <string name="file_scan_req_saf">Pick the folder again</string>
+
+    <!-- WalkerKind -->
+    <string name="file_scan_walker_nio">Direct file access</string>
+    <string name="file_scan_walker_saf">Storage Access Framework</string>
+    <string name="file_scan_walker_find">Privileged shell (find)</string>
+    <string name="file_scan_walker_media_store">Media library</string>
+
+</resources>

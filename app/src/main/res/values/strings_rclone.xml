@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- rclone storage (core/storage/rclone): guided provider setup (ProviderGuides) and its field
+     labels/hints. Steps may contain %1$s = the rclone backend type (e.g. "drive"). -->
+<resources>
+
+    <!-- Shared OAuth steps -->
+    <string name="rclone_guide_oauth_step_install">On a computer with a web browser, install rclone from rclone.org/downloads.</string>
+    <string name="rclone_guide_oauth_step_authorize">In a terminal on that computer run: rclone authorize \"%1$s\" — then sign in and allow access in the browser window that opens.</string>
+    <string name="rclone_guide_oauth_step_paste">Copy the JSON text rclone prints between the arrows (starting with { and ending with }) and paste it into the Token field below.</string>
+
+    <!-- S3: shared -->
+    <string name="rclone_guide_s3_step_bucket">After saving, set the destination folder to start with the bucket name, for example my-bucket/phone-backups.</string>
+
+    <!-- S3: AWS -->
+    <string name="rclone_guide_s3_aws_title">Amazon S3</string>
+    <string name="rclone_guide_s3_aws_summary">Store backups in an Amazon Web Services S3 bucket using an access key.</string>
+    <string name="rclone_guide_s3_aws_step1">In the AWS console, create an IAM user limited to your backup bucket (s3:ListBucket, s3:GetObject, s3:PutObject, s3:DeleteObject).</string>
+    <string name="rclone_guide_s3_aws_step2">Create an access key for that user and copy the access key ID and the secret access key.</string>
+
+    <!-- S3: MinIO -->
+    <string name="rclone_guide_s3_minio_title">MinIO (self-hosted S3)</string>
+    <string name="rclone_guide_s3_minio_summary">Store backups on your own MinIO server or any S3-compatible storage you run.</string>
+    <string name="rclone_guide_s3_minio_step1">In the MinIO console, create an access key for a user that may write to your backup bucket, and note the server\'s API address.</string>
+
+    <!-- S3: Wasabi -->
+    <string name="rclone_guide_s3_wasabi_title">Wasabi</string>
+    <string name="rclone_guide_s3_wasabi_summary">Store backups in Wasabi hot cloud storage through its S3 API.</string>
+    <string name="rclone_guide_s3_wasabi_step1">In the Wasabi console, open Access Keys, create a new key and copy both parts. Use the service URL of your bucket\'s region as the endpoint.</string>
+
+    <!-- S3: Cloudflare R2 -->
+    <string name="rclone_guide_s3_r2_title">Cloudflare R2</string>
+    <string name="rclone_guide_s3_r2_summary">Store backups in Cloudflare R2 object storage, with no egress fees for restores.</string>
+    <string name="rclone_guide_s3_r2_step1">In the Cloudflare dashboard, open R2 and choose Manage R2 API Tokens. Create a token with Object Read &amp; Write permission.</string>
+    <string name="rclone_guide_s3_r2_step2">Copy the access key ID, the secret access key and the S3 endpoint shown for your account.</string>
+
+    <!-- Backblaze B2 -->
+    <string name="rclone_guide_b2_title">Backblaze B2</string>
+    <string name="rclone_guide_b2_summary">Store backups in Backblaze B2 cloud storage using an application key.</string>
+    <string name="rclone_guide_b2_step1">In your Backblaze account, open Application Keys and add a new key, ideally restricted to your backup bucket.</string>
+    <string name="rclone_guide_b2_step2">Copy the keyID and the applicationKey right away; Backblaze shows the key only once.</string>
+
+    <!-- Google Drive -->
+    <string name="rclone_guide_drive_title">Google Drive</string>
+    <string name="rclone_guide_drive_summary">Store backups in your Google Drive. Sign-in happens once on a computer.</string>
+    <string name="rclone_guide_drive_step_scope">Choose \"drive\" for full access, or \"drive.file\" so DFTB only sees the files it created.</string>
+
+    <!-- OneDrive -->
+    <string name="rclone_guide_onedrive_title">Microsoft OneDrive</string>
+    <string name="rclone_guide_onedrive_summary">Store backups in OneDrive personal, OneDrive for Business or SharePoint.</string>
+    <string name="rclone_guide_onedrive_step_drive">OneDrive also needs a drive ID: on the computer, create the remote with rclone config, then run rclone config show and copy drive_id and drive_type.</string>
+
+    <!-- Dropbox -->
+    <string name="rclone_guide_dropbox_title">Dropbox</string>
+    <string name="rclone_guide_dropbox_summary">Store backups in your Dropbox. Sign-in happens once on a computer.</string>
+
+    <!-- MEGA -->
+    <string name="rclone_guide_mega_title">MEGA</string>
+    <string name="rclone_guide_mega_summary">Store backups in your MEGA account with its end-to-end encrypted storage.</string>
+    <string name="rclone_guide_mega_step1">Enter the e-mail address and password of your MEGA account.</string>
+    <string name="rclone_guide_mega_step2">If two-factor sign-in is turned on for the account, MEGA may refuse the login; turn it off for this account or use a separate MEGA account for backups.</string>
+
+    <!-- pCloud -->
+    <string name="rclone_guide_pcloud_title">pCloud</string>
+    <string name="rclone_guide_pcloud_summary">Store backups in your pCloud storage. Sign-in happens once on a computer.</string>
+    <string name="rclone_guide_pcloud_step_region">Pick eapi.pcloud.com if your account is in the EU region, otherwise keep api.pcloud.com.</string>
+
+    <!-- Box -->
+    <string name="rclone_guide_box_title">Box</string>
+    <string name="rclone_guide_box_summary">Store backups in Box. Sign-in happens once on a computer.</string>
+    <string name="rclone_guide_box_step_rotation">Box replaces its refresh token every time it is used. Once DFTB has used this remote, do not reuse the same token on the computer.</string>
+
+    <!-- SFTP via rclone -->
+    <string name="rclone_guide_sftp_title">SFTP (through rclone)</string>
+    <string name="rclone_guide_sftp_summary">Reach an SSH server through rclone, for example to share one remote definition with your desktop.</string>
+    <string name="rclone_guide_sftp_step1">Enter the server address and your account name.</string>
+    <string name="rclone_guide_sftp_step2">Sign in with a password, or paste a private key (PEM or OpenSSH format) together with its passphrase if it has one. One of the two is required.</string>
+
+    <!-- WebDAV: Nextcloud -->
+    <string name="rclone_guide_nextcloud_title">Nextcloud (WebDAV)</string>
+    <string name="rclone_guide_nextcloud_summary">Store backups on a Nextcloud server through WebDAV.</string>
+    <string name="rclone_guide_nextcloud_step1">In Nextcloud, open Settings, then Security, and create an app password for DFTB.</string>
+    <string name="rclone_guide_nextcloud_step2">Use the WebDAV address shown under Files settings, which looks like https://cloud.example.com/remote.php/dav/files/USERNAME/.</string>
+
+    <!-- Field labels -->
+    <string name="rclone_field_access_key_id">Access key ID</string>
+    <string name="rclone_field_secret_access_key">Secret access key</string>
+    <string name="rclone_field_region">Region</string>
+    <string name="rclone_field_endpoint">Endpoint</string>
+    <string name="rclone_field_b2_account">Key ID</string>
+    <string name="rclone_field_b2_key">Application key</string>
+    <string name="rclone_field_token">Token</string>
+    <string name="rclone_field_client_id">Client ID (optional)</string>
+    <string name="rclone_field_client_secret">Client secret (optional)</string>
+    <string name="rclone_field_scope">Access scope</string>
+    <string name="rclone_field_root_folder_id">Root folder ID (optional)</string>
+    <string name="rclone_field_drive_id">Drive ID</string>
+    <string name="rclone_field_drive_type">Drive type</string>
+    <string name="rclone_field_email">E-mail</string>
+    <string name="rclone_field_password">Password</string>
+    <string name="rclone_field_pcloud_hostname">pCloud region</string>
+    <string name="rclone_field_box_sub_type">Account type</string>
+    <string name="rclone_field_host">Server</string>
+    <string name="rclone_field_port">Port</string>
+    <string name="rclone_field_username">Username</string>
+    <string name="rclone_field_key_pem">Private key</string>
+    <string name="rclone_field_key_passphrase">Key passphrase</string>
+    <string name="rclone_field_url">Address</string>
+
+    <!-- Field hints -->
+    <string name="rclone_hint_access_key_id">For example AKIAIOSFODNN7EXAMPLE</string>
+    <string name="rclone_hint_secret_access_key">Stored encrypted on this device only</string>
+    <string name="rclone_hint_region_aws">The bucket\'s region, for example us-east-1 or eu-central-1</string>
+    <string name="rclone_hint_region_optional">Leave empty unless your provider requires one</string>
+    <string name="rclone_hint_endpoint_minio">For example https://minio.example.com:9000</string>
+    <string name="rclone_hint_endpoint_wasabi">For example s3.eu-central-1.wasabisys.com</string>
+    <string name="rclone_hint_endpoint_r2">https://ACCOUNT_ID.r2.cloudflarestorage.com</string>
+    <string name="rclone_hint_b2_account">The keyID shown when you created the key</string>
+    <string name="rclone_hint_b2_key">The applicationKey shown once when you created the key</string>
+    <string name="rclone_hint_token">Paste the JSON printed by rclone authorize</string>
+    <string name="rclone_hint_client_id">Only if you registered your own app with the provider</string>
+    <string name="rclone_hint_drive_scope">drive = full access, drive.file = only files DFTB creates</string>
+    <string name="rclone_hint_root_folder_id">ID of a folder to use as the top level</string>
+    <string name="rclone_hint_drive_id">drive_id from rclone config show</string>
+    <string name="rclone_hint_drive_type">drive_type from rclone config show</string>
+    <string name="rclone_hint_mega_user">The e-mail address you sign in to MEGA with</string>
+    <string name="rclone_hint_password">Stored encrypted on this device only</string>
+    <string name="rclone_hint_pcloud_hostname">eapi.pcloud.com for EU accounts</string>
+    <string name="rclone_hint_box_sub_type">Use enterprise only for Box enterprise accounts</string>
+    <string name="rclone_hint_host">Host name or IP address</string>
+    <string name="rclone_hint_port">Usually 22</string>
+    <string name="rclone_hint_username">Your account name on the server</string>
+    <string name="rclone_hint_sftp_password">Leave empty when signing in with a key</string>
+    <string name="rclone_hint_key_pem">Paste the whole key, including the BEGIN and END lines</string>
+    <string name="rclone_hint_key_passphrase">Leave empty if the key has no passphrase</string>
+    <string name="rclone_hint_nextcloud_url">https://cloud.example.com/remote.php/dav/files/USERNAME/</string>
+    <string name="rclone_hint_nextcloud_password">An app password created in Nextcloud security settings</string>
+
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="backup_engine_planning">Προετοιμασία του αντιγράφου ασφαλείας…</string>
+    <string name="backup_engine_preflight">Έλεγχος ελεύθερου χώρου…</string>
+    <string name="backup_engine_uploading">Μεταφόρτωση %1$s…</string>
+    <string name="backup_engine_verifying">Επαλήθευση %1$s…</string>
+    <string name="backup_engine_writing_manifest">Εγγραφή του ευρετηρίου του αντιγράφου ασφαλείας…</string>
+    <plurals name="backup_engine_completed">
+        <item quantity="one">Αποθηκεύτηκε %1$d αντικείμενο.</item>
+        <item quantity="other">Αποθηκεύτηκαν %1$d αντικείμενα.</item>
+    </plurals>
+    <plurals name="backup_engine_warning_count">
+        <item quantity="one">%1$d προειδοποίηση.</item>
+        <item quantity="other">%1$d προειδοποιήσεις.</item>
+    </plurals>
+    <string name="backup_engine_cancelled">Το αντίγραφο ασφαλείας ακυρώθηκε. Τα μερικά αρχεία αφαιρέθηκαν.</string>
+    <string name="backup_engine_error_no_destination">Αυτό το προφίλ δεν έχει προορισμό. Επιλέξτε πού θα αποθηκεύονται τα αντίγραφα ασφαλείας.</string>
+    <string name="backup_engine_error_destination_not_found">Ο προορισμός του προφίλ δεν υπάρχει πλέον.</string>
+    <string name="backup_engine_error_nothing">Δεν έχει επιλεγεί τίποτα για αντίγραφο ασφαλείας.</string>
+    <string name="backup_engine_error_sources_unavailable">Κανένα από τα επιλεγμένα δεδομένα δεν μπορεί να αποθηκευτεί στην τρέχουσα λειτουργία.</string>
+    <string name="backup_engine_error_twrp_encryption">Τα αντίγραφα ασφαλείας συμβατά με TWRP δεν μπορούν να κρυπτογραφηθούν. Απενεργοποιήστε την κρυπτογράφηση ή τη συμβατότητα TWRP.</string>
+    <string name="backup_engine_error_masking_needs_encryption">Η απόκρυψη ονομάτων αρχείων απαιτεί κρυπτογράφηση. Ενεργοποιήστε την κρυπτογράφηση AES-256-GCM ή απενεργοποιήστε την απόκρυψη ονομάτων.</string>
+    <string name="backup_engine_error_resume_folder">Ο φάκελος αντιγράφου ασφαλείας προς συνέχιση έχει μη έγκυρο όνομα.</string>
+    <string name="backup_engine_error_destination_space">Ο προορισμός δεν έχει αρκετό ελεύθερο χώρο για αυτό το αντίγραφο ασφαλείας.</string>
+    <string name="backup_engine_error_staging_space">Αυτή η συσκευή δεν έχει αρκετό ελεύθερο χώρο για την τοπική προετοιμασία του αντιγράφου ασφαλείας.</string>
+    <string name="backup_engine_error_encryption_unsupported">Αυτή η λειτουργία κρυπτογράφησης δεν υποστηρίζεται ακόμη. Χρησιμοποιήστε AES-256-GCM.</string>
+    <string name="backup_engine_error_key_missing">Λείπει το κλειδί κρυπτογράφησης ή η φράση πρόσβασης αυτού του προφίλ.</string>
+    <string name="backup_engine_error_transfer_unsupported">Η επιλεγμένη λειτουργία μεταφοράς δεν είναι διαθέσιμη για αυτόν τον προορισμό.</string>
+    <string name="backup_engine_error_source">Ορισμένα δεδομένα δεν ήταν δυνατό να διαβαστούν.</string>
+    <string name="backup_engine_error_source_shape">Μια πηγή κατάτμησης παρήγαγε περισσότερες από μία εικόνες.</string>
+    <string name="backup_engine_error_storage">Η εγγραφή στον προορισμό απέτυχε.</string>
+    <string name="backup_engine_error_verify">Ένα αποθηκευμένο αρχείο δεν ταιριάζει με ό,τι γράφτηκε. Ίσως είναι κατεστραμμένο.</string>
+    <string name="backup_engine_error_manifest">Δεν ήταν δυνατή η εγγραφή του ευρετηρίου του αντιγράφου ασφαλείας.</string>
+    <string name="backup_engine_error_all_failed">Κανένα τμήμα του αντιγράφου ασφαλείας δεν ολοκληρώθηκε.</string>
+    <string name="backup_engine_error_internal">Το αντίγραφο ασφαλείας σταμάτησε λόγω μη αναμενόμενου σφάλματος.</string>
+    <string name="backup_engine_warning_space_unknown">Δεν ήταν δυνατός ο έλεγχος του ελεύθερου χώρου.</string>
+    <string name="backup_engine_warning_space_overridden">Ξεκίνησε παρά τον χαμηλό ελεύθερο χώρο.</string>
+    <string name="backup_engine_warning_format_substituted">Η επιλεγμένη μορφή δεν ισχύει εδώ· χρησιμοποιήθηκε μια συμβατή.</string>
+    <string name="backup_engine_warning_source_unavailable">Παραλείφθηκε: μη διαθέσιμο στην τρέχουσα λειτουργία.</string>
+    <string name="backup_engine_warning_source_partial">Αποθηκεύτηκε μόνο εν μέρει.</string>
+    <string name="backup_engine_warning_twrp_verbatim">Ο φάκελος TWRP αποθηκεύεται χωρίς συμπίεση και με αναγνώσιμα ονόματα ώστε το TWRP να μπορεί να τον επαναφέρει.</string>
+    <string name="backup_engine_warning_twrp_not_device">Το TWRP μπορεί να κάνει επαναφορά μόνο από τον αποθηκευτικό χώρο της συσκευής ή USB. Αντιγράψτε εκεί τον φάκελο TWRP πριν από την επαναφορά.</string>
+    <string name="backup_engine_warning_estimate_failed">Δεν ήταν δυνατή η εκ των προτέρων εκτίμηση του μεγέθους.</string>
+    <string name="backup_engine_warning_size_mismatch">Το μέγεθος των δεδομένων άλλαξε κατά την ανάγνωση.</string>
+    <string name="backup_engine_warning_artifact_failed">Αυτό το τμήμα του αντιγράφου ασφαλείας απέτυχε.</string>
+    <string name="backup_engine_warning_hash_records">Δεν ήταν δυνατή η αποθήκευση των αθροισμάτων ελέγχου ανά αρχείο στον κατάλογο.</string>
+    <string name="backup_engine_warning_checkpoint">Δεν ήταν δυνατή η αποθήκευση των πληροφοριών συνέχισης.</string>
+    <string name="backup_engine_warning_cleanup">Δεν ήταν δυνατή η αφαίρεση ενός προσωρινού αρχείου.</string>
+    <string name="backup_engine_warning_resume_skipped">Έχει ήδη ολοκληρωθεί σε προηγούμενη προσπάθεια· παραλείφθηκε.</string>
+    <string name="backup_engine_warning_resume_unindexed">Ολοκληρώθηκε νωρίτερα, αλλά κανένα προηγούμενο ευρετήριο αντιγράφου δεν το περιγράφει.</string>
+    <string name="backup_engine_warning_prior_manifest">Δεν ήταν δυνατή η ανάγνωση ενός προηγούμενου ευρετηρίου αντιγράφου σε αυτόν τον φάκελο.</string>
+
+</resources>

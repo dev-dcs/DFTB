@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DFTB Companion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <h1>DFTB Companion</h1>
+  <span class="pill" id="ver">…</span>
+</header>
+
+<main>
+  <!-- Status -->
+  <section class="view active" id="view-status">
+    <div class="card">
+      <h2>Tools</h2>
+      <div id="tools" class="tools">checking…</div>
+    </div>
+    <div class="card">
+      <h2>Updates</h2>
+      <div id="update-line" class="muted">not checked</div>
+      <button class="btn" id="check-update">Check now</button>
+    </div>
+    <div class="card small">
+      <h2>Boot resume</h2>
+      <div id="journal" class="muted">…</div>
+    </div>
+  </section>
+
+  <!-- Partitions -->
+  <section class="view" id="view-parts">
+    <div class="card">
+      <div class="row-between">
+        <h2>Partitions</h2>
+        <label class="inline">zstd
+          <input type="checkbox" id="use-zstd" checked>
+        </label>
+      </div>
+      <div class="muted small">Backing up is read-only and safe.</div>
+      <div id="parts" class="list">loading…</div>
+    </div>
+  </section>
+
+  <!-- Backups -->
+  <section class="view" id="view-backups">
+    <div class="card">
+      <h2>Saved backups</h2>
+      <div class="muted small" id="dest-line"></div>
+      <div id="backups" class="list">loading…</div>
+    </div>
+  </section>
+
+  <!-- Settings -->
+  <section class="view" id="view-settings">
+    <div class="card">
+      <h2>Settings</h2>
+      <label class="setting">
+        <span>Check for module updates on boot</span>
+        <input type="checkbox" id="opt-update">
+      </label>
+      <label class="setting col">
+        <span>Backup folder</span>
+        <input type="text" id="opt-dest" value="/data/adb/dftb/partitions">
+      </label>
+      <button class="btn" id="save-settings">Save</button>
+    </div>
+    <div class="card small muted" id="about"></div>
+  </section>
+</main>
+
+<nav class="tabs">
+  <button data-view="status" class="active">Status</button>
+  <button data-view="parts">Partitions</button>
+  <button data-view="backups">Backups</button>
+  <button data-view="settings">Settings</button>
+</nav>
+
+<!-- restore confirm sheet -->
+<div class="sheet-wrap" id="sheet-wrap" hidden>
+  <div class="sheet">
+    <h3 id="sheet-title">Restore</h3>
+    <p id="sheet-body" class="muted"></p>
+    <input type="text" id="sheet-input" placeholder="type here to confirm" autocomplete="off">
+    <div class="sheet-actions">
+      <button class="btn" id="sheet-cancel">Cancel</button>
+      <button class="btn danger" id="sheet-ok">Restore</button>
+    </div>
+  </div>
+</div>
+
+<div class="snack" id="snack"></div>
+<script src="app.js"></script>
+</body>
+</html>

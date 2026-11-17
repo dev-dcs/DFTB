@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Restore screens (ui/restore): restore browser, one backup (unlock, details, verify, restore
+     wizard, run), and the TWRP / OrangeFox import. Engine failure texts come from
+     strings_restore.xml; partition gate texts from strings_restore_partition.xml. -->
+<resources>
+
+    <!-- Common -->
+    <string name="restore_ui_back">Back</string>
+    <string name="restore_ui_back_step">Back</string>
+    <string name="restore_ui_next">Next</string>
+    <string name="restore_ui_cancel">Cancel</string>
+    <string name="restore_ui_retry">Retry</string>
+    <string name="restore_ui_refresh">Refresh</string>
+    <string name="restore_ui_yes">Yes</string>
+    <string name="restore_ui_cd_error">Error</string>
+    <string name="restore_ui_cd_warning">Warning</string>
+    <string name="restore_ui_date_unknown">Date unknown</string>
+    <string name="restore_ui_destination_label">Destination</string>
+    <string name="restore_ui_intent_failed">This screen could not be opened on this device.</string>
+    <string name="restore_ui_pair">%1$s · %2$s</string>
+    <string name="restore_ui_bullet">• %1$s</string>
+    <string name="restore_ui_progress_bytes">%1$s of %2$s (%3$d%%)</string>
+    <string name="restore_ui_progress_bytes_only">%1$s processed</string>
+    <string name="restore_ui_progress_speed">%1$s/s</string>
+    <string name="restore_ui_progress_speed_eta">%1$s/s · about %2$s left</string>
+    <plurals name="restore_ui_warning_count">
+        <item quantity="one">%1$d warning</item>
+        <item quantity="other">%1$d warnings</item>
+    </plurals>
+
+    <!-- Restore browser -->
+    <string name="restore_ui_home_title">Restore</string>
+    <string name="restore_ui_twrp_open">Import a TWRP backup</string>
+    <string name="restore_ui_twrp_link">Import a TWRP or OrangeFox backup</string>
+    <string name="restore_ui_no_destinations_title">No destination yet</string>
+    <string name="restore_ui_no_destinations_body">Backups are read from a destination. Add the destination that holds your backups first.</string>
+    <string name="restore_ui_add_destination">Add a destination</string>
+    <string name="restore_ui_list_failed">The destination could not be read</string>
+    <string name="restore_ui_no_backups_title">No backups here</string>
+    <string name="restore_ui_no_backups_body">This destination holds no DFTB backup folder. Pull down to check again, or pick another destination.</string>
+    <string name="restore_ui_badge_encrypted">Encrypted</string>
+    <string name="restore_ui_badge_locked">Locked</string>
+    <string name="restore_ui_badge_partial">Incomplete</string>
+    <string name="restore_ui_badge_critical">Identity data</string>
+    <string name="restore_ui_badge_logical">Logical</string>
+    <string name="restore_ui_badge_twrp">TWRP</string>
+
+    <!-- Opening / unlocking -->
+    <string name="restore_ui_opening">Reading the backup…</string>
+    <string name="restore_ui_open_failed">The backup could not be opened</string>
+    <string name="restore_ui_locked_title">This backup is encrypted</string>
+    <string name="restore_ui_locked_body">Enter the passphrase it was made with to see its contents and restore it.</string>
+    <string name="restore_ui_locked_vault_problem">The saved key of the profile could not be used (%1$s). Enter the passphrase instead.</string>
+    <string name="restore_ui_enter_passphrase">Enter passphrase</string>
+    <string name="restore_ui_passphrase_title">Unlock backup</string>
+    <string name="restore_ui_passphrase_body">The passphrase stays in memory only while this screen is open and is never saved.</string>
+    <string name="restore_ui_passphrase_label">Passphrase</string>
+    <string name="restore_ui_passphrase_unlock">Unlock</string>
+    <string name="restore_ui_passphrase_show">Show passphrase</string>
+    <string name="restore_ui_passphrase_hide">Hide passphrase</string>
+    <string name="restore_ui_unlocked_vault">opened with the saved key</string>
+    <string name="restore_ui_unlocked_passphrase">opened with your passphrase</string>
+
+    <!-- Catalog problems (CatalogException.Reason) -->
+    <string name="restore_ui_catalog_no_manifest">This folder holds no DFTB backup index.</string>
+    <string name="restore_ui_catalog_key_required">This part is encrypted; unlock the backup first.</string>
+    <string name="restore_ui_catalog_corrupt_manifest">The backup index is damaged and cannot be read.</string>
+    <string name="restore_ui_catalog_unsupported_schema">This backup was made by a newer version of DFTB.</string>
+    <string name="restore_ui_catalog_inconsistent_runs">The runs of this resumed backup do not belong together.</string>
+    <string name="restore_ui_catalog_unsupported_encryption">This backup uses an encryption this version cannot read.</string>
+    <string name="restore_ui_catalog_missing_file">A stored file is missing at the destination.</string>
+    <string name="restore_ui_catalog_size_mismatch">A stored file has the wrong size.</string>
+    <string name="restore_ui_catalog_digest_mismatch">A stored file does not match its checksum.</string>
+    <string name="restore_ui_catalog_item_digest_mismatch">A file inside the archive does not match its checksum.</string>
+    <string name="restore_ui_catalog_sidecar_mismatch">The checksum file is missing or disagrees with the stored data.</string>
+    <string name="restore_ui_catalog_not_single_stream">This item is stored as separate files.</string>
+    <string name="restore_ui_problem_io">Read error</string>
+    <string name="restore_ui_problem_more">%1$s (and %2$d more)</string>
+
+    <!-- Details -->
+    <string name="restore_ui_details_title">Backup details</string>
+    <string name="restore_ui_detail_created">Started</string>
+    <string name="restore_ui_detail_finished">Finished</string>
+    <string name="restore_ui_detail_size">Stored size</string>
+    <string name="restore_ui_detail_device">Made on</string>
+    <string name="restore_ui_detail_android">Android</string>
+    <string name="restore_ui_detail_android_value">API level %1$d</string>
+    <string name="restore_ui_detail_slot">Active slot then</string>
+    <string name="restore_ui_detail_build">Build</string>
+    <string name="restore_ui_detail_app">Made with</string>
+    <string name="restore_ui_detail_app_value">DFTB %1$s</string>
+    <string name="restore_ui_detail_format">Format</string>
+    <string name="restore_ui_detail_encryption">Encryption</string>
+    <string name="restore_ui_detail_checksum">Checksum</string>
+    <string name="restore_ui_detail_structure">Folder layout</string>
+    <string name="restore_ui_detail_twrp">TWRP-compatible</string>
+    <string name="restore_ui_detail_selection">Profile selection</string>
+    <string name="restore_ui_detail_runs">Merged runs</string>
+    <string name="restore_ui_backup_warnings">Warnings recorded during the backup</string>
+    <string name="restore_ui_partial_title">This backup did not finish</string>
+    <string name="restore_ui_partial_body">It was interrupted or is still being resumed. Only the items listed below are in it; they can be verified and restored.</string>
+    <string name="restore_ui_cross_device_title">Made on another device</string>
+    <string name="restore_ui_cross_device_body">This backup comes from a %1$s; this device is a %2$s. Apps and files usually restore fine; partition images from another device can stop this one from booting.</string>
+    <plurals name="restore_ui_count_partitions">
+        <item quantity="one">%1$d partition</item>
+        <item quantity="other">%1$d partitions</item>
+    </plurals>
+    <plurals name="restore_ui_count_apps">
+        <item quantity="one">%1$d app</item>
+        <item quantity="other">%1$d apps</item>
+    </plurals>
+    <plurals name="restore_ui_count_folders">
+        <item quantity="one">%1$d folder</item>
+        <item quantity="other">%1$d folders</item>
+    </plurals>
+    <plurals name="restore_ui_count_categories">
+        <item quantity="one">%1$d file category</item>
+        <item quantity="other">%1$d file categories</item>
+    </plurals>
+
+    <!-- Units -->
+    <string name="restore_ui_units_title">Contents</string>
+    <string name="restore_ui_units_empty">This backup contains nothing to restore.</string>
+    <string name="restore_ui_group_apps">Apps</string>
+    <string name="restore_ui_group_partitions">Partitions</string>
+    <string name="restore_ui_group_files">Files</string>
+    <string name="restore_ui_group_summary">%1$d · %2$s</string>
+
+    <!-- Verify -->
+    <string name="restore_ui_verify_title">Verify</string>
+    <string name="restore_ui_verify_subtitle">Check that the stored data is intact before relying on it.</string>
+    <string name="restore_ui_verify_quick">Quick verify</string>
+    <string name="restore_ui_verify_deep">Deep verify</string>
+    <string name="restore_ui_verify_hint">Quick compares the stored files with their checksums. Deep also decrypts and unpacks everything and checks every file inside; it reads the whole backup.</string>
+    <string name="restore_ui_verify_running_quick">Checking stored files…</string>
+    <string name="restore_ui_verify_running_deep">Decoding and checking every file…</string>
+    <string name="restore_ui_verify_all_ok">All %1$d stored items are intact.</string>
+    <plurals name="restore_ui_verify_failed">
+        <item quantity="one">%1$d of %2$d stored items is damaged or missing.</item>
+        <item quantity="other">%1$d of %2$d stored items are damaged or missing.</item>
+    </plurals>
+    <string name="restore_ui_verify_ok_cd">Intact</string>
+    <string name="restore_ui_verify_bad_cd">Problem</string>
+
+    <!-- Start -->
+    <string name="restore_ui_start_title">Restore</string>
+    <string name="restore_ui_start_subtitle">Choose what to restore, how, and check it before anything is written.</string>
+    <string name="restore_ui_start_wizard">Restore…</string>
+    <string name="restore_ui_start_busy">A restore of this backup is running.</string>
+    <string name="restore_ui_start">Start restore</string>
+
+    <!-- Wizard steps -->
+    <string name="restore_ui_step_header">Step %1$d of %2$d · %3$s</string>
+    <string name="restore_ui_step_select">Choose items</string>
+    <string name="restore_ui_step_options">Options</string>
+    <string name="restore_ui_step_preflight">Check</string>
+    <string name="restore_ui_select_all">Select all</string>
+    <string name="restore_ui_select_none">Select none</string>
+    <plurals name="restore_ui_selected_summary">
+        <item quantity="one">%1$d of %2$d item selected · %3$s</item>
+        <item quantity="other">%1$d of %2$d items selected · %3$s</item>
+    </plurals>
+
+    <!-- Options: general -->
+    <string name="restore_ui_options_general">General</string>
+    <string name="restore_ui_conflict_title">When something already exists</string>
+    <string name="restore_ui_conflict_skip">Keep existing</string>
+    <string name="restore_ui_conflict_overwrite">Overwrite</string>
+    <string name="restore_ui_conflict_keep_both">Keep both</string>
+    <string name="restore_ui_conflict_skip_desc">existing files are kept and not replaced</string>
+    <string name="restore_ui_conflict_overwrite_desc">existing files are replaced by the backed-up version</string>
+    <string name="restore_ui_conflict_keep_both_desc">the backed-up version is written next to the existing file under a new name</string>
+    <string name="restore_ui_verify_first">Verify before restoring</string>
+    <string name="restore_ui_verify_first_hint">Reads every selected item once more first; nothing is written if any of it is damaged.</string>
+    <string name="restore_ui_metadata">Restore dates and permissions</string>
+    <string name="restore_ui_metadata_hint">Modification dates always; owner, mode and SELinux labels when the current mode allows it.</string>
+
+    <!-- Options: files -->
+    <string name="restore_ui_options_files">Files</string>
+    <string name="restore_ui_target_title">Restore files to</string>
+    <string name="restore_ui_target_original">Original location</string>
+    <string name="restore_ui_target_folder">A folder path</string>
+    <string name="restore_ui_target_saf">A chosen folder</string>
+    <string name="restore_ui_target_original_hint">Files go back where they were backed up from. Folders DFTB cannot write in the current mode are reported in the check step.</string>
+    <string name="restore_ui_folder_label">Folder</string>
+    <string name="restore_ui_folder_hint">An absolute path, for example /storage/emulated/0/Restored</string>
+    <string name="restore_ui_tree_none">No folder chosen yet</string>
+    <string name="restore_ui_tree_pick">Choose folder</string>
+    <string name="restore_ui_tree_grant_failed">DFTB could not keep access to that folder. Choose another one.</string>
+    <string name="restore_ui_twrp_mode_title">TWRP backup folder</string>
+    <string name="restore_ui_twrp_copy">Copy the folder</string>
+    <string name="restore_ui_twrp_extract">Unpack the files</string>
+    <string name="restore_ui_twrp_copy_desc">Copies the TWRP folder as it is, so TWRP or OrangeFox can restore it in recovery.</string>
+    <string name="restore_ui_twrp_extract_desc">Unpacks the files inside the TWRP archives into the chosen folder. Never over the running system.</string>
+
+    <!-- Options: apps -->
+    <string name="restore_ui_options_apps">Apps</string>
+    <string name="restore_ui_apps_standard_hint">In Standard mode Android asks you to confirm each install, and app data cannot be restored. Shizuku restores shared storage data; root restores everything.</string>
+    <string name="restore_ui_apps_apks">Install the apps</string>
+    <string name="restore_ui_apps_data">Restore app data</string>
+    <string name="restore_ui_apps_data_hint">Private data needs root; Android/data and Android/media need Shizuku or root.</string>
+    <string name="restore_ui_version_title">When the app is installed already</string>
+    <string name="restore_ui_version_auto">Automatic</string>
+    <string name="restore_ui_version_reinstall">Always reinstall</string>
+    <string name="restore_ui_version_data_only">Data only</string>
+    <string name="restore_ui_version_auto_desc">Installs when the app is missing or the backup is newer; otherwise only data is restored.</string>
+    <string name="restore_ui_version_reinstall_desc">Installs the backed-up version even over the same version.</string>
+    <string name="restore_ui_version_data_only_desc">Never installs; restores data onto the version already installed.</string>
+    <string name="restore_ui_apps_external">Restore Android/data and Android/media</string>
+    <string name="restore_ui_apps_obb">Restore Android/obb</string>
+    <string name="restore_ui_apps_permissions">Grant recorded permissions again</string>
+    <string name="restore_ui_apps_permissions_hint">Runtime permissions the app had when it was backed up (Shizuku or root).</string>
+    <string name="restore_ui_apps_user">Restore for user</string>
+    <string name="restore_ui_apps_user_self">User %1$d (you)</string>
+    <string name="restore_ui_apps_user_other">User %1$d</string>
+    <string name="restore_ui_apps_advanced">Advanced</string>
+    <string name="restore_ui_apps_cache">Restore cache folders</string>
+    <string name="restore_ui_apps_installer">Restore the installer of record</string>
+    <string name="restore_ui_apps_installer_hint">Marks the app as installed by the store it came from (Shizuku or root).</string>
+
+    <!-- Options: partitions -->
+    <string name="restore_ui_options_partitions">Partitions</string>
+    <string name="restore_ui_partitions_need_root">Root is required</string>
+    <string name="restore_ui_partitions_need_root_body">Partitions can only be written with root. Switch to Root mode, or restore these images from recovery or fastboot.</string>
+    <string name="restore_ui_partitions_hint">Every image is verified before it is written and read back afterwards. Mounted or in-use partitions are always refused.</string>
+    <string name="restore_ui_critical_selected_title">Identity partitions selected</string>
+    <string name="restore_ui_critical_selected_body">%1$s holds data unique to one device (IMEI, calibration, DRM, factory reset protection). Writing the wrong copy can permanently break this device. They are refused unless you allow it below.</string>
+    <string name="restore_ui_slot_title">Slot to write</string>
+    <string name="restore_ui_slot_same_role">Same role</string>
+    <string name="restore_ui_slot_active">Active slot</string>
+    <string name="restore_ui_slot_inactive">Inactive slot</string>
+    <string name="restore_ui_slot_recorded">Same letter</string>
+    <string name="restore_ui_slot_same_role_desc">Writes to the slot that now has the role (active or inactive) the imaged slot had. Recommended: slots swap after every update.</string>
+    <string name="restore_ui_slot_active_desc">Writes to the slot the device booted from now.</string>
+    <string name="restore_ui_slot_inactive_desc">Writes to the slot the device did not boot from.</string>
+    <string name="restore_ui_slot_recorded_desc">Writes back to the same slot letter that was imaged (boot_a to boot_a).</string>
+    <string name="restore_ui_overrides_title">Safety checks</string>
+    <string name="restore_ui_overrides_hint">These checks refuse risky writes. Each can be switched off only after you confirm what can go wrong.</string>
+
+    <!-- Risky options -->
+    <string name="restore_ui_risky_enable">I understand, allow it</string>
+    <string name="restore_ui_risky_active_title">Safety checks you switched off</string>
+    <string name="restore_ui_risky_space">Restore without enough free space</string>
+    <string name="restore_ui_risky_space_hint">Continue even if a target reports too little free space.</string>
+    <string name="restore_ui_risky_space_consequence">The target may fill up during the restore. Files written so far stay; the remaining ones fail, and apps on this device may stop working until space is freed.</string>
+    <string name="restore_ui_risky_downgrade">Allow older app versions</string>
+    <string name="restore_ui_risky_downgrade_hint">Install a backed-up version that is older than the installed one (Shizuku or root).</string>
+    <string name="restore_ui_risky_downgrade_consequence">An older app version may not understand data written by the newer one. The app can crash or lose its data. Android may refuse the downgrade for some apps.</string>
+    <string name="restore_ui_risky_cross_slot">Allow writing to the other slot</string>
+    <string name="restore_ui_risky_cross_slot_hint">The chosen slot differs from the slot that was imaged.</string>
+    <string name="restore_ui_risky_cross_slot_consequence">The other slot\'s partitions are replaced. If the images do not match the rest of that slot, the device may fail to boot from it; on the next update it may also switch to that slot.</string>
+    <string name="restore_ui_risky_other_device">Allow images from another device</string>
+    <string name="restore_ui_risky_other_device_hint">The images were taken on a different device model, or their origin cannot be proven.</string>
+    <string name="restore_ui_risky_other_device_consequence">Partition images are specific to one device model. Writing another device\'s image can hard-brick this device so that only a factory flashing tool can recover it.</string>
+    <string name="restore_ui_risky_other_build">Allow images from another build</string>
+    <string name="restore_ui_risky_other_build_hint">Same device, but a different system build (for example before an update).</string>
+    <string name="restore_ui_risky_other_build_consequence">Mixing partitions from different builds can cause boot loops or broken features (camera, radio, encryption). Restore every partition of that build together.</string>
+    <string name="restore_ui_risky_smaller_image">Allow images smaller than the partition</string>
+    <string name="restore_ui_risky_smaller_image_hint">The end of the partition is left as it is.</string>
+    <string name="restore_ui_risky_smaller_image_consequence">The partition keeps old data after the image. That is harmless for some partitions and breaks others (for example ones with a footer or signature at the end).</string>
+    <string name="restore_ui_risky_identity">Allow writing identity partitions</string>
+    <string name="restore_ui_risky_identity_hint">IMEI/NV, modem calibration, persist, factory reset protection and similar.</string>
+    <string name="restore_ui_risky_identity_consequence">These partitions are unique to one physical device. A copy from another device, an old copy, or a damaged one can permanently break calls, mobile data, Wi-Fi, DRM or the bootloader. There is no undo.</string>
+    <string name="restore_ui_confirm_type_word">Type %1$s to confirm.</string>
+    <string name="restore_ui_confirm_word_label">Confirmation</string>
+    <string name="restore_ui_confirm_word_device">OTHER DEVICE</string>
+    <string name="restore_ui_confirm_word_identity">IDENTITY</string>
+
+    <!-- Wizard problems -->
+    <string name="restore_ui_problem_nothing_selected">Select at least one item to restore.</string>
+    <string name="restore_ui_problem_folder_required">Enter the folder to restore to.</string>
+    <string name="restore_ui_problem_folder_absolute">Use an absolute path that starts with /.</string>
+    <string name="restore_ui_problem_folder_traversal">The path may not contain . or .. segments.</string>
+    <string name="restore_ui_problem_folder_protected">This is a system location. Choose a folder in your storage.</string>
+    <string name="restore_ui_problem_tree_required">Choose a folder.</string>
+    <string name="restore_ui_problem_twrp_folder">Unpacking TWRP archives needs a folder; it is never done over the running system.</string>
+    <string name="restore_ui_problem_app_nothing">With neither installing nor data selected there is nothing to restore for apps.</string>
+    <string name="restore_ui_problem_downgrade_ignored">Older versions are only relevant when apps are installed; this option has no effect now.</string>
+    <string name="restore_ui_problem_folder_app_data">This folder is inside app data. Writing there can break installed apps.</string>
+
+    <!-- Preflight -->
+    <string name="restore_ui_preflight_intro">Nothing has been written yet. This is what can be restored in the current mode.</string>
+    <string name="restore_ui_preflight_running">Checking each item…</string>
+    <string name="restore_ui_preflight_failed">The check could not be completed</string>
+    <string name="restore_ui_preflight_run">Run the check</string>
+    <plurals name="restore_ui_preflight_summary">
+        <item quantity="one">%1$d of %2$d item can be restored</item>
+        <item quantity="other">%1$d of %2$d items can be restored</item>
+    </plurals>
+    <string name="restore_ui_preflight_available_cd">Can be restored</string>
+    <string name="restore_ui_preflight_blocked_cd">Cannot be restored</string>
+    <string name="restore_ui_preflight_space">Needs %1$s · %2$s free</string>
+    <string name="restore_ui_preflight_space_needed">Needs %1$s</string>
+    <string name="restore_ui_preflight_shortfall">%1$s more space is needed.</string>
+    <string name="restore_ui_tier_none">No privilege needed</string>
+    <string name="restore_ui_tier_shizuku">Needs Shizuku or root</string>
+    <string name="restore_ui_tier_root">Needs root</string>
+    <string name="restore_ui_space_not_needed">No space needed</string>
+    <string name="restore_ui_space_ok">Enough space</string>
+    <string name="restore_ui_space_unknown">Free space unknown</string>
+    <string name="restore_ui_space_insufficient">Not enough space</string>
+    <string name="restore_ui_blocker_nothing">None of the selected items can be restored now. Change the options or the operating mode.</string>
+    <string name="restore_ui_blocker_space">An item does not fit on its target. Free some space, deselect it, or allow restoring without enough free space.</string>
+
+    <!-- Final confirmation -->
+    <string name="restore_ui_confirm_title">Restore now?</string>
+    <string name="restore_ui_confirm_body">DFTB will write data from %1$s onto this device:</string>
+    <plurals name="restore_ui_confirm_files">
+        <item quantity="one">%1$d file set to %2$s; %3$s.</item>
+        <item quantity="other">%1$d file sets to %2$s; %3$s.</item>
+    </plurals>
+    <plurals name="restore_ui_confirm_apps">
+        <item quantity="one">%1$d app may be reinstalled and its data replaced.</item>
+        <item quantity="other">%1$d apps may be reinstalled and their data replaced.</item>
+    </plurals>
+    <string name="restore_ui_confirm_partitions">These partitions are overwritten block by block: %1$s. This cannot be undone, and a failed write can leave the device unable to boot.</string>
+
+    <!-- Run -->
+    <string name="restore_ui_run_title">Restore</string>
+    <string name="restore_ui_run_started">Restore started. It continues if you leave this screen.</string>
+    <string name="restore_ui_run_running">Restoring…</string>
+    <string name="restore_ui_run_cancelling">Stopping…</string>
+    <string name="restore_ui_run_completed">Completed</string>
+    <string name="restore_ui_run_completed_warnings">Completed with warnings</string>
+    <string name="restore_ui_run_cancelled">Stopped</string>
+    <string name="restore_ui_run_failed">Failed</string>
+    <string name="restore_ui_run_cancel">Stop restore</string>
+    <string name="restore_ui_run_done">Done</string>
+    <string name="restore_ui_run_summary">%1$d restored · %2$d failed · %3$d not restored</string>
+    <string name="restore_ui_run_units">Items</string>
+    <string name="restore_ui_run_warnings">Warnings</string>
+    <string name="restore_ui_unit_waiting">Waiting</string>
+    <string name="restore_ui_unit_running">Restoring</string>
+    <string name="restore_ui_unit_restored">Restored</string>
+    <string name="restore_ui_unit_failed">Failed</string>
+    <string name="restore_ui_unit_blocked">Cannot be restored here</string>
+    <string name="restore_ui_unit_not_run">Not restored</string>
+    <string name="restore_ui_cancel_title">Stop the restore?</string>
+    <string name="restore_ui_cancel_body">Items already restored stay restored. A partition that is being written is finished and checked first, so stopping can take a moment.</string>
+    <string name="restore_ui_writing_partition_title">Writing a partition</string>
+    <string name="restore_ui_writing_partition_body">Do not reboot, power off or let the battery run out until this partition has been written and checked.</string>
+    <string name="restore_ui_do_not_reboot_title">Do not reboot</string>
+    <string name="restore_ui_do_not_reboot_body">A partition write did not finish successfully, so the partition may be partially written. Do not reboot until it has been restored correctly: retry the restore, or flash a good image from recovery or fastboot.</string>
+    <string name="restore_ui_install_pending_title">Waiting for install confirmation</string>
+    <string name="restore_ui_install_pending_body">Android asks you to confirm each app install. The prompt usually opens by itself; if you do not see it, open it here.</string>
+    <string name="restore_ui_install_open">Open prompt</string>
+    <string name="restore_ui_install_permission_title">DFTB may not install apps</string>
+    <string name="restore_ui_install_permission_body">Allow DFTB to install unknown apps, then restore again: %1$s</string>
+    <string name="restore_ui_install_permission_open">Open setting</string>
+
+    <!-- TWRP import -->
+    <string name="restore_ui_twrp_title">Import TWRP backup</string>
+    <string name="restore_ui_twrp_intro">Find a TWRP or OrangeFox backup folder on a destination. Raw partition images can be written back here with root; filesystem archives can be unpacked into a folder.</string>
+    <string name="restore_ui_twrp_root_label">Search in</string>
+    <string name="restore_ui_twrp_root_hint">Folder on the destination, for example TWRP/BACKUPS</string>
+    <string name="restore_ui_twrp_search">Search</string>
+    <string name="restore_ui_twrp_searching">Searching for backups…</string>
+    <string name="restore_ui_twrp_search_incomplete">The search was incomplete</string>
+    <string name="restore_ui_twrp_none_found">No TWRP backup folder was found there.</string>
+    <string name="restore_ui_twrp_pick_backup">Choose a backup to see its partitions.</string>
+    <string name="restore_ui_twrp_selected">Selected</string>
+    <plurals name="restore_ui_twrp_partitions">
+        <item quantity="one">%1$d partition · %2$s</item>
+        <item quantity="other">%1$d partitions · %2$s</item>
+    </plurals>
+    <string name="restore_ui_twrp_has_problems">Has problems</string>
+    <string name="restore_ui_twrp_device_folder">Device serial folder</string>
+    <string name="restore_ui_twrp_device_unknown">Not recorded</string>
+    <string name="restore_ui_twrp_device_unknown_hint">The folder is not under TWRP/BACKUPS/&lt;serial&gt;, so DFTB cannot tell which device made it.</string>
+    <string name="restore_ui_twrp_problem_split_gap">%1$s: a split part is missing.</string>
+    <string name="restore_ui_twrp_problem_split_and_single">%1$s: both a single file and split parts exist; the single file is used.</string>
+    <string name="restore_ui_twrp_problem_orphan_sidecar">%1$s: checksum file without its archive.</string>
+    <string name="restore_ui_twrp_problem_duplicate_sidecar">%1$s: several checksum files; the strongest is used.</string>
+    <string name="restore_ui_twrp_verify_title">Checksums</string>
+    <string name="restore_ui_twrp_verify_subtitle">Compare every stored file with the checksum file TWRP wrote next to it.</string>
+    <string name="restore_ui_twrp_verify">Verify checksums</string>
+    <string name="restore_ui_twrp_verify_summary">%1$d of %2$d files match · %3$d mismatched · %4$d without checksum · %5$d unreadable</string>
+    <string name="restore_ui_twrp_verify_damaged">Damaged files should not be restored.</string>
+    <string name="restore_ui_twrp_check_ok">matches</string>
+    <string name="restore_ui_twrp_check_mismatch">does not match its checksum</string>
+    <string name="restore_ui_twrp_check_no_sidecar">no checksum file</string>
+    <string name="restore_ui_twrp_check_sidecar_unreadable">checksum file unreadable</string>
+    <string name="restore_ui_twrp_check_read_failed">could not be read</string>
+    <string name="restore_ui_twrp_partitions_title">Partitions</string>
+    <string name="restore_ui_twrp_kind_image">Raw image</string>
+    <string name="restore_ui_twrp_kind_archive">File archive</string>
+    <string name="restore_ui_twrp_format_tar">tar</string>
+    <string name="restore_ui_twrp_format_gzip">gzip</string>
+    <string name="restore_ui_twrp_format_encrypted">TWRP-encrypted</string>
+    <string name="restore_ui_twrp_format_raw">raw</string>
+    <string name="restore_ui_twrp_format_unknown">unknown format</string>
+    <string name="restore_ui_twrp_format_empty">empty</string>
+    <string name="restore_ui_twrp_format_unreadable">format unreadable</string>
+    <plurals name="restore_ui_twrp_parts">
+        <item quantity="one">%1$d part</item>
+        <item quantity="other">%1$d parts</item>
+    </plurals>
+    <string name="restore_ui_twrp_no_sidecar">No checksum</string>
+    <string name="restore_ui_twrp_action_restore">Write to partition</string>
+    <string name="restore_ui_twrp_action_extract">Unpack to a folder</string>
+    <string name="restore_ui_twrp_target_partition">Target partition</string>
+    <string name="restore_ui_twrp_target_partition_hint">Leave empty to write to %1$s.</string>
+    <string name="restore_ui_twrp_device_check_hint">TWRP records only the device serial. If the backup folder does not name this device\'s serial, the write is refused until you allow images from another device.</string>
+    <string name="restore_ui_twrp_extract_hint">Files and folders are written to the destination; links, device nodes, owners and SELinux labels are not. Existing files with the same names are overwritten.</string>
+    <string name="restore_ui_twrp_extract_destination">Unpack to destination</string>
+    <string name="restore_ui_twrp_extract_folder">Folder on that destination</string>
+    <string name="restore_ui_twrp_extract_folder_hint">Created if it does not exist.</string>
+    <string name="restore_ui_twrp_draft_not_image">Only raw images can be written to a partition.</string>
+    <string name="restore_ui_twrp_draft_split">Split images cannot be written from Android.</string>
+    <string name="restore_ui_twrp_draft_not_archive">Only file archives can be unpacked.</string>
+    <string name="restore_ui_twrp_draft_encrypted">This archive is TWRP-encrypted; DFTB cannot decrypt it. Restore it in TWRP.</string>
+    <string name="restore_ui_twrp_draft_unknown_format">This file is not a readable archive.</string>
+    <string name="restore_ui_twrp_draft_partition_name">Use a partition name of letters, digits, dots, dashes and underscores.</string>
+    <string name="restore_ui_twrp_draft_destination">Choose the destination to unpack to.</string>
+    <string name="restore_ui_twrp_draft_traversal">The folder may not contain . or .. segments.</string>
+    <string name="restore_ui_twrp_confirm_restore_title">Write this image?</string>
+    <string name="restore_ui_twrp_confirm_restore_body">%1$s will overwrite the %2$s partition of this device. The image is checked first and the partition is read back afterwards, but the old content cannot be recovered, and a failed write can leave the device unable to boot.</string>
+    <string name="restore_ui_twrp_confirm_extract_title">Unpack this archive?</string>
+    <string name="restore_ui_twrp_confirm_extract_body">The files of %1$s will be written to %2$s in %3$s. Existing files with the same names are overwritten.</string>
+    <string name="restore_ui_twrp_task_target">%1$s → %2$s</string>
+    <string name="restore_ui_twrp_extract_result">%1$d files and %2$d folders written (%3$s).</string>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================== Wizard chrome ===================== -->
+    <string name="onboarding_title">مرحبًا بك في DFTB</string>
+    <string name="onboarding_step_counter">الخطوة %1$d من %2$d</string>
+    <string name="onboarding_back">رجوع</string>
+    <string name="onboarding_next">التالي</string>
+    <string name="onboarding_finish">إنهاء</string>
+    <string name="onboarding_finishing">جارٍ حفظ اختياراتك…</string>
+    <string name="onboarding_no_app_for_link">لا يوجد تطبيق على هذا الجهاز يمكنه فتح هذا الرابط.</string>
+    <string name="onboarding_no_app_for_action">لا تتوفر أي شاشة نظام لهذا الإجراء على هذا الجهاز.</string>
+    <string name="onboarding_finish_requires_mode">اختر وضع تشغيل متاحًا على هذا الجهاز قبل الإنهاء.</string>
+    <string name="onboarding_finish_error">تعذّر حفظ اختياراتك. يُرجى المحاولة مرة أخرى.</string>
+
+    <!-- ===================== Step 1: language ===================== -->
+    <string name="onboarding_language_title">اختر لغتك</string>
+    <string name="onboarding_language_description">يتبدّل التطبيق بالكامل فورًا. يمكنك تغيير ذلك لاحقًا من نظرة عامة على النظام أو من الإعدادات.</string>
+    <string name="onboarding_language_suggested">مُقترحة من إعدادات جهازك: %1$s</string>
+    <string name="onboarding_language_use_suggested">استخدام %1$s</string>
+
+    <!-- ===================== Step 2: overview ===================== -->
+    <string name="onboarding_overview_title">ما الذي يستطيع DFTB فعله</string>
+    <string name="onboarding_overview_description">مجموعة أدوات مفتوحة المصدر للنسخ الاحتياطي والتعافي من الكوارث للجهاز الذي تملكه. كل ما يلي اختياري؛ أنت من يقرّر ما يُحمى وإلى أين يذهب.</string>
+    <string name="onboarding_feature_partitions_title">صور الأقسام</string>
+    <string name="onboarding_feature_partitions_desc">صور على مستوى الكتل لأقسام boot وvendor_boot وdtbo وpersist وغيرها، بما في ذلك خانة A/B النشطة أو غير النشطة (أوضاع الروت).</string>
+    <string name="onboarding_feature_apps_title">التطبيقات</string>
+    <string name="onboarding_feature_apps_desc">ملفات APK وملفات APK المقسّمة والبيانات الداخلية والبيانات الخارجية وملفات التوسعة OBB والذواكر المؤقتة، محددة لكل تطبيق على حدة.</string>
+    <string name="onboarding_feature_files_title">الملفات والفئات</string>
+    <string name="onboarding_feature_files_desc">أي مجلد، إضافةً إلى فئات ذكية مثل الصور ومقاطع الفيديو والمستندات وقواعد البيانات، مُضيَّقة بمرشّحات الحجم والتاريخ والنمط.</string>
+    <string name="onboarding_feature_destinations_title">الوجهات</string>
+    <string name="onboarding_feature_destinations_desc">التخزين المحلي، ومحركات USB OTG، وخوادم FTP/FTPS وSFTP/SSH وSMB وWebDAV وNFS، وأي مزوّد سحابي يمكن الوصول إليه عبر rclone.</string>
+    <string name="onboarding_feature_pipelines_title">مسارات مرنة</string>
+    <string name="onboarding_feature_pipelines_desc">حاويات tar أو zip مع ضغط zstd أو xz أو gzip أو bzip2، وتشفير AES-256 مع إخفاء أسماء الملفات، وبيانات تحقق بالمجاميع، وبثّ مباشر إلى الوجهة.</string>
+    <string name="onboarding_feature_twrp_title">نسخ احتياطية متوافقة مع الاسترداد</string>
+    <string name="onboarding_feature_twrp_desc">تخطيطات اختيارية متوافقة مع TWRP وOrangeFox بحيث يمكن أيضًا استعادة النسخة الاحتياطية من الاسترداد المخصّص.</string>
+    <string name="onboarding_feature_restore_title">استعادة متماثلة بالكامل</string>
+    <string name="onboarding_feature_restore_desc">كل ما ينسخه DFTB احتياطيًا يمكنه استعادته: ملفات تعريف كاملة، أو تطبيقات مفردة، أو ملفات مختارة، أو صورة قسم واحد، مع التحقق من السلامة أولًا.</string>
+    <string name="onboarding_feature_scheduling_title">الجدولة والاحتفاظ والاستئناف</string>
+    <string name="onboarding_feature_scheduling_desc">جداول يومية أو أسبوعية أو بفواصل زمنية مع شروط Wi‑Fi والشحن والبطارية؛ تقليم تلقائي للنسخ الاحتياطية القديمة؛ تستأنف المهام المتوقفة من آخر نقطة تفتيش لها.</string>
+
+    <!-- ===================== Step 3: responsibility ===================== -->
+    <string name="onboarding_disclaimer_title">مسؤوليتك</string>
+    <string name="onboarding_disclaimer_description">يمنحك DFTB تحكّمًا قويًا ومنخفض المستوى في جهازك الخاص. يُرجى قراءة هذه النقاط قبل المتابعة.</string>
+    <string name="onboarding_disclaimer_partitions">قد تؤدي كتابة الأقسام إلى جعل الجهاز غير قابل للإقلاع. لا تستعد سوى صور الأقسام التي أنشأتها على هذا الجهاز والبرنامج الثابت نفسيهما بالضبط.</string>
+    <string name="onboarding_disclaimer_verify">تحقّق دائمًا من النسخ الاحتياطية واحتفظ بنسخة ثانية على وسيط مختلف. النسخة الاحتياطية التي لم تختبرها قط ليست نسخة احتياطية.</string>
+    <string name="onboarding_disclaimer_passwords">لا يمكن استرداد كلمات مرور التشفير ومفاتيحه. إذا فقدتها، فُقدت النسخة الاحتياطية المشفّرة أيضًا.</string>
+    <string name="onboarding_disclaimer_elevation">منح وصول الروت أو Shizuku، وكل ما يُفعل به، قرارك ومسؤوليتك. لا يستخدمه DFTB إلا للعمليات التي تبدؤها أو تجدولها.</string>
+    <string name="onboarding_disclaimer_cloud">يخضع التخزين السحابي والشبكي لشروط المزوّد وتوفّره وتسعيره. لا يتحكم DFTB في خدمات الأطراف الثالثة.</string>
+    <string name="onboarding_disclaimer_warranty">‏DFTB برنامج حر مفتوح المصدر يُقدَّم دون أي ضمان، بموجب شروط رخصته مفتوحة المصدر.</string>
+    <string name="onboarding_disclaimer_accept">أفهم ذلك وأوافق عليه</string>
+
+    <!-- ===================== Step 4: licenses ===================== -->
+    <string name="onboarding_licenses_title">رخص مفتوحة المصدر وشكر وتقدير</string>
+    <string name="onboarding_licenses_description">يقوم DFTB على أكتاف هذه المشاريع. انقر على أي مُدخَل لعرض التفاصيل؛ يفتح زرّا المصدر والرخصة المشروع في متصفحك.</string>
+    <string name="licenses_title">رخص مفتوحة المصدر</string>
+    <string name="licenses_source">المصدر</string>
+    <string name="licenses_license">الرخصة</string>
+    <string name="licenses_website">الموقع الإلكتروني</string>
+    <string name="licenses_version">‏v%1$s</string>
+    <string name="licenses_expand">عرض التفاصيل</string>
+    <string name="licenses_collapse">إخفاء التفاصيل</string>
+
+    <!-- ===================== Step 5: operating mode ===================== -->
+    <string name="onboarding_mode_title">وضع التشغيل</string>
+    <string name="onboarding_mode_description">اختر كيف يمكن لـ DFTB الوصول إلى جهازك. يُفحص كل اختيار مباشرةً؛ يمكنك تبديل الأوضاع لاحقًا من الإعدادات.</string>
+    <string name="onboarding_mode_select_hint">حدّد وضعًا أعلاه لتشغيل التشخيصات.</string>
+    <string name="onboarding_mode_selected">محدَّد</string>
+    <string name="onboarding_diagnostics_running">جارٍ فحص %1$s… قد يستغرق ذلك بضع ثوانٍ إذا كان هناك طلب صلاحيات المستخدم الفائق في الانتظار.</string>
+    <string name="onboarding_diagnostics_failed">تعذّر إكمال التشخيصات.</string>
+    <string name="onboarding_diagnostics_rerun">إعادة تشغيل الفحوصات</string>
+    <string name="onboarding_diagnostics_duration">‏%1$d فحوصات في %2$d مللي ثانية</string>
+    <string name="onboarding_readiness_ready_desc">كل ما يحتاجه هذا الوضع متوفّر.</string>
+    <string name="onboarding_readiness_degraded_desc">يعمل هذا الوضع، لكن بعض الميزات الاختيارية محدودة حتى تُحلّ التحذيرات أدناه.</string>
+    <string name="onboarding_readiness_unavailable_desc">فشل فحص مطلوب، لذا لا يمكن تحديد هذا الوضع بعد. أصلِح العناصر أدناه وأعد التشغيل، أو اختر وضعًا آخر.</string>
+    <string name="onboarding_shizuku_denied">لم يُمنح وصول Shizuku. ابدأ خدمة Shizuku واسمح لـ DFTB عند المطالبة.</string>
+    <string name="onboarding_module_dialog_title">الوحدة المصاحبة</string>
+    <string name="onboarding_module_dialog_text">تُبنى وحدة DFTB المصاحبة على هذا الجهاز من التطبيق نفسه وتُفلَش عبر مدير الروت لديك. أنهِ الإعداد أولًا؛ يصبح مثبّت الوحدة متاحًا بعد ذلك من الإعدادات. حتى ذلك الحين، يُبلّغ وضع الروت المتقدم عن الوحدة بأنها مفقودة.</string>
+    <string name="onboarding_module_dialog_ok">فهمت</string>
+
+    <!-- ===================== Step 6: baseline ===================== -->
+    <string name="onboarding_baseline_title">الإعداد الأساسي</string>
+    <string name="onboarding_baseline_description">الإعدادات الافتراضية لكل ملف تعريف نسخ احتياطي جديد. يمكن لكل ملف تعريف تجاوزها.</string>
+    <string name="onboarding_destination_title">الوجهة الافتراضية</string>
+    <string name="onboarding_destination_choose_folder">اختر مجلدًا</string>
+    <string name="onboarding_destination_app_storage">تخزين التطبيق</string>
+    <string name="onboarding_destination_decide_later">تقرير لاحقًا</string>
+    <string name="onboarding_destination_none">لا توجد وجهة افتراضية. ستختار واحدة عند إنشاء ملف تعريف.</string>
+    <string name="onboarding_destination_current">الوجهة الافتراضية: %1$s (%2$s)</string>
+    <string name="onboarding_destination_app_storage_name">تخزين التطبيق (النسخ الاحتياطية)</string>
+    <string name="onboarding_destination_folder_fallback_name">المجلد المحدَّد</string>
+    <string name="onboarding_destination_error">تعذّر حفظ المجلد كوجهة. يُرجى اختياره مرة أخرى.</string>
+    <string name="onboarding_destination_app_storage_hint">يقع تخزين التطبيق ضمن Android/data ويُزال عند إلغاء تثبيت DFTB. مجلد من اختيارك أو وجهة شبكية أكثر أمانًا.</string>
+    <string name="onboarding_format_title">صيغة الأرشيف الافتراضية</string>
+    <string name="onboarding_compression_title">مستوى الضغط</string>
+    <string name="onboarding_compression_value">المستوى %1$d · %2$s</string>
+    <string name="onboarding_checksum_title">خوارزمية المجموع التحقّقي</string>
+    <string name="onboarding_notifications_title">الإشعارات</string>
+    <string name="onboarding_notifications_desc">مطلوبة لإظهار التقدّم المباشر والإبلاغ عن المهام المنتهية أو الفاشلة بينما يكون DFTB في الخلفية.</string>
+    <string name="onboarding_notifications_granted">الإشعارات مُفعّلة.</string>
+    <string name="onboarding_notifications_request">تفعيل الإشعارات</string>
+    <string name="onboarding_battery_title">تحسين البطارية</string>
+    <string name="onboarding_battery_desc">اختياري. يُبقي إعفاء DFTB من تحسين البطارية النسخ الاحتياطية الطويلة أو المجدولة قيد التشغيل بينما تكون الشاشة مطفأة.</string>
+    <string name="onboarding_battery_granted">‏DFTB معفى من تحسين البطارية.</string>
+    <string name="onboarding_battery_request">طلب إعفاء</string>
+
+    <!-- ===================== Compression level labels ===================== -->
+    <string name="compression_level_store">تخزين</string>
+    <string name="compression_level_fast">سريع</string>
+    <string name="compression_level_balanced">متوازن</string>
+    <string name="compression_level_maximum">أقصى</string>
+    <string name="compression_level_ultra">فائق</string>
+
+    <!-- ===================== ArchiveFormat ===================== -->
+    <string name="format_tar">‏tar (غير مضغوط)</string>
+    <string name="format_tar_gz">‏tar + gzip</string>
+    <string name="format_tar_xz">‏tar + xz</string>
+    <string name="format_tar_zst">‏tar + zstd</string>
+    <string name="format_tar_bz2">‏tar + bzip2</string>
+    <string name="format_zip">zip</string>
+    <string name="format_7z">7z</string>
+    <string name="format_raw_copy">نسخ خام</string>
+    <string name="format_dd_image">صورة قسم</string>
+
+    <!-- ===================== ChecksumAlgorithm ===================== -->
+    <string name="checksum_md5">MD5</string>
+    <string name="checksum_sha1">SHA-1</string>
+    <string name="checksum_sha256">SHA-256</string>
+    <string name="checksum_sha512">SHA-512</string>
+    <string name="checksum_blake3">BLAKE3</string>
+
+    <!-- ===================== CompressionCodec ===================== -->
+    <string name="codec_none">بدون</string>
+    <string name="codec_gzip">gzip</string>
+    <string name="codec_xz">xz</string>
+    <string name="codec_zstd">zstd</string>
+    <string name="codec_bzip2">bzip2</string>
+
+    <!-- ===================== EncryptionMode ===================== -->
+    <string name="encryption_none">بدون</string>
+    <string name="encryption_aes_256_gcm">AES-256-GCM</string>
+    <string name="encryption_zip_aes">‏ZIP AES</string>
+    <string name="encryption_openssl">‏OpenSSL (AES-256-CBC)</string>
+    <string name="encryption_gpg">‏OpenPGP (GPG)</string>
+
+    <!-- ===================== StructureMode ===================== -->
+    <string name="structure_preserve_hierarchy">الحفاظ على هيكل المجلدات</string>
+    <string name="structure_categorized">الفرز إلى فئات</string>
+
+    <!-- ===================== TransferMode ===================== -->
+    <string name="transfer_local_staging">البناء محليًا ثم الرفع</string>
+    <string name="transfer_direct_stream">البثّ مباشرةً إلى الوجهة</string>
+    <string name="transfer_remote_compress">الضغط على المضيف البعيد</string>
+
+    <!-- ===================== DestinationType ===================== -->
+    <string name="destination_type_local_internal">تخزين التطبيق</string>
+    <string name="destination_type_local_saf">مجلد</string>
+    <string name="destination_type_usb_otg">محرك USB OTG</string>
+    <string name="destination_type_ftp">FTP</string>
+    <string name="destination_type_ftps">FTPS</string>
+    <string name="destination_type_sftp">SFTP</string>
+    <string name="destination_type_ssh">SSH</string>
+    <string name="destination_type_smb">مشاركة SMB</string>
+    <string name="destination_type_webdav">WebDAV</string>
+    <string name="destination_type_nfs">NFS</string>
+    <string name="destination_type_rclone">وحدة rclone بعيدة</string>
+    <string name="destination_type_s3">متوافق مع S3</string>
+    <string name="destination_type_mega">MEGA</string>
+    <string name="destination_type_pcloud">pCloud</string>
+
+    <!-- ===================== Readiness ===================== -->
+    <string name="readiness_ready">جاهز</string>
+    <string name="readiness_degraded">جاهز مع تحذيرات</string>
+    <string name="readiness_unavailable">غير متاح</string>
+
+</resources>

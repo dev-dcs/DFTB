@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Storage layer (core/storage): user-facing explanations of StorageException.Reason and
+     free-space preflight outcomes. Technical detail strings stay in exception messages. -->
+<resources>
+
+    <!-- StorageException.Reason, mapped by StorageException.Reason.labelRes() -->
+    <string name="storage_reason_auth">فشل تسجيل الدخول. تحقق من اسم المستخدم أو كلمة المرور أو المفتاح.</string>
+    <string name="storage_reason_host_key">تغيّر مفتاح هوية الخادم أو أنه غير موثوق.</string>
+    <string name="storage_reason_network">تعذّر الوصول إلى الوجهة عبر الشبكة.</string>
+    <string name="storage_reason_timeout">استغرقت الوجهة وقتًا طويلًا في الاستجابة.</string>
+    <string name="storage_reason_not_found">لم يُعثر على مجلد الوجهة أو محركها.</string>
+    <string name="storage_reason_permission">لا يُسمح للتطبيق بالكتابة في هذه الوجهة.</string>
+    <string name="storage_reason_no_space">نفدت مساحة الوجهة.</string>
+    <string name="storage_reason_unsupported">هذه الوجهة لا تدعم العملية المطلوبة.</string>
+    <string name="storage_reason_misconfigured">إعدادات الوجهة غير مكتملة أو غير صالحة.</string>
+    <string name="storage_reason_tool_missing">أداة مساعدة مطلوبة غير مثبّتة.</string>
+    <string name="storage_reason_protocol">أعادت الوجهة خطأً غير متوقع. حاول مرة أخرى.</string>
+
+    <!-- Free-space preflight (FreeSpaceVerifier) -->
+    <string name="storage_preflight_sufficient">المساحة الفارغة كافية (المتاح %1$s).</string>
+    <string name="storage_preflight_insufficient">المساحة الفارغة غير كافية. حرّر %1$s وحاول مرة أخرى.</string>
+    <string name="storage_preflight_unknown">تعذّر التحقق من المساحة الفارغة لهذه الوجهة.</string>
+
+    <!-- Connection test (ConnectionTester) -->
+    <string name="storage_test_ok">تم الاتصال خلال %1$d مللي ثانية.</string>
+    <string name="storage_test_failed">فشل الاتصال.</string>
+
+</resources>

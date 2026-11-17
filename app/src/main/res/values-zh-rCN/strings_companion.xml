@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Companion module builder and reboot-resume strings -->
+<resources>
+    <string name="companion_builder_title">配套模块</string>
+    <string name="companion_builder_subtitle">构建一个 systemless 的 Magisk/KernelSU 模块，其中包含 DFTB 的命令行工具和重启后恢复的开机服务。</string>
+    <string name="companion_builder_build_action">构建模块 ZIP</string>
+    <string name="companion_builder_building">正在构建模块…</string>
+    <string name="companion_builder_share_action">分享 ZIP</string>
+    <string name="companion_builder_flash_hint">构建完成后，请在 Magisk、KernelSU 或 APatch 中刷入该 ZIP，然后重启。</string>
+    <string name="companion_result_complete">模块已构建：%1$s</string>
+    <string name="companion_result_partial">模块已构建，缺少 %1$d 个工具</string>
+    <string name="companion_result_failed">无法构建配套模块</string>
+    <string name="companion_result_size">大小：%1$s</string>
+    <string name="companion_result_included_tools">包含的工具：%1$s</string>
+    <string name="companion_result_missing_tools">缺少的工具：%1$s</string>
+    <string name="companion_result_no_tools">没有适用于此设备架构的命令行工具。</string>
+    <string name="companion_resume_title">正在恢复中断的任务</string>
+    <string name="companion_resume_pending">重启后等待恢复</string>
+    <string name="companion_resume_found">有 %1$d 个中断的任务可恢复</string>
+    <string name="companion_resume_none">没有可恢复的中断任务</string>
+    <string name="companion_requires_magisk">需要 Magisk v20.4 或更高版本，或兼容的 KernelSU/APatch。</string>
+    <string name="companion_requires_root">安装 systemless 模块需要 root（Magisk、KernelSU 或 APatch）。</string>
+</resources>
